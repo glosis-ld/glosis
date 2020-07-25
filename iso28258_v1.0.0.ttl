@@ -6,7 +6,8 @@
 @prefix iso19156_SF:  <http://def.isotc211.org/iso19156/2011/SamplingFeature#> .
 @prefix iso19156_SSF:  <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#> .
 @prefix iso19156_GFI: 	<http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#> .
-@prefix iso28258: 	<http://w3id.org/glosis/model/iso28258/2013#> . 
+@prefix iso19156_OB: <http://def.isotc211.org/iso19156/2011/Observation#> .
+@prefix iso28258: 	<http://w3id.org/glosis/model/iso28258/2013#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -33,7 +34,7 @@
 iso19156_GFI:GFI_Feature
   a owl:Class ;
   rdfs:label "GFI_Feature" ;
-  skos:definition """The class GFI_Feature (Figure 2) is an instance of the .og.metaclass.cg. GF_FeatureType (ISO 19109). It represents the set of all classes which are feature types. NOTE	GFI_Feature is implemented in GML (ISO 19136:2007) by the element gml:AbstractFeature and type gml:AbstractFeatureType. In an implementation this abstract class shall be substituted by a concrete class representing a feature type from an application schema associated with a domain of discourse (ISO 19109, ISO 19101). Sampling Features (Clause 8) are a class of feature-types whose role is primarily associated with observations. """ ;
+  skos:definition "The class GFI_Feature (Figure 2) is an instance of the .og.metaclass.cg. GF_FeatureType (ISO 19109). It represents the set of all classes which are feature types. NOTE	GFI_Feature is implemented in GML (ISO 19136:2007) by the element gml:AbstractFeature and type gml:AbstractFeatureType. In an implementation this abstract class shall be substituted by a concrete class representing a feature type from an application schema associated with a domain of discourse (ISO 19109, ISO 19101). Sampling Features (Clause 8) are a class of feature-types whose role is primarily associated with observations. " ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> .
   
 iso19156_GFI:GFI_DomainFeature
@@ -67,14 +68,14 @@ iso19156_SF:SF_SamplingFeature.sampledFeature
 iso28258:Plot  
 	a owl:Class ;
   rdfs:label "Plot" ;
-  skos:definition "elementary area where individual observations are made and/or samples are taken" ;
+  skos:definition "Elementary area where individual observations are made and/or samples are taken." ;
   rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en> ;
   rdfs:subClassOf iso19156_SSF:SF_SpatialSamplingFeature .  
   
 iso28258:Site  
 	a owl:Class ;
   rdfs:label "Site" ;
-  skos:definition "defined area which is subject to a soil quality investigation" ;
+  skos:definition "Defined area which is subject to a soil quality investigation." ;
   rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en> .
 
 iso28258:Surface
@@ -83,6 +84,32 @@ iso28258:Surface
   skos:definition "Surface is a subtype of a plot with surface shape. Surfaces may be located within other surfaces" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:subClassOf iso28258:Plot .
+
+iso28258:Profile
+  a owl:Class ;
+  rdfs:label "Profile" ;
+  skos:definition "Soil profile describable representation of the soil that is characterised by a vertical succession of horizons or at least one or several parent material layers. Soil profile is an ordered set of soil horizons and/or layers."  ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> .
+
+iso19156_OB:OM_Observation
+  a owl:Class ;
+  rdfs:label "Observation" ;
+  skos:definition "Observation process is a subtype of OM_Process. It is a process used to generate the result of the observation."  ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> .
+
+iso28258:Layer
+  a owl:Class ;
+  rdfs:label "Layer" ;
+  skos:definition "domain of a soil with a certain vertical extension developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains"  ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:subClassOf iso28258:Profile .
+
+iso28258:Horizon
+  a owl:Class ;
+  rdfs:label "Horizon" ;
+  skos:definition "domain of a soil with a certain vertical extension, which is more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in-situ sedimented organic residues of up-growing plants (peat)"  ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:subClassOf iso28258:Profile .
 
 #################################################################
 #    ALIGNMENTS (FROM DOCUMENTATION)
