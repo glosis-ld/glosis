@@ -14,12 +14,13 @@
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 ## APPENDED
 @prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013#> .
+@prefix iso19156_SF:  <http://def.isotc211.org/iso19156/2011/SamplingFeature#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 
 <http://w3id.org/glosis/model/layerhorizon>
         a                owl:Ontology ;
-        owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: ;
+        owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: , iso19156_SF: ;
         owl:versionIRI   "http://w3id.org/glosis/model/layerhorizon/2.0" ;
         owl:versionInfo  "2.0" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
@@ -38,67 +39,67 @@ glosis_lh:GL_Horizon  a        owl:Class ;
         rdfs:subClassOf  iso28258:Horizon ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty   glosis_lh:lowerDepth
+                           owl:onProperty   iso28258:ProfileElement.lowerDepth
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty   glosis_lh:order
+                           owl:onProperty   iso28258:ProfileElement.order
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty   glosis_lh:upperDepth
+                           owl:onProperty   iso28258:ProfileElement.upperDepth
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
-                           owl:onProperty   glosis_lh:parameter
+                           owl:onProperty   iso19156_SF:SF_SamplingFeature.parameter 
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty   glosis_lh:lineage
+                           owl:onProperty   iso19156_SF:SF_SamplingFeature.lineage
                          ] .
 
 glosis_lh:GL_Layer  a        owl:Class ;
         rdfs:subClassOf  iso28258:Layer ;
                 rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty   glosis_lh:lowerDepth
+                           owl:onProperty   iso28258:ProfileElement.lowerDepth
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty   glosis_lh:order
+                           owl:onProperty   iso28258:ProfileElement.order
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty   glosis_lh:upperDepth
+                           owl:onProperty   iso28258:ProfileElement.upperDepth
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
-                           owl:onProperty   glosis_lh:parameter
+                           owl:onProperty   iso19156_SF:SF_SamplingFeature.parameter
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty   glosis_lh:lineage
+                           owl:onProperty   iso19156_SF:SF_SamplingFeature.lineage
                          ] .
 
-glosis_lh:lowerDepth
-        a            owl:DatatypeProperty ;
-        rdfs:range   quantitykind:Depth .
+# glosis_lh:lowerDepth
+#         a            owl:DatatypeProperty ;
+#         rdfs:range   quantitykind:Depth .
 
-glosis_lh:order
-        a            owl:DatatypeProperty ;
-        rdfs:range   xsd:Integer .
+# glosis_lh:order
+#         a            owl:DatatypeProperty ;
+#         rdfs:range   xsd:Integer .
 
-glosis_lh:upperDepth
-        a            owl:ObjectProperty ;
-        rdfs:range   quantitykind:Depth .
+# glosis_lh:upperDepth
+#         a            owl:ObjectProperty ;
+#         rdfs:range   quantitykind:Depth .
 
-glosis_lh:parameter
-        a            owl:ObjectProperty ;
-        # The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes.
-        rdfs:range   xsd:Integer . 
+# glosis_lh:parameter
+#         a            owl:ObjectProperty ;
+#         # The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes.
+#         rdfs:range   xsd:Integer . 
 
-glosis_lh:lineage
-        a      	      owl:ObjectProperty ;
-        #If present, the attribute lineage:LI_Lineage shall describe the history and provenance of the SF_SamplingFeature. This might include information relating to the handling of the specimen, or details of the survey procedure of a spatial sampling feature
-        rdfs:range xsd:string .
+# glosis_lh:lineage
+#         a      	      owl:ObjectProperty ;
+#         #If present, the attribute lineage:LI_Lineage shall describe the history and provenance of the SF_SamplingFeature. This might include information relating to the handling of the specimen, or details of the survey procedure of a spatial sampling feature
+#         rdfs:range xsd:string .
 
 glosis_lh:InfiltrationRateClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
