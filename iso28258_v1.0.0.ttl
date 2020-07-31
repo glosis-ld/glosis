@@ -7,10 +7,13 @@
 @prefix iso19156_SSF:  <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#> .
 @prefix iso19156_GFI: 	<http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#> .
 @prefix iso19156_OB: <http://def.isotc211.org/iso19156/2011/Observation#> .
+@prefix iso19115_DQI: <http://def.isotc211.org/iso19115/2006/DataQualityInformation#> .
 @prefix iso28258: 	<http://w3id.org/glosis/model/iso28258/2013#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 
 
 <http://w3id.org/glosis/model/iso28258/2013>
@@ -110,6 +113,58 @@ iso28258:Horizon
   skos:definition "domain of a soil with a certain vertical extension, which is more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in-situ sedimented organic residues of up-growing plants (peat)"  ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:subClassOf iso28258:Profile .
+
+iso19156_SF:SF_SamplingFeature.parameter
+  a owl:ObjectProperty ;
+  rdfs:label "parameter" ;
+  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+  rdfs:domain iso19156_SF:SF_SamplingFeature ;
+  rdfs:range iso19156_OB:NamedValue . 
+
+iso19156_OB:NamedValue
+  a owl:Class ;
+  rdfs:label "NamedValue" ;
+  skos:definition "The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes. </skos:definition><rdfs:isDefinedBy>http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> .
+
+iso19156_SF:SF_SamplingFeature.lineage
+  a owl:ObjectProperty ;
+  rdfs:label "lineage" ;
+  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+  rdfs:domain iso19156_SF:SF_SamplingFeature ;
+  rdfs:range  iso19115_DQI:LI_Lineage . 
+
+iso19115_DQI:LI_Lineage
+  a owl:Class ;
+  rdfs:label "LI_Lineage" ;
+  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> .
+
+iso28258:ProfileElement
+  a owl:Class ;
+  rdfs:label "ProfileElement" ;
+  skos:definition "Profle element is an abstract feature type grouping layers and horizons. Profle element may be considered as a horizontal feature that is parallel to the earth surface and that is part of the profle."  ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> .
+
+iso28258:ProfileElement.lowerDepth
+  a owl:ObjectProperty ;
+  rdfs:label "lowerDepth" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:ProfileElement ;
+  rdfs:range  quantitykind:Depth . 
+
+iso28258:ProfileElement.order
+  a owl:ObjectProperty ;
+  rdfs:label "order" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:ProfileElement ;
+  rdfs:range  xsd:Integer . 
+
+iso28258:ProfileElement.upperDepth
+  a owl:ObjectProperty ;
+  rdfs:label "upperDepth" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:ProfileElement ;
+  rdfs:range  quantitykind:Depth . 
 
 #################################################################
 #    ALIGNMENTS (FROM DOCUMENTATION)
