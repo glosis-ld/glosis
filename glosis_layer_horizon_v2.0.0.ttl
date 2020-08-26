@@ -50,9 +50,6 @@ glosis_lh:GL_Horizon  a        owl:Class ;
                            owl:onProperty   iso28258:ProfileElement.upperDepth
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
-                           owl:onProperty   iso19156_SF:SF_SamplingFeature.parameter 
-                         ] ;
-        rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
                            owl:onProperty   iso19156_SF:SF_SamplingFeature.lineage
                          ] .
@@ -70,9 +67,6 @@ glosis_lh:GL_Layer  a        owl:Class ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
                            owl:onProperty   iso28258:ProfileElement.upperDepth
-                         ] ;
-        rdfs:subClassOf  [ a                owl:Restriction ;
-                           owl:onProperty   iso19156_SF:SF_SamplingFeature.parameter
                          ] ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
