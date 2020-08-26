@@ -22,7 +22,7 @@
 <http://w3id.org/glosis/model/siteplot>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: ;
-        owl:versionIRI   "http://w3id.org/glosis/model/siteplot/4.0" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/siteplot/4.0> ;
         owl:versionInfo  "4.0" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
@@ -163,10 +163,10 @@ glosis_sp:geologyProperty a sosa:ObservableProperty ;
         rdfs:label "geologyProperty"@en;
         rdfs:isDefinedBy "GfSD Table 12"@en .
         
-glosis_sp:soilDepthRootable  a owl:Class ;
+glosis_sp:SoilDepthRootable  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:soilDepthRootableValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthRootableValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthRootableProperty ] .
 
 glosis_sp:SlopeOrientationClass  a	owl:Class ;
@@ -291,10 +291,10 @@ glosis_sp:parentLithologyProperty a sosa:ObservableProperty ;
         rdfs:label "parentLithologyProperty"@en;
         rdfs:isDefinedBy "GfSD Table 12"@en .
 
-glosis_sp:soilDepthSampled  a owl:Class ;
+glosis_sp:SoilDepthSampled  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:soilDepthSampledValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthSampledValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthSampledProperty ] .
 
 glosis_sp:SlopeGradientClass  a	owl:Class ;
@@ -453,7 +453,7 @@ glosis_sp:rockOutcropsDistanceProperty a sosa:ObservableProperty ;
         rdfs:label "rockOutcropsDistanceProperty"@en;
         rdfs:isDefinedBy "GfSD Table 14,2"@en .
         
-glosis_sp:soilDepthRootableClass  a	owl:Class ;
+glosis_sp:SoilDepthRootableClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult  ; owl:allValuesFrom xsd:string ] ;
@@ -545,10 +545,10 @@ glosis_sp:humanInfluenceClassProperty a sosa:ObservableProperty ;
         rdfs:label "humanInfluenceClassProperty"@en;
         rdfs:isDefinedBy "GfSD Table 10"@en .
         
-glosis_sp:soilDepthBedrock  a	owl:Class ;
+glosis_sp:SoilDepthBedrock  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:soilDepthBedrockValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthBedrockValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthBedrockProperty ] .
 
  glosis_sp:LandUseShrubs  a owl:Class ;
