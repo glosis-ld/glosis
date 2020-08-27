@@ -2,6 +2,7 @@
 @prefix ssn:   <http://www.w3.org/ns/ssn/> .
 @prefix sosa:  <http://www.w3.org/ns/sosa/> .
 @prefix glosis_cm: <http://w3id.org/glosis/model/common#> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -31,49 +32,81 @@
         dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
 
+glosis_cm:SoilDepthBedrock  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthBedrockValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthBedrockProperty ] .
+
 glosis_cm:soilDepthBedrockProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "soilDepthBedrockProperty"@en .
 
 glosis_cm:SoilDepthBedrockValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:value ; owl:allValuesFrom xsd:Integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+
+glosis_cm:SoilDepth  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthProperty ] .
 
 glosis_cm:soilDepthProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "soilDepthProperty"@en .
 
 glosis_cm:SoilDepthValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:value ; owl:allValuesFrom xsd:Integer ] .  
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+
+glosis_cm:SoilDepthRootable  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthRootableValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthRootableProperty ] .
 
 glosis_cm:soilDepthRootableProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "soilDepthRootableProperty"@en .
 
 glosis_cm:SoilDepthRootableValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:value ; owl:allValuesFrom xsd:Integer ] . 
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] . 
+
+glosis_cm:SoilDepthRootableClass  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult  ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthRootableClassProperty ] .
 
 glosis_cm:soilDepthRootableClassProperty a sosa:ObservableProperty ;
         rdfs:label "soilDepthRootableClassProperty"@en .
+
+glosis_cm:SoilDepthSampled  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthSampledValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthSampledProperty ] .
 
 glosis_cm:soilDepthSampledProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "soilDepthSampledProperty"@en .
 
 glosis_cm:SoilDepthSampledValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:value ; owl:allValuesFrom xsd:Integer ] . 
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] . 
+
+glosis_cm:InfiltrationRateClass  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:infiltrationRateClassProperty ] .
 
 glosis_cm:infiltrationRateClassProperty a sosa:ObservableProperty ;
         rdfs:label "infiltrationRateClassProperty"@en .
+
+glosis_cm:Texture  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:textureProperty ] .
 
 glosis_cm:textureProperty a sosa:ObservableProperty ;
         rdfs:label "textureProperty"@en .
 
 glosis_cm:MunsellColorValue  a        owl:Class ;
         rdfs:subClassOf  sosa:Result ;
-#       rdfs:subClassOf  [ a                owl:Restriction ;
-#                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-#                           owl:onProperty   glosis_cm:munsellMatrix
-#                         ] ;
+
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
                            owl:onProperty   glosis_cm:munsellCompounded
@@ -90,25 +123,6 @@ glosis_cm:MunsellColorValue  a        owl:Class ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
                            owl:onProperty   glosis_cm:hue
                          ] .
-
-# glosis_cm:MunsellMatrix  a        owl:Class ;
-#         rdfs:subClassOf sosa:ObservableProperty ;
-#         rdfs:subClassOf  [ a                owl:Restriction ;
-#                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-#                            owl:onProperty   glosis_cm:chroma
-#                          ] ;
-#         rdfs:subClassOf  [ a                owl:Restriction ;
-#                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-#                            owl:onProperty   glosis_cm:value
-#                          ] ;
-#         rdfs:subClassOf  [ a                owl:Restriction ;
-#                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
-#                            owl:onProperty   glosis_cm:hue
-#                          ] .
-
-#glosis_cm:munsellMatrix
-#        a            owl:ObjectProperty ;
-#        rdfs:range   glosis_cm:MunsellMatrix .
 
 glosis_cm:munsellCompounded
         a            owl:DatatypeProperty ;
@@ -132,36 +146,122 @@ glosis_cm:colourWetProperty a sosa:ObservableProperty ;
 glosis_cm:colourDryProperty a sosa:ObservableProperty ;
         rdfs:label "colourDryProperty"@en .
 
+glosis_cm:InfiltrationRateNumeric  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:InfiltrationRateNumericValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:infiltrationRateNumericProperty ] .
+
 glosis_cm:infiltrationRateNumericProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "infiltrationRateNumericProperty"@en .
 
 glosis_cm:InfiltrationRateNumericValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:value ; owl:allValuesFrom xsd:float ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] .
+
+glosis_cm:BleachedSand  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:bleachedSandProperty ] .
 
 glosis_cm:bleachedSandProperty a sosa:ObservableProperty ;
         rdfs:label "bleachedSandProperty"@en .
+
+glosis_cm:FragmentSize  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:FragmentSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:fragmentSizeProperty ] .
 
 glosis_cm:fragmentSizeProperty a sosa:ObservableProperty ;
         rdfs:label "fragmentSizeProperty"@en;
         rdfs:isDefinedBy "GfSD Table 15.2"@en .
 
+glosis_cm:CracksDepth  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CracksDepthValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:cracksDepthProperty ] .
+
 glosis_cm:cracksDepthProperty a sosa:ObservableProperty ;
         rdfs:label "cracksDepthProperty"@en;
         rdfs:isDefinedBy "GfSD Table 21.2"@en .
+
+glosis_cm:OrganicMatterClass  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:OrganicMatterClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:organicMatterClassProperty ] .
 
 glosis_cm:organicMatterClassProperty a sosa:ObservableProperty ;
         rdfs:label "organicMatterClassProperty"@en;
         rdfs:isDefinedBy "table is missing!"@en .
 
+glosis_cm:CracksDistance  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CracksDistanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:cracksDistanceProperty ] .
+
 glosis_cm:cracksDistanceProperty a sosa:ObservableProperty ;
         rdfs:label "cracksDistanceProperty"@en;
         rdfs:isDefinedBy "GfSD Table 21.3"@en .
+
+glosis_cm:CracksWidth  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CracksWidthValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:cracksWidthProperty ] .
 
 glosis_cm:cracksWidthProperty a sosa:ObservableProperty ;
         rdfs:label "cracksWidthProperty"@en;
         rdfs:isDefinedBy "GfSD Table 21.1"@en .
 
+glosis_cm:RockAbundance  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:RockAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:rockAbundanceProperty ] .
+
 glosis_cm:rockAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "rockAbundanceProperty"@en;
         rdfs:isDefinedBy "GfSD Table 26"@en .
+
+glosis_cm:ColourDry  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+                        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:MunsellColorValue] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:colourDryProperty ] .
+
+glosis_cm:ColourWet  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom  glosis_cm:MunsellColorValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:colourWetProperty ] .
+
+glosis_cm:RockShape  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:RockShapeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:rockShapeProperty ] .
+
+glosis_cm:rockShapeProperty a sosa:ObservableProperty ;
+        rdfs:label "rockShapeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 28"@en .
+
+glosis_cm:RockSize  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:RockSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:rockSizeProperty ] .
+
+glosis_cm:rockSizeProperty a sosa:ObservableProperty ;
+        rdfs:label "rockSizeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 27"@en .
+
+glosis_cm:WeatheringFragments  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:WeatheringValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:weatheringFragmentsProperty ] .
+
+glosis_cm:weatheringFragmentsProperty a sosa:ObservableProperty ;
+        rdfs:label "weatheringFragmentsProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 29"@en .
+
+glosis_cm:FragmentCover  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:FragmentCoverValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:fragmentCoverProperty ] .
+
+glosis_cm:fragmentCoverProperty a sosa:ObservableProperty ;
+        rdfs:label "fragmentCoverProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 15.1"@en .
