@@ -11,6 +11,7 @@
 @prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
 <http://w3id.org/glosis/model/common>
@@ -33,7 +34,7 @@
 glosis_cm:soilDepthBedrockProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "soilDepthBedrockProperty"@en .
 
-glosis_cm:soilDepthBedrockValue a owl:Class ;
+glosis_cm:SoilDepthBedrockValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:value ; owl:allValuesFrom xsd:Integer ] .
 
@@ -47,7 +48,7 @@ glosis_cm:SoilDepthValue a owl:Class ;
 glosis_cm:soilDepthRootableProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "soilDepthRootableProperty"@en .
 
-glosis_cm:soilDepthRootableValue a owl:Class ;
+glosis_cm:SoilDepthRootableValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:value ; owl:allValuesFrom xsd:Integer ] . 
 
@@ -57,7 +58,7 @@ glosis_cm:soilDepthRootableClassProperty a sosa:ObservableProperty ;
 glosis_cm:soilDepthSampledProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "soilDepthSampledProperty"@en .
 
-glosis_cm:soilDepthSampledValue a owl:Class ;
+glosis_cm:SoilDepthSampledValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:value ; owl:allValuesFrom xsd:Integer ] . 
 

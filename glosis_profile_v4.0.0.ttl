@@ -37,10 +37,10 @@
 glosis_pr:GL_Profile  a     owl:Class ;
         rdfs:subClassOf  iso28258:Profile .
 
-glosis_pr:soilDepthBedrock  a	owl:Class ;
+glosis_pr:SoilDepthBedrock  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_pr:GL_Profile ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:soilDepthBedrockValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthBedrockValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthBedrockProperty ] .
 
 glosis_pr:ProfileDescriptionStatus  a owl:Class ;
@@ -77,10 +77,10 @@ glosis_pr:SoilClassificationFAO  a	owl:Class ;
 glosis_pr:soilClassificationFAOProperty a sosa:ObservableProperty ;
         rdfs:label "soilClassificationFAOProperty"@en .
 
-glosis_pr:soilDepthRootable  a owl:Class ;
+glosis_pr:SoilDepthRootable  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_pr:GL_Profile ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:soilDepthRootableValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthRootableValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthRootableProperty ] .
 
 glosis_pr:soilDepthRootableClass  a	owl:Class ;
@@ -92,7 +92,7 @@ glosis_pr:soilDepthRootableClass  a	owl:Class ;
 glosis_pr:soilDepthSampled  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_pr:GL_Profile ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:soilDepthSampledValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthSampledValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthSampledProperty ] .
 
 glosis_pr:SoilClassificationWRB  a	owl:Class ;
