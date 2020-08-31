@@ -271,15 +271,7 @@ glosis_lh:mineralConcNatureProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcNatureProperty"@en;
         rdfs:isDefinedBy "GfSD Table 77"@en .
 
-glosis_lh:WeatheringFragments a owl:Class ;
-        rdfs:subClassOf  sosa:Observation ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:WeatheringValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:weatheringFragmentsProperty ] .
-
-glosis_lh:weatheringFragmentsProperty a sosa:ObservableProperty ;
-        rdfs:label "weatheringFragmentsProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 29"@en .
+glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
         
 glosis_lh:ParticleSizeFractionsSum  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -744,12 +736,6 @@ glosis_lh:ConsistenceMoist a	owl:Class ;
 glosis_lh:consistenceMoistProperty a sosa:ObservableProperty ;
         rdfs:label "consistenceMoistProperty"@en;
         rdfs:isDefinedBy "GfSD Table 54"@en .
-
-glosis_lh:OrganicMatterClass  a	owl:Class ;
-        rdfs:subClassOf  sosa:Observation ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:OrganicMatterClassValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:organicMatterClassProperty ] .
 
 glosis_lh:MineralConcVolume a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
