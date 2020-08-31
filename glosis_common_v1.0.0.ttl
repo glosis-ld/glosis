@@ -90,7 +90,7 @@ glosis_cm:SoilDepthSampledValue a owl:Class ;
 
 glosis_cm:InfiltrationRateClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:infiltrationRateClassProperty ] .
 
 glosis_cm:infiltrationRateClassProperty a sosa:ObservableProperty ;
