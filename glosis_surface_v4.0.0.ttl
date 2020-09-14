@@ -48,7 +48,8 @@ glosis_su:saltPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
 
 glosis_su:SaltPresenceValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:boolean ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:boolean ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
 
 glosis_su:SaltThickness  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
