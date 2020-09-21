@@ -12,6 +12,7 @@
 @prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
@@ -42,7 +43,8 @@ glosis_cm:soilDepthBedrockProperty a sosa:ObservableProperty , qudt:Quantitykind
 
 glosis_cm:SoilDepthBedrockValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] .
 
 glosis_cm:SoilDepth  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -54,7 +56,8 @@ glosis_cm:soilDepthProperty a sosa:ObservableProperty , qudt:Quantitykind ;
 
 glosis_cm:SoilDepthValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] .
 
 glosis_cm:SoilDepthRootable  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -66,7 +69,8 @@ glosis_cm:soilDepthRootableProperty a sosa:ObservableProperty , qudt:Quantitykin
 
 glosis_cm:SoilDepthRootableValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] . 
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] . 
 
 glosis_cm:SoilDepthRootableClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -86,7 +90,8 @@ glosis_cm:soilDepthSampledProperty a sosa:ObservableProperty , qudt:Quantitykind
 
 glosis_cm:SoilDepthSampledValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] . 
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] .
 
 glosis_cm:InfiltrationRateClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -156,7 +161,8 @@ glosis_cm:infiltrationRateNumericProperty a sosa:ObservableProperty , qudt:Quant
 
 glosis_cm:InfiltrationRateNumericValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM-PER-HR] .
 
 glosis_cm:BleachedSand  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;

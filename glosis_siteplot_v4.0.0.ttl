@@ -18,6 +18,7 @@
 @prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 
 <http://w3id.org/glosis/model/siteplot>
         a                owl:Ontology ;
@@ -224,7 +225,8 @@ glosis_sp:GrassAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
 
 glosis_sp:LandUseGrassValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:SurfaceAge  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -267,7 +269,8 @@ glosis_sp:slopeOrientationProperty a sosa:ObservableProperty , qudt:Quantitykind
 
 glosis_sp:SlopeOrientationNumericValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:DEG ] .
 
 glosis_sp:ParentLithology  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -322,7 +325,8 @@ glosis_sp:bareCoverAbundanceProperty a sosa:ObservableProperty , qudt:Quantityki
 
 glosis_sp:LandUseBareCoverValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] . 
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:WeatherPast  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -404,7 +408,8 @@ glosis_sp:slopeGradientProperty a sosa:ObservableProperty , qudt:Quantitykind ;
 
 glosis_sp:SlopeGradientNumericValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] . 
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:vegetationDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
@@ -421,7 +426,8 @@ glosis_sp:ForestAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind 
 
 glosis_sp:LandUseForestValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:RockOutcropsDistance  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -446,7 +452,8 @@ glosis_sp:PavedAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
 
 glosis_sp:LandUsePavedCoverValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:SlopePathways  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -479,7 +486,8 @@ glosis_sp:groundwaterDepthProperty a sosa:ObservableProperty , qudt:Quantitykind
 
 glosis_sp:GroundwaterDepthValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] .   
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] .   
 
 glosis_sp:Lithology  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -534,7 +542,8 @@ glosis_sp:ShrubsAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind 
 
 glosis_sp:LandUseShrubsValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:ErosionActivityPeriod  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
@@ -567,7 +576,8 @@ glosis_sp:treeDensityProperty a sosa:ObservableProperty , qudt:Quantitykind ;
 
 glosis_sp:TreeDensityValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
 
 glosis_sp:ErosionTotalAreaAffected a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
