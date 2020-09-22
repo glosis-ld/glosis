@@ -401,7 +401,7 @@ glosis_sp:SlopeGradientNumeric a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:SlopeGradientNumericValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue quantitykind:slopeGradientProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:slopeGradientProperty ] .
 
 glosis_sp:slopeGradientProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "slopeGradientProperty"@en .
@@ -479,7 +479,7 @@ glosis_sp:GroundwaterDepth  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:GroundwaterDepthValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue quantitykind:groundwaterDepthProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:groundwaterDepthProperty ] .
 
 glosis_sp:groundwaterDepthProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "groundwaterDepthProperty"@en .
