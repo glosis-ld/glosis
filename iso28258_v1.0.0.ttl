@@ -106,14 +106,14 @@ iso28258:Layer
   rdfs:label "Layer" ;
   skos:definition "domain of a soil with a certain vertical extension developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains"  ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
-  rdfs:subClassOf iso28258:Profile .
+  rdfs:subClassOf iso28258:ProfileElement .
 
 iso28258:Horizon
   a owl:Class ;
   rdfs:label "Horizon" ;
   skos:definition "domain of a soil with a certain vertical extension, which is more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in-situ sedimented organic residues of up-growing plants (peat)"  ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
-  rdfs:subClassOf iso28258:Profile .
+  rdfs:subClassOf iso28258:ProfileElement .
 
 iso19156_SF:SF_SamplingFeature.parameter
   a owl:ObjectProperty ;
@@ -144,7 +144,8 @@ iso28258:ProfileElement
   a owl:Class ;
   rdfs:label "ProfileElement" ;
   skos:definition "Profle element is an abstract feature type grouping layers and horizons. Profle element may be considered as a horizontal feature that is parallel to the earth surface and that is part of the profle."  ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> .
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:subClassOf iso19156_SF:SF_SamplingFeature .
 
 iso28258:ProfileElement.lowerDepth
   a owl:ObjectProperty ;
