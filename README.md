@@ -1,6 +1,6 @@
 # glosis
-This repository contains the the Global Soil Information System (GloSIS) v1.0 ontology network, derived from the UML data model, 
-and modelled in line with best practices in ontology engineering, building on top of existing standards and well-known ontologies.
+This repository contains the Global Soil Information System (GloSIS) v1.0 ontology network, derived from the source UML data model, 
+and modelled in line with best practices and methodologies, reusing existing standard models and ontologies.
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
