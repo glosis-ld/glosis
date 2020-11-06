@@ -33,8 +33,126 @@
         dct:source <https://www.iso.org/standard/44595.html> ;
         dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
 
-### ISO FEATURES
+#################################################################
+#    ISO FEATURES
+#################################################################
 
+### ObjectProperties
+
+iso19156_SF:SF_SamplingFeature.sampledFeature 
+  a owl:ObjectProperty ;
+  rdfs:label "sampledFeature" ;
+  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+  rdfs:domain iso19156_SF:SF_SamplingFeature ;
+  rdfs:range iso19156_GFI:GFI_DomainFeature, iso19156_GFI:GFI_Feature .  
+
+iso19156_SF:SF_SamplingFeature.parameter
+  a owl:ObjectProperty ;
+  rdfs:label "parameter" ;
+  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+  rdfs:domain iso19156_SF:SF_SamplingFeature ;
+  rdfs:range iso19156_OB:NamedValue . 
+
+iso19156_SF:SF_SamplingFeature.lineage
+  a owl:ObjectProperty ;
+  rdfs:label "lineage" ;
+  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+  rdfs:domain iso19156_SF:SF_SamplingFeature ;
+  rdfs:range  iso19115_DQI:LI_Lineage .   
+  
+iso28258:ProfileElement.lowerDepth
+  a owl:ObjectProperty ;
+  rdfs:label "lowerDepth" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:ProfileElement ;
+  rdfs:range  quantitykind:Depth . 
+
+iso28258:ProfileElement.order
+  a owl:ObjectProperty ;
+  rdfs:label "order" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:ProfileElement ;
+  rdfs:range  xsd:integer . 
+
+iso28258:ProfileElement.upperDepth
+  a owl:ObjectProperty ;
+  rdfs:label "upperDepth" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:ProfileElement ;
+  rdfs:range  quantitykind:Depth .
+--  
+iso28258:Layer.developedHorizon
+  a owl:ObjectProperty ;
+  rdfs:label "developedHorizon" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:Layer ;
+  rdfs:range  iso28258:Horizon .     
+
+iso28258:Horizon.horizonInLayer
+  a owl:ObjectProperty ;
+  rdfs:label "horizonInLayer" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:Horizon ;
+  rdfs:range  iso28258:Layer .     
+
+iso28258:ProfileElement.elementOfProfile
+  a owl:ObjectProperty ;
+  rdfs:label "elementOfProfile" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:ProfileElement ;
+  rdfs:range  iso28258:Profile .
+  
+iso28258:Profile.element
+  a owl:ObjectProperty ;
+  rdfs:label "element" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:Profile ;
+  rdfs:range  iso28258:ProfileElement .
+  
+iso28258:Profile.samplingPlot
+  a owl:ObjectProperty ;
+  rdfs:label "samplingPlot" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:Profile ;
+  rdfs:range  iso28258:Plot .
+  
+iso28258:Plot.profile
+  a owl:ObjectProperty ;
+  rdfs:label "profile" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:Plot ;
+  rdfs:range  iso28258:Profile .
+  
+iso28258:Site.typicalProfile
+  a owl:ObjectProperty ;
+  rdfs:label "typicalProfile" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:Site ;
+  rdfs:range  iso28258:Profile .
+  
+iso28258:Profile.profileSite
+  a owl:ObjectProperty ;
+  rdfs:label "profileSite" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:range  iso28258:Profile ;
+  rdfs:domain iso28258:Site .
+  
+iso28258:Site.samplingPlot
+  a owl:ObjectProperty ;
+  rdfs:label "samplingPlot" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:Site ;
+  rdfs:range  iso28258:Plot .
+  
+iso28258:Plot.plotInSite
+  a owl:ObjectProperty ;
+  rdfs:label "plotInSite" ;
+  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+  rdfs:domain iso28258:Plot ;
+  rdfs:range  iso28258:Site .   
+
+### Classes
+  
 iso19156_GFI:GFI_Feature
   a owl:Class ;
   rdfs:label "GFI_Feature" ;
@@ -61,13 +179,6 @@ iso19156_SSF:SF_SpatialSamplingFeature
   skos:definition "When observations are made to estimate properties of a geospatial feature, in particular where the value of a property varies within the scope of the feature, a spatial sampling feature is used. Depending on accessibility and on the nature of the expected property variation, the sampling feature may be extensive in one, two or three spatial dimensions. Processing and visualization methods are often dependent on the topological dimension of the sampling manifold, so this provides a natural classification system for sampling features.  This classification follows common practice in focussing on conventional spatial dimensions. Properties observed on sampling features may be time-dependent, but the temporal axis does not generally contribute to the classification of sampling feature classes. Sampling feature identity is usually less time-dependent than is the property value." ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .    
-
-iso19156_SF:SF_SamplingFeature.sampledFeature 
-  a owl:ObjectProperty ;
-  rdfs:label "sampledFeature" ;
-  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
-  rdfs:domain iso19156_SF:SF_SamplingFeature ;
-  rdfs:range iso19156_GFI:GFI_DomainFeature, iso19156_GFI:GFI_Feature .  
   
 iso28258:Plot  
 	a owl:Class ;
@@ -115,25 +226,11 @@ iso28258:Horizon
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:subClassOf iso28258:ProfileElement .
 
-iso19156_SF:SF_SamplingFeature.parameter
-  a owl:ObjectProperty ;
-  rdfs:label "parameter" ;
-  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
-  rdfs:domain iso19156_SF:SF_SamplingFeature ;
-  rdfs:range iso19156_OB:NamedValue . 
-
 iso19156_OB:NamedValue
   a owl:Class ;
   rdfs:label "NamedValue" ;
   skos:definition "The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes. </skos:definition><rdfs:isDefinedBy>http://standards.iso.org/iso/19156/ed-1/en/" ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> .
-
-iso19156_SF:SF_SamplingFeature.lineage
-  a owl:ObjectProperty ;
-  rdfs:label "lineage" ;
-  rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
-  rdfs:domain iso19156_SF:SF_SamplingFeature ;
-  rdfs:range  iso19115_DQI:LI_Lineage . 
 
 iso19115_DQI:LI_Lineage
   a owl:Class ;
@@ -146,27 +243,6 @@ iso28258:ProfileElement
   skos:definition "Profle element is an abstract feature type grouping layers and horizons. Profle element may be considered as a horizontal feature that is parallel to the earth surface and that is part of the profle."  ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:subClassOf iso19156_SF:SF_SamplingFeature .
-
-iso28258:ProfileElement.lowerDepth
-  a owl:ObjectProperty ;
-  rdfs:label "lowerDepth" ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
-  rdfs:domain iso28258:ProfileElement ;
-  rdfs:range  quantitykind:Depth . 
-
-iso28258:ProfileElement.order
-  a owl:ObjectProperty ;
-  rdfs:label "order" ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
-  rdfs:domain iso28258:ProfileElement ;
-  rdfs:range  xsd:integer . 
-
-iso28258:ProfileElement.upperDepth
-  a owl:ObjectProperty ;
-  rdfs:label "upperDepth" ;
-  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
-  rdfs:domain iso28258:ProfileElement ;
-  rdfs:range  quantitykind:Depth . 
 
 #################################################################
 #    ALIGNMENTS (FROM DOCUMENTATION)
