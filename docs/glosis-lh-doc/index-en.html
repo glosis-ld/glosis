@@ -46,11 +46,11 @@ function loadTOC(){
         return this.clone().find(sel||">*").remove().end();
  }; 
    </script> 
-   <style>
-      ol { counter-reset: item }
-      li{ display: block }
-      li:before { content: counters(item, ".") " "; counter-increment: item }
-   </style>
+<!--   <style> 
+      ol.list{ counter-reset: item }
+      li.list{ display: block }
+      li.list:before { content: counters(item, ".") " "; counter-increment: item }
+   </style>-->
   </head> 
 
 <body>
@@ -100,16 +100,17 @@ function loadTOC(){
    This module in particular is focused on the representation of soil layers and horizons</span>
 </div>
 <div id="toc"><h2 id="toc">Table of contents</h2>
-   <ol>
+   <ol> 
       <li><a href="#introduction">Introduction</a>
         <ol>
           <li><a href="#namespacedeclarations">Namespace declarations</a></li>
         </ol>
       </li>
-      <li><a href="#overview">GloSiS Ontology: Layer-Horizon module overview</a></li>
+      <li><a href="#overview">GloSiS Ontology: Layer-Horizon module overview</a>
          <ol>
             <li><a href="#webvowl">Interactive diagram (WebVowl)</a></li>
          </ol>
+      </li>
       <li><a href="#description">GloSiS Ontology: Layer-Horizon module description</a></li>
       <li><a href="#crossreference">Cross reference for GloSiS Ontology: Layer-Horizon module classes, properties and dataproperties</a>
         <ol>
@@ -121,7 +122,7 @@ function loadTOC(){
       </li>
       <li><a href="#references">References</a></li>
       <li><a href="#acknowledgements">Acknowledgements</a></li>
-    </ol>
+   </ol>
 </div>
 
 <!--INTRODUCTION SECTION-->
