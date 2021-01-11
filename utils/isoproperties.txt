@@ -1,0 +1,14 @@
+developedHorizon (Layer, Horizon) 0:n  = aggregates (Layer, Horizon)
+--horizonInLayer (Horizon, Layer) 0:1 , IrreflexiveObjectProperty, AsymmetricObjectProperty (isAggregatedBy )
+
+--elementOfProfile (ProfileELement, SoilProfile) 1:1 , InverseFunctionalObjectProperty, IrreflexiveObjectProperty, AsymmetricObjectProperty (isPartOf)
+element (SoilProfile, ProfileELement) 1:*
+
+samplingPlot (soilProfile, Plot) 0:1
+profile (Plot, soilProfile) ) 0:1
+
+typicalProfile (Site, SoilProifle) 0:1
+--profileSite (SoilProfile, Site) 0:1
+
+samplingPlot (Site, Plot) 0:* = aggregates 
+--plotInSite (Plot, Site) 1:1  , IrreflexiveObjectProperty, AsymmetricObjectProperty (isAggregatedBy )
