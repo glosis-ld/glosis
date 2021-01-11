@@ -65,7 +65,7 @@ iso28258:ProfileElement.lowerDepth
   rdfs:label "lowerDepth" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:ProfileElement ;
-  rdfs:range  quantitykind:Depth . 
+  rdfs:range  [owl:oneOf (quantitykind:Depth)] . 
 
 iso28258:ProfileElement.order
   a owl:ObjectProperty ;
@@ -79,8 +79,8 @@ iso28258:ProfileElement.upperDepth
   rdfs:label "upperDepth" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:ProfileElement ;
-  rdfs:range  quantitykind:Depth .
---  
+  rdfs:range  [owl:oneOf (quantitykind:Depth)] . 
+#--  
 iso28258:Layer.developedHorizon
   a owl:ObjectProperty ;
   rdfs:label "developedHorizon" ;
