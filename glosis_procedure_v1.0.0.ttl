@@ -34,7 +34,8 @@
             skos:definition "WoSIS-derived" ;
             rdfs:seeAlso glosis_pr:PHProcedure .
     
-    glosis_pr:PHProcedure a sosa:Procedure;
+    glosis_pr:PHProcedure a owl:Class;
+            rdfs:subClassOf sosa:Procedure ;
             rdfs:subClassOf skos:Concept ;
             rdfs:label "Procedures for pH - codelist class"@en;
             rdfs:comment "This code list provides analysis procedures for pH."@en;
