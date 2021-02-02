@@ -961,7 +961,8 @@ glosis_lh:pH  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:pHValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:pHProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:pHProperty ] ;
+  		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure ; owl:allValuesFrom glosis_pr:PHProcedure ] .
 
 glosis_lh:pHProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "pHProperty"@en .
@@ -969,7 +970,6 @@ glosis_lh:pHProperty a sosa:ObservableProperty, qudt:Quantitykind ;
 glosis_lh:pHValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:pH ] ;
-  		rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure ; owl:allValuesFrom glosis_pr:PHProcedure ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:pH ] .
 
         
