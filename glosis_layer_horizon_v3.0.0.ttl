@@ -1,0 +1,2060 @@
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix glosis_lh: <http://w3id.org/glosis/model/layerhorizon#> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
+@prefix glosis_cm: <http://w3id.org/glosis/model/common#> .
+@prefix glosis_pr: <http://w3id.org/glosis/model/procedure#> .
+@prefix ssn:   <http://www.w3.org/ns/ssn/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+## APPENDED
+@prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013#> .
+@prefix iso19156_SF:  <http://def.isotc211.org/iso19156/2011/SamplingFeature#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+<http://w3id.org/glosis/model/layerhorizon>
+        a                owl:Ontology ;
+        owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: ;
+        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/2.0> ;
+        owl:versionInfo  "3.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      foaf:name "Bogusz Janiak"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "ISRIC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
+                      foaf:name "Luís M. de Sousa"
+                    ] ;
+        dct:title "GLOSIS ontology"@en ;
+        dct:description "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+glosis_lh:GL_Horizon  a        owl:Class ;
+        rdfs:subClassOf  iso28258:Horizon ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   iso28258:ProfileElement.lowerDepth
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   iso28258:ProfileElement.order
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   iso28258:ProfileElement.upperDepth
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   iso19156_SF:SF_SamplingFeature.lineage
+                         ] .
+
+glosis_lh:GL_Layer  a        owl:Class ;
+        rdfs:subClassOf  iso28258:Layer ;
+                rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   iso28258:ProfileElement.lowerDepth
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   iso28258:ProfileElement.order
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   iso28258:ProfileElement.upperDepth
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   iso19156_SF:SF_SamplingFeature.lineage
+                         ] .
+
+glosis_cm:InfiltrationRateClass rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_cm:RockSize rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+        
+glosis_cm:FragmentSize rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:CoatingNature  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CoatingNatureValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingNatureProperty ] .
+
+glosis_lh:coatingNatureProperty a sosa:ObservableProperty ;
+        rdfs:label "coatingNatureProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 66"@en .
+        
+glosis_lh:TextureLabClass  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:textureLabClassProperty ] .
+
+glosis_lh:textureLabClassProperty a sosa:ObservableProperty ;
+        rdfs:label "textureLabClassProperty"@en .
+
+glosis_lh:CementationDegree  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CementationDegreeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationDegreeProperty ] .
+
+glosis_lh:cementationDegreeProperty a sosa:ObservableProperty ;
+        rdfs:label "cementationDegreeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 72"@en .
+        
+glosis_lh:BulkDensityFineEarth  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityFineEarthValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityFineEarthProperty ] .
+
+glosis_lh:bulkDensityFineEarthProperty a sosa:ObservableProperty , qudt:Quantitykind;
+        rdfs:label "BulkDensityFineEarthProperty"@en .
+
+glosis_lh:BulkDensityFineEarthValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:KiloGM-PER-DeciM3] . 
+
+glosis_cm:ColourDry rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:CoatingContrast  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CoatingContrastValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingContrastProperty ] .
+
+glosis_lh:coatingContrastProperty a sosa:ObservableProperty ;
+        rdfs:label "coatingContrastProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 65"@en .
+        
+glosis_lh:BiologicalAbundance  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:BiologicalAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:biologicalAbundanceProperty ] .
+
+glosis_lh:biologicalAbundanceProperty a sosa:ObservableProperty ;
+        rdfs:label "biologicalAbundanceProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 81"@en .
+        
+glosis_lh:MottlesPresence  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:MottlesPresenceValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesPresenceProperty ] .
+
+glosis_lh:mottlesPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "mottlesPresenceProperty"@en .
+
+glosis_lh:MottlesPresenceValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:boolean ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
+
+glosis_lh:VoidsClassification  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:VoidsClassificationValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:voidsClassificationProperty ] .
+
+glosis_lh:voidsClassificationProperty a sosa:ObservableProperty ;
+        rdfs:label "VoidsClassificationProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 61"@en .
+
+glosis_lh:MineralConcKind  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MineralConcKindValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcKindProperty ] .
+
+glosis_lh:mineralConcKindProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralConcKindProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 74"@en .
+        
+glosis_lh:BulkDensityMineral  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:BulkDensityMineralValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityMineralProperty ] .
+
+glosis_lh:bulkDensityMineralProperty a sosa:ObservableProperty ;
+        rdfs:label "bulkDensityMineralProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 58"@en .
+        
+glosis_cm:ColourWet rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:Member  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:MemberValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:allValuesFrom glosis_cl:MemberPropertyValueCode ] .
+
+glosis_lh:MemberValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
+
+glosis_lh:CationsSum  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationsSumValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationsSumProperty ] .
+
+glosis_lh:cationsSumProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "cationsSumProperty"@en .
+
+glosis_lh:CationsSumValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
+
+glosis_lh:MottlesColour  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom  glosis_cm:MunsellColorValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesColourProperty ] .
+
+glosis_lh:mottlesColourProperty a sosa:ObservableProperty ;
+        rdfs:label "mottlesColourProperty"@en .                        
+
+glosis_lh:DryConsistency a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:dryConsistencyProperty ] .
+
+glosis_lh:dryConsistencyProperty a sosa:ObservableProperty ;
+        rdfs:label "dryConsistencyProperty"@en .
+
+glosis_lh:CoatingAbundance  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CoatingAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingAbundanceProperty ] .
+
+glosis_lh:coatingAbundanceProperty a sosa:ObservableProperty ;
+        rdfs:label "coatingAbundanceProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 64"@en .
+
+glosis_lh:ConsistenceDry  a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ConsistenceDryValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:consistenceDryProperty ] .
+
+glosis_lh:consistenceDryProperty a sosa:ObservableProperty ;
+        rdfs:label "consistenceDryProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 53"@en .
+        
+glosis_cm:InfiltrationRateNumeric rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:GypsumForms a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:GypsumFormsValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumFormsProperty ] .
+
+glosis_lh:gypsumFormsProperty a sosa:ObservableProperty ;
+        rdfs:label "gypsumFormsProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 41"@en .
+        
+glosis_lh:MineralConcNature a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MineralConcNatureValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcNatureProperty ] .
+
+glosis_lh:mineralConcNatureProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralConcNatureProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 77"@en .
+
+glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+        
+glosis_lh:ParticleSizeFractionsSum  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ParticleSizeFractionsSumValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:particleSizeFractionsSumProperty ] .
+
+glosis_lh:particleSizeFractionsSumProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "ParticleSizeFractionsSumProperty"@en .
+
+glosis_lh:ParticleSizeFractionsSumValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
+
+glosis_lh:ElectricalConductivity  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ElectricalConductivityValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:electricalConductivityProperty ] .
+
+glosis_lh:electricalConductivityProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "electricalConductivityProperty"@en .
+
+glosis_lh:ElectricalConductivityValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:DeciS-PER-M] . 
+
+glosis_lh:BoundaryDistinctness a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:BoundaryDistinctnessValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:boundaryDistinctnessProperty ] .
+
+glosis_lh:boundaryDistinctnessProperty a sosa:ObservableProperty ;
+        rdfs:label "boundaryDistinctnessProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 24.1"@en .
+
+glosis_lh:RootsPresence  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:RootsPresenceValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:rootsPresenceProperty ] .
+
+glosis_lh:rootsPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "RootsPresenceProperty"@en .
+
+glosis_lh:RootsPresenceValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:boolean ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
+
+glosis_lh:CementationFabric a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CementationFabricValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationFabricProperty ] .
+
+glosis_lh:cementationFabricProperty a sosa:ObservableProperty ;
+        rdfs:label "cementationFabricProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 70"@en .
+        
+glosis_lh:BulkDensityWholeSoil  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityWholeSoilValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityWholeSoilProperty ] .
+
+glosis_lh:bulkDensityWholeSoilProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "bulkDensityWholeSoilProperty"@en .
+
+glosis_lh:BulkDensityWholeSoilValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:KiloGM-PER-DeciM3] . 
+
+glosis_lh:MottlesSize a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MottlesSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesSizeProperty ] .
+
+glosis_lh:mottlesSizeProperty a sosa:ObservableProperty ;
+        rdfs:label "mottlesSizeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 33"@en .
+        
+glosis_lh:PorosityClass a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:PorosityClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:porosityClassProperty ] .
+
+glosis_lh:porosityClassProperty a sosa:ObservableProperty ;
+        rdfs:label "porosityClassProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 60"@en .
+
+glosis_lh:Silt  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SiltValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:allValuesFrom glosis_cl:SiltPropertyValueCode ] .
+
+glosis_lh:SiltValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
+
+glosis_lh:MottlesAbundance a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MottlesAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesAbundanceProperty ] .
+
+glosis_lh:mottlesAbundanceProperty a sosa:ObservableProperty ;
+        rdfs:label "mottlesAbundanceProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 32"@en .
+        
+glosis_lh:VoidsDiameter a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:VoidsDiameterValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:voidsDiameterProperty ] .
+
+glosis_lh:voidsDiameterProperty a sosa:ObservableProperty ;
+        rdfs:label "voidsDiameterProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 62"@en .
+        
+glosis_lh:StructureGrade a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:StructureGradeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:structureGradeProperty ] .
+
+glosis_lh:structureGradeProperty a sosa:ObservableProperty ;
+        rdfs:label "structureGradeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 47"@en .
+        
+glosis_cm:FragmentCover rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:BiologicalFeatures  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:BiologicalFeaturesValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:biologicalFeaturesProperty ] .
+
+glosis_lh:biologicalFeaturesProperty a sosa:ObservableProperty ;
+        rdfs:label "biologicalFeaturesProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 82"@en .
+        
+glosis_lh:Porosity  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:PorosityValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:porosityProperty ] .
+
+glosis_lh:porosityProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "porosityProperty"@en .
+
+glosis_lh:PorosityValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM3-PER-M3] . 
+
+glosis_cm:Texture rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:MineralContent  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:MineralContentValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralContentProperty ] .
+
+glosis_lh:mineralContentProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "mineralContentProperty"@en .
+
+glosis_lh:MineralContentValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
+
+glosis_lh:PoresSize  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:VoidsDiameterValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:poresSizeProperty ] .
+
+glosis_lh:poresSizeProperty a sosa:ObservableProperty ;
+        rdfs:label "poresSizeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 62"@en .
+        
+glosis_cm:RockShape rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:StructureSize  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:StructureSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:structureSizeProperty ] .
+
+glosis_lh:structureSizeProperty a sosa:ObservableProperty ;
+        rdfs:label "structureSizeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 50"@en .
+        
+glosis_lh:MineralConcShape a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MineralConcShapeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcShapeProperty ] .
+
+glosis_lh:mineralConcShapeProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralConcShapeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 75,2"@en .
+        
+glosis_lh:WaterRetention  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:WaterRetentionValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:allValuesFrom glosis_cl:WaterRetentionPropertyValueCode ] .
+
+glosis_lh:WaterRetentionValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
+
+glosis_lh:Sand  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SandValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:allValuesFrom glosis_cl:SandPropertyValueCode ] .
+
+glosis_lh:SandValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
+
+glosis_cm:OrganicMatterClass rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:clayMinerology a owl:DatatypeProperty ;
+        rdfs:range   xsd:string .
+
+glosis_lh:GypsumWeight  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:GypsumWeightValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumWeightProperty ] .
+
+glosis_lh:gypsumWeightProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "gypsumWeightProperty"@en .
+
+glosis_lh:GypsumWeightValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-KiloGM ].
+
+glosis_lh:PeatDrainage  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:PeatDrainageValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatDrainageProperty ] .
+
+glosis_lh:peatDrainageProperty a sosa:ObservableProperty ;
+        rdfs:label "peatDrainageProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 59.1"@en .
+        
+glosis_cm:BleachedSand rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:SandyTexture  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SandyTextureValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:sandyTextureProperty ] .
+
+glosis_lh:sandyTextureProperty a sosa:ObservableProperty ;
+        rdfs:label "sandyTextureProperty"@en;
+        rdfs:isDefinedBy "GfSD Figure 4.3"@en .
+
+glosis_lh:SolubleCationsTotal  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleCationsTotalValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:solubleCationsTotalProperty ] .
+
+glosis_lh:solubleCationsTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+        rdfs:label "solubleCationsTotalProperty"@en .
+
+glosis_lh:SolubleCationsTotalValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:MOL-PER-DeciM3 ] . 
+
+glosis_lh:CementationNature a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CementationNatureValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationNatureProperty ] .
+
+glosis_lh:cementationNatureProperty a sosa:ObservableProperty ;
+        rdfs:label "cementationNatureProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 71"@en .
+
+glosis_lh:Salt  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SaltValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:saltProperty ] .
+
+glosis_lh:saltProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+        rdfs:label "saltProperty"@en .
+
+glosis_lh:SaltValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
+
+glosis_lh:SolubleAnionsTotal  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleAnionsTotalValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:solubleAnionsTotalProperty ] .
+
+glosis_lh:solubleAnionsTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+        rdfs:label "solubleAnionsTotalProperty"@en .
+
+glosis_lh:SolubleAnionsTotalValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:MOL-PER-DeciM3 ] . 
+
+glosis_cm:CracksDepth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:BulkDensityPeat a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:BulkDensityPeatValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityPeatProperty ] .
+
+glosis_lh:bulkDensityPeatProperty a sosa:ObservableProperty ;
+        rdfs:label "bulkDensityPeatProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 59.3"@en .
+
+glosis_lh:MineralFragments a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MineralFragmentsValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralFragmentsProperty ] .
+
+glosis_lh:mineralFragmentsProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralFragmentsProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 30"@en .
+
+glosis_lh:MottlesBoundaryClassification a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:BoundaryClassificationValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesBoundaryClassificationProperty ] .
+
+glosis_lh:mottlesBoundaryClassificationProperty a sosa:ObservableProperty ;
+        rdfs:label "mottlesBoundaryClassificationProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 35"@en .
+
+glosis_lh:CationExchangeCapacity  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacityValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationExchangeCapacityProperty ] .
+
+glosis_lh:cationExchangeCapacityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+        rdfs:label "cationExchangeCapacityProperty"@en .
+
+glosis_lh:CationExchangeCapacityValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:MOL-PER-KiloGM ] .
+
+glosis_lh:PeatDecompostion a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:PeatDecompostionValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatDecompostionProperty ] .
+
+glosis_lh:peatDecompostionProperty a sosa:ObservableProperty ;
+        rdfs:label "peatDecompostionProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 31"@en .
+
+glosis_lh:PeatVolume a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:PeatVolumeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatVolumeProperty ] .
+
+glosis_lh:peatVolumeProperty a sosa:ObservableProperty ;
+        rdfs:label "peatVolumeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 59.2"@en .
+
+glosis_lh:BoundaryTopography a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:BoundaryTopographyValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:boundaryTopographyProperty ] .
+
+glosis_lh:boundaryTopographyProperty a sosa:ObservableProperty ;
+        rdfs:label "boundaryTopographyProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 24.2"@en .
+
+glosis_lh:CarbonatesContent a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CarbonatesContentValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:carbonatesContentProperty ] .
+
+glosis_lh:carbonatesContentProperty a sosa:ObservableProperty ;
+        rdfs:label "carbonatesContentProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 38"@en .
+
+glosis_lh:MineralConcColour a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MineralConcColourValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcColourProperty ] .
+
+glosis_lh:mineralConcColourProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralConcColourProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 78"@en .
+
+glosis_lh:CationExchangeCapacityEffective  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacityEffectiveValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationExchangeCapacityEffectiveProperty ] .
+
+glosis_lh:cationExchangeCapacityEffectiveProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+        rdfs:label "cationExchangeCapacityEffectiveProperty"@en .
+
+glosis_lh:CationExchangeCapacityEffectiveValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:MOL-PER-KiloGM ] .
+
+glosis_lh:HydraulicConductivity  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:HydraulicConductivityValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:hydraulicConductivityProperty ] .
+
+glosis_lh:hydraulicConductivityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+        rdfs:label "hydraulicConductivityProperty"@en .
+
+glosis_lh:HydraulicConductivityValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM3-PER-HR ] .
+
+glosis_lh:Plasticity a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:PlasticityValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:plasticityProperty ] .
+
+glosis_lh:plasticityProperty a sosa:ObservableProperty ;
+        rdfs:label "plasticityProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 56"@en .
+
+glosis_lh:MottlesContrast a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ContrastValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesContrastProperty ] .
+
+glosis_lh:mottlesContrastProperty a sosa:ObservableProperty ;
+        rdfs:label "mottlesContrastProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 34"@en .
+
+glosis_lh:ConsistenceMoist a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ConsistenceMoistValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:consistenceMoistProperty ] .
+
+glosis_lh:consistenceMoistProperty a sosa:ObservableProperty ;
+        rdfs:label "consistenceMoistProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 54"@en .
+
+glosis_lh:MineralConcVolume a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MineralConcVolumeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcVolumeProperty ] .
+
+glosis_lh:mineralConcVolumeProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralConcVolumeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 73"@en .
+
+glosis_cm:CracksDistance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:Clay  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ClayValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:allValuesFrom glosis_cl:ClayPropertyValueCode ] .
+
+glosis_lh:ClayValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
+
+glosis_lh:SaltContent a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SaltContentValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:saltContentProperty ] .
+
+glosis_lh:saltContentProperty a sosa:ObservableProperty ;
+        rdfs:label "saltContentProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 42"@en .
+
+glosis_lh:GypsumContent a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:GypsumContentValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumContentProperty ] .
+
+glosis_lh:gypsumContentProperty a sosa:ObservableProperty ;
+        rdfs:label "gypsumContentProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 40"@en .
+
+glosis_lh:CoatingForm a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CoatingFormValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingFormProperty ] .
+
+glosis_lh:coatingFormProperty a sosa:ObservableProperty ;
+        rdfs:label "coatingFormProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 67"@en .
+
+glosis_lh:OxalateExtractableOpticalDensity  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:OxalateExtractableOpticalDensityValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:oxalateExtractableOpticalDensityProperty ] .
+
+glosis_lh:oxalateExtractableOpticalDensityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+        rdfs:label "oxalateExtractableOpticalDensityProperty"@en .
+
+glosis_lh:OxalateExtractableOpticalDensityValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
+
+glosis_lh:MineralConcHardness a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MineralConcHardnessValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcHardnessProperty ] .
+
+glosis_lh:mineralConcHardnessProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralConcHardnessProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 76"@en .
+
+glosis_lh:PoresAbundance a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:PoresAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:poresAbundanceProperty ] .
+
+glosis_lh:poresAbundanceProperty a sosa:ObservableProperty ;
+        rdfs:label "poresAbundanceProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 63"@en .
+
+glosis_cm:CracksWidth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+
+glosis_lh:MineralConcSize a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MineralConcSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcSizeProperty ] .
+
+glosis_lh:mineralConcSizeProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralConcSizeeProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 75.1"@en .
+
+glosis_lh:Stickiness a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:StickinessValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:stickinessProperty ] .
+
+glosis_lh:stickinessProperty a sosa:ObservableProperty ;
+        rdfs:label "stickinessProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 55"@en .
+
+glosis_lh:MoistConsistency  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:moistConsistencyProperty ] .
+
+glosis_lh:moistConsistencyProperty a sosa:ObservableProperty ;
+        rdfs:label "moistConsistencyProperty"@en .
+
+glosis_lh:CoatingLocation a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CoatingLocationValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingLocationProperty ] .
+
+glosis_lh:coatingLocationProperty a sosa:ObservableProperty ;
+        rdfs:label "coatingLocationProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 68"@en .
+
+glosis_cm:RockAbundance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ]] .
+
+glosis_lh:TextureFieldClass  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:textureFieldClassProperty ] .
+
+glosis_lh:textureFieldClassProperty a sosa:ObservableProperty ;
+        rdfs:label "textureFieldClassProperty"@en .
+
+glosis_lh:CarbonatesForms a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CarbonatesFormsValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:carbonatesFormsProperty ] .
+
+glosis_lh:carbonatesFormsProperty a sosa:ObservableProperty ;
+        rdfs:label "carbonatesFormsProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 39"@en .
+
+glosis_lh:Fragments  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:FragmentsValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:allValuesFrom glosis_cl:FragmentsPropertyValueCode ] .
+
+glosis_lh:FragmentsValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
+
+glosis_lh:WetPlasticity  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:wetPlasticityProperty ] .
+
+glosis_lh:wetPlasticityProperty a sosa:ObservableProperty ;
+        rdfs:label "wetPlasticityProperty"@en .
+
+glosis_lh:MineralConcAbundance  a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcAbundanceProperty ] .
+
+glosis_lh:mineralConcAbundanceProperty a sosa:ObservableProperty ;
+        rdfs:label "mineralConcAbundanceProperty"@en .
+
+glosis_lh:RootsAbundance a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:RootsAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:rootsAbundanceProperty ] .
+
+glosis_lh:rootsAbundanceProperty a sosa:ObservableProperty ;
+        rdfs:label "rootsAbundanceProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 80"@en .
+
+glosis_lh:CementationContinuity a	owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CementationContinuityValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationContinuityProperty ] .
+
+glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
+        rdfs:label "cementationContinuityProperty"@en;
+        rdfs:isDefinedBy "GfSD Table 69"@en .
+
+
+            glosis_lh:availableWaterHoldingCapacityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "availableWaterHoldingCapacityProperty"@en .
+            
+            glosis_lh:availableWaterHoldingCapacity  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:availableWaterHoldingCapacityValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:availableWaterHoldingCapacityProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:AvailablewaterholdingcapacityProcedure ] .
+    
+            glosis_lh:availableWaterHoldingCapacityValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:m3/100m3 ] .
+            
+            glosis_lh:baseSaturationProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "baseSaturationProperty"@en .
+            
+            glosis_lh:baseSaturation  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:baseSaturationValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:baseSaturationProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:BasesaturationProcedure ] .
+    
+            glosis_lh:baseSaturationValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:bulkDensityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "bulkDensityProperty"@en .
+            
+            glosis_lh:bulkDensity  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:bulkDensityValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:BulkdensityProcedure ] .
+    
+            glosis_lh:bulkDensityValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:kg/dm3 ] .
+            
+            glosis_lh:cecSoilProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "cecSoilProperty"@en .
+            
+            glosis_lh:cecSoil  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:cecSoilValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:cecSoilProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:CecsoilProcedure ] .
+    
+            glosis_lh:cecSoilValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:coarseFragmentsProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "coarseFragmentsProperty"@en .
+            
+            glosis_lh:coarseFragments  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:coarseFragmentsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:coarseFragmentsProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:CoarsefragmentsProcedure ] .
+    
+            glosis_lh:coarseFragmentsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:effectiveCecProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "effectiveCecProperty"@en .
+            
+            glosis_lh:effectiveCec  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:effectiveCecValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:effectiveCecProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:EffectivececProcedure ] .
+    
+            glosis_lh:effectiveCecValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:electricalConductivityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "electricalConductivityProperty"@en .
+            
+            glosis_lh:electricalConductivity  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:electricalConductivityValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:electricalConductivityProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:ElectricalconductivityProcedure ] .
+    
+            glosis_lh:electricalConductivityValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:dS/m ] .
+            
+            glosis_lh:acidityExchangeableProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "acidityExchangeableProperty"@en .
+            
+            glosis_lh:acidityExchangeable  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:acidityExchangeableValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:acidityExchangeableProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:AcidityexchangeableProcedure ] .
+    
+            glosis_lh:acidityExchangeableValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:aluminiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "aluminiumProperty"@en .
+            
+            glosis_lh:aluminiumExchangeablebases  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:aluminiumExchangeablebasesValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:aluminiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:exchangeableBasesProcedure ] .
+    
+            glosis_lh:aluminiumExchangeablebasesValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:aluminiumExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:aluminiumExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:aluminiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:aluminiumExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:aluminiumTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:aluminiumTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:aluminiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:aluminiumTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:calciumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "calciumProperty"@en .
+            
+            glosis_lh:calciumExchangeablebases  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:calciumExchangeablebasesValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:calciumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:exchangeableBasesProcedure ] .
+    
+            glosis_lh:calciumExchangeablebasesValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:calciumExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:calciumExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:calciumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:calciumExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:calciumTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:calciumTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:calciumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:calciumTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:hidrogenProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "hidrogenProperty"@en .
+            
+            glosis_lh:hidrogenExchangeablebases  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:hidrogenExchangeablebasesValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:hidrogenProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:exchangeableBasesProcedure ] .
+    
+            glosis_lh:hidrogenExchangeablebasesValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:magnesiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "magnesiumProperty"@en .
+            
+            glosis_lh:magnesiumExchangeablebases  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:magnesiumExchangeablebasesValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:magnesiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:exchangeableBasesProcedure ] .
+    
+            glosis_lh:magnesiumExchangeablebasesValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:magnesiumExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:magnesiumExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:magnesiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:magnesiumExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:magnesiumTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:magnesiumTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:magnesiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:magnesiumTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:manganeseProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "manganeseProperty"@en .
+            
+            glosis_lh:manganeseExchangeablebases  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:manganeseExchangeablebasesValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:manganeseProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:exchangeableBasesProcedure ] .
+    
+            glosis_lh:manganeseExchangeablebasesValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:manganeseExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:manganeseExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:manganeseProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:manganeseExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:manganeseTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:manganeseTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:manganeseProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:manganeseTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:potassiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "potassiumProperty"@en .
+            
+            glosis_lh:potassiumExchangeablebases  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:potassiumExchangeablebasesValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:potassiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:exchangeableBasesProcedure ] .
+    
+            glosis_lh:potassiumExchangeablebasesValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:potassiumExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:potassiumExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:potassiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:potassiumExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:potassiumTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:potassiumTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:potassiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:potassiumTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:sodiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "sodiumProperty"@en .
+            
+            glosis_lh:sodiumExchangeablebases  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:sodiumExchangeablebasesValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:sodiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:exchangeableBasesProcedure ] .
+    
+            glosis_lh:sodiumExchangeablebasesValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:sodiumExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:sodiumExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:sodiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:sodiumExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:sodiumTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:sodiumTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:sodiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:sodiumTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/kg ] .
+            
+            glosis_lh:boronProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "boronProperty"@en .
+            
+            glosis_lh:boronExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:boronExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:boronProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:boronExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:boronTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:boronTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:boronProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:boronTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:cadmiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "cadmiumProperty"@en .
+            
+            glosis_lh:cadmiumExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:cadmiumExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:cadmiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:cadmiumExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:cadmiumTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:cadmiumTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:cadmiumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:cadmiumTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:coppperProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "coppperProperty"@en .
+            
+            glosis_lh:coppperExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:coppperExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:coppperProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:coppperExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:coppperTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:coppperTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:coppperProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:coppperTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:ironProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "ironProperty"@en .
+            
+            glosis_lh:ironExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:ironExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:ironProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:ironExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:ironTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:ironTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:ironProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:ironTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:Property a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "Property"@en .
+            
+            glosis_lh:Extractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:ExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:Property ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:ExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:Totalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:TotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:Property ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:TotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:molybdenumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "molybdenumProperty"@en .
+            
+            glosis_lh:molybdenumExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:molybdenumExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:molybdenumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:molybdenumExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:molybdenumTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:molybdenumTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:molybdenumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:molybdenumTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:phosphorusProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "phosphorusProperty"@en .
+            
+            glosis_lh:phosphorusExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:phosphorusExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:phosphorusProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:phosphorusExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:phosphorusTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:phosphorusTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:phosphorusProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:phosphorusTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:sulfurProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "sulfurProperty"@en .
+            
+            glosis_lh:sulfurExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:sulfurExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:sulfurProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:sulfurExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:sulfurTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:sulfurTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:sulfurProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:sulfurTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:zincProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "zincProperty"@en .
+            
+            glosis_lh:zincExtractableelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:zincExtractableelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:zincProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:extractableElementsProcedure ] .
+    
+            glosis_lh:zincExtractableelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:zincTotalelements  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:zincTotalelementsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:zincProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:totalElementsProcedure ] .
+    
+            glosis_lh:zincTotalelementsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:gypsumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "gypsumProperty"@en .
+            
+            glosis_lh:gypsum  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:gypsumValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:gypsumProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:GypsumProcedure ] .
+    
+            glosis_lh:gypsumValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:hydraulicConductivityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "hydraulicConductivityProperty"@en .
+            
+            glosis_lh:hydraulicConductivity  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:hydraulicConductivityValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:hydraulicConductivityProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:HydraulicconductivityProcedure ] .
+    
+            glosis_lh:hydraulicConductivityValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cm/h ] .
+            
+            glosis_lh:carbonInorganicProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "carbonInorganicProperty"@en .
+            
+            glosis_lh:carbonInorganic  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:carbonInorganicValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:carbonInorganicProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:CarboninorganicProcedure ] .
+    
+            glosis_lh:carbonInorganicValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:g/kg ] .
+            
+            glosis_lh:moistureContentProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "moistureContentProperty"@en .
+            
+            glosis_lh:moistureContent  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:moistureContentValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:moistureContentProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:MoisturecontentProcedure ] .
+    
+            glosis_lh:moistureContentValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:m3/100m3 ] .
+            
+            glosis_lh:carbonOrganicProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "carbonOrganicProperty"@en .
+            
+            glosis_lh:carbonOrganic  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:carbonOrganicValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:carbonOrganicProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:CarbonorganicProcedure ] .
+    
+            glosis_lh:carbonOrganicValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:g/kg ] .
+            
+            glosis_lh:organicMatterProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "organicMatterProperty"@en .
+            
+            glosis_lh:organicMatter  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:organicMatterValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:organicMatterProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:OrganicmatterProcedure ] .
+    
+            glosis_lh:organicMatterValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:g/kg ] .
+            
+            glosis_lh:pHProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "pHProperty"@en .
+            
+            glosis_lh:pH  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:pHValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:pHProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:PhProcedure ] .
+    
+            glosis_lh:pHValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:pH ] .
+            
+            glosis_lh:phosphorusRetentionProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "phosphorusRetentionProperty"@en .
+            
+            glosis_lh:phosphorusRetention  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:phosphorusRetentionValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:phosphorusRetentionProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:PhosphorusretentionProcedure ] .
+    
+            glosis_lh:phosphorusRetentionValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:g/100g ] .
+            
+            glosis_lh:porosityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "porosityProperty"@en .
+            
+            glosis_lh:porosity  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:porosityValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:porosityProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:PorosityProcedure ] .
+    
+            glosis_lh:porosityValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:m3/100m3 ] .
+            
+            glosis_lh:solubleSaltsProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "solubleSaltsProperty"@en .
+            
+            glosis_lh:solubleSalts  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:solubleSaltsValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:solubleSaltsProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:SolublesaltsProcedure ] .
+    
+            glosis_lh:solubleSaltsValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:cmolc/l ] .
+            
+            glosis_lh:sandProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "sandProperty"@en .
+            
+            glosis_lh:sandTexturesasicl  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:sandTexturesasiclValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:sandProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:textureSaSiClProcedure ] .
+    
+            glosis_lh:sandTexturesasiclValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:siltProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "siltProperty"@en .
+            
+            glosis_lh:siltTexturesasicl  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:siltTexturesasiclValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:siltProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:textureSaSiClProcedure ] .
+    
+            glosis_lh:siltTexturesasiclValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:clayProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "clayProperty"@en .
+            
+            glosis_lh:clayTexturesasicl  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:clayTexturesasiclValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:clayProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:textureSaSiClProcedure ] .
+    
+            glosis_lh:clayTexturesasiclValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:% ] .
+            
+            glosis_lh:carbonTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "carbonTotalProperty"@en .
+            
+            glosis_lh:carbonTotal  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:carbonTotalValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:carbonTotalProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:CarbontotalProcedure ] .
+    
+            glosis_lh:carbonTotalValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:g/kg ] .
+            
+            glosis_lh:totalCarbonateEquivalentProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "totalCarbonateEquivalentProperty"@en .
+            
+            glosis_lh:totalCarbonateEquivalent  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:totalCarbonateEquivalentValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:totalCarbonateEquivalentProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:TotalcarbonateequivalentProcedure ] .
+    
+            glosis_lh:totalCarbonateEquivalentValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:g/kg ] .
+            
+            glosis_lh:nitrogenTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "nitrogenTotalProperty"@en .
+            
+            glosis_lh:nitrogenTotal  a	owl:Class ;
+                rdfs:subClassOf  sosa:Observation ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:hasResult ; owl:allValuesFrom glosis_lh:nitrogenTotalValue ] ;
+      			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                            sosa:observedProperty ; owl:hasValue glosis_lh:nitrogenTotalProperty ] ;
+      		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:NitrogentotalProcedure ] .
+    
+            glosis_lh:nitrogenTotalValue a owl:Class ;
+                rdfs:subClassOf  qudt:QuantityValue ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
+                owl:hasValue unit:g/kg ] .
+            
