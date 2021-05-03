@@ -4,8 +4,8 @@ import json
 unit_dict = {}
 meth_dict = {}
 
-def printObservation(prop, meth, proc_name, units):
-    print("""
+def printObservation(prop, meth, proc_name, units, file):
+    file.write("""
             glosis_lh:%s%s  a	owl:Class ;
                 rdfs:subClassOf  sosa:Observation ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -17,7 +17,7 @@ def printObservation(prop, meth, proc_name, units):
                         sosa:usedProcedure ; owl:allValuesFrom glosis_pr:%sProcedure ] .
     """ % (prop, meth, prop, meth, prop, proc_name))
     
-    print("""
+    file.write("""
             glosis_lh:%s%sValue a owl:Class ;
                 rdfs:subClassOf  qudt:QuantityValue ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
@@ -25,8 +25,8 @@ def printObservation(prop, meth, proc_name, units):
                 owl:hasValue unit:%s ] .
             """ % (prop, meth, units))
 
-def printProperty(prop):
-    print("""
+def printProperty(prop, file):
+    file.write("""
             glosis_lh:%sProperty a sosa:ObservableProperty, qudt:Quantitykind ;
                 rdfs:label "%sProperty"@en .
             """ % (prop, prop))
@@ -37,7 +37,8 @@ def main():
     last = ""
     csv_file = open('/home/duque004/ISRIC/ProjectsInternal/GSP/DataBaseContents/Procedures.csv')
     csv_reader = csv.reader(csv_file, delimiter=',')
-    
+    headers = next(csv_reader)
+
     # Read first row
     for row in csv_reader:
      
@@ -46,7 +47,7 @@ def main():
         units = row[3]
         if (prop != last and prop != "" and units != ""):
     
-            method = row[4]
+#            method = row[4]
             props = prop.split(" ")
     
             for prp in props:
@@ -60,22 +61,21 @@ def main():
                     meth_dict[prp] = [meta_meth]
     
             last = prop
-    
-#    print(json.dumps(unit_dict, indent=4, sort_keys=True))
-#    print(json.dumps(meth_dict, indent=4, sort_keys=True))
-#    exit()
+
+
+    file = open('props.ttl', 'a')
     
     for prop in unit_dict:
     
         units = unit_dict[prop][0]
-        printProperty(prop)
+        printProperty(prop, file)
     
         for meth in meth_dict[prop]:
             if meth == "":
                 proc_name = prop.capitalize()
             else:
                 proc_name = meth
-            printObservation(prop, meth.capitalize(), proc_name, units)
+            printObservation(prop, meth.capitalize(), proc_name, units, file)
 
 
 
