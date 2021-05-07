@@ -1,8 +1,5 @@
 import csv
 
-csv_file = open('pH_Methods.csv')
-csv_reader = csv.reader(csv_file, delimiter=',')
-
 output = ""
 individ_list = ""
 individuals = ""
@@ -26,10 +23,9 @@ def addClasses(prop, proc, procM, source):
             rdfs:label "Procedures for %s - codelist class"@en;
             rdfs:comment "This code list provides analysis procedures for %s."@en;
             rdfs:seeAlso glosis_pr:%s ;
-            owl:oneOf ( 
-    """  % (procM, prop, prop, proc)
+            owl:oneOf ("""  % (procM, prop, prop, proc)
 
-    output += individ_list + ") ."
+    output += individ_list + "\n\t\t\t) .\n"
 
     output += individuals
 
@@ -37,34 +33,53 @@ def addClasses(prop, proc, procM, source):
     individuals = ""
 
 
-proc_prev = ""
 
-for row in csv_reader:
+def main():
 
-    prop = row[1]
-    proc = prop + "Procedure"
-    procM = proc[0].upper() + proc[1:]
-    method = row[2]
-    desc = row[3]
-    source = row[4]
+    global output, individ_list, individuals
 
-    if (proc != proc_prev):
-        addClasses(prop, proc, procM, source)
+    proc_prev = ""
+    csv_file = open('/home/duque004/ISRIC/ProjectsInternal/GSP/DataBaseContents/Procedures.csv')
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    # Bypass header
+    next(csv_reader)
 
-    individ_list += "\t\tglosis_pr:" + method + "\n"
+    for row in csv_reader:
 
-    individuals += """
+        prop = row[1] # meta-property
+        if (prop == "" or prop == None):
+            prop = row[2]
+        proc = prop + "Procedure"
+        procM = proc[0].upper() + proc[1:]
+        method = row[4]
+        desc = row[5]
+        reference = row[6]
+        source = row[7]
+    
+        if (proc_prev != "" and proc != proc_prev):
+            addClasses(prop, proc, procM, source)
+    
+        individ_list += """
+                glosis_pr:%s""" % (method)
+    
+        individuals += """
     glosis_pr:%s a skos:Concept, glosis_pr:%s;
             skos:topConceptOf glosis_pr:%s;
             skos:prefLabel "%s"@en ;
             skos:notation "%s" ;
-            skos:definition "%s" ;
+            skos:definition "%s" ;""" % (method, procM, proc, method, method, desc)
+        if (reference != ""):
+            individuals += """
+            skos:scopeNote <%s> ;""" % (reference)
+        individuals += """
             skos:inScheme glosis_pr:%s .
-    """  % (method, procM, proc, method, method, desc, proc)
+            """ % (proc)
+    
+        proc_prev = proc
 
-    proc_prev = proc
+    file = open('procedures.ttl', 'a')
+    file.write(output)
 
 
-addClasses(prop, proc, procM, source)
-
-print(output)
+if __name__ == "__main__":
+    main()
