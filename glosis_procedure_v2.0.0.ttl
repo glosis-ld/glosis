@@ -264,22 +264,6 @@
             skos:definition "GloSIS" ;
             rdfs:seeAlso glosis_pr:ChlorideProcedure .
     
-    glosis_pr:ChlorideProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for chloride - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for chloride."@en;
-            rdfs:seeAlso glosis_pr:chlorideProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:CarbonateProcedure;
-            skos:topConceptOf glosis_pr:carbonateProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:carbonateProcedure .
-            
     glosis_pr:cecSoilProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for cecSoil analysis procedures - codelist scheme"@en;
             rdfs:label "Code list for cecSoil analysis procedures - codelist scheme"@en;
@@ -287,22 +271,6 @@
             skos:definition "WoSIS-derived" ;
             rdfs:seeAlso glosis_pr:CecSoilProcedure .
     
-    glosis_pr:CecSoilProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for cecSoil - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for cecSoil."@en;
-            rdfs:seeAlso glosis_pr:cecSoilProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:ChlorideProcedure;
-            skos:topConceptOf glosis_pr:chlorideProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:chlorideProcedure .
-            
     glosis_pr:coarseFragmentsProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for coarseFragments analysis procedures - codelist scheme"@en;
             rdfs:label "Code list for coarseFragments analysis procedures - codelist scheme"@en;
@@ -820,17 +788,17 @@
                 glosis_pr:Extr_m3-spec
                 glosis_pr:Extr_m2
                 glosis_pr:Extr_m1
-                glosis_pr:Extr_hcl/nh4f-bray1
-                glosis_pr:Extr_hcl/nh4f-bray2
-                glosis_pr:Extr_hcl/nh4f-kurtz-bray
+                glosis_pr:Extr_hcl-nh4f-bray1
+                glosis_pr:Extr_hcl-nh4f-bray2
+                glosis_pr:Extr_hcl-nh4f-kurtz-bray
                 glosis_pr:Extr_nahco3-olsen
                 glosis_pr:Extr_nahco3-olsen-dabin
                 glosis_pr:Extr_h2so4-truog
                 glosis_pr:Extr_naoac-morgan
-                glosis_pr:Extr_hcl/h2so4-nelson
+                glosis_pr:Extr_hcl-h2so4-nelson
                 glosis_pr:Extr_c6h8o7-reeuwijk
-                glosis_pr:Extr_nh4ch3ch(oh)cooh-leuven
-                glosis_pr:Extr_nh4(co3)2-ambic1
+                glosis_pr:Extr_nh4ch3ch-oh-cooh-leuven
+                glosis_pr:Extr_nh4-co3-2-ambic1
                 glosis_pr:Extr_capo4
                 glosis_pr:Extr_hotwater
                 glosis_pr:Extr_ap14
@@ -889,24 +857,24 @@
             skos:definition "Mehlich1 method" ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
-    glosis_pr:Extr_hcl/nh4f-bray1 a skos:Concept, glosis_pr:ExtractableElementsProcedure;
+    glosis_pr:Extr_hcl-nh4f-bray1 a skos:Concept, glosis_pr:ExtractableElementsProcedure;
             skos:topConceptOf glosis_pr:extractableElementsProcedure;
-            skos:prefLabel "Extr_hcl/nh4f-bray1"@en ;
-            skos:notation "Extr_hcl/nh4f-bray1" ;
+            skos:prefLabel "Extr_hcl-nh4f-bray1"@en ;
+            skos:notation "Extr_hcl-nh4f-bray1" ;
             skos:definition "Method of Bray I  (dilute HCl/NH4F). Particularly used for available P." ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
-    glosis_pr:Extr_hcl/nh4f-bray2 a skos:Concept, glosis_pr:ExtractableElementsProcedure;
+    glosis_pr:Extr_hcl-nh4f-bray2 a skos:Concept, glosis_pr:ExtractableElementsProcedure;
             skos:topConceptOf glosis_pr:extractableElementsProcedure;
-            skos:prefLabel "Extr_hcl/nh4f-bray2"@en ;
-            skos:notation "Extr_hcl/nh4f-bray2" ;
+            skos:prefLabel "Extr_hcl-nh4f-bray2"@en ;
+            skos:notation "Extr_hcl-nh4f-bray2" ;
             skos:definition "Method of Bray II (dilute HCl/NH4F). Particularly used for available P." ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
-    glosis_pr:Extr_hcl/nh4f-kurtz-bray a skos:Concept, glosis_pr:ExtractableElementsProcedure;
+    glosis_pr:Extr_hcl-nh4f-kurtz-bray a skos:Concept, glosis_pr:ExtractableElementsProcedure;
             skos:topConceptOf glosis_pr:extractableElementsProcedure;
-            skos:prefLabel "Extr_hcl/nh4f-kurtz-bray"@en ;
-            skos:notation "Extr_hcl/nh4f-kurtz-bray" ;
+            skos:prefLabel "Extr_hcl-nh4f-kurtz-bray"@en ;
+            skos:notation "Extr_hcl-nh4f-kurtz-bray" ;
             skos:definition "Method of Kurtz-Bray I (0.025 M HCl + 0.03 M NH4F). Particularly used for available P." ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
@@ -939,10 +907,10 @@
             skos:definition "Method of Morgan (Na-acetate/acetic acid). Particularly used for available P." ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
-    glosis_pr:Extr_hcl/h2so4-nelson a skos:Concept, glosis_pr:ExtractableElementsProcedure;
+    glosis_pr:Extr_hcl-h2so4-nelson a skos:Concept, glosis_pr:ExtractableElementsProcedure;
             skos:topConceptOf glosis_pr:extractableElementsProcedure;
-            skos:prefLabel "Extr_hcl/h2so4-nelson"@en ;
-            skos:notation "Extr_hcl/h2so4-nelson" ;
+            skos:prefLabel "Extr_hcl-h2so4-nelson"@en ;
+            skos:notation "Extr_hcl-h2so4-nelson" ;
             skos:definition "Method of Nelson (dilute HCl/H2SO4). Particularly used for available P." ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
@@ -953,17 +921,17 @@
             skos:definition "Complexation with citric acid (van Reeuwijk). Particularly used for available P." ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
-    glosis_pr:Extr_nh4ch3ch(oh)cooh-leuven a skos:Concept, glosis_pr:ExtractableElementsProcedure;
+    glosis_pr:Extr_nh4ch3ch-oh-cooh-leuven a skos:Concept, glosis_pr:ExtractableElementsProcedure;
             skos:topConceptOf glosis_pr:extractableElementsProcedure;
-            skos:prefLabel "Extr_nh4ch3ch(oh)cooh-leuven"@en ;
-            skos:notation "Extr_nh4ch3ch(oh)cooh-leuven" ;
+            skos:prefLabel "Extr_nh4ch3ch-oh-cooh-leuven"@en ;
+            skos:notation "Extr_nh4ch3ch-oh-cooh-leuven" ;
             skos:definition "NH4-lactate extraction method (KU-Leuven). Particularly used for available P." ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
-    glosis_pr:Extr_nh4(co3)2-ambic1 a skos:Concept, glosis_pr:ExtractableElementsProcedure;
+    glosis_pr:Extr_nh4-co3-2-ambic1 a skos:Concept, glosis_pr:ExtractableElementsProcedure;
             skos:topConceptOf glosis_pr:extractableElementsProcedure;
-            skos:prefLabel "Extr_nh4(co3)2-ambic1"@en ;
-            skos:notation "Extr_nh4(co3)2-ambic1" ;
+            skos:prefLabel "Extr_nh4-co3-2-ambic1"@en ;
+            skos:notation "Extr_nh4-co3-2-ambic1" ;
             skos:definition "Ambic1 method (ammonium bicarbonate) (South Africa). Particularly used for available P." ;
             skos:inScheme glosis_pr:extractableElementsProcedure .
             
@@ -2605,7 +2573,7 @@
                 glosis_pr:TotC_dc-ht-analyser
                 glosis_pr:TotC_dc-ht-spec
                 glosis_pr:TotC_dc-mt
-                glosis_pr:TotC_calcul-ic+oc
+                glosis_pr:TotC_calcul-ic-oc
 			) .
 
     glosis_pr:TotC_dc-ht a skos:Concept, glosis_pr:CarbonTotalProcedure;
@@ -2636,10 +2604,10 @@
             skos:definition "Unacidified dry combution at medium temperature (550-950 C). " ;
             skos:inScheme glosis_pr:carbonTotalProcedure .
             
-    glosis_pr:TotC_calcul-ic+oc a skos:Concept, glosis_pr:CarbonTotalProcedure;
+    glosis_pr:TotC_calcul-ic-oc a skos:Concept, glosis_pr:CarbonTotalProcedure;
             skos:topConceptOf glosis_pr:carbonTotalProcedure;
-            skos:prefLabel "TotC_calcul-ic+oc"@en ;
-            skos:notation "TotC_calcul-ic+oc" ;
+            skos:prefLabel "TotC_calcul-ic-oc"@en ;
+            skos:notation "TotC_calcul-ic-oc" ;
             skos:definition "Calculated as sum of inorganic carbon and organic carbon" ;
             skos:inScheme glosis_pr:carbonTotalProcedure .
             
@@ -2896,7 +2864,7 @@
             rdfs:seeAlso glosis_pr:nitrogenTotalProcedure ;
             owl:oneOf (
                 glosis_pr:Total_h2so4
-                glosis_pr:Total_(nh4)6mo7o24
+                glosis_pr:Total_nh4-6mo7o24
                 glosis_pr:Total_hcl
                 glosis_pr:Total_hcl-aquaregia
                 glosis_pr:Total_hclo4
@@ -2914,19 +2882,19 @@
                 glosis_pr:Total_tp08
                 glosis_pr:Total_tp09
                 glosis_pr:Total_tp10
-			) .
+                ) .
 
-    glosis_pr:Total_h2so4 a skos:Concept, glosis_pr:TotalElementsProcedure;
-            skos:topConceptOf glosis_pr:totalElementsProcedure;
-            skos:prefLabel "Total_h2so4"@en ;
-            skos:notation "Total_h2so4" ;
-            skos:definition "Total P-/- colorimetric in H2SO4-Se-Salicylic acid digest( sulfuric acid) Particularly used for Total P." ;
-            skos:inScheme glosis_pr:totalElementsProcedure .
-            
-    glosis_pr:Total_(nh4)6mo7o24 a skos:Concept, glosis_pr:TotalElementsProcedure;
-            skos:topConceptOf glosis_pr:totalElementsProcedure;
-            skos:prefLabel "Total_(nh4)6mo7o24"@en ;
-            skos:notation "Total_(nh4)6mo7o24" ;
+        glosis_pr:Total_h2so4 a skos:Concept, glosis_pr:TotalElementsProcedure;
+                skos:topConceptOf glosis_pr:totalElementsProcedure;
+                skos:prefLabel "Total_h2so4"@en ;
+                skos:notation "Total_h2so4" ;
+                skos:definition "Total P-/- colorimetric in H2SO4-Se-Salicylic acid digest( sulfuric acid) Particularly used for Total P." ;
+                skos:inScheme glosis_pr:totalElementsProcedure .
+                
+        glosis_pr:Total_nh4-6mo7o24 a skos:Concept, glosis_pr:TotalElementsProcedure;
+                skos:topConceptOf glosis_pr:totalElementsProcedure;
+                skos:prefLabel "Total_nh4-6mo7o24"@en ;
+                skos:notation "Total_nh4-6mo7o24" ;
             skos:definition "COLORIMETRIC VANADATE MOLYBDATE. Particularly used for Total P." ;
             skos:inScheme glosis_pr:totalElementsProcedure .
             
