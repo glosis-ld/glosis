@@ -46,12 +46,16 @@ def main():
 
     for row in csv_reader:
 
+        method = row[4]
+        if (method == "" or method == None):
+            continue
+
         prop = row[1] # meta-property
         if (prop == "" or prop == None):
             prop = row[2]
+
         proc = prop + "Procedure"
         procM = proc[0].upper() + proc[1:]
-        method = row[4]
         desc = row[5]
         reference = row[6]
         source = row[7]
