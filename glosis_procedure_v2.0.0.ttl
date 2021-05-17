@@ -8,24 +8,24 @@
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
 <http://w3id.org/glosis/model/procedure>
-    a                owl:Ontology ;
-    owl:versionIRI   <http://w3id.org/glosis/model/procedure/1.0> ;
-    owl:versionInfo  "1.0" ;
-    dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
-                  rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
-                  foaf:name "Raul Palma"
-                ] ,
-                [ schema:affiliation [ foaf:name "PSNC" ] ;
-                  foaf:name "Bogusz Janiak"
-                ] ,
-                [ schema:affiliation [ foaf:name "ISRIC" ] ;
-                  foaf:name "Luís Moreira de Sousa" ;
-                  rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071>
-                ] ;
-    dct:title "GLOSIS Procedures"@en ;
-    dct:description "This ontology represents the laboratory analysis procedures in GLOSIS, an extension to the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-    dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt and Africa Soil Profile Database"@en ;
-    dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+        a                owl:Ontology ;
+        owl:versionIRI   <http://w3id.org/glosis/model/procedure/1.0> ;
+        owl:versionInfo  "1.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      foaf:name "Bogusz Janiak"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "ISRIC" ] ;
+                      foaf:name "Luís Moreira de Sousa" ;
+                      rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071>
+                    ] ;
+        dct:title "GLOSIS Procedures"@en ;
+        dct:description "This ontology represents the laboratory analysis procedures in GLOSIS, an extension to the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt and Africa Soil Profile Database"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
 
 
     glosis_pr:baseSaturationProcedure a skos:ConceptScheme ;
@@ -98,18 +98,18 @@
             skos:definition "Sum of exchangeable bases (Ca++, Mg++, K+, Na+) as percentage of EffCEC (method specified with EffCEC and ExchBases)" ;
             skos:inScheme glosis_pr:baseSaturationProcedure .
             
-    glosis_pr:carbonateProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for carbonate analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for carbonate analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for carbonate."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:CarbonateProcedure .
+    glosis_pr:cecSoilProcedure a skos:ConceptScheme ;
+            skos:prefLabel "Code list for cecSoil analysis procedures - codelist scheme"@en;
+            rdfs:label "Code list for cecSoil analysis procedures - codelist scheme"@en;
+            skos:note "This  code list provides analysis procedures for cecSoil."@en;
+            skos:definition "WoSIS-derived" ;
+            rdfs:seeAlso glosis_pr:CecSoilProcedure .
     
-    glosis_pr:CarbonateProcedure a sosa:Procedure;
+    glosis_pr:CecSoilProcedure a sosa:Procedure;
             rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for carbonate - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for carbonate."@en;
-            rdfs:seeAlso glosis_pr:carbonateProcedure ;
+            rdfs:label "Procedures for cecSoil - codelist class"@en;
+            rdfs:comment "This code list provides analysis procedures for cecSoil."@en;
+            rdfs:seeAlso glosis_pr:cecSoilProcedure ;
             owl:oneOf (
                 glosis_pr:BlkDensF_fe-unkn
                 glosis_pr:BlkDensF_fe-unkn-fc
@@ -257,20 +257,6 @@
             skos:definition "Whole earth. Clod samples (natural clods), at oven dry, not corrected for coarse fragments if any" ;
             skos:inScheme glosis_pr:bulkDensityProcedure .
             
-    glosis_pr:chlorideProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for chloride analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for chloride analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for chloride."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:ChlorideProcedure .
-    
-    glosis_pr:cecSoilProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for cecSoil analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for cecSoil analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for cecSoil."@en;
-            skos:definition "WoSIS-derived" ;
-            rdfs:seeAlso glosis_pr:CecSoilProcedure .
-    
     glosis_pr:coarseFragmentsProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for coarseFragments analysis procedures - codelist scheme"@en;
             rdfs:label "Code list for coarseFragments analysis procedures - codelist scheme"@en;
@@ -642,18 +628,18 @@
             skos:definition "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in 1 M BaCl2 - TEA" ;
             skos:inScheme glosis_pr:acidityExchangeableProcedure .
             
-    glosis_pr:acidityExtractableProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for acidityExtractable analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for acidityExtractable analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for acidityExtractable."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:AcidityExtractableProcedure .
+    glosis_pr:extractableElementsProcedure a skos:ConceptScheme ;
+            skos:prefLabel "Code list for extractableElements analysis procedures - codelist scheme"@en;
+            rdfs:label "Code list for extractableElements analysis procedures - codelist scheme"@en;
+            skos:note "This  code list provides analysis procedures for extractableElements."@en;
+            skos:definition "AfSP" ;
+            rdfs:seeAlso glosis_pr:ExtractableElementsProcedure .
     
-    glosis_pr:AcidityExtractableProcedure a sosa:Procedure;
+    glosis_pr:ExtractableElementsProcedure a sosa:Procedure;
             rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for acidityExtractable - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for acidityExtractable."@en;
-            rdfs:seeAlso glosis_pr:acidityExtractableProcedure ;
+            rdfs:label "Procedures for extractableElements - codelist class"@en;
+            rdfs:comment "This code list provides analysis procedures for extractableElements."@en;
+            rdfs:seeAlso glosis_pr:extractableElementsProcedure ;
             owl:oneOf (
                 glosis_pr:ExchBases_ph-unkn-m3
                 glosis_pr:ExchBases_ph-unkn-m3-spec
@@ -744,29 +730,6 @@
             skos:notation "ExchBases_ph8-bacl2tea" ;
             skos:definition "Exch bases (Ca, Mg, K, Na) buffered at pH 8.0-8.5, in 0.5 M BaCl2 - TEA solution" ;
             skos:inScheme glosis_pr:exchangeableBasesProcedure .
-            
-    glosis_pr:extractableElementsProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for extractableElements analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for extractableElements analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for extractableElements."@en;
-            skos:definition "AfSP" ;
-            rdfs:seeAlso glosis_pr:ExtractableElementsProcedure .
-    
-    glosis_pr:ExtractableElementsProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for extractableElements - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for extractableElements."@en;
-            rdfs:seeAlso glosis_pr:extractableElementsProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:AcidityExtractableProcedure;
-            skos:topConceptOf glosis_pr:acidityExtractableProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:acidityExtractableProcedure .
             
     glosis_pr:gypsumProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for gypsum analysis procedures - codelist scheme"@en;
@@ -1055,18 +1018,18 @@
             skos:definition "Schleiff method, electrometric" ;
             skos:inScheme glosis_pr:gypsumProcedure .
             
-    glosis_pr:hydrocarbonateProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for hydrocarbonate analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for hydrocarbonate analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for hydrocarbonate."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:HydrocarbonateProcedure .
+    glosis_pr:carbonInorganicProcedure a skos:ConceptScheme ;
+            skos:prefLabel "Code list for carbonInorganic analysis procedures - codelist scheme"@en;
+            rdfs:label "Code list for carbonInorganic analysis procedures - codelist scheme"@en;
+            skos:note "This  code list provides analysis procedures for carbonInorganic."@en;
+            skos:definition "WoSIS-derived" ;
+            rdfs:seeAlso glosis_pr:CarbonInorganicProcedure .
     
-    glosis_pr:HydrocarbonateProcedure a sosa:Procedure;
+    glosis_pr:CarbonInorganicProcedure a sosa:Procedure;
             rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for hydrocarbonate - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for hydrocarbonate."@en;
-            rdfs:seeAlso glosis_pr:hydrocarbonateProcedure ;
+            rdfs:label "Procedures for carbonInorganic - codelist class"@en;
+            rdfs:comment "This code list provides analysis procedures for carbonInorganic."@en;
+            rdfs:seeAlso glosis_pr:carbonInorganicProcedure ;
             owl:oneOf (
                 glosis_pr:Ksat_dblring
                 glosis_pr:Ksat_bhole
@@ -1125,52 +1088,6 @@
             skos:notation "KSat_calcul-ptf-genuchten" ;
             skos:definition "Saturated and not saturated hydraulic conductivity. " ;
             skos:inScheme glosis_pr:hydraulicConductivityProcedure .
-            
-    glosis_pr:hydrogenProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for hydrogen analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for hydrogen analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for hydrogen."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:HydrogenProcedure .
-    
-    glosis_pr:HydrogenProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for hydrogen - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for hydrogen."@en;
-            rdfs:seeAlso glosis_pr:hydrogenProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:HydrocarbonateProcedure;
-            skos:topConceptOf glosis_pr:hydrocarbonateProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:hydrocarbonateProcedure .
-            
-    glosis_pr:carbonInorganicProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for carbonInorganic analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for carbonInorganic analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for carbonInorganic."@en;
-            skos:definition "WoSIS-derived" ;
-            rdfs:seeAlso glosis_pr:CarbonInorganicProcedure .
-    
-    glosis_pr:CarbonInorganicProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for carbonInorganic - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for carbonInorganic."@en;
-            rdfs:seeAlso glosis_pr:carbonInorganicProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:HydrogenProcedure;
-            skos:topConceptOf glosis_pr:hydrogenProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:hydrogenProcedure .
             
     glosis_pr:moistureContentProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for moistureContent analysis procedures - codelist scheme"@en;
@@ -1323,18 +1240,18 @@
             skos:definition "Indirect estimate (total carbon minus organic carbon = inorganic carbon or CaCO3 equivalent)" ;
             skos:inScheme glosis_pr:carbonInorganicProcedure .
             
-    glosis_pr:nitrateNO3Procedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for nitrateNO3 analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for nitrateNO3 analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for nitrateNO3."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:NitrateNO3Procedure .
+    glosis_pr:carbonOrganicProcedure a skos:ConceptScheme ;
+            skos:prefLabel "Code list for carbonOrganic analysis procedures - codelist scheme"@en;
+            rdfs:label "Code list for carbonOrganic analysis procedures - codelist scheme"@en;
+            skos:note "This  code list provides analysis procedures for carbonOrganic."@en;
+            skos:definition "AfSP" ;
+            rdfs:seeAlso glosis_pr:CarbonOrganicProcedure .
     
-    glosis_pr:NitrateNO3Procedure a sosa:Procedure;
+    glosis_pr:CarbonOrganicProcedure a sosa:Procedure;
             rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for nitrateNO3 - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for nitrateNO3."@en;
-            rdfs:seeAlso glosis_pr:nitrateNO3Procedure ;
+            rdfs:label "Procedures for carbonOrganic - codelist class"@en;
+            rdfs:comment "This code list provides analysis procedures for carbonOrganic."@en;
+            rdfs:seeAlso glosis_pr:carbonOrganicProcedure ;
             owl:oneOf (
                 glosis_pr:VMC_ud
                 glosis_pr:VMC_ud-co
@@ -1409,52 +1326,6 @@
             skos:notation "VMC_calcul-ptf" ;
             skos:definition "Calculated by PTF" ;
             skos:inScheme glosis_pr:moistureContentProcedure .
-            
-    glosis_pr:nitrateNO2Procedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for nitrateNO2 analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for nitrateNO2 analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for nitrateNO2."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:NitrateNO2Procedure .
-    
-    glosis_pr:NitrateNO2Procedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for nitrateNO2 - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for nitrateNO2."@en;
-            rdfs:seeAlso glosis_pr:nitrateNO2Procedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:NitrateNO3Procedure;
-            skos:topConceptOf glosis_pr:nitrateNO3Procedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:nitrateNO3Procedure .
-            
-    glosis_pr:carbonOrganicProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for carbonOrganic analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for carbonOrganic analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for carbonOrganic."@en;
-            skos:definition "AfSP" ;
-            rdfs:seeAlso glosis_pr:CarbonOrganicProcedure .
-    
-    glosis_pr:CarbonOrganicProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for carbonOrganic - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for carbonOrganic."@en;
-            rdfs:seeAlso glosis_pr:carbonOrganicProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:NitrateNO2Procedure;
-            skos:topConceptOf glosis_pr:nitrateNO2Procedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:nitrateNO2Procedure .
             
     glosis_pr:organicMatterProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for organicMatter analysis procedures - codelist scheme"@en;
@@ -1710,18 +1581,18 @@
             skos:definition "" ;
             skos:inScheme glosis_pr:organicMatterProcedure .
             
-    glosis_pr:phosphateProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for phosphate analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for phosphate analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for phosphate."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:PhosphateProcedure .
+    glosis_pr:phosphorusRetentionProcedure a skos:ConceptScheme ;
+            skos:prefLabel "Code list for phosphorusRetention analysis procedures - codelist scheme"@en;
+            rdfs:label "Code list for phosphorusRetention analysis procedures - codelist scheme"@en;
+            skos:note "This  code list provides analysis procedures for phosphorusRetention."@en;
+            skos:definition "AfSP" ;
+            rdfs:seeAlso glosis_pr:PhosphorusRetentionProcedure .
     
-    glosis_pr:PhosphateProcedure a sosa:Procedure;
+    glosis_pr:PhosphorusRetentionProcedure a sosa:Procedure;
             rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for phosphate - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for phosphate."@en;
-            rdfs:seeAlso glosis_pr:phosphateProcedure ;
+            rdfs:label "Procedures for phosphorusRetention - codelist class"@en;
+            rdfs:comment "This code list provides analysis procedures for phosphorusRetention."@en;
+            rdfs:seeAlso glosis_pr:phosphorusRetentionProcedure ;
             owl:oneOf (
                 glosis_pr:pHH2O_unkn
                 glosis_pr:pHH2O_ratio1-1
@@ -1957,29 +1828,6 @@
             skos:definition "pHNaF (soil reaction) in saturated paste" ;
             skos:inScheme glosis_pr:pHProcedure .
             
-    glosis_pr:phosphorusRetentionProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for phosphorusRetention analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for phosphorusRetention analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for phosphorusRetention."@en;
-            skos:definition "AfSP" ;
-            rdfs:seeAlso glosis_pr:PhosphorusRetentionProcedure .
-    
-    glosis_pr:PhosphorusRetentionProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for phosphorusRetention - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for phosphorusRetention."@en;
-            rdfs:seeAlso glosis_pr:phosphorusRetentionProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:PhosphateProcedure;
-            skos:topConceptOf glosis_pr:phosphateProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:phosphateProcedure .
-            
     glosis_pr:porosityProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for porosity analysis procedures - codelist scheme"@en;
             rdfs:label "Code list for porosity analysis procedures - codelist scheme"@en;
@@ -2011,52 +1859,6 @@
             skos:definition "Spectrally measured and converted to P retention (P buffer index)" ;
             skos:inScheme glosis_pr:phosphorusRetentionProcedure .
             
-    glosis_pr:seleniumProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for selenium analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for selenium analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for selenium."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:SeleniumProcedure .
-    
-    glosis_pr:SeleniumProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for selenium - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for selenium."@en;
-            rdfs:seeAlso glosis_pr:seleniumProcedure ;
-            owl:oneOf (
-                glosis_pr:Poros_calcul-pf0
-			) .
-
-    glosis_pr:Poros_calcul-pf0 a skos:Concept, glosis_pr:PorosityProcedure;
-            skos:topConceptOf glosis_pr:porosityProcedure;
-            skos:prefLabel "Poros_calcul-pf0"@en ;
-            skos:notation "Poros_calcul-pf0" ;
-            skos:definition "Porosity calculated from volumetric moisture content at pF 0 (1 cm)" ;
-            skos:inScheme glosis_pr:porosityProcedure .
-            
-    glosis_pr:siliconProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for silicon analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for silicon analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for silicon."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:SiliconProcedure .
-    
-    glosis_pr:SiliconProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for silicon - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for silicon."@en;
-            rdfs:seeAlso glosis_pr:siliconProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:SeleniumProcedure;
-            skos:topConceptOf glosis_pr:seleniumProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:seleniumProcedure .
-            
     glosis_pr:solubleSaltsProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for solubleSalts analysis procedures - codelist scheme"@en;
             rdfs:label "Code list for solubleSalts analysis procedures - codelist scheme"@en;
@@ -2070,28 +1872,28 @@
             rdfs:comment "This code list provides analysis procedures for solubleSalts."@en;
             rdfs:seeAlso glosis_pr:solubleSaltsProcedure ;
             owl:oneOf (
-                glosis_pr:
+                glosis_pr:Poros_calcul-pf0
 			) .
 
-    glosis_pr: a skos:Concept, glosis_pr:SiliconProcedure;
-            skos:topConceptOf glosis_pr:siliconProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:siliconProcedure .
+    glosis_pr:Poros_calcul-pf0 a skos:Concept, glosis_pr:PorosityProcedure;
+            skos:topConceptOf glosis_pr:porosityProcedure;
+            skos:prefLabel "Poros_calcul-pf0"@en ;
+            skos:notation "Poros_calcul-pf0" ;
+            skos:definition "Porosity calculated from volumetric moisture content at pF 0 (1 cm)" ;
+            skos:inScheme glosis_pr:porosityProcedure .
             
-    glosis_pr:sulfateProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for sulfate analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for sulfate analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for sulfate."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:SulfateProcedure .
+    glosis_pr:textureSaSiClProcedure a skos:ConceptScheme ;
+            skos:prefLabel "Code list for textureSaSiCl analysis procedures - codelist scheme"@en;
+            rdfs:label "Code list for textureSaSiCl analysis procedures - codelist scheme"@en;
+            skos:note "This  code list provides analysis procedures for textureSaSiCl."@en;
+            skos:definition "AfSP" ;
+            rdfs:seeAlso glosis_pr:TextureSaSiClProcedure .
     
-    glosis_pr:SulfateProcedure a sosa:Procedure;
+    glosis_pr:TextureSaSiClProcedure a sosa:Procedure;
             rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for sulfate - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for sulfate."@en;
-            rdfs:seeAlso glosis_pr:sulfateProcedure ;
+            rdfs:label "Procedures for textureSaSiCl - codelist class"@en;
+            rdfs:comment "This code list provides analysis procedures for textureSaSiCl."@en;
+            rdfs:seeAlso glosis_pr:textureSaSiClProcedure ;
             owl:oneOf (
                 glosis_pr:SlbCat_calcul-unkn
                 glosis_pr:SlbAn_calcul-unkn
@@ -2110,29 +1912,6 @@
             skos:notation "SlbAn_calcul-unkn" ;
             skos:definition "Sum of soluble anions (Cl, SO4, HCO2, CO3, NO3, F)" ;
             skos:inScheme glosis_pr:solubleSaltsProcedure .
-            
-    glosis_pr:textureSaSiClProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for textureSaSiCl analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for textureSaSiCl analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for textureSaSiCl."@en;
-            skos:definition "AfSP" ;
-            rdfs:seeAlso glosis_pr:TextureSaSiClProcedure .
-    
-    glosis_pr:TextureSaSiClProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for textureSaSiCl - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for textureSaSiCl."@en;
-            rdfs:seeAlso glosis_pr:textureSaSiClProcedure ;
-            owl:oneOf (
-                glosis_pr:
-			) .
-
-    glosis_pr: a skos:Concept, glosis_pr:SulfateProcedure;
-            skos:topConceptOf glosis_pr:sulfateProcedure;
-            skos:prefLabel ""@en ;
-            skos:notation "" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:sulfateProcedure .
             
     glosis_pr:textureSumProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for textureSum analysis procedures - codelist scheme"@en;
@@ -2882,19 +2661,19 @@
                 glosis_pr:Total_tp08
                 glosis_pr:Total_tp09
                 glosis_pr:Total_tp10
-                ) .
+			) .
 
-        glosis_pr:Total_h2so4 a skos:Concept, glosis_pr:TotalElementsProcedure;
-                skos:topConceptOf glosis_pr:totalElementsProcedure;
-                skos:prefLabel "Total_h2so4"@en ;
-                skos:notation "Total_h2so4" ;
-                skos:definition "Total P-/- colorimetric in H2SO4-Se-Salicylic acid digest( sulfuric acid) Particularly used for Total P." ;
-                skos:inScheme glosis_pr:totalElementsProcedure .
-                
-        glosis_pr:Total_nh4-6mo7o24 a skos:Concept, glosis_pr:TotalElementsProcedure;
-                skos:topConceptOf glosis_pr:totalElementsProcedure;
-                skos:prefLabel "Total_nh4-6mo7o24"@en ;
-                skos:notation "Total_nh4-6mo7o24" ;
+    glosis_pr:Total_h2so4 a skos:Concept, glosis_pr:TotalElementsProcedure;
+            skos:topConceptOf glosis_pr:totalElementsProcedure;
+            skos:prefLabel "Total_h2so4"@en ;
+            skos:notation "Total_h2so4" ;
+            skos:definition "Total P-/- colorimetric in H2SO4-Se-Salicylic acid digest( sulfuric acid) Particularly used for Total P." ;
+            skos:inScheme glosis_pr:totalElementsProcedure .
+            
+    glosis_pr:Total_nh4-6mo7o24 a skos:Concept, glosis_pr:TotalElementsProcedure;
+            skos:topConceptOf glosis_pr:totalElementsProcedure;
+            skos:prefLabel "Total_nh4-6mo7o24"@en ;
+            skos:notation "Total_nh4-6mo7o24" ;
             skos:definition "COLORIMETRIC VANADATE MOLYBDATE. Particularly used for Total P." ;
             skos:inScheme glosis_pr:totalElementsProcedure .
             
