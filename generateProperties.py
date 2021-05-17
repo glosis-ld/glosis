@@ -1,19 +1,21 @@
 import csv
 import json
 
-unit_dict = {
-    "m3/100m3":"u:PERCENT"
-    "%":"u:PERCENT"
-    "kg/dm3":"u:KiloGM-PER-DeciM3"
-    "cmolc/kg":"u:CentiMOL-PER-KiloGM"
-    "dS/m":"u:DeciS-PER-M"
-    "cm/h":"u:CentiM-PER-HR"
-    "g/kg":"u:GM-PER-KiloGM"
-    "pH":"u:PH"
-    "g/100g":"u:PERCENT"
+unit_map = {
+    "m3/100m3":"glosis_u:M3-PER-HundredM3",
+    "%":"unit:PERCENT",
+    "kg/dm3":"unit:KiloGM-PER-DeciM3",
+    "cmolc/kg":"unit:CentiMOL-PER-KiloGM",
+    "dS/m":"unit:DeciS-PER-M",
+    "cm/h":"unit:CentiM-PER-HR",
+    "g/kg":"unit:GM-PER-KiloGM",
+    "pH":"unit:PH",
+    "g/100g":"glosis_u:GM-PER-HectoGM",
     "cmolc/l":"glosis_u:CentiMOL-PER-L"
 }
 
+unit_dict = {}
+meth_dict = {}
 
 def printObservation(prop, meth, proc_name, units, file):
     file.write("""
@@ -33,8 +35,8 @@ def printObservation(prop, meth, proc_name, units, file):
                 rdfs:subClassOf  qudt:QuantityValue ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-                owl:hasValue unit:%s ] .
-            """ % (prop, meth, units))
+                owl:hasValue %s ] .
+            """ % (prop, meth, unit_map[units]))
 
 def printProperty(prop, file):
     file.write("""
