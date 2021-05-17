@@ -1,8 +1,19 @@
 import csv
 import json
 
-unit_dict = {}
-meth_dict = {}
+unit_dict = {
+    "m3/100m3":"u:PERCENT"
+    "%":"u:PERCENT"
+    "kg/dm3":"u:KiloGM-PER-DeciM3"
+    "cmolc/kg":"u:CentiMOL-PER-KiloGM"
+    "dS/m":"u:DeciS-PER-M"
+    "cm/h":"u:CentiM-PER-HR"
+    "g/kg":"u:GM-PER-KiloGM"
+    "pH":"u:PH"
+    "g/100g":"u:PERCENT"
+    "cmolc/l":"glosis_u:CentiMOL-PER-L"
+}
+
 
 def printObservation(prop, meth, proc_name, units, file):
     file.write("""
