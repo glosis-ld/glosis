@@ -48,7 +48,7 @@ def printProperty(prop, file):
 def main():
 
     last = ""
-    csv_file = open('/home/duque004/ISRIC/ProjectsInternal/GSP/DataBaseContents/Procedures.csv')
+    csv_file = open('Procedures.csv')
     csv_reader = csv.reader(csv_file, delimiter=',')
     headers = next(csv_reader)
 
@@ -64,6 +64,8 @@ def main():
             props = prop.split(" ")
     
             for prp in props:
+                if prp == "":
+                    continue
                 print("New property: " + prp)
                 #unit_dict["prp"].append("method")  
                 if prp in unit_dict:
@@ -76,7 +78,7 @@ def main():
             last = prop
 
 
-    file = open('props.ttl', 'a')
+    file = open('props.ttl', 'w')
     
     for prop in unit_dict:
     
@@ -85,10 +87,11 @@ def main():
     
         for meth in meth_dict[prop]:
             if meth == "":
-                proc_name = prop.capitalize()
+                proc_name = prop[0].upper() + prop[1:]
             else:
                 proc_name = meth
-            printObservation(prop, meth.capitalize(), proc_name, units, file)
+            propCap = prop[0].upper() + prop[1:]
+            printObservation(propCap, meth, proc_name, units, file)
 
 
 
