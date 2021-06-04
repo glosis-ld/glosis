@@ -39,6 +39,9 @@ def main():
     global output, individ_list, individuals
 
     proc_prev = ""
+    prop_prev = ""
+    procM_prev = ""
+    source_prev = ""
     csv_file = open('Procedures.csv')
     csv_reader = csv.reader(csv_file, delimiter=',')
     # Bypass header
@@ -65,14 +68,14 @@ def main():
             addClasses(prop_prev, proc_prev, procM_prev, source_prev)
     
         individ_list += """
-                glosis_pr:%s""" % (method)
+                glosis_pr:%s-%s""" % (proc, method)
     
         individuals += """
-    glosis_pr:%s a skos:Concept, glosis_pr:%s;
+    glosis_pr:%s-%s a skos:Concept, glosis_pr:%s;
             skos:topConceptOf glosis_pr:%s;
             skos:prefLabel "%s"@en ;
             skos:notation "%s" ;
-            skos:definition "%s" ;""" % (method, procM, proc, method, method, desc)
+            skos:definition "%s" ;""" % (proc, method, procM, proc, method, method, desc)
         if (reference != ""):
             individuals += """
             skos:scopeNote <%s> ;""" % (reference)
