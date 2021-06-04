@@ -1,5 +1,4 @@
 import csv
-import json
 
 unit_map = {
     "m3/100m3":"glosis_u:M3-PER-HundredM3",
@@ -21,13 +20,15 @@ def printObservation(prop, meth, proc_name, units, file):
     file.write("""
             glosis_lh:%s%s  a	owl:Class ;
                 rdfs:subClassOf  sosa:Observation ;
-                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
+                rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
+                    sosa:hasFeatureOfInterest ; owl:allValuesFrom
+                        [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
       			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-                            sosa:hasResult ; owl:allValuesFrom glosis_lh:%s%sValue ] ;
+                    sosa:hasResult ; owl:allValuesFrom glosis_lh:%s%sValue ] ;
       			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-                            sosa:observedProperty ; owl:hasValue glosis_lh:%sProperty ] ;
+                    sosa:observedProperty ; owl:hasValue glosis_lh:%sProperty ] ;
       		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-                        sosa:usedProcedure ; owl:allValuesFrom glosis_pr:%sProcedure ] .
+                    sosa:usedProcedure ; owl:allValuesFrom glosis_pr:%sProcedure ] .
     """ % (prop, meth, prop, meth, prop, proc_name))
     
     file.write("""
@@ -89,6 +90,7 @@ def main():
             if meth == "":
                 proc_name = prop[0].upper() + prop[1:]
             else:
+                meth = meth[0].upper() + meth[1:]
                 proc_name = meth
             propCap = prop[0].upper() + prop[1:]
             printObservation(propCap, meth, proc_name, units, file)
