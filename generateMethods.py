@@ -39,7 +39,7 @@ def main():
     global output, individ_list, individuals
 
     proc_prev = ""
-    csv_file = open('/home/duque004/ISRIC/ProjectsInternal/GSP/DataBaseContents/Procedures.csv')
+    csv_file = open('Procedures.csv')
     csv_reader = csv.reader(csv_file, delimiter=',')
     # Bypass header
     next(csv_reader)
@@ -59,9 +59,10 @@ def main():
         desc = row[5]
         reference = row[6]
         source = row[7]
-    
+
         if (proc_prev != "" and proc != proc_prev):
-            addClasses(prop, proc, procM, source)
+            print("Adding classes for " + prop_prev)
+            addClasses(prop_prev, proc_prev, procM_prev, source_prev)
     
         individ_list += """
                 glosis_pr:%s""" % (method)
@@ -80,8 +81,11 @@ def main():
             """ % (proc)
     
         proc_prev = proc
+        prop_prev = prop
+        procM_prev = procM
+        source_prev = source
 
-    file = open('procedures.ttl', 'a')
+    file = open('procedures.ttl', 'w')
     file.write(output)
 
 
