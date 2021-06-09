@@ -1421,40 +1421,40 @@ glosis_lh:pHValue a owl:Class ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
                 owl:hasValue unit:CentiMOL-PER-KiloGM ] .
             
-            glosis_lh:aluminumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-                rdfs:label "aluminumProperty"@en .
+            glosis_lh:aluminiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+                rdfs:label "aluminiumProperty"@en .
             
-            glosis_lh:AluminumExtractableElements  a	owl:Class ;
+            glosis_lh:AluminiumExtractableElements  a	owl:Class ;
                 rdfs:subClassOf  sosa:Observation ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
                     sosa:hasFeatureOfInterest ; owl:allValuesFrom
                         [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
       			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-                    sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminumExtractableElementsValue ] ;
+                    sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumExtractableElementsValue ] ;
       			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-                    sosa:observedProperty ; owl:hasValue glosis_lh:AluminumProperty ] ;
+                    sosa:observedProperty ; owl:hasValue glosis_lh:AluminiumProperty ] ;
       		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
                     sosa:usedProcedure ; owl:allValuesFrom glosis_pr:ExtractableElementsProcedure ] .
     
-            glosis_lh:AluminumExtractableElementsValue a owl:Class ;
+            glosis_lh:AluminiumExtractableElementsValue a owl:Class ;
                 rdfs:subClassOf  qudt:QuantityValue ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
                 owl:hasValue unit:PERCENT ] .
             
-            glosis_lh:AluminumTotalElements  a	owl:Class ;
+            glosis_lh:AluminiumTotalElements  a	owl:Class ;
                 rdfs:subClassOf  sosa:Observation ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
                     sosa:hasFeatureOfInterest ; owl:allValuesFrom
                         [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
       			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-                    sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminumTotalElementsValue ] ;
+                    sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumTotalElementsValue ] ;
       			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-                    sosa:observedProperty ; owl:hasValue glosis_lh:AluminumProperty ] ;
+                    sosa:observedProperty ; owl:hasValue glosis_lh:AluminiumProperty ] ;
       		    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
                     sosa:usedProcedure ; owl:allValuesFrom glosis_pr:TotalElementsProcedure ] .
     
-            glosis_lh:AluminumTotalElementsValue a owl:Class ;
+            glosis_lh:AluminiumTotalElementsValue a owl:Class ;
                 rdfs:subClassOf  qudt:QuantityValue ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
                 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
