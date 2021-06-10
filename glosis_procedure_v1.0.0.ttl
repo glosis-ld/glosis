@@ -1,0 +1,277 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+@prefix glosis_pr: <http://w3id.org/glosis/model/procedure#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://w3id.org/glosis/model/procedure>
+        a                owl:Ontology ;
+        owl:versionIRI   <http://w3id.org/glosis/model/procedure/1.0> ;
+        owl:versionInfo  "1.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      foaf:name "Bogusz Janiak"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "ISRIC" ] ;
+                      foaf:name "Luís Moreira de Sousa" ;
+                      rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071>
+                    ] ;
+        dct:title "GLOSIS Procedures"@en ;
+        dct:description "This ontology represents the laboratory analysis procedures in GLOSIS, an extension to the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt and Africa Soil Profile Database"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en .
+
+    glosis_pr:pHProcedure a skos:ConceptScheme ;
+            skos:prefLabel "Code list for pH analysis procedures - codelist scheme"@en;
+            rdfs:label "Code list for pH analysis procedures - codelist scheme"@en;
+            skos:note "This  code list provides analysis procedures for pH."@en;
+            skos:definition "WoSIS-derived" ;
+            rdfs:seeAlso glosis_pr:PHProcedure .
+    
+    glosis_pr:PHProcedure a owl:Class;
+            rdfs:subClassOf sosa:Procedure ;
+            rdfs:subClassOf skos:Concept ;
+            rdfs:label "Procedures for pH - codelist class"@en;
+            rdfs:comment "This code list provides analysis procedures for pH."@en;
+            rdfs:seeAlso glosis_pr:pHProcedure ;
+            owl:oneOf ( 
+        		glosis_pr:pHH2O_unkn
+	        	glosis_pr:pHH2O_ratio1-1
+	        	glosis_pr:pHH2O_ratio1-2
+	        	glosis_pr:pHH2O_ratio1-2.5
+	        	glosis_pr:pHH2O_ratio1-5
+	        	glosis_pr:pHH2O_ratio1-10
+	        	glosis_pr:pHH2O_sat
+	        	glosis_pr:pHH2O_unkn-spec
+	        	glosis_pr:pHCaCl2_unkn
+	        	glosis_pr:pHCaCl2_ratio1-1
+	        	glosis_pr:pHCaCl2_ratio1-2
+	        	glosis_pr:pHCaCl2_ratio1-2.5
+	        	glosis_pr:pHCaCl2_ratio1-5
+	        	glosis_pr:pHCaCl2_ratio1-10
+	        	glosis_pr:pHCaCl2_sat
+	        	glosis_pr:pHKCl_unkn
+	        	glosis_pr:pHKCl_ratio1-1
+	        	glosis_pr:pHKCl_ratio1-2
+	        	glosis_pr:pHKCl_ratio1-2.5
+	        	glosis_pr:pHKCl_ratio1-5
+	        	glosis_pr:pHKCl_ratio1-10
+	        	glosis_pr:pHKCl_sat
+	        	glosis_pr:pHNaF_unkn
+	        	glosis_pr:pHNaF_ratio1-1
+	        	glosis_pr:pHNaF_ratio1-2
+	        	glosis_pr:pHNaF_ratio1-2.5
+	        	glosis_pr:pHNaF_ratio1-5
+	        	glosis_pr:pHNaF_ratio1-10
+	        	glosis_pr:pHNaF_sat
+    ) .
+
+    glosis_pr:pHH2O_unkn a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHH2O_unkn"@en ;
+            skos:notation "pHH2O_unkn" ;
+            skos:definition "pHH2O (soil reaction) in unknown soil/water solution" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHH2O_ratio1-1 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHH2O_ratio1-1"@en ;
+            skos:notation "pHH2O_ratio1-1" ;
+            skos:definition "pHH2O (soil reaction) in 1:1 soil/water solution" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHH2O_ratio1-2 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHH2O_ratio1-2"@en ;
+            skos:notation "pHH2O_ratio1-2" ;
+            skos:definition "pHH2O (soil reaction) in 1:2 soil/water solution" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHH2O_ratio1-2.5 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHH2O_ratio1-2.5"@en ;
+            skos:notation "pHH2O_ratio1-2.5" ;
+            skos:definition "pHH2O (soil reaction) in 1:2.5 soil/water solution" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHH2O_ratio1-5 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHH2O_ratio1-5"@en ;
+            skos:notation "pHH2O_ratio1-5" ;
+            skos:definition "pHH2O (soil reaction) in 1:5 soil/water solution" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHH2O_ratio1-10 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHH2O_ratio1-10"@en ;
+            skos:notation "pHH2O_ratio1-10" ;
+            skos:definition "pHH2O (soil reaction) in 1:10 soil/water solution" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHH2O_sat a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHH2O_sat"@en ;
+            skos:notation "pHH2O_sat" ;
+            skos:definition "pHH2O (soil reaction) in water saturated paste" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHH2O_unkn-spec a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHH2O_unkn-spec"@en ;
+            skos:notation "pHH2O_unkn-spec" ;
+            skos:definition "Spectrally measured and converted to pHH2O (soil reaction) in unknown soil/water solution" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHCaCl2_unkn a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHCaCl2_unkn"@en ;
+            skos:notation "pHCaCl2_unkn" ;
+            skos:definition "pHCaCl2 (soil reaction) in unknown soil/CaCl2 solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHCaCl2_ratio1-1 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHCaCl2_ratio1-1"@en ;
+            skos:notation "pHCaCl2_ratio1-1" ;
+            skos:definition "pHCaCl2 (soil reaction) in 1:1 soil/1 M CaCl2 solution (1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHCaCl2_ratio1-2 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHCaCl2_ratio1-2"@en ;
+            skos:notation "pHCaCl2_ratio1-2" ;
+            skos:definition "pHCaCl2 (soil reaction) in 1:2 soil/CaCl2 solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHCaCl2_ratio1-2.5 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHCaCl2_ratio1-2.5"@en ;
+            skos:notation "pHCaCl2_ratio1-2.5" ;
+            skos:definition "pHCaCl2 (soil reaction) in 1:2.5 soil/CaCl2 solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHCaCl2_ratio1-5 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHCaCl2_ratio1-5"@en ;
+            skos:notation "pHCaCl2_ratio1-5" ;
+            skos:definition "pHCaCl2 (soil reaction) in 1:5 soil/CaCl2 solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHCaCl2_ratio1-10 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHCaCl2_ratio1-10"@en ;
+            skos:notation "pHCaCl2_ratio1-10" ;
+            skos:definition "pHCaCl2 (soil reaction) in 1:10 soil/CaCl2 solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHCaCl2_sat a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHCaCl2_sat"@en ;
+            skos:notation "pHCaCl2_sat" ;
+            skos:definition "pHCaCl2 (soil reaction) in saturated paste" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHKCl_unkn a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHKCl_unkn"@en ;
+            skos:notation "pHKCl_unkn" ;
+            skos:definition "pHKCl (soil reaction) in unknown soil/KCl solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHKCl_ratio1-1 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHKCl_ratio1-1"@en ;
+            skos:notation "pHKCl_ratio1-1" ;
+            skos:definition "pHKCl (soil reaction) in 1:1 soil/KCl solution (1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHKCl_ratio1-2 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHKCl_ratio1-2"@en ;
+            skos:notation "pHKCl_ratio1-2" ;
+            skos:definition "pHKCl (soil reaction) in 1:2 soil/KCl solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHKCl_ratio1-2.5 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHKCl_ratio1-2.5"@en ;
+            skos:notation "pHKCl_ratio1-2.5" ;
+            skos:definition "pHKCl (soil reaction) in 1:2.5 soil/KCl solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHKCl_ratio1-5 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHKCl_ratio1-5"@en ;
+            skos:notation "pHKCl_ratio1-5" ;
+            skos:definition "pHKCl (soil reaction) in 1:5 soil/KCl solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHKCl_ratio1-10 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHKCl_ratio1-10"@en ;
+            skos:notation "pHKCl_ratio1-10" ;
+            skos:definition "pHKCl (soil reaction) in 1:10 soil/KCl solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHKCl_sat a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHKCl_sat"@en ;
+            skos:notation "pHKCl_sat" ;
+            skos:definition "pHKCl (soil reaction) in saturated paste" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHNaF_unkn a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHNaF_unkn"@en ;
+            skos:notation "pHNaF_unkn" ;
+            skos:definition "pHNaF (soil reaction) in unknown soil/NaF solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHNaF_ratio1-1 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHNaF_ratio1-1"@en ;
+            skos:notation "pHNaF_ratio1-1" ;
+            skos:definition "pHNaF (soil reaction) in 1:1 soil/NaF solution (1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHNaF_ratio1-2 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHNaF_ratio1-2"@en ;
+            skos:notation "pHNaF_ratio1-2" ;
+            skos:definition "pHNaF (soil reaction) in 1:2 soil/NaF solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHNaF_ratio1-2.5 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHNaF_ratio1-2.5"@en ;
+            skos:notation "pHNaF_ratio1-2.5" ;
+            skos:definition "pHNaF (soil reaction) in 1:2.5 soil/NaF solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHNaF_ratio1-5 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHNaF_ratio1-5"@en ;
+            skos:notation "pHNaF_ratio1-5" ;
+            skos:definition "pHNaF (soil reaction) in 1:5 soil/NaF solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHNaF_ratio1-10 a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHNaF_ratio1-10"@en ;
+            skos:notation "pHNaF_ratio1-10" ;
+            skos:definition "pHNaF (soil reaction) in 1:10 soil/NaF solution (0.01-1 M)" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
+    glosis_pr:pHNaF_sat a skos:Concept, glosis_pr:PHProcedure;
+            skos:topConceptOf glosis_pr:pHProcedure;
+            skos:prefLabel "pHNaF_sat"@en ;
+            skos:notation "pHNaF_sat" ;
+            skos:definition "pHNaF (soil reaction) in saturated paste" ;
+            skos:inScheme glosis_pr:pHProcedure .
+    
