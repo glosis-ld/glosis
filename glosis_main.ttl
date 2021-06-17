@@ -1,0 +1,43 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+@prefix iso19156_SF:  <http://def.isotc211.org/iso19156/2011/SamplingFeature#> .
+@prefix iso19156_SSF:  <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#> .
+@prefix iso19156_GFI: 	<http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#> .
+@prefix iso19156_OB: <http://def.isotc211.org/iso19156/2011/Observation#> .
+@prefix iso19115_DQI: <http://def.isotc211.org/iso19115/2006/DataQualityInformation#> .
+@prefix iso28258: 	<http://w3id.org/glosis/model/iso28258/2013#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix glosis_ma: <http://w3id.org/glosis/model/main#> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
+@prefix glosis_cm: <http://w3id.org/glosis/model/common#> .
+@prefix glosis_pr: <http://w3id.org/glosis/model/profile#> .
+@prefix glosis_lh: <http://w3id.org/glosis/model/layerhorizon#> . 
+@prefix glosis_ob: <http://w3id.org/glosis/model/observation#> .
+@prefix glosis_sp: <http://w3id.org/glosis/model/siteplot#> .
+@prefix glosis_su: <http://w3id.org/glosis/model/surface#> .
+@prefix glosis_ex: <http://w3id.org/glosis/model/ext/property#> .
+@prefix glosis_pr: <http://w3id.org/glosis/model/procedure#> .
+
+<http://w3id.org/glosis/model>
+        a                owl:Ontology ;
+        owl:versionIRI   <http://w3id.org/glosis/model/1.0> ;
+        owl:versionInfo  "1.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      foaf:name "Bogusz Janiak"
+                    ] ;
+        owl:imports glosis_lh: , glosis_ob: , glosis_pr: , glosis_sp: , glosis_su: , glosis_ex: ;
+        dct:title "GLOSIS main"@en ;
+        dct:description "The GLOSIS main is a master profile importing modules of GLOSIS ontology"@en ;
+        dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en .
