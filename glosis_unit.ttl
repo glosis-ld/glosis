@@ -1,0 +1,60 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix glosis_u: <http://w3id.org/glosis/model/unit#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix qutd: <http://qudt.org/schema/qutd/> .
+
+<http://w3id.org/glosis/model/procedure>
+    a                owl:Ontology ;
+    owl:versionIRI   <http://w3id.org/glosis/model/unit/1.0> ;
+    owl:versionInfo  "1.0" ;
+    dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                  rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                  foaf:name "Raul Palma"
+                ] ,
+                [ schema:affiliation [ foaf:name "PSNC" ] ;
+                  foaf:name "Bogusz Janiak"
+                ] ,
+                [ schema:affiliation [ foaf:name "ISRIC" ] ;
+                  foaf:name "Luís Moreira de Sousa" ;
+                  rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071>
+                ] ;
+    dct:title "GLOSIS units of measurement"@en ;
+    dct:description "This ontology represents units of measurement used in laboratory analysis procedures of GloSIS that do not feature in the ontology. This ontology is an extension to the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+    dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt and Africa Soil Profile Database"@en ;
+    dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+glosis_u:CentiMOL-PER-L
+  a qutd:Unit ;
+  qutd:hasQuantityKind <http://qudt.org/vocab/quantitykind/AmountOfSubstancePerUnitVolume> ;
+  qutd:plainTextDescription "0,01-fold of the SI base unit mole divided by the unit litre" ;
+  qutd:ucumCode "cmol.l-1"^^<http://qudt.org/schema/qudt/UCUMcs> ;
+  qutd:ucumCode "cmol/l"^^<http://qudt.org/schema/qudt/UCUMcs> ;
+  rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
+  rdfs:label "Centimol Per Liter"@en-us ;
+  rdfs:label "Centimol Per Litre"@en ;
+.
+
+glosis_u:GM-PER-HectoGM
+  a qutd:Unit ;
+  qutd:hasQuantityKind <http://qudt.org/vocab/quantitykind/MassRatio> ;
+  qutd:plainTextDescription "0,001 fold of the SI base unit kilogram divided by 0,1-fold of the SI base unit kilogram" ;
+  qutd:ucumCode "g/100g"^^<http://qudt.org/schema/qudt/UCUMcs> ;
+  rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
+  rdfs:label "Gram Per Hectogram"@en-us ;
+  rdfs:label "Gram Per Hectogram"@en ;
+.
+
+glosis_u:M3-PER-HundredM3
+  a qutd:Unit ;
+  qutd:hasQuantityKind <http://qudt.org/vocab/quantitykind/VolumeFraction> ;
+  qutd:plainTextDescription "SI base unit metre with the exponent 3 divided by 100-fold of the SI base unit metre with the exponent 3" ;
+  qutd:ucumCode "m3/100m3"^^<http://qudt.org/schema/qudt/UCUMcs> ;
+  rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
+  rdfs:label "Cubic meter per one hundred cubic meter"@en-us ;
+  rdfs:label "Cubic metre per one hundred cubic metre"@en ;
+.
+
+
