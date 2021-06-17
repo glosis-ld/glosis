@@ -1,0 +1,37 @@
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix glosis_ob: <http://w3id.org/glosis/model/observation#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix ssn:   <http://www.w3.org/ns/ssn/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+## APPENDED
+@prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013#> .
+@prefix iso19156_OB: <http://def.isotc211.org/iso19156/2011/Observation#> .
+
+<http://w3id.org/glosis/model/observation>
+        a                owl:Ontology ;
+        owl:imports      ssn: , sosa: , iso28258: ;
+        owl:versionIRI   <http://w3id.org/glosis/model/observation/1.0> ;
+        owl:versionInfo  "1.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      foaf:name "Bogusz Janiak"
+                    ] ;
+        dct:title "GLOSIS ontology"@en ;
+        dct:description "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en .
+
+glosis_ob:GL_Observation
+        a                owl:Class ;
+        rdfs:subClassOf  iso19156_OB:OM_Observation .
+
+
