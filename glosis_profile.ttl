@@ -42,7 +42,7 @@ glosis_cm:SoilDepthBedrock rdfs:subClassOf [ a owl:Restriction ; owl:onProperty 
 glosis_pr:ProfileDescriptionStatus  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_pr:GL_Profile] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ProfileDescriptionStatusValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ProfileDescriptionStatusValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_pr:profileDescriptionStatusProperty ] .
 
 glosis_pr:profileDescriptionStatusProperty a sosa:ObservableProperty ;

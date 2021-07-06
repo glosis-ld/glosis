@@ -1,0 +1,49 @@
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix glosis_ex: <http://w3id.org/glosis/model/ext/property#> .
+@prefix glosis_sp: <http://w3id.org/glosis/model/siteplot#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix ssn:   <http://www.w3.org/ns/ssn/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+## APPENDED
+@prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+
+<http://w3id.org/glosis/model/ext/property>
+        a                owl:Ontology ;
+        owl:imports      ssn: , sosa: , glosis_sp: , iso28258: ;
+        owl:versionIRI   <http://w3id.org/glosis/model/ext/property/1.0> ;
+        owl:versionInfo  "1.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      foaf:name "Bogusz Janiak"
+                    ] ;
+        dct:title "GLOSIS ontology"@en ;
+        dct:description "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en .
+
+
+glosis_ex:SoilCarbonDensity a owl:Class ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_sp:GL_Plot] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_ex:SoilCarbonDensityValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_ex:soilCarbonDensityProperty ] .
+
+glosis_ex:soilCarbonDensityProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "soilCarbonDensityProperty"@en .
+
+glosis_ex:SoilCarbonDensityValue a owl:Class ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
+        

@@ -54,7 +54,7 @@ glosis_su:SaltPresenceValue a owl:Class ;
 glosis_su:SaltThickness  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SaltThicknessValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SaltThicknessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_su:saltThicknessProperty ] .
 
 glosis_su:saltThicknessProperty a sosa:ObservableProperty ;
@@ -72,7 +72,7 @@ glosis_cm:CracksDepth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:
 glosis_su:SealingConsistence  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SealingConsistenceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SealingConsistenceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_su:sealingConsistenceProperty ] .
 
 glosis_su:sealingConsistenceProperty a sosa:ObservableProperty ;
@@ -82,7 +82,7 @@ glosis_su:sealingConsistenceProperty a sosa:ObservableProperty ;
 glosis_su:SaltCover  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SaltCoverValueCode  ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SaltCoverValueCode  ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_su:saltCoverProperty ] .
 
 glosis_su:saltCoverProperty a sosa:ObservableProperty ;
@@ -96,7 +96,7 @@ glosis_cm:CracksDistance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty so
 glosis_su:SealingThickness  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SealingThicknessValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SealingThicknessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_su:sealingThicknessProperty ] .
 
 glosis_su:sealingThicknessProperty a sosa:ObservableProperty ;
