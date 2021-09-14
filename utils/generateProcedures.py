@@ -42,7 +42,7 @@ def main():
     prop_prev = ""
     procM_prev = ""
     source_prev = ""
-    csv_file = open('Procedures.csv')
+    csv_file = open('Procedures_2021-09-14.csv')
     csv_reader = csv.reader(csv_file, delimiter=',')
     # Bypass header
     next(csv_reader)
@@ -61,7 +61,8 @@ def main():
         procM = proc[0].upper() + proc[1:]
         desc = row[5]
         reference = row[6]
-        source = row[7]
+        citation = row[7]
+        source = row[8]
 
         if (proc_prev != "" and proc != proc_prev):
             print("Adding classes for " + prop_prev)
@@ -79,6 +80,9 @@ def main():
         if (reference != ""):
             individuals += """
             skos:scopeNote <%s> ;""" % (reference)
+        if (citation != ""):
+            individuals += """
+            skos:scopeNote "%s" ;""" % (citation)
         individuals += """
             skos:inScheme glosis_pr:%s .
             """ % (proc)
