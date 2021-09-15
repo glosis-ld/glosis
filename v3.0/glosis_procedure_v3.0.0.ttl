@@ -9,8 +9,8 @@
 
 <http://w3id.org/glosis/model/procedure>
         a                owl:Ontology ;
-        owl:versionIRI   <http://w3id.org/glosis/model/procedure/1.0> ;
-        owl:versionInfo  "1.0" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/procedure/3.0> ;
+        owl:versionInfo  "3.0" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -317,52 +317,6 @@
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
             skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:bulkDensityWholeSoilProcedure .
-            
-    glosis_pr:carbonateSolubleProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for carbonateSoluble analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for carbonateSoluble analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for carbonateSoluble."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:CarbonateSolubleProcedure .
-    
-    glosis_pr:CarbonateSolubleProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for carbonateSoluble - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for carbonateSoluble."@en;
-            rdfs:seeAlso glosis_pr:carbonateSolubleProcedure ;
-            owl:oneOf (
-                glosis_pr:carbonateSolubleProcedure-Overlaps with soluble salts
-			) .
-
-    glosis_pr:carbonateSolubleProcedure-Overlaps with soluble salts a skos:Concept, glosis_pr:CarbonateSolubleProcedure;
-            skos:topConceptOf glosis_pr:carbonateSolubleProcedure;
-            skos:prefLabel "Overlaps with soluble salts"@en ;
-            skos:notation "Overlaps with soluble salts" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:carbonateSolubleProcedure .
-            
-    glosis_pr:chlorideSolubleProcedure a skos:ConceptScheme ;
-            skos:prefLabel "Code list for chlorideSoluble analysis procedures - codelist scheme"@en;
-            rdfs:label "Code list for chlorideSoluble analysis procedures - codelist scheme"@en;
-            skos:note "This  code list provides analysis procedures for chlorideSoluble."@en;
-            skos:definition "GloSIS" ;
-            rdfs:seeAlso glosis_pr:ChlorideSolubleProcedure .
-    
-    glosis_pr:ChlorideSolubleProcedure a sosa:Procedure;
-            rdfs:subClassOf skos:Concept ;
-            rdfs:label "Procedures for chlorideSoluble - codelist class"@en;
-            rdfs:comment "This code list provides analysis procedures for chlorideSoluble."@en;
-            rdfs:seeAlso glosis_pr:chlorideSolubleProcedure ;
-            owl:oneOf (
-                glosis_pr:chlorideSolubleProcedure-Overlaps with soluble salts
-			) .
-
-    glosis_pr:chlorideSolubleProcedure-Overlaps with soluble salts a skos:Concept, glosis_pr:ChlorideSolubleProcedure;
-            skos:topConceptOf glosis_pr:chlorideSolubleProcedure;
-            skos:prefLabel "Overlaps with soluble salts"@en ;
-            skos:notation "Overlaps with soluble salts" ;
-            skos:definition "" ;
-            skos:inScheme glosis_pr:chlorideSolubleProcedure .
             
     glosis_pr:cationExchangeCapacitySoilProcedure a skos:ConceptScheme ;
             skos:prefLabel "Code list for cationExchangeCapacitySoil analysis procedures - codelist scheme"@en;
@@ -1371,6 +1325,7 @@
             skos:notation "InOrgC_calcul-tc-oc" ;
             skos:definition "Indirect estimate (total carbon minus organic carbon = inorganic carbon)" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:carbonInorganicProcedure .
             
     glosis_pr:carbonInorganicProcedure-InOrgC_calcul-caco3 a skos:Concept, glosis_pr:CarbonInorganicProcedure;
@@ -1379,6 +1334,7 @@
             skos:notation "InOrgC_calcul-caco3" ;
             skos:definition "Indirect estimate from total carbonate equivalent, with a factor of 0.12 (molar weights: CaCO3 100g/mol, C 12g/mol)" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:carbonInorganicProcedure .
             
     glosis_pr:moistureContentProcedure a skos:ConceptScheme ;
@@ -1411,15 +1367,16 @@
             skos:notation "VMC_ud" ;
             skos:definition "Undisturbed samples" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:moistureContentProcedure-VMC_ud-co a skos:Concept, glosis_pr:MoistureContentProcedure;
             skos:topConceptOf glosis_pr:moistureContentProcedure;
             skos:prefLabel "VMC_ud-co"@en ;
             skos:notation "VMC_ud-co" ;
-            skos:definition "Volumetric moisture content in undisturbed samples (pF rings" ;
-            skos:scopeNote < cores)> ;
-            skos:scopeNote "https://www.isric.org/sites/default/files/isric_report_2014_01.pdf" ;
+            skos:definition "Volumetric moisture content in undisturbed samples (pF rings cores)" ;
+            skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:moistureContentProcedure-VMC_ud-cl a skos:Concept, glosis_pr:MoistureContentProcedure;
@@ -1428,6 +1385,7 @@
             skos:notation "VMC_ud-cl" ;
             skos:definition "Natural clod" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:moistureContentProcedure-VMC_d a skos:Concept, glosis_pr:MoistureContentProcedure;
@@ -1436,15 +1394,16 @@
             skos:notation "VMC_d" ;
             skos:definition "Volumetric moisture content in disturbed samples" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:moistureContentProcedure-VMC_d-ww a skos:Concept, glosis_pr:MoistureContentProcedure;
             skos:topConceptOf glosis_pr:moistureContentProcedure;
             skos:prefLabel "VMC_d-ww"@en ;
             skos:notation "VMC_d-ww" ;
-            skos:definition "Volumetric moisture content in disturbed samples on weight/weight basis" ;
-            skos:scopeNote < to be converted to v/v (with BD at appropriate humidity)> ;
-            skos:scopeNote "https://www.isric.org/sites/default/files/isric_report_2014_01.pdf" ;
+            skos:definition "Volumetric moisture content in disturbed samples on weight/weight basis to be converted to v/v (with BD at appropriate humidity) " ;
+            skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:moistureContentProcedure-VMC_d-cl a skos:Concept, glosis_pr:MoistureContentProcedure;
@@ -1453,6 +1412,7 @@
             skos:notation "VMC_d-cl" ;
             skos:definition "Pressure-plate extraction, disturbed -clod- samples (wt%) * density" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:moistureContentProcedure-VMC_d-cl-ww a skos:Concept, glosis_pr:MoistureContentProcedure;
@@ -1461,6 +1421,7 @@
             skos:notation "VMC_d-cl-ww" ;
             skos:definition "Pressure-plate extraction, disturbed -clod- samples (wt%) * density on weight/weight basis; to be converted to v/v (with BD at appropriate humidity)" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:moistureContentProcedure-VMC_calcul-ptf-brookscorey a skos:Concept, glosis_pr:MoistureContentProcedure;
@@ -1469,6 +1430,7 @@
             skos:notation "VMC_calcul-ptf-brookscorey" ;
             skos:definition "Calculated by PTF of brooks - corey" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:moistureContentProcedure-VMC_calcul-ptf a skos:Concept, glosis_pr:MoistureContentProcedure;
@@ -1477,6 +1439,7 @@
             skos:notation "VMC_calcul-ptf" ;
             skos:definition "Calculated by PTF" ;
             skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:moistureContentProcedure .
             
     glosis_pr:carbonOrganicProcedure a skos:ConceptScheme ;
@@ -3164,9 +3127,9 @@
             skos:topConceptOf glosis_pr:TotalElementsProcedure;
             skos:prefLabel "Total_hcl-aquaregia"@en ;
             skos:notation "Total_hcl-aquaregia" ;
-            skos:definition "Hydrocloric (HCl) extraction in nitric/perchloric acid mixture (totals)" ;
-            skos:scopeNote < aqua regia> ;
-            skos:scopeNote "https://www.isric.org/sites/default/files/isric_report_2014_01.pdf" ;
+            skos:definition "Hydrocloric (HCl) extraction in nitric/perchloric acid mixture (totals) aqua regia" ;
+            skos:scopeNote <https://www.isric.org/sites/default/files/isric_report_2014_01.pdf> ;
+            skos:scopeNote "Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4." ;
             skos:inScheme glosis_pr:TotalElementsProcedure .
             
     glosis_pr:TotalElementsProcedure-Total_hclo4 a skos:Concept, glosis_pr:TotalElementsProcedure;
@@ -3338,7 +3301,7 @@
             skos:notation "TotalN_kjeldahl" ;
             skos:definition "Method of Kjeldahl (digestion)" ;
             skos:scopeNote <https://en.wikipedia.org/wiki/Kjeldahl_method> ;
-            skos:scopeNote "Kjeldahl, J. (1883) "Neue Methode zur Bestimmung des Stickstoffs in organischen Körpern" (New method for the determination of nitrogen in organic substances), Zeitschrift für analytische Chemie, 22 (1) : 366-383." ;
+            skos:scopeNote "Kjeldahl, J. (1883) ‘Neue Methode zur Bestimmung des Stickstoffs in organischen Körpern’ (New method for the determination of nitrogen in organic substances), Zeitschrift für analytische Chemie, 22 (1) : 366-383." ;
             skos:inScheme glosis_pr:nitrogenTotalProcedure .
             
     glosis_pr:nitrogenTotalProcedure-TotalN_kjeldahl-nh4 a skos:Concept, glosis_pr:NitrogenTotalProcedure;
