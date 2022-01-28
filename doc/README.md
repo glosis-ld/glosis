@@ -1,14 +1,14 @@
 WiDoco auto-config
 ==================
 
-This folders contains the assets necessary to generate the documentation of the
+This folder contains the assets necessary to generate the documentation of the
 various ontology modules. Ultimatelly, the documentation is created by WiDoco,
 but some pre-processing is necessary to transform the ontology meta-data into
 WiDoco input config files.
 
 This auto-config programme is necessary since WiDoco is not yet able to deal
-with meta-data vocabularies (VCard, Doublin Core, Schema.org). An issue is
-currently open on this matter. Once that issue is close this programme will no
+with meta-data vocabularies (VCard, Doublin Core, Schema.org). [An issue](https://github.com/dgarijo/Widoco/issues/285) 
+is currently open on this matter. Once that issue is closed this programme might no
 longer be necessary. 
 
 config
