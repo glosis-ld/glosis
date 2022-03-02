@@ -1,0 +1,51 @@
+PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
+PREFIX sosa:  <http://www.w3.org/ns/sosa/> 
+PREFIX glosis_pr: <http://w3id.org/glosis/model/procedure#> 
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#> 
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+### this query still has some missing parts
+CONSTRUCT {
+  ?URI a skos:ConceptScheme ;
+    skos:prefLabel ?cs_label ;
+    rdfs:label ?cs_label ;
+    skos:note ?cs_note ;
+    skos:definition ?cs_definition ;
+    rdfs:seeAlso ?URI2 ;
+    .
+
+  ?URI2 a sosa:Procedure ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label ?c_label ;
+    rdfs:comment ?c_comment ;
+    rdfs:seeAlso ?URI ;
+    owl:oneOf ?c_oneof ;
+    .
+
+  ?IN_URI a skos:Concept, glosis_pr:ExtractableElementsProcedure ;
+    skos:topConceptOf ?URI ;
+    skos:prefLabel ?i_label ;
+    skos:notation ?notation ;
+    skos:definition ?definition ;
+    skos:scopeNote ?i_scopenote ;
+    skos:inScheme ?URI ;
+    .
+    
+} 
+WHERE {
+    BIND (CONCAT('Code list for ', ?attribute, ' analysis procedures - codelist scheme') AS ?label)
+    BIND (STRLANG(?label, "en") AS ?cs_label)
+	BIND (CONCAT('This code list provides analysis procedures for ', ?attribute, '.') AS ?note)
+    BIND (STRLANG(?note, "en") AS ?cs_note)
+    BIND (STR('AfSP-derived interpretation (RwaSP)') AS ?cs_definition)
+	BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure#', ?attribute, 'Procedure')) AS ?URI)
+    BIND (CONCAT(UCASE(SUBSTR(?attribute, 1, 1)), SUBSTR(?attribute, 2)) AS ?attribute_capitalize)
+    BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure#', ?attribute_capitalize, 'Procedure')) AS ?URI2)
+    BIND (CONCAT('Procedures for  ', ?attribute, ' - codelist class') AS ?label2)
+    BIND (STRLANG(?label2, "en") AS ?c_label)
+	BIND (CONCAT('This code list provides analysis procedures for ', ?attribute, '.') AS ?comment)
+    BIND (STRLANG(?comment, "en") AS ?c_comment)
+    BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure#', ?attribute, '-', ?instance)) AS ?IN_URI)
+    BIND (STRLANG(?label, "en") AS ?i_label)
+    BIND (URI(?reference) AS ?i_scopenote)
+}
