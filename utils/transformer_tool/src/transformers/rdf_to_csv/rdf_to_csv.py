@@ -63,10 +63,22 @@ class Transformer(object):
                         current_instances.append(instance_value)
             self.results.update({attribute: dict.fromkeys(current_instances, {})})
 
+    @staticmethod
+    def _is_property(phrase):
+        return True if "PropertyCode" in phrase else False
+
     def _get_instance_details(self):
         for attribute in self.results.keys():
+            concept_definition = None
+            if self.file_type == "codelist":
+                attr_uri = self.base_uri + attribute[0] + attribute[1]
+                for s, p, o in self.graph:
+                    if s == attr_uri and p == rdflib.URIRef("http://www.w3.org/2004/02/skos/core#definition"):
+                        concept_definition = o.n3().strip('"')
             for instance in self.results[attribute].keys():
                 property_dict = {}
+                property_dict["concept_definition"] = concept_definition
+                property_dict["isproperty"] = self._is_property(attribute[1])
                 instance_phrase = f"{attribute[0]}{attribute[1]}-{instance}"
                 instance_uri = self.base_uri + instance_phrase
                 for s, p, o in self.graph:
@@ -100,5 +112,5 @@ class Transformer(object):
                 frames.append(normalized_instance_data)
         df = pd.concat(frames)
         df = df.reindex(columns=["attribute", "instance", "parent_instance", "notation", "label", "definition",
-                                 "reference", "citation"])
+                                 "reference", "citation", "isproperty", "concept_definition"])
         df.to_csv(f"{self.output}.csv", index=False)
