@@ -1,16 +1,18 @@
 # Python Script for transforming CSV files into ttl against SPARQL query
 
-## Prerequisites
+## Installation
 
-1. pytarql command line tool (https://github.com/semanticarts/pytarql)
-2. rdflib python library (https://rdflib.readthedocs.io/en/stable/)
-3. pandas (https://pandas.pydata.org/)
+One should perform the following steps before running the script:
+
+1. pip install requirements.txt
+2. git clone https://github.com/Montanaz0r/pytarql.git
+3. cd into cloned repository and run pip install . to activate setup.py
 
 ## Usage
 
 Script can transform in two ways:
-1) from csv -> rdf, ``python transform_to_rdf.py [path to input csv] [path to SPARQL query file] [output filename]``
+1) from csv -> rdf, ``python transform_to_rdf.py [path to input csv] [path to SPARQL query file] [output filename] [version]``
 2) from rdf -> csv  ``python transform_to_csv.py [path to rdf file]``
 
 *example:*    
-```python transform_to_rdf.py data/test.csv data/myquery.rq output.ttl```
+```python transform_to_rdf.py data/test.csv data/myquery.rq output.ttl 1.1.1```
