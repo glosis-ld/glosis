@@ -5,8 +5,8 @@ from rdflib.term import Literal, URIRef
 
 
 class HeaderAppender(object):
-    def __init__(self, input_ttl, input_csv, version):
-        self.input_ttl = input_ttl
+    def __init__(self, input_csv, graph, version):
+        self.graph = graph
         self.input_csv = input_csv
         self.header = self._extract_type()
         self.version = version
@@ -20,11 +20,11 @@ class HeaderAppender(object):
             sys.exit("Input file not recognized.")
 
     def run(self):
-        g = rdflib.Graph()
         g2 = rdflib.Graph()
         g3 = rdflib.Graph()
-        g.parse(self.input_ttl, format="turtle")
         g2.parse(self.header, format="turtle")
+        for ns in g2.namespaces():
+            self.graph.namespace_manager.bind(ns[0], ns[1])
         for s, p, o in g2:
             if "versionIRI" in p.n3():
                 o = URIRef(o.replace("x.x.x", self.version))
@@ -32,5 +32,5 @@ class HeaderAppender(object):
                 o = Literal(o.replace("x.x.x", self.version))
             g3.add((s, p, o))
 
-        g += g3
-        g.serialize("output.ttl", format="turtle")
+        self.graph += g3
+        return self.graph

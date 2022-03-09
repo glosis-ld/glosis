@@ -1,19 +1,15 @@
 import sys
 import pandas as pd
 import re
-import os
 
 import rdflib
 from rdflib.collection import Collection
 from rdflib.term import BNode, URIRef
-from otsrdflib import OrderedTurtleSerializer
-from rdflib.namespace import Namespace, SKOS, OWL
 
 
 class PostProcessor(object):
-    def __init__(self, input_csv, output_ttl, temp):
+    def __init__(self, input_csv, temp):
         self.input_csv = input_csv
-        self.output = output_ttl
         self.temp = temp
         self.base_uri = None
         self.the_object = None
@@ -62,13 +58,4 @@ class PostProcessor(object):
                     bn = BNode()
                     g.add((s, URIRef("http://www.w3.org/2002/07/owl#oneOf"), bn))
                     Collection(g, bn, instance_uris)
-
-        if self.base_uri == "http://w3id.org/glosis/model/codelists#":
-            main_class = OWL.Class
-        else:
-            main_class = Namespace('http://www.w3.org/ns/sosa/')
-        serializer = OrderedTurtleSerializer(g)
-        serializer.class_order = [SKOS.ConceptScheme, main_class, SKOS.Concept]
-        with open(self.output, 'wb') as fp:
-            serializer.serialize(fp)
-        os.remove(self.temp)
+        return g
