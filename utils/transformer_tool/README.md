@@ -4,7 +4,7 @@
 
 One should perform the following steps before running the script:
 
-1. pip install requirements.txt
+1. pip install - r requirements.txt
 2. git clone https://github.com/Montanaz0r/pytarql.git
 3. cd into cloned repository and run pip install . to activate setup.py
 
