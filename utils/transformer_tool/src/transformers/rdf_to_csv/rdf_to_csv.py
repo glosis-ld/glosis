@@ -104,12 +104,15 @@ class Transformer(object):
         self._get_instance_details()
         frames = []
         for k in self.results.keys():
-            for k2 in self.results[k].keys():
-                instance_data = self.results[k][k2]
-                normalized_instance_data = pd.json_normalize(instance_data)
-                normalized_instance_data["instance"] = k2
-                normalized_instance_data["attribute"] = k[0]
-                frames.append(normalized_instance_data)
+            if self.results[k].keys():
+                for k2 in self.results[k].keys():
+                    instance_data = self.results[k][k2]
+                    normalized_instance_data = pd.json_normalize(instance_data)
+                    normalized_instance_data["instance"] = k2
+                    normalized_instance_data["attribute"] = k[0]
+                    frames.append(normalized_instance_data)
+            else:
+                frames.append(pd.DataFrame({"attribute": k[0]}, index=[0]))
         df = pd.concat(frames)
         df = df.reindex(columns=["attribute", "instance", "parent_instance", "notation", "label", "definition",
                                  "reference", "citation", "isproperty", "concept_definition"])

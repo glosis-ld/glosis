@@ -1,19 +1,16 @@
 import sys
 import pandas as pd
 import re
-import os
 
+import numpy as np
 import rdflib
 from rdflib.collection import Collection
 from rdflib.term import BNode, URIRef
-from otsrdflib import OrderedTurtleSerializer
-from rdflib.namespace import Namespace, SKOS, OWL
 
 
 class PostProcessor(object):
-    def __init__(self, input_csv, output_ttl, temp):
+    def __init__(self, input_csv, temp):
         self.input_csv = input_csv
-        self.output = output_ttl
         self.temp = temp
         self.base_uri = None
         self.the_object = None
@@ -35,6 +32,8 @@ class PostProcessor(object):
         for attr in unique_attrs:
             instances = list(df.instance[df["attribute"] == attr])
             key_name = attr[0].upper() + attr[1:]   # capitalize first letter
+            if np.nan in instances:
+                instances = None
             self.data[key_name] = instances
 
     def _get_attr_name(self, attribute):
@@ -58,17 +57,9 @@ class PostProcessor(object):
                     attr_name, postfix = self._get_attr_name(attribute=s.n3())
                     attr = attr_name[0].lower() + attr_name[1:]
                     instances = self.data.get(attr_name)
-                    instance_uris = [self._generate_instance_uri(instance, postfix, attr) for instance in instances]
-                    bn = BNode()
-                    g.add((s, URIRef("http://www.w3.org/2002/07/owl#oneOf"), bn))
-                    Collection(g, bn, instance_uris)
-
-        if self.base_uri == "http://w3id.org/glosis/model/codelists#":
-            main_class = OWL.Class
-        else:
-            main_class = Namespace('http://www.w3.org/ns/sosa/')
-        serializer = OrderedTurtleSerializer(g)
-        serializer.class_order = [SKOS.ConceptScheme, main_class, SKOS.Concept]
-        with open(self.output, 'wb') as fp:
-            serializer.serialize(fp)
-        os.remove(self.temp)
+                    if instances:
+                        instance_uris = [self._generate_instance_uri(instance, postfix, attr) for instance in instances]
+                        bn = BNode()
+                        g.add((s, URIRef("http://www.w3.org/2002/07/owl#oneOf"), bn))
+                        Collection(g, bn, instance_uris)
+        return g
