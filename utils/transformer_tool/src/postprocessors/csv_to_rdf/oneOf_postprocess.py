@@ -2,6 +2,7 @@ import sys
 import pandas as pd
 import re
 
+import numpy as np
 import rdflib
 from rdflib.collection import Collection
 from rdflib.term import BNode, URIRef
@@ -31,6 +32,8 @@ class PostProcessor(object):
         for attr in unique_attrs:
             instances = list(df.instance[df["attribute"] == attr])
             key_name = attr[0].upper() + attr[1:]   # capitalize first letter
+            if np.nan in instances:
+                instances = None
             self.data[key_name] = instances
 
     def _get_attr_name(self, attribute):
@@ -54,8 +57,9 @@ class PostProcessor(object):
                     attr_name, postfix = self._get_attr_name(attribute=s.n3())
                     attr = attr_name[0].lower() + attr_name[1:]
                     instances = self.data.get(attr_name)
-                    instance_uris = [self._generate_instance_uri(instance, postfix, attr) for instance in instances]
-                    bn = BNode()
-                    g.add((s, URIRef("http://www.w3.org/2002/07/owl#oneOf"), bn))
-                    Collection(g, bn, instance_uris)
+                    if instances:
+                        instance_uris = [self._generate_instance_uri(instance, postfix, attr) for instance in instances]
+                        bn = BNode()
+                        g.add((s, URIRef("http://www.w3.org/2002/07/owl#oneOf"), bn))
+                        Collection(g, bn, instance_uris)
         return g

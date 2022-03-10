@@ -18,6 +18,7 @@ CONSTRUCT {
 ### procedure class
   ?URI2 a owl:Class ;
     rdfs:subClassOf skos:Concept ;
+    rdfs:subClassOf ?c_obs_property ;
     rdfs:label ?c_label ;
     rdfs:comment ?c_comment ;
     rdfs:seeAlso ?URI1 ;
@@ -39,6 +40,8 @@ CONSTRUCT {
 } 
 WHERE {
   BIND (IF(?isproperty = 'True', 'Property', 'Value') AS ?postfix)
+  BIND (URI(CONCAT('http://www.w3.org/ns/sosa/', "ObservableProperty")) AS ?c_property)
+  BIND (IF(?isproperty = 'True', ?c_property, ?nothing) AS ?c_obs_property)
   BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists#', ?attribute, ?postfix, 'Code')) AS ?URI1)
   BIND (STRLANG(CONCAT('Code list for ', ?attribute, ?postfix, ' - codelist scheme'),"en") AS ?cs_label)
   BIND (STRLANG(CONCAT('This code list provides analysis procedures for ', ?attribute, '.'), "en") AS ?cs_note)
@@ -47,7 +50,8 @@ WHERE {
   BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists#', ?attribute_capitalize, ?postfix, 'Code')) AS ?URI2)
   BIND (STRLANG(CONCAT('Code list for ', ?attribute_capitalize, ?postfix, ' - codelist class'),"en")  AS ?c_label)
   BIND (STRLANG(CONCAT('This code list provides the ', ?attribute_capitalize, ?postfix, '.'), "en") AS ?c_comment)
-  BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists#', ?attribute, ?postfix, 'Code', '-', ?instance)) AS ?c_oneof)
+  BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists#', ?attribute, ?postfix, 'Code', '-', ?instance)) AS ?oneof)
+  BIND (IF(?instance != '', ?oneof, ?nothing) AS ?c_oneof)
   BIND (STRLANG(?label, "en")  AS ?i_label)
   BIND (IF(?notation != '', ?notation, ?nothing) AS ?i_notation)
   BIND (IF(?definition != '', ?definition, ?nothing) AS ?i_description)
