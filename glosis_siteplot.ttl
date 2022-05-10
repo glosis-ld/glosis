@@ -144,7 +144,7 @@ glosis_sp:CropClass  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CropClassValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:CropClassProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:cropClassProperty ] .
 
 glosis_sp:cropClassProperty a sosa:ObservableProperty ;
         rdfs:label "cropClassProperty"@en;
@@ -218,9 +218,9 @@ glosis_sp:LandUseGrass  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseGrassValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:GrassAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:grassAbundanceProperty ] .
 
-glosis_sp:GrassAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+glosis_sp:grassAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "GrassAbundanceProperty"@en .
 
 glosis_sp:LandUseGrassValue a owl:Class ;
@@ -419,9 +419,9 @@ glosis_sp:LandUseForest  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseForestValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:ForestAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:forestAbundanceProperty ] .
 
-glosis_sp:ForestAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+glosis_sp:forestAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "ForestAbundanceProperty"@en .
 
 glosis_sp:LandUseForestValue a owl:Class ;
@@ -445,9 +445,9 @@ glosis_sp:LandUsePavedCover  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUsePavedCoverValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:PavedAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:PavedAbundanceproperty ] .
 
-glosis_sp:PavedAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+glosis_sp:pavedAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "PavedAbundanceProperty"@en .
 
 glosis_sp:LandUsePavedCoverValue a owl:Class ;
@@ -535,9 +535,9 @@ glosis_sp:LandUseShrubs  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseShrubsValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:ShrubsAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:shrubsAbundanceProperty ] .
 
-glosis_sp:ShrubsAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+glosis_sp:shrubsAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "ShrubsAbundanceProperty"@en .
 
 glosis_sp:LandUseShrubsValue a owl:Class ;
