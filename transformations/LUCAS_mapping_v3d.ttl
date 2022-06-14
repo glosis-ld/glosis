@@ -24,6 +24,7 @@
 @prefix iso19103: <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#> .
 @prefix iso28258: 	<http://w3id.org/glosis/model/iso28258/2013#> .
 @prefix glosis_cm: <http://w3id.org/glosis/model/common#> .
+@prefix glosis_pr: <http://w3id.org/glosis/model/profile#> .
 @prefix glosis_ex: <http://w3id.org/glosis/model/ext/property#> .
 @prefix glosis_sp: <http://w3id.org/glosis/model/siteplot#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
@@ -272,7 +273,7 @@ map:LUCAS_Topsoil_2015_20200323_LU_observation
 
 map:LUCAS_Topsoil_2015_20200323_Profile
     rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
-    rr:subjectMap [ rr:class iso28258:Profile; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/profile/{`Point_ID`}"; ];
+    rr:subjectMap [ rr:class glosis_pr:GL_Profile; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/profile/{`Point_ID`}"; ];
 
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
