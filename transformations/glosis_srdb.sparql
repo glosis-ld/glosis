@@ -229,7 +229,7 @@ CONSTRUCT {
 FROM <file:srdb-data.csv> 
 WHERE {
   BIND (STRLANG(CONCAT('Value of silt ratio for SRDB site #', ?Site_ID),"en") AS ?soil_silt_value_label)
-	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/sand/value/', ?Site_ID)) AS ?URI_soil_silt_value)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/silt/value/', ?Site_ID)) AS ?URI_soil_silt_value)
 	FILTER (BOUND(?Soil_silt))
 }
 
