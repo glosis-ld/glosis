@@ -22,12 +22,65 @@ mapPreds = {
     "thisVersionURI": OWL.versionIRI,
     "ontologyRevisionNumber": OWL.versionInfo,
     "ontologyTitle": DCT.title,
-    "abstract": DCT.description 
+    "abstract": DCT.abstract
 }
 
 widoco_jar = "/opt/widoco/widoco-1.4.15-jar-with-dependencies.jar"
 ont_file = "glosis_main"
 templ_file = "template.json"
+
+creators = []
+contributors = []
+
+def addCreators(g, config):
+
+    global creators
+    
+    for s, dc_creator, creator in g.triples((None, DCT.creator, None)):
+        for s2, p2, name in g.triples((creator, FOAF.name, None)):
+            if (name in creators):
+                continue
+            else:
+                creators.append(name)
+                config["authors"] += name + ";"
+                auth_uri = ""
+                for s3, p3, uri in g.triples((creator, RDFS.seeAlso, None)):
+                    auth_uri = uri
+                config["authorsURI"] += auth_uri + ";"
+                i_name = ""
+                i_uri = ""
+                for s4, p4, institute in g.triples((creator, SCHEMA.affiliation, None)):
+                    for s5, p5, inst_name in g.triples((institute, FOAF.name, None)):
+                        i_name = inst_name
+                    for s6, p6, inst_uri in g.triples((institute, RDFS.seeAlso, None)):
+                        i_uri = inst_uri
+                    config["authorsInstitution"] += i_name + ";"
+                    config["authorsInstitutionURI"] += i_uri + ";"
+
+    return(config)
+
+
+def addContributors(g, config):
+
+    global contributors
+
+    for s, dc_contributor, contributor in g.triples((None, DCT.contributor, None)):
+        for s2, p2, name in g.triples((contributor, FOAF.name, None)):
+            if not (name in contributors):
+                contributors.append(name)
+                config["contributors"] += name + ";"
+                for s3, p3, uri in g.triples((contributor, RDFS.seeAlso, None)):
+                    config["contributorsURI"] += uri
+                config["contributorsURI"] += ";"
+                for s4, p4, institute in g.triples((contributor, SCHEMA.affiliation, None)):
+                    for s5, p5, inst_name in g.triples((institute, FOAF.name, None)):
+                        config["contributorsInstitution"] += inst_name
+                    for s6, p6, inst_uri in g.triples((institute, RDFS.seeAlso, None)):
+                        config["contributorsInstitutionURI"] += inst_uri
+                config["contributorsInstitution"] += ";"
+                config["contributorsInstitutionURI"] += ";"
+
+    return(config)
 
 
 if __name__ == "__main__":
@@ -59,33 +112,20 @@ if __name__ == "__main__":
             config[item[0]] = o
     
     # Creators
-    for s, dc_creator, creator in g.triples((None, DCT.creator, None)):
-        for s2, p2, name in g.triples((creator, FOAF.name, None)):
-            config["authors"] += name + ";"
-        for s3, p3, uri in g.triples((creator, RDFS.seeAlso, None)):
-            config["authorsURI"] += uri + ";"
-        for s4, p4, institute in g.triples((creator, SCHEMA.affiliation, None)):
-            for s5, p5, inst_name in g.triples((institute, FOAF.name, None)):
-                config["authorsInstitution"] += inst_name + ";"
-            for s6, p6, inst_uri in g.triples((institute, RDFS.seeAlso, None)):
-                config["authorsInstitutionURI"] += inst_uri + ";"
-    
+    config = addCreators(g, config)    
+
     # Contributors
-    for s, dc_contributor, contributor in g.triples((None, DCT.contributor, None)):
-        for s2, p2, name in g.triples((contributor, FOAF.name, None)):
-            config["contributors"] += name + ";"
-        for s3, p3, uri in g.triples((contributor, RDFS.seeAlso, None)):
-            config["contributorsURI"] += uri + ";"
-        for s4, p4, institute in g.triples((contributor, SCHEMA.affiliation, None)):
-            for s5, p5, inst_name in g.triples((institute, FOAF.name, None)):
-                config["contributorsInstitution"] += inst_name + ";"
-            for s6, p6, inst_uri in g.triples((institute, RDFS.seeAlso, None)):
-                config["contributorsInstitutionURI"] += inst_uri + ";"
+    config = addContributors(g, config)
 
     # Imported ontologies
     for s, p, ontology in g.triples((None, OWL.imports, None)):
         config["importedOntologyNames"] += ontology + ";"
         config["importedOntologyURIs"] += ontology + ";"
+        g_ext = Graph()
+        g_ext.parse(ontology, format="turtle")
+        config = addCreators(g_ext, config)    
+        config = addContributors(g_ext, config)
+
 
     # Dump WiDoco config file
     config_file = "%s.config" % ont_file
@@ -93,9 +133,10 @@ if __name__ == "__main__":
     
     for key in config:
         a = textfile.write("%s=%s\n" % (key, config[key]))
+        print("Outputed key: %s", key)
     
     textfile.close()
-    
+
     # Execute WiDoco
     os.system("mkdir %s" % ont_file)
     os.system(

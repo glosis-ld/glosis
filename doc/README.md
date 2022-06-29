@@ -15,11 +15,11 @@ config
 ------
 
 The auto-config programme needs to be awere of the location of the WiDoco `.jar`
-file. This information is set up in the `config`, an input to the programme.
+file. This information is set up in the `config` file, an input to the programme.
 This file also stores the location of the WiDoco template, stored in a separate
 file for convinience (`template.json`, see below). 
 
-Before running the programme edit this file inserting the right path to the
+Before running the programme edit the `config` file, inserting the right path to the
 WiDoco `.jar` in your system. 
 
 
@@ -46,9 +46,9 @@ to set up these libraries:
 ```
 python3 -m venv env
 
-source ~/env/bin/activate
+source ./env/bin/activate
 
-pip3 install -p requirements.txt
+pip3 install -r requirements.txt
 ```
 
 generateDoc.py
@@ -62,6 +62,6 @@ then opens the corresponding Turtle file in the parent folder As an example to
 create the documentation for the `glosis_common` module:
 
 ```
-python3 createConfig.py glosis_common
+python3 generateDoc.py glosis_main
 ```
 
