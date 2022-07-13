@@ -145,5 +145,6 @@ if __name__ == "__main__":
             -outFolder %s \
             -confFile %s \
             -uniteSections \
+            -webVowl \
             -rewriteAll""" % (widoco_jar, ont_file, ont_file, config_file))
     
