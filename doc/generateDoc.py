@@ -122,10 +122,12 @@ if __name__ == "__main__":
         config["importedOntologyNames"] += ontology + ";"
         config["importedOntologyURIs"] += ontology + ";"
         g_ext = Graph()
-        g_ext.parse(ontology, format="turtle")
-        config = addCreators(g_ext, config)    
-        config = addContributors(g_ext, config)
-
+        try:
+            g_ext.parse(ontology, format="turtle")
+            config = addCreators(g_ext, config)    
+            config = addContributors(g_ext, config)
+        except:
+            print("Faild to parse ontology: %s" % ontology)
 
     # Dump WiDoco config file
     config_file = "%s.config" % ont_file
