@@ -715,7 +715,7 @@ map:LUCAS_Topsoil_2015_20200323_CarbonatesContentObservationValue
 
 map:LUCAS_Topsoil_2015_20200323_phCaCl2Observation
     rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
-    rr:subjectMap [ rr:class glosis_lh:pH; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/CaCl2/{`Point_ID`}"; ];
+    rr:subjectMap [ rr:class glosis_lh:PH; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/CaCl2/{`Point_ID`}"; ];
 
     rr:predicateObjectMap [
         rr:predicate sosa:hasFeatureOfInterest;
@@ -755,20 +755,20 @@ map:LUCAS_Topsoil_2015_20200323_phCaCl2Observation
 
 map:LUCAS_Topsoil_2015_20200323_phCaCl2ObservationValue
     rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
-    rr:subjectMap [ rr:class glosis_lh:pHValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/CaCl2/value/{`Point_ID`}"; ];
+    rr:subjectMap [ rr:class glosis_lh:PHValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/CaCl2/value/{`Point_ID`}"; ];
 
     rr:predicateObjectMap [
         rr:predicate qudt:numericValue;
         rr:objectMap [
             rr:datatype xsd:float;
-            rr:template "{`pH_caCl2`}";
+            rr:template "{`pH_CaCl2`}";
         ];
     ];
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
         rr:objectMap [
             rr:datatype xsd:string;
-            rr:template "Result of ph observation measured in a CaCl2 solution for LUCAS topsoil data point #{`Point_ID`}-{`pH_caCl2`}";
+            rr:template "Result of ph observation measured in a CaCl2 solution for LUCAS topsoil data point #{`Point_ID`}-{`pH_CaCl2`}";
           ];
       ];
     rr:predicateObjectMap [
@@ -783,7 +783,7 @@ map:LUCAS_Topsoil_2015_20200323_phCaCl2ObservationValue
 
 map:LUCAS_Topsoil_2015_20200323_phH2oObservation
     rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
-    rr:subjectMap [ rr:class glosis_lh:pH; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/H2o/{`Point_ID`}"; ];
+    rr:subjectMap [ rr:class glosis_lh:PH; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/H2o/{`Point_ID`}"; ];
 
     rr:predicateObjectMap [
         rr:predicate sosa:hasFeatureOfInterest;
@@ -823,20 +823,20 @@ map:LUCAS_Topsoil_2015_20200323_phH2oObservation
 
 map:LUCAS_Topsoil_2015_20200323_phH2oObservationValue
     rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
-    rr:subjectMap [ rr:class glosis_lh:pHValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/H2o/value/{`Point_ID`}"; ];
+    rr:subjectMap [ rr:class glosis_lh:PHValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/H2o/value/{`Point_ID`}"; ];
 
     rr:predicateObjectMap [
         rr:predicate qudt:numericValue;
         rr:objectMap [
             rr:datatype xsd:float;
-            rr:template "{`pH_H2O`}";
+            rr:template "{`pH_H20`}";
         ];
     ];
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
         rr:objectMap [
             rr:datatype xsd:string;
-            rr:template "Result of ph observation measured in a suspension of soil in water for LUCAS topsoil data point #{`Point_ID`}-{`pH_caCl2`}";
+            rr:template "Result of ph observation measured in a suspension of soil in water for LUCAS topsoil data point #{`Point_ID`}-{`pH_H20`}";
           ];
       ];
     rr:predicateObjectMap [
@@ -1096,7 +1096,7 @@ map:LUCAS_Topsoil_2015_20200323_ECObservationValue
       rr:predicate qudt:unit;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://qudt.org/vocab/unit/MegaS-PER-M>;
+          rr:constant <https://qudt.org/vocab/unit/MilliS-PER-M>;
       ];
     ];
 .
