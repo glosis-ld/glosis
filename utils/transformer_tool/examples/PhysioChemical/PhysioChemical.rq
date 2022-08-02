@@ -1,0 +1,15 @@
+PREFIX glosis_cl: <http://w3id.org/glosis/model/codelists#> 
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#> 
+
+CONSTRUCT {
+    ?u a skos:Concept, glosis_cl:physioChemicalPropertyCode ;
+       skos:topConceptOf glosis_cl:physioChemicalPropertyCode ;
+       skos:prefLabel ?label ;
+       skos:notation ?n ;
+       skos:inScheme glosis_cl:physioChemicalPropertyCode ;
+       .
+}
+WHERE {
+    BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists#', ?entity)) AS ?u)
+    BIND (STRLANG(?notation, "en") AS ?n)
+}

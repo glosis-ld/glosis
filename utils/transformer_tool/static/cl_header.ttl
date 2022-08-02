@@ -1,0 +1,26 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://w3id.org/glosis/model/codelists>
+        a                owl:Ontology ;
+        owl:versionIRI   <http://w3id.org/glosis/model/codelists/x.x.x> ;
+        owl:versionInfo  "x.x.x" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      foaf:name "Bogusz Janiak"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "ISRIC" ] ;
+                      foaf:name "Luís Moreira de Sousa" ;
+                      rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071>
+                    ] ; 
+        dct:title "GLOSIS code lists"@en ;
+        dct:description "This ontology represents GLOSIS code lists extracted from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en .
