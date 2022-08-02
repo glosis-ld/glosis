@@ -24,8 +24,8 @@
 <http://w3id.org/glosis/model/layerhorizon>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: , glosis_u: ;
-        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.0.1> ;
-        owl:versionInfo  "1.0.1" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.0.2> ;
+        owl:versionInfo  "1.0.2" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -892,21 +892,6 @@ glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
         rdfs:label "cementationContinuityProperty"@en;
         rdfs:isDefinedBy "GfSD Table 69"@en .
 
-glosis_lh:pH  a	owl:Class ;
-        rdfs:subClassOf  glosis_lh:PhysioChemical ;
-  	rdfs:subClassOf [ a owl:Restriction ; owl:onProperty 
-                sosa:hasResult ; owl:allValuesFrom glosis_lh:pHValue ] ;
-  	rdfs:subClassOf [ a owl:Restriction ; owl:onProperty 
-                sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-pH ] ;
-  	rdfs:subClassOf [ a owl:Restriction ; owl:onProperty 
-                sosa:usedProcedure ; owl:someValuesFrom glosis_pr:PHProcedure ] .
-
-glosis_lh:pHValue a owl:Class ;
-        rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PH ] .
-
-
 glosis_lh:AvailableWaterHoldingCapacity  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -948,8 +933,7 @@ glosis_lh:BulkDensityFineEarth  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_pr:BulkDensityFineEarthProcedure ] .
 
 glosis_lh:BulkDensityFineEarthValue a owl:Class ;
-        rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:KiloGM-PER-DeciM3 ] .
 
@@ -1035,8 +1019,7 @@ glosis_lh:ElectricalConductivity  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_pr:ElectricalConductivityProcedure ] .
 
 glosis_lh:ElectricalConductivityValue a owl:Class ;
-        rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:DeciS-PER-M ] .
 
@@ -1593,8 +1576,7 @@ glosis_lh:HydraulicConductivity  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_pr:HydraulicConductivityProcedure ] .
 
 glosis_lh:HydraulicConductivityValue a owl:Class ;
-        rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiM-PER-HR ] .
 
@@ -1631,8 +1613,7 @@ glosis_lh:MoistureContent  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_pr:MoistureContentProcedure ] .
 
 glosis_lh:MoistureContentValue a owl:Class ;
-        rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:M3-PER-HundredM3 ] .
 
@@ -1667,15 +1648,12 @@ glosis_lh:OrganicMatterValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
-glosis_lh:pHProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "pHProperty"@en .
-
 glosis_lh:PH  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PHValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:pHProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-pH ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_pr:PHProcedure ] .
 
@@ -1711,8 +1689,7 @@ glosis_lh:Porosity  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_pr:PorosityProcedure ] .
 
 glosis_lh:PorosityValue a owl:Class ;
-        rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:M3-PER-HundredM3 ] .
 
