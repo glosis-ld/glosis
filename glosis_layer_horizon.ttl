@@ -24,8 +24,8 @@
 <http://w3id.org/glosis/model/layerhorizon>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: , glosis_u: ;
-        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.0.2> ;
-        owl:versionInfo  "1.0.2" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.0.3> ;
+        owl:versionInfo  "1.0.3" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -1077,7 +1077,7 @@ glosis_lh:CalciumExtractableElements  a	owl:Class ;
 glosis_lh:CalciumExtractableElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:PERCENT ] .
 
 glosis_lh:CalciumTotalElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1091,7 +1091,7 @@ glosis_lh:CalciumTotalElements  a	owl:Class ;
 glosis_lh:CalciumTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:HydrogenExchangeableBases  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1133,7 +1133,7 @@ glosis_lh:MagnesiumExtractableElements  a	owl:Class ;
 glosis_lh:MagnesiumExtractableElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:PERCENT ] .
 
 glosis_lh:MagnesiumTotalElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1147,7 +1147,7 @@ glosis_lh:MagnesiumTotalElements  a	owl:Class ;
 glosis_lh:MagnesiumTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:manganeseProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "manganeseProperty"@en .
@@ -1178,7 +1178,7 @@ glosis_lh:ManganeseExtractableElements  a	owl:Class ;
 glosis_lh:ManganeseExtractableElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:PERCENT ] .
 
 glosis_lh:ManganeseTotalElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1192,7 +1192,7 @@ glosis_lh:ManganeseTotalElements  a	owl:Class ;
 glosis_lh:ManganeseTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:PotassiumExchangeableBases  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1220,7 +1220,7 @@ glosis_lh:PotassiumExtractableElements  a	owl:Class ;
 glosis_lh:PotassiumExtractableElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:PERCENT ] .
 
 glosis_lh:PotassiumTotalElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1234,7 +1234,7 @@ glosis_lh:PotassiumTotalElements  a	owl:Class ;
 glosis_lh:PotassiumTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:SodiumExchangeableBases  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1262,7 +1262,7 @@ glosis_lh:SodiumExtractableElements  a	owl:Class ;
 glosis_lh:SodiumExtractableElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:PERCENT ] .
 
 glosis_lh:SodiumTotalElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1276,7 +1276,7 @@ glosis_lh:SodiumTotalElements  a	owl:Class ;
 glosis_lh:SodiumTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:CentiMOL-PER-KiloGM ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:aluminiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "aluminiumProperty"@en .
@@ -1311,7 +1311,7 @@ glosis_lh:AluminiumTotalElements  a	owl:Class ;
 glosis_lh:AluminiumTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:BoronExtractableElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1339,7 +1339,7 @@ glosis_lh:BoronTotalElements  a	owl:Class ;
 glosis_lh:BoronTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:cadmiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "cadmiumProperty"@en .
@@ -1370,7 +1370,7 @@ glosis_lh:CadmiumTotalElements  a	owl:Class ;
 glosis_lh:CadmiumTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:CopperExtractableElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1398,7 +1398,7 @@ glosis_lh:CopperTotalElements  a	owl:Class ;
 glosis_lh:CopperTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:IronExtractableElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1426,7 +1426,7 @@ glosis_lh:IronTotalElements  a	owl:Class ;
 glosis_lh:IronTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:molybdenumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "molybdenumProperty"@en .
@@ -1457,7 +1457,7 @@ glosis_lh:MolybdenumTotalElements  a	owl:Class ;
 glosis_lh:MolybdenumTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:PhosphorusExtractableElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1485,7 +1485,7 @@ glosis_lh:PhosphorusTotalElements  a	owl:Class ;
 glosis_lh:PhosphorusTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:SulfurExtractableElements  a	owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
@@ -1513,7 +1513,7 @@ glosis_lh:SulfurTotalElements  a	owl:Class ;
 glosis_lh:SulfurTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:zincProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "zincProperty"@en .
@@ -1544,7 +1544,7 @@ glosis_lh:ZincTotalElements  a	owl:Class ;
 glosis_lh:ZincTotalElementsValue a owl:Class ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue unit:PERCENT ] .
+        owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:gypsumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "gypsumProperty"@en .
