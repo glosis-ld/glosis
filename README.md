@@ -11,6 +11,8 @@ Configuration files for WiDoco are generated automatically with a [bespoke
 tool](https://github.com/rapw3k/glosis/blob/glosis_doc/doc/README.md).
 Documentation pages are maintained in the [glosis_doc branch](https://github.com/rapw3k/glosis/tree/glosis_doc/doc).
 
+The documentation for each module can be accessed via the [documentation entry page](https://rapw3k.github.io/glosis/docs)
+
 ## Citing
 
 Cite as:
