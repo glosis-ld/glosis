@@ -9,12 +9,12 @@ Silt,Silt content,%,glosis_lh:Silt ,SiltSizeFractionTotal (code list value),GM p
 Sand,Sand content,%,glosis_lh:Sand,SandSizeFractionTotal (code list value),GM per hectoGM,,
 pH(CaCl2),pH measured in a CaCl2 solution,─,glosis_lh:PH,physioChemicalPropertyCode-pH (or pHProperty),PH,pHCaCl2,procedure CaCL2
 pH(H2O),pH measured in a suspension of soil in water,─,glosis_lh:PH,physioChemicalPropertyCode-pH (or pHProperty),PH,pHH2O,procedure H2O
-EC,Electrical conductivity,mS/m,glosis_lh:ElectricalConductivity,electricalConductivityProperty,DeciS-PER-M,Suggestion?,CONFLICT: mS is probably mili-Siemens. In that case divide by 100 to get dS/m.
+EC,Electrical conductivity,mS/m,glosis_lh:ElectricalConductivity,electricalConductivityProperty,DeciS-PER-M,Suggestion?,CONFLICT: mS is mili-Siemens. Divide by 100 to get dS/m.
 OC,Organic carbon content,g/kg,glosis_lh:CarbonOrganic,Carbon (C) - organic,GM per KiloGM,Suggestion?,
 CaCO3,Carbonates content,g/kg,glosis_lh:TotalCarbonateEquivalent,totalCarbonateEquivalentProperty,GM per KiloGM,Suggestion?,We didn’t use glosis_lh:CarbonatesContent as it has in ontology a result value codelist instead of g/kg
-P,Phosphorus content,mg/kg,glosis_lh:PhosphorusTotalElements,Phosphorus (P) - total,%,Suggestion?,CONFLICT in units: Divide mg/kg by 10 to obtain % ??? This should be multiplied by 10K to obtain % (1/100)
+P,Phosphorus content,mg/kg,glosis_lh:PhosphorusTotalElements,Phosphorus (P) - total,%,Suggestion?,Units now the same in GloSIS
 N,Total nitrogen content,g/kg,glosis_lh:NitrogenTotal,Nitrogen (N) - total,GM per KiloGM,Suggestion?,
-K,Extractable potassium content,mg/kg,glosis_lh:PotassiumExtractableElements,Potassium (K) - extractable,centiMOL per KG,Suggestion?,CONFLICT in units: In principle it is not possible to convert grams to moles. Unless the content is composed of a single molecule. 
+K,Extractable potassium content,mg/kg,glosis_lh:PotassiumExtractableElements,Potassium (K) - extractable,PERCENT,Suggestion?,Extractable elements in GloSIS currently expressed in percentages. Divide mg/kg by 10 000 to obtain %.
 ,,,,,,,
 Site properties,,,,,,,
 LC1,LandCover class,,sosa:Observation,,,,
