@@ -1,5 +1,5 @@
 from otsrdflib import OrderedTurtleSerializer
-from rdflib.namespace import Namespace, SKOS, OWL
+from rdflib.namespace import SKOS, OWL
 
 
 class Sequencer(object):
@@ -9,11 +9,7 @@ class Sequencer(object):
         self.graph = graph
 
     def run(self):
-        if "glosis_cl" in self.input_csv:
-            main_class = OWL.Class
-        else:
-            main_class = Namespace('http://www.w3.org/ns/sosa/').Procedure
         serializer = OrderedTurtleSerializer(self.graph)
-        serializer.class_order = [OWL.Ontology, SKOS.ConceptScheme, main_class, SKOS.Concept]
+        serializer.class_order = [OWL.Ontology, SKOS.ConceptScheme, OWL.Class, SKOS.Concept]
         with open(self.output, 'wb') as fp:
             serializer.serialize(fp)

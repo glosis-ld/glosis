@@ -4,8 +4,7 @@ Updates ontology version and IRI in all modules.
 
 ## Requirements
 
-1. Python3
-2. rdflib installed
+python3
 
 ## Usage
 
