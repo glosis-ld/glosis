@@ -17,11 +17,10 @@ class PostProcessor(object):
         self.data = dict()
 
     def _set_base_uri(self):
+        self.the_object = URIRef("http://www.w3.org/2002/07/owl#" + "Class")
         if "glosis_cl" in self.input_csv:
-            self.the_object = URIRef("http://www.w3.org/2002/07/owl#" + "Class")
             self.base_uri = "http://w3id.org/glosis/model/codelists#"
         elif "glosis_procedure" in self.input_csv:
-            self.the_object = URIRef("http://www.w3.org/ns/sosa/" + "Procedure")
             self.base_uri = "http://w3id.org/glosis/model/procedure#"
         else:
             sys.exit("Input file not recognized.")

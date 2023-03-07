@@ -1,8 +1,9 @@
 PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
 PREFIX sosa:  <http://www.w3.org/ns/sosa/> 
-PREFIX glosis_pr: <http://w3id.org/glosis/model/procedure#> 
+PREFIX glosis_proc: <http://w3id.org/glosis/model/procedure#>
 PREFIX skos:  <http://www.w3.org/2004/02/skos/core#> 
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex: <http://example.org/ontology#>
 
 
 CONSTRUCT {
@@ -16,12 +17,14 @@ CONSTRUCT {
     .
     
 ### procedure class
-  ?URI2 a sosa:Procedure ;
-    rdfs:subClassOf skos:Concept ;
+  ?URI2 a owl:Class ;
+    rdfs:subClassOf skos:Concept, sosa:Procedure ;
     rdfs:label ?c_label ;
     rdfs:comment ?c_comment ;
     rdfs:seeAlso ?URI1 ;
-   .  
+    # the query omitts a collection connected to owl:oneOf on purpose, this will be
+    # properly added in postprocessing phase due to the limitations of TARQL! 
+   .
 
 ### concepts
   ?c_oneof a skos:Concept; a ?URI2 ;

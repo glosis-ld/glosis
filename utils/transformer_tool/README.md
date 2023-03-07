@@ -14,5 +14,8 @@ Script can transform in two ways:
 1) from csv -> rdf, ``python transform_to_rdf.py [path to input csv] [path to SPARQL query file] [output filename] [version]``
 2) from rdf -> csv  ``python transform_to_csv.py [path to rdf file]``
 
-*example:*    
+*examples:*    
 ```python transform_to_rdf.py data/test.csv data/myquery.rq output.ttl 1.1.1```
+
+```python transform_to_csv.py input.ttl```
+(this creates a csv file with corresponding filename in the location of TURTLE file)
