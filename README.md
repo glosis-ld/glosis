@@ -13,6 +13,21 @@ Documentation pages are maintained in the [glosis_doc branch](https://github.com
 
 The documentation for each module can be accessed via the [documentation entry page](https://rapw3k.github.io/glosis/docs)
 
+## Ontology modules
+
+* [Glosis Main module](https://rapw3k.github.io/glosis/doc/glosis_main/index-en.html)
+* [Glosis Common module](https://rapw3k.github.io/glosis/doc/glosis_common/index-en.html)
+* [Glosis Surface](https://rapw3k.github.io/glosis/doc/glosis_surface/index-en.html)
+* [Glosis Site-Plot module](https://rapw3k.github.io/glosis/doc/glosis_siteplot/index-en.html)
+* [Glosis Profile module](https://rapw3k.github.io/glosis/doc/glosis_profile/index-en.html)
+* [Glosis Layer-Horizon module](https://rapw3k.github.io/glosis/doc/glosis_profile/index-en.html)
+* [Glosis Observation module](https://rapw3k.github.io/glosis/doc/glosis_observation/index-en.html)
+* [Glosis Procedures codelist](https://rapw3k.github.io/glosis/doc/glosis_procedure/index-en.html)
+* [Glosis Units of measurement codelist](https://rapw3k.github.io/glosis/doc/glosis_unit/index-en.html)
+* [Glosis observable properties codelist](https://rapw3k.github.io/glosis/doc/glosis_cl/index-en.html)
+* [ISO28258 module](https://rapw3k.github.io/glosis/doc/iso28258/index-en.html)
+
+
 ## Citing
 
 Cite as:
