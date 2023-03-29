@@ -32,7 +32,7 @@ The documentation for each module can be accessed via the [documentation entry p
 
 ## Transformer-tool
 
-Transformer-tool is a bi-directional tool that allows generating RDF representation using SPARQL query and list of codelist items in CSV file or another way around by generating a CSV list of items out of RDF representation.
+[Transformer-tool](https://github.com/rapw3k/glosis/tree/master/utils/transformer_tool) is a bi-directional tool that allows generating RDF representation using SPARQL query and list of codelist items in CSV file or another way around by generating a CSV list of items out of RDF representation.
 
 ### Installation
 
@@ -56,7 +56,7 @@ Script can transform in two ways:
 
 ## Version Updater
 
-Version updater is a simple convenience script that updates and harmonizes versions across all ontology modules.
+[Version updater](https://github.com/rapw3k/glosis/tree/master/utils/version_updater) is a simple convenience script that updates and harmonizes versions across all ontology modules.
 
 ### Requirements
 
