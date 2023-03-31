@@ -4,9 +4,9 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix glosis_sp: <http://w3id.org/glosis/model/siteplot#> .
-@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
-@prefix glosis_cm: <http://w3id.org/glosis/model/common#> .
+@prefix glosis_sp: <http://w3id.org/glosis/model/siteplot/> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists/> .
+@prefix glosis_cm: <http://w3id.org/glosis/model/common/> .
 @prefix lcc-cr: <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -15,7 +15,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 ### ISO FEATURES
-@prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013#> .
+@prefix iso28258: <http://w3id.org/glosis/model/iso28258/2013/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
@@ -23,8 +23,8 @@
 <http://w3id.org/glosis/model/siteplot>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: ;
-        owl:versionIRI   <http://w3id.org/glosis/model/siteplot/4.0> ;
-        owl:versionInfo  "4.0" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/siteplot/1.0.5> ;
+        owl:versionInfo  "1.0.5" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -35,7 +35,7 @@
         dct:title "GLOSIS ontology"@en ;
         dct:description "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+        dct:rights "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en .
         
 
 glosis_sp:GL_Plot  a        owl:Class ;
@@ -143,11 +143,11 @@ glosis_sp:country
 glosis_sp:CropClass  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:CropClassValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:CropClassProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CropClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:cropClassProperty ] .
 
 glosis_sp:cropClassProperty a sosa:ObservableProperty ;
-        rdfs:label "erosionCategoryProperty"@en;
+        rdfs:label "cropClassProperty"@en;
         rdfs:isDefinedBy "GfSD Table 9"@en .
         
 glosis_sp:cropDescription a owl:DatatypeProperty ;
@@ -157,7 +157,7 @@ glosis_sp:cropDescription a owl:DatatypeProperty ;
 glosis_sp:Geology  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:LithologyValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LithologyValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:geologyProperty ] .
 
 glosis_sp:geologyProperty a sosa:ObservableProperty ;
@@ -178,7 +178,7 @@ glosis_sp:slopeOrientationClassProperty a sosa:ObservableProperty ;
 glosis_sp:ErosionCategory  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ErosionCategoryValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionCategoryValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:erosionCategoryProperty ] .
 
 glosis_sp:erosionCategoryProperty a sosa:ObservableProperty ;
@@ -207,7 +207,7 @@ glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProper
 glosis_sp:ParentTextureUnconsolidated a owl:Class ;
         rdfs:subClassOf sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-                        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:TextureUnconsolidatedValueCode  ] ;
+                        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:TextureUnconsolidatedValueCode  ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:parentTextureUnconsolidatedProperty ] .
 
 glosis_sp:parentTextureUnconsolidatedProperty a sosa:ObservableProperty ;
@@ -218,9 +218,9 @@ glosis_sp:LandUseGrass  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseGrassValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:GrassAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:grassAbundanceProperty ] .
 
-glosis_sp:GrassAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+glosis_sp:grassAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "GrassAbundanceProperty"@en .
 
 glosis_sp:LandUseGrassValue a owl:Class ;
@@ -231,7 +231,7 @@ glosis_sp:LandUseGrassValue a owl:Class ;
 glosis_sp:SurfaceAge  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SurfaceAgeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SurfaceAgeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:surfaceAgeProperty ] .
 
 glosis_sp:surfaceAgeProperty a sosa:ObservableProperty ;
@@ -241,7 +241,7 @@ glosis_sp:surfaceAgeProperty a sosa:ObservableProperty ;
 glosis_sp:WeatheringRock  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:WeatheringValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:WeatheringValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:weatheringRockProperty ] .
 
 glosis_sp:weatheringRockProperty a sosa:ObservableProperty ;
@@ -251,7 +251,7 @@ glosis_sp:weatheringRockProperty a sosa:ObservableProperty ;
 glosis_sp:SlopeForm  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SlopeFormValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SlopeFormValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:slopeFormProperty ] .
 
 glosis_sp:slopeFormProperty a sosa:ObservableProperty ;
@@ -275,7 +275,7 @@ glosis_sp:SlopeOrientationNumericValue a owl:Class ;
 glosis_sp:ParentLithology  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:LithologyValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LithologyValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:parentLithologyProperty ] .
 
 glosis_sp:parentLithologyProperty a sosa:ObservableProperty ;
@@ -287,7 +287,7 @@ glosis_cm:SoilDepthSampled rdfs:subClassOf [ a owl:Restriction ; owl:onProperty 
 glosis_sp:SlopeGradientClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SlopeGradientClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SlopeGradientClassValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:slopeGradientClassProperty ] .
 
 glosis_sp:slopeGradientClassProperty a sosa:ObservableProperty ;
@@ -297,7 +297,7 @@ glosis_sp:slopeGradientClassProperty a sosa:ObservableProperty ;
 glosis_sp:ErosionDegree  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ErosionDegreeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionDegreeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:erosionDegreeProperty ] .
 
 glosis_sp:erosionDegreeProperty a sosa:ObservableProperty ;
@@ -307,7 +307,7 @@ glosis_sp:erosionDegreeProperty a sosa:ObservableProperty ;
 glosis_sp:LandformComplex  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:LandformComplexValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LandformComplexValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:landformComplexProperty ] .
 
 glosis_sp:landformComplexProperty a sosa:ObservableProperty ;
@@ -331,7 +331,7 @@ glosis_sp:LandUseBareCoverValue a owl:Class ;
 glosis_sp:WeatherPast  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:WeatherConditionsValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:WeatherConditionsValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:weatherConditionsPastProperty ] .
 
 glosis_sp:weatherConditionsPastProperty a sosa:ObservableProperty ;
@@ -352,7 +352,7 @@ glosis_sp:koeppenClassProperty a sosa:ObservableProperty ;
 glosis_sp:RockOutcropsCover  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:RockOutcropsCoverValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RockOutcropsCoverValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:rockOutcropsCoverProperty ] .
 
 glosis_sp:rockOutcropsCoverProperty a sosa:ObservableProperty ;
@@ -362,7 +362,7 @@ glosis_sp:rockOutcropsCoverProperty a sosa:ObservableProperty ;
 glosis_sp:ParentDeposition  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ErosionCategoryValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionCategoryValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:parentDepositionProperty ] .
 
 glosis_sp:parentDepositionProperty a sosa:ObservableProperty ;
@@ -376,7 +376,7 @@ glosis_sp:physiographyDescription a owl:DatatypeProperty ;
 glosis_sp:FloodDuration a owl:Class ;
         rdfs:subClassOf sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-                        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:FloodDurationValueCode ] ;
+                        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:FloodDurationValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:floodDurationProperty ] .
 
 glosis_sp:floodDurationProperty a sosa:ObservableProperty ;
@@ -386,7 +386,7 @@ glosis_sp:floodDurationProperty a sosa:ObservableProperty ;
 glosis_sp:Physiography  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:PhysiographyValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PhysiographyValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:physiographyProperty ] .
 
 glosis_sp:physiographyProperty a sosa:ObservableProperty ;
@@ -419,9 +419,9 @@ glosis_sp:LandUseForest  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseForestValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:ForestAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:forestAbundanceProperty ] .
 
-glosis_sp:ForestAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+glosis_sp:forestAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "ForestAbundanceProperty"@en .
 
 glosis_sp:LandUseForestValue a owl:Class ;
@@ -432,7 +432,7 @@ glosis_sp:LandUseForestValue a owl:Class ;
 glosis_sp:RockOutcropsDistance  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:RockOutcropsDistanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RockOutcropsDistanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:rockOutcropsDistanceProperty ] .
 
 glosis_sp:rockOutcropsDistanceProperty a sosa:ObservableProperty ;
@@ -445,9 +445,9 @@ glosis_sp:LandUsePavedCover  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUsePavedCoverValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:PavedAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:PavedAbundanceproperty ] .
 
-glosis_sp:PavedAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+glosis_sp:pavedAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "PavedAbundanceProperty"@en .
 
 glosis_sp:LandUsePavedCoverValue a owl:Class ;
@@ -458,7 +458,7 @@ glosis_sp:LandUsePavedCoverValue a owl:Class ;
 glosis_sp:SlopePathways  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:SlopePathwaysValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SlopePathwaysValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:slopePathwaysProperty ] .
 
 glosis_sp:slopePathwaysProperty a sosa:ObservableProperty ;
@@ -468,7 +468,7 @@ glosis_sp:slopePathwaysProperty a sosa:ObservableProperty ;
 glosis_sp:MajorLandForm  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:MajorLandFormValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MajorLandFormValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:majorLandFormProperty ] .
 
 glosis_sp:majorLandFormProperty a sosa:ObservableProperty ;
@@ -492,7 +492,7 @@ glosis_sp:GroundwaterDepthValue a owl:Class ;
 glosis_sp:Lithology  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:LithologyValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LithologyValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:lithologyProperty ] .
 
 glosis_sp:lithologyProperty a sosa:ObservableProperty ;
@@ -502,7 +502,7 @@ glosis_sp:lithologyProperty a sosa:ObservableProperty ;
 glosis_sp:WeatherCurrent  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:WeatherConditionsValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:WeatherConditionsValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:weatherConditionsCurrentProperty ] .
 
 glosis_sp:weatherConditionsCurrentProperty a sosa:ObservableProperty ;
@@ -512,7 +512,7 @@ glosis_sp:weatherConditionsCurrentProperty a sosa:ObservableProperty ;
 glosis_sp:FloodFrequency a owl:Class ;
         rdfs:subClassOf sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-                        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:FloodFrequencyValueCode ] ;
+                        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:FloodFrequencyValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:floodFrequencyProperty ] .
 
 glosis_sp:floodFrequencyProperty a sosa:ObservableProperty ;
@@ -522,7 +522,7 @@ glosis_sp:floodFrequencyProperty a sosa:ObservableProperty ;
 glosis_sp:HumanInfluenceClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:HumanInfluenceClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:HumanInfluenceClassValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:humanInfluenceClassProperty ] .
 
 glosis_sp:humanInfluenceClassProperty a sosa:ObservableProperty ;
@@ -535,10 +535,10 @@ glosis_sp:LandUseShrubs  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseShrubsValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:ShrubsAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:shrubsAbundanceProperty ] .
 
-glosis_sp:ShrubsAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "PavedAbundanceProperty"@en .
+glosis_sp:shrubsAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "ShrubsAbundanceProperty"@en .
 
 glosis_sp:LandUseShrubsValue a owl:Class ;
         rdfs:subClassOf  qudt:QuantityValue ;
@@ -548,7 +548,7 @@ glosis_sp:LandUseShrubsValue a owl:Class ;
 glosis_sp:ErosionActivityPeriod  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ErosionActivityPeriodValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionActivityPeriodValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:erosionActivityPeriodProperty ] .
 
 glosis_sp:erosionActivityPeriodProperty a sosa:ObservableProperty ;
@@ -558,7 +558,7 @@ glosis_sp:erosionActivityPeriodProperty a sosa:ObservableProperty ;
 glosis_sp:VegetationClass a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:VegetationClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:VegetationClassValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:vegetationClassProperty ] .
 
 glosis_sp:vegetationClassProperty a sosa:ObservableProperty ;
@@ -582,7 +582,7 @@ glosis_sp:TreeDensityValue a owl:Class ;
 glosis_sp:ErosionTotalAreaAffected a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:ErosionTotalAreaAffectedValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionTotalAreaAffectedValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:erosionTotalAreaAffectedProperty ] .
 
 glosis_sp:erosionTotalAreaAffectedProperty a sosa:ObservableProperty ;
@@ -592,7 +592,7 @@ glosis_sp:erosionTotalAreaAffectedProperty a sosa:ObservableProperty ;
 glosis_sp:LandUseClass a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cl:LandUseClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LandUseClassValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:landUseClassProperty ] .
 
 glosis_sp:landUseClassProperty a sosa:ObservableProperty ;

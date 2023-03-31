@@ -1,0 +1,30 @@
+property,description,unit,GLOSIS observation class,GLOSIS observed property,GLOSIS observation result unit,Procedure,notes
+,,,,,,,
+Point_ID,Unique identifier of the LUCAS survey point,8 digits number,id is part of URL of instance and appears in label,,,,
+,,,,,,,
+Layer observations,,,,,,,
+Coarse,Coarse elements,%,glosis_lh:CoarseFragments,coarseFragmentsProperty,%,Suggestion?,
+Clay,Clay content,%,glosis_lh:Clay,ClayTotal (code list value),%,,
+Silt,Silt content,%,glosis_lh:Silt ,SiltSizeFractionTotal (code list value),GM per hectoGM,,gm/hg = %
+Sand,Sand content,%,glosis_lh:Sand,SandSizeFractionTotal (code list value),GM per hectoGM,,
+pH(CaCl2),pH measured in a CaCl2 solution,─,glosis_lh:PH,physioChemicalPropertyCode-pH (or pHProperty),PH,pHCaCl2,procedure CaCL2
+pH(H2O),pH measured in a suspension of soil in water,─,glosis_lh:PH,physioChemicalPropertyCode-pH (or pHProperty),PH,pHH2O,procedure H2O
+EC,Electrical conductivity,mS/m,glosis_lh:ElectricalConductivity,electricalConductivityProperty,DeciS-PER-M,Suggestion?,CONFLICT: mS is mili-Siemens. Divide by 100 to get dS/m.
+OC,Organic carbon content,g/kg,glosis_lh:CarbonOrganic,Carbon (C) - organic,GM per KiloGM,Suggestion?,
+CaCO3,Carbonates content,g/kg,glosis_lh:TotalCarbonateEquivalent,totalCarbonateEquivalentProperty,GM per KiloGM,Suggestion?,We didn’t use glosis_lh:CarbonatesContent as it has in ontology a result value codelist instead of g/kg
+P,Phosphorus content,mg/kg,glosis_lh:PhosphorusTotalElements,Phosphorus (P) - total,%,Suggestion?,Units now the same in GloSIS
+N,Total nitrogen content,g/kg,glosis_lh:NitrogenTotal,Nitrogen (N) - total,GM per KiloGM,Suggestion?,
+K,Extractable potassium content,mg/kg,glosis_lh:PotassiumExtractableElements,Potassium (K) - extractable,PERCENT,Suggestion?,Extractable elements in GloSIS currently expressed in percentages. Divide mg/kg by 10 000 to obtain %.
+,,,,,,,
+Site properties,,,,,,,
+LC1,LandCover class,,sosa:Observation,,,,
+LU1,LandUse class,,glosis_sp:LandUseClass,,,,
+LC1_Desc,LandCover class description,,value in LUCAS LC codelist,,,,
+LU1_Desc,LandUse class description,,value in LUCAS LU codelist,,,,
+NUTS_0,NUTS code for the country where the sample was taken,,gn:parentCountry (property),,,,
+NUTS_1,NUTS 1 codes for the location where the sample was taken,,gn:parentADM1 (property),,,,
+NUTS_2,NUTS 2 codes for the location where the sample was taken,,gn:parentADM2 (property),,,,
+NUTS_3,NUTS 3 codes for the location where the sample was taken,,gn:parentADM3 (property),,,,
+,,,,,,,
+Other in CSV,,,,,,,
+SOIL_STONES,Percentage of Stones in the sample as a class,,,,,,

@@ -1,0 +1,1102 @@
+@prefix geof: <http://www.opengis.net/def/function/geosparql/>.
+@prefix map: <#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rrx: <http://www.w3.org/ns/r2rml-ext#>.
+@prefix rrxf: <http://www.w3.org/ns/r2rml-ext/functions/def/>.
+@prefix strdf: <http://strdf.di.uoa.gr/ontology#>.
+@prefix iso19150-2: <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#> .
+@prefix foodie: <http://foodie-cloud.com/model/foodie#> .
+@prefix foodie-cz: <http://foodie-cloud.com/model/foodie-cz#> .
+@prefix foodie-es: <http://foodie-cloud.com/model/foodie-es#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix virtrdf: <http://www.openlinksw.com/schemas/virtrdf#> .
+@prefix common: <http://portele.de/ont/inspire/baseInspire#> .
+@prefix iso19103: <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#> .
+@prefix iso28258: 	<http://w3id.org/glosis/model/iso28258/2013#> .
+@prefix glosis_cm: <http://w3id.org/glosis/model/common#> .
+@prefix glosis_pr: <http://w3id.org/glosis/model/profile#> .
+@prefix glosis_ex: <http://w3id.org/glosis/model/ext/property#> .
+@prefix glosis_sp: <http://w3id.org/glosis/model/siteplot#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix olu: <http://w3id.org/foodie/olu#> .
+@prefix glosis_lh: <http://w3id.org/glosis/model/layerhorizon#> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
+@prefix cap-iacs-parcel: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
+@prefix fnml:   <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: 	<https://w3id.org/function/ontology#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+
+##################### Geometry ###########
+map:LUCAS_Topsoil_2015_20200323_geometry
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class geo:Geometry; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/site/Geometry/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate geo:is3D;
+        rr:objectMap [
+            rr:datatype xsd:boolean;
+            rrx:function rrxf:is3D;
+            rrx:argumentMap
+            (
+                 [ rr:column "`the_geom`"; ]
+            )
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate geo:spatialDimension;
+        rr:objectMap [
+            rr:datatype xsd:integer;
+            rrx:function rrxf:spatialDimension;
+            rrx:argumentMap
+            (
+                 [ rr:column "`the_geom`"; ]
+            )
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate geo:asWKT;
+        rr:objectMap [
+            rr:datatype geo:wktLiteral;
+            rrx:function rrxf:asWKT;
+            rrx:argumentMap
+            (
+                 [ rr:column "`the_geom`"; ]
+            )
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate geo:dimension;
+        rr:objectMap [
+            rr:datatype xsd:integer;
+            rrx:function rrxf:dimension;
+            rrx:argumentMap
+            (
+                 [ rr:column "`the_geom`"; ]
+            )
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate geo:isSimple;
+        rr:objectMap [
+            rr:datatype xsd:boolean;
+            rrx:function rrxf:isSimple;
+            rrx:argumentMap
+            (
+                 [ rr:column "`the_geom`"; ]
+            )
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate geo:coordinateDimension;
+        rr:objectMap [
+            rr:datatype xsd:integer;
+            rrx:function rrxf:coordinateDimension;
+            rrx:argumentMap
+            (
+                 [ rr:column "`the_geom`"; ]
+            )
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate geo:isEmpty;
+        rr:objectMap [
+            rr:datatype xsd:boolean;
+            rrx:function rrxf:isEmpty;
+            rrx:argumentMap
+            (
+                 [ rr:column "`the_geom`"; ]
+            )
+        ];
+    ];
+    .
+##################### Site ################
+
+map:LUCAS_Topsoil_2015_20200323_Site
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_sp:GL_Site; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/site/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+        rr:predicate geo:hasGeometry;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/site/Geometry/{`Point_ID`}";
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate gn:parentADM3;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://nuts.geovocab.org/id/{`NUTS_3`}";
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate gn:parentADM2;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://nuts.geovocab.org/id/{`NUTS_2`}";
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate gn:parentADM1;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://nuts.geovocab.org/id/{`NUTS_1`}";
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate gn:parentCountry;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://nuts.geovocab.org/id/{`NUTS_0`}";
+        ];
+    ];
+
+#    rr:predicateObjectMap [
+#        rr:predicate cap-iacs-parcel:landCover;
+#        rr:objectMap [
+#            rr:termType rr:IRI;
+#            rr:template "http://w3id.org/foodie/lucas/lcvalue/{`LC`}";
+#        ];
+#    ];
+
+    rr:predicateObjectMap [
+        rr:predicate iso28258:Site.typicalProfile;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_Profile];
+    ];
+    .
+
+##################### LC observation ################
+### modelled as observation (still to be decided)
+
+
+map:LUCAS_Topsoil_2015_20200323_LC_Observation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class sosa:Observation; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/LandCover/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Land cover of LUCAS topsoil data point #{`Point_ID`}";
+          ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/site/{`Point_ID`}"
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasResult;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://w3id.org/foodie/lucas/lcvalue/{`LC`}"
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:constant cap-iacs-parcel:landCover
+        ];
+    ];
+.
+
+##################### LU observation ################
+
+
+map:LUCAS_Topsoil_2015_20200323_LU_observation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_sp:LandUseClass; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/LandUse/{`Point_ID`}"; ];
+
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Land use of LUCAS topsoil data point #{`Point_ID`}";
+          ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/site/{`Point_ID`}"
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasResult;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://w3id.org/foodie/lucas/luvalue/{`LU`}"
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:constant <http://w3id.org/glosis/model/siteplot#landUseClassProperty>
+        ];
+    ];
+
+.
+
+
+######################## Profile mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_Profile
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_pr:GL_Profile; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/profile/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Profile for LUCAS topsoil data point #{`Point_ID`}" ;
+          ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate iso28258:Profile.element;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+
+.
+
+
+######################## Profile Element - Layer mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:GL_Layer;
+    rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/profileElement/layer/{`Point_ID`}";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Layer for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+
+.
+
+
+############## SiltObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_SiltObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:Silt; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/silt/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+
+
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/silt/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Silt observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#siltPropertyCode-SSFT>;
+      ];
+    ];
+
+    .
+
+######################## SiltObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_SiltObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:SiltValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/silt/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`Silt`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of silt observation for LUCAS topsoil data point #{`Point_ID`}-{`Silt`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/PERCENT>;
+      ];
+    ];
+
+.
+############## SandObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_SandObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:Sand; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/sand/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+
+
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/sand/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Sand observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#sandPropertyCode-SSFT>;
+
+      ];
+    ];
+
+    .
+
+######################## SandObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_SandObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:SandValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/sand/value/{`Point_ID`}";];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`Sand`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of sand observation for LUCAS topsoil data point #{`Point_ID`}-{`Sand`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/PERCENT>;
+      ];
+    ];
+
+.
+
+############## ClayObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_ClayObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:Clay; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/clay/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+
+
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/clay/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Clay observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#clayPropertyCode-CT>;
+
+      ];
+    ];
+
+    .
+
+######################## ClayObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_ClayObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:ClayValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/clay/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`Clay`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of clay observation for LUCAS topsoil data point #{`Point_ID`}-{`Clay`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/PERCENT>;
+      ];
+    ];
+
+.
+
+############## FragmentsObservation mapping #################
+###### coarse FragmentsObservation #########
+
+map:LUCAS_Topsoil_2015_20200323_FragmentsObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:CoarseFragments; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/coarseFragments/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+
+
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/coarseFragments/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Coarse fragments observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/layerhorizon#coarseFragmentsProperty>;
+
+      ];
+    ];
+
+    .
+
+######################## FragmentsObservationValue mapping ##################
+###### coarse FragmentsObservationValue #########
+
+map:LUCAS_Topsoil_2015_20200323_FragmentsObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:CoarseFragmentsValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/coarseFragments/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`Coarse`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of coarse fragments observation for LUCAS topsoil data point #{`Point_ID`}-{`Coarse`}";
+          ];
+    ];
+
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/PERCENT>;
+      ];
+    ];
+
+.
+
+############## OrganicCarbonContentObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_OrganicCarbonContentObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:CarbonOrganic; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/carbonOrganic/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/carbonOrganic/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Carbon organic observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-Carorg>;
+      ];
+    ];
+.
+
+######################## OrganicCarbonContentObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_SoilCarbonContentObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:CarbonOrganicValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/carbonOrganic/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`OC`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of carbon organic observation for LUCAS topsoil data point #{`Point_ID`}-{`OC`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/GM-PER-KiloGM>;
+      ];
+    ];
+
+.
+######################CarbonatesContentObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_CarbonatesContentObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:TotalCarbonateEquivalent; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/carbonatesContent/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/carbonatesContent/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Total carbonate equivalent observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/layerhorizon#totalCarbonateEquivalentProperty>;
+      ];
+    ];
+  .
+
+
+######################## CarbonatesContentObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_CarbonatesContentObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:TotalCarbonateEquivalentValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/carbonatesContent/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`CaCO3`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of total carbonate equivalent observation for LUCAS topsoil data point #{`Point_ID`}-{`CaCO3`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/GM-PER-KiloGM>;
+      ];
+    ];
+
+.
+######################## phCaCl2Observation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_phCaCl2Observation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:PH; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/CaCl2/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/CaCl2/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "ph observation measured in a CaCl2 solution for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-pH>;
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:usedProcedure;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/procedure#pHProcedure-pHCaCl2>;
+      ];
+    ];
+  .
+
+######################## phCaCl2ObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_phCaCl2ObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:PHValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/CaCl2/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`pH_CaCl2`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of ph observation measured in a CaCl2 solution for LUCAS topsoil data point #{`Point_ID`}-{`pH_CaCl2`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/PH>;
+      ];
+    ];
+.
+######################## phH2oObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_phH2oObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:PH; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/H2o/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/H2o/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "ph observation measured in a suspension of soil in water for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-pH>;
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:usedProcedure;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/procedure#pHProcedure-pHH2O>;
+      ];
+    ];
+  .
+
+######################## phH2oObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_phH2oObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:PHValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ph/H2o/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`pH_H20`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of ph observation measured in a suspension of soil in water for LUCAS topsoil data point #{`Point_ID`}-{`pH_H20`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/PH>;
+      ];
+    ];
+.
+
+######################PotassiumObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_PotassiumObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:PotassiumExtractableElements; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/potassiumExtractable/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/potassiumExtractable/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Potassium extractable observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-Potext>;
+      ];
+    ];
+  .
+
+
+######################## PotassiumObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_PotassiumObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:PotassiumExtractableElementsValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/potassiumExtractable/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`K`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of potassium extractable observation for LUCAS topsoil data point #{`Point_ID`}-{`K`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM>;
+      ];
+    ];
+
+.
+
+###################### NitrogenObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_NitrogenObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:NitrogenTotal; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/nitrogenTotal/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/nitrogenTotal/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Nitrogen content observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-Nittot>;
+      ];
+    ];
+  .
+
+######################## NitrogenObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_NitrogenObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:NitrogenTotalValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/nitrogenTotal/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`N`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of nitrogen content observation for LUCAS topsoil data point #{`Point_ID`}-{`N`}";
+          ];
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/GM-PER-KiloGM>;
+      ];
+    ];
+
+.
+###################### PhosphorusObservation mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_PhosphorusObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:PhosphorusTotalElements; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/phosphorus/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/phosphorus/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Phosphorus content observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-Photot>;
+      ];
+    ];
+  .
+
+######################## PhosphorusObservationValue mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_PhosphorusObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:PhosphorusTotalElementsValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/phosphorus/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`P`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of phosphorus content observation for LUCAS topsoil data point #{`Point_ID`}-{`P`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM>;
+      ];
+    ];
+.
+
+
+###################### Electrical conductivity mapping #################
+
+map:LUCAS_Topsoil_2015_20200323_ECObservation
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:ElectricalConductivity; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ec/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasFeatureOfInterest;
+        rr:objectMap [rr:parentTriplesMap map:LUCAS_Topsoil_2015_20200323_ProfileElement_Layer];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:hasResult;
+      rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ec/value/{`Point_ID`}";
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Electrical conductivity observation for LUCAS topsoil data point #{`Point_ID`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate sosa:observedProperty;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <http://w3id.org/glosis/model/layerhorizon#electricalConductivityProperty>;
+      ];
+    ];
+  .
+
+######################## Electrical conductivity value mapping ##################
+
+map:LUCAS_Topsoil_2015_20200323_ECObservationValue
+    rr:logicalTable [ rr:tableName "`LUCAS_Topsoil_2015_20200323`"; ];
+    rr:subjectMap [ rr:class glosis_lh:ElectricalConductivityValue; rr:template "http://w3id.org/glosis/open/LUCAS/topsoildata/observation/ec/value/{`Point_ID`}"; ];
+
+    rr:predicateObjectMap [
+        rr:predicate qudt:numericValue;
+        rr:objectMap [
+            rr:datatype xsd:float;
+            rr:template "{`EC`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:template "Result of electrical conductivity observation for LUCAS topsoil data point #{`Point_ID`}-{`P`}";
+          ];
+      ];
+    rr:predicateObjectMap [
+      rr:predicate qudt:unit;
+      rr:objectMap [
+          rr:termType rr:IRI;
+          rr:constant <https://qudt.org/vocab/unit/MilliS-PER-M>;
+      ];
+    ];
+.

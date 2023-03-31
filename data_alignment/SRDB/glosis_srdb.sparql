@@ -1,0 +1,276 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX base: <http://w3id.org/foodie/lucas/lcvalue>
+PREFIX sosa:  <http://www.w3.org/ns/sosa/> 
+PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
+PREFIX glosis_cm: <http://w3id.org/glosis/model/common#>
+PREFIX glosis_lh: <http://w3id.org/glosis/model/layerhorizon#> 
+PREFIX glosis_cl: <http://w3id.org/glosis/model/codelists#> 
+PREFIX glosis_sp: <http://w3id.org/glosis/model/siteplot#> 
+PREFIX glosis_pr: <http://w3id.org/glosis/model/profile#> 
+PREFIX iso19103: <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#> 
+PREFIX iso28258: 	<http://w3id.org/glosis/model/iso28258/2013#> 
+PREFIX qudt: <http://qudt.org/schema/qudt/> 
+PREFIX unit: <http://qudt.org/vocab/unit/> 
+PREFIX sosa:  <http://www.w3.org/ns/sosa/> 
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+
+
+### site class
+CONSTRUCT {
+  ?URI_site a glosis_sp:GL_Site ;
+  	rdfs:label ?site_label ;
+  	glosis_sp:altitude ?Elevation ;
+  	iso28258:Site.typicalProfile ?URI_profile 
+}  	
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?site_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/site/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_site)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profile/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_profile)	    
+}
+
+### site class
+CONSTRUCT {
+  ?URI_site geo:hasGeometry ?URI_geo .
+  ?URI_geo geo:asWKT ?geo_point .
+}  	
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/site/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_site)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/geo/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_geo)
+	BIND (CONCAT('POINT (',?Longitude,' ',?Latitude,')') AS ?geo_point)
+	FILTER (BOUND(?Latitude) && BOUND(?Longitude))
+}
+    
+
+### land use class
+CONSTRUCT {
+  ?URI_lu a glosis_sp:LandUseClass ;
+  	rdfs:label ?lu_label ;
+  	sosa:hasFeatureOfInterest ?URI_site ;
+  	sosa:hasResult ?URI_lu_result ;
+  	sosa:observedProperty glosis_sp:landUseClassProperty 
+}  	  	     
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Land use of SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?lu_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/site/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_site)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/lu/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_lu)
+	BIND (URI(CONCAT('http://w3id.org/SRDB/luvalue/', ?Ecosystem_type)) AS ?URI_lu_result)	  
+	FILTER (BOUND(?Ecosystem_type))  
+}
+
+
+### Depth to which soil C recorded - C_soildepth
+#CONSTRUCT {
+#  ?URI_soil_depth a glosis_cm:SoilDepth ;
+#  	rdfs:label ?soil_depth_label ;
+#  	sosa:hasFeatureOfInterest ?URI_site ;
+#  	sosa:hasResult ?URI_soil_depth_value ;
+#  	sosa:observedProperty glosis_cm:SoilDepthProperty 
+#} 
+#FROM <file:srdb-data.csv> 
+#WHERE {
+#  BIND (STRLANG(CONCAT('Clay ratio for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?soil_clay_label)
+#  BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/site/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_site)
+#  BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/depth/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_depth)
+#	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/depth/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_depth_value)
+#	FILTER (BOUND(?C_soildepth))
+#}
+
+### Soil depth value
+#CONSTRUCT {
+#  ?URI_soil_depth_value a glosis_cm:SoilDepthValue ;
+#  	rdfs:label ?soil_depth_value_label ;
+#  	qudt:numericValue ?C_soildepth ;
+#  	qudt:unit unit:CentiM 
+#}      
+#FROM <file:srdb-data.csv> 
+#WHERE {
+#  BIND (STRLANG(CONCAT('Value of soil depth for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?soil_depth_value_label)
+#	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/depth/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_depth_value)
+#	FILTER (BOUND(?C_soildepth))
+#}
+
+### Profile class
+CONSTRUCT {
+  ?URI_profile a glosis_pr:GL_Profile ;
+  	rdfs:label ?profile_label .
+}     
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Profile for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?profile_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profile/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_profile)	    
+}
+
+### Profile class - element property
+CONSTRUCT {
+  ?URI_profile iso28258:Profile.element ?URI_layer .
+}     
+FROM <file:srdb-data.csv> 
+WHERE {
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profile/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_profile)	    
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profileElement/layer/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_layer)	    
+	FILTER (BOUND(?Soil_BD) || BOUND(?Soil_sand) || BOUND(?Soil_silt) || BOUND(?Soil_clay))
+}
+
+### SoilClassificationWRB - soil_type
+CONSTRUCT {
+  ?URI_soil_type a glosis_pr:SoilClassificationWRB ;
+  	rdfs:label ?soil_type_label ;
+  	sosa:hasFeatureOfInterest ?URI_profile ;
+  	sosa:hasSimpleResult ?Soil_type ;
+  	sosa:observedProperty glosis_pr:SoilClassificationWRBProperty 
+} 
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Soil type for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?soil_type_label)
+  BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/soilClassification/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_type)
+  BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profile/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_profile)
+  FILTER (BOUND(?Soil_type)) 
+}
+
+
+### Profile Element - Layer class
+CONSTRUCT {
+  ?URI_layer a glosis_lh:GL_Layer ;
+  	rdfs:label ?layer_label 
+} 
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Layer for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?layer_label)
+  BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profileElement/layer/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_layer)	    
+  FILTER (BOUND(?Soil_BD) || BOUND(?Soil_sand) || BOUND(?Soil_silt) || BOUND(?Soil_clay))
+}
+
+### Soil bulk density
+CONSTRUCT {
+  ?URI_bulk_density a glosis_lh:bulkDensityWholeSoil ;
+  	rdfs:label ?bulk_density_label ;
+  	sosa:hasFeatureOfInterest ?URI_layer ;
+  	sosa:hasResult ?URI_bulk_density_value ;
+  	sosa:observedProperty glosis_lh:bulkDensityWholeSoilProperty 
+} 
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Bulk density for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?bulk_density_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/bulkDensity/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_bulk_density)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profileElement/layer/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_layer)	    
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/bulkDensity/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_bulk_density_value)
+	FILTER (BOUND(?Soil_BD))
+}
+
+### Soil bulk density value
+CONSTRUCT {
+  ?URI_bulk_density_value a glosis_lh:bulkDensityWholeSoilValue ;
+  	rdfs:label ?bulk_density_value_label ;
+  	qudt:numericValue ?Soil_BD ;
+  	qudt:unit unit:GM-PER-CentiM3 
+}      
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Value of bulk density for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?bulk_density_value_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/bulkDensity/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_bulk_density_value)
+	FILTER (BOUND(?Soil_BD))
+}
+
+
+### Sand ratio value (generally sand+silt+clay = 100 but not always) - Soil_sand
+CONSTRUCT {
+  ?URI_soil_sand a glosis_lh:SandFractionTexture ;
+  	rdfs:label ?soil_sand_label ;
+  	sosa:hasFeatureOfInterest ?URI_layer ;
+  	sosa:hasResult ?URI_soil_sand_value ;
+  	sosa:observedProperty glosis_cl:physioChemicalPropertyCode-Textsand 
+} 
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Sand ratio for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?soil_sand_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/sand/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_sand)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profileElement/layer/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_layer)	    
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/sand/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_sand_value)
+	FILTER (BOUND(?Soil_sand))
+}
+
+### sand value
+CONSTRUCT {
+  ?URI_soil_sand_value a glosis_lh:SandFractionTextureValue ;
+  	rdfs:label ?soil_sand_value_label ;
+  	qudt:numericValue ?Soil_sand ;
+  	qudt:unit unit:PERCENT 
+}      
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Value of sand ratio for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?bulk_density_value_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/sand/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_sand_value)
+	FILTER (BOUND(?Soil_sand))
+}
+
+
+
+### Silt ratio value (generally sand+silt+clay = 100 but not always) - Soil_silt
+CONSTRUCT {
+  ?URI_soil_silt a glosis_lh:SiltFractionTexture ;
+  	rdfs:label ?soil_silt_label ;
+  	sosa:hasFeatureOfInterest ?URI_layer ;
+  	sosa:hasResult ?URI_soil_silt_value ;
+  	sosa:observedProperty glosis_cl:physioChemicalPropertyCode-Textsilt 
+} 
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Silt ratio for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?soil_silt_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/silt/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_silt)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profileElement/layer/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_layer)	    
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/silt/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_silt_value)
+	FILTER (BOUND(?Soil_silt))
+}
+
+### silt value
+CONSTRUCT {
+  ?URI_soil_silt_value a glosis_lh:SiltFractionTextureValue ;
+  	rdfs:label ?soil_silt_value_label ;
+  	qudt:numericValue ?Soil_silt ;
+  	qudt:unit unit:PERCENT 
+}      
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Value of silt ratio for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?soil_silt_value_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/silt/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_silt_value)
+	FILTER (BOUND(?Soil_silt))
+}
+
+
+### Clay ratio value (generally sand+silt+clay = 100 but not always) - Soil_clay
+CONSTRUCT {
+  ?URI_soil_clay a glosis_lh:ClayFractionTexture ;
+  	rdfs:label ?soil_clay_label ;
+  	sosa:hasFeatureOfInterest ?URI_layer ;
+  	sosa:hasResult ?URI_soil_clay_value ;
+  	sosa:observedProperty glosis_cl:physioChemicalPropertyCode-Textclay 
+} 
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Clay ratio for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?soil_clay_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/clay/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_clay)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/profileElement/layer/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_layer)	    
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/clay/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_clay_value)
+	FILTER (BOUND(?Soil_clay))
+}
+
+### clay value
+CONSTRUCT {
+  ?URI_soil_clay_value a glosis_lh:ClayFractionTextureValue ;
+  	rdfs:label ?soil_clay_value_label ;
+  	qudt:numericValue ?Soil_clay ;
+  	qudt:unit unit:PERCENT 
+}      
+FROM <file:srdb-data.csv> 
+WHERE {
+  BIND (STRLANG(CONCAT('Value of clay ratio for SRDB study number #', ?Study_number,', study site id: ',?Site_ID,', year of study: ',?Study_midyear),"en") AS ?soil_clay_value_label)
+	BIND (URI(CONCAT('http://w3id.org/glosis/open/SRDB/observation/clay/value/', ?Study_number,'-',?Site_ID,'-',?Study_midyear)) AS ?URI_soil_clay_value)
+	FILTER (BOUND(?Soil_clay))
+}
