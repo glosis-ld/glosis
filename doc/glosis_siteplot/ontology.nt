@@ -1,0 +1,1681 @@
+<http://w3id.org/glosis/model/siteplot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/glosis/model/siteplot> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/glosis/model/siteplot/1.1.0> .
+<http://w3id.org/glosis/model/siteplot> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/glosis/model/codelists/> .
+<http://w3id.org/glosis/model/siteplot> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/glosis/model/common/> .
+<http://w3id.org/glosis/model/siteplot> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/glosis/model/iso28258/2013/> .
+<http://w3id.org/glosis/model/siteplot> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/> .
+<http://w3id.org/glosis/model/siteplot> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
+<http://w3id.org/glosis/model/siteplot> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/siteplot_:genid-nodeid-node1gsrbbd1vx3> .
+<http://w3id.org/glosis/model/siteplot> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
+_:genid1 <http://schema.org/affiliation> _:genid2 .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "PSNC" .
+<http://w3id.org/glosis/model/siteplot> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+_:genid3 <http://schema.org/affiliation> _:genid4 .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
+<http://w3id.org/glosis/model/siteplot> <http://purl.org/dc/terms/description> "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
+<http://w3id.org/glosis/model/siteplot> <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en .
+<http://w3id.org/glosis/model/siteplot> <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
+<http://w3id.org/glosis/model/siteplot> <http://purl.org/dc/terms/title> "GLOSIS ontology"@en .
+<http://w3id.org/glosis/model/siteplot> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/affiliation
+<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/unit
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://w3id.org/glosis/model/siteplot/altitude
+<http://w3id.org/glosis/model/siteplot/altitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/glosis/model/siteplot/altitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/siteplot/country
+<http://w3id.org/glosis/model/siteplot/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/glosis/model/siteplot/country> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code> .
+<https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/siteplot/positionalAccuracy
+<http://w3id.org/glosis/model/siteplot/positionalAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/glosis/model/siteplot/positionalAccuracy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Property> .
+# 
+# http://w3id.org/glosis/model/siteplot/responsibleOrganization
+<http://w3id.org/glosis/model/siteplot/responsibleOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/glosis/model/siteplot/responsibleOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+# 
+# http://w3id.org/glosis/model/siteplot/timestamp
+<http://w3id.org/glosis/model/siteplot/timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/numericValue
+<http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://w3id.org/glosis/model/siteplot/cropDescription
+<http://w3id.org/glosis/model/siteplot/cropDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/cropDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/glosis/model/siteplot/cropDescription> <http://www.w3.org/2004/02/skos/core#definition> "Description of crops at the site"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/landUseCropRotation
+<http://w3id.org/glosis/model/siteplot/landUseCropRotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/landUseCropRotation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/glosis/model/siteplot/landUseCropRotation> <http://www.w3.org/2004/02/skos/core#definition> "Description of crop rotation at the site"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/landUseRemark
+<http://w3id.org/glosis/model/siteplot/landUseRemark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/landUseRemark> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/glosis/model/siteplot/landUseRemark> <http://www.w3.org/2004/02/skos/core#definition> "Description of land use at the site"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/location
+<http://w3id.org/glosis/model/siteplot/location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://w3id.org/glosis/model/siteplot/mapSheetID
+<http://w3id.org/glosis/model/siteplot/mapSheetID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/mapSheetID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://w3id.org/glosis/model/siteplot/parentRemarks
+<http://w3id.org/glosis/model/siteplot/parentRemarks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/parentRemarks> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/glosis/model/siteplot/parentRemarks> <http://www.w3.org/2004/02/skos/core#definition> "Remarks on the parent material"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/physiographyDescription
+<http://w3id.org/glosis/model/siteplot/physiographyDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/physiographyDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/glosis/model/siteplot/physiographyDescription> <http://www.w3.org/2004/02/skos/core#definition> "Description of the local physiography"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/remarks
+<http://w3id.org/glosis/model/siteplot/remarks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/remarks> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://w3id.org/glosis/model/siteplot/timestamp
+<http://w3id.org/glosis/model/siteplot/timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/timestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://w3id.org/glosis/model/siteplot/vegetationDescription
+<http://w3id.org/glosis/model/siteplot/vegetationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/glosis/model/siteplot/vegetationDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/glosis/model/siteplot/vegetationDescription> <http://www.w3.org/2004/02/skos/core#definition> "Description of vegetation at the site"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/QuantityValue
+# 
+# http://qudt.org/schema/qudt/Quantitykind
+<http://qudt.org/schema/qudt/Quantitykind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/CropClassValueCode
+<http://w3id.org/glosis/model/codelists/CropClassValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/ErosionActivityPeriodValueCode
+<http://w3id.org/glosis/model/codelists/ErosionActivityPeriodValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/ErosionCategoryValueCode
+<http://w3id.org/glosis/model/codelists/ErosionCategoryValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/ErosionDegreeValueCode
+<http://w3id.org/glosis/model/codelists/ErosionDegreeValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/ErosionTotalAreaAffectedValueCode
+<http://w3id.org/glosis/model/codelists/ErosionTotalAreaAffectedValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/FloodDurationValueCode
+<http://w3id.org/glosis/model/codelists/FloodDurationValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode
+<http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/HumanInfluenceClassValueCode
+<http://w3id.org/glosis/model/codelists/HumanInfluenceClassValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/LandUseClassValueCode
+<http://w3id.org/glosis/model/codelists/LandUseClassValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/LandformComplexValueCode
+<http://w3id.org/glosis/model/codelists/LandformComplexValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/LithologyValueCode
+<http://w3id.org/glosis/model/codelists/LithologyValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/MajorLandFormValueCode
+<http://w3id.org/glosis/model/codelists/MajorLandFormValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/PhysiographyValueCode
+<http://w3id.org/glosis/model/codelists/PhysiographyValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode
+<http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/RockOutcropsDistanceValueCode
+<http://w3id.org/glosis/model/codelists/RockOutcropsDistanceValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/SlopeFormValueCode
+<http://w3id.org/glosis/model/codelists/SlopeFormValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode
+<http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/SlopePathwaysValueCode
+<http://w3id.org/glosis/model/codelists/SlopePathwaysValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode
+<http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode
+<http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/VegetationClassValueCode
+<http://w3id.org/glosis/model/codelists/VegetationClassValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/WeatherConditionsValueCode
+<http://w3id.org/glosis/model/codelists/WeatherConditionsValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/WeatheringValueCode
+<http://w3id.org/glosis/model/codelists/WeatheringValueCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/common/SoilDepth
+<http://w3id.org/glosis/model/common/SoilDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/common/SoilDepth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/common/SoilDepthBedrock
+<http://w3id.org/glosis/model/common/SoilDepthBedrock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/common/SoilDepthBedrock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/common/SoilDepthRootable
+<http://w3id.org/glosis/model/common/SoilDepthRootable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/common/SoilDepthRootable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/common/SoilDepthRootableClass
+<http://w3id.org/glosis/model/common/SoilDepthRootableClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/common/SoilDepthRootableClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/common/SoilDepthSampled
+<http://w3id.org/glosis/model/common/SoilDepthSampled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/common/SoilDepthSampled> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/common/WeatheringFragments
+<http://w3id.org/glosis/model/common/WeatheringFragments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/common/WeatheringFragments> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/iso28258/2013/Plot
+<http://w3id.org/glosis/model/iso28258/2013/Plot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/iso28258/2013/Site
+<http://w3id.org/glosis/model/iso28258/2013/Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/siteplot/CropClass
+<http://w3id.org/glosis/model/siteplot/CropClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/CropClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/CropClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/CropClassValueCode> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/CropClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/CropClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/cropClassProperty> .
+<http://w3id.org/glosis/model/siteplot/cropClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod
+<http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/ErosionActivityPeriodValueCode> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#unionOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/ErosionAreaAffected
+<http://w3id.org/glosis/model/siteplot/ErosionAreaAffected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/ErosionAreaAffected> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/ErosionAreaAffected> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#unionOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionAreaAffected> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionAreaAffected> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSimpleResult> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/ErosionCategory
+<http://w3id.org/glosis/model/siteplot/ErosionCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/ErosionCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/ErosionCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/ErosionCategoryValueCode> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#unionOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/erosionCategoryProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionCategoryProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/ErosionDegree
+<http://w3id.org/glosis/model/siteplot/ErosionDegree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/ErosionDegree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/ErosionDegree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/ErosionDegreeValueCode> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionDegree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#unionOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionDegree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/erosionDegreeProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionDegreeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected
+<http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/ErosionTotalAreaAffectedValueCode> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid61 .
+_:genid61 <http://www.w3.org/2002/07/owl#unionOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/FloodDuration
+<http://w3id.org/glosis/model/siteplot/FloodDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/FloodDuration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/FloodDuration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
+_:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/FloodDurationValueCode> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/FloodDuration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid67 .
+_:genid67 <http://www.w3.org/2002/07/owl#unionOf> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/FloodDuration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/floodDurationProperty> .
+<http://w3id.org/glosis/model/siteplot/floodDurationProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/FloodFrequency
+<http://w3id.org/glosis/model/siteplot/FloodFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/FloodFrequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/FloodFrequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/FloodFrequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
+_:genid72 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid73 .
+_:genid73 <http://www.w3.org/2002/07/owl#unionOf> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/FloodFrequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid76 .
+_:genid76 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/floodFrequencyProperty> .
+<http://w3id.org/glosis/model/siteplot/floodFrequencyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/GL_Plot
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/glosis/model/iso28258/2013/Plot> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid77 .
+_:genid77 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid77 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/altitude> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid78 .
+_:genid78 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid78 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/country> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid79 .
+_:genid79 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/positionalAccuracy> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid80 .
+_:genid80 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/responsibleOrganization> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid81 .
+_:genid81 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid81 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/timestamp> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid82 .
+_:genid82 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/location> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid83 .
+_:genid83 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid83 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/mapSheetID> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Plot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid84 .
+_:genid84 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid84 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/remarks> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/GL_Site
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/glosis/model/iso28258/2013/Site> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid85 .
+_:genid85 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid85 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/altitude> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid86 .
+_:genid86 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid86 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/country> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid87 .
+_:genid87 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid87 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/positionalAccuracy> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid88 .
+_:genid88 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid88 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/responsibleOrganization> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid89 .
+_:genid89 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid89 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/timestamp> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid90 .
+_:genid90 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/location> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid91 .
+_:genid91 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid91 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/mapSheetID> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GL_Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid92 .
+_:genid92 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid92 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/model/siteplot/remarks> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/Geology
+<http://w3id.org/glosis/model/siteplot/Geology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/Geology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/Geology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid93 .
+_:genid93 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/LithologyValueCode> .
+_:genid93 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/Geology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid94 .
+_:genid94 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid95 .
+_:genid95 <http://www.w3.org/2002/07/owl#unionOf> _:genid97 .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid96 .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/Geology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid98 .
+_:genid98 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/geologyProperty> .
+<http://w3id.org/glosis/model/siteplot/geologyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/GroundwaterDepth
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid99 .
+_:genid99 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid100 .
+_:genid100 <http://www.w3.org/2002/07/owl#unionOf> _:genid102 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid101 .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid99 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid103 .
+_:genid103 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue> .
+_:genid103 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid104 .
+_:genid104 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty> .
+<http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid104 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid105 .
+_:genid105 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/CentiM> .
+<http://qudt.org/vocab/unit/CentiM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid105 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid106 .
+_:genid106 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid106 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/HumanInfluenceClass
+<http://w3id.org/glosis/model/siteplot/HumanInfluenceClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/HumanInfluenceClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/HumanInfluenceClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid107 .
+_:genid107 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/HumanInfluenceClassValueCode> .
+_:genid107 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/HumanInfluenceClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid108 .
+_:genid108 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid109 .
+_:genid109 <http://www.w3.org/2002/07/owl#unionOf> _:genid111 .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid110 .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid108 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/HumanInfluenceClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid112 .
+_:genid112 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty> .
+<http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid112 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/KoeppenClass
+<http://w3id.org/glosis/model/siteplot/KoeppenClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/KoeppenClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/KoeppenClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid113 .
+_:genid113 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid114 .
+_:genid114 <http://www.w3.org/2002/07/owl#unionOf> _:genid116 .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid115 .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/KoeppenClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid117 .
+_:genid117 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/koeppenClassProperty> .
+<http://w3id.org/glosis/model/siteplot/koeppenClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid117 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/KoeppenClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid118 .
+_:genid118 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid118 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSimpleResult> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseBareCover
+<http://w3id.org/glosis/model/siteplot/LandUseBareCover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseBareCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/LandUseBareCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid119 .
+_:genid119 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid120 .
+_:genid120 <http://www.w3.org/2002/07/owl#unionOf> _:genid122 .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid121 .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid119 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseBareCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid123 .
+_:genid123 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue> .
+_:genid123 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseBareCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid124 .
+_:genid124 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty> .
+<http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid124 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue
+<http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid125 .
+_:genid125 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/PERCENT> .
+<http://qudt.org/vocab/unit/PERCENT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid125 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid126 .
+_:genid126 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid126 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseClass
+<http://w3id.org/glosis/model/siteplot/LandUseClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/LandUseClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid127 .
+_:genid127 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/LandUseClassValueCode> .
+_:genid127 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid128 .
+_:genid128 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid129 .
+_:genid129 <http://www.w3.org/2002/07/owl#unionOf> _:genid131 .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid130 .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid128 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid132 .
+_:genid132 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/landUseClassProperty> .
+<http://w3id.org/glosis/model/siteplot/landUseClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid132 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseForest
+<http://w3id.org/glosis/model/siteplot/LandUseForest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseForest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/LandUseForest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid133 .
+_:genid133 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid134 .
+_:genid134 <http://www.w3.org/2002/07/owl#unionOf> _:genid136 .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid135 .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid133 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseForest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid137 .
+_:genid137 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/LandUseForestValue> .
+_:genid137 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseForest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid138 .
+_:genid138 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/forestAbundanceProperty> .
+<http://w3id.org/glosis/model/siteplot/forestAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid138 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseForestValue
+<http://w3id.org/glosis/model/siteplot/LandUseForestValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseForestValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/LandUseForestValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid139 .
+_:genid139 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/PERCENT> .
+_:genid139 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseForestValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid140 .
+_:genid140 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid140 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseGrass
+<http://w3id.org/glosis/model/siteplot/LandUseGrass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseGrass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/LandUseGrass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid141 .
+_:genid141 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid142 .
+_:genid142 <http://www.w3.org/2002/07/owl#unionOf> _:genid144 .
+_:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid143 .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid141 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseGrass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid145 .
+_:genid145 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/LandUseGrassValue> .
+_:genid145 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid145 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseGrass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid146 .
+_:genid146 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/grassAbundanceProperty> .
+<http://w3id.org/glosis/model/siteplot/grassAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid146 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseGrassValue
+<http://w3id.org/glosis/model/siteplot/LandUseGrassValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseGrassValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/LandUseGrassValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid147 .
+_:genid147 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/PERCENT> .
+_:genid147 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseGrassValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid148 .
+_:genid148 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid148 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUsePavedCover
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid149 .
+_:genid149 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid150 .
+_:genid150 <http://www.w3.org/2002/07/owl#unionOf> _:genid152 .
+_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid151 .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid149 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid153 .
+_:genid153 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue> .
+_:genid153 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid154 .
+_:genid154 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/PavedAbundanceproperty> .
+<http://w3id.org/glosis/model/siteplot/PavedAbundanceproperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid154 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid155 .
+_:genid155 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/PERCENT> .
+_:genid155 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid156 .
+_:genid156 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid156 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid156 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseShrubs
+<http://w3id.org/glosis/model/siteplot/LandUseShrubs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseShrubs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/LandUseShrubs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid157 .
+_:genid157 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid158 .
+_:genid158 <http://www.w3.org/2002/07/owl#unionOf> _:genid160 .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid159 .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid157 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid157 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseShrubs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid161 .
+_:genid161 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/LandUseShrubsValue> .
+_:genid161 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid161 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseShrubs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid162 .
+_:genid162 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty> .
+<http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid162 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandUseShrubsValue
+<http://w3id.org/glosis/model/siteplot/LandUseShrubsValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandUseShrubsValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/LandUseShrubsValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid163 .
+_:genid163 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/PERCENT> .
+_:genid163 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandUseShrubsValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid164 .
+_:genid164 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid164 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/LandformComplex
+<http://w3id.org/glosis/model/siteplot/LandformComplex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/LandformComplex> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/LandformComplex> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid165 .
+_:genid165 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/LandformComplexValueCode> .
+_:genid165 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandformComplex> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid166 .
+_:genid166 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid167 .
+_:genid167 <http://www.w3.org/2002/07/owl#unionOf> _:genid169 .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid168 .
+_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid167 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid166 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/LandformComplex> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid170 .
+_:genid170 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/landformComplexProperty> .
+<http://w3id.org/glosis/model/siteplot/landformComplexProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid170 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/Lithology
+<http://w3id.org/glosis/model/siteplot/Lithology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/Lithology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/Lithology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid171 .
+_:genid171 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/LithologyValueCode> .
+_:genid171 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/Lithology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid172 .
+_:genid172 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid173 .
+_:genid173 <http://www.w3.org/2002/07/owl#unionOf> _:genid175 .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid174 .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid172 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/Lithology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid176 .
+_:genid176 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/lithologyProperty> .
+<http://w3id.org/glosis/model/siteplot/lithologyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid176 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/MajorLandForm
+<http://w3id.org/glosis/model/siteplot/MajorLandForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/MajorLandForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/MajorLandForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid177 .
+_:genid177 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/MajorLandFormValueCode> .
+_:genid177 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/MajorLandForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid178 .
+_:genid178 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid179 .
+_:genid179 <http://www.w3.org/2002/07/owl#unionOf> _:genid181 .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid180 .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid178 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/MajorLandForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid182 .
+_:genid182 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/majorLandFormProperty> .
+<http://w3id.org/glosis/model/siteplot/majorLandFormProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid182 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/ParentDeposition
+<http://w3id.org/glosis/model/siteplot/ParentDeposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/ParentDeposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/ParentDeposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid183 .
+_:genid183 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/ErosionCategoryValueCode> .
+_:genid183 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ParentDeposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid184 .
+_:genid184 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid185 .
+_:genid185 <http://www.w3.org/2002/07/owl#unionOf> _:genid187 .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid186 .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid184 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ParentDeposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid188 .
+_:genid188 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/parentDepositionProperty> .
+<http://w3id.org/glosis/model/siteplot/parentDepositionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid188 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/ParentLithology
+<http://w3id.org/glosis/model/siteplot/ParentLithology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/ParentLithology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/ParentLithology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid189 .
+_:genid189 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/LithologyValueCode> .
+_:genid189 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ParentLithology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid190 .
+_:genid190 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid191 .
+_:genid191 <http://www.w3.org/2002/07/owl#unionOf> _:genid193 .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid192 .
+_:genid192 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid192 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid192 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid190 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid190 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ParentLithology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid194 .
+_:genid194 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/parentLithologyProperty> .
+<http://w3id.org/glosis/model/siteplot/parentLithologyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid194 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid194 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated
+<http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid195 .
+_:genid195 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode> .
+_:genid195 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid196 .
+_:genid196 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid197 .
+_:genid197 <http://www.w3.org/2002/07/owl#unionOf> _:genid199 .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid198 .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid197 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid196 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid200 .
+_:genid200 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty> .
+<http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid200 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/Physiography
+<http://w3id.org/glosis/model/siteplot/Physiography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/Physiography> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/Physiography> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid201 .
+_:genid201 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/PhysiographyValueCode> .
+_:genid201 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/Physiography> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid202 .
+_:genid202 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid203 .
+_:genid203 <http://www.w3.org/2002/07/owl#unionOf> _:genid205 .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid204 .
+_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid202 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/Physiography> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid206 .
+_:genid206 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/physiographyProperty> .
+<http://w3id.org/glosis/model/siteplot/physiographyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid206 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/RockOutcropsCover
+<http://w3id.org/glosis/model/siteplot/RockOutcropsCover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/RockOutcropsCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/RockOutcropsCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid207 .
+_:genid207 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode> .
+_:genid207 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/RockOutcropsCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid208 .
+_:genid208 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid209 .
+_:genid209 <http://www.w3.org/2002/07/owl#unionOf> _:genid211 .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid210 .
+_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid208 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/RockOutcropsCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid212 .
+_:genid212 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty> .
+<http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid212 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/RockOutcropsDistance
+<http://w3id.org/glosis/model/siteplot/RockOutcropsDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/RockOutcropsDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/RockOutcropsDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid213 .
+_:genid213 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/RockOutcropsDistanceValueCode> .
+_:genid213 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/RockOutcropsDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid214 .
+_:genid214 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid215 .
+_:genid215 <http://www.w3.org/2002/07/owl#unionOf> _:genid217 .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid216 .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid214 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/RockOutcropsDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid218 .
+_:genid218 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty> .
+<http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid218 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SlopeForm
+<http://w3id.org/glosis/model/siteplot/SlopeForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SlopeForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/SlopeForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid219 .
+_:genid219 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/SlopeFormValueCode> .
+_:genid219 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid220 .
+_:genid220 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid221 .
+_:genid221 <http://www.w3.org/2002/07/owl#unionOf> _:genid223 .
+_:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid222 .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid220 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid224 .
+_:genid224 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/slopeFormProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeFormProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid224 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SlopeGradientClass
+<http://w3id.org/glosis/model/siteplot/SlopeGradientClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid225 .
+_:genid225 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> .
+_:genid225 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid226 .
+_:genid226 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid227 .
+_:genid227 <http://www.w3.org/2002/07/owl#unionOf> _:genid229 .
+_:genid229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid228 .
+_:genid228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid226 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid226 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid230 .
+_:genid230 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid230 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid230 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid231 .
+_:genid231 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid232 .
+_:genid232 <http://www.w3.org/2002/07/owl#unionOf> _:genid234 .
+_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid233 .
+_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid232 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid231 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid231 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid235 .
+_:genid235 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue> .
+_:genid235 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid235 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid236 .
+_:genid236 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/slopeGradientProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeGradientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid236 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid236 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid237 .
+_:genid237 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/PERCENT> .
+_:genid237 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid237 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid238 .
+_:genid238 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid238 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SlopeOrientationClass
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid239 .
+_:genid239 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid240 .
+_:genid240 <http://www.w3.org/2002/07/owl#unionOf> _:genid242 .
+_:genid242 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid241 .
+_:genid241 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid241 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid241 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid242 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid242 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid240 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid239 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid239 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid243 .
+_:genid243 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid243 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid243 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid244 .
+_:genid244 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid244 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSimpleResult> .
+_:genid244 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid245 .
+_:genid245 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid246 .
+_:genid246 <http://www.w3.org/2002/07/owl#unionOf> _:genid248 .
+_:genid248 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid247 .
+_:genid247 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid247 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid247 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid248 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid248 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid246 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid245 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid245 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid249 .
+_:genid249 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue> .
+_:genid249 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid250 .
+_:genid250 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/slopeOrientationProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeOrientationProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid250 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid250 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid251 .
+_:genid251 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/DEG> .
+<http://qudt.org/vocab/unit/DEG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid251 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid251 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid252 .
+_:genid252 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid252 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SlopePathways
+<http://w3id.org/glosis/model/siteplot/SlopePathways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SlopePathways> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/SlopePathways> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid253 .
+_:genid253 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/SlopePathwaysValueCode> .
+_:genid253 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopePathways> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid254 .
+_:genid254 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid255 .
+_:genid255 <http://www.w3.org/2002/07/owl#unionOf> _:genid257 .
+_:genid257 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid256 .
+_:genid256 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid256 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid256 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid257 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid257 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid255 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid254 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid254 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SlopePathways> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid258 .
+_:genid258 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/slopePathwaysProperty> .
+<http://w3id.org/glosis/model/siteplot/slopePathwaysProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid258 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid258 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/SurfaceAge
+<http://w3id.org/glosis/model/siteplot/SurfaceAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/SurfaceAge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/SurfaceAge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid259 .
+_:genid259 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode> .
+_:genid259 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid259 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SurfaceAge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid260 .
+_:genid260 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid261 .
+_:genid261 <http://www.w3.org/2002/07/owl#unionOf> _:genid263 .
+_:genid263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid262 .
+_:genid262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid261 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid260 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid260 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/SurfaceAge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid264 .
+_:genid264 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/surfaceAgeProperty> .
+<http://w3id.org/glosis/model/siteplot/surfaceAgeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid264 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid264 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/TreeDensity
+<http://w3id.org/glosis/model/siteplot/TreeDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/TreeDensity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/TreeDensity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid265 .
+_:genid265 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid266 .
+_:genid266 <http://www.w3.org/2002/07/owl#unionOf> _:genid268 .
+_:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid267 .
+_:genid267 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid267 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid267 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid265 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid265 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/TreeDensity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid269 .
+_:genid269 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/siteplot/TreeDensityValue> .
+_:genid269 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid269 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/TreeDensity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid270 .
+_:genid270 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/treeDensityProperty> .
+<http://w3id.org/glosis/model/siteplot/treeDensityProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid270 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/TreeDensityValue
+<http://w3id.org/glosis/model/siteplot/TreeDensityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/TreeDensityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://w3id.org/glosis/model/siteplot/TreeDensityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid271 .
+_:genid271 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://qudt.org/schema/qudt/Unit> .
+_:genid271 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/unit> .
+_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/TreeDensityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid272 .
+_:genid272 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid272 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/VegetationClass
+<http://w3id.org/glosis/model/siteplot/VegetationClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/VegetationClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/VegetationClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid273 .
+_:genid273 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/VegetationClassValueCode> .
+_:genid273 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/VegetationClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid274 .
+_:genid274 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid275 .
+_:genid275 <http://www.w3.org/2002/07/owl#unionOf> _:genid277 .
+_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid276 .
+_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid274 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/VegetationClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid278 .
+_:genid278 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/vegetationClassProperty> .
+<http://w3id.org/glosis/model/siteplot/vegetationClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid278 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/WeatherCurrent
+<http://w3id.org/glosis/model/siteplot/WeatherCurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/WeatherCurrent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/WeatherCurrent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid279 .
+_:genid279 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/WeatherConditionsValueCode> .
+_:genid279 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/WeatherCurrent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid280 .
+_:genid280 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid281 .
+_:genid281 <http://www.w3.org/2002/07/owl#unionOf> _:genid283 .
+_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid282 .
+_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid281 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid280 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/WeatherCurrent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid284 .
+_:genid284 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty> .
+<http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid284 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/WeatherPast
+<http://w3id.org/glosis/model/siteplot/WeatherPast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/WeatherPast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/WeatherPast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid285 .
+_:genid285 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/WeatherConditionsValueCode> .
+_:genid285 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/WeatherPast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid286 .
+_:genid286 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid287 .
+_:genid287 <http://www.w3.org/2002/07/owl#unionOf> _:genid289 .
+_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid288 .
+_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid287 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid286 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/WeatherPast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid290 .
+_:genid290 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty> .
+<http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid290 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://w3id.org/glosis/model/siteplot/WeatheringRock
+<http://w3id.org/glosis/model/siteplot/WeatheringRock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/glosis/model/siteplot/WeatheringRock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://w3id.org/glosis/model/siteplot/WeatheringRock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid291 .
+_:genid291 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/WeatheringValueCode> .
+_:genid291 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid291 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/WeatheringRock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid292 .
+_:genid292 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid293 .
+_:genid293 <http://www.w3.org/2002/07/owl#unionOf> _:genid295 .
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid294 .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Site> .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/glosis/model/siteplot/GL_Plot> .
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid292 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/glosis/model/siteplot/WeatheringRock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid296 .
+_:genid296 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/siteplot/weatheringRockProperty> .
+<http://w3id.org/glosis/model/siteplot/weatheringRockProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid296 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/vocab/unit/CentiM
+# 
+# http://qudt.org/vocab/unit/DEG
+# 
+# http://qudt.org/vocab/unit/PERCENT
+# 
+# http://w3id.org/glosis/model/siteplot/PavedAbundanceproperty
+# 
+# http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty
+<http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "bareCoverAbundanceProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/cropClassProperty
+<http://w3id.org/glosis/model/siteplot/cropClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/cropClassProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 9"@en .
+<http://w3id.org/glosis/model/siteplot/cropClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "cropClassProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty
+<http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 19"@en .
+<http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty> <http://www.w3.org/2000/01/rdf-schema#label> "erosionActivityPeriodProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty
+<http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "erosionAreaAffectedProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/erosionCategoryProperty
+<http://w3id.org/glosis/model/siteplot/erosionCategoryProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionCategoryProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 16"@en .
+<http://w3id.org/glosis/model/siteplot/erosionCategoryProperty> <http://www.w3.org/2000/01/rdf-schema#label> "erosionCategoryProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/erosionDegreeProperty
+<http://w3id.org/glosis/model/siteplot/erosionDegreeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionDegreeProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 18"@en .
+<http://w3id.org/glosis/model/siteplot/erosionDegreeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "erosionDegreeProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty
+<http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 17"@en .
+<http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "erosionTotalAreaAffectedProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/floodDurationProperty
+<http://w3id.org/glosis/model/siteplot/floodDurationProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/floodDurationProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 174"@en .
+<http://w3id.org/glosis/model/siteplot/floodDurationProperty> <http://www.w3.org/2000/01/rdf-schema#label> "floodDurationProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/floodFrequencyProperty
+<http://w3id.org/glosis/model/siteplot/floodFrequencyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/floodFrequencyProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 174"@en .
+<http://w3id.org/glosis/model/siteplot/floodFrequencyProperty> <http://www.w3.org/2000/01/rdf-schema#label> "floodFrequencyProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/forestAbundanceProperty
+<http://w3id.org/glosis/model/siteplot/forestAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/forestAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/forestAbundanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "ForestAbundanceProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/geologyProperty
+<http://w3id.org/glosis/model/siteplot/geologyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/geologyProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 12"@en .
+<http://w3id.org/glosis/model/siteplot/geologyProperty> <http://www.w3.org/2000/01/rdf-schema#label> "geologyProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/grassAbundanceProperty
+<http://w3id.org/glosis/model/siteplot/grassAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/grassAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/grassAbundanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "GrassAbundanceProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty
+<http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty> <http://www.w3.org/2000/01/rdf-schema#label> "groundwaterDepthProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty
+<http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 10"@en .
+<http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "humanInfluenceClassProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/koeppenClassProperty
+<http://w3id.org/glosis/model/siteplot/koeppenClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/koeppenClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "koeppenClassProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/landUseClassProperty
+<http://w3id.org/glosis/model/siteplot/landUseClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/landUseClassProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 8"@en .
+<http://w3id.org/glosis/model/siteplot/landUseClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "landUseClassProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/landformComplexProperty
+<http://w3id.org/glosis/model/siteplot/landformComplexProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/landformComplexProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 5"@en .
+<http://w3id.org/glosis/model/siteplot/landformComplexProperty> <http://www.w3.org/2000/01/rdf-schema#label> "LandformComplexProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/lithologyProperty
+<http://w3id.org/glosis/model/siteplot/lithologyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/lithologyProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 12"@en .
+<http://w3id.org/glosis/model/siteplot/lithologyProperty> <http://www.w3.org/2000/01/rdf-schema#label> "lithologyProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/majorLandFormProperty
+<http://w3id.org/glosis/model/siteplot/majorLandFormProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/majorLandFormProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 4"@en .
+<http://w3id.org/glosis/model/siteplot/majorLandFormProperty> <http://www.w3.org/2000/01/rdf-schema#label> "MajorLandFormProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/parentDepositionProperty
+<http://w3id.org/glosis/model/siteplot/parentDepositionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/parentDepositionProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 16"@en .
+<http://w3id.org/glosis/model/siteplot/parentDepositionProperty> <http://www.w3.org/2000/01/rdf-schema#label> "ParentDepositionProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/parentLithologyProperty
+<http://w3id.org/glosis/model/siteplot/parentLithologyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/parentLithologyProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 12"@en .
+<http://w3id.org/glosis/model/siteplot/parentLithologyProperty> <http://www.w3.org/2000/01/rdf-schema#label> "parentLithologyProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty
+<http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "table is missing!"@en .
+<http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "parentTextureUnconsolidatedProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty
+<http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "PavedAbundanceProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/physiographyProperty
+<http://w3id.org/glosis/model/siteplot/physiographyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/physiographyProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Figure 2"@en .
+<http://w3id.org/glosis/model/siteplot/physiographyProperty> <http://www.w3.org/2000/01/rdf-schema#label> "PhysiographyProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty
+<http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 14,1"@en .
+<http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty> <http://www.w3.org/2000/01/rdf-schema#label> "rockOutcropsCoverProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty
+<http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 14,2"@en .
+<http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "rockOutcropsDistanceProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty
+<http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "ShrubsAbundanceProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/slopeFormProperty
+<http://w3id.org/glosis/model/siteplot/slopeFormProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeFormProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 6"@en .
+<http://w3id.org/glosis/model/siteplot/slopeFormProperty> <http://www.w3.org/2000/01/rdf-schema#label> "slopeFormProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty
+<http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 7"@en .
+<http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "slopeGradientClassProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/slopeGradientProperty
+<http://w3id.org/glosis/model/siteplot/slopeGradientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/slopeGradientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeGradientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "slopeGradientProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty
+<http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "slopeOrientationClassProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/slopeOrientationProperty
+<http://w3id.org/glosis/model/siteplot/slopeOrientationProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/slopeOrientationProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/slopeOrientationProperty> <http://www.w3.org/2000/01/rdf-schema#label> "slopeOrientationProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/slopePathwaysProperty
+<http://w3id.org/glosis/model/siteplot/slopePathwaysProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/slopePathwaysProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Figure 3"@en .
+<http://w3id.org/glosis/model/siteplot/slopePathwaysProperty> <http://www.w3.org/2000/01/rdf-schema#label> "slopePathwaysProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/surfaceAgeProperty
+<http://w3id.org/glosis/model/siteplot/surfaceAgeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/surfaceAgeProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 13"@en .
+<http://w3id.org/glosis/model/siteplot/surfaceAgeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "surfaceAgeProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/treeDensityProperty
+<http://w3id.org/glosis/model/siteplot/treeDensityProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
+<http://w3id.org/glosis/model/siteplot/treeDensityProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/treeDensityProperty> <http://www.w3.org/2000/01/rdf-schema#label> "treeDensityProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/vegetationClassProperty
+<http://w3id.org/glosis/model/siteplot/vegetationClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/vegetationClassProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 11"@en .
+<http://w3id.org/glosis/model/siteplot/vegetationClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "VegetationClassProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty
+<http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 2"@en .
+<http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty> <http://www.w3.org/2000/01/rdf-schema#label> "weatherConditionsCurrentProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty
+<http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 2"@en .
+<http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty> <http://www.w3.org/2000/01/rdf-schema#label> "weatherConditionsPastProperty"@en .
+# 
+# http://w3id.org/glosis/model/siteplot/weatheringRockProperty
+<http://w3id.org/glosis/model/siteplot/weatheringRockProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://w3id.org/glosis/model/siteplot/weatheringRockProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "GfSD Table 29"@en .
+<http://w3id.org/glosis/model/siteplot/weatheringRockProperty> <http://www.w3.org/2000/01/rdf-schema#label> "weatheringRockProperty"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

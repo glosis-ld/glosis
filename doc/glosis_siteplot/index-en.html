@@ -1,0 +1,3234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>GLOSIS ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/siteplot","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/siteplot","name":"GLOSIS ontology", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists.", "datePublished":"Date of release", "version":"1.1.0", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"},{"@type":"Person","name":"W3C/OGC Spatial Data on the Web Working Group"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>GLOSIS ontology</h1>
+<h2>Release Date of release</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/glosis/model/siteplot/1.1.0">http://w3id.org/glosis/model/siteplot/1.1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Authors:</dt>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd><dd>Bogusz Janiak, PSNC</dd><dd>W3C/OGC Spatial Data on the Web Working Group</dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a></dd><dd><a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a></dd><dd><a href="http://w3id.org/glosis/model/codelists/">http://w3id.org/glosis/model/codelists/</a></dd><dd><a href="http://w3id.org/glosis/model/common/">http://w3id.org/glosis/model/common/</a></dd><dd><a href="http://w3id.org/glosis/model/iso28258/2013/">http://w3id.org/glosis/model/iso28258/2013/</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_NC_SA_3.0_IGO-blue.svg" alt="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" /></a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" rel="license" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cc-by-nc-sa_icon.svg/120px-Cc-by-nc-sa_icon.svg.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>GloSIS Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">GloSIS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/CropClass" title="http://w3id.org/glosis/model/siteplot/CropClass">
+         <span>crop class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ErosionActivityPeriod"
+         title="http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod">
+         <span>erosion activity period</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ErosionAreaAffected"
+         title="http://w3id.org/glosis/model/siteplot/ErosionAreaAffected">
+         <span>erosion area affected</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ErosionCategory"
+         title="http://w3id.org/glosis/model/siteplot/ErosionCategory">
+         <span>erosion category</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ErosionDegree"
+         title="http://w3id.org/glosis/model/siteplot/ErosionDegree">
+         <span>erosion degree</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ErosionTotalAreaAffected"
+         title="http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected">
+         <span>erosion total area affected</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/FloodDuration"
+         title="http://w3id.org/glosis/model/siteplot/FloodDuration">
+         <span>flood duration</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/FloodFrequency"
+         title="http://w3id.org/glosis/model/siteplot/FloodFrequency">
+         <span>flood frequency</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/GL_Plot" title="http://w3id.org/glosis/model/siteplot/GL_Plot">
+         <span>g l plot</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/GL_Site" title="http://w3id.org/glosis/model/siteplot/GL_Site">
+         <span>g l site</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Geology" title="http://w3id.org/glosis/model/siteplot/Geology">
+         <span>geology</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/GroundwaterDepth"
+         title="http://w3id.org/glosis/model/siteplot/GroundwaterDepth">
+         <span>groundwater depth</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/GroundwaterDepthValue"
+         title="http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue">
+         <span>groundwater depth value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/HumanInfluenceClass"
+         title="http://w3id.org/glosis/model/siteplot/HumanInfluenceClass">
+         <span>human influence class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/KoeppenClass"
+         title="http://w3id.org/glosis/model/siteplot/KoeppenClass">
+         <span>koeppen class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseBareCover"
+         title="http://w3id.org/glosis/model/siteplot/LandUseBareCover">
+         <span>land use bare cover</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseBareCoverValue"
+         title="http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue">
+         <span>land use bare cover value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseClass"
+         title="http://w3id.org/glosis/model/siteplot/LandUseClass">
+         <span>land use class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseForest"
+         title="http://w3id.org/glosis/model/siteplot/LandUseForest">
+         <span>land use forest</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseForestValue"
+         title="http://w3id.org/glosis/model/siteplot/LandUseForestValue">
+         <span>land use forest value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseGrass"
+         title="http://w3id.org/glosis/model/siteplot/LandUseGrass">
+         <span>land use grass</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseGrassValue"
+         title="http://w3id.org/glosis/model/siteplot/LandUseGrassValue">
+         <span>land use grass value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUsePavedCover"
+         title="http://w3id.org/glosis/model/siteplot/LandUsePavedCover">
+         <span>land use paved cover</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUsePavedCoverValue"
+         title="http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue">
+         <span>land use paved cover value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseShrubs"
+         title="http://w3id.org/glosis/model/siteplot/LandUseShrubs">
+         <span>land use shrubs</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandUseShrubsValue"
+         title="http://w3id.org/glosis/model/siteplot/LandUseShrubsValue">
+         <span>land use shrubs value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LandformComplex"
+         title="http://w3id.org/glosis/model/siteplot/LandformComplex">
+         <span>landform complex</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Lithology" title="http://w3id.org/glosis/model/siteplot/Lithology">
+         <span>lithology</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/MajorLandForm"
+         title="http://w3id.org/glosis/model/siteplot/MajorLandForm">
+         <span>major land form</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ParentDeposition"
+         title="http://w3id.org/glosis/model/siteplot/ParentDeposition">
+         <span>parent deposition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ParentLithology"
+         title="http://w3id.org/glosis/model/siteplot/ParentLithology">
+         <span>parent lithology</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ParentTextureUnconsolidated"
+         title="http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated">
+         <span>parent texture unconsolidated</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Physiography"
+         title="http://w3id.org/glosis/model/siteplot/Physiography">
+         <span>physiography</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/RockOutcropsCover"
+         title="http://w3id.org/glosis/model/siteplot/RockOutcropsCover">
+         <span>rock outcrops cover</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/RockOutcropsDistance"
+         title="http://w3id.org/glosis/model/siteplot/RockOutcropsDistance">
+         <span>rock outcrops distance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SlopeForm" title="http://w3id.org/glosis/model/siteplot/SlopeForm">
+         <span>slope form</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SlopeGradientClass"
+         title="http://w3id.org/glosis/model/siteplot/SlopeGradientClass">
+         <span>slope gradient class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SlopeGradientNumeric"
+         title="http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric">
+         <span>slope gradient numeric</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SlopeGradientNumericValue"
+         title="http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue">
+         <span>slope gradient numeric value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SlopeOrientationClass"
+         title="http://w3id.org/glosis/model/siteplot/SlopeOrientationClass">
+         <span>slope orientation class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SlopeOrientationNumeric"
+         title="http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric">
+         <span>slope orientation numeric</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SlopeOrientationNumericValue"
+         title="http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue">
+         <span>slope orientation numeric value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SlopePathways"
+         title="http://w3id.org/glosis/model/siteplot/SlopePathways">
+         <span>slope pathways</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/SoilDepth" title="http://w3id.org/glosis/model/common/SoilDepth">
+         <span>soil depth</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/SoilDepthBedrock"
+         title="http://w3id.org/glosis/model/common/SoilDepthBedrock">
+         <span>soil depth bedrock</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/SoilDepthRootable"
+         title="http://w3id.org/glosis/model/common/SoilDepthRootable">
+         <span>soil depth rootable</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/SoilDepthRootableClass"
+         title="http://w3id.org/glosis/model/common/SoilDepthRootableClass">
+         <span>soil depth rootable class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/SoilDepthSampled"
+         title="http://w3id.org/glosis/model/common/SoilDepthSampled">
+         <span>soil depth sampled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SurfaceAge"
+         title="http://w3id.org/glosis/model/siteplot/SurfaceAge">
+         <span>surface age</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/TreeDensity"
+         title="http://w3id.org/glosis/model/siteplot/TreeDensity">
+         <span>tree density</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/TreeDensityValue"
+         title="http://w3id.org/glosis/model/siteplot/TreeDensityValue">
+         <span>tree density value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/VegetationClass"
+         title="http://w3id.org/glosis/model/siteplot/VegetationClass">
+         <span>vegetation class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/WeatherCurrent"
+         title="http://w3id.org/glosis/model/siteplot/WeatherCurrent">
+         <span>weather current</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/WeatherPast"
+         title="http://w3id.org/glosis/model/siteplot/WeatherPast">
+         <span>weather past</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/WeatheringFragments"
+         title="http://w3id.org/glosis/model/common/WeatheringFragments">
+         <span>weathering fragments</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/WeatheringRock"
+         title="http://w3id.org/glosis/model/siteplot/WeatheringRock">
+         <span>weathering rock</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/altitude" title="http://w3id.org/glosis/model/siteplot/altitude">
+         <span>altitude</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/country" title="http://w3id.org/glosis/model/siteplot/country">
+         <span>country</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/positionalAccuracy"
+         title="http://w3id.org/glosis/model/siteplot/positionalAccuracy">
+         <span>positional accuracy</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/responsibleOrganization"
+         title="http://w3id.org/glosis/model/siteplot/responsibleOrganization">
+         <span>responsible organization</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/cropDescription"
+         title="http://w3id.org/glosis/model/siteplot/cropDescription">
+         <span>crop description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/landUseCropRotation"
+         title="http://w3id.org/glosis/model/siteplot/landUseCropRotation">
+         <span>land use crop rotation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/landUseRemark"
+         title="http://w3id.org/glosis/model/siteplot/landUseRemark">
+         <span>land use remark</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/location" title="http://w3id.org/glosis/model/siteplot/location">
+         <span>location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/mapSheetID" title="http://w3id.org/glosis/model/siteplot/mapSheetID">
+         <span>map sheet i d</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/parentRemarks"
+         title="http://w3id.org/glosis/model/siteplot/parentRemarks">
+         <span>parent remarks</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/physiographyDescription"
+         title="http://w3id.org/glosis/model/siteplot/physiographyDescription">
+         <span>physiography description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/remarks" title="http://w3id.org/glosis/model/siteplot/remarks">
+         <span>remarks</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/timestamp" title="http://w3id.org/glosis/model/siteplot/timestamp">
+         <span>timestamp</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/vegetationDescription"
+         title="http://w3id.org/glosis/model/siteplot/vegetationDescription">
+         <span>vegetation description</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/bareCoverAbundanceProperty"
+         title="http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty">bareCoverAbundanceProperty</a>
+   </li>
+   <li>
+      <a href="#/cropClassProperty"
+         title="http://w3id.org/glosis/model/siteplot/cropClassProperty">cropClassProperty</a>
+   </li>
+   <li>
+      <a href="#/erosionActivityPeriodProperty"
+         title="http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty">erosionActivityPeriodProperty</a>
+   </li>
+   <li>
+      <a href="#/erosionAreaAffectedProperty"
+         title="http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty">erosionAreaAffectedProperty</a>
+   </li>
+   <li>
+      <a href="#/erosionCategoryProperty"
+         title="http://w3id.org/glosis/model/siteplot/erosionCategoryProperty">erosionCategoryProperty</a>
+   </li>
+   <li>
+      <a href="#/erosionDegreeProperty"
+         title="http://w3id.org/glosis/model/siteplot/erosionDegreeProperty">erosionDegreeProperty</a>
+   </li>
+   <li>
+      <a href="#/erosionTotalAreaAffectedProperty"
+         title="http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty">erosionTotalAreaAffectedProperty</a>
+   </li>
+   <li>
+      <a href="#/floodDurationProperty"
+         title="http://w3id.org/glosis/model/siteplot/floodDurationProperty">floodDurationProperty</a>
+   </li>
+   <li>
+      <a href="#/floodFrequencyProperty"
+         title="http://w3id.org/glosis/model/siteplot/floodFrequencyProperty">floodFrequencyProperty</a>
+   </li>
+   <li>
+      <a href="#/forestAbundanceProperty"
+         title="http://w3id.org/glosis/model/siteplot/forestAbundanceProperty">ForestAbundanceProperty</a>
+   </li>
+   <li>
+      <a href="#/geologyProperty"
+         title="http://w3id.org/glosis/model/siteplot/geologyProperty">geologyProperty</a>
+   </li>
+   <li>
+      <a href="#/grassAbundanceProperty"
+         title="http://w3id.org/glosis/model/siteplot/grassAbundanceProperty">GrassAbundanceProperty</a>
+   </li>
+   <li>
+      <a href="#/groundwaterDepthProperty"
+         title="http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty">groundwaterDepthProperty</a>
+   </li>
+   <li>
+      <a href="#/humanInfluenceClassProperty"
+         title="http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty">humanInfluenceClassProperty</a>
+   </li>
+   <li>
+      <a href="#/koeppenClassProperty"
+         title="http://w3id.org/glosis/model/siteplot/koeppenClassProperty">koeppenClassProperty</a>
+   </li>
+   <li>
+      <a href="#/landformComplexProperty"
+         title="http://w3id.org/glosis/model/siteplot/landformComplexProperty">LandformComplexProperty</a>
+   </li>
+   <li>
+      <a href="#/landUseClassProperty"
+         title="http://w3id.org/glosis/model/siteplot/landUseClassProperty">landUseClassProperty</a>
+   </li>
+   <li>
+      <a href="#/lithologyProperty"
+         title="http://w3id.org/glosis/model/siteplot/lithologyProperty">lithologyProperty</a>
+   </li>
+   <li>
+      <a href="#/majorLandFormProperty"
+         title="http://w3id.org/glosis/model/siteplot/majorLandFormProperty">MajorLandFormProperty</a>
+   </li>
+   <li>
+      <a href="#/parentDepositionProperty"
+         title="http://w3id.org/glosis/model/siteplot/parentDepositionProperty">ParentDepositionProperty</a>
+   </li>
+   <li>
+      <a href="#/parentLithologyProperty"
+         title="http://w3id.org/glosis/model/siteplot/parentLithologyProperty">parentLithologyProperty</a>
+   </li>
+   <li>
+      <a href="#/parentTextureUnconsolidatedProperty"
+         title="http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty">parentTextureUnconsolidatedProperty</a>
+   </li>
+   <li>
+      <a href="#/pavedAbundanceProperty"
+         title="http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty">PavedAbundanceProperty</a>
+   </li>
+   <li>
+      <a href="#/physiographyProperty"
+         title="http://w3id.org/glosis/model/siteplot/physiographyProperty">PhysiographyProperty</a>
+   </li>
+   <li>
+      <a href="#/rockOutcropsCoverProperty"
+         title="http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty">rockOutcropsCoverProperty</a>
+   </li>
+   <li>
+      <a href="#/rockOutcropsDistanceProperty"
+         title="http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty">rockOutcropsDistanceProperty</a>
+   </li>
+   <li>
+      <a href="#/shrubsAbundanceProperty"
+         title="http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty">ShrubsAbundanceProperty</a>
+   </li>
+   <li>
+      <a href="#/slopeFormProperty"
+         title="http://w3id.org/glosis/model/siteplot/slopeFormProperty">slopeFormProperty</a>
+   </li>
+   <li>
+      <a href="#/slopeGradientClassProperty"
+         title="http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty">slopeGradientClassProperty</a>
+   </li>
+   <li>
+      <a href="#/slopeGradientProperty"
+         title="http://w3id.org/glosis/model/siteplot/slopeGradientProperty">slopeGradientProperty</a>
+   </li>
+   <li>
+      <a href="#/slopeOrientationClassProperty"
+         title="http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty">slopeOrientationClassProperty</a>
+   </li>
+   <li>
+      <a href="#/slopeOrientationProperty"
+         title="http://w3id.org/glosis/model/siteplot/slopeOrientationProperty">slopeOrientationProperty</a>
+   </li>
+   <li>
+      <a href="#/slopePathwaysProperty"
+         title="http://w3id.org/glosis/model/siteplot/slopePathwaysProperty">slopePathwaysProperty</a>
+   </li>
+   <li>
+      <a href="#/surfaceAgeProperty"
+         title="http://w3id.org/glosis/model/siteplot/surfaceAgeProperty">surfaceAgeProperty</a>
+   </li>
+   <li>
+      <a href="#/treeDensityProperty"
+         title="http://w3id.org/glosis/model/siteplot/treeDensityProperty">treeDensityProperty</a>
+   </li>
+   <li>
+      <a href="#/vegetationClassProperty"
+         title="http://w3id.org/glosis/model/siteplot/vegetationClassProperty">VegetationClassProperty</a>
+   </li>
+   <li>
+      <a href="#/weatherConditionsCurrentProperty"
+         title="http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty">weatherConditionsCurrentProperty</a>
+   </li>
+   <li>
+      <a href="#/weatherConditionsPastProperty"
+         title="http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty">weatherConditionsPastProperty</a>
+   </li>
+   <li>
+      <a href="#/weatheringRockProperty"
+         title="http://w3id.org/glosis/model/siteplot/weatheringRockProperty">weatheringRockProperty</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">GloSIS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for GloSIS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by GloSIS Ontology: Main module.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/CropClass" title="http://w3id.org/glosis/model/siteplot/CropClass">
+            <span>crop class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ErosionActivityPeriod"
+            title="http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod">
+            <span>erosion activity period</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ErosionAreaAffected"
+            title="http://w3id.org/glosis/model/siteplot/ErosionAreaAffected">
+            <span>erosion area affected</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ErosionCategory"
+            title="http://w3id.org/glosis/model/siteplot/ErosionCategory">
+            <span>erosion category</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ErosionDegree"
+            title="http://w3id.org/glosis/model/siteplot/ErosionDegree">
+            <span>erosion degree</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ErosionTotalAreaAffected"
+            title="http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected">
+            <span>erosion total area affected</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/FloodDuration"
+            title="http://w3id.org/glosis/model/siteplot/FloodDuration">
+            <span>flood duration</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/FloodFrequency"
+            title="http://w3id.org/glosis/model/siteplot/FloodFrequency">
+            <span>flood frequency</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/GL_Plot" title="http://w3id.org/glosis/model/siteplot/GL_Plot">
+            <span>g l plot</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/GL_Site" title="http://w3id.org/glosis/model/siteplot/GL_Site">
+            <span>g l site</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Geology" title="http://w3id.org/glosis/model/siteplot/Geology">
+            <span>geology</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/GroundwaterDepth"
+            title="http://w3id.org/glosis/model/siteplot/GroundwaterDepth">
+            <span>groundwater depth</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/GroundwaterDepthValue"
+            title="http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue">
+            <span>groundwater depth value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/HumanInfluenceClass"
+            title="http://w3id.org/glosis/model/siteplot/HumanInfluenceClass">
+            <span>human influence class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/KoeppenClass"
+            title="http://w3id.org/glosis/model/siteplot/KoeppenClass">
+            <span>koeppen class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseBareCover"
+            title="http://w3id.org/glosis/model/siteplot/LandUseBareCover">
+            <span>land use bare cover</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseBareCoverValue"
+            title="http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue">
+            <span>land use bare cover value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseClass"
+            title="http://w3id.org/glosis/model/siteplot/LandUseClass">
+            <span>land use class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseForest"
+            title="http://w3id.org/glosis/model/siteplot/LandUseForest">
+            <span>land use forest</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseForestValue"
+            title="http://w3id.org/glosis/model/siteplot/LandUseForestValue">
+            <span>land use forest value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseGrass"
+            title="http://w3id.org/glosis/model/siteplot/LandUseGrass">
+            <span>land use grass</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseGrassValue"
+            title="http://w3id.org/glosis/model/siteplot/LandUseGrassValue">
+            <span>land use grass value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUsePavedCover"
+            title="http://w3id.org/glosis/model/siteplot/LandUsePavedCover">
+            <span>land use paved cover</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUsePavedCoverValue"
+            title="http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue">
+            <span>land use paved cover value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseShrubs"
+            title="http://w3id.org/glosis/model/siteplot/LandUseShrubs">
+            <span>land use shrubs</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandUseShrubsValue"
+            title="http://w3id.org/glosis/model/siteplot/LandUseShrubsValue">
+            <span>land use shrubs value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LandformComplex"
+            title="http://w3id.org/glosis/model/siteplot/LandformComplex">
+            <span>landform complex</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Lithology" title="http://w3id.org/glosis/model/siteplot/Lithology">
+            <span>lithology</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/MajorLandForm"
+            title="http://w3id.org/glosis/model/siteplot/MajorLandForm">
+            <span>major land form</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ParentDeposition"
+            title="http://w3id.org/glosis/model/siteplot/ParentDeposition">
+            <span>parent deposition</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ParentLithology"
+            title="http://w3id.org/glosis/model/siteplot/ParentLithology">
+            <span>parent lithology</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ParentTextureUnconsolidated"
+            title="http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated">
+            <span>parent texture unconsolidated</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Physiography"
+            title="http://w3id.org/glosis/model/siteplot/Physiography">
+            <span>physiography</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/RockOutcropsCover"
+            title="http://w3id.org/glosis/model/siteplot/RockOutcropsCover">
+            <span>rock outcrops cover</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/RockOutcropsDistance"
+            title="http://w3id.org/glosis/model/siteplot/RockOutcropsDistance">
+            <span>rock outcrops distance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SlopeForm" title="http://w3id.org/glosis/model/siteplot/SlopeForm">
+            <span>slope form</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SlopeGradientClass"
+            title="http://w3id.org/glosis/model/siteplot/SlopeGradientClass">
+            <span>slope gradient class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SlopeGradientNumeric"
+            title="http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric">
+            <span>slope gradient numeric</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SlopeGradientNumericValue"
+            title="http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue">
+            <span>slope gradient numeric value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SlopeOrientationClass"
+            title="http://w3id.org/glosis/model/siteplot/SlopeOrientationClass">
+            <span>slope orientation class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SlopeOrientationNumeric"
+            title="http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric">
+            <span>slope orientation numeric</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SlopeOrientationNumericValue"
+            title="http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue">
+            <span>slope orientation numeric value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SlopePathways"
+            title="http://w3id.org/glosis/model/siteplot/SlopePathways">
+            <span>slope pathways</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/SoilDepth" title="http://w3id.org/glosis/model/common/SoilDepth">
+            <span>soil depth</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/SoilDepthBedrock"
+            title="http://w3id.org/glosis/model/common/SoilDepthBedrock">
+            <span>soil depth bedrock</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/SoilDepthRootable"
+            title="http://w3id.org/glosis/model/common/SoilDepthRootable">
+            <span>soil depth rootable</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/SoilDepthRootableClass"
+            title="http://w3id.org/glosis/model/common/SoilDepthRootableClass">
+            <span>soil depth rootable class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/SoilDepthSampled"
+            title="http://w3id.org/glosis/model/common/SoilDepthSampled">
+            <span>soil depth sampled</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SurfaceAge"
+            title="http://w3id.org/glosis/model/siteplot/SurfaceAge">
+            <span>surface age</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/TreeDensity"
+            title="http://w3id.org/glosis/model/siteplot/TreeDensity">
+            <span>tree density</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/TreeDensityValue"
+            title="http://w3id.org/glosis/model/siteplot/TreeDensityValue">
+            <span>tree density value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/VegetationClass"
+            title="http://w3id.org/glosis/model/siteplot/VegetationClass">
+            <span>vegetation class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/WeatherCurrent"
+            title="http://w3id.org/glosis/model/siteplot/WeatherCurrent">
+            <span>weather current</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/WeatherPast"
+            title="http://w3id.org/glosis/model/siteplot/WeatherPast">
+            <span>weather past</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/WeatheringFragments"
+            title="http://w3id.org/glosis/model/common/WeatheringFragments">
+            <span>weathering fragments</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/WeatheringRock"
+            title="http://w3id.org/glosis/model/siteplot/WeatheringRock">
+            <span>weathering rock</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/CropClass">
+      <h3>crop class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/CropClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ErosionActivityPeriod">
+      <h3>erosion activity period<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ErosionAreaAffected">
+      <h3>erosion area affected<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/ErosionAreaAffected</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ErosionCategory">
+      <h3>erosion category<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/ErosionCategory</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ErosionDegree">
+      <h3>erosion degree<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/ErosionDegree</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ErosionTotalAreaAffected">
+      <h3>erosion total area affected<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/FloodDuration">
+      <h3>flood duration<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/FloodDuration</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/FloodFrequency">
+      <h3>flood frequency<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/FloodFrequency</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/GL_Plot">
+      <h3>g l plot<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/GL_Plot</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://w3id.org/glosis/model/iso28258/2013/Plot"
+               target="_blank"
+               title="http://w3id.org/glosis/model/iso28258/2013/Plot">plot</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/GL_Site">
+      <h3>g l site<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/GL_Site</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://w3id.org/glosis/model/iso28258/2013/Site"
+               target="_blank"
+               title="http://w3id.org/glosis/model/iso28258/2013/Site">site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Geology">
+      <h3>geology<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/Geology</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/GroundwaterDepth">
+      <h3>groundwater depth<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/GroundwaterDepth</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/GroundwaterDepthValue">
+      <h3>groundwater depth value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/HumanInfluenceClass">
+      <h3>human influence class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/HumanInfluenceClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/KoeppenClass">
+      <h3>koeppen class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/KoeppenClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseBareCover">
+      <h3>land use bare cover<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseBareCover</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseBareCoverValue">
+      <h3>land use bare cover value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseClass">
+      <h3>land use class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseForest">
+      <h3>land use forest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseForest</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseForestValue">
+      <h3>land use forest value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseForestValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseGrass">
+      <h3>land use grass<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseGrass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseGrassValue">
+      <h3>land use grass value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseGrassValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUsePavedCover">
+      <h3>land use paved cover<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUsePavedCover</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUsePavedCoverValue">
+      <h3>land use paved cover value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseShrubs">
+      <h3>land use shrubs<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseShrubs</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandUseShrubsValue">
+      <h3>land use shrubs value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandUseShrubsValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LandformComplex">
+      <h3>landform complex<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/LandformComplex</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Lithology">
+      <h3>lithology<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/Lithology</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/MajorLandForm">
+      <h3>major land form<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/MajorLandForm</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ParentDeposition">
+      <h3>parent deposition<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/ParentDeposition</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ParentLithology">
+      <h3>parent lithology<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/ParentLithology</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ParentTextureUnconsolidated">
+      <h3>parent texture unconsolidated<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Physiography">
+      <h3>physiography<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/Physiography</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/RockOutcropsCover">
+      <h3>rock outcrops cover<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/RockOutcropsCover</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/RockOutcropsDistance">
+      <h3>rock outcrops distance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/RockOutcropsDistance</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopeForm">
+      <h3>slope form<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SlopeForm</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopeGradientClass">
+      <h3>slope gradient class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SlopeGradientClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopeGradientNumeric">
+      <h3>slope gradient numeric<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopeGradientNumericValue">
+      <h3>slope gradient numeric value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopeOrientationClass">
+      <h3>slope orientation class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SlopeOrientationClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopeOrientationNumeric">
+      <h3>slope orientation numeric<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopeOrientationNumericValue">
+      <h3>slope orientation numeric value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopePathways">
+      <h3>slope pathways<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SlopePathways</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/SoilDepth">
+      <h3>soil depth<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/SoilDepth</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/SoilDepthBedrock">
+      <h3>soil depth bedrock<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/SoilDepthBedrock</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/SoilDepthRootable">
+      <h3>soil depth rootable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/SoilDepthRootable</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/SoilDepthRootableClass">
+      <h3>soil depth rootable class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/SoilDepthRootableClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/SoilDepthSampled">
+      <h3>soil depth sampled<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/SoilDepthSampled</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="/SurfaceAge">
+      <h3>surface age<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/SurfaceAge</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TreeDensity">
+      <h3>tree density<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/TreeDensity</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TreeDensityValue">
+      <h3>tree density value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/TreeDensityValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/VegetationClass">
+      <h3>vegetation class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/VegetationClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/WeatherCurrent">
+      <h3>weather current<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/WeatherCurrent</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/WeatherPast">
+      <h3>weather past<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/WeatherPast</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/WeatheringFragments">
+      <h3>weathering fragments<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/WeatheringFragments</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="/WeatheringRock">
+      <h3>weathering rock<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/WeatheringRock</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/altitude" title="http://w3id.org/glosis/model/siteplot/altitude">
+            <span>altitude</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/country" title="http://w3id.org/glosis/model/siteplot/country">
+            <span>country</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/positionalAccuracy"
+            title="http://w3id.org/glosis/model/siteplot/positionalAccuracy">
+            <span>positional accuracy</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/responsibleOrganization"
+            title="http://w3id.org/glosis/model/siteplot/responsibleOrganization">
+            <span>responsible organization</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/altitude">
+      <h3>altitude<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/altitude</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://qudt.org/schema/qudt/QuantityValue"
+                  target="_blank"
+                  title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/country">
+      <h3>country<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/country</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code"
+                  target="_blank"
+                  title="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code">alpha2 code</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/positionalAccuracy">
+      <h3>positional accuracy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/positionalAccuracy</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/Property"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/Property">property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/responsibleOrganization">
+      <h3>responsible organization<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/responsibleOrganization</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://xmlns.com/foaf/0.1/Agent"
+                  target="_blank"
+                  title="http://xmlns.com/foaf/0.1/Agent">agent</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/cropDescription"
+            title="http://w3id.org/glosis/model/siteplot/cropDescription">
+            <span>crop description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/landUseCropRotation"
+            title="http://w3id.org/glosis/model/siteplot/landUseCropRotation">
+            <span>land use crop rotation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/landUseRemark"
+            title="http://w3id.org/glosis/model/siteplot/landUseRemark">
+            <span>land use remark</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/location" title="http://w3id.org/glosis/model/siteplot/location">
+            <span>location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/mapSheetID" title="http://w3id.org/glosis/model/siteplot/mapSheetID">
+            <span>map sheet i d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/parentRemarks"
+            title="http://w3id.org/glosis/model/siteplot/parentRemarks">
+            <span>parent remarks</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/physiographyDescription"
+            title="http://w3id.org/glosis/model/siteplot/physiographyDescription">
+            <span>physiography description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/remarks" title="http://w3id.org/glosis/model/siteplot/remarks">
+            <span>remarks</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/timestamp" title="http://w3id.org/glosis/model/siteplot/timestamp">
+            <span>timestamp</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/vegetationDescription"
+            title="http://w3id.org/glosis/model/siteplot/vegetationDescription">
+            <span>vegetation description</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/cropDescription">
+      <h3>crop description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/cropDescription</p>
+      <div class="comment">
+         <span class="markdown">Description of crops at the site</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/landUseCropRotation">
+      <h3>land use crop rotation<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/landUseCropRotation</p>
+      <div class="comment">
+         <span class="markdown">Description of crop rotation at the site</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/landUseRemark">
+      <h3>land use remark<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/landUseRemark</p>
+      <div class="comment">
+         <span class="markdown">Description of land use at the site</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/location">
+      <h3>location<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/location</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/mapSheetID">
+      <h3>map sheet i d<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/mapSheetID</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/parentRemarks">
+      <h3>parent remarks<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/parentRemarks</p>
+      <div class="comment">
+         <span class="markdown">Remarks on the parent material</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/physiographyDescription">
+      <h3>physiography description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/physiographyDescription</p>
+      <div class="comment">
+         <span class="markdown">Description of the local physiography</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/remarks">
+      <h3>remarks<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/remarks</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/timestamp">
+      <h3>timestamp<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/timestamp</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>object property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/vegetationDescription">
+      <h3>vegetation description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/vegetationDescription</p>
+      <div class="comment">
+         <span class="markdown">Description of vegetation at the site</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/bareCoverAbundanceProperty"
+            title="http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty">bareCoverAbundanceProperty</a>
+      </li>
+      <li>
+         <a href="#/cropClassProperty"
+            title="http://w3id.org/glosis/model/siteplot/cropClassProperty">cropClassProperty</a>
+      </li>
+      <li>
+         <a href="#/erosionActivityPeriodProperty"
+            title="http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty">erosionActivityPeriodProperty</a>
+      </li>
+      <li>
+         <a href="#/erosionAreaAffectedProperty"
+            title="http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty">erosionAreaAffectedProperty</a>
+      </li>
+      <li>
+         <a href="#/erosionCategoryProperty"
+            title="http://w3id.org/glosis/model/siteplot/erosionCategoryProperty">erosionCategoryProperty</a>
+      </li>
+      <li>
+         <a href="#/erosionDegreeProperty"
+            title="http://w3id.org/glosis/model/siteplot/erosionDegreeProperty">erosionDegreeProperty</a>
+      </li>
+      <li>
+         <a href="#/erosionTotalAreaAffectedProperty"
+            title="http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty">erosionTotalAreaAffectedProperty</a>
+      </li>
+      <li>
+         <a href="#/floodDurationProperty"
+            title="http://w3id.org/glosis/model/siteplot/floodDurationProperty">floodDurationProperty</a>
+      </li>
+      <li>
+         <a href="#/floodFrequencyProperty"
+            title="http://w3id.org/glosis/model/siteplot/floodFrequencyProperty">floodFrequencyProperty</a>
+      </li>
+      <li>
+         <a href="#/forestAbundanceProperty"
+            title="http://w3id.org/glosis/model/siteplot/forestAbundanceProperty">ForestAbundanceProperty</a>
+      </li>
+      <li>
+         <a href="#/geologyProperty"
+            title="http://w3id.org/glosis/model/siteplot/geologyProperty">geologyProperty</a>
+      </li>
+      <li>
+         <a href="#/grassAbundanceProperty"
+            title="http://w3id.org/glosis/model/siteplot/grassAbundanceProperty">GrassAbundanceProperty</a>
+      </li>
+      <li>
+         <a href="#/groundwaterDepthProperty"
+            title="http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty">groundwaterDepthProperty</a>
+      </li>
+      <li>
+         <a href="#/humanInfluenceClassProperty"
+            title="http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty">humanInfluenceClassProperty</a>
+      </li>
+      <li>
+         <a href="#/koeppenClassProperty"
+            title="http://w3id.org/glosis/model/siteplot/koeppenClassProperty">koeppenClassProperty</a>
+      </li>
+      <li>
+         <a href="#/landformComplexProperty"
+            title="http://w3id.org/glosis/model/siteplot/landformComplexProperty">LandformComplexProperty</a>
+      </li>
+      <li>
+         <a href="#/landUseClassProperty"
+            title="http://w3id.org/glosis/model/siteplot/landUseClassProperty">landUseClassProperty</a>
+      </li>
+      <li>
+         <a href="#/lithologyProperty"
+            title="http://w3id.org/glosis/model/siteplot/lithologyProperty">lithologyProperty</a>
+      </li>
+      <li>
+         <a href="#/majorLandFormProperty"
+            title="http://w3id.org/glosis/model/siteplot/majorLandFormProperty">MajorLandFormProperty</a>
+      </li>
+      <li>
+         <a href="#/parentDepositionProperty"
+            title="http://w3id.org/glosis/model/siteplot/parentDepositionProperty">ParentDepositionProperty</a>
+      </li>
+      <li>
+         <a href="#/parentLithologyProperty"
+            title="http://w3id.org/glosis/model/siteplot/parentLithologyProperty">parentLithologyProperty</a>
+      </li>
+      <li>
+         <a href="#/parentTextureUnconsolidatedProperty"
+            title="http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty">parentTextureUnconsolidatedProperty</a>
+      </li>
+      <li>
+         <a href="#/pavedAbundanceProperty"
+            title="http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty">PavedAbundanceProperty</a>
+      </li>
+      <li>
+         <a href="#/physiographyProperty"
+            title="http://w3id.org/glosis/model/siteplot/physiographyProperty">PhysiographyProperty</a>
+      </li>
+      <li>
+         <a href="#/rockOutcropsCoverProperty"
+            title="http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty">rockOutcropsCoverProperty</a>
+      </li>
+      <li>
+         <a href="#/rockOutcropsDistanceProperty"
+            title="http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty">rockOutcropsDistanceProperty</a>
+      </li>
+      <li>
+         <a href="#/shrubsAbundanceProperty"
+            title="http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty">ShrubsAbundanceProperty</a>
+      </li>
+      <li>
+         <a href="#/slopeFormProperty"
+            title="http://w3id.org/glosis/model/siteplot/slopeFormProperty">slopeFormProperty</a>
+      </li>
+      <li>
+         <a href="#/slopeGradientClassProperty"
+            title="http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty">slopeGradientClassProperty</a>
+      </li>
+      <li>
+         <a href="#/slopeGradientProperty"
+            title="http://w3id.org/glosis/model/siteplot/slopeGradientProperty">slopeGradientProperty</a>
+      </li>
+      <li>
+         <a href="#/slopeOrientationClassProperty"
+            title="http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty">slopeOrientationClassProperty</a>
+      </li>
+      <li>
+         <a href="#/slopeOrientationProperty"
+            title="http://w3id.org/glosis/model/siteplot/slopeOrientationProperty">slopeOrientationProperty</a>
+      </li>
+      <li>
+         <a href="#/slopePathwaysProperty"
+            title="http://w3id.org/glosis/model/siteplot/slopePathwaysProperty">slopePathwaysProperty</a>
+      </li>
+      <li>
+         <a href="#/surfaceAgeProperty"
+            title="http://w3id.org/glosis/model/siteplot/surfaceAgeProperty">surfaceAgeProperty</a>
+      </li>
+      <li>
+         <a href="#/treeDensityProperty"
+            title="http://w3id.org/glosis/model/siteplot/treeDensityProperty">treeDensityProperty</a>
+      </li>
+      <li>
+         <a href="#/vegetationClassProperty"
+            title="http://w3id.org/glosis/model/siteplot/vegetationClassProperty">VegetationClassProperty</a>
+      </li>
+      <li>
+         <a href="#/weatherConditionsCurrentProperty"
+            title="http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty">weatherConditionsCurrentProperty</a>
+      </li>
+      <li>
+         <a href="#/weatherConditionsPastProperty"
+            title="http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty">weatherConditionsPastProperty</a>
+      </li>
+      <li>
+         <a href="#/weatheringRockProperty"
+            title="http://w3id.org/glosis/model/siteplot/weatheringRockProperty">weatheringRockProperty</a>
+      </li>
+   </ul>
+   <div class="entity" id="/bareCoverAbundanceProperty">
+      <h3>bareCoverAbundanceProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/cropClassProperty">
+      <h3>cropClassProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/cropClassProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/erosionActivityPeriodProperty">
+      <h3>erosionActivityPeriodProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/erosionAreaAffectedProperty">
+      <h3>erosionAreaAffectedProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/erosionCategoryProperty">
+      <h3>erosionCategoryProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/erosionCategoryProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/erosionDegreeProperty">
+      <h3>erosionDegreeProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/erosionDegreeProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/erosionTotalAreaAffectedProperty">
+      <h3>erosionTotalAreaAffectedProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/floodDurationProperty">
+      <h3>floodDurationProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/floodDurationProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/floodFrequencyProperty">
+      <h3>floodFrequencyProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/floodFrequencyProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/forestAbundanceProperty">
+      <h3>ForestAbundanceProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/forestAbundanceProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/geologyProperty">
+      <h3>geologyProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/geologyProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/grassAbundanceProperty">
+      <h3>GrassAbundanceProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/grassAbundanceProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/groundwaterDepthProperty">
+      <h3>groundwaterDepthProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/humanInfluenceClassProperty">
+      <h3>humanInfluenceClassProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/koeppenClassProperty">
+      <h3>koeppenClassProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/koeppenClassProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/landformComplexProperty">
+      <h3>LandformComplexProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/landformComplexProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/landUseClassProperty">
+      <h3>landUseClassProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/landUseClassProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/lithologyProperty">
+      <h3>lithologyProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/lithologyProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/majorLandFormProperty">
+      <h3>MajorLandFormProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/majorLandFormProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/parentDepositionProperty">
+      <h3>ParentDepositionProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/parentDepositionProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/parentLithologyProperty">
+      <h3>parentLithologyProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/parentLithologyProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/parentTextureUnconsolidatedProperty">
+      <h3>parentTextureUnconsolidatedProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/pavedAbundanceProperty">
+      <h3>PavedAbundanceProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/physiographyProperty">
+      <h3>PhysiographyProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/physiographyProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/rockOutcropsCoverProperty">
+      <h3>rockOutcropsCoverProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/rockOutcropsDistanceProperty">
+      <h3>rockOutcropsDistanceProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/shrubsAbundanceProperty">
+      <h3>ShrubsAbundanceProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/slopeFormProperty">
+      <h3>slopeFormProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/slopeFormProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/slopeGradientClassProperty">
+      <h3>slopeGradientClassProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/slopeGradientProperty">
+      <h3>slopeGradientProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/slopeGradientProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/slopeOrientationClassProperty">
+      <h3>slopeOrientationClassProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/slopeOrientationProperty">
+      <h3>slopeOrientationProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/slopeOrientationProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/slopePathwaysProperty">
+      <h3>slopePathwaysProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/slopePathwaysProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/surfaceAgeProperty">
+      <h3>surfaceAgeProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/surfaceAgeProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/treeDensityProperty">
+      <h3>treeDensityProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/treeDensityProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/vegetationClassProperty">
+      <h3>VegetationClassProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/vegetationClassProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/weatherConditionsCurrentProperty">
+      <h3>weatherConditionsCurrentProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/weatherConditionsPastProperty">
+      <h3>weatherConditionsPastProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/weatheringRockProperty">
+      <h3>weatheringRockProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/siteplot/weatheringRockProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/siteplot</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

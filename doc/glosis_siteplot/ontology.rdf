@@ -1,0 +1,2692 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/glosis/model/siteplot#"
+     xml:base="http://w3id.org/glosis/model/siteplot"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://w3id.org/glosis/model/siteplot">
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/siteplot/1.1.0"/>
+        <owl:imports rdf:resource="http://w3id.org/glosis/model/codelists/"/>
+        <owl:imports rdf:resource="http://w3id.org/glosis/model/common/"/>
+        <owl:imports rdf:resource="http://w3id.org/glosis/model/iso28258/2013/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1gsrbbd1vx3"/>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:creator rdf:nodeID="genid3"/>
+        <terms:description xml:lang="en">GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:description>
+        <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/</terms:rights>
+        <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
+        <terms:title xml:lang="en">GLOSIS ontology</terms:title>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <foaf:name>Bogusz Janiak</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/affiliation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/unit -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/unit"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/altitude -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/altitude">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/country -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/country">
+        <rdfs:range rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/positionalAccuracy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/positionalAccuracy">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/responsibleOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/responsibleOrganization">
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/timestamp -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/timestamp"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/numericValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://qudt.org/schema/qudt/numericValue"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/cropDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/cropDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Description of crops at the site</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/landUseCropRotation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/landUseCropRotation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Description of crop rotation at the site</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/landUseRemark -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/landUseRemark">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Description of land use at the site</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/location -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/location">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/mapSheetID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/mapSheetID">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/parentRemarks -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/parentRemarks">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Remarks on the parent material</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/physiographyDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/physiographyDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Description of the local physiography</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/remarks -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/remarks">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/timestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/timestamp">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/vegetationDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/vegetationDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Description of vegetation at the site</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/QuantityValue -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/QuantityValue"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Quantitykind -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Quantitykind"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Unit -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/CropClassValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/CropClassValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/ErosionActivityPeriodValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/ErosionActivityPeriodValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/ErosionCategoryValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/ErosionCategoryValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/ErosionDegreeValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/ErosionDegreeValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/ErosionTotalAreaAffectedValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/ErosionTotalAreaAffectedValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/FloodDurationValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/FloodDurationValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/HumanInfluenceClassValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/HumanInfluenceClassValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/LandUseClassValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/LandUseClassValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/LandformComplexValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/LandformComplexValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/LithologyValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/LithologyValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/MajorLandFormValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/MajorLandFormValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/PhysiographyValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/PhysiographyValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/RockOutcropsDistanceValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/RockOutcropsDistanceValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/SlopeFormValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/SlopeFormValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/SlopePathwaysValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/SlopePathwaysValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/VegetationClassValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/VegetationClassValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/WeatherConditionsValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/WeatherConditionsValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/WeatheringValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/WeatheringValueCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepth -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/SoilDepth">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepthBedrock -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/SoilDepthBedrock">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepthRootable -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/SoilDepthRootable">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepthRootableClass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/SoilDepthRootableClass">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepthSampled -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/SoilDepthSampled">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/WeatheringFragments -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/WeatheringFragments">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/iso28258/2013/Plot -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/iso28258/2013/Plot"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/iso28258/2013/Site -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/iso28258/2013/Site"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/CropClass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/CropClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/CropClassValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/cropClassProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/ErosionActivityPeriodValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/ErosionAreaAffected -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/ErosionAreaAffected">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/ErosionCategory -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/ErosionCategory">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/ErosionCategoryValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionCategoryProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/ErosionDegree -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/ErosionDegree">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/ErosionDegreeValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionDegreeProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/ErosionTotalAreaAffectedValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/FloodDuration -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/FloodDuration">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/FloodDurationValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/floodDurationProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/FloodFrequency -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/FloodFrequency">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/floodFrequencyProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/GL_Plot -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/iso28258/2013/Plot"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/altitude"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/country"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/positionalAccuracy"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/responsibleOrganization"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/timestamp"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/location"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/mapSheetID"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/remarks"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/GL_Site -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/iso28258/2013/Site"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/altitude"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/country"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/positionalAccuracy"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/responsibleOrganization"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/timestamp"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/location"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/mapSheetID"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/glosis/model/siteplot/remarks"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/Geology -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/Geology">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/LithologyValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/geologyProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/GroundwaterDepth -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/GroundwaterDepth">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/CentiM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/HumanInfluenceClass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/HumanInfluenceClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/HumanInfluenceClassValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/KoeppenClass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/KoeppenClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/koeppenClassProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseBareCover -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseBareCover">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseClass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/LandUseClassValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/landUseClassProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseForest -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseForest">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/LandUseForestValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/forestAbundanceProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseForestValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseForestValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseGrass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseGrass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/LandUseGrassValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/grassAbundanceProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseGrassValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseGrassValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUsePavedCover -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUsePavedCover">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/PavedAbundanceproperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseShrubs -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseShrubs">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/LandUseShrubsValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandUseShrubsValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandUseShrubsValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/LandformComplex -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/LandformComplex">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/LandformComplexValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/landformComplexProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/Lithology -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/Lithology">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/LithologyValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/lithologyProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/MajorLandForm -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/MajorLandForm">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/MajorLandFormValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/majorLandFormProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/ParentDeposition -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/ParentDeposition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/ErosionCategoryValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/parentDepositionProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/ParentLithology -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/ParentLithology">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/LithologyValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/parentLithologyProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/Physiography -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/Physiography">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/PhysiographyValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/physiographyProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/RockOutcropsCover -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/RockOutcropsCover">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/RockOutcropsDistance -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/RockOutcropsDistance">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/RockOutcropsDistanceValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SlopeForm -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SlopeForm">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/SlopeFormValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeFormProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SlopeGradientClass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SlopeGradientClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeGradientProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/PERCENT"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SlopeOrientationClass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SlopeOrientationClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeOrientationProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/DEG"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SlopePathways -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SlopePathways">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/SlopePathwaysValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopePathwaysProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/SurfaceAge -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/SurfaceAge">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/surfaceAgeProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/TreeDensity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/TreeDensity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/siteplot/TreeDensityValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/treeDensityProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/TreeDensityValue -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/TreeDensityValue">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/VegetationClass -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/VegetationClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/VegetationClassValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/vegetationClassProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/WeatherCurrent -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/WeatherCurrent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/WeatherConditionsValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/WeatherPast -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/WeatherPast">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/WeatherConditionsValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/WeatheringRock -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/siteplot/WeatheringRock">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/WeatheringValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Plot"/>
+                            <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/GL_Site"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/weatheringRockProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code -->
+
+
+    <owl:Class rdf:about="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/vocab/unit/CentiM -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/CentiM"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/DEG -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/DEG"/>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/PERCENT -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PERCENT"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/PavedAbundanceproperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/PavedAbundanceproperty"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">bareCoverAbundanceProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/cropClassProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/cropClassProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 9</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">cropClassProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 19</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">erosionActivityPeriodProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">erosionAreaAffectedProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/erosionCategoryProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionCategoryProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 16</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">erosionCategoryProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/erosionDegreeProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionDegreeProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 18</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">erosionDegreeProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 17</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">erosionTotalAreaAffectedProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/floodDurationProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/floodDurationProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 174</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">floodDurationProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/floodFrequencyProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/floodFrequencyProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 174</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">floodFrequencyProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/forestAbundanceProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/forestAbundanceProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">ForestAbundanceProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/geologyProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/geologyProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 12</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">geologyProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/grassAbundanceProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/grassAbundanceProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">GrassAbundanceProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">groundwaterDepthProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 10</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">humanInfluenceClassProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/koeppenClassProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/koeppenClassProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">koeppenClassProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/landUseClassProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/landUseClassProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 8</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">landUseClassProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/landformComplexProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/landformComplexProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 5</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">LandformComplexProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/lithologyProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/lithologyProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 12</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">lithologyProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/majorLandFormProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/majorLandFormProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 4</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MajorLandFormProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/parentDepositionProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/parentDepositionProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 16</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ParentDepositionProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/parentLithologyProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/parentLithologyProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 12</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">parentLithologyProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">table is missing!</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">parentTextureUnconsolidatedProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">PavedAbundanceProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/physiographyProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/physiographyProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Figure 2</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">PhysiographyProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 14,1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">rockOutcropsCoverProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 14,2</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">rockOutcropsDistanceProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">ShrubsAbundanceProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/slopeFormProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeFormProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 6</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">slopeFormProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 7</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">slopeGradientClassProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/slopeGradientProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeGradientProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">slopeGradientProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">slopeOrientationClassProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/slopeOrientationProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeOrientationProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">slopeOrientationProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/slopePathwaysProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopePathwaysProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Figure 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">slopePathwaysProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/surfaceAgeProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/surfaceAgeProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 13</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">surfaceAgeProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/treeDensityProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/treeDensityProperty">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">treeDensityProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/vegetationClassProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/vegetationClassProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 11</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">VegetationClassProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 2</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">weatherConditionsCurrentProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 2</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">weatherConditionsPastProperty</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/siteplot/weatheringRockProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/weatheringRockProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">GfSD Table 29</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">weatheringRockProperty</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

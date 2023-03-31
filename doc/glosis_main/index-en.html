@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>GlOSIS Ontology: Main module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model","name":"GlOSIS Ontology: Main module", "headline":"This is the main module of the Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists.", "datePublished":"Date of release", "version":"1.1.0", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak","url":"https://github.com/Montanaz0r"},{"@type":"Person","name":"Luís Moreira de Sousa","url":"http://orcid.org/0000-0002-5851-2071/"}], "contributor":[{"@type":"Person","name":"Kathi Schleidt"},{"@type":"Person","name":"Tomas Reznik"},{"@type":"Person","name":"Jiri Kozel"},{"@type":"Person","name":"Fenny van Egmond"},{"@type":"Person","name":"Johan Leenars"},{"@type":"Person","name":"Abdul Mouazen"},{"@type":"Person","name":"Dimitrios Moshou"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>GlOSIS Ontology: Main module</h1>
+<h2>Release Date of release</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/glosis/model/1.1.0">http://w3id.org/glosis/model/1.1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Authors:</dt>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, (<a href="https://www.psnc.pl/">PSNC</a>)</dd><dd><a href="https://github.com/Montanaz0r">Bogusz Janiak</a>, (<a href="https://www.psnc.pl/">PSNC</a>)</dd><dd><a href="http://orcid.org/0000-0002-5851-2071/">Luís Moreira de Sousa</a>, (<a href="http://www.isric.org/">ISRIC - World Soil Information</a>)</dd>
+
+<dt>Contributors:</dt>
+<dd>Kathi Schleidt, (<a href="https://datacove.eu/">Datacove</a>)</dd><dd>Tomas Reznik, Masaryk University</dd><dd>Jiri Kozel, Masaryk University</dd><dd>Fenny van Egmond, (<a href="http://www.isric.org/">ISRIC - World Soil Information</a>)</dd><dd>Johan Leenars, (<a href="http://www.isric.org/">ISRIC - World Soil Information</a>)</dd><dd>Abdul Mouazen, Ghent University</dd><dd>Dimitrios Moshou, Aristotle University of Thessaloniki</dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://w3id.org/glosis/model/layerhorizon/">http://w3id.org/glosis/model/layerhorizon/</a></dd><dd><a href="http://w3id.org/glosis/model/observation/">http://w3id.org/glosis/model/observation/</a></dd><dd><a href="http://w3id.org/glosis/model/profile/">http://w3id.org/glosis/model/profile/</a></dd><dd><a href="http://w3id.org/glosis/model/siteplot/">http://w3id.org/glosis/model/siteplot/</a></dd><dd><a href="http://w3id.org/glosis/model/surface/">http://w3id.org/glosis/model/surface/</a></dd><dd><a href="http://w3id.org/glosis/model/procedure/">http://w3id.org/glosis/model/procedure/</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_NC_SA_3.0_IGO-blue.svg" alt="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" /></a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" rel="license" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cc-by-nc-sa_icon.svg/120px-Cc-by-nc-sa_icon.svg.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>GloSIS Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is the main module of the Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">GloSIS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">GloSIS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for GloSIS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by GloSIS Ontology: Main module.
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

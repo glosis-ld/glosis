@@ -1,0 +1,135 @@
+@prefix : <http://w3id.org/glosis/model#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/glosis/model#> .
+
+<http://w3id.org/glosis/model> rdf:type owl:Ontology ;
+                                owl:versionIRI <http://w3id.org/glosis/model/1.1.0> ;
+                                owl:imports <http://w3id.org/glosis/model/layerhorizon/> ,
+                                            <http://w3id.org/glosis/model/observation/> ,
+                                            <http://w3id.org/glosis/model/procedure/> ,
+                                            <http://w3id.org/glosis/model/profile/> ,
+                                            <http://w3id.org/glosis/model/siteplot/> ,
+                                            <http://w3id.org/glosis/model/surface/> ;
+                                <http://purl.org/dc/terms/abstract> "This is the main module of the Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists."@en ;
+                                <http://purl.org/dc/terms/contributor> _:genid-nodeid-node1gsrbafmox11 ,
+                                                                       _:genid-nodeid-node1gsrbafmox13 ,
+                                                                       _:genid-nodeid-node1gsrbafmox15 ,
+                                                                       _:genid-nodeid-node1gsrbafmox17 ,
+                                                                       _:genid-nodeid-node1gsrbafmox19 ,
+                                                                       _:genid-nodeid-node1gsrbafmox9 ,
+                                                                       _:genid1 ,
+                                                                       _:genid3 ,
+                                                                       _:genid5 ,
+                                                                       _:genid7 ,
+                                                                       _:genid9 ,
+                                                                       _:genid11 ,
+                                                                       _:genid13 ;
+                                <http://purl.org/dc/terms/creator> _:genid15 ,
+                                                                   _:genid17 ,
+                                                                   _:genid19 ;
+                                <http://purl.org/dc/terms/description> "The GLOSIS main is a master profile importing modules of GLOSIS ontology"@en ;
+                                <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en ;
+                                <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+                                <http://purl.org/dc/terms/title> "GlOSIS Ontology: Main module"@en ;
+                                owl:versionInfo "1.1.0" .
+
+_:genid1 <http://schema.org/affiliation> _:genid2 ;
+          <http://xmlns.com/foaf/0.1/name> "Kathi Schleidt" .
+
+_:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "Masaryk University"
+                                          ] ;
+          <http://xmlns.com/foaf/0.1/name> "Tomas Reznik" .
+
+_:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "Masaryk University"
+                                          ] ;
+          <http://xmlns.com/foaf/0.1/name> "Jiri Kozel" .
+
+_:genid7 <http://schema.org/affiliation> _:genid8 ;
+          <http://xmlns.com/foaf/0.1/name> "Fenny van Egmond" .
+
+_:genid9 <http://schema.org/affiliation> _:genid10 ;
+          <http://xmlns.com/foaf/0.1/name> "Johan Leenars" .
+
+_:genid11 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "Ghent University"
+                                           ] ;
+           <http://xmlns.com/foaf/0.1/name> "Abdul Mouazen" .
+
+_:genid13 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "Aristotle University of Thessaloniki"
+                                           ] ;
+           <http://xmlns.com/foaf/0.1/name> "Dimitrios Moshou" .
+
+_:genid15 <http://schema.org/affiliation> _:genid16 ;
+           rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071/> ;
+           <http://xmlns.com/foaf/0.1/name> "Luís Moreira de Sousa" .
+
+_:genid17 <http://schema.org/affiliation> _:genid18 ;
+           rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+           <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+
+_:genid19 <http://schema.org/affiliation> _:genid20 ;
+           rdfs:seeAlso <https://github.com/Montanaz0r> ;
+           <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+
+_:genid2 rdfs:seeAlso <https://datacove.eu/> ;
+          <http://xmlns.com/foaf/0.1/name> "Datacove" .
+
+_:genid8 rdfs:seeAlso <http://www.isric.org/> ;
+          <http://xmlns.com/foaf/0.1/name> "ISRIC - World Soil Information" .
+
+_:genid10 rdfs:seeAlso <http://www.isric.org/> ;
+           <http://xmlns.com/foaf/0.1/name> "ISRIC - World Soil Information" .
+
+_:genid16 rdfs:seeAlso <http://www.isric.org/> ;
+           <http://xmlns.com/foaf/0.1/name> "ISRIC - World Soil Information" .
+
+_:genid18 rdfs:seeAlso <https://www.psnc.pl/> ;
+           <http://xmlns.com/foaf/0.1/name> "PSNC" .
+
+_:genid20 rdfs:seeAlso <https://www.psnc.pl/> ;
+           <http://xmlns.com/foaf/0.1/name> "PSNC" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/affiliation
+<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
