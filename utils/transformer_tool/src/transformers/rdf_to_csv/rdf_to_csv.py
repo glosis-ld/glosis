@@ -13,7 +13,7 @@ class Transformer(object):
         self.postfix = self._set_postfix_based_on_type()
         self.attributes = []
         self.results = {}
-        self.base_uri = self._get_base_uri() if self.file_type == "procedure" else rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists#')
+        self.base_uri = self._get_base_uri() if self.file_type == "procedure" else rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/')
         self.output = output_filename if output_filename else os.path.splitext(file)[0]
 
     def _parse_into_graph(self):
@@ -26,7 +26,7 @@ class Transformer(object):
             return
 
     def _get_base_uri(self):
-        return rdflib.term.URIRef(f'http://w3id.org/glosis/model/{self.postfix.lower()}#')
+        return rdflib.term.URIRef(f'http://w3id.org/glosis/model/{self.postfix.lower()}/')
 
     def _set_postfix_based_on_type(self):
         if self.file_type == "procedure":
@@ -37,7 +37,7 @@ class Transformer(object):
             print("Unrecognized file_type! Has to be one of: procedure, codelist")
 
     def _get_attr_name(self, attribute):
-        attr_name = re.findall(r"(?<=#).*(?=ValueCode|PropertyCode|Procedure)", attribute)[-1]
+        attr_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCode|Procedure)", attribute)[-1]
         postfix = re.findall(r"ValueCode|PropertyCode|Procedure", attribute)[-1]
         return attr_name, postfix
 

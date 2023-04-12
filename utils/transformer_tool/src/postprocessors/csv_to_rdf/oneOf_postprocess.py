@@ -19,9 +19,9 @@ class PostProcessor(object):
     def _set_base_uri(self):
         self.the_object = URIRef("http://www.w3.org/2002/07/owl#" + "Class")
         if "glosis_cl" in self.input_csv:
-            self.base_uri = "http://w3id.org/glosis/model/codelists#"
+            self.base_uri = "http://w3id.org/glosis/model/codelists/"
         elif "glosis_procedure" in self.input_csv:
-            self.base_uri = "http://w3id.org/glosis/model/procedure#"
+            self.base_uri = "http://w3id.org/glosis/model/procedure/"
         else:
             sys.exit("Input file not recognized.")
 
@@ -36,7 +36,7 @@ class PostProcessor(object):
             self.data[key_name] = instances
 
     def _get_attr_name(self, attribute):
-        attr_name = re.findall(r"(?<=#).*(?=ValueCode|PropertyCode|Procedure)", attribute)[-1]
+        attr_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCode|Procedure)", attribute)[-1]
         postfix = re.findall(r"ValueCode|PropertyCode|Procedure", attribute)[-1]
         return attr_name, postfix
 
