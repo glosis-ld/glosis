@@ -1,0 +1,643 @@
+@prefix : <http://w3id.org/glosis/model/common#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/glosis/model/common#> .
+
+<http://w3id.org/glosis/model/common> rdf:type owl:Ontology ;
+                                       owl:versionIRI <http://w3id.org/glosis/model/common/1.1.0> ;
+                                       owl:imports <http://www.w3.org/ns/sosa/> ,
+                                                   <http://www.w3.org/ns/ssn/> ;
+                                       <http://purl.org/dc/terms/creator> _:genid-nodeid-node1gsrb9aj0x3 ,
+                                                                          _:genid1 ,
+                                                                          _:genid3 ;
+                                       <http://purl.org/dc/terms/description> "This ontology represents GLOSIS code lists extracted from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+                                       <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en ;
+                                       <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+                                       <http://purl.org/dc/terms/title> "GLOSIS"@en ;
+                                       owl:versionInfo "1.1.0" .
+
+_:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+
+_:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/affiliation
+<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/unit
+<http://qudt.org/schema/qudt/unit> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/numericValue
+<http://qudt.org/schema/qudt/numericValue> rdf:type owl:DatatypeProperty .
+
+
+###  http://w3id.org/glosis/model/common/chroma
+<http://w3id.org/glosis/model/common/chroma> rdf:type owl:DatatypeProperty ;
+                                             rdfs:range xsd:decimal .
+
+
+###  http://w3id.org/glosis/model/common/hue
+<http://w3id.org/glosis/model/common/hue> rdf:type owl:DatatypeProperty ;
+                                          rdfs:range xsd:string .
+
+
+###  http://w3id.org/glosis/model/common/munsellCompounded
+<http://w3id.org/glosis/model/common/munsellCompounded> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:range xsd:string .
+
+
+###  http://w3id.org/glosis/model/common/value
+<http://w3id.org/glosis/model/common/value> rdf:type owl:DatatypeProperty ;
+                                            rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/QuantityValue
+<http://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class .
+
+
+###  http://qudt.org/schema/qudt/Quantitykind
+<http://qudt.org/schema/qudt/Quantitykind> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/CracksDepthValueCode
+<http://w3id.org/glosis/model/codelists/CracksDepthValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/CracksDistanceValueCode
+<http://w3id.org/glosis/model/codelists/CracksDistanceValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/CracksWidthValueCode
+<http://w3id.org/glosis/model/codelists/CracksWidthValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/FragmentCoverValueCode
+<http://w3id.org/glosis/model/codelists/FragmentCoverValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/FragmentSizeValueCode
+<http://w3id.org/glosis/model/codelists/FragmentSizeValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode
+<http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/RockAbundanceValueCode
+<http://w3id.org/glosis/model/codelists/RockAbundanceValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/RockShapeValueCode
+<http://w3id.org/glosis/model/codelists/RockShapeValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/RockSizeValueCode
+<http://w3id.org/glosis/model/codelists/RockSizeValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/WeatheringValueCode
+<http://w3id.org/glosis/model/codelists/WeatheringValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/common/BleachedSand
+<http://w3id.org/glosis/model/common/BleachedSand> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                     owl:hasValue <http://w3id.org/glosis/model/common/bleachedSandProperty>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
+                                                                     owl:allValuesFrom xsd:string
+                                                                   ] .
+
+
+###  http://w3id.org/glosis/model/common/ColourDry
+<http://w3id.org/glosis/model/common/ColourDry> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                  owl:allValuesFrom <http://w3id.org/glosis/model/common/MunsellColorValue>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                  owl:hasValue <http://w3id.org/glosis/model/common/colourDryProperty>
+                                                                ] .
+
+
+###  http://w3id.org/glosis/model/common/ColourWet
+<http://w3id.org/glosis/model/common/ColourWet> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                  owl:allValuesFrom <http://w3id.org/glosis/model/common/MunsellColorValue>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                  owl:hasValue <http://w3id.org/glosis/model/common/colourWetProperty>
+                                                                ] .
+
+
+###  http://w3id.org/glosis/model/common/CracksDepth
+<http://w3id.org/glosis/model/common/CracksDepth> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                    owl:someValuesFrom <http://w3id.org/glosis/model/codelists/CracksDepthValueCode>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                    owl:hasValue <http://w3id.org/glosis/model/common/cracksDepthProperty>
+                                                                  ] .
+
+
+###  http://w3id.org/glosis/model/common/CracksDistance
+<http://w3id.org/glosis/model/common/CracksDistance> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                       owl:someValuesFrom <http://w3id.org/glosis/model/codelists/CracksDistanceValueCode>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                       owl:hasValue <http://w3id.org/glosis/model/common/cracksDistanceProperty>
+                                                                     ] .
+
+
+###  http://w3id.org/glosis/model/common/CracksWidth
+<http://w3id.org/glosis/model/common/CracksWidth> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                    owl:someValuesFrom <http://w3id.org/glosis/model/codelists/CracksWidthValueCode>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                    owl:hasValue <http://w3id.org/glosis/model/common/cracksWidthProperty>
+                                                                  ] .
+
+
+###  http://w3id.org/glosis/model/common/FragmentCover
+<http://w3id.org/glosis/model/common/FragmentCover> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/FragmentCoverValueCode>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                      owl:hasValue <http://w3id.org/glosis/model/common/fragmentCoverProperty>
+                                                                    ] .
+
+
+###  http://w3id.org/glosis/model/common/FragmentSize
+<http://w3id.org/glosis/model/common/FragmentSize> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                     owl:someValuesFrom <http://w3id.org/glosis/model/codelists/FragmentSizeValueCode>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                     owl:hasValue <http://w3id.org/glosis/model/common/fragmentSizeProperty>
+                                                                   ] .
+
+
+###  http://w3id.org/glosis/model/common/InfiltrationRateClass
+<http://w3id.org/glosis/model/common/InfiltrationRateClass> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                              owl:hasValue <http://w3id.org/glosis/model/common/infiltrationRateClassProperty>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
+                                                                              owl:allValuesFrom xsd:string
+                                                                            ] .
+
+
+###  http://w3id.org/glosis/model/common/InfiltrationRateNumeric
+<http://w3id.org/glosis/model/common/InfiltrationRateNumeric> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                                owl:allValuesFrom <http://w3id.org/glosis/model/common/InfiltrationRateNumericValue>
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                                owl:hasValue <http://w3id.org/glosis/model/common/infiltrationRateNumericProperty>
+                                                                              ] .
+
+
+###  http://w3id.org/glosis/model/common/InfiltrationRateNumericValue
+<http://w3id.org/glosis/model/common/InfiltrationRateNumericValue> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://qudt.org/schema/qudt/QuantityValue> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://qudt.org/schema/qudt/unit> ;
+                                                                                     owl:hasValue <http://qudt.org/vocab/unit/CentiM-PER-HR>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
+                                                                                     owl:allValuesFrom xsd:float
+                                                                                   ] .
+
+
+###  http://w3id.org/glosis/model/common/MunsellColorValue
+<http://w3id.org/glosis/model/common/MunsellColorValue> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.w3.org/ns/sosa/Result> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://w3id.org/glosis/model/common/chroma> ;
+                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://w3id.org/glosis/model/common/hue> ;
+                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://w3id.org/glosis/model/common/munsellCompounded> ;
+                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://w3id.org/glosis/model/common/value> ;
+                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] .
+
+
+###  http://w3id.org/glosis/model/common/OrganicMatterClass
+<http://w3id.org/glosis/model/common/OrganicMatterClass> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                           owl:someValuesFrom <http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                           owl:hasValue <http://w3id.org/glosis/model/common/organicMatterClassProperty>
+                                                                         ] .
+
+
+###  http://w3id.org/glosis/model/common/RockAbundance
+<http://w3id.org/glosis/model/common/RockAbundance> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/RockAbundanceValueCode>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                      owl:hasValue <http://w3id.org/glosis/model/common/rockAbundanceProperty>
+                                                                    ] .
+
+
+###  http://w3id.org/glosis/model/common/RockShape
+<http://w3id.org/glosis/model/common/RockShape> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/codelists/RockShapeValueCode>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                  owl:hasValue <http://w3id.org/glosis/model/common/rockShapeProperty>
+                                                                ] .
+
+
+###  http://w3id.org/glosis/model/common/RockSize
+<http://w3id.org/glosis/model/common/RockSize> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                 owl:someValuesFrom <http://w3id.org/glosis/model/codelists/RockSizeValueCode>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                 owl:hasValue <http://w3id.org/glosis/model/common/rockSizeProperty>
+                                                               ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepth
+<http://w3id.org/glosis/model/common/SoilDepth> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                  owl:allValuesFrom <http://w3id.org/glosis/model/common/SoilDepthValue>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                  owl:hasValue <http://w3id.org/glosis/model/common/soilDepthProperty>
+                                                                ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepthBedrock
+<http://w3id.org/glosis/model/common/SoilDepthBedrock> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                         owl:allValuesFrom <http://w3id.org/glosis/model/common/SoilDepthBedrockValue>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                         owl:hasValue <http://w3id.org/glosis/model/common/soilDepthBedrockProperty>
+                                                                       ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepthBedrockValue
+<http://w3id.org/glosis/model/common/SoilDepthBedrockValue> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://qudt.org/schema/qudt/QuantityValue> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://qudt.org/schema/qudt/unit> ;
+                                                                              owl:hasValue <http://qudt.org/vocab/unit/CentiM>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
+                                                                              owl:allValuesFrom xsd:integer
+                                                                            ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepthRootable
+<http://w3id.org/glosis/model/common/SoilDepthRootable> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                          owl:allValuesFrom <http://w3id.org/glosis/model/common/SoilDepthRootableValue>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                          owl:hasValue <http://w3id.org/glosis/model/common/soilDepthRootableProperty>
+                                                                        ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepthRootableClass
+<http://w3id.org/glosis/model/common/SoilDepthRootableClass> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                               owl:hasValue <http://w3id.org/glosis/model/common/soilDepthRootableClassProperty>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
+                                                                               owl:allValuesFrom xsd:string
+                                                                             ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepthRootableValue
+<http://w3id.org/glosis/model/common/SoilDepthRootableValue> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://qudt.org/schema/qudt/QuantityValue> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://qudt.org/schema/qudt/unit> ;
+                                                                               owl:hasValue <http://qudt.org/vocab/unit/CentiM>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
+                                                                               owl:allValuesFrom xsd:integer
+                                                                             ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepthSampled
+<http://w3id.org/glosis/model/common/SoilDepthSampled> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                         owl:allValuesFrom <http://w3id.org/glosis/model/common/SoilDepthSampledValue>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                         owl:hasValue <http://w3id.org/glosis/model/common/soilDepthSampledProperty>
+                                                                       ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepthSampledValue
+<http://w3id.org/glosis/model/common/SoilDepthSampledValue> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://qudt.org/schema/qudt/QuantityValue> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://qudt.org/schema/qudt/unit> ;
+                                                                              owl:hasValue <http://qudt.org/vocab/unit/CentiM>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
+                                                                              owl:allValuesFrom xsd:integer
+                                                                            ] .
+
+
+###  http://w3id.org/glosis/model/common/SoilDepthValue
+<http://w3id.org/glosis/model/common/SoilDepthValue> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://qudt.org/schema/qudt/QuantityValue> ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://qudt.org/schema/qudt/unit> ;
+                                                                       owl:hasValue <http://qudt.org/vocab/unit/CentiM>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
+                                                                       owl:allValuesFrom xsd:integer
+                                                                     ] .
+
+
+###  http://w3id.org/glosis/model/common/Texture
+<http://w3id.org/glosis/model/common/Texture> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                owl:hasValue <http://w3id.org/glosis/model/common/textureProperty>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
+                                                                owl:allValuesFrom xsd:string
+                                                              ] .
+
+
+###  http://w3id.org/glosis/model/common/WeatheringFragments
+<http://w3id.org/glosis/model/common/WeatheringFragments> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                            owl:someValuesFrom <http://w3id.org/glosis/model/codelists/WeatheringValueCode>
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                            owl:hasValue <http://w3id.org/glosis/model/common/weatheringFragmentsProperty>
+                                                                          ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://qudt.org/vocab/unit/CentiM
+<http://qudt.org/vocab/unit/CentiM> rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/unit/CentiM-PER-HR
+<http://qudt.org/vocab/unit/CentiM-PER-HR> rdf:type owl:NamedIndividual .
+
+
+###  http://w3id.org/glosis/model/common/bleachedSandProperty
+<http://w3id.org/glosis/model/common/bleachedSandProperty> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                           rdfs:label "bleachedSandProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/colourDryProperty
+<http://w3id.org/glosis/model/common/colourDryProperty> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                        rdfs:label "colourDryProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/colourWetProperty
+<http://w3id.org/glosis/model/common/colourWetProperty> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                        rdfs:label "colourWetProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/cracksDepthProperty
+<http://w3id.org/glosis/model/common/cracksDepthProperty> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                          rdfs:isDefinedBy "GfSD Table 21.2"@en ;
+                                                          rdfs:label "cracksDepthProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/cracksDistanceProperty
+<http://w3id.org/glosis/model/common/cracksDistanceProperty> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                             rdfs:isDefinedBy "GfSD Table 21.3"@en ;
+                                                             rdfs:label "cracksDistanceProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/cracksWidthProperty
+<http://w3id.org/glosis/model/common/cracksWidthProperty> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                          rdfs:isDefinedBy "GfSD Table 21.1"@en ;
+                                                          rdfs:label "cracksWidthProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/fragmentCoverProperty
+<http://w3id.org/glosis/model/common/fragmentCoverProperty> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                            rdfs:isDefinedBy "GfSD Table 15.1"@en ;
+                                                            rdfs:label "fragmentCoverProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/fragmentSizeProperty
+<http://w3id.org/glosis/model/common/fragmentSizeProperty> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                           rdfs:isDefinedBy "GfSD Table 15.2"@en ;
+                                                           rdfs:label "fragmentSizeProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/infiltrationRateClassProperty
+<http://w3id.org/glosis/model/common/infiltrationRateClassProperty> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                    rdfs:label "infiltrationRateClassProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/infiltrationRateNumericProperty
+<http://w3id.org/glosis/model/common/infiltrationRateNumericProperty> rdf:type owl:NamedIndividual ,
+                                                                               <http://qudt.org/schema/qudt/Quantitykind> ,
+                                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                      rdfs:label "infiltrationRateNumericProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/organicMatterClassProperty
+<http://w3id.org/glosis/model/common/organicMatterClassProperty> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                 rdfs:isDefinedBy "table is missing!"@en ;
+                                                                 rdfs:label "organicMatterClassProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/rockAbundanceProperty
+<http://w3id.org/glosis/model/common/rockAbundanceProperty> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                            rdfs:isDefinedBy "GfSD Table 26"@en ;
+                                                            rdfs:label "rockAbundanceProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/rockShapeProperty
+<http://w3id.org/glosis/model/common/rockShapeProperty> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                        rdfs:isDefinedBy "GfSD Table 28"@en ;
+                                                        rdfs:label "rockShapeProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/rockSizeProperty
+<http://w3id.org/glosis/model/common/rockSizeProperty> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                       rdfs:isDefinedBy "GfSD Table 27"@en ;
+                                                       rdfs:label "rockSizeProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/soilDepthBedrockProperty
+<http://w3id.org/glosis/model/common/soilDepthBedrockProperty> rdf:type owl:NamedIndividual ,
+                                                                        <http://qudt.org/schema/qudt/Quantitykind> ,
+                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                               rdfs:label "soilDepthBedrockProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/soilDepthProperty
+<http://w3id.org/glosis/model/common/soilDepthProperty> rdf:type owl:NamedIndividual ,
+                                                                 <http://qudt.org/schema/qudt/Quantitykind> ,
+                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                        rdfs:label "soilDepthProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/soilDepthRootableClassProperty
+<http://w3id.org/glosis/model/common/soilDepthRootableClassProperty> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                     rdfs:label "soilDepthRootableClassProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/soilDepthRootableProperty
+<http://w3id.org/glosis/model/common/soilDepthRootableProperty> rdf:type owl:NamedIndividual ,
+                                                                         <http://qudt.org/schema/qudt/Quantitykind> ,
+                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                rdfs:label "soilDepthRootableProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/soilDepthSampledProperty
+<http://w3id.org/glosis/model/common/soilDepthSampledProperty> rdf:type owl:NamedIndividual ,
+                                                                        <http://qudt.org/schema/qudt/Quantitykind> ,
+                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                               rdfs:label "soilDepthSampledProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/textureProperty
+<http://w3id.org/glosis/model/common/textureProperty> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                      rdfs:label "textureProperty"@en .
+
+
+###  http://w3id.org/glosis/model/common/weatheringFragmentsProperty
+<http://w3id.org/glosis/model/common/weatheringFragmentsProperty> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                  rdfs:isDefinedBy "GfSD Table 29"@en ;
+                                                                  rdfs:label "weatheringFragmentsProperty"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

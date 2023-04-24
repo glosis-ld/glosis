@@ -1,0 +1,134 @@
+@prefix : <http://w3id.org/glosis/model/unit#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/glosis/model/unit#> .
+
+<http://w3id.org/glosis/model/unit> rdf:type owl:Ontology ;
+                                     owl:versionIRI <http://w3id.org/glosis/model/unit/1.1.0> ;
+                                     <http://purl.org/dc/terms/creator> _:genid-nodeid-node1gsrbbt1ix3 ,
+                                                                        _:genid-nodeid-node1gsrbbt1ix5 ,
+                                                                        _:genid1 ,
+                                                                        _:genid3 ,
+                                                                        _:genid5 ;
+                                     <http://purl.org/dc/terms/description> "This ontology represents units of measurement used in laboratory analysis procedures of GloSIS that do not feature in the ontology. This ontology is an extension to the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+                                     <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
+                                     <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt and Africa Soil Profile Database"@en ;
+                                     <http://purl.org/dc/terms/title> "GLOSIS units of measurement"@en ;
+                                     owl:versionInfo "1.1.0" .
+
+_:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+
+_:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+
+_:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "ISRIC"
+                                          ] ;
+          rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
+          <http://xmlns.com/foaf/0.1/name> "Luís Moreira de Sousa" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://qudt.org/schema/qutd/hasQuantityKind
+<http://qudt.org/schema/qutd/hasQuantityKind> rdf:type owl:AnnotationProperty .
+
+
+###  http://qudt.org/schema/qutd/plainTextDescription
+<http://qudt.org/schema/qutd/plainTextDescription> rdf:type owl:AnnotationProperty .
+
+
+###  http://qudt.org/schema/qutd/ucumCode
+<http://qudt.org/schema/qutd/ucumCode> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/affiliation
+<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://qudt.org/schema/qudt/UCUMcs
+<http://qudt.org/schema/qudt/UCUMcs> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qutd/Unit
+<http://qudt.org/schema/qutd/Unit> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/glosis/model/unit/CentiMOL-PER-L
+<http://w3id.org/glosis/model/unit/CentiMOL-PER-L> rdf:type owl:NamedIndividual ,
+                                                            <http://qudt.org/schema/qutd/Unit> ;
+                                                   <http://qudt.org/schema/qutd/hasQuantityKind> <http://qudt.org/vocab/quantitykind/AmountOfSubstancePerUnitVolume> ;
+                                                   <http://qudt.org/schema/qutd/plainTextDescription> "0,01-fold of the SI base unit mole divided by the unit litre" ;
+                                                   <http://qudt.org/schema/qutd/ucumCode> "cmol.l-1"^^<http://qudt.org/schema/qudt/UCUMcs> ,
+                                                                                          "cmol/l"^^<http://qudt.org/schema/qudt/UCUMcs> ;
+                                                   rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
+                                                   rdfs:label "Centimol Per Liter"@en-us ,
+                                                              "Centimol Per Litre"@en .
+
+
+###  http://w3id.org/glosis/model/unit/GM-PER-HectoGM
+<http://w3id.org/glosis/model/unit/GM-PER-HectoGM> rdf:type owl:NamedIndividual ,
+                                                            <http://qudt.org/schema/qutd/Unit> ;
+                                                   <http://qudt.org/schema/qutd/hasQuantityKind> <http://qudt.org/vocab/quantitykind/MassRatio> ;
+                                                   <http://qudt.org/schema/qutd/plainTextDescription> "0,001 fold of the SI base unit kilogram divided by 0,1-fold of the SI base unit kilogram" ;
+                                                   <http://qudt.org/schema/qutd/ucumCode> "g/100g"^^<http://qudt.org/schema/qudt/UCUMcs> ;
+                                                   rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
+                                                   rdfs:label "Gram Per Hectogram"@en ,
+                                                              "Gram Per Hectogram"@en-us .
+
+
+###  http://w3id.org/glosis/model/unit/M3-PER-HundredM3
+<http://w3id.org/glosis/model/unit/M3-PER-HundredM3> rdf:type owl:NamedIndividual ,
+                                                              <http://qudt.org/schema/qutd/Unit> ;
+                                                     <http://qudt.org/schema/qutd/hasQuantityKind> <http://qudt.org/vocab/quantitykind/VolumeFraction> ;
+                                                     <http://qudt.org/schema/qutd/plainTextDescription> "SI base unit metre with the exponent 3 divided by 100-fold of the SI base unit metre with the exponent 3" ;
+                                                     <http://qudt.org/schema/qutd/ucumCode> "m3/100m3"^^<http://qudt.org/schema/qudt/UCUMcs> ;
+                                                     rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
+                                                     rdfs:label "Cubic meter per one hundred cubic meter"@en-us ,
+                                                                "Cubic metre per one hundred cubic metre"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

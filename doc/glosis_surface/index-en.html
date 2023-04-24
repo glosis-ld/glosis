@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>GLOSIS ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/surface","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/surface","name":"GLOSIS ontology", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists.", "datePublished":"Date of release", "version":"1.1.0", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"},{"@type":"Person","name":"W3C/OGC Spatial Data on the Web Working Group"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>GLOSIS ontology</h1>
+<h2>Release Date of release</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/glosis/model/surface/1.1.0">http://w3id.org/glosis/model/surface/1.1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Authors:</dt>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd><dd>Bogusz Janiak, PSNC</dd><dd>W3C/OGC Spatial Data on the Web Working Group</dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a></dd><dd><a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a></dd><dd><a href="http://w3id.org/glosis/model/codelists/">http://w3id.org/glosis/model/codelists/</a></dd><dd><a href="http://w3id.org/glosis/model/common/">http://w3id.org/glosis/model/common/</a></dd><dd><a href="http://w3id.org/glosis/model/iso28258/2013/">http://w3id.org/glosis/model/iso28258/2013/</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_NC_SA_3.0_IGO-blue.svg" alt="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" /></a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" rel="license" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cc-by-nc-sa_icon.svg/120px-Cc-by-nc-sa_icon.svg.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>GloSIS Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">GloSIS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/BleachedSand" title="http://w3id.org/glosis/model/common/BleachedSand">
+         <span>bleached sand</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/ColourDry" title="http://w3id.org/glosis/model/common/ColourDry">
+         <span>colour dry</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/ColourWet" title="http://w3id.org/glosis/model/common/ColourWet">
+         <span>colour wet</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/CracksDepth" title="http://w3id.org/glosis/model/common/CracksDepth">
+         <span>cracks depth</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/CracksDistance"
+         title="http://w3id.org/glosis/model/common/CracksDistance">
+         <span>cracks distance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/CracksWidth" title="http://w3id.org/glosis/model/common/CracksWidth">
+         <span>cracks width</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/FragmentCover"
+         title="http://w3id.org/glosis/model/common/FragmentCover">
+         <span>fragment cover</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/FragmentSize" title="http://w3id.org/glosis/model/common/FragmentSize">
+         <span>fragment size</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/GL_Surface" title="http://w3id.org/glosis/model/surface/GL_Surface">
+         <span>g l surface</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/OrganicMatterClass"
+         title="http://w3id.org/glosis/model/common/OrganicMatterClass">
+         <span>organic matter class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/RockAbundance"
+         title="http://w3id.org/glosis/model/common/RockAbundance">
+         <span>rock abundance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/RockShape" title="http://w3id.org/glosis/model/common/RockShape">
+         <span>rock shape</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/RockSize" title="http://w3id.org/glosis/model/common/RockSize">
+         <span>rock size</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SaltCover" title="http://w3id.org/glosis/model/surface/SaltCover">
+         <span>salt cover</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SaltPresence"
+         title="http://w3id.org/glosis/model/surface/SaltPresence">
+         <span>salt presence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SaltPresenceValue"
+         title="http://w3id.org/glosis/model/surface/SaltPresenceValue">
+         <span>salt presence value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SaltThickness"
+         title="http://w3id.org/glosis/model/surface/SaltThickness">
+         <span>salt thickness</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SealingConsistence"
+         title="http://w3id.org/glosis/model/surface/SealingConsistence">
+         <span>sealing consistence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SealingThickness"
+         title="http://w3id.org/glosis/model/surface/SealingThickness">
+         <span>sealing thickness</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/Texture" title="http://w3id.org/glosis/model/common/Texture">
+         <span>texture</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/glosis/model/common/WeatheringFragments"
+         title="http://w3id.org/glosis/model/common/WeatheringFragments">
+         <span>weathering fragments</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/saltCoverProperty"
+         title="http://w3id.org/glosis/model/surface/saltCoverProperty">SaltCoverProperty</a>
+   </li>
+   <li>
+      <a href="#/saltPresenceProperty"
+         title="http://w3id.org/glosis/model/surface/saltPresenceProperty">saltPresenceProperty</a>
+   </li>
+   <li>
+      <a href="#/saltThicknessProperty"
+         title="http://w3id.org/glosis/model/surface/saltThicknessProperty">SaltThicknessProperty</a>
+   </li>
+   <li>
+      <a href="#/sealingConsistenceProperty"
+         title="http://w3id.org/glosis/model/surface/sealingConsistenceProperty">sealingConsistenceProperty</a>
+   </li>
+   <li>
+      <a href="#/sealingThicknessProperty"
+         title="http://w3id.org/glosis/model/surface/sealingThicknessProperty">sealingThicknessProperty</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">GloSIS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for GloSIS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by GloSIS Ontology: Main module.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/BleachedSand" title="http://w3id.org/glosis/model/common/BleachedSand">
+            <span>bleached sand</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/ColourDry" title="http://w3id.org/glosis/model/common/ColourDry">
+            <span>colour dry</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/ColourWet" title="http://w3id.org/glosis/model/common/ColourWet">
+            <span>colour wet</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/CracksDepth" title="http://w3id.org/glosis/model/common/CracksDepth">
+            <span>cracks depth</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/CracksDistance"
+            title="http://w3id.org/glosis/model/common/CracksDistance">
+            <span>cracks distance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/CracksWidth" title="http://w3id.org/glosis/model/common/CracksWidth">
+            <span>cracks width</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/FragmentCover"
+            title="http://w3id.org/glosis/model/common/FragmentCover">
+            <span>fragment cover</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/FragmentSize" title="http://w3id.org/glosis/model/common/FragmentSize">
+            <span>fragment size</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/GL_Surface" title="http://w3id.org/glosis/model/surface/GL_Surface">
+            <span>g l surface</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/OrganicMatterClass"
+            title="http://w3id.org/glosis/model/common/OrganicMatterClass">
+            <span>organic matter class</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/RockAbundance"
+            title="http://w3id.org/glosis/model/common/RockAbundance">
+            <span>rock abundance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/RockShape" title="http://w3id.org/glosis/model/common/RockShape">
+            <span>rock shape</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/RockSize" title="http://w3id.org/glosis/model/common/RockSize">
+            <span>rock size</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SaltCover" title="http://w3id.org/glosis/model/surface/SaltCover">
+            <span>salt cover</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SaltPresence"
+            title="http://w3id.org/glosis/model/surface/SaltPresence">
+            <span>salt presence</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SaltPresenceValue"
+            title="http://w3id.org/glosis/model/surface/SaltPresenceValue">
+            <span>salt presence value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SaltThickness"
+            title="http://w3id.org/glosis/model/surface/SaltThickness">
+            <span>salt thickness</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SealingConsistence"
+            title="http://w3id.org/glosis/model/surface/SealingConsistence">
+            <span>sealing consistence</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SealingThickness"
+            title="http://w3id.org/glosis/model/surface/SealingThickness">
+            <span>sealing thickness</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/Texture" title="http://w3id.org/glosis/model/common/Texture">
+            <span>texture</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/glosis/model/common/WeatheringFragments"
+            title="http://w3id.org/glosis/model/common/WeatheringFragments">
+            <span>weathering fragments</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://w3id.org/glosis/model/common/BleachedSand">
+      <h3>bleached sand<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/BleachedSand</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/ColourDry">
+      <h3>colour dry<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/ColourDry</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/ColourWet">
+      <h3>colour wet<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/ColourWet</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/CracksDepth">
+      <h3>cracks depth<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/CracksDepth</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/CracksDistance">
+      <h3>cracks distance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/CracksDistance</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/CracksWidth">
+      <h3>cracks width<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/CracksWidth</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/FragmentCover">
+      <h3>fragment cover<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/FragmentCover</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/FragmentSize">
+      <h3>fragment size<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/FragmentSize</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="/GL_Surface">
+      <h3>g l surface<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/GL_Surface</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://w3id.org/glosis/model/iso28258/2013/Surface"
+               target="_blank"
+               title="http://w3id.org/glosis/model/iso28258/2013/Surface">surface</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/OrganicMatterClass">
+      <h3>organic matter class<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/OrganicMatterClass</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/RockAbundance">
+      <h3>rock abundance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/RockAbundance</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/RockShape">
+      <h3>rock shape<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/RockShape</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/RockSize">
+      <h3>rock size<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/RockSize</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="/SaltCover">
+      <h3>salt cover<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SaltCover</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SaltPresence">
+      <h3>salt presence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SaltPresence</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SaltPresenceValue">
+      <h3>salt presence value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SaltPresenceValue</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/QuantityValue"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SaltThickness">
+      <h3>salt thickness<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SaltThickness</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SealingConsistence">
+      <h3>sealing consistence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SealingConsistence</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SealingThickness">
+      <h3>sealing thickness<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SealingThickness</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/Texture">
+      <h3>texture<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/Texture</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/glosis/model/common/WeatheringFragments">
+      <h3>weathering fragments<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/common/WeatheringFragments</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/saltCoverProperty"
+            title="http://w3id.org/glosis/model/surface/saltCoverProperty">SaltCoverProperty</a>
+      </li>
+      <li>
+         <a href="#/saltPresenceProperty"
+            title="http://w3id.org/glosis/model/surface/saltPresenceProperty">saltPresenceProperty</a>
+      </li>
+      <li>
+         <a href="#/saltThicknessProperty"
+            title="http://w3id.org/glosis/model/surface/saltThicknessProperty">SaltThicknessProperty</a>
+      </li>
+      <li>
+         <a href="#/sealingConsistenceProperty"
+            title="http://w3id.org/glosis/model/surface/sealingConsistenceProperty">sealingConsistenceProperty</a>
+      </li>
+      <li>
+         <a href="#/sealingThicknessProperty"
+            title="http://w3id.org/glosis/model/surface/sealingThicknessProperty">sealingThicknessProperty</a>
+      </li>
+   </ul>
+   <div class="entity" id="/saltCoverProperty">
+      <h3>SaltCoverProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/saltCoverProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/surface</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/saltPresenceProperty">
+      <h3>saltPresenceProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/saltPresenceProperty</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/Quantitykind"
+               target="_blank"
+               title="http://qudt.org/schema/qudt/Quantitykind">quantitykind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/saltThicknessProperty">
+      <h3>SaltThicknessProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/saltThicknessProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/surface</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/sealingConsistenceProperty">
+      <h3>sealingConsistenceProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/sealingConsistenceProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/surface</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/sealingThicknessProperty">
+      <h3>sealingThicknessProperty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/surface/sealingThicknessProperty</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://w3id.org/glosis/model/surface</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

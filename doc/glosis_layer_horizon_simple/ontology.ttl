@@ -1,0 +1,183 @@
+@prefix : <http://w3id.org/glosis/model/layerhorizon#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/glosis/model/layerhorizon#> .
+
+<http://w3id.org/glosis/model/layerhorizon> rdf:type owl:Ontology ;
+                                             owl:versionIRI <http://w3id.org/glosis/model/layerhorizon/1.1.0> ;
+                                             owl:imports <http://w3id.org/glosis/model/codelists/> ,
+                                                         <http://w3id.org/glosis/model/common/> ,
+                                                         <http://w3id.org/glosis/model/iso28258/2013/> ,
+                                                         <http://www.w3.org/ns/sosa/> ,
+                                                         <http://www.w3.org/ns/ssn/> ;
+                                             <http://purl.org/dc/terms/creator> _:genid-nodeid-node1gsrba6v7x3 ,
+                                                                                _:genid-nodeid-node1gsrba6v7x5 ,
+                                                                                _:genid1 ,
+                                                                                _:genid3 ,
+                                                                                _:genid5 ;
+                                             <http://purl.org/dc/terms/description> "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+                                             <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
+                                             <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+                                             <http://purl.org/dc/terms/title> "GLOSIS ontology"@en ;
+                                             owl:versionInfo "1.1.0" .
+
+_:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "ISRIC"
+                                          ] ;
+          rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
+          <http://xmlns.com/foaf/0.1/name> "Luís Moreira de Sousa" .
+
+_:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+
+_:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/affiliation
+<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#cardinality
+owl:cardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#maxCardinality
+owl:maxCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error2
+<http://org.semanticweb.owlapi/error#Error2> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error3
+<http://org.semanticweb.owlapi/error#Error3> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error4
+<http://org.semanticweb.owlapi/error#Error4> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error5
+<http://org.semanticweb.owlapi/error#Error5> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error6
+<http://org.semanticweb.owlapi/error#Error6> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error7
+<http://org.semanticweb.owlapi/error#Error7> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error8
+<http://org.semanticweb.owlapi/error#Error8> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/GypsumFormsValueCode
+<http://w3id.org/glosis/model/codelists/GypsumFormsValueCode> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Horizon
+<http://w3id.org/glosis/model/iso28258/2013/Horizon> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Layer
+<http://w3id.org/glosis/model/iso28258/2013/Layer> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/layerhorizon/GL_Horizon
+<http://w3id.org/glosis/model/layerhorizon/GL_Horizon> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error1> ,
+                                                                       <http://org.semanticweb.owlapi/error#Error2> ,
+                                                                       <http://org.semanticweb.owlapi/error#Error3> ,
+                                                                       <http://org.semanticweb.owlapi/error#Error4> ,
+                                                                       <http://w3id.org/glosis/model/iso28258/2013/Horizon> .
+
+
+###  http://w3id.org/glosis/model/layerhorizon/GL_Layer
+<http://w3id.org/glosis/model/layerhorizon/GL_Layer> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error5> ,
+                                                                     <http://org.semanticweb.owlapi/error#Error6> ,
+                                                                     <http://org.semanticweb.owlapi/error#Error7> ,
+                                                                     <http://org.semanticweb.owlapi/error#Error8> ,
+                                                                     <http://w3id.org/glosis/model/iso28258/2013/Layer> .
+
+
+###  http://w3id.org/glosis/model/layerhorizon/GypsumForms
+<http://w3id.org/glosis/model/layerhorizon/GypsumForms> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                          owl:someValuesFrom <http://w3id.org/glosis/model/codelists/GypsumFormsValueCode>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
+                                                                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( <http://w3id.org/glosis/model/layerhorizon/GL_Horizon>
+                                                                                                            <http://w3id.org/glosis/model/layerhorizon/GL_Layer>
+                                                                                                          )
+                                                                                            ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                          owl:hasValue <http://w3id.org/glosis/model/layerhorizon/gypsumFormsProperty>
+                                                                        ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/glosis/model/layerhorizon/gypsumFormsProperty
+<http://w3id.org/glosis/model/layerhorizon/gypsumFormsProperty> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                rdfs:isDefinedBy "GfSD Table 41"@en ;
+                                                                rdfs:label "gypsumFormsProperty"@en .
+
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

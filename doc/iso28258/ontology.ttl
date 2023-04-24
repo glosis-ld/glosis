@@ -1,0 +1,357 @@
+@prefix : <http://w3id.org/glosis/model/iso28258/2013#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3id.org/glosis/model/iso28258/2013#> .
+
+<http://w3id.org/glosis/model/iso28258/2013> rdf:type owl:Ontology ;
+                                              owl:versionIRI <http://w3id.org/glosis/model/iso28258/2013/1.1.0> ;
+                                              <http://purl.org/dc/terms/creator> _:genid-nodeid-node1gsrbbvuox3 ,
+                                                                                 _:genid1 ,
+                                                                                 _:genid3 ;
+                                              <http://purl.org/dc/terms/description> "The ontology represents a subset of the ISO28258 standard data model entities necessary for GLOSIS ontology"@en ;
+                                              <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en ;
+                                              <http://purl.org/dc/terms/source> <https://www.iso.org/standard/44595.html> ;
+                                              <http://purl.org/dc/terms/title> "ISO28258 ontology for GLOSIS"@en ;
+                                              owl:versionInfo "1.1.0" .
+
+_:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+
+_:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/affiliation
+<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+                                                                                   rdfs:range <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> ;
+                                                                                   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                                                   rdfs:label "lineage" .
+
+
+###  http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+                                                                                     rdfs:range <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> ;
+                                                                                     rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                                                     rdfs:label "parameter" .
+
+
+###  http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+                                                                                          rdfs:range <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> ,
+                                                                                                     <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> ;
+                                                                                          rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                                                          rdfs:label "sampledFeature" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer
+<http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Horizon> ;
+                                                                    rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Layer> ;
+                                                                    rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                    rdfs:label "horizonInLayer" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon
+<http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Layer> ;
+                                                                    rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Horizon> ;
+                                                                    rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                    rdfs:label "developedHorizon" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite
+<http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Plot> ;
+                                                             rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Site> ;
+                                                             rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                             rdfs:label "plotInSite" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Plot.profile
+<http://w3id.org/glosis/model/iso28258/2013/Plot.profile> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Plot> ;
+                                                          rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Profile> ;
+                                                          rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                          rdfs:label "profile" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Profile.element
+<http://w3id.org/glosis/model/iso28258/2013/Profile.element> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Profile> ;
+                                                             rdfs:range <http://w3id.org/glosis/model/iso28258/2013/ProfileElement> ;
+                                                             rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                             rdfs:label "element" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite
+<http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Site> ;
+                                                                 rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Profile> ;
+                                                                 rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                 rdfs:label "profileSite" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot
+<http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Profile> ;
+                                                                  rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Plot> ;
+                                                                  rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                  rdfs:label "samplingPlot" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/ProfileElement> ;
+                                                                             rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Profile> ;
+                                                                             rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                             rdfs:label "elementOfProfile" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/ProfileElement> ;
+                                                                       rdfs:range [ rdf:type owl:Class ;
+                                                                                    owl:oneOf ( <http://qudt.org/vocab/quantitykind/Depth>
+                                                                                              )
+                                                                                  ] ;
+                                                                       rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                       rdfs:label "lowerDepth" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/ProfileElement> .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/ProfileElement> ;
+                                                                       rdfs:range [ rdf:type owl:Class ;
+                                                                                    owl:oneOf ( <http://qudt.org/vocab/quantitykind/Depth>
+                                                                                              )
+                                                                                  ] ;
+                                                                       rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                       rdfs:label "upperDepth" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot
+<http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Site> ;
+                                                               rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Plot> ;
+                                                               rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                               rdfs:label "samplingPlot" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile
+<http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://w3id.org/glosis/model/iso28258/2013/Site> ;
+                                                                 rdfs:range <http://w3id.org/glosis/model/iso28258/2013/Profile> ;
+                                                                 rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                 rdfs:label "typicalProfile" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage
+<http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> rdf:type owl:Class ;
+                                                                          rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                                          rdfs:label "LI_Lineage" .
+
+
+###  http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature
+<http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> ;
+                                                                                 rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                                                 rdfs:label "GFI_DomainFeature" ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#definition> "The class GFI_DomainFeature represents 'real-world' features which are the ultimate subject of an observation campaign, i.e. the features from an application domain that are .lt.i.gt.not .lt..sl.i.gt.artefacts of the observation process (sampling features). " .
+
+
+###  http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature
+<http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> rdf:type owl:Class ;
+                                                                           owl:equivalentClass <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                                           rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                                           rdfs:label "GFI_Feature" ;
+                                                                           <http://www.w3.org/2004/02/skos/core#definition> "The class GFI_Feature (Figure 2) is an instance of the .og.metaclass.cg. GF_FeatureType (ISO 19109). It represents the set of all classes which are feature types. NOTE	GFI_Feature is implemented in GML (ISO 19136:2007) by the element gml:AbstractFeature and type gml:AbstractFeatureType. In an implementation this abstract class shall be substituted by a concrete class representing a feature type from an application schema associated with a domain of discourse (ISO 19109, ISO 19101). Sampling Features (Clause 8) are a class of feature-types whose role is primarily associated with observations. " .
+
+
+###  http://def.isotc211.org/iso19156/2011/Observation#NamedValue
+<http://def.isotc211.org/iso19156/2011/Observation#NamedValue> rdf:type owl:Class ;
+                                                               rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                               rdfs:label "NamedValue" ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes. </skos:definition><rdfs:isDefinedBy>http://standards.iso.org/iso/19156/ed-1/en/" .
+
+
+###  http://def.isotc211.org/iso19156/2011/Observation#OM_Observation
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> rdf:type owl:Class ;
+                                                                   owl:equivalentClass <http://www.w3.org/ns/sosa/Observation> ;
+                                                                   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                   rdfs:label "Observation" ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "Observation process is a subtype of OM_Process. It is a process used to generate the result of the observation." .
+
+
+###  http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> rdf:type owl:Class ;
+                                                                           owl:equivalentClass <http://www.w3.org/ns/sosa/Sample> ;
+                                                                           rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> ;
+                                                                           rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                                           rdfs:label "SF_SamplingFeature" ;
+                                                                           <http://www.w3.org/2004/02/skos/core#definition> ".lt.ul.gt.	.lt.li.gt..lt.b.gt.Role of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE	A .ldq.station.rdq. is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE	A transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. .lt.ul.gt.	.lt.li.gt..lt.b.gt.Classification of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10." .
+
+
+###  http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature
+<http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+                                                                                         rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+                                                                                         rdfs:label "SF_SpatialSamplingFeature" ;
+                                                                                         <http://www.w3.org/2004/02/skos/core#definition> "When observations are made to estimate properties of a geospatial feature, in particular where the value of a property varies within the scope of the feature, a spatial sampling feature is used. Depending on accessibility and on the nature of the expected property variation, the sampling feature may be extensive in one, two or three spatial dimensions. Processing and visualization methods are often dependent on the topological dimension of the sampling manifold, so this provides a natural classification system for sampling features.  This classification follows common practice in focussing on conventional spatial dimensions. Properties observed on sampling features may be time-dependent, but the temporal axis does not generally contribute to the classification of sampling feature classes. Sampling feature identity is usually less time-dependent than is the property value." .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Horizon
+<http://w3id.org/glosis/model/iso28258/2013/Horizon> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://w3id.org/glosis/model/iso28258/2013/ProfileElement> ;
+                                                     rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                     rdfs:label "Horizon" ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "domain of a soil with a certain vertical extension, which is more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in-situ sedimented organic residues of up-growing plants (peat)" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Layer
+<http://w3id.org/glosis/model/iso28258/2013/Layer> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://w3id.org/glosis/model/iso28258/2013/ProfileElement> ;
+                                                   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                   rdfs:label "Layer" ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "domain of a soil with a certain vertical extension developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains" .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Plot
+<http://w3id.org/glosis/model/iso28258/2013/Plot> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> ;
+                                                  rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en> ;
+                                                  rdfs:label "Plot" ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Elementary area where individual observations are made and/or samples are taken." .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Profile
+<http://w3id.org/glosis/model/iso28258/2013/Profile> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> ;
+                                                     rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                     rdfs:label "Profile" ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Soil profile describable representation of the soil that is characterised by a vertical succession of horizons or at least one or several parent material layers. Soil profile is an ordered set of soil horizons and/or layers." .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/ProfileElement
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+                                                            rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                            rdfs:label "ProfileElement" ;
+                                                            <http://www.w3.org/2004/02/skos/core#definition> "Profle element is an abstract feature type grouping layers and horizons. Profle element may be considered as a horizontal feature that is parallel to the earth surface and that is part of the profle." .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Site
+<http://w3id.org/glosis/model/iso28258/2013/Site> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> ;
+                                                  rdfs:isDefinedBy <https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en> ;
+                                                  rdfs:label "Site" ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Defined area which is subject to a soil quality investigation." .
+
+
+###  http://w3id.org/glosis/model/iso28258/2013/Surface
+<http://w3id.org/glosis/model/iso28258/2013/Surface> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://w3id.org/glosis/model/iso28258/2013/Plot> ;
+                                                     rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                     rdfs:label "Surface" ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Surface is a subtype of a plot with surface shape. Surfaces may be located within other surfaces" .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Sample
+<http://www.w3.org/ns/sosa/Sample> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://qudt.org/vocab/quantitykind/Depth
+<http://qudt.org/vocab/quantitykind/Depth> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order> rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+                                                                  rdfs:label "order" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

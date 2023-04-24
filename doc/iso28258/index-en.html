@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>ISO28258 ontology for GLOSIS</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/iso28258/2013","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/iso28258/2013","name":"ISO28258 ontology for GLOSIS", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists.", "datePublished":"Date of release", "version":"1.1.0", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>ISO28258 ontology for GLOSIS</h1>
+<h2>Release Date of release</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://w3id.org/glosis/model/iso28258/2013/1.1.0">http://w3id.org/glosis/model/iso28258/2013/1.1.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Authors:</dt>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd><dd>Bogusz Janiak, PSNC</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_NC_SA_3.0_IGO-blue.svg" alt="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" /></a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/igo/" rel="license" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cc-by-nc-sa_icon.svg/120px-Cc-by-nc-sa_icon.svg.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>GloSIS Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology. The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources. The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or skos for the representation of codelists.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">GloSIS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">
+         <span>feature of interest</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+         title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">GFI_DomainFeature</a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+         title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">GFI_Feature</a>
+   </li>
+   <li>
+      <a href="#/Horizon"
+         title="http://w3id.org/glosis/model/iso28258/2013/Horizon">Horizon</a>
+   </li>
+   <li>
+      <a href="#/Layer" title="http://w3id.org/glosis/model/iso28258/2013/Layer">Layer</a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
+         title="http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage">LI_Lineage</a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+         title="http://def.isotc211.org/iso19156/2011/Observation#NamedValue">NamedValue</a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+         title="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation">Observation</a>
+   </li>
+   <li>
+      <a href="#/Plot" title="http://w3id.org/glosis/model/iso28258/2013/Plot">Plot</a>
+   </li>
+   <li>
+      <a href="#/Profile"
+         title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+   </li>
+   <li>
+      <a href="#/ProfileElement"
+         title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+         title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">SF_SamplingFeature</a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature"
+         title="http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature">SF_SpatialSamplingFeature</a>
+   </li>
+   <li>
+      <a href="#/Site" title="http://w3id.org/glosis/model/iso28258/2013/Site">Site</a>
+   </li>
+   <li>
+      <a href="#/Surface"
+         title="http://w3id.org/glosis/model/iso28258/2013/Surface">Surface</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/Layer.developedHorizon"
+         title="http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon">developedHorizon</a>
+   </li>
+   <li>
+      <a href="#/Profile.element"
+         title="http://w3id.org/glosis/model/iso28258/2013/Profile.element">element</a>
+   </li>
+   <li>
+      <a href="#/ProfileElement.elementOfProfile"
+         title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile">elementOfProfile</a>
+   </li>
+   <li>
+      <a href="#/Horizon.horizonInLayer"
+         title="http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer">horizonInLayer</a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage"
+         title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage">lineage</a>
+   </li>
+   <li>
+      <a href="#/ProfileElement.lowerDepth"
+         title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth">lowerDepth</a>
+   </li>
+   <li>
+      <a href="#/ProfileElement.order"
+         title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order">
+         <span>order</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter"
+         title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter">parameter</a>
+   </li>
+   <li>
+      <a href="#/Plot.plotInSite"
+         title="http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite">plotInSite</a>
+   </li>
+   <li>
+      <a href="#/Plot.profile"
+         title="http://w3id.org/glosis/model/iso28258/2013/Plot.profile">profile</a>
+   </li>
+   <li>
+      <a href="#/Profile.profileSite"
+         title="http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite">profileSite</a>
+   </li>
+   <li>
+      <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+         title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">sampledFeature</a>
+   </li>
+   <li>
+      <a href="#/Profile.samplingPlot"
+         title="http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot">samplingPlot</a>
+   </li>
+   <li>
+      <a href="#/Site.samplingPlot"
+         title="http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot">samplingPlot</a>
+   </li>
+   <li>
+      <a href="#/Site.typicalProfile"
+         title="http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile">typicalProfile</a>
+   </li>
+   <li>
+      <a href="#/ProfileElement.upperDepth"
+         title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth">upperDepth</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/ProfileElement.order"
+         title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order">
+         <span>order</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">GloSIS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for GloSIS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by GloSIS Ontology: Main module.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">
+            <span>feature of interest</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+            title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">GFI_DomainFeature</a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+            title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">GFI_Feature</a>
+      </li>
+      <li>
+         <a href="#/Horizon"
+            title="http://w3id.org/glosis/model/iso28258/2013/Horizon">Horizon</a>
+      </li>
+      <li>
+         <a href="#/Layer" title="http://w3id.org/glosis/model/iso28258/2013/Layer">Layer</a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
+            title="http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage">LI_Lineage</a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+            title="http://def.isotc211.org/iso19156/2011/Observation#NamedValue">NamedValue</a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+            title="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation">Observation</a>
+      </li>
+      <li>
+         <a href="#/Plot" title="http://w3id.org/glosis/model/iso28258/2013/Plot">Plot</a>
+      </li>
+      <li>
+         <a href="#/Profile"
+            title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+      </li>
+      <li>
+         <a href="#/ProfileElement"
+            title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+            title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">SF_SamplingFeature</a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature"
+            title="http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature">SF_SpatialSamplingFeature</a>
+      </li>
+      <li>
+         <a href="#/Site" title="http://w3id.org/glosis/model/iso28258/2013/Site">Site</a>
+      </li>
+      <li>
+         <a href="#/Surface"
+            title="http://w3id.org/glosis/model/iso28258/2013/Surface">Surface</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/ns/sosa/FeatureOfInterest">
+      <h3>feature of interest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sosa/FeatureOfInterest</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+               title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">GFI_DomainFeature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">
+      <h3>GFI_DomainFeature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature</p>
+      <div class="comment">
+         <span class="markdown">The class GFI_DomainFeature represents 'real-world' features which are the ultimate subject of an observation campaign, i.e. the features from an application domain that are .lt.i.gt.not .lt..sl.i.gt.artefacts of the observation process (sampling features). </span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+               title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">GFI_Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">sampledFeature</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">
+      <h3>GFI_Feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature</p>
+      <div class="comment">
+         <span class="markdown">The class GFI_Feature (Figure 2) is an instance of the .og.metaclass.cg. GF_FeatureType (ISO 19109). It represents the set of all classes which are feature types. NOTE	GFI_Feature is implemented in GML (ISO 19136:2007) by the element gml:AbstractFeature and type gml:AbstractFeatureType. In an implementation this abstract class shall be substituted by a concrete class representing a feature type from an application schema associated with a domain of discourse (ISO 19109, ISO 19101). Sampling Features (Clause 8) are a class of feature-types whose role is primarily associated with observations. </span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+               title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">GFI_DomainFeature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Profile"
+               title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">SF_SamplingFeature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Site" title="http://w3id.org/glosis/model/iso28258/2013/Site">Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">sampledFeature</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Horizon">
+      <h3>Horizon<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Horizon</p>
+      <div class="comment">
+         <span class="markdown">domain of a soil with a certain vertical extension, which is more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in-situ sedimented organic residues of up-growing plants (peat)</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/ProfileElement"
+               title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/Horizon.horizonInLayer"
+               title="http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer">horizonInLayer</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/Layer.developedHorizon"
+               title="http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon">developedHorizon</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Layer">
+      <h3>Layer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Layer</p>
+      <div class="comment">
+         <span class="markdown">domain of a soil with a certain vertical extension developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/ProfileElement"
+               title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/Layer.developedHorizon"
+               title="http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon">developedHorizon</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/Horizon.horizonInLayer"
+               title="http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer">horizonInLayer</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage">
+      <h3>LI_Lineage<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage">lineage</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/Observation#NamedValue">
+      <h3>NamedValue<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/Observation#NamedValue</p>
+      <div class="comment">
+         <span class="markdown">The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes. &lt;/skos:definition&gt;&lt;rdfs:isDefinedBy&gt;http://standards.iso.org/iso/19156/ed-1/en/</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter">parameter</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation">
+      <h3>Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/Observation#OM_Observation</p>
+      <div class="comment">
+         <span class="markdown">Observation process is a subtype of OM_Process. It is a process used to generate the result of the observation.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Plot">
+      <h3>Plot<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Plot</p>
+      <div class="comment">
+         <span class="markdown">Elementary area where individual observations are made and/or samples are taken.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en">https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature"
+               title="http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature">SF_SpatialSamplingFeature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/Surface"
+               title="http://w3id.org/glosis/model/iso28258/2013/Surface">Surface</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/Plot.plotInSite"
+               title="http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite">plotInSite</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/Plot.profile"
+               title="http://w3id.org/glosis/model/iso28258/2013/Plot.profile">profile</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/Profile.samplingPlot"
+               title="http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot">samplingPlot</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/Site.samplingPlot"
+               title="http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot">samplingPlot</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Profile">
+      <h3>Profile<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Profile</p>
+      <div class="comment">
+         <span class="markdown">Soil profile describable representation of the soil that is characterised by a vertical succession of horizons or at least one or several parent material layers. Soil profile is an ordered set of soil horizons and/or layers.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+               title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">GFI_Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/Profile.element"
+               title="http://w3id.org/glosis/model/iso28258/2013/Profile.element">element</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/Profile.samplingPlot"
+               title="http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot">samplingPlot</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/ProfileElement.elementOfProfile"
+               title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile">elementOfProfile</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/Plot.profile"
+               title="http://w3id.org/glosis/model/iso28258/2013/Plot.profile">profile</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/Profile.profileSite"
+               title="http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite">profileSite</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/Site.typicalProfile"
+               title="http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile">typicalProfile</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ProfileElement">
+      <h3>ProfileElement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/ProfileElement</p>
+      <div class="comment">
+         <span class="markdown">Profle element is an abstract feature type grouping layers and horizons. Profle element may be considered as a horizontal feature that is parallel to the earth surface and that is part of the profle.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">SF_SamplingFeature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/Horizon"
+               title="http://w3id.org/glosis/model/iso28258/2013/Horizon">Horizon</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Layer" title="http://w3id.org/glosis/model/iso28258/2013/Layer">Layer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/ProfileElement.elementOfProfile"
+               title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile">elementOfProfile</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/ProfileElement.lowerDepth"
+               title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth">lowerDepth</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/ProfileElement.order"
+               title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order">order</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/ProfileElement.upperDepth"
+               title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth">upperDepth</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/Profile.element"
+               title="http://w3id.org/glosis/model/iso28258/2013/Profile.element">element</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">
+      <h3>SF_SamplingFeature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature</p>
+      <div class="comment">
+         <span class="markdown">.lt.ul.gt.	.lt.li.gt..lt.b.gt.Role of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE	A .ldq.station.rdq. is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE	A transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. .lt.ul.gt.	.lt.li.gt..lt.b.gt.Classification of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Sample"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Sample">sample</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+               title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">GFI_Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/ProfileElement"
+               title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature"
+               title="http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature">SF_SpatialSamplingFeature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage">lineage</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter">parameter</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">sampledFeature</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature">
+      <h3>SF_SpatialSamplingFeature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature</p>
+      <div class="comment">
+         <span class="markdown">When observations are made to estimate properties of a geospatial feature, in particular where the value of a property varies within the scope of the feature, a spatial sampling feature is used. Depending on accessibility and on the nature of the expected property variation, the sampling feature may be extensive in one, two or three spatial dimensions. Processing and visualization methods are often dependent on the topological dimension of the sampling manifold, so this provides a natural classification system for sampling features.  This classification follows common practice in focussing on conventional spatial dimensions. Properties observed on sampling features may be time-dependent, but the temporal axis does not generally contribute to the classification of sampling feature classes. Sampling feature identity is usually less time-dependent than is the property value.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+               title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">SF_SamplingFeature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/Plot" title="http://w3id.org/glosis/model/iso28258/2013/Plot">Plot</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Site">
+      <h3>Site<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Site</p>
+      <div class="comment">
+         <span class="markdown">Defined area which is subject to a soil quality investigation.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en">https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+               title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">GFI_Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/Profile.profileSite"
+               title="http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite">profileSite</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/Site.samplingPlot"
+               title="http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot">samplingPlot</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/Site.typicalProfile"
+               title="http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile">typicalProfile</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/Plot.plotInSite"
+               title="http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite">plotInSite</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Surface">
+      <h3>Surface<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Surface</p>
+      <div class="comment">
+         <span class="markdown">Surface is a subtype of a plot with surface shape. Surfaces may be located within other surfaces</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Plot" title="http://w3id.org/glosis/model/iso28258/2013/Plot">Plot</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/Layer.developedHorizon"
+            title="http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon">developedHorizon</a>
+      </li>
+      <li>
+         <a href="#/Profile.element"
+            title="http://w3id.org/glosis/model/iso28258/2013/Profile.element">element</a>
+      </li>
+      <li>
+         <a href="#/ProfileElement.elementOfProfile"
+            title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile">elementOfProfile</a>
+      </li>
+      <li>
+         <a href="#/Horizon.horizonInLayer"
+            title="http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer">horizonInLayer</a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage"
+            title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage">lineage</a>
+      </li>
+      <li>
+         <a href="#/ProfileElement.lowerDepth"
+            title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth">lowerDepth</a>
+      </li>
+      <li>
+         <a href="#/ProfileElement.order"
+            title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order">
+            <span>order</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter"
+            title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter">parameter</a>
+      </li>
+      <li>
+         <a href="#/Plot.plotInSite"
+            title="http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite">plotInSite</a>
+      </li>
+      <li>
+         <a href="#/Plot.profile"
+            title="http://w3id.org/glosis/model/iso28258/2013/Plot.profile">profile</a>
+      </li>
+      <li>
+         <a href="#/Profile.profileSite"
+            title="http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite">profileSite</a>
+      </li>
+      <li>
+         <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+            title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">sampledFeature</a>
+      </li>
+      <li>
+         <a href="#/Profile.samplingPlot"
+            title="http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot">samplingPlot</a>
+      </li>
+      <li>
+         <a href="#/Site.samplingPlot"
+            title="http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot">samplingPlot</a>
+      </li>
+      <li>
+         <a href="#/Site.typicalProfile"
+            title="http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile">typicalProfile</a>
+      </li>
+      <li>
+         <a href="#/ProfileElement.upperDepth"
+            title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth">upperDepth</a>
+      </li>
+   </ul>
+   <div class="entity" id="/Layer.developedHorizon">
+      <h3>developedHorizon<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Layer" title="http://w3id.org/glosis/model/iso28258/2013/Layer">Layer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Horizon"
+                  title="http://w3id.org/glosis/model/iso28258/2013/Horizon">Horizon</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/Profile.element">
+      <h3>element<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Profile.element</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Profile"
+                  title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/ProfileElement"
+                  title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/ProfileElement.elementOfProfile">
+      <h3>elementOfProfile<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/ProfileElement"
+                  title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Profile"
+                  title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/Horizon.horizonInLayer">
+      <h3>horizonInLayer<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Horizon"
+                  title="http://w3id.org/glosis/model/iso28258/2013/Horizon">Horizon</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Layer" title="http://w3id.org/glosis/model/iso28258/2013/Layer">Layer</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage">
+      <h3>lineage<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+                  title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">SF_SamplingFeature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
+                  title="http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage">LI_Lineage</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/ProfileElement.lowerDepth">
+      <h3>lowerDepth<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/ProfileElement"
+                  title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>{ <a href="http://qudt.org/vocab/quantitykind/Depth"
+                  target="_blank"
+                  title="http://qudt.org/vocab/quantitykind/Depth">depth</a> }</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/ProfileElement.order">
+      <h3>order<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/ProfileElement"
+                  title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#/ProfileElement.order">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter">
+      <h3>parameter<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+                  title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">SF_SamplingFeature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+                  title="http://def.isotc211.org/iso19156/2011/Observation#NamedValue">NamedValue</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/Plot.plotInSite">
+      <h3>plotInSite<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Plot" title="http://w3id.org/glosis/model/iso28258/2013/Plot">Plot</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Site" title="http://w3id.org/glosis/model/iso28258/2013/Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/Plot.profile">
+      <h3>profile<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Plot.profile</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Plot" title="http://w3id.org/glosis/model/iso28258/2013/Plot">Plot</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Profile"
+                  title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/Profile.profileSite">
+      <h3>profileSite<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Site" title="http://w3id.org/glosis/model/iso28258/2013/Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Profile"
+                  title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">
+      <h3>sampledFeature<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://standards.iso.org/iso/19156/ed-1/en/">http://standards.iso.org/iso/19156/ed-1/en/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+                  title="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">SF_SamplingFeature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+                  title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">GFI_DomainFeature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+                  title="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">GFI_Feature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/Profile.samplingPlot">
+      <h3>samplingPlot<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Profile"
+                  title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Plot" title="http://w3id.org/glosis/model/iso28258/2013/Plot">Plot</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/Site.samplingPlot">
+      <h3>samplingPlot<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Site" title="http://w3id.org/glosis/model/iso28258/2013/Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Plot" title="http://w3id.org/glosis/model/iso28258/2013/Plot">Plot</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/Site.typicalProfile">
+      <h3>typicalProfile<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Site" title="http://w3id.org/glosis/model/iso28258/2013/Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Profile"
+                  title="http://w3id.org/glosis/model/iso28258/2013/Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/ProfileElement.upperDepth">
+      <h3>upperDepth<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.iso.org/standard/44595.html">https://www.iso.org/standard/44595.html</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/ProfileElement"
+                  title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement">ProfileElement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>{ <a href="http://qudt.org/vocab/quantitykind/Depth"
+                  target="_blank"
+                  title="http://qudt.org/vocab/quantitykind/Depth">depth</a> }</dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/ProfileElement.order"
+            title="http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order">
+            <span>order</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/ProfileElement.order">
+      <h3>order<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#/ProfileElement.order">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
