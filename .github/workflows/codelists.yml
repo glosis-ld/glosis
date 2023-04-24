@@ -39,6 +39,11 @@ jobs:
     - name: Get current time and date
       if: ${{ success() }}
       run: echo "NOW=$(date)" >> $GITHUB_ENV
+    - name: actions/checkout
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
+        ref: ${{ github.event.pull_request.head.ref }}
     - name: Commit codelists
       if: ${{ success() }}
       uses: EndBug/add-and-commit@v9
