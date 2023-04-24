@@ -22,19 +22,19 @@
 @prefix virtrdf: <http://www.openlinksw.com/schemas/virtrdf#> .
 @prefix common: <http://portele.de/ont/inspire/baseInspire#> .
 @prefix iso19103: <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#> .
-@prefix iso28258: 	<http://w3id.org/glosis/model/iso28258/2013#> .
-@prefix glosis_cm: <http://w3id.org/glosis/model/common#> .
-@prefix glosis_pr: <http://w3id.org/glosis/model/profile#> .
-@prefix glosis_ex: <http://w3id.org/glosis/model/ext/property#> .
-@prefix glosis_sp: <http://w3id.org/glosis/model/siteplot#> .
+@prefix iso28258: 	<http://w3id.org/glosis/model/iso28258/2013/> .
+@prefix glosis_cm: <http://w3id.org/glosis/model/common/> .
+@prefix glosis_pr: <http://w3id.org/glosis/model/profile/> .
+@prefix glosis_ex: <http://w3id.org/glosis/model/ext/property/> .
+@prefix glosis_sp: <http://w3id.org/glosis/model/siteplot/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix sosa:  <http://www.w3.org/ns/sosa/> .
 @prefix gn: <http://www.geonames.org/ontology#> .
 @prefix geof: <http://www.opengis.net/def/function/geosparql/> .
 @prefix olu: <http://w3id.org/foodie/olu#> .
-@prefix glosis_lh: <http://w3id.org/glosis/model/layerhorizon#> .
-@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
+@prefix glosis_lh: <http://w3id.org/glosis/model/layerhorizon/> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists/> .
 @prefix cap-iacs-parcel: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
 @prefix fnml:   <http://semweb.mmlab.be/ns/fnml#> .
 @prefix fno: 	<https://w3id.org/function/ontology#> .
@@ -227,6 +227,20 @@ map:LUCAS_Topsoil_2015_20200323_LC_Observation
             rr:constant cap-iacs-parcel:landCover
         ];
     ];
+    rr:predicateObjectMap [
+        rr:predicate sosa:resultTime;
+        rr:objectMap [
+            rr:datatype xsd:dateTime;
+            rr:constant "2015-08-31T23:59:59";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sosa:phenomenonTime;
+        rr:objectMap [
+            rr:datatype xsd:dateTime;
+            rr:constant "2015-08-31T23:59:59";
+        ];
+    ];
 .
 
 ##################### LU observation ################
@@ -262,7 +276,7 @@ map:LUCAS_Topsoil_2015_20200323_LU_observation
         rr:predicate sosa:observedProperty;
         rr:objectMap [
             rr:termType rr:IRI;
-            rr:constant <http://w3id.org/glosis/model/siteplot#landUseClassProperty>
+            rr:constant <http://w3id.org/glosis/model/siteplot/landUseClassProperty>
         ];
     ];
 
@@ -339,7 +353,7 @@ map:LUCAS_Topsoil_2015_20200323_SiltObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#siltPropertyCode-SSFT>;
+          rr:constant <http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT>;
       ];
     ];
 
@@ -406,7 +420,7 @@ map:LUCAS_Topsoil_2015_20200323_SandObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#sandPropertyCode-SSFT>;
+          rr:constant <http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT>;
 
       ];
     ];
@@ -475,7 +489,7 @@ map:LUCAS_Topsoil_2015_20200323_ClayObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#clayPropertyCode-CT>;
+          rr:constant <http://w3id.org/glosis/model/codelists/clayPropertyCode-CT>;
 
       ];
     ];
@@ -545,7 +559,7 @@ map:LUCAS_Topsoil_2015_20200323_FragmentsObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/layerhorizon#coarseFragmentsProperty>;
+          rr:constant <http://w3id.org/glosis/model/layerhorizon/coarseFragmentsProperty>;
 
       ];
     ];
@@ -612,7 +626,7 @@ map:LUCAS_Topsoil_2015_20200323_OrganicCarbonContentObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-Carorg>;
+          rr:constant <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carorg>;
       ];
     ];
 .
@@ -675,7 +689,7 @@ map:LUCAS_Topsoil_2015_20200323_CarbonatesContentObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/layerhorizon#totalCarbonateEquivalentProperty>;
+          rr:constant <http://w3id.org/glosis/model/layerhorizon/totalCarbonateEquivalentProperty>;
       ];
     ];
   .
@@ -739,14 +753,14 @@ map:LUCAS_Topsoil_2015_20200323_phCaCl2Observation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-pH>;
+          rr:constant <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-pH>;
       ];
     ];
     rr:predicateObjectMap [
       rr:predicate sosa:usedProcedure;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/procedure#pHProcedure-pHCaCl2>;
+          rr:constant <http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2>;
       ];
     ];
   .
@@ -807,14 +821,14 @@ map:LUCAS_Topsoil_2015_20200323_phH2oObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-pH>;
+          rr:constant <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-pH>;
       ];
     ];
     rr:predicateObjectMap [
       rr:predicate sosa:usedProcedure;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/procedure#pHProcedure-pHH2O>;
+          rr:constant <http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O>;
       ];
     ];
   .
@@ -876,7 +890,7 @@ map:LUCAS_Topsoil_2015_20200323_PotassiumObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-Potext>;
+          rr:constant <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potext>;
       ];
     ];
   .
@@ -941,7 +955,7 @@ map:LUCAS_Topsoil_2015_20200323_NitrogenObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-Nittot>;
+          rr:constant <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot>;
       ];
     ];
   .
@@ -1004,7 +1018,7 @@ map:LUCAS_Topsoil_2015_20200323_PhosphorusObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode-Photot>;
+          rr:constant <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Photot>;
       ];
     ];
   .
@@ -1067,7 +1081,7 @@ map:LUCAS_Topsoil_2015_20200323_ECObservation
       rr:predicate sosa:observedProperty;
       rr:objectMap [
           rr:termType rr:IRI;
-          rr:constant <http://w3id.org/glosis/model/layerhorizon#electricalConductivityProperty>;
+          rr:constant <http://w3id.org/glosis/model/layerhorizon/electricalConductivityProperty>;
       ];
     ];
   .
