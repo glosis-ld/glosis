@@ -1,12 +1,12 @@
 name: CSV Codelists Auto-Generation
 
 on:
-  push:
-    branches: ["develop"]
-    paths: [ "glosis_cl.ttl" , "glosis_procedure.ttl" ]
-  #pull_request:
-    #branches: [ "master" ]
-    #paths: [ "glosis_cl.ttl" , "glosis_procedure.ttl" ]
+  # push:
+  #   branches: ["develop"]
+  #   paths: [ "glosis_cl.ttl" , "glosis_procedure.ttl" ]
+  pull_request:
+    branches: [ "master" ]
+    # paths: [ "glosis_cl.ttl" , "glosis_procedure.ttl" ]
 
 env:
     CODELIST_DIR: "csv_codelists"
@@ -20,6 +20,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
+        ref: ${{ github.event.pull_request.head.ref }}
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -40,11 +43,6 @@ jobs:
     - name: Get current time and date
       if: ${{ success() }}
       run: echo "NOW=$(date)" >> $GITHUB_ENV
-    # - name: actions/checkout
-    #   uses: actions/checkout@v3
-    #   with:
-    #     repository: ${{ github.event.pull_request.head.repo.full_name }}
-    #     ref: ${{ github.event.pull_request.head.ref }}
     - name: Commit codelists
       if: ${{ success() }}
       uses: EndBug/add-and-commit@v9
