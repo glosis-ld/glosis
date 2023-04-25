@@ -10,10 +10,12 @@
   - [Version Updater](#version-updater)
     - [Requirements](#requirements)
     - [Usage](#usage-1)
+- [Contribution](#contribution)
 - [Citing](#citing)
 
 
 # Info
+
 This repository contains the Global Soil Information System (GloSIS) v1.0 ontology network, derived from the source UML data model,
 and modelled in line with best practices and methodologies, reusing existing standard models and ontologies.
 
@@ -66,6 +68,10 @@ python3
 
 *example:*    
 ```python utils/version_updater/version_updater.py 3.0.1```
+
+# Contribution
+
+One can find the current list of code lists provided as CSV files under the *csv_codelists* directory. Those code lists can be used as input to modify the ontology using the [Transformer-tool](#transformer-tool). CI/CD pipeline is taking care of maintaining the current version of code lists. That means one needs to push modifications onlt via TURTLE files and don't need to worry about updating CSV code lists alongside.
 
 # Citing
 
