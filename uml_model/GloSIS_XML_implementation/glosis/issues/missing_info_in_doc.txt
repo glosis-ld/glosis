@@ -1,0 +1,51 @@
+I tried to find following information in documentation of properties using some regex magic
+  - result datatype name for each property whose datatype starts with OM_
+  - observed property name for each property whose datatype starts with OM_
+  - unit of measurement for each property whose datatype is OM_Measurement
+
+Below is list of properties that misses some information.
+
+Just for info, here is the magic:
+- re.compile('^.*result (?:should be |expressed as |is )?(?:of type|an|a) (?P<result_datatype_name>\\w+).*$', re.IGNORECASE | re.DOTALL)
+- re.compile('^.*observedproperty *= *(?P<observed_property>\\w+).*$', re.IGNORECASE | re.DOTALL)
+- re.compile('^.*UoM(?: in | is |: )(?P<unit_of_measurement>(?:\\w|/)+).*$', re.DOTALL)
+
+Class HydroInfo <<featureType>>
+  attribute groundwaterDepth: OM_Measurement misses information in documentation: ['unit_of_measurement']
+Class SoilInfo <<featureType>>
+  attribute soilDepthBedrock: OM_Measurement misses information in documentation: ['unit_of_measurement']
+Class LandUseInfo <<featureType>>
+  attribute treeDensity: OM_Measurement misses information in documentation: ['result_datatype_name']
+Class LandFormInfo <<featureType>>
+  attribute slopeGradientNumeric: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute slopeOrientationNumeric: OM_Measurement misses information in documentation: ['unit_of_measurement']
+Class Porosity <<featureType>>
+  attribute porosity: OM_Measurement misses information in documentation: ['unit_of_measurement']
+Class Components <<featureType>>
+  attribute gypsumWeight: OM_Measurement misses information in documentation: ['unit_of_measurement']
+Class Stuff <<featureType>>
+  attribute clay: OM_Measurement misses information in documentation: ['observed_property', 'unit_of_measurement']
+  attribute fragments: OM_Measurement misses information in documentation: ['observed_property', 'unit_of_measurement']
+  attribute salt: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute sand: OM_Measurement misses information in documentation: ['observed_property', 'unit_of_measurement']
+  attribute silt: OM_Measurement misses information in documentation: ['observed_property', 'unit_of_measurement']
+  attribute waterRetention: OM_Measurement misses information in documentation: ['observed_property', 'unit_of_measurement']
+Class OtherStuff <<featureType>>
+  attribute cationExchangeCapacity: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute cationExchangeCapacityEffective: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute cationsSum: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute electricalConductivity: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute hydraulicConductivity: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute infiltrationRateNumeric: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute oxalateExtractableOpticalDensity: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute particleSizeFractionsSum: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute solubleAnionsTotal: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute solubleCationsTotal: OM_Measurement misses information in documentation: ['unit_of_measurement']
+Class PhysioChemical <<featureType>>
+  attribute member: OM_Measurement misses information in documentation: ['observed_property', 'unit_of_measurement']
+Class ProfileSoilInfo <<featureType>>
+  attribute infiltrationRateNumeric: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute soilDepth: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute soilDepthBedrock: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute soilDepthRootable: OM_Measurement misses information in documentation: ['unit_of_measurement']
+  attribute soilDepthSampled: OM_Measurement misses information in documentation: ['unit_of_measurement']

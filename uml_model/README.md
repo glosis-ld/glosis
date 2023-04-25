@@ -1,0 +1,1 @@
+This folder contains a source model provided as UML diagrams and XML implementation together with details regarding codelists in excel format.
