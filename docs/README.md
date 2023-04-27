@@ -5,25 +5,25 @@ and modelled in line with best practices and methodologies, reusing existing sta
 ## Documentation
 
 All modules in this web ontology are documented individually with HTML pages
-generated with the [WiDoco](https://github.com/dgarijo/Widoco) tool. These pages can be accessed at [https://rapw3k.github.io/glosis/docs/](https://rapw3k.github.io/glosis/docs/).
+generated with the [WiDoco](https://github.com/dgarijo/Widoco) tool. These pages can be accessed at [https://rapw3k.github.io/glosis/](https://rapw3k.github.io/glosis/).
 
 Configuration files for WiDoco are generated automatically with a [bespoke
-tool](https://github.com/rapw3k/glosis/blob/glosis_doc/doc/README.md).
+tool](https://github.com/rapw3k/glosis/blob/master/docs/README_widoco.md).
 Documentation pages are maintained in the [docs folder](https://github.com/rapw3k/glosis/tree/master/docs).
 
 ### Ontology modules documentation
 
-* [Glosis Main module](https://rapw3k.github.io/glosis/docs/glosis_main/index-en.html)
-* [Glosis Common module](https://rapw3k.github.io/glosis/docs/glosis_common/index-en.html)
-* [Glosis Surface](https://rapw3k.github.io/glosis/docs/glosis_surface/index-en.html)
-* [Glosis Site-Plot module](https://rapw3k.github.io/glosis/docs/glosis_siteplot/index-en.html)
-* [Glosis Profile module](https://rapw3k.github.io/glosis/docs/glosis_profile/index-en.html)
-* [Glosis Layer-Horizon module](https://rapw3k.github.io/glosis/docs/glosis_profile/index-en.html)
-* [Glosis Observation module](https://rapw3k.github.io/glosis/docs/glosis_observation/index-en.html)
-* [Glosis Procedures codelist](https://rapw3k.github.io/glosis/docs/glosis_procedure/index-en.html)
-* [Glosis Units of measurement codelist](https://rapw3k.github.io/glosis/docs/glosis_unit/index-en.html)
-* [Glosis observable properties codelist](https://rapw3k.github.io/glosis/docs/glosis_cl/index-en.html)
-* [ISO28258 module](https://rapw3k.github.io/glosis/docs/iso28258/index-en.html)
+* [Glosis Main module](https://rapw3k.github.io/glosis/glosis_main/index-en.html)
+* [Glosis Common module](https://rapw3k.github.io/glosis/glosis_common/index-en.html)
+* [Glosis Surface](https://rapw3k.github.io/glosis/glosis_surface/index-en.html)
+* [Glosis Site-Plot module](https://rapw3k.github.io/glosis/glosis_siteplot/index-en.html)
+* [Glosis Profile module](https://rapw3k.github.io/glosis/glosis_profile/index-en.html)
+* [Glosis Layer-Horizon module](https://rapw3k.github.io/glosis/glosis_profile/index-en.html)
+* [Glosis Observation module](https://rapw3k.github.io/glosis/glosis_observation/index-en.html)
+* [Glosis Procedures codelist](https://rapw3k.github.io/glosis/glosis_procedure/index-en.html)
+* [Glosis Units of measurement codelist](https://rapw3k.github.io/glosis/glosis_unit/index-en.html)
+* [Glosis observable properties codelist](https://rapw3k.github.io/glosis/glosis_cl/index-en.html)
+* [ISO28258 module](https://rapw3k.github.io/glosis/iso28258/index-en.html)
 
 
 ## Citing

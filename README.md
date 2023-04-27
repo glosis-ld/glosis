@@ -22,13 +22,13 @@ and modelled in line with best practices and methodologies, reusing existing sta
 # Documentation
 
 All modules in this web ontology are documented individually with HTML pages
-generated with the [WiDoco](https://github.com/dgarijo/Widoco) tool. These pages can be accessed at [https://rapw3k.github.io/glosis/docs/](https://rapw3k.github.io/glosis/docs/).
+generated with the [WiDoco](https://github.com/dgarijo/Widoco) tool. These pages can be accessed at [https://rapw3k.github.io/glosis/docs/](https://rapw3k.github.io/glosis/).
 
 Configuration files for WiDoco are generated automatically with a [bespoke
-tool](https://github.com/rapw3k/glosis/blob/master/docs/README.md).
+tool](https://github.com/rapw3k/glosis/blob/master/docs/README_widoco.md).
 Documentation pages are maintained in the [docs folder](https://github.com/rapw3k/glosis/tree/master/docs).
 
-The documentation for each module can be accessed via the [documentation entry page](https://rapw3k.github.io/glosis/docs)
+The documentation for each module can be accessed via the [documentation entry page](https://rapw3k.github.io/glosis/)
 
 # Tools
 
