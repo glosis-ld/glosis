@@ -8,7 +8,7 @@ All modules in this web ontology are documented individually with HTML pages
 generated with the [WiDoco](https://github.com/dgarijo/Widoco) tool. These pages can be accessed at [https://rapw3k.github.io/glosis/](https://rapw3k.github.io/glosis/).
 
 Configuration files for WiDoco are generated automatically with a [bespoke
-tool](https://github.com/rapw3k/glosis/blob/master/docs/README_widoco.md).
+tool](https://github.com/rapw3k/glosis/blob/master/docs/README_WiDoco.md).
 Documentation pages are maintained in the [docs folder](https://github.com/rapw3k/glosis/tree/master/docs).
 
 ### Ontology modules documentation
