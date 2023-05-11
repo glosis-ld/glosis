@@ -18,7 +18,7 @@ Documentation pages are maintained in the [docs folder](https://github.com/rapw3
 * [Glosis Surface](https://rapw3k.github.io/glosis/glosis_surface/index-en.html)
 * [Glosis Site-Plot module](https://rapw3k.github.io/glosis/glosis_siteplot/index-en.html)
 * [Glosis Profile module](https://rapw3k.github.io/glosis/glosis_profile/index-en.html)
-* [Glosis Layer-Horizon module](https://rapw3k.github.io/glosis/glosis_profile/index-en.html)
+* [Glosis Layer-Horizon module](https://rapw3k.github.io/glosis/glosis_layer_horizon/index-en.html)
 * [Glosis Observation module](https://rapw3k.github.io/glosis/glosis_observation/index-en.html)
 * [Glosis Procedures codelist](https://rapw3k.github.io/glosis/glosis_procedure/index-en.html)
 * [Glosis Units of measurement codelist](https://rapw3k.github.io/glosis/glosis_unit/index-en.html)
