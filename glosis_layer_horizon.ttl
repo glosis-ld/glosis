@@ -202,7 +202,7 @@ glosis_lh:bulkDensityMineralProperty a sosa:ObservableProperty ;
         
 glosis_cm:ColourWet rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
-glosis_lh:PhysioChemical  a	owl:Class ;
+glosis_lh:PhysioChemical a owl:Class ;
         rdfs:label "PhysioChemical"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -964,28 +964,33 @@ glosis_lh:TextureFieldClass  a	owl:Class ;
 glosis_lh:textureFieldClassProperty a sosa:ObservableProperty ;
         rdfs:label "textureFieldClassProperty"@en .
 
-glosis_lh:CarbonatesForms a	owl:Class ;
+glosis_lh:CarbonatesForms a owl:Class ;
+        rdfs:label "CarbonatesForms"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 39"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CarbonatesFormsValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:carbonatesFormsProperty ] .
 
 glosis_lh:carbonatesFormsProperty a sosa:ObservableProperty ;
-        rdfs:label "carbonatesFormsProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 39"@en .
+        rdfs:label "carbonatesFormsProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 39"@en .
 
 glosis_lh:Fragments  a	owl:Class ;
+        rdfs:label "Fragments"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:FragmentsValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:FragmentsPropertyCode ] .
 
 glosis_lh:FragmentsValue a owl:Class ;
+        rdfs:label "FragmentsValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
 
-glosis_lh:WetPlasticity  a	owl:Class ;
+glosis_lh:WetPlasticity  a owl:Class ;
+        rdfs:label "WetPlasticity"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
@@ -994,7 +999,8 @@ glosis_lh:WetPlasticity  a	owl:Class ;
 glosis_lh:wetPlasticityProperty a sosa:ObservableProperty ;
         rdfs:label "wetPlasticityProperty"@en .
 
-glosis_lh:MineralConcAbundance  a	owl:Class ;
+glosis_lh:MineralConcAbundance  a owl:Class ;
+        rdfs:label "MineralConcAbundance"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
@@ -1003,27 +1009,32 @@ glosis_lh:MineralConcAbundance  a	owl:Class ;
 glosis_lh:mineralConcAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcAbundanceProperty"@en .
 
-glosis_lh:RootsAbundance a	owl:Class ;
+glosis_lh:RootsAbundance a owl:Class ;
+        rdfs:label "RootsAbundance"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 80"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RootsAbundanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:rootsAbundanceProperty ] .
 
 glosis_lh:rootsAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "rootsAbundanceProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 80"@en .
+        rdfs:label "rootsAbundanceProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 80"@en .
 
-glosis_lh:CementationContinuity a	owl:Class ;
+glosis_lh:CementationContinuity a owl:Class ;
+        rdfs:label "CementationContinuity"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 69"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CementationContinuityValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationContinuityProperty ] .
 
 glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
-        rdfs:label "cementationContinuityProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 69"@en .
+        rdfs:label "cementationContinuityProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 69"@en .
 
-glosis_lh:AvailableWaterHoldingCapacity  a	owl:Class ;
+glosis_lh:AvailableWaterHoldingCapacity  a owl:Class ;
+        rdfs:label "AvailableWaterHoldingCapacity"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AvailableWaterHoldingCapacityValue ] ;
@@ -1033,11 +1044,13 @@ glosis_lh:AvailableWaterHoldingCapacity  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:AvailableWaterHoldingCapacityProcedure ] .
 
 glosis_lh:AvailableWaterHoldingCapacityValue a owl:Class ;
+        rdfs:label "AvailableWaterHoldingCapacityValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:M3-PER-HundredM3 ] .
 
-glosis_lh:BaseSaturation  a	owl:Class ;
+glosis_lh:BaseSaturation  a owl:Class ;
+        rdfs:label "BaseSaturation"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BaseSaturationValue ] ;
@@ -1047,6 +1060,7 @@ glosis_lh:BaseSaturation  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:BaseSaturationProcedure ] .
 
 glosis_lh:BaseSaturationValue a owl:Class ;
+        rdfs:label "BaseSaturationValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
@@ -1054,7 +1068,8 @@ glosis_lh:BaseSaturationValue a owl:Class ;
 glosis_lh:bulkDensityFineEarthProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "bulkDensityFineEarthProperty"@en .
 
-glosis_lh:BulkDensityFineEarth  a	owl:Class ;
+glosis_lh:BulkDensityFineEarth  a owl:Class ;
+        rdfs:label "BulkDensityFineEarth"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityFineEarthValue ] ;
@@ -1064,6 +1079,7 @@ glosis_lh:BulkDensityFineEarth  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:BulkDensityFineEarthProcedure ] .
 
 glosis_lh:BulkDensityFineEarthValue a owl:Class ;
+        rdfs:label "BulkDensityFineEarthValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:KiloGM-PER-DeciM3 ] .
@@ -1071,7 +1087,8 @@ glosis_lh:BulkDensityFineEarthValue a owl:Class ;
 glosis_lh:bulkDensityWholeSoilProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "bulkDensityWholeSoilProperty"@en .
 
-glosis_lh:BulkDensityWholeSoil  a	owl:Class ;
+glosis_lh:BulkDensityWholeSoil  a owl:Class ;
+        rdfs:label "BulkDensityWholeSoil"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityWholeSoilValue ] ;
@@ -1081,6 +1098,7 @@ glosis_lh:BulkDensityWholeSoil  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:BulkDensityWholeSoilProcedure ] .
 
 glosis_lh:BulkDensityWholeSoilValue a owl:Class ;
+        rdfs:label "BulkDensityWholeSoilValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
@@ -1089,7 +1107,8 @@ glosis_lh:BulkDensityWholeSoilValue a owl:Class ;
 glosis_lh:cationExchangeCapacitycSoilProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "cationExchangeCapacitycSoilProperty"@en .
 
-glosis_lh:CationExchangeCapacitycSoil  a	owl:Class ;
+glosis_lh:CationExchangeCapacitycSoil  a owl:Class ;
+        rdfs:label "CationExchangeCapacitycSoil"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ; 
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacitycSoilValue ] ;
@@ -1099,6 +1118,7 @@ glosis_lh:CationExchangeCapacitycSoil  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CationExchangeCapacitycSoilProcedure ] .
 
 glosis_lh:CationExchangeCapacitycSoilValue a owl:Class ;
+        rdfs:label "CationExchangeCapacitycSoilValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
@@ -1106,7 +1126,8 @@ glosis_lh:CationExchangeCapacitycSoilValue a owl:Class ;
 glosis_lh:coarseFragmentsProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "coarseFragmentsProperty"@en .
 
-glosis_lh:CoarseFragments  a	owl:Class ;
+glosis_lh:CoarseFragments  a owl:Class ;
+        rdfs:label "CoarseFragments"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CoarseFragmentsValue ] ;
@@ -1116,6 +1137,7 @@ glosis_lh:CoarseFragments  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CoarseFragmentsProcedure ] .
 
 glosis_lh:CoarseFragmentsValue a owl:Class ;
+        rdfs:label "CoarseFragmentsValue"@en ;
         rdfs:subClassOf   glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
@@ -1123,7 +1145,8 @@ glosis_lh:CoarseFragmentsValue a owl:Class ;
 glosis_lh:effectiveCecProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "effectiveCecProperty"@en .
 
-glosis_lh:EffectiveCec  a	owl:Class ;
+glosis_lh:EffectiveCec  a owl:Class ;
+        rdfs:label "EffectiveCec"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:EffectiveCecValue ] ;
@@ -1133,6 +1156,7 @@ glosis_lh:EffectiveCec  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:EffectiveCecProcedure ] .
 
 glosis_lh:EffectiveCecValue a owl:Class ;
+        rdfs:label "EffectiveCecValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
@@ -1140,7 +1164,8 @@ glosis_lh:EffectiveCecValue a owl:Class ;
 glosis_lh:electricalConductivityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "electricalConductivityProperty"@en .
 
-glosis_lh:ElectricalConductivity  a	owl:Class ;
+glosis_lh:ElectricalConductivity  a owl:Class ;
+        rdfs:label "ElectricalConductivity"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ElectricalConductivityValue ] ;
@@ -1150,11 +1175,13 @@ glosis_lh:ElectricalConductivity  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ElectricalConductivityProcedure ] .
 
 glosis_lh:ElectricalConductivityValue a owl:Class ;
+        rdfs:label "ElectricalConductivityValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:DeciS-PER-M ] .
 
-glosis_lh:AcidityExchangeable  a	owl:Class ;
+glosis_lh:AcidityExchangeable  a owl:Class ;
+        rdfs:label "AcidityExchangeable"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AcidityExchangeableValue ] ;
@@ -1164,11 +1191,13 @@ glosis_lh:AcidityExchangeable  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:AcidityExchangeableProcedure ] .
 
 glosis_lh:AcidityExchangeableValue a owl:Class ;
+        rdfs:label "AcidityExchangeableValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:AluminiumExchangeableBases  a	owl:Class ;
+        rdfs:label "AluminiumExchangeableBases"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumExchangeableBasesValue ] ;
@@ -1178,11 +1207,13 @@ glosis_lh:AluminiumExchangeableBases  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
 glosis_lh:AluminiumExchangeableBasesValue a owl:Class ;
+        rdfs:label "AluminiumExchangeableBasesValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:CalciumExchangeableBases  a	owl:Class ;
+        rdfs:label "CalciumExchangeableBases"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumExchangeableBasesValue ] ;
@@ -1192,11 +1223,13 @@ glosis_lh:CalciumExchangeableBases  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
 glosis_lh:CalciumExchangeableBasesValue a owl:Class ;
+        rdfs:label "CalciumExchangeableBasesValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:CalciumExtractableElements  a	owl:Class ;
+        rdfs:label "CalciumExtractableElements"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumExtractableElementsValue ] ;
@@ -1206,11 +1239,13 @@ glosis_lh:CalciumExtractableElements  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
 glosis_lh:CalciumExtractableElementsValue a owl:Class ;
+        rdfs:label "CalciumExtractableElementsValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
-glosis_lh:CalciumTotalElements  a	owl:Class ;
+glosis_lh:CalciumTotalElements  a owl:Class ;
+        rdfs:label "CalciumTotalElements"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumTotalElementsValue ] ;
@@ -1220,11 +1255,13 @@ glosis_lh:CalciumTotalElements  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
 glosis_lh:CalciumTotalElementsValue a owl:Class ;
+        rdfs:label "CalciumTotalElementsValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:HydrogenExchangeableBases  a	owl:Class ;
+        rdfs:label "HydrogenExchangeableBases"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:HydrogenExchangeableBasesValue ] ;
@@ -1234,6 +1271,7 @@ glosis_lh:HydrogenExchangeableBases  a	owl:Class ;
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
 glosis_lh:HydrogenExchangeableBasesValue a owl:Class ;
+        rdfs:label "HydrogenExchangeableBasesValue"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
