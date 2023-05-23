@@ -232,6 +232,7 @@ glosis_lh:CationsSumValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
 
 glosis_lh:MottlesColour  a	owl:Class ;
+        rdfs:label "MottlesColour"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom  glosis_cm:MunsellColorValue ] ;
@@ -241,6 +242,7 @@ glosis_lh:mottlesColourProperty a sosa:ObservableProperty ;
         rdfs:label "mottlesColourProperty"@en .                        
 
 glosis_lh:DryConsistency a	owl:Class ;
+        rdfs:label "DryConsistency"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
@@ -250,6 +252,8 @@ glosis_lh:dryConsistencyProperty a sosa:ObservableProperty ;
         rdfs:label "dryConsistencyProperty"@en .
 
 glosis_lh:CoatingAbundance  a owl:Class ;
+        rdfs:label "CoatingAbundance"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 64"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CoatingAbundanceValueCode ] ;
@@ -257,31 +261,37 @@ glosis_lh:CoatingAbundance  a owl:Class ;
 
 glosis_lh:coatingAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "coatingAbundanceProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 64"@en .
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 64"@en .
 
 glosis_lh:ConsistenceDry  a owl:Class ;
+        rdfs:label "ConsistenceDry"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 53"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ConsistenceDryValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:consistenceDryProperty ] .
 
 glosis_lh:consistenceDryProperty a sosa:ObservableProperty ;
-        rdfs:label "consistenceDryProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 53"@en .
+        rdfs:label "consistenceDryProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 53"@en .
         
 glosis_cm:InfiltrationRateNumeric rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:GypsumForms a owl:Class ;
+        rdfs:label "GypsumForms"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 41"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:GypsumFormsValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumFormsProperty ] .
 
 glosis_lh:gypsumFormsProperty a sosa:ObservableProperty ;
-        rdfs:label "gypsumFormsProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 41"@en .
+        rdfs:label "gypsumFormsProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 41"@en .
         
 glosis_lh:MineralConcNature a owl:Class ;
+        rdfs:label "MineralConcNature"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 77"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcNatureValueCode ] ;
@@ -289,11 +299,12 @@ glosis_lh:MineralConcNature a owl:Class ;
 
 glosis_lh:mineralConcNatureProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcNatureProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 77"@en .
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 77"@en .
 
 glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
         
 glosis_lh:ParticleSizeFractionsSum  a	owl:Class ;
+        rdfs:label "ParticleSizeFractionsSum"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ParticleSizeFractionsSumValue ] ;
@@ -303,21 +314,25 @@ glosis_lh:particleSizeFractionsSumProperty a sosa:ObservableProperty , qudt:Quan
         rdfs:label "ParticleSizeFractionsSumProperty"@en .
 
 glosis_lh:ParticleSizeFractionsSumValue a owl:Class ;
+        rdfs:label "ParticleSizeFractionsSumValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
 
 glosis_lh:BoundaryDistinctness a owl:Class ;
+        rdfs:label "BoundaryDistinctness"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 24.1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BoundaryDistinctnessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:boundaryDistinctnessProperty ] .
 
 glosis_lh:boundaryDistinctnessProperty a sosa:ObservableProperty ;
-        rdfs:label "boundaryDistinctnessProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 24.1"@en .
+        rdfs:label "boundaryDistinctnessProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 24.1"@en .
 
 glosis_lh:RootsPresence  a	owl:Class ;
+        rdfs:label "RootsPresence"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:RootsPresenceValue ] ;
@@ -327,52 +342,63 @@ glosis_lh:rootsPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "RootsPresenceProperty"@en .
 
 glosis_lh:RootsPresenceValue a owl:Class ;
+        rdfs:label "RootsPresenceValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:boolean ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
 
 glosis_lh:CementationFabric a owl:Class ;
+        rdfs:label "CementationFabric"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 70"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CementationFabricValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationFabricProperty ] .
 
 glosis_lh:cementationFabricProperty a sosa:ObservableProperty ;
-        rdfs:label "cementationFabricProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 70"@en .
+        rdfs:label "cementationFabricProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 70"@en .
         
 glosis_lh:MottlesSize a owl:Class ;
+        rdfs:label "MottlesSize"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 33"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MottlesSizeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesSizeProperty ] .
 
 glosis_lh:mottlesSizeProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesSizeProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 33"@en .
+        rdfs:label "mottlesSizeProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 33"@en .
         
 glosis_lh:PorosityClass a owl:Class ;
+        rdfs:label "PorosityClass"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 60"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PorosityClassValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:porosityClassProperty ] .
 
 glosis_lh:porosityClassProperty a sosa:ObservableProperty ;
-        rdfs:label "porosityClassProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 60"@en .
+        rdfs:label "porosityClassProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 60"@en .
 
-glosis_lh:Silt  a	owl:Class ;
+glosis_lh:Silt a owl:Class ;
+        rdfs:label "Silt"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SiltValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:SiltPropertyCode ] .
 
 glosis_lh:SiltValue a owl:Class ;
+        rdfs:label "SiltValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:GM-PER-HectoGM] .
 
 glosis_lh:MottlesAbundance a owl:Class ;
+        rdfs:label "MottlesAbundance"@en;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 32"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MottlesAbundanceValueCode ] ;
@@ -380,19 +406,23 @@ glosis_lh:MottlesAbundance a owl:Class ;
 
 glosis_lh:mottlesAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "mottlesAbundanceProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 32"@en .
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 32"@en .
         
 glosis_lh:VoidsDiameter a owl:Class ;
+        rdfs:label "VoidsDiameter"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 62"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:VoidsDiameterValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:voidsDiameterProperty ] .
 
 glosis_lh:voidsDiameterProperty a sosa:ObservableProperty ;
-        rdfs:label "voidsDiameterProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 62"@en .
+        rdfs:label "voidsDiameterProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 62"@en .
         
 glosis_lh:StructureGrade a owl:Class ;
+        rdfs:label "StructureGrade"@en;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 47"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:StructureGradeValueCode ] ;
@@ -400,23 +430,26 @@ glosis_lh:StructureGrade a owl:Class ;
 
 glosis_lh:structureGradeProperty a sosa:ObservableProperty ;
         rdfs:label "structureGradeProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 47"@en .
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 47"@en .
         
 glosis_cm:FragmentCover rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:BiologicalFeatures  a	owl:Class ;
+        rdfs:label "BiologicalFeatures"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 82"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BiologicalFeaturesValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:biologicalFeaturesProperty ] .
 
 glosis_lh:biologicalFeaturesProperty a sosa:ObservableProperty ;
-        rdfs:label "biologicalFeaturesProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 82"@en .
+        rdfs:label "biologicalFeaturesProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 82"@en .
         
 glosis_cm:Texture rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
-glosis_lh:MineralContent  a	owl:Class ;
+glosis_lh:MineralContent a owl:Class ;
+        rdfs:label "MineralContent"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:MineralContentValue ] ;
@@ -426,60 +459,71 @@ glosis_lh:mineralContentProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "mineralContentProperty"@en .
 
 glosis_lh:MineralContentValue a owl:Class ;
+        rdfs:label "MineralContentValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_lh:PoresSize  a	owl:Class ;
+        rdfs:label "PoresSize"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 62"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:VoidsDiameterValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:poresSizeProperty ] .
 
 glosis_lh:poresSizeProperty a sosa:ObservableProperty ;
-        rdfs:label "poresSizeProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 62"@en .
+        rdfs:label "poresSizeProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 62"@en .
         
 glosis_cm:RockShape rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
-glosis_lh:StructureSize  a	owl:Class ;
+glosis_lh:StructureSize a owl:Class ;
+        rdfs:label "StructureSize"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 50"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:StructureSizeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:structureSizeProperty ] .
 
 glosis_lh:structureSizeProperty a sosa:ObservableProperty ;
-        rdfs:label "structureSizeProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 50"@en .
+        rdfs:label "structureSizeProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 50"@en .
         
-glosis_lh:MineralConcShape a	owl:Class ;
+glosis_lh:MineralConcShape a owl:Class ;
+        rdfs:label "MineralConcShape"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 75,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcShapeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcShapeProperty ] .
 
 glosis_lh:mineralConcShapeProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcShapeProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 75,2"@en .
+        rdfs:label "mineralConcShapeProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 75,2"@en .
         
 glosis_lh:WaterRetention  a	owl:Class ;
+        rdfs:label "WaterRetention"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:WaterRetentionValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:WaterRetentionPropertyCode ] .
 
 glosis_lh:WaterRetentionValue a owl:Class ;
+        rdfs:label "WaterRetentionValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
 
-glosis_lh:Sand  a	owl:Class ;
+glosis_lh:Sand  a owl:Class ;
+        rdfs:label "Sand"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SandValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:SandPropertyCode ] .
 
 glosis_lh:SandValue a owl:Class ;
+        rdfs:label "SandValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:GM-PER-HectoGM] .
@@ -487,9 +531,11 @@ glosis_lh:SandValue a owl:Class ;
 glosis_cm:OrganicMatterClass rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:clayMinerology a owl:DatatypeProperty ;
+        rdfs:label "clayMinerology"@en ;
         rdfs:range   xsd:string .
 
-glosis_lh:GypsumWeight  a	owl:Class ;
+glosis_lh:GypsumWeight  a owl:Class ;
+        rdfs:label "GypsumWeight"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:GypsumWeightValue ] ;
@@ -499,23 +545,28 @@ glosis_lh:gypsumWeightProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "gypsumWeightProperty"@en .
 
 glosis_lh:GypsumWeightValue a owl:Class ;
+        rdfs:label "GypsumWeightValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-KiloGM ].
 
-glosis_lh:PeatDrainage  a	owl:Class ;
+glosis_lh:PeatDrainage  a owl:Class ;
+        rdfs:label "PeatDrainage"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 59,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PeatDrainageValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatDrainageProperty ] .
 
 glosis_lh:peatDrainageProperty a sosa:ObservableProperty ;
-        rdfs:label "peatDrainageProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 59.1"@en .
+        rdfs:label "peatDrainageProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 59,1"@en .
         
 glosis_cm:BleachedSand rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
-glosis_lh:SandyTexture  a	owl:Class ;
+glosis_lh:SandyTexture  a owl:Class ;
+        rdfs:label "SandyTexture"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 4,3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SandyTextureValueCode ] ;
@@ -523,9 +574,10 @@ glosis_lh:SandyTexture  a	owl:Class ;
 
 glosis_lh:sandyTextureProperty a sosa:ObservableProperty ;
         rdfs:label "sandyTextureProperty"@en;
-        rdfs:isDefinedBy "GfSD Figure 4.3"@en .
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 4,3"@en .
 
-glosis_lh:SolubleCationsTotal  a	owl:Class ;
+glosis_lh:SolubleCationsTotal  a owl:Class ;
+        rdfs:label "SolubleCationsTotal"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleCationsTotalValue ] ;
@@ -535,21 +587,25 @@ glosis_lh:solubleCationsTotalProperty a sosa:ObservableProperty, qudt:Quantityki
         rdfs:label "solubleCationsTotalProperty"@en .
 
 glosis_lh:SolubleCationsTotalValue a owl:Class ;
+        rdfs:label "SolubleCationsTotalValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:CentiMOL-PER-L ] . 
 
 glosis_lh:CementationNature a	owl:Class ;
+        rdfs:label "CementationNature"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 71"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CementationNatureValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationNatureProperty ] .
 
 glosis_lh:cementationNatureProperty a sosa:ObservableProperty ;
-        rdfs:label "cementationNatureProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 71"@en .
+        rdfs:label "cementationNatureProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 71"@en .
 
-glosis_lh:Salt  a	owl:Class ;
+glosis_lh:Salt  a owl:Class ;
+        rdfs:label "Salt"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SaltValue ] ;
@@ -559,11 +615,13 @@ glosis_lh:saltProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "saltProperty"@en .
 
 glosis_lh:SaltValue a owl:Class ;
+        rdfs:label "SaltValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
 
 glosis_lh:SolubleAnionsTotal  a	owl:Class ;
+        rdfs:label "SolubleAnionsTotal"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleAnionsTotalValue ] ;
@@ -573,43 +631,51 @@ glosis_lh:solubleAnionsTotalProperty a sosa:ObservableProperty, qudt:Quantitykin
         rdfs:label "solubleAnionsTotalProperty"@en .
 
 glosis_lh:SolubleAnionsTotalValue a owl:Class ;
+        rdfs:label "SolubleAnionsTotalValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:CentiMOL-PER-L ] .
 
 glosis_cm:CracksDepth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
-glosis_lh:BulkDensityPeat a	owl:Class ;
+glosis_lh:BulkDensityPeat a owl:Class ;
+        rdfs:label "BulkDensityPeat"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 59,3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BulkDensityPeatValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityPeatProperty ] .
 
 glosis_lh:bulkDensityPeatProperty a sosa:ObservableProperty ;
-        rdfs:label "bulkDensityPeatProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 59.3"@en .
+        rdfs:label "bulkDensityPeatProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 59,3"@en .
 
-glosis_lh:MineralFragments a	owl:Class ;
+glosis_lh:MineralFragments a owl:Class ;
+        rdfs:label "MineralFragments"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 30"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralFragmentsValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralFragmentsProperty ] .
 
 glosis_lh:mineralFragmentsProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralFragmentsProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 30"@en .
+        rdfs:label "mineralFragmentsProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 30"@en .
 
-glosis_lh:MottlesBoundaryClassification a	owl:Class ;
+glosis_lh:MottlesBoundaryClassification a owl:Class ;
+        rdfs:label "MottlesBoundaryClassification"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 35"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BoundaryClassificationValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesBoundaryClassificationProperty ] .
 
 glosis_lh:mottlesBoundaryClassificationProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesBoundaryClassificationProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 35"@en .
+        rdfs:label "mottlesBoundaryClassificationProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 35"@en .
 
-glosis_lh:CationExchangeCapacity  a	owl:Class ;
+glosis_lh:CationExchangeCapacity  a owl:Class ;
+        rdfs:label "CationExchangeCapacity"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacityValue ] ;
@@ -619,61 +685,73 @@ glosis_lh:cationExchangeCapacityProperty a sosa:ObservableProperty, qudt:Quantit
         rdfs:label "cationExchangeCapacityProperty"@en .
 
 glosis_lh:CationExchangeCapacityValue a owl:Class ;
+        rdfs:label "CationExchangeCapacityValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:MOL-PER-KiloGM ] .
 
-glosis_lh:PeatDecompostion a	owl:Class ;
+glosis_lh:PeatDecompostion a owl:Class ;
+        rdfs:label "PeatDecompostion"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 31"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PeatDecompostionValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatDecompostionProperty ] .
 
 glosis_lh:peatDecompostionProperty a sosa:ObservableProperty ;
-        rdfs:label "peatDecompostionProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 31"@en .
+        rdfs:label "peatDecompostionProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 31"@en .
 
 glosis_lh:PeatVolume a	owl:Class ;
+        rdfs:label "PeatVolume"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 59,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PeatVolumeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatVolumeProperty ] .
 
 glosis_lh:peatVolumeProperty a sosa:ObservableProperty ;
-        rdfs:label "peatVolumeProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 59.2"@en .
+        rdfs:label "peatVolumeProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 59,2"@en .
 
 glosis_lh:BoundaryTopography a	owl:Class ;
+        rdfs:label "BoundaryTopography"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 24,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BoundaryTopographyValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:boundaryTopographyProperty ] .
 
 glosis_lh:boundaryTopographyProperty a sosa:ObservableProperty ;
-        rdfs:label "boundaryTopographyProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 24.2"@en .
+        rdfs:label "boundaryTopographyProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 24,2"@en .
 
-glosis_lh:CarbonatesContent a	owl:Class ;
+glosis_lh:CarbonatesContent a owl:Class ;
+        rdfs:label "CarbonatesContent"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 38"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CarbonatesContentValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:carbonatesContentProperty ] .
 
 glosis_lh:carbonatesContentProperty a sosa:ObservableProperty ;
-        rdfs:label "carbonatesContentProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 38"@en .
+        rdfs:label "carbonatesContentProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 38"@en .
 
-glosis_lh:MineralConcColour a	owl:Class ;
+glosis_lh:MineralConcColour a owl:Class ;
+        rdfs:label "MineralConcColour"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 78"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcColourValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcColourProperty ] .
 
 glosis_lh:mineralConcColourProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcColourProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 78"@en .
+        rdfs:label "mineralConcColourProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 78"@en .
 
-glosis_lh:CationExchangeCapacityEffective  a	owl:Class ;
+glosis_lh:CationExchangeCapacityEffective  a owl:Class ;
+        rdfs:label "CationExchangeCapacityEffective"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacityEffectiveValue ] ;
@@ -683,94 +761,112 @@ glosis_lh:cationExchangeCapacityEffectiveProperty a sosa:ObservableProperty, qud
         rdfs:label "cationExchangeCapacityEffectiveProperty"@en .
 
 glosis_lh:CationExchangeCapacityEffectiveValue a owl:Class ;
+        rdfs:label "CationExchangeCapacityEffectiveValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:MOL-PER-KiloGM ] .
 
 glosis_lh:Plasticity a	owl:Class ;
+        rdfs:label "Plasticity"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 56"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PlasticityValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:plasticityProperty ] .
 
 glosis_lh:plasticityProperty a sosa:ObservableProperty ;
-        rdfs:label "plasticityProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 56"@en .
+        rdfs:label "plasticityProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 56"@en .
 
-glosis_lh:MottlesContrast a	owl:Class ;
+glosis_lh:MottlesContrast a owl:Class ;
+        rdfs:label "MottlesContrast"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 34"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ContrastValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesContrastProperty ] .
 
 glosis_lh:mottlesContrastProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesContrastProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 34"@en .
+        rdfs:label "mottlesContrastProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 34"@en .
 
-glosis_lh:ConsistenceMoist a	owl:Class ;
+glosis_lh:ConsistenceMoist a owl:Class ;
+        rdfs:label "ConsistenceMoist"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 54"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ConsistenceMoistValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:consistenceMoistProperty ] .
 
 glosis_lh:consistenceMoistProperty a sosa:ObservableProperty ;
-        rdfs:label "consistenceMoistProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 54"@en .
+        rdfs:label "consistenceMoistProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 54"@en .
 
-glosis_lh:MineralConcVolume a	owl:Class ;
+glosis_lh:MineralConcVolume a owl:Class ;
+        rdfs:label "MineralConcVolume"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 73"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcVolumeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcVolumeProperty ] .
 
 glosis_lh:mineralConcVolumeProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcVolumeProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 73"@en .
+        rdfs:label "mineralConcVolumeProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 73"@en .
 
 glosis_cm:CracksDistance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
-glosis_lh:Clay  a	owl:Class ;
+glosis_lh:Clay a owl:Class ;
+        rdfs:label "Clay"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ClayValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:ClayPropertyCode ] .
 
 glosis_lh:ClayValue a owl:Class ;
+        rdfs:label "ClayValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_lh:SaltContent a	owl:Class ;
+        rdfs:label "SaltContent"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 42"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SaltContentValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:saltContentProperty ] .
 
 glosis_lh:saltContentProperty a sosa:ObservableProperty ;
-        rdfs:label "saltContentProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 42"@en .
+        rdfs:label "saltContentProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 42"@en .
 
-glosis_lh:GypsumContent a	owl:Class ;
+glosis_lh:GypsumContent a owl:Class ;
+        rdfs:label "GypsumContent"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 40"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:GypsumContentValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumContentProperty ] .
 
 glosis_lh:gypsumContentProperty a sosa:ObservableProperty ;
-        rdfs:label "gypsumContentProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 40"@en .
+        rdfs:label "gypsumContentProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 40"@en .
 
 glosis_lh:CoatingForm a	owl:Class ;
+        rdfs:label "CoatingForm"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 67"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CoatingFormValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingFormProperty ] .
 
 glosis_lh:coatingFormProperty a sosa:ObservableProperty ;
-        rdfs:label "coatingFormProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 67"@en .
+        rdfs:label "coatingFormProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 67"@en .
 
-glosis_lh:OxalateExtractableOpticalDensity  a	owl:Class ;
+glosis_lh:OxalateExtractableOpticalDensity  a owl:Class ;
+        rdfs:label "OxalateExtractableOpticalDensity"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:OxalateExtractableOpticalDensityValue ] ;
@@ -780,53 +876,63 @@ glosis_lh:oxalateExtractableOpticalDensityProperty a sosa:ObservableProperty, qu
         rdfs:label "oxalateExtractableOpticalDensityProperty"@en .
 
 glosis_lh:OxalateExtractableOpticalDensityValue a owl:Class ;
+        rdfs:label "OxalateExtractableOpticalDensityValue"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
 
 glosis_lh:MineralConcHardness a	owl:Class ;
+        rdfs:label "MineralConcHardness"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 76"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcHardnessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcHardnessProperty ] .
 
 glosis_lh:mineralConcHardnessProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcHardnessProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 76"@en .
+        rdfs:label "mineralConcHardnessProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 76"@en .
 
-glosis_lh:PoresAbundance a	owl:Class ;
+glosis_lh:PoresAbundance a owl:Class ;
+        rdfs:label "PoresAbundance"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 63"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PoresAbundanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:poresAbundanceProperty ] .
 
 glosis_lh:poresAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "poresAbundanceProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 63"@en .
+        rdfs:label "poresAbundanceProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 63"@en .
 
 glosis_cm:CracksWidth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
-glosis_lh:MineralConcSize a	owl:Class ;
+glosis_lh:MineralConcSize a owl:Class ;
+        rdfs:label "MineralConcSize"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 75,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcSizeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcSizeProperty ] .
 
 glosis_lh:mineralConcSizeProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcSizeeProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 75.1"@en .
+        rdfs:label "mineralConcSizeeProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 75,1"@en .
 
 glosis_lh:Stickiness a	owl:Class ;
+        rdfs:label "Stickiness"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 55"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:StickinessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:stickinessProperty ] .
 
 glosis_lh:stickinessProperty a sosa:ObservableProperty ;
-        rdfs:label "stickinessProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 55"@en .
+        rdfs:label "stickinessProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 55"@en .
 
 glosis_lh:MoistConsistency  a	owl:Class ;
+        rdfs:label "MoistConsistency"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
@@ -835,15 +941,17 @@ glosis_lh:MoistConsistency  a	owl:Class ;
 glosis_lh:moistConsistencyProperty a sosa:ObservableProperty ;
         rdfs:label "moistConsistencyProperty"@en .
 
-glosis_lh:CoatingLocation a	owl:Class ;
+glosis_lh:CoatingLocation a owl:Class ;
+        rdfs:label "CoatingLocation"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 68"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CoatingLocationValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingLocationProperty ] .
 
 glosis_lh:coatingLocationProperty a sosa:ObservableProperty ;
-        rdfs:label "coatingLocationProperty"@en;
-        rdfs:isDefinedBy "GfSD Table 68"@en .
+        rdfs:label "coatingLocationProperty"@en ;
+        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 68"@en .
 
 glosis_cm:RockAbundance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ]] .
 
