@@ -35,88 +35,108 @@
 
 glosis_cm:SoilDepthBedrock  a	owl:Class ;
         rdfs:label "SoilDepthBedrock"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthBedrockValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthBedrockProperty ] .
 
 glosis_cm:soilDepthBedrockProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "soilDepthBedrockProperty"@en .
+        rdfs:label "soilDepthBedrockProperty"@en ;
+                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:SoilDepthBedrockValue a owl:Class ;
         rdfs:label "SoilDepthBedrockValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] .
 
 glosis_cm:SoilDepth  a	owl:Class ;
         rdfs:label "SoilDepth"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthProperty ] .
 
 glosis_cm:soilDepthProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "soilDepthProperty"@en .
+        rdfs:label "soilDepthProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:SoilDepthValue a owl:Class ;
+        rdfs:label "SoilDepthValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] .
 
 glosis_cm:SoilDepthRootable  a owl:Class ;
+        rdfs:label "SoilDepthRootable"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthRootableValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthRootableProperty ] .
 
 glosis_cm:soilDepthRootableProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "soilDepthRootableProperty"@en .
+        rdfs:label "soilDepthRootableProperty"@en ;
+                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:SoilDepthRootableValue a owl:Class ;
-        rdfs:label "SoilDepthValue"@en ;
+        rdfs:label "SoilDepthRootableValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] . 
 
 glosis_cm:SoilDepthRootableClass  a	owl:Class ;
         rdfs:label "SoilDepthRootableClass"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult  ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthRootableClassProperty ] .
 
 glosis_cm:soilDepthRootableClassProperty a sosa:ObservableProperty ;
-        rdfs:label "soilDepthRootableClassProperty"@en .
+        rdfs:label "soilDepthRootableClassProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:SoilDepthSampled  a owl:Class ;
         rdfs:label "SoilDepthSampled"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:SoilDepthSampledValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:soilDepthSampledProperty ] .
 
 glosis_cm:soilDepthSampledProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "soilDepthSampledProperty"@en .
+        rdfs:label "soilDepthSampledProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:SoilDepthSampledValue a owl:Class ;
         rdfs:label "SoilDepthSampledValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] .
 
 glosis_cm:InfiltrationRateClass  a	owl:Class ;
         rdfs:label "InfiltrationRateClass"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:infiltrationRateClassProperty ] .
 
 glosis_cm:infiltrationRateClassProperty a sosa:ObservableProperty ;
-        rdfs:label "infiltrationRateClassProperty"@en .
+        rdfs:label "infiltrationRateClassProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:Texture  a	owl:Class ;
         rdfs:label "Texture"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:textureProperty ] .
 
 glosis_cm:textureProperty a sosa:ObservableProperty ;
-        rdfs:label "textureProperty"@en .
+        rdfs:label "textureProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:MunsellColorValue  a        owl:Class ;
         rdfs:label "MunsellColorValue"@en ;
@@ -172,10 +192,12 @@ glosis_cm:InfiltrationRateNumeric  a owl:Class ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:infiltrationRateNumericProperty ] .
 
 glosis_cm:infiltrationRateNumericProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "infiltrationRateNumericProperty"@en .
+        rdfs:label "infiltrationRateNumericProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:InfiltrationRateNumericValue a owl:Class ;
         rdfs:label "InfiltrationRateNumericValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM-PER-HR] .
