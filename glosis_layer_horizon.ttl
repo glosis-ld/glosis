@@ -102,13 +102,15 @@ glosis_lh:coatingNatureProperty a sosa:ObservableProperty ;
         
 glosis_lh:TextureLabClass  a	owl:Class ;
         rdfs:label "TextureLabClass"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:textureLabClassProperty ] .
 
 glosis_lh:textureLabClassProperty a sosa:ObservableProperty ;
-        rdfs:label "textureLabClassProperty"@en .
+        rdfs:label "textureLabClassProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CementationDegree  a owl:Class ;
         rdfs:label "CementationDegree"@en ;
@@ -150,16 +152,19 @@ glosis_lh:biologicalAbundanceProperty a sosa:ObservableProperty ;
         
 glosis_lh:MottlesPresence  a	owl:Class ;
         rdfs:label "MottlesPresence"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:MottlesPresenceValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesPresenceProperty ] .
 
 glosis_lh:mottlesPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "mottlesPresenceProperty"@en .
+        rdfs:label "mottlesPresenceProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:MottlesPresenceValue a owl:Class ;
         rdfs:label "MottlesPresenceValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:boolean ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
@@ -204,6 +209,7 @@ glosis_cm:ColourWet rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:ha
 
 glosis_lh:PhysioChemical a owl:Class ;
         rdfs:label "PhysioChemical"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:PhysioChemicalValue ] ;
@@ -211,45 +217,53 @@ glosis_lh:PhysioChemical a owl:Class ;
 
 glosis_lh:PhysioChemicalValue a owl:Class ;
         rdfs:label "PhysioChemicalValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
 
 glosis_lh:CationsSum  a	owl:Class ;
         rdfs:label "CationsSum"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationsSumValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationsSumProperty ] .
 
 glosis_lh:cationsSumProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "cationsSumProperty"@en .
+        rdfs:label "cationsSumProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CationsSumValue a owl:Class ;
         rdfs:label "CationsSumValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
 
 glosis_lh:MottlesColour  a	owl:Class ;
         rdfs:label "MottlesColour"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom  glosis_cm:MunsellColorValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesColourProperty ] .
 
 glosis_lh:mottlesColourProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesColourProperty"@en .                        
+        rdfs:label "mottlesColourProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .                      
 
 glosis_lh:DryConsistency a	owl:Class ;
         rdfs:label "DryConsistency"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:dryConsistencyProperty ] .
 
 glosis_lh:dryConsistencyProperty a sosa:ObservableProperty ;
-        rdfs:label "dryConsistencyProperty"@en .
+        rdfs:label "dryConsistencyProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CoatingAbundance  a owl:Class ;
         rdfs:label "CoatingAbundance"@en ;
@@ -305,16 +319,19 @@ glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProper
         
 glosis_lh:ParticleSizeFractionsSum  a	owl:Class ;
         rdfs:label "ParticleSizeFractionsSum"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ParticleSizeFractionsSumValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:particleSizeFractionsSumProperty ] .
 
 glosis_lh:particleSizeFractionsSumProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "ParticleSizeFractionsSumProperty"@en .
+        rdfs:label "ParticleSizeFractionsSumProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:ParticleSizeFractionsSumValue a owl:Class ;
         rdfs:label "ParticleSizeFractionsSumValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
@@ -333,16 +350,19 @@ glosis_lh:boundaryDistinctnessProperty a sosa:ObservableProperty ;
 
 glosis_lh:RootsPresence  a	owl:Class ;
         rdfs:label "RootsPresence"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:RootsPresenceValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:rootsPresenceProperty ] .
 
 glosis_lh:rootsPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "RootsPresenceProperty"@en .
+        rdfs:label "RootsPresenceProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:RootsPresenceValue a owl:Class ;
         rdfs:label "RootsPresenceValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:boolean ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
@@ -450,16 +470,19 @@ glosis_cm:Texture rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasF
 
 glosis_lh:MineralContent a owl:Class ;
         rdfs:label "MineralContent"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:MineralContentValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralContentProperty ] .
 
 glosis_lh:mineralContentProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "mineralContentProperty"@en .
+        rdfs:label "mineralContentProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:MineralContentValue a owl:Class ;
         rdfs:label "MineralContentValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
@@ -504,6 +527,7 @@ glosis_lh:mineralConcShapeProperty a sosa:ObservableProperty ;
         
 glosis_lh:WaterRetention  a	owl:Class ;
         rdfs:label "WaterRetention"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:WaterRetentionValue ] ;
@@ -511,12 +535,14 @@ glosis_lh:WaterRetention  a	owl:Class ;
 
 glosis_lh:WaterRetentionValue a owl:Class ;
         rdfs:label "WaterRetentionValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
 
 glosis_lh:Sand  a owl:Class ;
         rdfs:label "Sand"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SandValue ] ;
@@ -524,6 +550,7 @@ glosis_lh:Sand  a owl:Class ;
 
 glosis_lh:SandValue a owl:Class ;
         rdfs:label "SandValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:GM-PER-HectoGM] .
@@ -536,16 +563,19 @@ glosis_lh:clayMinerology a owl:DatatypeProperty ;
 
 glosis_lh:GypsumWeight  a owl:Class ;
         rdfs:label "GypsumWeight"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:GypsumWeightValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumWeightProperty ] .
 
 glosis_lh:gypsumWeightProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "gypsumWeightProperty"@en .
+        rdfs:label "gypsumWeightProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:GypsumWeightValue a owl:Class ;
         rdfs:label "GypsumWeightValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-KiloGM ].
@@ -578,16 +608,19 @@ glosis_lh:sandyTextureProperty a sosa:ObservableProperty ;
 
 glosis_lh:SolubleCationsTotal  a owl:Class ;
         rdfs:label "SolubleCationsTotal"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleCationsTotalValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:solubleCationsTotalProperty ] .
 
 glosis_lh:solubleCationsTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "solubleCationsTotalProperty"@en .
+        rdfs:label "solubleCationsTotalProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SolubleCationsTotalValue a owl:Class ;
         rdfs:label "SolubleCationsTotalValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:CentiMOL-PER-L ] . 
@@ -606,32 +639,38 @@ glosis_lh:cementationNatureProperty a sosa:ObservableProperty ;
 
 glosis_lh:Salt  a owl:Class ;
         rdfs:label "Salt"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SaltValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:saltProperty ] .
 
 glosis_lh:saltProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "saltProperty"@en .
+        rdfs:label "saltProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SaltValue a owl:Class ;
         rdfs:label "SaltValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
 
 glosis_lh:SolubleAnionsTotal  a	owl:Class ;
         rdfs:label "SolubleAnionsTotal"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleAnionsTotalValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:solubleAnionsTotalProperty ] .
 
 glosis_lh:solubleAnionsTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "solubleAnionsTotalProperty"@en .
+        rdfs:label "solubleAnionsTotalProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SolubleAnionsTotalValue a owl:Class ;
         rdfs:label "SolubleAnionsTotalValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:CentiMOL-PER-L ] .
@@ -676,16 +715,19 @@ glosis_lh:mottlesBoundaryClassificationProperty a sosa:ObservableProperty ;
 
 glosis_lh:CationExchangeCapacity  a owl:Class ;
         rdfs:label "CationExchangeCapacity"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacityValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationExchangeCapacityProperty ] .
 
 glosis_lh:cationExchangeCapacityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "cationExchangeCapacityProperty"@en .
+        rdfs:label "cationExchangeCapacityProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CationExchangeCapacityValue a owl:Class ;
         rdfs:label "CationExchangeCapacityValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:MOL-PER-KiloGM ] .
@@ -752,16 +794,19 @@ glosis_lh:mineralConcColourProperty a sosa:ObservableProperty ;
 
 glosis_lh:CationExchangeCapacityEffective  a owl:Class ;
         rdfs:label "CationExchangeCapacityEffective"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacityEffectiveValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationExchangeCapacityEffectiveProperty ] .
 
 glosis_lh:cationExchangeCapacityEffectiveProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "cationExchangeCapacityEffectiveProperty"@en .
+        rdfs:label "cationExchangeCapacityEffectiveProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CationExchangeCapacityEffectiveValue a owl:Class ;
         rdfs:label "CationExchangeCapacityEffectiveValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:MOL-PER-KiloGM ] .
@@ -818,6 +863,7 @@ glosis_cm:CracksDistance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty so
 
 glosis_lh:Clay a owl:Class ;
         rdfs:label "Clay"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ClayValue ] ;
@@ -825,6 +871,7 @@ glosis_lh:Clay a owl:Class ;
 
 glosis_lh:ClayValue a owl:Class ;
         rdfs:label "ClayValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
@@ -867,16 +914,19 @@ glosis_lh:coatingFormProperty a sosa:ObservableProperty ;
 
 glosis_lh:OxalateExtractableOpticalDensity  a owl:Class ;
         rdfs:label "OxalateExtractableOpticalDensity"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:OxalateExtractableOpticalDensityValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:oxalateExtractableOpticalDensityProperty ] .
 
 glosis_lh:oxalateExtractableOpticalDensityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "oxalateExtractableOpticalDensityProperty"@en .
+        rdfs:label "oxalateExtractableOpticalDensityProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:OxalateExtractableOpticalDensityValue a owl:Class ;
         rdfs:label "OxalateExtractableOpticalDensityValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
@@ -933,13 +983,15 @@ glosis_lh:stickinessProperty a sosa:ObservableProperty ;
 
 glosis_lh:MoistConsistency  a	owl:Class ;
         rdfs:label "MoistConsistency"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:moistConsistencyProperty ] .
 
 glosis_lh:moistConsistencyProperty a sosa:ObservableProperty ;
-        rdfs:label "moistConsistencyProperty"@en .
+        rdfs:label "moistConsistencyProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CoatingLocation a owl:Class ;
         rdfs:label "CoatingLocation"@en ;
@@ -978,6 +1030,7 @@ glosis_lh:carbonatesFormsProperty a sosa:ObservableProperty ;
 
 glosis_lh:Fragments  a	owl:Class ;
         rdfs:label "Fragments"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:FragmentsValue ] ;
@@ -985,29 +1038,34 @@ glosis_lh:Fragments  a	owl:Class ;
 
 glosis_lh:FragmentsValue a owl:Class ;
         rdfs:label "FragmentsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
 
 glosis_lh:WetPlasticity  a owl:Class ;
         rdfs:label "WetPlasticity"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:wetPlasticityProperty ] .
 
 glosis_lh:wetPlasticityProperty a sosa:ObservableProperty ;
-        rdfs:label "wetPlasticityProperty"@en .
+        rdfs:label "wetPlasticityProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:MineralConcAbundance  a owl:Class ;
         rdfs:label "MineralConcAbundance"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcAbundanceProperty ] .
 
 glosis_lh:mineralConcAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcAbundanceProperty"@en .
+        rdfs:label "mineralConcAbundanceProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:RootsAbundance a owl:Class ;
         rdfs:label "RootsAbundance"@en ;
@@ -1035,6 +1093,7 @@ glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
 
 glosis_lh:AvailableWaterHoldingCapacity  a owl:Class ;
         rdfs:label "AvailableWaterHoldingCapacity"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AvailableWaterHoldingCapacityValue ] ;
@@ -1045,12 +1104,14 @@ glosis_lh:AvailableWaterHoldingCapacity  a owl:Class ;
 
 glosis_lh:AvailableWaterHoldingCapacityValue a owl:Class ;
         rdfs:label "AvailableWaterHoldingCapacityValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:M3-PER-HundredM3 ] .
 
 glosis_lh:BaseSaturation  a owl:Class ;
         rdfs:label "BaseSaturation"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BaseSaturationValue ] ;
@@ -1061,15 +1122,18 @@ glosis_lh:BaseSaturation  a owl:Class ;
 
 glosis_lh:BaseSaturationValue a owl:Class ;
         rdfs:label "BaseSaturationValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:bulkDensityFineEarthProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "bulkDensityFineEarthProperty"@en .
+        rdfs:label "bulkDensityFineEarthProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:BulkDensityFineEarth  a owl:Class ;
         rdfs:label "BulkDensityFineEarth"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityFineEarthValue ] ;
@@ -1080,15 +1144,18 @@ glosis_lh:BulkDensityFineEarth  a owl:Class ;
 
 glosis_lh:BulkDensityFineEarthValue a owl:Class ;
         rdfs:label "BulkDensityFineEarthValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:KiloGM-PER-DeciM3 ] .
 
 glosis_lh:bulkDensityWholeSoilProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "bulkDensityWholeSoilProperty"@en .
+        rdfs:label "bulkDensityWholeSoilProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:BulkDensityWholeSoil  a owl:Class ;
         rdfs:label "BulkDensityWholeSoil"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityWholeSoilValue ] ;
@@ -1099,17 +1166,20 @@ glosis_lh:BulkDensityWholeSoil  a owl:Class ;
 
 glosis_lh:BulkDensityWholeSoilValue a owl:Class ;
         rdfs:label "BulkDensityWholeSoilValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:KiloGM-PER-DeciM3 ] .
 
 glosis_lh:cationExchangeCapacitycSoilProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "cationExchangeCapacitycSoilProperty"@en .
+        rdfs:label "cationExchangeCapacitycSoilProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CationExchangeCapacitycSoil  a owl:Class ;
         rdfs:label "CationExchangeCapacitycSoil"@en ;
-        rdfs:subClassOf  glosis_lh:PhysioChemical ; 
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+        rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacitycSoilValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1119,15 +1189,18 @@ glosis_lh:CationExchangeCapacitycSoil  a owl:Class ;
 
 glosis_lh:CationExchangeCapacitycSoilValue a owl:Class ;
         rdfs:label "CationExchangeCapacitycSoilValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:coarseFragmentsProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "coarseFragmentsProperty"@en .
+        rdfs:label "coarseFragmentsProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CoarseFragments  a owl:Class ;
         rdfs:label "CoarseFragments"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CoarseFragmentsValue ] ;
@@ -1138,15 +1211,18 @@ glosis_lh:CoarseFragments  a owl:Class ;
 
 glosis_lh:CoarseFragmentsValue a owl:Class ;
         rdfs:label "CoarseFragmentsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf   glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:effectiveCecProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "effectiveCecProperty"@en .
+        rdfs:label "effectiveCecProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:EffectiveCec  a owl:Class ;
         rdfs:label "EffectiveCec"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:EffectiveCecValue ] ;
@@ -1157,15 +1233,18 @@ glosis_lh:EffectiveCec  a owl:Class ;
 
 glosis_lh:EffectiveCecValue a owl:Class ;
         rdfs:label "EffectiveCecValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:electricalConductivityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "electricalConductivityProperty"@en .
+        rdfs:label "electricalConductivityProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:ElectricalConductivity  a owl:Class ;
         rdfs:label "ElectricalConductivity"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ElectricalConductivityValue ] ;
@@ -1176,12 +1255,14 @@ glosis_lh:ElectricalConductivity  a owl:Class ;
 
 glosis_lh:ElectricalConductivityValue a owl:Class ;
         rdfs:label "ElectricalConductivityValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:DeciS-PER-M ] .
 
 glosis_lh:AcidityExchangeable  a owl:Class ;
         rdfs:label "AcidityExchangeable"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AcidityExchangeableValue ] ;
@@ -1192,12 +1273,14 @@ glosis_lh:AcidityExchangeable  a owl:Class ;
 
 glosis_lh:AcidityExchangeableValue a owl:Class ;
         rdfs:label "AcidityExchangeableValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:AluminiumExchangeableBases  a	owl:Class ;
         rdfs:label "AluminiumExchangeableBases"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumExchangeableBasesValue ] ;
@@ -1208,12 +1291,14 @@ glosis_lh:AluminiumExchangeableBases  a	owl:Class ;
 
 glosis_lh:AluminiumExchangeableBasesValue a owl:Class ;
         rdfs:label "AluminiumExchangeableBasesValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:CalciumExchangeableBases  a	owl:Class ;
         rdfs:label "CalciumExchangeableBases"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumExchangeableBasesValue ] ;
@@ -1224,12 +1309,14 @@ glosis_lh:CalciumExchangeableBases  a	owl:Class ;
 
 glosis_lh:CalciumExchangeableBasesValue a owl:Class ;
         rdfs:label "CalciumExchangeableBasesValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:CalciumExtractableElements  a	owl:Class ;
         rdfs:label "CalciumExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumExtractableElementsValue ] ;
@@ -1240,12 +1327,14 @@ glosis_lh:CalciumExtractableElements  a	owl:Class ;
 
 glosis_lh:CalciumExtractableElementsValue a owl:Class ;
         rdfs:label "CalciumExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:CalciumTotalElements  a owl:Class ;
         rdfs:label "CalciumTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumTotalElementsValue ] ;
@@ -1256,12 +1345,14 @@ glosis_lh:CalciumTotalElements  a owl:Class ;
 
 glosis_lh:CalciumTotalElementsValue a owl:Class ;
         rdfs:label "CalciumTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:HydrogenExchangeableBases  a	owl:Class ;
         rdfs:label "HydrogenExchangeableBases"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:HydrogenExchangeableBasesValue ] ;
@@ -1272,12 +1363,14 @@ glosis_lh:HydrogenExchangeableBases  a	owl:Class ;
 
 glosis_lh:HydrogenExchangeableBasesValue a owl:Class ;
         rdfs:label "HydrogenExchangeableBasesValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:MagnesiumExchangeableBases  a	owl:Class ;
         rdfs:label "MagnesiumExchangeableBases"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MagnesiumExchangeableBasesValue ] ;
@@ -1288,12 +1381,14 @@ glosis_lh:MagnesiumExchangeableBases  a	owl:Class ;
 
 glosis_lh:MagnesiumExchangeableBasesValue a owl:Class ;
         rdfs:label "MagnesiumExchangeableValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:MagnesiumExtractableElements  a owl:Class ;
         rdfs:label "MagnesiumExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MagnesiumExtractableElementsValue ] ;
@@ -1304,12 +1399,14 @@ glosis_lh:MagnesiumExtractableElements  a owl:Class ;
 
 glosis_lh:MagnesiumExtractableElementsValue a owl:Class ;
         rdfs:label "MagnesiumExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:MagnesiumTotalElements  a	owl:Class ;
         rdfs:label "MagnesiumTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MagnesiumTotalElementsValue ] ;
@@ -1320,6 +1417,7 @@ glosis_lh:MagnesiumTotalElements  a	owl:Class ;
 
 glosis_lh:MagnesiumTotalElementsValue a owl:Class ;
         rdfs:label "MagnesiumTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
@@ -1345,6 +1443,7 @@ glosis_lh:ManganeseExchangeableBasesValue a owl:Class ;
 
 glosis_lh:ManganeseExtractableElements  a owl:Class ;
         rdfs:label "ManganeseExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ManganeseExtractableElementsValue ] ;
@@ -1355,12 +1454,14 @@ glosis_lh:ManganeseExtractableElements  a owl:Class ;
 
 glosis_lh:ManganeseExtractableElementsValue a owl:Class ;
         rdfs:label "ManganeseExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:ManganeseTotalElements  a owl:Class ;
         rdfs:label "ManganeseTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ManganeseTotalElementsValue ] ;
@@ -1371,12 +1472,14 @@ glosis_lh:ManganeseTotalElements  a owl:Class ;
 
 glosis_lh:ManganeseTotalElementsValue a owl:Class ;
         rdfs:label "ManganeseTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:PotassiumExchangeableBases  a	owl:Class ;
         rdfs:label "PotassiumExchangeableBases"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PotassiumExchangeableBasesValue ] ;
@@ -1387,12 +1490,14 @@ glosis_lh:PotassiumExchangeableBases  a	owl:Class ;
 
 glosis_lh:PotassiumExchangeableBasesValue a owl:Class ;
         rdfs:label "PotassiumExchangeableBasesValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:PotassiumExtractableElements  a owl:Class ;
         rdfs:label "PotassiumExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PotassiumExtractableElementsValue ] ;
@@ -1403,12 +1508,14 @@ glosis_lh:PotassiumExtractableElements  a owl:Class ;
 
 glosis_lh:PotassiumExtractableElementsValue a owl:Class ;
         rdfs:label "PotassiumExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:PotassiumTotalElements  a owl:Class ;
         rdfs:label "PotassiumTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PotassiumTotalElementsValue ] ;
@@ -1419,12 +1526,14 @@ glosis_lh:PotassiumTotalElements  a owl:Class ;
 
 glosis_lh:PotassiumTotalElementsValue a owl:Class ;
         rdfs:label "PotassiumTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:SodiumExchangeableBases  a owl:Class ;
         rdfs:label "SodiumExchangeableBases"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SodiumExchangeableBasesValue ] ;
@@ -1435,12 +1544,14 @@ glosis_lh:SodiumExchangeableBases  a owl:Class ;
 
 glosis_lh:SodiumExchangeableBasesValue a owl:Class ;
         rdfs:label "SodiumExchangeableBasesValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
 glosis_lh:SodiumExtractableElements  a	owl:Class ;
         rdfs:label "SodiumExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SodiumExtractableElementsValue ] ;
@@ -1451,12 +1562,14 @@ glosis_lh:SodiumExtractableElements  a	owl:Class ;
 
 glosis_lh:SodiumExtractableElementsValue a owl:Class ;
         rdfs:label "SodiumExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:SodiumTotalElements  a owl:Class ;
         rdfs:label "SodiumTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SodiumTotalElementsValue ] ;
@@ -1467,15 +1580,18 @@ glosis_lh:SodiumTotalElements  a owl:Class ;
 
 glosis_lh:SodiumTotalElementsValue a owl:Class ;
         rdfs:label "SodiumTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:aluminiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "aluminiumProperty"@en .
+        rdfs:label "aluminiumProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:AluminiumExtractableElements  a owl:Class ;
         rdfs:label "AluminiumExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasFeatureOfInterest ; owl:allValuesFrom
@@ -1489,6 +1605,7 @@ glosis_lh:AluminiumExtractableElements  a owl:Class ;
 
 glosis_lh:AluminiumExtractableElementsValue a owl:Class ;
         rdfs:label "AluminiumExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
@@ -1496,6 +1613,7 @@ glosis_lh:AluminiumExtractableElementsValue a owl:Class ;
 
 glosis_lh:AluminiumTotalElements  a owl:Class ;
         rdfs:label "AluminiumTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumTotalElementsValue ] ;
@@ -1506,12 +1624,14 @@ glosis_lh:AluminiumTotalElements  a owl:Class ;
 
 glosis_lh:AluminiumTotalElementsValue a owl:Class ;
         rdfs:label "AluminiumTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:BoronExtractableElements a owl:Class ;
         rdfs:label "BoronExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BoronExtractableElementsValue ] ;
@@ -1522,12 +1642,14 @@ glosis_lh:BoronExtractableElements a owl:Class ;
 
 glosis_lh:BoronExtractableElementsValue a owl:Class ;
         rdfs:label "BoronExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:BoronTotalElements  a	owl:Class ;
         rdfs:label "BoronTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BoronTotalElementsValue ] ;
@@ -1538,6 +1660,7 @@ glosis_lh:BoronTotalElements  a	owl:Class ;
 
 glosis_lh:BoronTotalElementsValue a owl:Class ;
         rdfs:label "BoronTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
@@ -1579,6 +1702,7 @@ glosis_lh:CadmiumTotalElementsValue a owl:Class ;
 
 glosis_lh:CopperExtractableElements  a	owl:Class ;
         rdfs:label "CopperExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CopperExtractableElementsValue ] ;
@@ -1589,12 +1713,14 @@ glosis_lh:CopperExtractableElements  a	owl:Class ;
 
 glosis_lh:CopperExtractableElementsValue a owl:Class ;
         rdfs:label "CopperExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:CopperTotalElements a owl:Class ;
         rdfs:label "CopperTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CopperTotalElementsValue ] ;
@@ -1605,12 +1731,14 @@ glosis_lh:CopperTotalElements a owl:Class ;
 
 glosis_lh:CopperTotalElementsValue a owl:Class ;
         rdfs:label "CopperTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:IronExtractableElements a owl:Class ;
         rdfs:label "IronExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:IronExtractableElementsValue ] ;
@@ -1621,12 +1749,14 @@ glosis_lh:IronExtractableElements a owl:Class ;
 
 glosis_lh:IronExtractableElementsValue a owl:Class ;
         rdfs:label "IronExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:IronTotalElements  a	owl:Class ;
         rdfs:label "IronTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:IronTotalElementsValue ] ;
@@ -1637,6 +1767,7 @@ glosis_lh:IronTotalElements  a	owl:Class ;
 
 glosis_lh:IronTotalElementsValue a owl:Class ;
         rdfs:label "IronTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
@@ -1678,6 +1809,7 @@ glosis_lh:MolybdenumTotalElementsValue a owl:Class ;
 
 glosis_lh:PhosphorusExtractableElements a owl:Class ;
         rdfs:label "PhosphorusExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PhosphorusExtractableElementsValue ] ;
@@ -1688,12 +1820,14 @@ glosis_lh:PhosphorusExtractableElements a owl:Class ;
 
 glosis_lh:PhosphorusExtractableElementsValue a owl:Class ;
         rdfs:label "PhosphorusExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:PhosphorusTotalElements  a	owl:Class ;
         rdfs:label "PhosphorusTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PhosphorusTotalElementsValue ] ;
@@ -1704,12 +1838,14 @@ glosis_lh:PhosphorusTotalElements  a	owl:Class ;
 
 glosis_lh:PhosphorusTotalElementsValue a owl:Class ;
         rdfs:label "PhosphorusTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:SulfurExtractableElements  a	owl:Class ;
         rdfs:label "SulfurExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SulfurExtractableElementsValue ] ;
@@ -1720,12 +1856,14 @@ glosis_lh:SulfurExtractableElements  a	owl:Class ;
 
 glosis_lh:SulfurExtractableElementsValue a owl:Class ;
         rdfs:label "SulfurExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:SulfurTotalElements  a owl:Class ;
         rdfs:label "SulfurTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SulfurTotalElementsValue ] ;
@@ -1736,15 +1874,18 @@ glosis_lh:SulfurTotalElements  a owl:Class ;
 
 glosis_lh:SulfurTotalElementsValue a owl:Class ;
         rdfs:label "SulfurTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:zincProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "zincProperty"@en .
+        rdfs:label "zincProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:ZincExtractableElements a owl:Class ;
         rdfs:label "ZincExtractableElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ZincExtractableElementsValue ] ;
@@ -1755,12 +1896,14 @@ glosis_lh:ZincExtractableElements a owl:Class ;
 
 glosis_lh:ZincExtractableElementsValue a owl:Class ;
         rdfs:label "ZincExtractableElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:ZincTotalElements  a	owl:Class ;
         rdfs:label "ZincTotalElements"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ZincTotalElementsValue ] ;
@@ -1771,15 +1914,18 @@ glosis_lh:ZincTotalElements  a	owl:Class ;
 
 glosis_lh:ZincTotalElementsValue a owl:Class ;
         rdfs:label "ZincTotalElementsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
 glosis_lh:gypsumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "gypsumProperty"@en .
+        rdfs:label "gypsumProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:Gypsum a owl:Class ;
         rdfs:label "Gypsum"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:GypsumValue ] ;
@@ -1790,15 +1936,18 @@ glosis_lh:Gypsum a owl:Class ;
 
 glosis_lh:GypsumValue a owl:Class ;
         rdfs:label "GypsumValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:hydraulicConductivityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "hydraulicConductivityProperty"@en .
+        rdfs:label "hydraulicConductivityProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:HydraulicConductivity a owl:Class ;
         rdfs:label "HydraulicConductivity"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:HydraulicConductivityValue ] ;
@@ -1809,15 +1958,18 @@ glosis_lh:HydraulicConductivity a owl:Class ;
 
 glosis_lh:HydraulicConductivityValue a owl:Class ;
         rdfs:label "HydraulicConductivityValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiM-PER-HR ] .
 
 glosis_lh:carbonInorganicProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "carbonInorganicProperty"@en .
+        rdfs:label "carbonInorganicProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CarbonInorganic a owl:Class ;
         rdfs:label "CarbonInorganic"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CarbonInorganicValue ] ;
@@ -1828,6 +1980,7 @@ glosis_lh:CarbonInorganic a owl:Class ;
 
 glosis_lh:CarbonInorganicValue a owl:Class ;
         rdfs:label "CarbonInorganicValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
@@ -1856,6 +2009,7 @@ glosis_lh:MoistureContentValue a owl:Class ;
 
 glosis_lh:CarbonOrganic a owl:Class ;
         rdfs:label "CarbonOrganic"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CarbonOrganicValue ] ;
@@ -1866,15 +2020,18 @@ glosis_lh:CarbonOrganic a owl:Class ;
 
 glosis_lh:CarbonOrganicValue a owl:Class ;
         rdfs:label "CarbonOrganicValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
 glosis_lh:organicMatterProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "organicMatterProperty"@en .
+        rdfs:label "organicMatterProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:OrganicMatter  a owl:Class ;
         rdfs:label "OrganicMatter"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:OrganicMatterValue ] ;
@@ -1885,12 +2042,14 @@ glosis_lh:OrganicMatter  a owl:Class ;
 
 glosis_lh:OrganicMatterValue a owl:Class ;
         rdfs:label "OrganicMatterValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
 glosis_lh:PH  a	owl:Class ;
         rdfs:label "PH"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PHValue ] ;
@@ -1901,12 +2060,14 @@ glosis_lh:PH  a	owl:Class ;
 
 glosis_lh:PHValue a owl:Class ;
         rdfs:label "PHValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PH ] .
 
 glosis_lh:PhosphorusRetention a owl:Class ;
         rdfs:label "PhosphorusRetention"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PhosphorusRetentionValue ] ;
@@ -1917,15 +2078,18 @@ glosis_lh:PhosphorusRetention a owl:Class ;
 
 glosis_lh:PhosphorusRetentionValue a owl:Class ;
         rdfs:label "PhosphorusRetentionValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:GM-PER-HectoGM ] .
 
 glosis_lh:porosityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "porosityProperty"@en .
+        rdfs:label "porosityProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:Porosity  a	owl:Class ;
         rdfs:label "Porosity"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PorosityValue ] ;
@@ -1936,15 +2100,18 @@ glosis_lh:Porosity  a	owl:Class ;
 
 glosis_lh:PorosityValue a owl:Class ;
         rdfs:label "PorosityValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:M3-PER-HundredM3 ] .
 
 glosis_lh:solubleSaltsProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "solubleSaltsProperty"@en .
+        rdfs:label "solubleSaltsProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SolubleSalts  a	owl:Class ;
         rdfs:label "SolubleSalts"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleSaltsValue ] ;
@@ -1955,12 +2122,14 @@ glosis_lh:SolubleSalts  a	owl:Class ;
 
 glosis_lh:SolubleSaltsValue a owl:Class ;
         rdfs:label "SolubleSaltsValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:CentiMOL-PER-L ] .
 
 glosis_lh:SandFractionTexture a owl:Class ;
         rdfs:label "SandFractionTexture"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SandFractionTextureValue ] ;
@@ -1971,12 +2140,14 @@ glosis_lh:SandFractionTexture a owl:Class ;
 
 glosis_lh:SandFractionTextureValue a owl:Class ;
         rdfs:label "SandFractionTextureValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:SiltFractionTexture  a owl:Class ;
         rdfs:label "SiltFractionTexture"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SiltFractionTextureValue ] ;
@@ -1987,12 +2158,14 @@ glosis_lh:SiltFractionTexture  a owl:Class ;
 
 glosis_lh:SiltFractionTextureValue a owl:Class ;
         rdfs:label "SiltFractionTextureValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:ClayFractionTexture a owl:Class ;
         rdfs:label "ClayFractionTexture"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ClayFractionTextureValue ] ;
@@ -2003,12 +2176,14 @@ glosis_lh:ClayFractionTexture a owl:Class ;
 
 glosis_lh:ClayFractionTextureValue a owl:Class ;
         rdfs:label "ClayFractionTextureValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
 glosis_lh:CarbonTotal a owl:Class ;
         rdfs:label "CarbonTotal"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CarbonTotalValue ] ;
@@ -2019,15 +2194,18 @@ glosis_lh:CarbonTotal a owl:Class ;
 
 glosis_lh:CarbonTotalValue a owl:Class ;
         rdfs:label "CarbonTotalValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
 glosis_lh:totalCarbonateEquivalentProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "totalCarbonateEquivalentProperty"@en .
+        rdfs:label "totalCarbonateEquivalentProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:TotalCarbonateEquivalent  a	owl:Class ;
         rdfs:label "TotalCarbonateEquivalent"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:TotalCarbonateEquivalentValue ] ;
@@ -2038,12 +2216,14 @@ glosis_lh:TotalCarbonateEquivalent  a	owl:Class ;
 
 glosis_lh:TotalCarbonateEquivalentValue a owl:Class ;
         rdfs:label "TotalCarbonateEquivalentValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
 glosis_lh:NitrogenTotal  a owl:Class ;
         rdfs:label "NitrogenTotal"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:NitrogenTotalValue ] ;
@@ -2054,6 +2234,7 @@ glosis_lh:NitrogenTotal  a owl:Class ;
 
 glosis_lh:NitrogenTotalValue a owl:Class ;
         rdfs:label "NitrogenTotalValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
