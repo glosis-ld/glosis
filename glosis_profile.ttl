@@ -37,7 +37,7 @@
 glosis_pr:GL_Profile  a     owl:Class ;
         rdfs:label "GL_Profile"@en ;
         rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-        rdfs:subClassOf  iso28258:Profile .
+        rdfs:subClassOf  iso28258:Profile , sosa:FeatureOfInterest .
 
 glosis_cm:SoilDepthBedrock rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_pr:GL_Profile ] .
 
