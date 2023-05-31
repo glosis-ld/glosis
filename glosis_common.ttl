@@ -185,10 +185,12 @@ glosis_cm:hue
         rdfs:range    xsd:string .
 
 glosis_cm:colourWetProperty a sosa:ObservableProperty ;
-        rdfs:label "colourWetProperty"@en .
+        rdfs:label "colourWetProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_cm:colourDryProperty a sosa:ObservableProperty ;
-        rdfs:label "colourDryProperty"@en .
+        rdfs:label "colourDryProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_cm:InfiltrationRateNumeric  a owl:Class ;
         rdfs:label "InfiltrationRateNumeric"@en ;
@@ -285,13 +287,15 @@ glosis_cm:rockAbundanceProperty a sosa:ObservableProperty ;
         rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 26"@en .
 
 glosis_cm:ColourDry  a	owl:Class ;
-        rdfs:label "ColourDry"@en;
+        rdfs:label "ColourDry"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
                         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_cm:MunsellColorValue] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:colourDryProperty ] .
 
 glosis_cm:ColourWet  a	owl:Class ;
-        rdfs:label "ColourWet"@en; 
+        rdfs:label "ColourWet"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ; 
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom  glosis_cm:MunsellColorValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:colourWetProperty ] .
