@@ -731,3 +731,20 @@ glosis_sp:LandUseClass a owl:Class ;
 glosis_sp:landUseClassProperty a sosa:ObservableProperty ;
         rdfs:label "landUseClassProperty"@en ;
         rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 8"@en .
+
+
+glosis_sp:SoilCarbonDensity a owl:Class ;
+        rdfs:label "SoilCarbonDensity"@en ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_sp:GL_Plot] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:SoilCarbonDensityValue ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:soilCarbonDensityProperty ] .
+
+glosis_sp:soilCarbonDensityProperty a sosa:ObservableProperty , qudt:Quantitykind ;
+        rdfs:label "soilCarbonDensityProperty"@en .
+
+glosis_sp:SoilCarbonDensityValue a owl:Class ;
+        rdfs:label "SoilCarbonDensityValue"@en ;
+        rdfs:subClassOf  qudt:QuantityValue ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] . 
