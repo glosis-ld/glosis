@@ -5545,6 +5545,7 @@ glosis_cl:PhysioChemicalPropertyCode a owl:Class;
                                                 glosis_cl:physioChemicalPropertyCode-CaN
                                                 glosis_cl:physioChemicalPropertyCode-Cartoh
                                                 glosis_cl:physioChemicalPropertyCode-Chl
+                                                glosis_cl:physioChemicalPropertyCode-CoaFra
                                                 glosis_cl:physioChemicalPropertyCode-Copext
                                                 glosis_cl:physioChemicalPropertyCode-Coptot
                                                 glosis_cl:physioChemicalPropertyCode-Hyd
@@ -5772,6 +5773,12 @@ glosis_cl:physioChemicalPropertyCode-Chl a skos:Concept, glosis_cl:PhysioChemica
         skos:topConceptOf glosis_cl:physioChemicalPropertyCode;
         skos:prefLabel "Chloride (Cl-) - soluble"@en ;
         skos:notation "Chl" ;
+        skos:inScheme glosis_cl:physioChemicalPropertyCode .
+
+glosis_cl:physioChemicalPropertyCode-CoaFra a skos:Concept, glosis_cl:PhysioChemicalPropertyCode;
+        skos:topConceptOf glosis_cl:physioChemicalPropertyCode;
+        skos:prefLabel "Coarse fragments"@en ;
+        skos:notation "CoaFra" ;
         skos:inScheme glosis_cl:physioChemicalPropertyCode .
 
 glosis_cl:physioChemicalPropertyCode-Copext a skos:Concept, glosis_cl:PhysioChemicalPropertyCode;
@@ -7726,87 +7733,87 @@ glosis_cl:carbonatesFormsValueCode-HL a skos:Concept, glosis_cl:CarbonatesFormsV
         skos:notation "HL" ;
         skos:inScheme glosis_cl:carbonatesFormsValueCode .
 
-glosis_cl:fragmentsPropertyCode a skos:ConceptScheme ;
-        skos:prefLabel "Code list for FragmentsProperty - codelist scheme"@en;
-        rdfs:label "Code list for FragmentsProperty - codelist scheme"@en;
-        skos:note "This code list provides the FragmentsProperty."@en;
-        rdfs:seeAlso glosis_cl:FragmentsPropertyCode .
+glosis_cl:fragmentsClassValueCode a skos:ConceptScheme ;
+        skos:prefLabel "Code list for FragmentsClassValue - codelist scheme"@en;
+        rdfs:label "Code list for FragmentsClassValue - codelist scheme"@en;
+        skos:note "This code list provides the FragmentsClassValue."@en;
+        rdfs:seeAlso glosis_cl:FragmentsClassValueCode .
 
-glosis_cl:FragmentsPropertyCode a owl:Class;
-        rdfs:subClassOf skos:Concept, sosa:ObservableProperty ;
-        rdfs:label "Code list for FragmentsProperty - codelist class"@en;
-        rdfs:comment "This code list provides the FragmentsProperty."@en;
-        rdfs:seeAlso glosis_cl:fragmentsPropertyCode ;
-        owl:oneOf (                             glosis_cl:fragmentsPropertyCode-FGF1 
-    						glosis_cl:fragmentsPropertyCode-FGF2 
-                                                glosis_cl:fragmentsPropertyCode-FGF3     
-    						glosis_cl:fragmentsPropertyCode-FGF4 
-                                                glosis_cl:fragmentsPropertyCode-FGT 
-                                                glosis_cl:fragmentsPropertyCode-FV1
-                                                glosis_cl:fragmentsPropertyCode-FV2 
-                                                glosis_cl:fragmentsPropertyCode-FV3
-                                                glosis_cl:fragmentsPropertyCode-FVT
-                                                glosis_cl:fragmentsPropertyCode-FVE ) .
+glosis_cl:FragmentsClassValueCode a owl:Class;
+        rdfs:subClassOf skos:Concept, sosa:ObservableClass ;
+        rdfs:label "Code list for FragmentsClassValue - codelist class"@en;
+        rdfs:comment "This code list provides the FragmentsClassValue."@en;
+        rdfs:seeAlso glosis_cl:fragmentsClassValueCode ;
+        owl:oneOf (                             glosis_cl:fragmentsClassValueCode-FGF1 
+    						glosis_cl:fragmentsClassValueCode-FGF2 
+                                                glosis_cl:fragmentsClassValueCode-FGF3     
+    						glosis_cl:fragmentsClassValueCode-FGF4 
+                                                glosis_cl:fragmentsClassValueCode-FGT 
+                                                glosis_cl:fragmentsClassValueCode-FV1
+                                                glosis_cl:fragmentsClassValueCode-FV2 
+                                                glosis_cl:fragmentsClassValueCode-FV3
+                                                glosis_cl:fragmentsClassValueCode-FVT
+                                                glosis_cl:fragmentsClassValueCode-FVE ) .
 
-glosis_cl:fragmentsPropertyCode-FGF1 a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FGF1 a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsGravimetricFraction01"@en ;
         skos:notation "FGF1" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FGF2 a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FGF2 a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsGravimetricFraction02"@en ;
         skos:notation "FGF2" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FGF3 a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FGF3 a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsGravimetricFraction03"@en ;
         skos:notation "FGF3" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FGF4 a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FGF4 a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsGravimetricFraction04"@en ;
         skos:notation "FGF4" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FGT a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FGT a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsGravimetricTotal"@en ;
         skos:notation "FGT" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FV1 a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FV1 a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsVolumetric01"@en ;
         skos:notation "FV1" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FV2 a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FV2 a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsVolumetric02"@en ;
         skos:notation "FV2" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FV3 a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FV3 a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsVolumetric03"@en ;
         skos:notation "FV3" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FVT a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FVT a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsVolumetricTotal"@en ;
         skos:notation "FVT" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
-glosis_cl:fragmentsPropertyCode-FVE a skos:Concept, glosis_cl:FragmentsPropertyCode;
-        skos:topConceptOf glosis_cl:fragmentsPropertyCode;
+glosis_cl:fragmentsClassValueCode-FVE a skos:Concept, glosis_cl:FragmentsClassValueCode;
+        skos:topConceptOf glosis_cl:fragmentsClassValueCode;
         skos:prefLabel "FragmentsVolumetricEstimate"@en ;
         skos:notation "FVE" ;
-        skos:inScheme glosis_cl:fragmentsPropertyCode .
+        skos:inScheme glosis_cl:fragmentsClassValueCode .
 
 glosis_cl:rootsAbundanceValueCode a skos:ConceptScheme ;
         skos:prefLabel "Code list for RootsAbundanceValue - codelist scheme"@en;

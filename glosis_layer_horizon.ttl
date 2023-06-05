@@ -1031,20 +1031,17 @@ glosis_lh:carbonatesFormsProperty a sosa:ObservableProperty ;
         rdfs:label "carbonatesFormsProperty"@en ;
         rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 39"@en .
 
-glosis_lh:Fragments  a	owl:Class ;
-        rdfs:label "Fragments"@en ;
+glosis_lh:fragmentsClassProperty a sosa:ObservableProperty, qudt:Quantitykind ;
+        rdfs:label "fragmentsClassProperty"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+
+glosis_lh:FragmentsClass  a owl:Class ;
+        rdfs:label "FragmentsClass"@en ;
         rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:FragmentsValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:FragmentsPropertyCode ] .
-
-glosis_lh:FragmentsValue a owl:Class ;
-        rdfs:label "FragmentsValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
-        rdfs:subClassOf  qudt:QuantityValue ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:GM-PER-GM] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:FragmentsClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:fragmentsClassProperty ] .
 
 glosis_lh:WetPlasticity  a owl:Class ;
         rdfs:label "WetPlasticity"@en ;
@@ -1197,10 +1194,6 @@ glosis_lh:CationExchangeCapacitycSoilValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
-glosis_lh:coarseFragmentsProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "coarseFragmentsProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:CoarseFragments  a owl:Class ;
         rdfs:label "CoarseFragments"@en ;
         rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
@@ -1208,7 +1201,7 @@ glosis_lh:CoarseFragments  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CoarseFragmentsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:coarseFragmentsProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-CoaFra ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CoarseFragmentsProcedure ] .
 
