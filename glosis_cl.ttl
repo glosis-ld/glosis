@@ -7904,3 +7904,65 @@ glosis_cl:cementationContinuityValueCode-C a skos:Concept, glosis_cl:Cementation
         skos:notation "C" ;
         skos:definition "The layer is more than 90 percent cemented or compacted, and is only interrupted in places by cracks or fissures." ;
         skos:inScheme glosis_cl:cementationContinuityValueCode .
+
+
+glosis_cl:erosionAreaAffectedValueCode a skos:ConceptScheme ;
+        skos:prefLabel "Code list for ErosionAreaAffectedValue - codelist scheme"@en;
+        rdfs:label "Code list for ErosionAreaAffectedValue - codelist scheme"@en;
+        skos:note "This code list provides the ErosionAreaAffectedValue."@en;
+        skos:definition "table 17" ;
+        rdfs:seeAlso glosis_cl:ErosionAreaAffectedValueCode .
+
+glosis_cl:ErosionAreaAffectedValueCode a owl:Class;
+        rdfs:subClassOf skos:Concept ;
+        rdfs:label "Code list for ErosionAreaAffectedValue - codelist class"@en;
+        rdfs:comment "This code list provides the ErosionAreaAffectedValue."@en;
+        rdfs:seeAlso glosis_cl:erosionAreaAffectedValueCode ;
+        owl:oneOf (                             glosis_cl:erosionAreaAffectedValueCode-0 
+    						glosis_cl:erosionAreaAffectedValueCode-1 
+    						glosis_cl:erosionAreaAffectedValueCode-2 
+    						glosis_cl:erosionAreaAffectedValueCode-3 
+    						glosis_cl:erosionAreaAffectedValueCode-4 
+                                                glosis_cl:erosionAreaAffectedValueCode-5  ) .
+
+glosis_cl:erosionAreaAffectedValueCode-0 a skos:Concept, glosis_cl:ErosionAreaAffectedValueCode;
+        skos:topConceptOf glosis_cl:erosionAreaAffectedValueCode;
+        skos:prefLabel "0"@en ;
+        skos:notation "0" ;
+        skos:definition "0%" ;
+        skos:inScheme glosis_cl:erosionAreaAffectedValueCode .
+
+glosis_cl:erosionAreaAffectedValueCode-1 a skos:Concept, glosis_cl:ErosionAreaAffectedValueCode;
+        skos:topConceptOf glosis_cl:erosionAreaAffectedValueCode;
+        skos:prefLabel "1"@en ;
+        skos:notation "1" ;
+        skos:definition "0-5(%)" ;
+        skos:inScheme glosis_cl:erosionAreaAffectedValueCode .
+
+glosis_cl:erosionAreaAffectedValueCode-2 a skos:Concept, glosis_cl:ErosionAreaAffectedValueCode;
+        skos:topConceptOf glosis_cl:erosionAreaAffectedValueCode;
+        skos:prefLabel "2"@en ;
+        skos:notation "2" ;
+        skos:definition "5-10(%)" ;
+        skos:inScheme glosis_cl:erosionAreaAffectedValueCode .
+
+glosis_cl:erosionAreaAffectedValueCode-3 a skos:Concept, glosis_cl:ErosionAreaAffectedValueCode;
+        skos:topConceptOf glosis_cl:erosionAreaAffectedValueCode;
+        skos:prefLabel "3"@en ;
+        skos:notation "3" ;
+        skos:definition "10-25(%)" ;
+        skos:inScheme glosis_cl:erosionAreaAffectedValueCode .
+
+glosis_cl:erosionAreaAffectedValueCode-4 a skos:Concept, glosis_cl:ErosionAreaAffectedValueCode;
+        skos:topConceptOf glosis_cl:erosionAreaAffectedValueCode;
+        skos:prefLabel "4"@en ;
+        skos:notation "4" ;
+        skos:definition "25-50(%)" ;
+        skos:inScheme glosis_cl:erosionAreaAffectedValueCode .
+
+glosis_cl:erosionAreaAffectedValueCode-5 a skos:Concept, glosis_cl:ErosionAreaAffectedValueCode;
+        skos:topConceptOf glosis_cl:erosionAreaAffectedValueCode;
+        skos:prefLabel "5"@en ;
+        skos:notation "5" ;
+        skos:definition "> 50%" ;
+        skos:inScheme glosis_cl:erosionAreaAffectedValueCode .
