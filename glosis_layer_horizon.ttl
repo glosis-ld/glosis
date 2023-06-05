@@ -1982,10 +1982,12 @@ glosis_lh:CarbonInorganicValue a owl:Class ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
 glosis_lh:moistureContentProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "moistureContentProperty"@en .
+        rdfs:label "moistureContentProperty"@en ;
+        rdfs:isDefinedBy "Africa Soil Profiles Database Version 1.2. ISRIC Report 2014/01"@en .
 
 glosis_lh:MoistureContent a owl:Class ;
         rdfs:label "MoistureContent"@en ;
+        rdfs:isDefinedBy "Africa Soil Profiles Database Version 1.2. ISRIC Report 2014/01"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasFeatureOfInterest ; owl:allValuesFrom
@@ -1999,6 +2001,7 @@ glosis_lh:MoistureContent a owl:Class ;
 
 glosis_lh:MoistureContentValue a owl:Class ;
         rdfs:label "MoistureContentValue"@en ;
+        rdfs:isDefinedBy "Africa Soil Profiles Database Version 1.2. ISRIC Report 2014/01"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:M3-PER-HundredM3 ] .
