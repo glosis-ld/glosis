@@ -407,6 +407,7 @@ glosis_lh:porosityClassProperty a sosa:ObservableProperty ;
 
 glosis_lh:Silt a owl:Class ;
         rdfs:label "Silt"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SiltValue ] ;
@@ -414,6 +415,7 @@ glosis_lh:Silt a owl:Class ;
 
 glosis_lh:SiltValue a owl:Class ;
         rdfs:label "SiltValue"@en ;
+        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:GM-PER-HectoGM] .
