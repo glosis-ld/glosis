@@ -13,7 +13,7 @@
                                                     <http://w3id.org/glosis/model/iso28258/2013/> ,
                                                     <http://www.w3.org/ns/sosa/> ,
                                                     <http://www.w3.org/ns/ssn/> ;
-                                        <http://purl.org/dc/terms/creator> _:genid-nodeid-node1gsrbb4sux3 ,
+                                        <http://purl.org/dc/terms/creator> _:genid-nodeid-node1h4oedphgx983 ,
                                                                            _:genid1 ,
                                                                            _:genid3 ;
                                         <http://purl.org/dc/terms/description> "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
@@ -32,88 +32,64 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
           <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
 
 #################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/source
-<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/affiliation
-<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
-
-
-#################################################################
 #    Classes
 #################################################################
 
-###  http://w3id.org/glosis/model/codelists/ProfileDescriptionStatusValueCode
-<http://w3id.org/glosis/model/codelists/ProfileDescriptionStatusValueCode> rdf:type owl:Class .
-
-
 ###  http://w3id.org/glosis/model/common/InfiltrationRateClass
-<http://w3id.org/glosis/model/common/InfiltrationRateClass> rdf:type owl:Class ;
-                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/InfiltrationRateClass> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                               owl:allValuesFrom <http://w3id.org/glosis/model/profile/GL_Profile>
                                                                             ] .
 
 
 ###  http://w3id.org/glosis/model/common/InfiltrationRateNumeric
-<http://w3id.org/glosis/model/common/InfiltrationRateNumeric> rdf:type owl:Class ;
-                                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/InfiltrationRateNumeric> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                                 owl:allValuesFrom <http://w3id.org/glosis/model/profile/GL_Profile>
                                                                               ] .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepth
-<http://w3id.org/glosis/model/common/SoilDepth> rdf:type owl:Class ;
-                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/SoilDepth> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                   owl:allValuesFrom <http://w3id.org/glosis/model/profile/GL_Profile>
                                                                 ] .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthBedrock
-<http://w3id.org/glosis/model/common/SoilDepthBedrock> rdf:type owl:Class ;
-                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/SoilDepthBedrock> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                          owl:allValuesFrom <http://w3id.org/glosis/model/profile/GL_Profile>
                                                                        ] .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthRootable
-<http://w3id.org/glosis/model/common/SoilDepthRootable> rdf:type owl:Class ;
-                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/SoilDepthRootable> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                           owl:allValuesFrom <http://w3id.org/glosis/model/profile/GL_Profile>
                                                                         ] .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthRootableClass
-<http://w3id.org/glosis/model/common/SoilDepthRootableClass> rdf:type owl:Class ;
-                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/SoilDepthRootableClass> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                                owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                                owl:allValuesFrom <http://w3id.org/glosis/model/profile/GL_Profile>
                                                                              ] .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthSampled
-<http://w3id.org/glosis/model/common/SoilDepthSampled> rdf:type owl:Class ;
-                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/SoilDepthSampled> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                          owl:allValuesFrom <http://w3id.org/glosis/model/profile/GL_Profile>
                                                                        ] .
 
 
-###  http://w3id.org/glosis/model/iso28258/2013/Profile
-<http://w3id.org/glosis/model/iso28258/2013/Profile> rdf:type owl:Class .
-
-
 ###  http://w3id.org/glosis/model/profile/GL_Profile
 <http://w3id.org/glosis/model/profile/GL_Profile> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://w3id.org/glosis/model/iso28258/2013/Profile> .
+                                                  rdfs:subClassOf <http://w3id.org/glosis/model/iso28258/2013/Profile> ,
+                                                                  <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                                                  rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+                                                  rdfs:label "GL_Profile"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/ProfileDescriptionStatus
@@ -130,7 +106,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                   owl:hasValue <http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty>
-                                                                                ] .
+                                                                                ] ;
+                                                                rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 1"@en ;
+                                                                rdfs:label "ProfileDescriptionStatus"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/SoilClassification
@@ -147,7 +125,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
                                                                             owl:allValuesFrom xsd:string
-                                                                          ] .
+                                                                          ] ;
+                                                          rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                          rdfs:label "SoilClassification"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/SoilClassificationFAO
@@ -156,7 +136,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                owl:hasValue <http://w3id.org/glosis/model/profile/soilClassificationFAOProperty>
-                                                                             ] .
+                                                                             ] ;
+                                                             rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                             rdfs:label "SoilClassificationFAO"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/SoilClassificationUSDA
@@ -165,7 +147,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                 owl:hasValue <http://w3id.org/glosis/model/profile/soilClassificationUSDAProperty>
-                                                                              ] .
+                                                                              ] ;
+                                                              rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                              rdfs:label "SoilClassificationUSDA"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/SoilClassificationWRB
@@ -174,7 +158,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                owl:hasValue <http://w3id.org/glosis/model/profile/soilClassificationWRBProperty>
-                                                                             ] .
+                                                                             ] ;
+                                                             rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                             rdfs:label "SoilClassificationWRB"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/soilClassificationFAOProperty
@@ -203,7 +189,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty
 <http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty> rdf:type owl:NamedIndividual ,
                                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                        rdfs:isDefinedBy "GfSD Table 1"@en ;
+                                                                        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 1"@en ;
                                                                         rdfs:label "profileDescriptionStatusProperty"@en .
 
 
@@ -231,16 +217,20 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 #    Annotations
 #################################################################
 
-<http://w3id.org/glosis/model/profile/soilClassificationFAOProperty> rdfs:label "soilClassificationFAOProperty"@en .
+<http://w3id.org/glosis/model/profile/soilClassificationFAOProperty> rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                                     rdfs:label "soilClassificationFAOProperty"@en .
 
 
-<http://w3id.org/glosis/model/profile/soilClassificationProperty> rdfs:label "soilClassificationProperty"@en .
+<http://w3id.org/glosis/model/profile/soilClassificationProperty> rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                                  rdfs:label "soilClassificationProperty"@en .
 
 
-<http://w3id.org/glosis/model/profile/soilClassificationUSDAProperty> rdfs:label "soilClassificationUSDAProperty"@en .
+<http://w3id.org/glosis/model/profile/soilClassificationUSDAProperty> rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                                      rdfs:label "soilClassificationUSDAProperty"@en .
 
 
-<http://w3id.org/glosis/model/profile/soilClassificationWRBProperty> rdfs:label "soilClassificationWRBProperty"@en .
+<http://w3id.org/glosis/model/profile/soilClassificationWRBProperty> rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                                     rdfs:label "soilClassificationWRBProperty"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
