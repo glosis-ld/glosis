@@ -88,7 +88,7 @@ class Transformer(object):
                         elif p == rdflib.URIRef("http://www.w3.org/2004/02/skos/core#notation"):
                             property_dict["notation"] = o.n3().strip('"')
                         elif p == rdflib.URIRef("http://www.w3.org/2004/02/skos/core#prefLabel"):
-                            property_dict["label"] = o.n3().strip(' "@en')
+                            property_dict["label"] = o.n3().strip('"').removesuffix('"@en')
                         elif "scopeNote" in p:
                             if isinstance(o, rdflib.term.Literal):
                                 property_dict["citation"] = o.n3().strip('"')

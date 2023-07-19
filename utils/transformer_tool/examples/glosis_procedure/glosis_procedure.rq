@@ -1,6 +1,6 @@
 PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
 PREFIX sosa:  <http://www.w3.org/ns/sosa/> 
-PREFIX glosis_proc: <http://w3id.org/glosis/model/procedure#>
+PREFIX glosis_proc: <http://w3id.org/glosis/model/procedure/>
 PREFIX skos:  <http://www.w3.org/2004/02/skos/core#> 
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ex: <http://example.org/ontology#>
@@ -41,15 +41,15 @@ CONSTRUCT {
   ?broaderURI skos:narrower ?c_oneof .
 } 
 WHERE {
-  BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure#', ?attribute, 'Procedure')) AS ?URI1)
+  BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure/', ?attribute, 'Procedure')) AS ?URI1)
   BIND (STRLANG(CONCAT('Code list for ', ?attribute, ' analysis procedures - codelist scheme'),"en") AS ?cs_label)
   BIND (STRLANG(CONCAT('This code list provides analysis procedures for ', ?attribute, '.'), "en") AS ?cs_note)
   BIND (STR('AfSP-derived interpretation (RwaSP)') AS ?cs_definition)
   BIND (CONCAT(UCASE(SUBSTR(?attribute, 1, 1)), SUBSTR(?attribute, 2)) AS ?attribute_capitalize)
-  BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure#', ?attribute_capitalize, 'Procedure')) AS ?URI2)
+  BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure/', ?attribute_capitalize, 'Procedure')) AS ?URI2)
   BIND (STRLANG(CONCAT('Procedures for ', ?attribute_capitalize, ' - codelist class'),"en")  AS ?c_label)
   BIND (STRLANG(CONCAT('This code list provides analysis procedures for ', ?attribute_capitalize, '.'), "en") AS ?c_comment)
-  BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure#', ?attribute, 'Procedure', '-', ?instance)) AS ?oneof)
+  BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure/', ?attribute, 'Procedure', '-', ?instance)) AS ?oneof)
   BIND (IF(?instance != '', ?oneof, ?nothing) AS ?c_oneof)
   BIND (STRLANG(?label, "en")  AS ?i_label)
   BIND (IF(?notation != '', ?notation, ?nothing) AS ?i_notation)
@@ -57,6 +57,6 @@ WHERE {
   BIND (IF(?reference != '', URI(?reference), ?nothing)  AS ?i_reference)
   BIND (IF(?citation != '', ?citation, ?nothing) AS ?i_citation)
   BIND (IF(?parent_instance = '', ?URI1, ?nothing) AS ?top_URI)
-  BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure#', ?attribute, 'Procedure', '-', ?parent_instance)) AS ?parentURI)
+  BIND (URI(CONCAT('http://w3id.org/glosis/model/procedure/', ?attribute, 'Procedure', '-', ?parent_instance)) AS ?parentURI)
   BIND (IF(?parent_instance != '', ?parentURI, ?nothing) AS ?broaderURI)
 }

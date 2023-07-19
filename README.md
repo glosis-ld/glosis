@@ -56,6 +56,8 @@ Script can transform in two ways:
 ```python transform_to_csv.py input.ttl```
 (this creates a csv file with corresponding filename in the location of TURTLE file)
 
+read more about the transformer-tool [HERE](https://github.com/rapw3k/glosis/wiki/UTILITY:-Transformer-Tool).
+
 ## Version Updater
 
 [Version updater](https://github.com/rapw3k/glosis/tree/master/utils/version_updater) is a simple convenience script that updates and harmonizes versions across all ontology modules.

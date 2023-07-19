@@ -15,7 +15,7 @@
         <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/common/1.1.0"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1gsrb9aj0x3"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1h4oe14n9x3"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:description xml:lang="en">This ontology represents GLOSIS code lists extracted from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:description>
@@ -113,6 +113,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/common/chroma">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">chroma</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -122,6 +124,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/common/hue">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hue</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -131,6 +135,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/common/munsellCompounded">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">munsellCompounded</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -140,6 +146,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/common/value">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -167,6 +175,13 @@
 
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Quantitykind"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/BleachedSandValueCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/BleachedSandValueCode"/>
     
 
 
@@ -198,10 +213,10 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/FragmentSizeValueCode -->
+    <!-- http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode -->
 
 
-    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/FragmentSizeValueCode"/>
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode"/>
     
 
 
@@ -247,16 +262,18 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/bleachedSandProperty"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/BleachedSandValueCode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/bleachedSandProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 23</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BleachedSand</rdfs:label>
     </owl:Class>
     
 
@@ -278,14 +295,16 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/colourDryProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ColourDry</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://w3id.org/glosis/model/common/ColourWet -->
+    <!-- http://w3id.org/glosis/model/common/ColourMoist -->
 
 
-    <owl:Class rdf:about="http://w3id.org/glosis/model/common/ColourWet">
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/ColourMoist">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -296,9 +315,11 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/colourWetProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/colourMoistProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ColourMoist</rdfs:label>
     </owl:Class>
     
 
@@ -320,6 +341,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/cracksDepthProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 21,2</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CracksDepth</rdfs:label>
     </owl:Class>
     
 
@@ -341,6 +364,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/cracksDistanceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 21,3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CracksDistance</rdfs:label>
     </owl:Class>
     
 
@@ -362,6 +387,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/cracksWidthProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 21,1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CracksWidth</rdfs:label>
     </owl:Class>
     
 
@@ -383,27 +410,31 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/fragmentCoverProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 15,1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FragmentCover</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://w3id.org/glosis/model/common/FragmentSize -->
+    <!-- http://w3id.org/glosis/model/common/FragmentsSize -->
 
 
-    <owl:Class rdf:about="http://w3id.org/glosis/model/common/FragmentSize">
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/FragmentsSize">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/FragmentSizeValueCode"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/fragmentSizeProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/fragmentsSizeProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 15,2</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FragmentsSize </rdfs:label>
     </owl:Class>
     
 
@@ -425,6 +456,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">InfiltrationRateClass</rdfs:label>
     </owl:Class>
     
 
@@ -446,6 +479,7 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/infiltrationRateNumericProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">InfiltrationRateNumeric</rdfs:label>
     </owl:Class>
     
 
@@ -467,6 +501,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">InfiltrationRateNumericValue</rdfs:label>
     </owl:Class>
     
 
@@ -500,6 +536,8 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MunsellColorValue</rdfs:label>
     </owl:Class>
     
 
@@ -521,6 +559,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/organicMatterClassProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">table is missing!</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">OrganicMatterClass</rdfs:label>
     </owl:Class>
     
 
@@ -542,6 +582,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/rockAbundanceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 26</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">RockAbundance</rdfs:label>
     </owl:Class>
     
 
@@ -563,6 +605,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/rockShapeProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 28</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">RockShape</rdfs:label>
     </owl:Class>
     
 
@@ -584,6 +628,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/rockSizeProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 27</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">RockSize</rdfs:label>
     </owl:Class>
     
 
@@ -605,6 +651,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/soilDepthProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepth</rdfs:label>
     </owl:Class>
     
 
@@ -626,6 +674,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/soilDepthBedrockProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepthBedrock</rdfs:label>
     </owl:Class>
     
 
@@ -647,6 +697,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepthBedrockValue</rdfs:label>
     </owl:Class>
     
 
@@ -668,6 +720,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/soilDepthRootableProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepthRootable</rdfs:label>
     </owl:Class>
     
 
@@ -689,6 +743,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepthRootableClass</rdfs:label>
     </owl:Class>
     
 
@@ -710,6 +766,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepthRootableValue</rdfs:label>
     </owl:Class>
     
 
@@ -731,6 +789,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/soilDepthSampledProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepthSampled</rdfs:label>
     </owl:Class>
     
 
@@ -752,6 +812,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepthSampledValue</rdfs:label>
     </owl:Class>
     
 
@@ -773,6 +835,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SoilDepthValue</rdfs:label>
     </owl:Class>
     
 
@@ -794,6 +858,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Texture</rdfs:label>
     </owl:Class>
     
 
@@ -815,6 +881,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/common/weatheringFragmentsProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 29</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">WeatheringFragments</rdfs:label>
     </owl:Class>
     
 
@@ -850,6 +918,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/bleachedSandProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 23</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">bleachedSandProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -860,17 +929,19 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/colourDryProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">colourDryProperty</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://w3id.org/glosis/model/common/colourWetProperty -->
+    <!-- http://w3id.org/glosis/model/common/colourMoistProperty -->
 
 
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/colourWetProperty">
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/colourMoistProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">colourWetProperty</rdfs:label>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">colourMoistProperty</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -880,7 +951,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/cracksDepthProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 21.2</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 21,2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">cracksDepthProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -891,7 +962,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/cracksDistanceProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 21.3</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 21,3</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">cracksDistanceProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -902,7 +973,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/cracksWidthProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 21.1</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 21,1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">cracksWidthProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -913,19 +984,19 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/fragmentCoverProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 15.1</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 15,1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">fragmentCoverProperty</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://w3id.org/glosis/model/common/fragmentSizeProperty -->
+    <!-- http://w3id.org/glosis/model/common/fragmentsSizeProperty -->
 
 
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/fragmentSizeProperty">
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/fragmentsSizeProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 15.2</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">fragmentSizeProperty</rdfs:label>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 15,2</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">fragmentsSizeProperty</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -935,6 +1006,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/infiltrationRateClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">infiltrationRateClassProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -946,6 +1018,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/infiltrationRateNumericProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">infiltrationRateNumericProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -967,7 +1040,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/rockAbundanceProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 26</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 26</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">rockAbundanceProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -978,7 +1051,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/rockShapeProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 28</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 28</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">rockShapeProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -989,7 +1062,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/rockSizeProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 27</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 27</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">rockSizeProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1001,6 +1074,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/soilDepthBedrockProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilDepthBedrockProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1012,6 +1086,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/soilDepthProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilDepthProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1022,6 +1097,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/soilDepthRootableClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilDepthRootableClassProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1033,6 +1109,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/soilDepthRootableProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilDepthRootableProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1044,6 +1121,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/soilDepthSampledProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilDepthSampledProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1054,6 +1132,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/textureProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">textureProperty</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1064,7 +1143,7 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/common/weatheringFragmentsProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">GfSD Table 29</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 29</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">weatheringFragmentsProperty</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>

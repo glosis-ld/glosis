@@ -62,6 +62,6 @@ then opens the corresponding Turtle file in the parent folder As an example to
 create the documentation for the `glosis_common` module:
 
 ```
-python3 generateDoc.py glosis_main
+python3 generateDoc.py glosis_common
 ```
 

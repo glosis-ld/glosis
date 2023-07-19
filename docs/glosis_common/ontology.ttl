@@ -10,7 +10,7 @@
                                        owl:versionIRI <http://w3id.org/glosis/model/common/1.1.0> ;
                                        owl:imports <http://www.w3.org/ns/sosa/> ,
                                                    <http://www.w3.org/ns/ssn/> ;
-                                       <http://purl.org/dc/terms/creator> _:genid-nodeid-node1gsrb9aj0x3 ,
+                                       <http://purl.org/dc/terms/creator> _:genid-nodeid-node1h4oe14n9x3 ,
                                                                           _:genid1 ,
                                                                           _:genid3 ;
                                        <http://purl.org/dc/terms/description> "This ontology represents GLOSIS code lists extracted from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
@@ -58,22 +58,30 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 
 ###  http://w3id.org/glosis/model/common/chroma
 <http://w3id.org/glosis/model/common/chroma> rdf:type owl:DatatypeProperty ;
-                                             rdfs:range xsd:decimal .
+                                             rdfs:range xsd:decimal ;
+                                             rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+                                             rdfs:label "chroma"@en .
 
 
 ###  http://w3id.org/glosis/model/common/hue
 <http://w3id.org/glosis/model/common/hue> rdf:type owl:DatatypeProperty ;
-                                          rdfs:range xsd:string .
+                                          rdfs:range xsd:string ;
+                                          rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+                                          rdfs:label "hue"@en .
 
 
 ###  http://w3id.org/glosis/model/common/munsellCompounded
 <http://w3id.org/glosis/model/common/munsellCompounded> rdf:type owl:DatatypeProperty ;
-                                                        rdfs:range xsd:string .
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+                                                        rdfs:label "munsellCompounded"@en .
 
 
 ###  http://w3id.org/glosis/model/common/value
 <http://w3id.org/glosis/model/common/value> rdf:type owl:DatatypeProperty ;
-                                            rdfs:range xsd:decimal .
+                                            rdfs:range xsd:decimal ;
+                                            rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+                                            rdfs:label "value"@en .
 
 
 #################################################################
@@ -86,6 +94,10 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 
 ###  http://qudt.org/schema/qudt/Quantitykind
 <http://qudt.org/schema/qudt/Quantitykind> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/BleachedSandValueCode
+<http://w3id.org/glosis/model/codelists/BleachedSandValueCode> rdf:type owl:Class .
 
 
 ###  http://w3id.org/glosis/model/codelists/CracksDepthValueCode
@@ -104,8 +116,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/codelists/FragmentCoverValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/FragmentSizeValueCode
-<http://w3id.org/glosis/model/codelists/FragmentSizeValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode
+<http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode> rdf:type owl:Class .
 
 
 ###  http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode
@@ -132,13 +144,15 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/common/BleachedSand> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                    [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                     owl:hasValue <http://w3id.org/glosis/model/common/bleachedSandProperty>
+                                                                     owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                     owl:someValuesFrom <http://w3id.org/glosis/model/codelists/BleachedSandValueCode>
                                                                    ] ,
                                                                    [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
-                                                                     owl:allValuesFrom xsd:string
-                                                                   ] .
+                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                     owl:hasValue <http://w3id.org/glosis/model/common/bleachedSandProperty>
+                                                                   ] ;
+                                                   rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 23"@en ;
+                                                   rdfs:label "BleachedSand"@en .
 
 
 ###  http://w3id.org/glosis/model/common/ColourDry
@@ -151,20 +165,24 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                   owl:hasValue <http://w3id.org/glosis/model/common/colourDryProperty>
-                                                                ] .
+                                                                ] ;
+                                                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+                                                rdfs:label "ColourDry"@en .
 
 
-###  http://w3id.org/glosis/model/common/ColourWet
-<http://w3id.org/glosis/model/common/ColourWet> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                  owl:allValuesFrom <http://w3id.org/glosis/model/common/MunsellColorValue>
-                                                                ] ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                  owl:hasValue <http://w3id.org/glosis/model/common/colourWetProperty>
-                                                                ] .
+###  http://w3id.org/glosis/model/common/ColourMoist
+<http://w3id.org/glosis/model/common/ColourMoist> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                    owl:allValuesFrom <http://w3id.org/glosis/model/common/MunsellColorValue>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                    owl:hasValue <http://w3id.org/glosis/model/common/colourMoistProperty>
+                                                                  ] ;
+                                                  rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+                                                  rdfs:label "ColourMoist"@en .
 
 
 ###  http://w3id.org/glosis/model/common/CracksDepth
@@ -177,7 +195,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                     owl:hasValue <http://w3id.org/glosis/model/common/cracksDepthProperty>
-                                                                  ] .
+                                                                  ] ;
+                                                  rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 21,2"@en ;
+                                                  rdfs:label "CracksDepth"@en .
 
 
 ###  http://w3id.org/glosis/model/common/CracksDistance
@@ -190,7 +210,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                        owl:hasValue <http://w3id.org/glosis/model/common/cracksDistanceProperty>
-                                                                     ] .
+                                                                     ] ;
+                                                     rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 21,3"@en ;
+                                                     rdfs:label "CracksDistance"@en .
 
 
 ###  http://w3id.org/glosis/model/common/CracksWidth
@@ -203,7 +225,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                     owl:hasValue <http://w3id.org/glosis/model/common/cracksWidthProperty>
-                                                                  ] .
+                                                                  ] ;
+                                                  rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 21,1"@en ;
+                                                  rdfs:label "CracksWidth"@en .
 
 
 ###  http://w3id.org/glosis/model/common/FragmentCover
@@ -216,20 +240,24 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                       owl:hasValue <http://w3id.org/glosis/model/common/fragmentCoverProperty>
-                                                                    ] .
+                                                                    ] ;
+                                                    rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 15,1"@en ;
+                                                    rdfs:label "FragmentCover"@en .
 
 
-###  http://w3id.org/glosis/model/common/FragmentSize
-<http://w3id.org/glosis/model/common/FragmentSize> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                     owl:someValuesFrom <http://w3id.org/glosis/model/codelists/FragmentSizeValueCode>
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                     owl:hasValue <http://w3id.org/glosis/model/common/fragmentSizeProperty>
-                                                                   ] .
+###  http://w3id.org/glosis/model/common/FragmentsSize
+<http://w3id.org/glosis/model/common/FragmentsSize> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
+                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                      owl:hasValue <http://w3id.org/glosis/model/common/fragmentsSizeProperty>
+                                                                    ] ;
+                                                    rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 15,2"@en ;
+                                                    rdfs:label "FragmentsSize "@en .
 
 
 ###  http://w3id.org/glosis/model/common/InfiltrationRateClass
@@ -242,7 +270,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
                                                                               owl:allValuesFrom xsd:string
-                                                                            ] .
+                                                                            ] ;
+                                                            rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                            rdfs:label "InfiltrationRateClass"@en .
 
 
 ###  http://w3id.org/glosis/model/common/InfiltrationRateNumeric
@@ -255,7 +285,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                 owl:hasValue <http://w3id.org/glosis/model/common/infiltrationRateNumericProperty>
-                                                                              ] .
+                                                                              ] ;
+                                                              rdfs:label "InfiltrationRateNumeric"@en .
 
 
 ###  http://w3id.org/glosis/model/common/InfiltrationRateNumericValue
@@ -268,7 +299,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                    [ rdf:type owl:Restriction ;
                                                                                      owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                                      owl:allValuesFrom xsd:float
-                                                                                   ] .
+                                                                                   ] ;
+                                                                   rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                                   rdfs:label "InfiltrationRateNumericValue"@en .
 
 
 ###  http://w3id.org/glosis/model/common/MunsellColorValue
@@ -289,7 +322,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <http://w3id.org/glosis/model/common/value> ;
                                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
-                                                                        ] .
+                                                                        ] ;
+                                                        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+                                                        rdfs:label "MunsellColorValue"@en .
 
 
 ###  http://w3id.org/glosis/model/common/OrganicMatterClass
@@ -302,7 +337,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                          [ rdf:type owl:Restriction ;
                                                                            owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                            owl:hasValue <http://w3id.org/glosis/model/common/organicMatterClassProperty>
-                                                                         ] .
+                                                                         ] ;
+                                                         rdfs:isDefinedBy "table is missing!"@en ;
+                                                         rdfs:label "OrganicMatterClass"@en .
 
 
 ###  http://w3id.org/glosis/model/common/RockAbundance
@@ -315,7 +352,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                       owl:hasValue <http://w3id.org/glosis/model/common/rockAbundanceProperty>
-                                                                    ] .
+                                                                    ] ;
+                                                    rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 26"@en ;
+                                                    rdfs:label "RockAbundance"@en .
 
 
 ###  http://w3id.org/glosis/model/common/RockShape
@@ -328,7 +367,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                   owl:hasValue <http://w3id.org/glosis/model/common/rockShapeProperty>
-                                                                ] .
+                                                                ] ;
+                                                rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 28"@en ;
+                                                rdfs:label "RockShape"@en .
 
 
 ###  http://w3id.org/glosis/model/common/RockSize
@@ -341,7 +382,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                  owl:hasValue <http://w3id.org/glosis/model/common/rockSizeProperty>
-                                                               ] .
+                                                               ] ;
+                                               rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 27"@en ;
+                                               rdfs:label "RockSize"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepth
@@ -354,7 +397,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                   owl:hasValue <http://w3id.org/glosis/model/common/soilDepthProperty>
-                                                                ] .
+                                                                ] ;
+                                                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                rdfs:label "SoilDepth"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthBedrock
@@ -367,7 +412,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                          owl:hasValue <http://w3id.org/glosis/model/common/soilDepthBedrockProperty>
-                                                                       ] .
+                                                                       ] ;
+                                                       rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                       rdfs:label "SoilDepthBedrock"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthBedrockValue
@@ -380,7 +427,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                               owl:allValuesFrom xsd:integer
-                                                                            ] .
+                                                                            ] ;
+                                                            rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                            rdfs:label "SoilDepthBedrockValue"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthRootable
@@ -393,7 +442,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                           owl:hasValue <http://w3id.org/glosis/model/common/soilDepthRootableProperty>
-                                                                        ] .
+                                                                        ] ;
+                                                        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                        rdfs:label "SoilDepthRootable"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthRootableClass
@@ -406,7 +457,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
                                                                                owl:allValuesFrom xsd:string
-                                                                             ] .
+                                                                             ] ;
+                                                             rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                             rdfs:label "SoilDepthRootableClass"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthRootableValue
@@ -419,7 +472,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                                owl:allValuesFrom xsd:integer
-                                                                             ] .
+                                                                             ] ;
+                                                             rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                             rdfs:label "SoilDepthRootableValue"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthSampled
@@ -432,7 +487,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                          owl:hasValue <http://w3id.org/glosis/model/common/soilDepthSampledProperty>
-                                                                       ] .
+                                                                       ] ;
+                                                       rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                       rdfs:label "SoilDepthSampled"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthSampledValue
@@ -445,7 +502,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                               owl:allValuesFrom xsd:integer
-                                                                            ] .
+                                                                            ] ;
+                                                            rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                            rdfs:label "SoilDepthSampledValue"@en .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepthValue
@@ -458,7 +517,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                        owl:allValuesFrom xsd:integer
-                                                                     ] .
+                                                                     ] ;
+                                                     rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                     rdfs:label "SoilDepthValue"@en .
 
 
 ###  http://w3id.org/glosis/model/common/Texture
@@ -471,7 +532,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
                                                                 owl:allValuesFrom xsd:string
-                                                              ] .
+                                                              ] ;
+                                              rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                              rdfs:label "Texture"@en .
 
 
 ###  http://w3id.org/glosis/model/common/WeatheringFragments
@@ -484,7 +547,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                             owl:hasValue <http://w3id.org/glosis/model/common/weatheringFragmentsProperty>
-                                                                          ] .
+                                                                          ] ;
+                                                          rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 29"@en ;
+                                                          rdfs:label "WeatheringFragments"@en .
 
 
 #################################################################
@@ -502,59 +567,63 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/common/bleachedSandProperty
 <http://w3id.org/glosis/model/common/bleachedSandProperty> rdf:type owl:NamedIndividual ,
                                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                           rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 23"@en ;
                                                            rdfs:label "bleachedSandProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/colourDryProperty
 <http://w3id.org/glosis/model/common/colourDryProperty> rdf:type owl:NamedIndividual ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
                                                         rdfs:label "colourDryProperty"@en .
 
 
-###  http://w3id.org/glosis/model/common/colourWetProperty
-<http://w3id.org/glosis/model/common/colourWetProperty> rdf:type owl:NamedIndividual ,
-                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                        rdfs:label "colourWetProperty"@en .
+###  http://w3id.org/glosis/model/common/colourMoistProperty
+<http://w3id.org/glosis/model/common/colourMoistProperty> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                          rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
+                                                          rdfs:label "colourMoistProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/cracksDepthProperty
 <http://w3id.org/glosis/model/common/cracksDepthProperty> rdf:type owl:NamedIndividual ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                          rdfs:isDefinedBy "GfSD Table 21.2"@en ;
+                                                          rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 21,2"@en ;
                                                           rdfs:label "cracksDepthProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/cracksDistanceProperty
 <http://w3id.org/glosis/model/common/cracksDistanceProperty> rdf:type owl:NamedIndividual ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                             rdfs:isDefinedBy "GfSD Table 21.3"@en ;
+                                                             rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 21,3"@en ;
                                                              rdfs:label "cracksDistanceProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/cracksWidthProperty
 <http://w3id.org/glosis/model/common/cracksWidthProperty> rdf:type owl:NamedIndividual ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                          rdfs:isDefinedBy "GfSD Table 21.1"@en ;
+                                                          rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 21,1"@en ;
                                                           rdfs:label "cracksWidthProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/fragmentCoverProperty
 <http://w3id.org/glosis/model/common/fragmentCoverProperty> rdf:type owl:NamedIndividual ,
                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                            rdfs:isDefinedBy "GfSD Table 15.1"@en ;
+                                                            rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 15,1"@en ;
                                                             rdfs:label "fragmentCoverProperty"@en .
 
 
-###  http://w3id.org/glosis/model/common/fragmentSizeProperty
-<http://w3id.org/glosis/model/common/fragmentSizeProperty> rdf:type owl:NamedIndividual ,
-                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                           rdfs:isDefinedBy "GfSD Table 15.2"@en ;
-                                                           rdfs:label "fragmentSizeProperty"@en .
+###  http://w3id.org/glosis/model/common/fragmentsSizeProperty
+<http://w3id.org/glosis/model/common/fragmentsSizeProperty> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                            rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 15,2"@en ;
+                                                            rdfs:label "fragmentsSizeProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/infiltrationRateClassProperty
 <http://w3id.org/glosis/model/common/infiltrationRateClassProperty> rdf:type owl:NamedIndividual ,
                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                    rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
                                                                     rdfs:label "infiltrationRateClassProperty"@en .
 
 
@@ -562,6 +631,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/common/infiltrationRateNumericProperty> rdf:type owl:NamedIndividual ,
                                                                                <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                      rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
                                                                       rdfs:label "infiltrationRateNumericProperty"@en .
 
 
@@ -575,21 +645,21 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/common/rockAbundanceProperty
 <http://w3id.org/glosis/model/common/rockAbundanceProperty> rdf:type owl:NamedIndividual ,
                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                            rdfs:isDefinedBy "GfSD Table 26"@en ;
+                                                            rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 26"@en ;
                                                             rdfs:label "rockAbundanceProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/rockShapeProperty
 <http://w3id.org/glosis/model/common/rockShapeProperty> rdf:type owl:NamedIndividual ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                        rdfs:isDefinedBy "GfSD Table 28"@en ;
+                                                        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 28"@en ;
                                                         rdfs:label "rockShapeProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/rockSizeProperty
 <http://w3id.org/glosis/model/common/rockSizeProperty> rdf:type owl:NamedIndividual ,
                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                       rdfs:isDefinedBy "GfSD Table 27"@en ;
+                                                       rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 27"@en ;
                                                        rdfs:label "rockSizeProperty"@en .
 
 
@@ -597,6 +667,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/common/soilDepthBedrockProperty> rdf:type owl:NamedIndividual ,
                                                                         <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                               rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
                                                                rdfs:label "soilDepthBedrockProperty"@en .
 
 
@@ -604,12 +675,14 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/common/soilDepthProperty> rdf:type owl:NamedIndividual ,
                                                                  <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
                                                         rdfs:label "soilDepthProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/soilDepthRootableClassProperty
 <http://w3id.org/glosis/model/common/soilDepthRootableClassProperty> rdf:type owl:NamedIndividual ,
                                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                     rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
                                                                      rdfs:label "soilDepthRootableClassProperty"@en .
 
 
@@ -617,6 +690,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/common/soilDepthRootableProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
                                                                 rdfs:label "soilDepthRootableProperty"@en .
 
 
@@ -624,19 +698,21 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/common/soilDepthSampledProperty> rdf:type owl:NamedIndividual ,
                                                                         <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                               rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
                                                                rdfs:label "soilDepthSampledProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/textureProperty
 <http://w3id.org/glosis/model/common/textureProperty> rdf:type owl:NamedIndividual ,
                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                      rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
                                                       rdfs:label "textureProperty"@en .
 
 
 ###  http://w3id.org/glosis/model/common/weatheringFragmentsProperty
 <http://w3id.org/glosis/model/common/weatheringFragmentsProperty> rdf:type owl:NamedIndividual ,
                                                                            <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                  rdfs:isDefinedBy "GfSD Table 29"@en ;
+                                                                  rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 29"@en ;
                                                                   rdfs:label "weatheringFragmentsProperty"@en .
 
 
