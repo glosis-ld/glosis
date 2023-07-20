@@ -40,7 +40,7 @@
 
 glosis_sp:GL_Plot  a        owl:Class ;
         rdfs:label "GL_Plot"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:subClassOf  iso28258:Plot ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
@@ -77,7 +77,7 @@ glosis_sp:GL_Plot  a        owl:Class ;
 
 glosis_sp:GL_Site  a        owl:Class ;
         rdfs:label "GL_Site"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:subClassOf  iso28258:Site , sosa:FeatureOfInterest ;
         rdfs:subClassOf  [ a                owl:Restriction ;
                            owl:cardinality  "1"^^xsd:nonNegativeInteger ;
@@ -115,31 +115,31 @@ glosis_sp:GL_Site  a        owl:Class ;
 glosis_sp:location
         a            owl:DatatypeProperty ;
         rdfs:label "location"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:remarks
         a            owl:DatatypeProperty ;
         rdfs:label "remarks"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:responsibleOrganization
         a            owl:ObjectProperty ;
         rdfs:label "responsibleOrganization"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   foaf:Agent .
 
 glosis_sp:positionalAccuracy
         a            owl:ObjectProperty ;
         rdfs:label "positionalAccuracy"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   ssn:Property .
 
 glosis_sp:altitude
         a      	      owl:ObjectProperty ;
         rdfs:label "altitude"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range    qudt:QuantityValue .
 
 glosis_sp:timestamp
@@ -150,18 +150,18 @@ glosis_sp:timestamp
 glosis_sp:mapSheetID
         a            owl:DatatypeProperty ;
         rdfs:label "mapSheetID"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:country
         a            owl:ObjectProperty ;
         rdfs:label "country"@en ;
-        rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
+        skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   lcc-cr:Alpha2Code .
 
 glosis_sp:CropClass  a owl:Class ;
         rdfs:label "CropClass"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 9"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 9"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CropClassValueCode ] ;
@@ -169,16 +169,16 @@ glosis_sp:CropClass  a owl:Class ;
 
 glosis_sp:cropClassProperty a sosa:ObservableProperty ;
         rdfs:label "cropClassProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 9"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 9"@en .
         
 glosis_sp:cropDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        skos:definition  "Description of crops at the site"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+        rdfs:comment  "Description of crops at the site"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_sp:Geology  a	owl:Class ;
         rdfs:label "Geology"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LithologyValueCode ] ;
@@ -186,13 +186,13 @@ glosis_sp:Geology  a	owl:Class ;
 
 glosis_sp:geologyProperty a sosa:ObservableProperty ;
         rdfs:label "geologyProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en .
         
 glosis_cm:SoilDepthRootable rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:SlopeOrientationClass  a	owl:Class ;
         rdfs:label "SlopeOrientationClass"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult  ; owl:allValuesFrom xsd:string ] ;
@@ -200,11 +200,11 @@ glosis_sp:SlopeOrientationClass  a	owl:Class ;
 
 glosis_sp:slopeOrientationClassProperty a sosa:ObservableProperty ;
         rdfs:label "slopeOrientationClassProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:ErosionCategory  a	owl:Class ;
         rdfs:label "ErosionCategory"@en;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 16"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 16"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionCategoryValueCode ] ;
@@ -212,11 +212,11 @@ glosis_sp:ErosionCategory  a	owl:Class ;
 
 glosis_sp:erosionCategoryProperty a sosa:ObservableProperty ;
         rdfs:label "erosionCategoryProperty"@en;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 16"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 16"@en .
         
 glosis_sp:ErosionAreaAffected  a owl:Class ;
         rdfs:label "ErosionAreaAffected"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 17"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 17"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult  ; owl:someValuesFrom glosis_cl:ErosionAreaAffectedValueCode ] ;
@@ -224,19 +224,19 @@ glosis_sp:ErosionAreaAffected  a owl:Class ;
 
 glosis_sp:erosionAreaAffectedProperty a sosa:ObservableProperty ;
         rdfs:label "erosionAreaAffectedProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 17"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 17"@en .
 
 glosis_sp:landUseRemark  a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        skos:definition  "Description of land use at the site"@en ;
+        rdfs:comment  "Description of land use at the site"@en ;
         rdfs:label "landUseRemark"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:landUseCropRotation a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        skos:definition  "Description of crop rotation at the site"@en ;
+        rdfs:comment  "Description of crop rotation at the site"@en ;
         rdfs:label "landUseCropRotation"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
@@ -248,11 +248,11 @@ glosis_sp:ParentTextureUnconsolidated a owl:Class ;
 
 glosis_sp:parentTextureUnconsolidatedProperty a sosa:ObservableProperty ;
         rdfs:label "parentTextureUnconsolidatedProperty"@en;
-        rdfs:isDefinedBy "table is missing!"@en .
+        skos:definition "table is missing!"@en .
 
 glosis_sp:LandUseGrass  a owl:Class ;
         rdfs:label "LandUseGrass"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseGrassValue ] ;
@@ -260,18 +260,18 @@ glosis_sp:LandUseGrass  a owl:Class ;
 
 glosis_sp:grassAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "GrassAbundanceProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseGrassValue a owl:Class ;
         rdfs:label "LandUseGrassValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:SurfaceAge  a	owl:Class ;
         rdfs:label "SurfaceAge"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 13"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 13"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SurfaceAgeValueCode ] ;
@@ -279,11 +279,11 @@ glosis_sp:SurfaceAge  a	owl:Class ;
 
 glosis_sp:surfaceAgeProperty a sosa:ObservableProperty ;
         rdfs:label "surfaceAgeProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 13"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 13"@en .
         
 glosis_sp:WeatheringRock  a	owl:Class ;
         rdfs:label "WeatheringRock"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 29"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 29"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:WeatheringValueCode ] ;
@@ -291,11 +291,11 @@ glosis_sp:WeatheringRock  a	owl:Class ;
 
 glosis_sp:weatheringRockProperty a sosa:ObservableProperty ;
         rdfs:label "weatheringRockProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 29"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 29"@en .
         
 glosis_sp:SlopeForm  a	owl:Class ;
         rdfs:label "SlopeForm"@en;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 6"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 6"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SlopeFormValueCode ] ;
@@ -303,11 +303,11 @@ glosis_sp:SlopeForm  a	owl:Class ;
 
 glosis_sp:slopeFormProperty a sosa:ObservableProperty ;
         rdfs:label "slopeFormProperty"@en;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 6"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 6"@en .
         
 glosis_sp:SlopeOrientationNumeric a owl:Class ;
         rdfs:label "SlopeOrientationNumeric"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:SlopeOrientationNumericValue ] ;
@@ -315,18 +315,18 @@ glosis_sp:SlopeOrientationNumeric a owl:Class ;
 
 glosis_sp:slopeOrientationProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "slopeOrientationProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:SlopeOrientationNumericValue a owl:Class ;
         rdfs:label "SlopeOrientationNumericValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:DEG ] .
 
 glosis_sp:ParentLithology  a	owl:Class ;
         rdfs:label "ParentLithology"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LithologyValueCode ] ;
@@ -334,13 +334,13 @@ glosis_sp:ParentLithology  a	owl:Class ;
 
 glosis_sp:parentLithologyProperty a sosa:ObservableProperty ;
         rdfs:label "parentLithologyProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 glosis_cm:SoilDepthSampled rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:SlopeGradientClass  a	owl:Class ;
         rdfs:label "SlopeGradientClass"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 7"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 7"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SlopeGradientClassValueCode ] ;
@@ -348,11 +348,11 @@ glosis_sp:SlopeGradientClass  a	owl:Class ;
 
 glosis_sp:slopeGradientClassProperty a sosa:ObservableProperty ;
         rdfs:label "slopeGradientClassProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 7"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 7"@en .
         
 glosis_sp:ErosionDegree  a	owl:Class ;
         rdfs:label "ErosionDegree"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 18"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 18"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionDegreeValueCode ] ;
@@ -360,11 +360,11 @@ glosis_sp:ErosionDegree  a	owl:Class ;
 
 glosis_sp:erosionDegreeProperty a sosa:ObservableProperty ;
         rdfs:label "erosionDegreeProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 18"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 18"@en .
         
 glosis_sp:LandformComplex  a	owl:Class ;
         rdfs:label "LandformComplex"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 5"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 5"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LandformComplexValueCode ] ;
@@ -372,11 +372,11 @@ glosis_sp:LandformComplex  a	owl:Class ;
 
 glosis_sp:landformComplexProperty a sosa:ObservableProperty ;
         rdfs:label "landformComplexProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 5"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 5"@en .
         
 glosis_sp:LandUseBareCover  a owl:Class ;
         rdfs:label "LandUseBareCover"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseBareCoverValue ] ;
@@ -384,18 +384,18 @@ glosis_sp:LandUseBareCover  a owl:Class ;
 
 glosis_sp:bareCoverAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "bareCoverAbundanceProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseBareCoverValue a owl:Class ;
         rdfs:label "LandUseBareCoverValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:WeatherPast  a owl:Class ;
         rdfs:label "WeatherPast"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 2"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:WeatherConditionsValueCode ] ;
@@ -403,13 +403,13 @@ glosis_sp:WeatherPast  a owl:Class ;
 
 glosis_sp:weatherConditionsPastProperty a sosa:ObservableProperty ;
         rdfs:label "weatherConditionsPastProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 2"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 2"@en .
         
 glosis_cm:SoilDepth  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:KoeppenClass  a	owl:Class ;
         rdfs:label "KoeppenClass"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult  ; owl:allValuesFrom xsd:string ] ;
@@ -417,11 +417,11 @@ glosis_sp:KoeppenClass  a	owl:Class ;
 
 glosis_sp:koeppenClassProperty a sosa:ObservableProperty ;
         rdfs:label "koeppenClassProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:RockOutcropsCover  a	owl:Class ;
         rdfs:label "RockOutcropsCover"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 14,1"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 14,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RockOutcropsCoverValueCode ] ;
@@ -429,11 +429,11 @@ glosis_sp:RockOutcropsCover  a	owl:Class ;
 
 glosis_sp:rockOutcropsCoverProperty a sosa:ObservableProperty ;
         rdfs:label "rockOutcropsCoverProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 14,1"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 14,1"@en .
         
 glosis_sp:ParentDeposition  a	owl:Class ;
         rdfs:label "ParentDeposition"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 16"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 16"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionCategoryValueCode ] ;
@@ -441,17 +441,17 @@ glosis_sp:ParentDeposition  a	owl:Class ;
 
 glosis_sp:parentDepositionProperty a sosa:ObservableProperty ;
         rdfs:label "ParentDepositionProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 16"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 16"@en .
         
 glosis_sp:physiographyDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        skos:definition  "Description of the local physiography"@en ;
+        rdfs:comment  "Description of the local physiography"@en ;
         rdfs:label "physiographyDescription"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:FloodDuration a owl:Class ;
         rdfs:label "FloodDuration"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 174"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 174"@en ;
         rdfs:subClassOf sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
                         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:FloodDurationValueCode ] ;
@@ -459,11 +459,11 @@ glosis_sp:FloodDuration a owl:Class ;
 
 glosis_sp:floodDurationProperty a sosa:ObservableProperty ;
         rdfs:label "floodDurationProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 174"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 174"@en .
 
 glosis_sp:Physiography  a	owl:Class ;
         rdfs:label "Physiography"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 2"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: figure 2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PhysiographyValueCode ] ;
@@ -471,17 +471,17 @@ glosis_sp:Physiography  a	owl:Class ;
 
 glosis_sp:physiographyProperty a sosa:ObservableProperty ;
         rdfs:label "PhysiographyProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 2"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: figure 2"@en .
         
 glosis_sp:parentRemarks  a  owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        skos:definition  "Remarks on the parent material"@en ;
+        rdfs:comment  "Remarks on the parent material"@en ;
         rdfs:label "parentRemarks"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:SlopeGradientNumeric a owl:Class ;
         rdfs:label "SlopeGradientNumeric"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:SlopeGradientNumericValue ] ;
@@ -489,24 +489,24 @@ glosis_sp:SlopeGradientNumeric a owl:Class ;
 
 glosis_sp:slopeGradientProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "slopeGradientProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:SlopeGradientNumericValue a owl:Class ;
         rdfs:label "SlopeGradientNumericValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:vegetationDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        skos:definition  "Description of vegetation at the site"@en ;
+        rdfs:comment  "Description of vegetation at the site"@en ;
         rdfs:label "vegetationDescription"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseForest  a owl:Class ;
         rdfs:label "LandUseForest"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseForestValue ] ;
@@ -514,18 +514,18 @@ glosis_sp:LandUseForest  a owl:Class ;
 
 glosis_sp:forestAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "ForestAbundanceProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseForestValue a owl:Class ;
         rdfs:label "LandUseForestValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:RockOutcropsDistance  a	owl:Class ;
         rdfs:label "RockOutcropsDistance"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 14,2"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 14,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RockOutcropsDistanceValueCode ] ;
@@ -533,13 +533,13 @@ glosis_sp:RockOutcropsDistance  a	owl:Class ;
 
 glosis_sp:rockOutcropsDistanceProperty a sosa:ObservableProperty ;
         rdfs:label "rockOutcropsDistanceProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 14,2"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 14,2"@en .
         
 glosis_cm:SoilDepthRootableClass rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:LandUsePavedCover  a owl:Class ;
         rdfs:label "LandUsePavedCover"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUsePavedCoverValue ] ;
@@ -547,18 +547,18 @@ glosis_sp:LandUsePavedCover  a owl:Class ;
 
 glosis_sp:pavedAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "PavedAbundanceProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUsePavedCoverValue a owl:Class ;
         rdfs:label "LandUsePavedCoverValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:SlopePathways  a	owl:Class ;
         rdfs:label "SlopePathways"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 3"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: figure 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SlopePathwaysValueCode ] ;
@@ -566,11 +566,11 @@ glosis_sp:SlopePathways  a	owl:Class ;
 
 glosis_sp:slopePathwaysProperty a sosa:ObservableProperty ;
         rdfs:label "slopePathwaysProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 3"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: figure 3"@en .
         
 glosis_sp:MajorLandForm  a	owl:Class ;
         rdfs:label "MajorLandForm"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 4"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 4"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MajorLandFormValueCode ] ;
@@ -578,11 +578,11 @@ glosis_sp:MajorLandForm  a	owl:Class ;
 
 glosis_sp:majorLandFormProperty a sosa:ObservableProperty ;
         rdfs:label "MajorLandFormProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 4"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 4"@en .
         
 glosis_sp:GroundwaterDepth  a owl:Class ;
         rdfs:label "GroundwaterDepth"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:GroundwaterDepthValue ] ;
@@ -590,18 +590,18 @@ glosis_sp:GroundwaterDepth  a owl:Class ;
 
 glosis_sp:groundwaterDepthProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "groundwaterDepthProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:GroundwaterDepthValue a owl:Class ;
         rdfs:label "GroundwaterDepthValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:CentiM] .   
 
 glosis_sp:Lithology  a	owl:Class ;
         rdfs:label "Lithology"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LithologyValueCode ] ;
@@ -609,11 +609,11 @@ glosis_sp:Lithology  a	owl:Class ;
 
 glosis_sp:lithologyProperty a sosa:ObservableProperty ;
         rdfs:label "lithologyProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 glosis_sp:WeatherCurrent  a owl:Class ;
         rdfs:label "WeatherCurrent"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 2"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:WeatherConditionsValueCode ] ;
@@ -621,11 +621,11 @@ glosis_sp:WeatherCurrent  a owl:Class ;
 
 glosis_sp:weatherConditionsCurrentProperty a sosa:ObservableProperty ;
         rdfs:label "weatherConditionsCurrentProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 2"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 2"@en .
         
 glosis_sp:FloodFrequency a owl:Class ;
         rdfs:label "FloodFrequency"@en;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 174"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 174"@en ;
         rdfs:subClassOf sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
                         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:FloodFrequencyValueCode ] ;
@@ -633,11 +633,11 @@ glosis_sp:FloodFrequency a owl:Class ;
 
 glosis_sp:floodFrequencyProperty a sosa:ObservableProperty ;
         rdfs:label "floodFrequencyProperty"@en;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 174"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 174"@en .
 
 glosis_sp:HumanInfluenceClass  a	owl:Class ;
         rdfs:label "HumanInfluenceClass"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 10"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 10"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:HumanInfluenceClassValueCode ] ;
@@ -645,13 +645,13 @@ glosis_sp:HumanInfluenceClass  a	owl:Class ;
 
 glosis_sp:humanInfluenceClassProperty a sosa:ObservableProperty ;
         rdfs:label "humanInfluenceClassProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 10"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 10"@en .
         
 glosis_cm:SoilDepthBedrock rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:LandUseShrubs  a owl:Class ;
         rdfs:label "LandUseShrubs"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:LandUseShrubsValue ] ;
@@ -659,18 +659,18 @@ glosis_sp:LandUseShrubs  a owl:Class ;
 
 glosis_sp:shrubsAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "shrubsAbundanceProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseShrubsValue a owl:Class ;
         rdfs:label "LandUseShrubsValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue unit:PERCENT] .
 
 glosis_sp:ErosionActivityPeriod  a	owl:Class ;
         rdfs:label "ErosionActivityPeriod"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 19"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 19"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionActivityPeriodValueCode ] ;
@@ -678,11 +678,11 @@ glosis_sp:ErosionActivityPeriod  a	owl:Class ;
 
 glosis_sp:erosionActivityPeriodProperty a sosa:ObservableProperty ;
         rdfs:label "erosionActivityPeriodProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 19"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 19"@en .
         
 glosis_sp:VegetationClass a owl:Class ;
         rdfs:label "VegetationClass"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 11"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 11"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:VegetationClassValueCode ] ;
@@ -690,11 +690,11 @@ glosis_sp:VegetationClass a owl:Class ;
 
 glosis_sp:vegetationClassProperty a sosa:ObservableProperty ;
         rdfs:label "VegetationClassProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 11"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 11"@en .
         
 glosis_sp:TreeDensity  a owl:Class ;
         rdfs:label "TreeDensity"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:TreeDensityValue ] ;
@@ -702,18 +702,18 @@ glosis_sp:TreeDensity  a owl:Class ;
 
 glosis_sp:treeDensityProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "treeDensityProperty"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:TreeDensityValue a owl:Class ;
         rdfs:label "TreeDensityValue"@en ;
-        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:integer ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:allValuesFrom qudt:Unit ] .
 
 glosis_sp:ErosionTotalAreaAffected a owl:Class ;
         rdfs:label "ErosionTotalAreaAffected"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 17"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 17"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ErosionTotalAreaAffectedValueCode ] ;
@@ -721,11 +721,11 @@ glosis_sp:ErosionTotalAreaAffected a owl:Class ;
 
 glosis_sp:erosionTotalAreaAffectedProperty a sosa:ObservableProperty ;
         rdfs:label "erosionTotalAreaAffectedProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 17"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 17"@en .
         
 glosis_sp:LandUseClass a owl:Class ;
         rdfs:label "LandUseClass"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 8"@en ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 8"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:LandUseClassValueCode ] ;
@@ -733,7 +733,7 @@ glosis_sp:LandUseClass a owl:Class ;
 
 glosis_sp:landUseClassProperty a sosa:ObservableProperty ;
         rdfs:label "landUseClassProperty"@en ;
-        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 8"@en .
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 8"@en .
 
 
 glosis_sp:SoilCarbonDensity a owl:Class ;
