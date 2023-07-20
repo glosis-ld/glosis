@@ -22,19 +22,19 @@ and modelled in line with best practices and methodologies, reusing existing sta
 # Documentation
 
 All modules in this web ontology are documented individually with HTML pages
-generated with the [WiDoco](https://github.com/dgarijo/Widoco) tool. These pages can be accessed at [https://rapw3k.github.io/glosis/docs/](https://rapw3k.github.io/glosis/).
+generated with the [WiDoco](https://github.com/dgarijo/Widoco) tool. These pages can be accessed at [https://glosis-ld.github.io/glosis/docs/](https://glosis-ld.github.io/glosis/).
 
 Configuration files for WiDoco are generated automatically with a [bespoke
-tool](https://github.com/rapw3k/glosis/blob/master/docs/README_WiDoco.md).
-Documentation pages are maintained in the [docs folder](https://github.com/rapw3k/glosis/tree/master/docs).
+tool](https://github.com/glosis-ld/glosis/blob/master/docs/README_WiDoco.md).
+Documentation pages are maintained in the [docs folder](https://github.com/glosis-ld/glosis/blob/master/docs).
 
-The documentation for each module can be accessed via the [documentation entry page](https://rapw3k.github.io/glosis/)
+The documentation for each module can be accessed via the [documentation entry page](https://glosis-ld.github.io/glosis/)
 
 # Tools
 
 ## Transformer-tool
 
-[Transformer-tool](https://github.com/rapw3k/glosis/tree/master/utils/transformer_tool) is a bi-directional tool that allows generating RDF representation using SPARQL query and list of codelist items in CSV file or another way around by generating a CSV list of items out of RDF representation.
+[Transformer-tool](https://github.com/glosis-ld/glosis/tree/master/utils/transformer_tool) is a bi-directional tool that allows generating RDF representation using SPARQL query and list of codelist items in CSV file or another way around by generating a CSV list of items out of RDF representation.
 
 ### Installation
 
@@ -56,11 +56,11 @@ Script can transform in two ways:
 ```python transform_to_csv.py input.ttl```
 (this creates a csv file with corresponding filename in the location of TURTLE file)
 
-read more about the transformer-tool [HERE](https://github.com/rapw3k/glosis/wiki/UTILITY:-Transformer-Tool).
+read more about the transformer-tool [HERE](https://github.com/glosis-ld/glosis/wiki/UTILITY:-Transformer-Tool).
 
 ## Version Updater
 
-[Version updater](https://github.com/rapw3k/glosis/tree/master/utils/version_updater) is a simple convenience script that updates and harmonizes versions across all ontology modules.
+[Version updater](https://github.com/glosis-ld/glosis/tree/master/utils/version_updater) is a simple convenience script that updates and harmonizes versions across all ontology modules.
 
 ### Requirements
 
