@@ -7,20 +7,20 @@
 @base <http://w3id.org/glosis/model/siteplot#> .
 
 <http://w3id.org/glosis/model/siteplot> rdf:type owl:Ontology ;
-                                         owl:versionIRI <http://w3id.org/glosis/model/siteplot/1.1.0> ;
+                                         owl:versionIRI <http://w3id.org/glosis/model/siteplot/1.2.1> ;
                                          owl:imports <http://w3id.org/glosis/model/codelists/> ,
                                                      <http://w3id.org/glosis/model/common/> ,
                                                      <http://w3id.org/glosis/model/iso28258/2013/> ,
                                                      <http://www.w3.org/ns/sosa/> ,
                                                      <http://www.w3.org/ns/ssn/> ;
-                                         <http://purl.org/dc/terms/creator> _:genid-nodeid-node1h4oeehmdx983 ,
+                                         <http://purl.org/dc/terms/creator> _:genid-nodeid-node1h5rla6t6x995 ,
                                                                             _:genid1 ,
                                                                             _:genid3 ;
                                          <http://purl.org/dc/terms/description> "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
                                          <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en ;
                                          <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
                                          <http://purl.org/dc/terms/title> "GLOSIS ontology"@en ;
-                                         owl:versionInfo "1.1.0" .
+                                         owl:versionInfo "1.2.1" .
 
 _:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
                                           ] ;
@@ -38,29 +38,29 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/siteplot/altitude
 <http://w3id.org/glosis/model/siteplot/altitude> rdf:type owl:ObjectProperty ;
                                                  rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
-                                                 rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                 rdfs:label "altitude"@en .
+                                                 rdfs:label "altitude"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/country
 <http://w3id.org/glosis/model/siteplot/country> rdf:type owl:ObjectProperty ;
                                                 rdfs:range <https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code> ;
-                                                rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                rdfs:label "country"@en .
+                                                rdfs:label "country"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/positionalAccuracy
 <http://w3id.org/glosis/model/siteplot/positionalAccuracy> rdf:type owl:ObjectProperty ;
                                                            rdfs:range <http://www.w3.org/ns/ssn/Property> ;
-                                                           rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                           rdfs:label "positionalAccuracy"@en .
+                                                           rdfs:label "positionalAccuracy"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/responsibleOrganization
 <http://w3id.org/glosis/model/siteplot/responsibleOrganization> rdf:type owl:ObjectProperty ;
                                                                 rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
-                                                                rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                                rdfs:label "responsibleOrganization"@en .
+                                                                rdfs:label "responsibleOrganization"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/timestamp
@@ -74,61 +74,61 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/siteplot/cropDescription
 <http://w3id.org/glosis/model/siteplot/cropDescription> rdf:type owl:DatatypeProperty ;
                                                         rdfs:range xsd:string ;
-                                                        rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#definition> "Description of crops at the site"@en .
+                                                        rdfs:comment "Description of crops at the site"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/landUseCropRotation
 <http://w3id.org/glosis/model/siteplot/landUseCropRotation> rdf:type owl:DatatypeProperty ;
                                                             rdfs:range xsd:string ;
-                                                            rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                            rdfs:comment "Description of crop rotation at the site"@en ;
                                                             rdfs:label "landUseCropRotation"@en ;
-                                                            <http://www.w3.org/2004/02/skos/core#definition> "Description of crop rotation at the site"@en .
+                                                            <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/landUseRemark
 <http://w3id.org/glosis/model/siteplot/landUseRemark> rdf:type owl:DatatypeProperty ;
                                                       rdfs:range xsd:string ;
-                                                      rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                      rdfs:comment "Description of land use at the site"@en ;
                                                       rdfs:label "landUseRemark"@en ;
-                                                      <http://www.w3.org/2004/02/skos/core#definition> "Description of land use at the site"@en .
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/location
 <http://w3id.org/glosis/model/siteplot/location> rdf:type owl:DatatypeProperty ;
                                                  rdfs:range xsd:string ;
-                                                 rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                 rdfs:label "location"@en .
+                                                 rdfs:label "location"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/mapSheetID
 <http://w3id.org/glosis/model/siteplot/mapSheetID> rdf:type owl:DatatypeProperty ;
                                                    rdfs:range xsd:string ;
-                                                   rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                   rdfs:label "mapSheetID"@en .
+                                                   rdfs:label "mapSheetID"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/parentRemarks
 <http://w3id.org/glosis/model/siteplot/parentRemarks> rdf:type owl:DatatypeProperty ;
                                                       rdfs:range xsd:string ;
-                                                      rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                      rdfs:comment "Remarks on the parent material"@en ;
                                                       rdfs:label "parentRemarks"@en ;
-                                                      <http://www.w3.org/2004/02/skos/core#definition> "Remarks on the parent material"@en .
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/physiographyDescription
 <http://w3id.org/glosis/model/siteplot/physiographyDescription> rdf:type owl:DatatypeProperty ;
                                                                 rdfs:range xsd:string ;
-                                                                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                                rdfs:comment "Description of the local physiography"@en ;
                                                                 rdfs:label "physiographyDescription"@en ;
-                                                                <http://www.w3.org/2004/02/skos/core#definition> "Description of the local physiography"@en .
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/remarks
 <http://w3id.org/glosis/model/siteplot/remarks> rdf:type owl:DatatypeProperty ;
                                                 rdfs:range xsd:string ;
-                                                rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                rdfs:label "remarks"@en .
+                                                rdfs:label "remarks"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/timestamp
@@ -139,9 +139,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/siteplot/vegetationDescription
 <http://w3id.org/glosis/model/siteplot/vegetationDescription> rdf:type owl:DatatypeProperty ;
                                                               rdfs:range xsd:string ;
-                                                              rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
+                                                              rdfs:comment "Description of vegetation at the site"@en ;
                                                               rdfs:label "vegetationDescription"@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#definition> "Description of vegetation at the site"@en .
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 #################################################################
@@ -150,10 +150,6 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 
 ###  http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> rdf:type owl:Class .
-
-
-###  http://w3id.org/glosis/model/codelists/ErosionAreaAffectedValueCode
-<http://w3id.org/glosis/model/codelists/ErosionAreaAffectedValueCode> rdf:type owl:Class .
 
 
 ###  http://w3id.org/glosis/model/common/SoilDepth
@@ -241,8 +237,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                     owl:hasValue <http://w3id.org/glosis/model/siteplot/cropClassProperty>
                                                                   ] ;
-                                                  rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 9"@en ;
-                                                  rdfs:label "CropClass"@en .
+                                                  rdfs:label "CropClass"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 9"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/ErosionActivityPeriod
@@ -264,8 +260,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                 owl:hasValue <http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty>
                                                                               ] ;
-                                                              rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 19"@en ;
-                                                              rdfs:label "ErosionActivityPeriod"@en .
+                                                              rdfs:label "ErosionActivityPeriod"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 19"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/ErosionAreaAffected
@@ -287,8 +283,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                               owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                               owl:hasValue <http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty>
                                                                             ] ;
-                                                            rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 17"@en ;
-                                                            rdfs:label "ErosionAreaAffected"@en .
+                                                            rdfs:label "ErosionAreaAffected"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 17"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/ErosionCategory
@@ -310,8 +306,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                           owl:hasValue <http://w3id.org/glosis/model/siteplot/erosionCategoryProperty>
                                                                         ] ;
-                                                        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 16"@en ;
-                                                        rdfs:label "ErosionCategory"@en .
+                                                        rdfs:label "ErosionCategory"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 16"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/ErosionDegree
@@ -333,8 +329,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                         owl:hasValue <http://w3id.org/glosis/model/siteplot/erosionDegreeProperty>
                                                                       ] ;
-                                                      rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 18"@en ;
-                                                      rdfs:label "ErosionDegree"@en .
+                                                      rdfs:label "ErosionDegree"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 18"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/ErosionTotalAreaAffected
@@ -356,8 +352,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                    owl:hasValue <http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty>
                                                                                  ] ;
-                                                                 rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 17"@en ;
-                                                                 rdfs:label "ErosionTotalAreaAffected"@en .
+                                                                 rdfs:label "ErosionTotalAreaAffected"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 17"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/FloodDuration
@@ -379,8 +375,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                         owl:hasValue <http://w3id.org/glosis/model/siteplot/floodDurationProperty>
                                                                       ] ;
-                                                      rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 174"@en ;
-                                                      rdfs:label "FloodDuration"@en .
+                                                      rdfs:label "FloodDuration"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 174"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/FloodFrequency
@@ -402,8 +398,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                          owl:hasValue <http://w3id.org/glosis/model/siteplot/floodFrequencyProperty>
                                                                        ] ;
-                                                       rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 174"@en ;
-                                                       rdfs:label "FloodFrequency"@en .
+                                                       rdfs:label "FloodFrequency"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 174"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/GL_Plot
@@ -441,8 +437,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                   owl:onProperty <http://w3id.org/glosis/model/siteplot/remarks> ;
                                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                 ] ;
-                                                rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                rdfs:label "GL_Plot"@en .
+                                                rdfs:label "GL_Plot"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/GL_Site
@@ -481,8 +477,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                   owl:onProperty <http://w3id.org/glosis/model/siteplot/remarks> ;
                                                                   owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                 ] ;
-                                                rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                rdfs:label "GL_Site"@en .
+                                                rdfs:label "GL_Site"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/Geology
@@ -504,8 +500,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                   owl:hasValue <http://w3id.org/glosis/model/siteplot/geologyProperty>
                                                                 ] ;
-                                                rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
-                                                rdfs:label "Geology"@en .
+                                                rdfs:label "Geology"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/GroundwaterDepth
@@ -527,8 +523,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                            owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                            owl:hasValue <http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty>
                                                                          ] ;
-                                                         rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                         rdfs:label "GroundwaterDepth"@en .
+                                                         rdfs:label "GroundwaterDepth"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/GroundwaterDepthValue
@@ -542,8 +538,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                 owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                                 owl:allValuesFrom xsd:float
                                                                               ] ;
-                                                              rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                              rdfs:label "GroundwaterDepthValue"@en .
+                                                              rdfs:label "GroundwaterDepthValue"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/HumanInfluenceClass
@@ -565,8 +561,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                               owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                               owl:hasValue <http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty>
                                                                             ] ;
-                                                            rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 10"@en ;
-                                                            rdfs:label "HumanInfluenceClass"@en .
+                                                            rdfs:label "HumanInfluenceClass"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 10"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/KoeppenClass
@@ -588,8 +584,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
                                                                        owl:allValuesFrom xsd:string
                                                                      ] ;
-                                                     rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                     rdfs:label "KoeppenClass"@en .
+                                                     rdfs:label "KoeppenClass"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseBareCover
@@ -611,8 +607,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                            owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                            owl:hasValue <http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty>
                                                                          ] ;
-                                                         rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                         rdfs:label "LandUseBareCover"@en .
+                                                         rdfs:label "LandUseBareCover"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseBareCoverValue
@@ -626,8 +622,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                 owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                                 owl:allValuesFrom xsd:integer
                                                                               ] ;
-                                                              rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                              rdfs:label "LandUseBareCoverValue"@en .
+                                                              rdfs:label "LandUseBareCoverValue"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseClass
@@ -649,8 +645,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                        owl:hasValue <http://w3id.org/glosis/model/siteplot/landUseClassProperty>
                                                                      ] ;
-                                                     rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 8"@en ;
-                                                     rdfs:label "LandUseClass"@en .
+                                                     rdfs:label "LandUseClass"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 8"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseForest
@@ -672,8 +668,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                         owl:hasValue <http://w3id.org/glosis/model/siteplot/forestAbundanceProperty>
                                                                       ] ;
-                                                      rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                      rdfs:label "LandUseForest"@en .
+                                                      rdfs:label "LandUseForest"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseForestValue
@@ -687,8 +683,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                              owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                              owl:allValuesFrom xsd:integer
                                                                            ] ;
-                                                           rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                           rdfs:label "LandUseForestValue"@en .
+                                                           rdfs:label "LandUseForestValue"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseGrass
@@ -710,8 +706,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                        owl:hasValue <http://w3id.org/glosis/model/siteplot/grassAbundanceProperty>
                                                                      ] ;
-                                                     rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                     rdfs:label "LandUseGrass"@en .
+                                                     rdfs:label "LandUseGrass"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseGrassValue
@@ -725,8 +721,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                             owl:allValuesFrom xsd:integer
                                                                           ] ;
-                                                          rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                          rdfs:label "LandUseGrassValue"@en .
+                                                          rdfs:label "LandUseGrassValue"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUsePavedCover
@@ -748,8 +744,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                             owl:hasValue <http://w3id.org/glosis/model/siteplot/PavedAbundanceproperty>
                                                                           ] ;
-                                                          rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                          rdfs:label "LandUsePavedCover"@en .
+                                                          rdfs:label "LandUsePavedCover"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUsePavedCoverValue
@@ -763,8 +759,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                  owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                                  owl:allValuesFrom xsd:integer
                                                                                ] ;
-                                                               rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                               rdfs:label "LandUsePavedCoverValue"@en .
+                                                               rdfs:label "LandUsePavedCoverValue"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseShrubs
@@ -786,8 +782,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                         owl:hasValue <http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty>
                                                                       ] ;
-                                                      rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                      rdfs:label "LandUseShrubs"@en .
+                                                      rdfs:label "LandUseShrubs"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandUseShrubsValue
@@ -801,8 +797,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                              owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                              owl:allValuesFrom xsd:integer
                                                                            ] ;
-                                                           rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                           rdfs:label "LandUseShrubsValue"@en .
+                                                           rdfs:label "LandUseShrubsValue"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/LandformComplex
@@ -824,8 +820,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                           owl:hasValue <http://w3id.org/glosis/model/siteplot/landformComplexProperty>
                                                                         ] ;
-                                                        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 5"@en ;
-                                                        rdfs:label "LandformComplex"@en .
+                                                        rdfs:label "LandformComplex"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 5"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/Lithology
@@ -847,8 +843,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                     owl:hasValue <http://w3id.org/glosis/model/siteplot/lithologyProperty>
                                                                   ] ;
-                                                  rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
-                                                  rdfs:label "Lithology"@en .
+                                                  rdfs:label "Lithology"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/MajorLandForm
@@ -870,8 +866,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                         owl:hasValue <http://w3id.org/glosis/model/siteplot/majorLandFormProperty>
                                                                       ] ;
-                                                      rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 4"@en ;
-                                                      rdfs:label "MajorLandForm"@en .
+                                                      rdfs:label "MajorLandForm"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 4"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/ParentDeposition
@@ -893,8 +889,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                            owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                            owl:hasValue <http://w3id.org/glosis/model/siteplot/parentDepositionProperty>
                                                                          ] ;
-                                                         rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 16"@en ;
-                                                         rdfs:label "ParentDeposition"@en .
+                                                         rdfs:label "ParentDeposition"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 16"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/ParentLithology
@@ -916,8 +912,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                           owl:hasValue <http://w3id.org/glosis/model/siteplot/parentLithologyProperty>
                                                                         ] ;
-                                                        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
-                                                        rdfs:label "ParentLithology"@en .
+                                                        rdfs:label "ParentLithology"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/ParentTextureUnconsolidated
@@ -960,8 +956,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                        owl:hasValue <http://w3id.org/glosis/model/siteplot/physiographyProperty>
                                                                      ] ;
-                                                     rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 2"@en ;
-                                                     rdfs:label "Physiography"@en .
+                                                     rdfs:label "Physiography"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: figure 2"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/RockOutcropsCover
@@ -983,8 +979,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                             owl:hasValue <http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty>
                                                                           ] ;
-                                                          rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 14,1"@en ;
-                                                          rdfs:label "RockOutcropsCover"@en .
+                                                          rdfs:label "RockOutcropsCover"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 14,1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/RockOutcropsDistance
@@ -1006,8 +1002,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                owl:hasValue <http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty>
                                                                              ] ;
-                                                             rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 14,2"@en ;
-                                                             rdfs:label "RockOutcropsDistance"@en .
+                                                             rdfs:label "RockOutcropsDistance"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 14,2"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SlopeForm
@@ -1029,8 +1025,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                     owl:hasValue <http://w3id.org/glosis/model/siteplot/slopeFormProperty>
                                                                   ] ;
-                                                  rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 6"@en ;
-                                                  rdfs:label "SlopeForm"@en .
+                                                  rdfs:label "SlopeForm"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 6"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SlopeGradientClass
@@ -1052,8 +1048,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                              owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                              owl:hasValue <http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty>
                                                                            ] ;
-                                                           rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 7"@en ;
-                                                           rdfs:label "SlopeGradientClass"@en .
+                                                           rdfs:label "SlopeGradientClass"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 7"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SlopeGradientNumeric
@@ -1075,8 +1071,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                owl:hasValue <http://w3id.org/glosis/model/siteplot/slopeGradientProperty>
                                                                              ] ;
-                                                             rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                             rdfs:label "SlopeGradientNumeric"@en .
+                                                             rdfs:label "SlopeGradientNumeric"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SlopeGradientNumericValue
@@ -1090,8 +1086,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                     owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                                     owl:allValuesFrom xsd:float
                                                                                   ] ;
-                                                                  rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                  rdfs:label "SlopeGradientNumericValue"@en .
+                                                                  rdfs:label "SlopeGradientNumericValue"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SlopeOrientationClass
@@ -1113,8 +1109,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
                                                                                 owl:allValuesFrom xsd:string
                                                                               ] ;
-                                                              rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                              rdfs:label "SlopeOrientationClass"@en .
+                                                              rdfs:label "SlopeOrientationClass"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SlopeOrientationNumeric
@@ -1136,8 +1132,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                   owl:hasValue <http://w3id.org/glosis/model/siteplot/slopeOrientationProperty>
                                                                                 ] ;
-                                                                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                rdfs:label "SlopeOrientationNumeric"@en .
+                                                                rdfs:label "SlopeOrientationNumeric"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SlopeOrientationNumericValue
@@ -1151,8 +1147,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                        owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                                        owl:allValuesFrom xsd:integer
                                                                                      ] ;
-                                                                     rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                     rdfs:label "SlopeOrientationNumericValue"@en .
+                                                                     rdfs:label "SlopeOrientationNumericValue"@en ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SlopePathways
@@ -1174,8 +1170,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                         owl:hasValue <http://w3id.org/glosis/model/siteplot/slopePathwaysProperty>
                                                                       ] ;
-                                                      rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 3"@en ;
-                                                      rdfs:label "SlopePathways"@en .
+                                                      rdfs:label "SlopePathways"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: figure 3"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/SoilCarbonDensity
@@ -1229,8 +1225,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                      owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                      owl:hasValue <http://w3id.org/glosis/model/siteplot/surfaceAgeProperty>
                                                                    ] ;
-                                                   rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 13"@en ;
-                                                   rdfs:label "SurfaceAge"@en .
+                                                   rdfs:label "SurfaceAge"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 13"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/TreeDensity
@@ -1252,8 +1248,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                       owl:hasValue <http://w3id.org/glosis/model/siteplot/treeDensityProperty>
                                                                     ] ;
-                                                    rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                    rdfs:label "TreeDensity"@en .
+                                                    rdfs:label "TreeDensity"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/TreeDensityValue
@@ -1267,8 +1263,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                            owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                            owl:allValuesFrom xsd:integer
                                                                          ] ;
-                                                         rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                         rdfs:label "TreeDensityValue"@en .
+                                                         rdfs:label "TreeDensityValue"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/VegetationClass
@@ -1290,8 +1286,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                           owl:hasValue <http://w3id.org/glosis/model/siteplot/vegetationClassProperty>
                                                                         ] ;
-                                                        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 11"@en ;
-                                                        rdfs:label "VegetationClass"@en .
+                                                        rdfs:label "VegetationClass"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 11"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/WeatherCurrent
@@ -1313,8 +1309,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                          owl:hasValue <http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty>
                                                                        ] ;
-                                                       rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 2"@en ;
-                                                       rdfs:label "WeatherCurrent"@en .
+                                                       rdfs:label "WeatherCurrent"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 2"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/WeatherPast
@@ -1336,8 +1332,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                       owl:hasValue <http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty>
                                                                     ] ;
-                                                    rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 2"@en ;
-                                                    rdfs:label "WeatherPast"@en .
+                                                    rdfs:label "WeatherPast"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 2"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/WeatheringRock
@@ -1359,8 +1355,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                          owl:hasValue <http://w3id.org/glosis/model/siteplot/weatheringRockProperty>
                                                                        ] ;
-                                                       rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 29"@en ;
-                                                       rdfs:label "WeatheringRock"@en .
+                                                       rdfs:label "WeatheringRock"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 29"@en .
 
 
 ###  https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code
@@ -1387,239 +1383,239 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty> rdf:type owl:NamedIndividual ,
                                                                             <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                             <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                   rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                   rdfs:label "bareCoverAbundanceProperty"@en .
+                                                                   rdfs:label "bareCoverAbundanceProperty"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/cropClassProperty
 <http://w3id.org/glosis/model/siteplot/cropClassProperty> rdf:type owl:NamedIndividual ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                          rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 9"@en ;
-                                                          rdfs:label "cropClassProperty"@en .
+                                                          rdfs:label "cropClassProperty"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 9"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty
 <http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty> rdf:type owl:NamedIndividual ,
                                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                      rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 19"@en ;
-                                                                      rdfs:label "erosionActivityPeriodProperty"@en .
+                                                                      rdfs:label "erosionActivityPeriodProperty"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 19"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty
 <http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty> rdf:type owl:NamedIndividual ,
                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                    rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 17"@en ;
-                                                                    rdfs:label "erosionAreaAffectedProperty"@en .
+                                                                    rdfs:label "erosionAreaAffectedProperty"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 17"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/erosionCategoryProperty
 <http://w3id.org/glosis/model/siteplot/erosionCategoryProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 16"@en ;
-                                                                rdfs:label "erosionCategoryProperty"@en .
+                                                                rdfs:label "erosionCategoryProperty"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 16"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/erosionDegreeProperty
 <http://w3id.org/glosis/model/siteplot/erosionDegreeProperty> rdf:type owl:NamedIndividual ,
                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                              rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 18"@en ;
-                                                              rdfs:label "erosionDegreeProperty"@en .
+                                                              rdfs:label "erosionDegreeProperty"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 18"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty
 <http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty> rdf:type owl:NamedIndividual ,
                                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                         rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 17"@en ;
-                                                                         rdfs:label "erosionTotalAreaAffectedProperty"@en .
+                                                                         rdfs:label "erosionTotalAreaAffectedProperty"@en ;
+                                                                         <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 17"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/floodDurationProperty
 <http://w3id.org/glosis/model/siteplot/floodDurationProperty> rdf:type owl:NamedIndividual ,
                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                              rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 174"@en ;
-                                                              rdfs:label "floodDurationProperty"@en .
+                                                              rdfs:label "floodDurationProperty"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 174"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/floodFrequencyProperty
 <http://w3id.org/glosis/model/siteplot/floodFrequencyProperty> rdf:type owl:NamedIndividual ,
                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                               rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 174"@en ;
-                                                               rdfs:label "floodFrequencyProperty"@en .
+                                                               rdfs:label "floodFrequencyProperty"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 174"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/forestAbundanceProperty
 <http://w3id.org/glosis/model/siteplot/forestAbundanceProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                rdfs:label "ForestAbundanceProperty"@en .
+                                                                rdfs:label "ForestAbundanceProperty"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/geologyProperty
 <http://w3id.org/glosis/model/siteplot/geologyProperty> rdf:type owl:NamedIndividual ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
-                                                        rdfs:label "geologyProperty"@en .
+                                                        rdfs:label "geologyProperty"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/grassAbundanceProperty
 <http://w3id.org/glosis/model/siteplot/grassAbundanceProperty> rdf:type owl:NamedIndividual ,
                                                                         <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                               rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                               rdfs:label "GrassAbundanceProperty"@en .
+                                                               rdfs:label "GrassAbundanceProperty"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty
 <http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty> rdf:type owl:NamedIndividual ,
                                                                           <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                 rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                 rdfs:label "groundwaterDepthProperty"@en .
+                                                                 rdfs:label "groundwaterDepthProperty"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty
 <http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty> rdf:type owl:NamedIndividual ,
                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                    rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 10"@en ;
-                                                                    rdfs:label "humanInfluenceClassProperty"@en .
+                                                                    rdfs:label "humanInfluenceClassProperty"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 10"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/koeppenClassProperty
 <http://w3id.org/glosis/model/siteplot/koeppenClassProperty> rdf:type owl:NamedIndividual ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                             rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                             rdfs:label "koeppenClassProperty"@en .
+                                                             rdfs:label "koeppenClassProperty"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/landUseClassProperty
 <http://w3id.org/glosis/model/siteplot/landUseClassProperty> rdf:type owl:NamedIndividual ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                             rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 8"@en ;
-                                                             rdfs:label "landUseClassProperty"@en .
+                                                             rdfs:label "landUseClassProperty"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 8"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/landformComplexProperty
 <http://w3id.org/glosis/model/siteplot/landformComplexProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 5"@en ;
-                                                                rdfs:label "landformComplexProperty"@en .
+                                                                rdfs:label "landformComplexProperty"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 5"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/lithologyProperty
 <http://w3id.org/glosis/model/siteplot/lithologyProperty> rdf:type owl:NamedIndividual ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                          rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
-                                                          rdfs:label "lithologyProperty"@en .
+                                                          rdfs:label "lithologyProperty"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/majorLandFormProperty
 <http://w3id.org/glosis/model/siteplot/majorLandFormProperty> rdf:type owl:NamedIndividual ,
                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                              rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 4"@en ;
-                                                              rdfs:label "MajorLandFormProperty"@en .
+                                                              rdfs:label "MajorLandFormProperty"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 4"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/parentDepositionProperty
 <http://w3id.org/glosis/model/siteplot/parentDepositionProperty> rdf:type owl:NamedIndividual ,
                                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                 rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 16"@en ;
-                                                                 rdfs:label "ParentDepositionProperty"@en .
+                                                                 rdfs:label "ParentDepositionProperty"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 16"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/parentLithologyProperty
 <http://w3id.org/glosis/model/siteplot/parentLithologyProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 12"@en ;
-                                                                rdfs:label "parentLithologyProperty"@en .
+                                                                rdfs:label "parentLithologyProperty"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty
 <http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty> rdf:type owl:NamedIndividual ,
                                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                            rdfs:isDefinedBy "table is missing!"@en ;
-                                                                            rdfs:label "parentTextureUnconsolidatedProperty"@en .
+                                                                            rdfs:label "parentTextureUnconsolidatedProperty"@en ;
+                                                                            <http://www.w3.org/2004/02/skos/core#definition> "table is missing!"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty
 <http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty> rdf:type owl:NamedIndividual ,
                                                                         <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                               rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                               rdfs:label "PavedAbundanceProperty"@en .
+                                                               rdfs:label "PavedAbundanceProperty"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/physiographyProperty
 <http://w3id.org/glosis/model/siteplot/physiographyProperty> rdf:type owl:NamedIndividual ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                             rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 2"@en ;
-                                                             rdfs:label "PhysiographyProperty"@en .
+                                                             rdfs:label "PhysiographyProperty"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: figure 2"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty
 <http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty> rdf:type owl:NamedIndividual ,
                                                                            <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                  rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 14,1"@en ;
-                                                                  rdfs:label "rockOutcropsCoverProperty"@en .
+                                                                  rdfs:label "rockOutcropsCoverProperty"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 14,1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty
 <http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty> rdf:type owl:NamedIndividual ,
                                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                     rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 14,2"@en ;
-                                                                     rdfs:label "rockOutcropsDistanceProperty"@en .
+                                                                     rdfs:label "rockOutcropsDistanceProperty"@en ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 14,2"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty
 <http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                rdfs:label "shrubsAbundanceProperty"@en .
+                                                                rdfs:label "shrubsAbundanceProperty"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/slopeFormProperty
 <http://w3id.org/glosis/model/siteplot/slopeFormProperty> rdf:type owl:NamedIndividual ,
                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                          rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 6"@en ;
-                                                          rdfs:label "slopeFormProperty"@en .
+                                                          rdfs:label "slopeFormProperty"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 6"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty
 <http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty> rdf:type owl:NamedIndividual ,
                                                                             <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                   rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 7"@en ;
-                                                                   rdfs:label "slopeGradientClassProperty"@en .
+                                                                   rdfs:label "slopeGradientClassProperty"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 7"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/slopeGradientProperty
 <http://w3id.org/glosis/model/siteplot/slopeGradientProperty> rdf:type owl:NamedIndividual ,
                                                                        <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                              rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                              rdfs:label "slopeGradientProperty"@en .
+                                                              rdfs:label "slopeGradientProperty"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty
 <http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty> rdf:type owl:NamedIndividual ,
                                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                      rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                      rdfs:label "slopeOrientationClassProperty"@en .
+                                                                      rdfs:label "slopeOrientationClassProperty"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/slopeOrientationProperty
 <http://w3id.org/glosis/model/siteplot/slopeOrientationProperty> rdf:type owl:NamedIndividual ,
                                                                           <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                 rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                                 rdfs:label "slopeOrientationProperty"@en .
+                                                                 rdfs:label "slopeOrientationProperty"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/slopePathwaysProperty
 <http://w3id.org/glosis/model/siteplot/slopePathwaysProperty> rdf:type owl:NamedIndividual ,
                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                              rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: figure 3"@en ;
-                                                              rdfs:label "slopePathwaysProperty"@en .
+                                                              rdfs:label "slopePathwaysProperty"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: figure 3"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/soilCarbonDensityProperty
@@ -1632,44 +1628,44 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/siteplot/surfaceAgeProperty
 <http://w3id.org/glosis/model/siteplot/surfaceAgeProperty> rdf:type owl:NamedIndividual ,
                                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                           rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 13"@en ;
-                                                           rdfs:label "surfaceAgeProperty"@en .
+                                                           rdfs:label "surfaceAgeProperty"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 13"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/treeDensityProperty
 <http://w3id.org/glosis/model/siteplot/treeDensityProperty> rdf:type owl:NamedIndividual ,
                                                                      <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                            rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                            rdfs:label "treeDensityProperty"@en .
+                                                            rdfs:label "treeDensityProperty"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/vegetationClassProperty
 <http://w3id.org/glosis/model/siteplot/vegetationClassProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 11"@en ;
-                                                                rdfs:label "VegetationClassProperty"@en .
+                                                                rdfs:label "VegetationClassProperty"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 11"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty
 <http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty> rdf:type owl:NamedIndividual ,
                                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                         rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 2"@en ;
-                                                                         rdfs:label "weatherConditionsCurrentProperty"@en .
+                                                                         rdfs:label "weatherConditionsCurrentProperty"@en ;
+                                                                         <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 2"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty
 <http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty> rdf:type owl:NamedIndividual ,
                                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                      rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 2"@en ;
-                                                                      rdfs:label "weatherConditionsPastProperty"@en .
+                                                                      rdfs:label "weatherConditionsPastProperty"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 2"@en .
 
 
 ###  http://w3id.org/glosis/model/siteplot/weatheringRockProperty
 <http://w3id.org/glosis/model/siteplot/weatheringRockProperty> rdf:type owl:NamedIndividual ,
                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                               rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 29"@en ;
-                                                               rdfs:label "weatheringRockProperty"@en .
+                                                               rdfs:label "weatheringRockProperty"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 29"@en .
 
 
 #################################################################

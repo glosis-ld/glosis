@@ -10,22 +10,23 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="http://schema.org/"
+     xmlns:schema1="https://schema.org/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/surface">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/surface/1.1.0"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/surface/1.2.1"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/codelists/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/common/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/iso28258/2013/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1h4oef8cex983"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1h5rlatsox995"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:description xml:lang="en">GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:description>
         <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/</terms:rights>
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GLOSIS ontology</terms:title>
-        <owl:versionInfo>1.1.0</owl:versionInfo>
+        <owl:versionInfo>1.2.1</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <schema:affiliation>
@@ -97,14 +98,14 @@
     <!-- http://w3id.org/glosis/model/common/ColourWet -->
 
 
-    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/ColourWet">
+    <owl:Class rdf:about="http://w3id.org/glosis/model/common/ColourWet">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/surface/GL_Surface"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -167,14 +168,14 @@
     <!-- http://w3id.org/glosis/model/common/FragmentsSize -->
 
 
-    <owl:Class rdf:about="http://w3id.org/glosis/model/common/FragmentsSize">
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/FragmentsSize">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/surface/GL_Surface"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
+    </rdf:Description>
     
 
 
@@ -267,8 +268,8 @@
 
     <owl:Class rdf:about="http://w3id.org/glosis/model/surface/GL_Surface">
         <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/iso28258/2013/Surface"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">GL_Surface</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:Class>
     
 
@@ -296,8 +297,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/surface/saltCoverProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: 22,1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SaltCover</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: 22,1</skos:definition>
     </owl:Class>
     
 
@@ -325,8 +326,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/surface/saltPresenceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SaltPresence</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -348,8 +349,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SaltPresenceValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -377,8 +378,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/surface/saltThicknessProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 22,2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SaltThickness</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 22,2</skos:definition>
     </owl:Class>
     
 
@@ -406,8 +407,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/surface/sealingConsistenceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 20,2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SealingConsistence</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 20,2</skos:definition>
     </owl:Class>
     
 
@@ -435,8 +436,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/surface/sealingThicknessProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: 20,1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SealingThickness</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: 20,1</skos:definition>
     </owl:Class>
     
 
@@ -458,8 +459,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/surface/saltCoverProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: 22,1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SaltCoverProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: 22,1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -470,8 +471,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/surface/saltPresenceProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">saltPresenceProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -481,8 +482,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/surface/saltThicknessProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 22,2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SaltThicknessProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 22,2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -492,8 +493,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/surface/sealingConsistenceProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 20,2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">sealingConsistenceProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 20,2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -503,8 +504,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/surface/sealingThicknessProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: 20,1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">sealingThicknessProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: 20,1</skos:definition>
     </owl:NamedIndividual>
 </rdf:RDF>
 

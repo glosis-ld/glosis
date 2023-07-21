@@ -7,20 +7,20 @@
 @base <http://w3id.org/glosis/model/surface#> .
 
 <http://w3id.org/glosis/model/surface> rdf:type owl:Ontology ;
-                                        owl:versionIRI <http://w3id.org/glosis/model/surface/1.1.0> ;
+                                        owl:versionIRI <http://w3id.org/glosis/model/surface/1.2.1> ;
                                         owl:imports <http://w3id.org/glosis/model/codelists/> ,
                                                     <http://w3id.org/glosis/model/common/> ,
                                                     <http://w3id.org/glosis/model/iso28258/2013/> ,
                                                     <http://www.w3.org/ns/sosa/> ,
                                                     <http://www.w3.org/ns/ssn/> ;
-                                        <http://purl.org/dc/terms/creator> _:genid-nodeid-node1h4oef8cex983 ,
+                                        <http://purl.org/dc/terms/creator> _:genid-nodeid-node1h5rlatsox995 ,
                                                                            _:genid1 ,
                                                                            _:genid3 ;
                                         <http://purl.org/dc/terms/description> "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
                                         <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en ;
                                         <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
                                         <http://purl.org/dc/terms/title> "GLOSIS ontology"@en ;
-                                        owl:versionInfo "1.1.0" .
+                                        owl:versionInfo "1.2.1" .
 
 _:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
                                           ] ;
@@ -54,7 +54,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 
 
 ###  http://w3id.org/glosis/model/common/ColourWet
-<http://w3id.org/glosis/model/common/ColourWet> rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/ColourWet> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                   owl:allValuesFrom <http://w3id.org/glosis/model/surface/GL_Surface>
                                                                 ] .
@@ -89,8 +90,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 
 
 ###  http://w3id.org/glosis/model/common/FragmentsSize
-<http://w3id.org/glosis/model/common/FragmentsSize> rdf:type owl:Class ;
-                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://w3id.org/glosis/model/common/FragmentsSize> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
                                                                       owl:allValuesFrom <http://w3id.org/glosis/model/surface/GL_Surface>
                                                                     ] .
@@ -141,8 +141,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/surface/GL_Surface
 <http://w3id.org/glosis/model/surface/GL_Surface> rdf:type owl:Class ;
                                                   rdfs:subClassOf <http://w3id.org/glosis/model/iso28258/2013/Surface> ;
-                                                  rdfs:isDefinedBy "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
-                                                  rdfs:label "GL_Surface"@en .
+                                                  rdfs:label "GL_Surface"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/SaltCover
@@ -160,8 +160,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                    owl:hasValue <http://w3id.org/glosis/model/surface/saltCoverProperty>
                                                                  ] ;
-                                                 rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: 22,1"@en ;
-                                                 rdfs:label "SaltCover"@en .
+                                                 rdfs:label "SaltCover"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: 22,1"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/SaltPresence
@@ -179,8 +179,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                       owl:hasValue <http://w3id.org/glosis/model/surface/saltPresenceProperty>
                                                                     ] ;
-                                                    rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                    rdfs:label "SaltPresence"@en .
+                                                    rdfs:label "SaltPresence"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/SaltPresenceValue
@@ -194,8 +194,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                            owl:onProperty <http://qudt.org/schema/qudt/numericValue> ;
                                                                            owl:allValuesFrom xsd:boolean
                                                                          ] ;
-                                                         rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                         rdfs:label "SaltPresenceValue"@en .
+                                                         rdfs:label "SaltPresenceValue"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/SaltThickness
@@ -213,8 +213,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                        owl:hasValue <http://w3id.org/glosis/model/surface/saltThicknessProperty>
                                                                      ] ;
-                                                     rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 22,2"@en ;
-                                                     rdfs:label "SaltThickness"@en .
+                                                     rdfs:label "SaltThickness"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 22,2"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/SealingConsistence
@@ -232,8 +232,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                             owl:hasValue <http://w3id.org/glosis/model/surface/sealingConsistenceProperty>
                                                                           ] ;
-                                                          rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 20,2"@en ;
-                                                          rdfs:label "SealingConsistence"@en .
+                                                          rdfs:label "SealingConsistence"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 20,2"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/SealingThickness
@@ -251,8 +251,8 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                           owl:hasValue <http://w3id.org/glosis/model/surface/sealingThicknessProperty>
                                                                         ] ;
-                                                        rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: 20,1"@en ;
-                                                        rdfs:label "SealingThickness"@en .
+                                                        rdfs:label "SealingThickness"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: 20,1"@en .
 
 
 #################################################################
@@ -262,37 +262,37 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/surface/saltCoverProperty
 <http://w3id.org/glosis/model/surface/saltCoverProperty> rdf:type owl:NamedIndividual ,
                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                         rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: 22,1"@en ;
-                                                         rdfs:label "SaltCoverProperty"@en .
+                                                         rdfs:label "SaltCoverProperty"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: 22,1"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/saltPresenceProperty
 <http://w3id.org/glosis/model/surface/saltPresenceProperty> rdf:type owl:NamedIndividual ,
                                                                      <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                            rdfs:isDefinedBy "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
-                                                            rdfs:label "saltPresenceProperty"@en .
+                                                            rdfs:label "saltPresenceProperty"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/saltThicknessProperty
 <http://w3id.org/glosis/model/surface/saltThicknessProperty> rdf:type owl:NamedIndividual ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                             rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 22,2"@en ;
-                                                             rdfs:label "SaltThicknessProperty"@en .
+                                                             rdfs:label "SaltThicknessProperty"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 22,2"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/sealingConsistenceProperty
 <http://w3id.org/glosis/model/surface/sealingConsistenceProperty> rdf:type owl:NamedIndividual ,
                                                                            <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                  rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: table 20,2"@en ;
-                                                                  rdfs:label "sealingConsistenceProperty"@en .
+                                                                  rdfs:label "sealingConsistenceProperty"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 20,2"@en .
 
 
 ###  http://w3id.org/glosis/model/surface/sealingThicknessProperty
 <http://w3id.org/glosis/model/surface/sealingThicknessProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                rdfs:isDefinedBy "Guidelines for Soil Description issued by the FAO: 20,1"@en ;
-                                                                rdfs:label "sealingThicknessProperty"@en .
+                                                                rdfs:label "sealingThicknessProperty"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: 20,1"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
