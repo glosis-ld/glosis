@@ -8,7 +8,7 @@
 #
 # SPDX-License-Identifier: CC-BY-NC-SA-3.0-IGO 
 
-import os 
+import os
 import sys
 import json
 import configparser
@@ -32,10 +32,11 @@ templ_file = "template.json"
 creators = []
 contributors = []
 
+
 def addCreators(g, config):
 
     global creators
-    
+
     for s, dc_creator, creator in g.triples((None, DCT.creator, None)):
         for s2, p2, name in g.triples((creator, FOAF.name, None)):
             if (name in creators):
@@ -83,11 +84,20 @@ def addContributors(g, config):
     return(config)
 
 
+def addModuleDesc(g, config):
+
+    for ont, rdfs_comment, desc in g.triples((None, RDFS.comment, None)):
+        for ont, rdf_type, owl_ontology in g.triples((ont, RDF.type,  OWL.Ontology)):
+
+            config["abstract"] = "%s<br>%s" % (config["abstract"], desc)
+            return(config)
+
+
 if __name__ == "__main__":
 
     if (len(sys.argv) > 1):
         ont_file = sys.argv[1]
-    
+
     config = configparser.ConfigParser()
     config.read('config')
     widoco_jar = config['WiDoco']['jar_path']
@@ -97,25 +107,28 @@ if __name__ == "__main__":
     file = open(templ_file)
     config = json.load(file)
     file.close()
-    
+
     # Parse ontology file
     g = Graph()
     g.parse("../%s.ttl" % ont_file)
-    
+
     # Ontology namespace
     for s, p, o in g.triples((None, RDF.type, OWL.Ontology)):
         config["ontologyNamespaceURI"] = s
-    
+
     # Simple predicates: Title, abstract and similar
     for item in mapPreds.items():
         for s, p, o in g.triples((None, item[1], None)):
             config[item[0]] = o
-    
+
     # Creators
-    config = addCreators(g, config)    
+    config = addCreators(g, config)
 
     # Contributors
     config = addContributors(g, config)
+
+    # Module description
+    config = addModuleDesc(g, config)
 
     # Imported ontologies
     for s, p, ontology in g.triples((None, OWL.imports, None)):
@@ -124,7 +137,7 @@ if __name__ == "__main__":
         g_ext = Graph()
         try:
             g_ext.parse(ontology, format="turtle")
-            config = addCreators(g_ext, config)    
+            config = addCreators(g_ext, config)
             config = addContributors(g_ext, config)
         except:
             print("Faild to parse ontology: %s" % ontology)
@@ -132,11 +145,11 @@ if __name__ == "__main__":
     # Dump WiDoco config file
     config_file = "%s.config" % ont_file
     textfile = open(config_file, "w")
-    
+
     for key in config:
         a = textfile.write("%s=%s\n" % (key, config[key]))
         print("Outputed key: %s", key)
-    
+
     textfile.close()
 
     # Execute WiDoco
@@ -149,4 +162,4 @@ if __name__ == "__main__":
             -uniteSections \
             -webVowl \
             -rewriteAll""" % (widoco_jar, ont_file, ont_file, config_file))
-    
+
