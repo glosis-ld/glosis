@@ -68,11 +68,7 @@ python3 generateDoc.py glosis_common
 Complete run
 ------------
 
-Before re-generating the GloSIS documentation make sure the ontology version
-declared in the config files matches the current version in the Turtle files.
-This concerns the arguments `` and ``.
-
-To regenerate the documentation to all modules in one go run the script
+To regenerate the documentation for all modules in one go run the script
 `generate_all.sh`. It expects the virtual environment to be created beforehand
 in the `env` folder.
 
