@@ -2,7 +2,7 @@ WiDoco auto-config
 ==================
 
 This folder contains the assets necessary to generate the documentation of the
-various ontology modules. Ultimatelly, the documentation is created by WiDoco,
+various ontology modules. Ultimately, the documentation is created by WiDoco,
 but some pre-processing is necessary to transform the ontology meta-data into
 WiDoco input config files.
 
@@ -14,10 +14,10 @@ longer be necessary.
 config
 ------
 
-The auto-config programme needs to be awere of the location of the WiDoco `.jar`
+The auto-config programme needs to be aware of the location of the WiDoco `.jar`
 file. This information is set up in the `config` file, an input to the programme.
 This file also stores the location of the WiDoco template, stored in a separate
-file for convinience (`template.json`, see below). 
+file for convenience (`template.json`, see below). 
 
 Before running the programme edit the `config` file, inserting the right path to the
 WiDoco `.jar` in your system. 
@@ -40,7 +40,7 @@ requirements.txt
 ----------------
 
 The auto-config programme depends on a few Python libraries enumerated in the
-`requirements.txt` file. A virtual environment is a simple and convinient method
+`requirements.txt` file. A virtual environment is a simple and convenient method
 to set up these libraries:
 
 ```
@@ -65,3 +65,13 @@ create the documentation for the `glosis_common` module:
 python3 generateDoc.py glosis_common
 ```
 
+Complete run
+------------
+
+To regenerate the documentation for all modules in one go run the script
+`generate_all.sh`. It expects the virtual environment to be created beforehand
+in the `env` folder.
+
+```
+./generate_all.sh
+``` 

@@ -10,22 +10,24 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="http://schema.org/"
+     xmlns:schema1="https://schema.org/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/profile">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/profile/1.1.0"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/profile/1.2.1"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/codelists/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/common/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/iso28258/2013/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1h4oedphgx983"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1h667ffaax995"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:description xml:lang="en">GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:description>
         <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/</terms:rights>
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GLOSIS ontology</terms:title>
-        <owl:versionInfo>1.1.0</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This module contains the classes and properties to describe a soil profile, which is a describable representation of the soil that is characterised by a vertical succession of horizons or at least one or several parent materials layers. Soil profile is an ordered set of soil horizons and/or layers.</rdfs:comment>
+        <owl:versionInfo>1.2.1</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <schema:affiliation>
@@ -163,8 +165,8 @@
     <owl:Class rdf:about="http://w3id.org/glosis/model/profile/GL_Profile">
         <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/iso28258/2013/Profile"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">GL_Profile</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:Class>
     
 
@@ -192,8 +194,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ProfileDescriptionStatus</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 1</skos:definition>
     </owl:Class>
     
 
@@ -221,8 +223,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SoilClassification</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -238,8 +240,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/profile/soilClassificationFAOProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SoilClassificationFAO</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -255,8 +257,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/profile/soilClassificationUSDAProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SoilClassificationUSDA</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -272,8 +274,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/profile/soilClassificationWRBProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SoilClassificationWRB</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -329,8 +331,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">profileDescriptionStatusProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -381,20 +383,20 @@
 
 
     <rdf:Description rdf:about="http://w3id.org/glosis/model/profile/soilClassificationFAOProperty">
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilClassificationFAOProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://w3id.org/glosis/model/profile/soilClassificationProperty">
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilClassificationProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://w3id.org/glosis/model/profile/soilClassificationUSDAProperty">
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilClassificationUSDAProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://w3id.org/glosis/model/profile/soilClassificationWRBProperty">
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">soilClassificationWRBProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </rdf:Description>
 </rdf:RDF>
 

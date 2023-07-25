@@ -10,22 +10,24 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="http://schema.org/"
+     xmlns:schema1="https://schema.org/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/siteplot">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/siteplot/1.1.0"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/siteplot/1.2.1"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/codelists/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/common/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/iso28258/2013/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1h4oeehmdx983"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1h667g5ltx995"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:description xml:lang="en">GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:description>
         <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/</terms:rights>
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GLOSIS ontology</terms:title>
-        <owl:versionInfo>1.1.0</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This module contains the classes and properties to describe soil sites (a defined area which is subject to a soil quality investigation) and soil plots (an elementary area where individual observations are made and/or samples are taken).</rdfs:comment>
+        <owl:versionInfo>1.2.1</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <schema:affiliation>
@@ -33,8 +35,7 @@
                 <foaf:name>PSNC</foaf:name>
             </rdf:Description>
         </schema:affiliation>
-        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
-        <foaf:name>Raul Palma</foaf:name>
+        <foaf:name>Bogusz Janiak</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
         <schema:affiliation>
@@ -42,7 +43,8 @@
                 <foaf:name>PSNC</foaf:name>
             </rdf:Description>
         </schema:affiliation>
-        <foaf:name>Bogusz Janiak</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
     </rdf:Description>
     
 
@@ -64,8 +66,8 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/altitude">
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">altitude</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -75,8 +77,8 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/country">
         <rdfs:range rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">country</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -86,8 +88,8 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/positionalAccuracy">
         <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Property"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">positionalAccuracy</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -97,8 +99,8 @@
 
     <owl:ObjectProperty rdf:about="http://w3id.org/glosis/model/siteplot/responsibleOrganization">
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">responsibleOrganization</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -127,8 +129,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/cropDescription">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</rdfs:isDefinedBy>
-        <skos:definition xml:lang="en">Description of crops at the site</skos:definition>
+        <rdfs:comment xml:lang="en">Description of crops at the site</rdfs:comment>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -138,9 +140,9 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/landUseCropRotation">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Description of crop rotation at the site</rdfs:comment>
         <rdfs:label xml:lang="en">landUseCropRotation</rdfs:label>
-        <skos:definition xml:lang="en">Description of crop rotation at the site</skos:definition>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -150,9 +152,9 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/landUseRemark">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Description of land use at the site</rdfs:comment>
         <rdfs:label xml:lang="en">landUseRemark</rdfs:label>
-        <skos:definition xml:lang="en">Description of land use at the site</skos:definition>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -162,8 +164,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/location">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">location</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -173,8 +175,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/mapSheetID">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">mapSheetID</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -184,9 +186,9 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/parentRemarks">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Remarks on the parent material</rdfs:comment>
         <rdfs:label xml:lang="en">parentRemarks</rdfs:label>
-        <skos:definition xml:lang="en">Remarks on the parent material</skos:definition>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -196,9 +198,9 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/physiographyDescription">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Description of the local physiography</rdfs:comment>
         <rdfs:label xml:lang="en">physiographyDescription</rdfs:label>
-        <skos:definition xml:lang="en">Description of the local physiography</skos:definition>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -208,8 +210,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/remarks">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">remarks</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -228,9 +230,9 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/vegetationDescription">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Description of vegetation at the site</rdfs:comment>
         <rdfs:label xml:lang="en">vegetationDescription</rdfs:label>
-        <skos:definition xml:lang="en">Description of vegetation at the site</skos:definition>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -251,13 +253,6 @@
 
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/ErosionAreaAffectedValueCode -->
-
-
-    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/ErosionAreaAffectedValueCode"/>
     
 
 
@@ -417,8 +412,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/cropClassProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 9</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">CropClass</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 9</skos:definition>
     </owl:Class>
     
 
@@ -453,8 +448,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 19</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ErosionActivityPeriod</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 19</skos:definition>
     </owl:Class>
     
 
@@ -489,8 +484,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ErosionAreaAffected</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</skos:definition>
     </owl:Class>
     
 
@@ -525,8 +520,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionCategoryProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ErosionCategory</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</skos:definition>
     </owl:Class>
     
 
@@ -561,8 +556,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionDegreeProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 18</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ErosionDegree</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 18</skos:definition>
     </owl:Class>
     
 
@@ -597,8 +592,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ErosionTotalAreaAffected</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</skos:definition>
     </owl:Class>
     
 
@@ -633,8 +628,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/floodDurationProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">FloodDuration</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
     </owl:Class>
     
 
@@ -669,8 +664,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/floodFrequencyProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">FloodFrequency</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
     </owl:Class>
     
 
@@ -728,8 +723,8 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">GL_Plot</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:Class>
     
 
@@ -788,8 +783,8 @@
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">GL_Site</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
     </owl:Class>
     
 
@@ -824,8 +819,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/geologyProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Geology</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
     </owl:Class>
     
 
@@ -860,8 +855,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">GroundwaterDepth</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -883,8 +878,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">GroundwaterDepthValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -919,8 +914,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 10</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">HumanInfluenceClass</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 10</skos:definition>
     </owl:Class>
     
 
@@ -955,8 +950,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">KoeppenClass</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -991,8 +986,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseBareCover</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1014,8 +1009,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseBareCoverValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1050,8 +1045,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/landUseClassProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 8</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseClass</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 8</skos:definition>
     </owl:Class>
     
 
@@ -1086,8 +1081,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/forestAbundanceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseForest</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1109,8 +1104,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseForestValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1145,8 +1140,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/grassAbundanceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseGrass</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1168,8 +1163,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseGrassValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1204,8 +1199,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/PavedAbundanceproperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUsePavedCover</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1227,8 +1222,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUsePavedCoverValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1263,8 +1258,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseShrubs</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1286,8 +1281,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandUseShrubsValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1322,8 +1317,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/landformComplexProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 5</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">LandformComplex</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 5</skos:definition>
     </owl:Class>
     
 
@@ -1358,8 +1353,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/lithologyProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Lithology</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
     </owl:Class>
     
 
@@ -1394,8 +1389,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/majorLandFormProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 4</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">MajorLandForm</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 4</skos:definition>
     </owl:Class>
     
 
@@ -1430,8 +1425,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/parentDepositionProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ParentDeposition</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</skos:definition>
     </owl:Class>
     
 
@@ -1466,8 +1461,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/parentLithologyProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ParentLithology</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
     </owl:Class>
     
 
@@ -1536,8 +1531,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/physiographyProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Physiography</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 2</skos:definition>
     </owl:Class>
     
 
@@ -1572,8 +1567,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">RockOutcropsCover</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,1</skos:definition>
     </owl:Class>
     
 
@@ -1608,8 +1603,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">RockOutcropsDistance</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,2</skos:definition>
     </owl:Class>
     
 
@@ -1644,8 +1639,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeFormProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 6</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SlopeForm</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 6</skos:definition>
     </owl:Class>
     
 
@@ -1680,8 +1675,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 7</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SlopeGradientClass</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 7</skos:definition>
     </owl:Class>
     
 
@@ -1716,8 +1711,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeGradientProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SlopeGradientNumeric</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1739,8 +1734,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SlopeGradientNumericValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1775,8 +1770,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SlopeOrientationClass</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1811,8 +1806,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopeOrientationProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SlopeOrientationNumeric</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1834,8 +1829,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SlopeOrientationNumericValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -1870,8 +1865,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/slopePathwaysProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 3</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SlopePathways</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 3</skos:definition>
     </owl:Class>
     
 
@@ -1956,8 +1951,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/surfaceAgeProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 13</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">SurfaceAge</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 13</skos:definition>
     </owl:Class>
     
 
@@ -1992,8 +1987,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/treeDensityProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TreeDensity</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -2015,8 +2010,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TreeDensityValue</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:Class>
     
 
@@ -2051,8 +2046,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/vegetationClassProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 11</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">VegetationClass</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 11</skos:definition>
     </owl:Class>
     
 
@@ -2087,8 +2082,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">WeatherCurrent</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</skos:definition>
     </owl:Class>
     
 
@@ -2123,8 +2118,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">WeatherPast</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</skos:definition>
     </owl:Class>
     
 
@@ -2159,8 +2154,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/weatheringRockProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 29</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">WeatheringRock</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 29</skos:definition>
     </owl:Class>
     
 
@@ -2211,8 +2206,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">bareCoverAbundanceProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2222,8 +2217,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/cropClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 9</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">cropClassProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 9</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2233,8 +2228,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 19</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">erosionActivityPeriodProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 19</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2244,8 +2239,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">erosionAreaAffectedProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2255,8 +2250,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionCategoryProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">erosionCategoryProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2266,8 +2261,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionDegreeProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 18</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">erosionDegreeProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 18</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2277,8 +2272,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">erosionTotalAreaAffectedProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2288,8 +2283,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/floodDurationProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">floodDurationProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2299,8 +2294,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/floodFrequencyProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">floodFrequencyProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2311,8 +2306,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/forestAbundanceProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ForestAbundanceProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2322,8 +2317,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/geologyProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">geologyProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2334,8 +2329,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/grassAbundanceProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">GrassAbundanceProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2346,8 +2341,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">groundwaterDepthProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2357,8 +2352,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 10</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">humanInfluenceClassProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 10</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2368,8 +2363,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/koeppenClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">koeppenClassProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2379,8 +2374,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/landUseClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 8</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">landUseClassProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 8</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2390,8 +2385,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/landformComplexProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 5</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">landformComplexProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 5</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2401,8 +2396,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/lithologyProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">lithologyProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2412,8 +2407,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/majorLandFormProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 4</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">MajorLandFormProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 4</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2423,8 +2418,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/parentDepositionProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">ParentDepositionProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2434,8 +2429,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/parentLithologyProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">parentLithologyProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2445,8 +2440,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">table is missing!</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">parentTextureUnconsolidatedProperty</rdfs:label>
+        <skos:definition xml:lang="en">table is missing!</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2457,8 +2452,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">PavedAbundanceProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2468,8 +2463,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/physiographyProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">PhysiographyProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2479,8 +2474,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">rockOutcropsCoverProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2490,8 +2485,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">rockOutcropsDistanceProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2502,8 +2497,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">shrubsAbundanceProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2513,8 +2508,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeFormProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 6</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">slopeFormProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 6</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2524,8 +2519,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 7</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">slopeGradientClassProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 7</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2536,8 +2531,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeGradientProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">slopeGradientProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2547,8 +2542,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">slopeOrientationClassProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2559,8 +2554,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopeOrientationProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">slopeOrientationProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2570,8 +2565,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/slopePathwaysProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 3</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">slopePathwaysProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 3</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2592,8 +2587,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/surfaceAgeProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 13</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">surfaceAgeProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 13</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2604,8 +2599,8 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/treeDensityProperty">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">treeDensityProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2615,8 +2610,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/vegetationClassProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 11</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">VegetationClassProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 11</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2626,8 +2621,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">weatherConditionsCurrentProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2637,8 +2632,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">weatherConditionsPastProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2648,8 +2643,8 @@
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/siteplot/weatheringRockProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:isDefinedBy xml:lang="en">Guidelines for Soil Description issued by the FAO: table 29</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">weatheringRockProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 29</skos:definition>
     </owl:NamedIndividual>
     
 
