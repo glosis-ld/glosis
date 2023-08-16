@@ -26,6 +26,15 @@ Documentation pages are maintained in the [docs folder](https://github.com/glosi
 * [Glosis observable properties codelist](https://glosis-ld.github.io/glosis/glosis_cl/index-en.html)
 * [ISO28258 module](https://glosis-ld.github.io/glosis/iso28258/index-en.html)
 
+### Codelist in OGC definition server
+All Glosis codelists are available via the OGC definition server.
+Entry to all codelists in OGC definition server: 
+https://defs-dev.opengis.net/vocprez-hosted/vocab/
+ 
+As example: codelist of physiochemical properties: 
+http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode
+
+One of them: http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot 
 
 ## Citing
 
