@@ -23,20 +23,9 @@
     dct:rights "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en ;
     dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
     dct:title "GLOSIS code lists"@en ;
+    rdfs:comment "This module contains all the code lists of observable properties and results codes."@en ;
     owl:versionIRI glosis_cl:1.2.1 ;
     owl:versionInfo "1.2.1" .
-
-<http://w3id.org/glosis/model/codelists/?PPropertyCode> a owl:Class,
-        skos:ConceptScheme ;
-    rdfs:label "Code list for ?PProperty - codelist class"@en,
-        "Code list for ?PProperty - codelist scheme"@en ;
-    rdfs:comment "This code list provides the ?PProperty."@en ;
-    rdfs:seeAlso <http://w3id.org/glosis/model/codelists/?PPropertyCode> ;
-    rdfs:subClassOf skos:Concept,
-        sosa:ObservableProperty ;
-    owl:oneOf ( <http://w3id.org/glosis/model/codelists/?PPropertyCode-Irotot> ) ;
-    skos:note "This code list provides analysis procedures for ?P."@en ;
-    skos:prefLabel "Code list for ?PProperty - codelist scheme"@en .
 
 glosis_cl:biologicalAbundanceValueCode a skos:ConceptScheme ;
     rdfs:label "Code list for biologicalAbundanceValue - codelist scheme"@en ;
