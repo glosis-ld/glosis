@@ -30,7 +30,7 @@ CONSTRUCT {
    .  
 
 ### concepts
-  ?c_oneof a skos:Concept; a ?URI2 ;
+  ?c_oneof a skos:Concept; a ?URI2 ; a ?compoundURI ; a ?substanceURI ;
     skos:topConceptOf ?top_URI ;
     skos:prefLabel ?i_label ;
     skos:notation  ?i_notation ;
@@ -72,6 +72,8 @@ WHERE {
   BIND (IF(?parent_instance != '', ?parentURI, ?nothing) AS ?broaderURI)
   BIND (IF(?pub_chem != '', ?pub_chem, ?nothing) AS ?pub_chem_code)
   BIND (IF(?pub_chem != '', URI(CONCAT('https://pubchem.ncbi.nlm.nih.gov/compound/', ?pub_chem)), ?nothing) AS ?pub_chem_URI)
+  BIND (IF(?pub_chem != '', dbo:ChemicalSubstance, ?nothing) AS ?substanceURI)
   BIND (IF(?inchi_key != '', ?inchi_key, ?nothing) AS ?inchi_key_code)
   BIND (IF(?inchi != '', ?inchi, ?nothing) AS ?inchi_code)
+  BIND (IF(?pub_chem != '', dbo:ChemicalCompound, ?nothing) AS ?compoundURI)
 }
