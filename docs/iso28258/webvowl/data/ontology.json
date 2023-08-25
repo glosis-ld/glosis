@@ -8,7 +8,7 @@
     },
     "iri" : "http://w3id.org/glosis/model/iso28258/2013",
     "version" : "1.2.1",
-    "author" : [ "_:genid-nodeid-node1h667hgigx3", "_:genid2147483649", "_:genid2147483648" ],
+    "author" : [ "_:genid-nodeid-node1h8m0t3c3x3", "_:genid2147483649", "_:genid2147483648" ],
     "description" : {
       "en" : "The ontology represents a subset of the ISO28258 standard data model entities necessary for GLOSIS ontology"
     },
@@ -19,13 +19,13 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid-nodeid-node1h667hgigx3",
-        "type" : "iri"
+        "value" : "_:genid2147483648",
+        "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
-        "type" : "label"
+        "value" : "_:genid-nodeid-node1h8m0t3c3x3",
+        "type" : "iri"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
@@ -66,11 +66,11 @@
     "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
-    "type" : "owl:equivalentClass"
-  }, {
     "id" : "5",
     "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:equivalentClass"
   }, {
     "id" : "17",
     "type" : "owl:Class"
@@ -184,16 +184,6 @@
     "id" : "12",
     "superClasses" : [ "10" ]
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/Observation",
-    "equivalent" : [ "16" ],
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Observation"
-    },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "15"
-  }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Surface",
     "baseIri" : "http://w3id.org/glosis/model/iso28258/2013",
     "instances" : 0,
@@ -218,6 +208,16 @@
     "attributes" : [ "external" ],
     "id" : "5",
     "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Observation",
+    "equivalent" : [ "16" ],
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Observation"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "15"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Layer",
     "baseIri" : "http://w3id.org/glosis/model/iso28258/2013",
@@ -267,7 +267,7 @@
       "undefined" : "GFI_Feature"
     },
     "subClasses" : [ "1", "20", "14", "21" ],
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "19"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Site",
@@ -396,7 +396,7 @@
     "label" : {
       "IRI-based" : "Feature"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "22"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -422,7 +422,7 @@
   }, {
     "instances" : 0,
     "union" : [ "19", "21" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "41"
   }, {
     "iri" : "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
@@ -448,7 +448,7 @@
       "undefined" : "SF_SamplingFeature"
     },
     "subClasses" : [ "10", "4" ],
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "1",
     "superClasses" : [ "19" ]
   }, {
@@ -491,7 +491,7 @@
     "label" : {
       "IRI-based" : "Sample"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "46"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Profile",
@@ -541,7 +541,7 @@
       "IRI-based" : "OM_Observation",
       "undefined" : "Observation"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "16"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/ProfileElement",
@@ -669,7 +669,7 @@
       "undefined" : "parameter"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "0"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order",
@@ -707,7 +707,7 @@
       "undefined" : "upperDepth"
     },
     "domain" : "10",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "9"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Plot.profile",
@@ -726,7 +726,7 @@
       "undefined" : "profile"
     },
     "domain" : "3",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "13"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer",
@@ -745,7 +745,7 @@
       "undefined" : "horizonInLayer"
     },
     "domain" : "12",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "18"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot",
@@ -764,7 +764,7 @@
       "undefined" : "samplingPlot"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "23"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile",
@@ -783,7 +783,7 @@
       "undefined" : "typicalProfile"
     },
     "domain" : "20",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "25"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile",
@@ -802,12 +802,12 @@
       "undefined" : "elementOfProfile"
     },
     "domain" : "10",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "26"
   }, {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth",
@@ -826,17 +826,17 @@
       "undefined" : "lowerDepth"
     },
     "domain" : "10",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "29"
   }, {
     "range" : "21",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "31"
   }, {
     "range" : "10",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Profile.element",
@@ -855,27 +855,27 @@
       "undefined" : "element"
     },
     "domain" : "14",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "33"
   }, {
     "range" : "10",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
     "range" : "19",
     "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
     "range" : "19",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
     "range" : "19",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "37"
   }, {
     "iri" : "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
@@ -894,7 +894,7 @@
       "undefined" : "lineage"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "38"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite",
@@ -913,27 +913,27 @@
       "undefined" : "plotInSite"
     },
     "domain" : "3",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "39"
   }, {
     "range" : "3",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
     "range" : "1",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "range" : "1",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "44"
   }, {
     "range" : "19",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon",
@@ -952,7 +952,7 @@
       "undefined" : "developedHorizon"
     },
     "domain" : "17",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "47"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot",
@@ -971,7 +971,7 @@
       "undefined" : "samplingPlot"
     },
     "domain" : "20",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "48"
   }, {
     "iri" : "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
@@ -990,7 +990,7 @@
       "undefined" : "sampledFeature"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "49"
   }, {
     "iri" : "http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite",
@@ -1009,7 +1009,7 @@
       "undefined" : "profileSite"
     },
     "domain" : "20",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "50"
   } ]
 }
