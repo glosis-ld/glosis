@@ -29,12 +29,12 @@ Documentation pages are maintained in the [docs folder](https://github.com/glosi
 ### Codelist in OGC definition server
 All Glosis codelists are available via the OGC definition server.
 Entry to all codelists in OGC definition server: 
-https://defs-dev.opengis.net/vocprez-hosted/vocab/
+[https://defs-dev.opengis.net/vocprez-hosted/vocab/](https://defs-dev.opengis.net/vocprez-hosted/vocab/)
  
 As example: codelist of physiochemical properties: 
-http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode
+[http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode](http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode)
 
-One of them: http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot 
+One of them: [http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot](http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot)
 
 ## Citing
 
