@@ -19,7 +19,7 @@ Documentation pages are maintained in the [docs folder](https://github.com/glosi
 * [Glosis Surface](https://glosis-ld.github.io/glosis/glosis_surface/index-en.html)
 * [Glosis Site-Plot module](https://glosis-ld.github.io/glosis/glosis_siteplot/index-en.html)
 * [Glosis Profile module](https://glosis-ld.github.io/glosis/glosis_profile/index-en.html)
-* [Glosis Layer-Horizon module](https://glosis-ld.github.io/glosis/glosis_profile/index-en.html)
+* [Glosis Layer-Horizon module](https://glosis-ld.github.io/glosis/glosis_layer_horizon/index-en.html)
 * [Glosis Observation module](https://glosis-ld.github.io/glosis/glosis_observation/index-en.html)
 * [Glosis Procedures codelist](https://glosis-ld.github.io/glosis/glosis_procedure/index-en.html)
 * [Glosis Units of measurement codelist](https://glosis-ld.github.io/glosis/glosis_unit/index-en.html)
