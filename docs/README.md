@@ -36,6 +36,9 @@ As example: codelist of physiochemical properties:
 
 One of them: [http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot](http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot)
 
+### Sources
+All the ontology modules, code lists and scripts can be found at the [GloSIS GitHub respository](https://github.com/glosis-ld/glosis)
+
 ## Citing
 
 Cite as:

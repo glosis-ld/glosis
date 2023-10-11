@@ -3,6 +3,8 @@ PREFIX sosa:  <http://www.w3.org/ns/sosa/>
 PREFIX glosis_cl: <http://w3id.org/glosis/model/codelists/>
 PREFIX skos:  <http://www.w3.org/2004/02/skos/core#> 
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbprop: <http://dbpedia.org/property/>
 
 
 CONSTRUCT {
@@ -28,7 +30,7 @@ CONSTRUCT {
    .  
 
 ### concepts
-  ?c_oneof a skos:Concept; a ?URI2 ;
+  ?c_oneof a skos:Concept; a ?URI2 ; a ?compoundURI ; a ?substanceURI ;
     skos:topConceptOf ?top_URI ;
     skos:prefLabel ?i_label ;
     skos:notation  ?i_notation ;
@@ -37,6 +39,11 @@ CONSTRUCT {
     skos:scopeNote ?i_citation ;
     skos:inScheme ?URI1 ;
     skos:broader ?broaderURI ;
+    # Chemical substances
+    dbo:pubchem ?pub_chem_code ;
+    dbo:inchi ?inchi_code ;
+    dbprop:inchikey ?inchi_key_code ;
+    rdfs:seeAlso ?pub_chem_URI ;
     .
 
   ?broaderURI skos:narrower ?c_oneof .
@@ -63,4 +70,10 @@ WHERE {
   BIND (IF(?parent_instance = '', ?URI1, ?nothing) AS ?top_URI)
   BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists/', ?attribute, ?postfix, 'Code', '-', ?parent_instance)) AS ?parentURI)
   BIND (IF(?parent_instance != '', ?parentURI, ?nothing) AS ?broaderURI)
+  BIND (IF(?pub_chem != '', ?pub_chem, ?nothing) AS ?pub_chem_code)
+  BIND (IF(?pub_chem != '', URI(CONCAT('https://pubchem.ncbi.nlm.nih.gov/compound/', ?pub_chem)), ?nothing) AS ?pub_chem_URI)
+  BIND (IF(?pub_chem != '', dbo:ChemicalSubstance, ?nothing) AS ?substanceURI)
+  BIND (IF(?inchi_key != '', ?inchi_key, ?nothing) AS ?inchi_key_code)
+  BIND (IF(?inchi != '', ?inchi, ?nothing) AS ?inchi_code)
+  BIND (IF(?pub_chem != '', dbo:ChemicalCompound, ?nothing) AS ?compoundURI)
 }
