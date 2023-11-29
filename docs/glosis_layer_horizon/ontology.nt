@@ -1,13 +1,13 @@
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/glosis/model/layerhorizon/1.2.1> .
+<http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/glosis/model/layerhorizon/1.3.1> .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/glosis/model/codelists/> .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/glosis/model/common/> .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/glosis/model/iso28258/2013/> .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/glosis/model/unit/> .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/> .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
-<http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/layerhorizon_:genid-nodeid-node1h8m0p3r0x1001> .
-<http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/layerhorizon_:genid-nodeid-node1h8m0p3r0x1003> .
+<http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/layerhorizon_:genid-nodeid-node1hgdl4smex1001> .
+<http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/layerhorizon_:genid-nodeid-node1hgdl4smex1003> .
 <http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
 _:genid1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
@@ -27,7 +27,7 @@ _:genid6 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 <http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/title> "GlOSIS Ontology: Layer-Horizon module"@en .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2000/01/rdf-schema#comment> "This module contains all classes and properties to describe the domain of soil with a certain vertical extension, which is a layer (developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains) or a horizon (more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in-situ sedimented organic residues of up-growing plants (peat))."@en .
-<http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#versionInfo> "1.2.1" .
+<http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#versionInfo> "1.3.1" .
 # 
 # 
 # #################################################################
@@ -83,9 +83,8 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 # 
-# http://w3id.org/glosis/model/common/ColourWet
-<http://w3id.org/glosis/model/common/ColourWet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/glosis/model/common/ColourWet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+# http://w3id.org/glosis/model/common/ColourMoist
+<http://w3id.org/glosis/model/common/ColourMoist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
 _:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid16 .
 _:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
@@ -1386,6 +1385,7 @@ _:genid262 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa
 _:genid262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/CoarseFragments> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid263 .
 _:genid263 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra> .
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 _:genid263 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
 _:genid263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/CoarseFragments> <http://www.w3.org/2000/01/rdf-schema#label> "CoarseFragments"@en .
@@ -4369,6 +4369,8 @@ _:genid800 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # http://qudt.org/vocab/unit/PERCENT
 # 
 # http://qudt.org/vocab/unit/PH
+# 
+# http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra
 # 
 # http://w3id.org/glosis/model/layerhorizon/aluminiumProperty
 <http://w3id.org/glosis/model/layerhorizon/aluminiumProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .

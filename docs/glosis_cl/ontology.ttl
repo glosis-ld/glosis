@@ -7,9 +7,9 @@
 @base <http://w3id.org/glosis/model/codelists#> .
 
 <http://w3id.org/glosis/model/codelists> rdf:type owl:Ontology ;
-                                          owl:versionIRI <http://w3id.org/glosis/model/codelists/v1.2.1> ;
-                                          <http://purl.org/dc/terms/creator> _:genid-nodeid-node1h8m0nvh8x3 ,
-                                                                             _:genid-nodeid-node1h8m0nvh8x5 ,
+                                          owl:versionIRI <http://w3id.org/glosis/model/codelists/v1.3.1> ;
+                                          <http://purl.org/dc/terms/creator> _:genid-nodeid-node1hgdl3n2cx3 ,
+                                                                             _:genid-nodeid-node1hgdl3n2cx5 ,
                                                                              _:genid1 ,
                                                                              _:genid3 ,
                                                                              _:genid5 ;
@@ -18,7 +18,7 @@
                                           <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
                                           <http://purl.org/dc/terms/title> "GLOSIS code lists"@en ;
                                           rdfs:comment "This module contains all the code lists of observable properties and results codes."@en ;
-                                          owl:versionInfo "v1.2.1" .
+                                          owl:versionInfo "v1.3.1" .
 
 _:genid1 rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
           <http://xmlns.com/foaf/0.1/name> "Raul Palma" ;
@@ -37,6 +37,18 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://dbpedia.org/ontology/inchi
+<http://dbpedia.org/ontology/inchi> rdf:type owl:AnnotationProperty .
+
+
+###  http://dbpedia.org/ontology/pubchem
+<http://dbpedia.org/ontology/pubchem> rdf:type owl:AnnotationProperty .
+
+
+###  http://dbpedia.org/property/inchikey
+<http://dbpedia.org/property/inchikey> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
@@ -101,6 +113,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://dbpedia.org/ontology/ChemicalCompound
+<http://dbpedia.org/ontology/ChemicalCompound> rdf:type owl:Class .
+
+
+###  http://dbpedia.org/ontology/ChemicalSubstance
+<http://dbpedia.org/ontology/ChemicalSubstance> rdf:type owl:Class .
+
 
 ###  http://w3id.org/glosis/model/codelists/BiologicalAbundanceValueCode
 <http://w3id.org/glosis/model/codelists/BiologicalAbundanceValueCode> rdf:type owl:Class ;
@@ -742,8 +762,7 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 rdfs:comment "This code list provides the FloodDurationValue."@en ;
                                                                 rdfs:label "Code list for FloodDurationValue - codelist class"@en ;
-                                                                rdfs:seeAlso <http://w3id.org/glosis/model/codelists/floodDurationValueCode> ;
-                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 174" .
+                                                                rdfs:seeAlso <http://w3id.org/glosis/model/codelists/floodDurationValueCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode
@@ -751,8 +770,7 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                  rdfs:comment "This code list provides the FloodFrequencyValue."@en ;
                                                                  rdfs:label "Code list for FloodFrequencyValue - codelist class"@en ;
-                                                                 rdfs:seeAlso <http://w3id.org/glosis/model/codelists/floodFrequencyValueCode> ;
-                                                                 <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 174" .
+                                                                 rdfs:seeAlso <http://w3id.org/glosis/model/codelists/floodFrequencyValueCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/FragmentCoverValueCode
@@ -1302,8 +1320,7 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      rdfs:comment "This code list provides the OrganicMatterClassValue."@en ;
                                                                      rdfs:label "Code list for OrganicMatterClassValue - codelist class"@en ;
-                                                                     rdfs:seeAlso <http://w3id.org/glosis/model/codelists/organicMatterClassValueCode> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" .
+                                                                     rdfs:seeAlso <http://w3id.org/glosis/model/codelists/organicMatterClassValueCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/PeatDecompostionValueCode
@@ -1377,7 +1394,8 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bassum>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Borext>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bortot>
-                                                                                                      <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bro>
+                                                                                                      <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brod>
+                                                                                                      <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brot>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CaN>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calexc>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calext>
@@ -1393,7 +1411,6 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartot>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Ccetot>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Chl>
-                                                                                                      <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Copext>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Coptot>
                                                                                                       <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hyd>
@@ -1843,16 +1860,16 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 ###  http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode
 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> rdf:type owl:Class ;
                                                                      owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                           owl:oneOf ( <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-01>
-                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-02>
-                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-03>
-                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-04>
-                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-05>
-                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-06>
-                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-07>
-                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-08>
-                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-09>
+                                                                                           owl:oneOf ( <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-1>
                                                                                                        <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-10>
+                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-2>
+                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-3>
+                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-4>
+                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-5>
+                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-6>
+                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-7>
+                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-8>
+                                                                                                       <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-9>
                                                                                                      )
                                                                                          ] ;
                                                                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -1967,8 +1984,7 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                         rdfs:comment "This code list provides the TextureUnconsolidatedValue."@en ;
                                                                         rdfs:label "Code list for TextureUnconsolidatedValue - codelist class"@en ;
-                                                                        rdfs:seeAlso <http://w3id.org/glosis/model/codelists/textureUnconsolidatedValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#definition> "table is missing" .
+                                                                        rdfs:seeAlso <http://w3id.org/glosis/model/codelists/textureUnconsolidatedValueCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/VegetationClassValueCode
@@ -5083,7 +5099,6 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                                 rdfs:label "Code list for floodDurationValue - codelist scheme"@en ;
                                                                 rdfs:seeAlso <http://w3id.org/glosis/model/codelists/FloodDurationValueCode> ;
-                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 174" ;
                                                                 <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for floodDuration."@en ;
                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for floodDurationValue - codelist scheme"@en .
 
@@ -5093,7 +5108,6 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                                  rdfs:label "Code list for floodFrequencyValue - codelist scheme"@en ;
                                                                  rdfs:seeAlso <http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode> ;
-                                                                 <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 174" ;
                                                                  <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for floodFrequency."@en ;
                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for floodFrequencyValue - codelist scheme"@en .
 
@@ -8507,7 +8521,6 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                                      rdfs:label "Code list for organicMatterClassValue - codelist scheme"@en ;
                                                                      rdfs:seeAlso <http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" ;
                                                                      <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for organicMatterClass."@en ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for organicMatterClassValue - codelist scheme"@en .
 
@@ -8770,8 +8783,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Al" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "259" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/259> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Aludit" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Aluminium (Al) - dithionite extractable"@en ;
@@ -8780,8 +8799,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Al/q+3" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "104727" ;
+                                                                           <http://dbpedia.org/property/inchikey> "REDXJYDRNCIFBQ-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/104727> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Aluexc" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Aluminium (Al+++) - exchangeable"@en ;
@@ -8790,8 +8815,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluoxa
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluoxa> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Al" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "259" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/259> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Aluoxa" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Aluminium (Al) - oxalate extractable"@en ;
@@ -8800,8 +8831,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alupyr
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alupyr> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Al" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "259" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/259> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Alupyr" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Aluminium (Al) - pyrophosphate extractable"@en ;
@@ -8810,8 +8847,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Al/q+3" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "104727" ;
+                                                                           <http://dbpedia.org/property/inchikey> "REDXJYDRNCIFBQ-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/104727> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Alusat" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Aluminium (Al+++) - saturation  (ESP)"@en ;
@@ -8860,8 +8903,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Borext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Borext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/B" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462311" ;
+                                                                           <http://dbpedia.org/property/inchikey> "ZOXJGFHDIHLPTG-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462311> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Borext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Boron (B) - extractable"@en ;
@@ -8870,22 +8919,50 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bortot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bortot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/B" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462311" ;
+                                                                           <http://dbpedia.org/property/inchikey> "ZOXJGFHDIHLPTG-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462311> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Bortot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Boron (B) - total"@en ;
                                                                            <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bro
-<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bro> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "Bro" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Bromite (Br-) - extractable"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
+###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brod
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brod> rdf:type owl:NamedIndividual ,
+                                                                                  <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                  <http://dbpedia.org/ontology/ChemicalSubstance> ,
+                                                                                  <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
+                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         <http://dbpedia.org/ontology/inchi> "1S/BrH/h1H/p-1" ;
+                                                                         <http://dbpedia.org/ontology/pubchem> "259" ;
+                                                                         <http://dbpedia.org/property/inchikey> "CPELXLSAUQHCOX-UHFFFAOYSA-M" ;
+                                                                         rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/259> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#notation> "Brod" ;
+                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Bromide (Br-) - extractable"@en ;
+                                                                         <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brot
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brot> rdf:type owl:NamedIndividual ,
+                                                                                  <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                  <http://dbpedia.org/ontology/ChemicalSubstance> ,
+                                                                                  <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
+                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         <http://dbpedia.org/ontology/inchi> "1S/BrHO2/c2-1-3/h(H,2,3)/p-1" ;
+                                                                         <http://dbpedia.org/ontology/pubchem> "5460628" ;
+                                                                         <http://dbpedia.org/property/inchikey> "DKSMCEUSSQTGBK-UHFFFAOYSA-M" ;
+                                                                         rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5460628> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#notation> "Brot" ;
+                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Bromite (BrO2-)"@en ;
+                                                                         <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CaN
@@ -8900,8 +8977,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calexc
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calexc> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Ca/q+2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "271" ;
+                                                                           <http://dbpedia.org/property/inchikey> "BHPQYMZQTOCNFJ-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/271> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Calexc" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Calcium (Ca++) - exchangeable"@en ;
@@ -8910,8 +8993,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Ca/q+2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "271" ;
+                                                                           <http://dbpedia.org/property/inchikey> "BHPQYMZQTOCNFJ-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/271> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Calext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Calcium (Ca++) - extractable"@en ;
@@ -8920,8 +9009,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calfra
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calfra> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/CH2O3.Ca/c2-1(3)4;/h(H2,2,3,4);/q;+2/p-2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "10112" ;
+                                                                           <http://dbpedia.org/property/inchikey> "VTYYLEPIZMXCLO-UHFFFAOYSA-L" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/10112> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Calfra" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Calcium carbonate equivalent - fraction"@en ;
@@ -8930,8 +9025,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calsol
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calsol> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Ca/q+2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "271" ;
+                                                                           <http://dbpedia.org/property/inchikey> "BHPQYMZQTOCNFJ-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/271> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Calsol" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Calcium (Ca++) - soluble"@en ;
@@ -8940,8 +9041,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Caltot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Caltot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Ca/q+2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "271" ;
+                                                                           <http://dbpedia.org/property/inchikey> "BHPQYMZQTOCNFJ-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/271> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Caltot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Calcium (Ca++) - total"@en ;
@@ -8950,8 +9057,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Car
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Car> rdf:type owl:NamedIndividual ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                  <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://dbpedia.org/ontology/inchi> "1S/CH2O3/c2-1(3)4/h(H2,2,3,4)/p-2" ;
+                                                                        <http://dbpedia.org/ontology/pubchem> "19660" ;
+                                                                        <http://dbpedia.org/property/inchikey> "BVKZGUZCCUSVTD-UHFFFAOYSA-L" ;
+                                                                        rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/19660> ;
                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                         <http://www.w3.org/2004/02/skos/core#notation> "Car" ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Carbonate (CO3--) - soluble"@en ;
@@ -8960,8 +9073,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carful
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carful> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/C" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462310" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Carful" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Carbon - fulvic acid"@en ;
@@ -8970,8 +9089,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carhum
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carhum> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/C" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462310" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Carhum" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Carbon - humic acid"@en ;
@@ -8980,8 +9105,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carorg
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carorg> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/C" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462310" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Carorg" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Carbon (C) - organic"@en ;
@@ -8990,8 +9121,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carpyr
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carpyr> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/C" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462310" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Carpyr" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Carbon (C) - pyrophosphate extractable"@en ;
@@ -9000,8 +9137,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartoh
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartoh> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/C" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462310" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Cartoh" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Carbon - total humic"@en ;
@@ -9010,8 +9153,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/C" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462310" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Cartot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Carbon (C) - total"@en ;
@@ -9020,8 +9169,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Ccetot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Ccetot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/CH2O3.Ca/c2-1(3)4;/h(H2,2,3,4);/q;+2/p-2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "10112" ;
+                                                                           <http://dbpedia.org/property/inchikey> "VTYYLEPIZMXCLO-UHFFFAOYSA-L" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/10112> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Ccetot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Calcium carbonate equivalent - total"@en ;
@@ -9030,28 +9185,30 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Chl
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Chl> rdf:type owl:NamedIndividual ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                  <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://dbpedia.org/ontology/inchi> "1S/ClH/h1H/p-1" ;
+                                                                        <http://dbpedia.org/ontology/pubchem> "312" ;
+                                                                        <http://dbpedia.org/property/inchikey> "VEXZGXHMUGYJMC-UHFFFAOYSA-M" ;
+                                                                        rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/312> ;
                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                         <http://www.w3.org/2004/02/skos/core#notation> "Chl" ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Chloride (Cl-) - soluble"@en ;
                                                                         <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra
-<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra> rdf:type owl:NamedIndividual ,
-                                                                                    <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
-                                                                                    <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                           <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
-                                                                           <http://www.w3.org/2004/02/skos/core#notation> "CoaFra" ;
-                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse fragments"@en ;
-                                                                           <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
-
-
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Copext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Copext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Cu" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23978" ;
+                                                                           <http://dbpedia.org/property/inchikey> "RYGMFSIKBFXOCR-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23978> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Copext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Copper (Cu) - extractable"@en ;
@@ -9060,8 +9217,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Coptot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Coptot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Cu" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23978" ;
+                                                                           <http://dbpedia.org/property/inchikey> "RYGMFSIKBFXOCR-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23978> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Coptot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Copper (Cu) - total"@en ;
@@ -9070,8 +9233,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hyd
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hyd> rdf:type owl:NamedIndividual ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                  <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://dbpedia.org/ontology/inchi> "1S/CH2O3/c2-1(3)4/h(H2,2,3,4)/p-1" ;
+                                                                        <http://dbpedia.org/ontology/pubchem> "769" ;
+                                                                        <http://dbpedia.org/property/inchikey> "BVKZGUZCCUSVTD-UHFFFAOYSA-M" ;
+                                                                        rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/769> ;
                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                         <http://www.w3.org/2004/02/skos/core#notation> "Hyd" ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Hydrocarbonate (HCO3-) - soluble"@en ;
@@ -9080,8 +9249,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydexc
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydexc> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/p+1" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "1038" ;
+                                                                           <http://dbpedia.org/property/inchikey> "GPRLSGONYQIRFK-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/1038> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Hydexc" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Hydrogen (H+) - exchangeable"@en ;
@@ -9090,8 +9265,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irodit
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irodit> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Fe" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23925" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Irodit" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Iron (Fe) - dithionite extractable"@en ;
@@ -9100,8 +9281,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iroext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iroext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Fe" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23925" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Iroext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Iron (Fe) - extractable"@en ;
@@ -9110,8 +9297,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irooxa
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irooxa> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Fe" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23925" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Irooxa" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Iron (Fe) - oxalate extractable"@en ;
@@ -9120,8 +9313,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iropyr
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iropyr> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Fe" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23925" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Iropyr" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Iron (Fe) - pyrophosphate extractable"@en ;
@@ -9130,8 +9329,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irotot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irotot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Fe" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23925" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Irotot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Iron (Fe) - total"@en ;
@@ -9140,8 +9345,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magexc
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magexc> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mg/q+2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "888" ;
+                                                                           <http://dbpedia.org/property/inchikey> "JLVVSXFLKOJNIY-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/888> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Magexc" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Magnesium (Mg++) - exchangeable"@en ;
@@ -9150,8 +9361,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mg" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462224" ;
+                                                                           <http://dbpedia.org/property/inchikey> "FYYHWMGAXLPEAU-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462224> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Magext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Magnesium (Mg) - extractable"@en ;
@@ -9160,8 +9377,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magsol
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magsol> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mg/q+2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "888" ;
+                                                                           <http://dbpedia.org/property/inchikey> "JLVVSXFLKOJNIY-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/888> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Magsol" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Magnesium (Mg++) - soluble"@en ;
@@ -9170,8 +9393,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magtot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magtot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mg" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462224" ;
+                                                                           <http://dbpedia.org/property/inchikey> "FYYHWMGAXLPEAU-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462224> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Magtot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Magnesium (Mg) - total"@en ;
@@ -9180,8 +9409,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ManKCl
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ManKCl> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mn " ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23930" ;
+                                                                           <http://dbpedia.org/property/inchikey> "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "ManKCl" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Manganese (Mn) - KCl extractable"@en ;
@@ -9190,8 +9425,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mandit
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mandit> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mn " ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23930" ;
+                                                                           <http://dbpedia.org/property/inchikey> "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Mandit" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Manganese (Mn) - dithionite extractable"@en ;
@@ -9200,8 +9441,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mn " ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23930" ;
+                                                                           <http://dbpedia.org/property/inchikey> "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Manext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Manganese (Mn) - extractable"@en ;
@@ -9210,8 +9457,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manoxa
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manoxa> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mn " ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23930" ;
+                                                                           <http://dbpedia.org/property/inchikey> "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Manoxa" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Manganese (Mn) - oxalate extractable"@en ;
@@ -9220,8 +9473,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manpyr
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manpyr> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mn " ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23930" ;
+                                                                           <http://dbpedia.org/property/inchikey> "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Manpyr" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Manganese (Mn) - pyrophosphate extractable"@en ;
@@ -9230,8 +9489,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mantot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mantot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Mn " ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23930" ;
+                                                                           <http://dbpedia.org/property/inchikey> "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Mantot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Manganese (Mn) - total"@en ;
@@ -9240,8 +9505,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit2
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit2> rdf:type owl:NamedIndividual ,
+                                                                                  <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                  <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                   <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         <http://dbpedia.org/ontology/inchi> "1S/HNO2/c2-1-3/h(H,2,3)/p-1" ;
+                                                                         <http://dbpedia.org/ontology/pubchem> "946" ;
+                                                                         <http://dbpedia.org/property/inchikey> "IOVCWXUNBOPUCH-UHFFFAOYSA-M" ;
+                                                                         rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/946> ;
                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                          <http://www.w3.org/2004/02/skos/core#notation> "Nit2" ;
                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Nitrite (NO2-) - soluble"@en ;
@@ -9250,8 +9521,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit3
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit3> rdf:type owl:NamedIndividual ,
+                                                                                  <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                  <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                   <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         <http://dbpedia.org/ontology/inchi> "1S/NO3/c2-1(3)4/q-1" ;
+                                                                         <http://dbpedia.org/ontology/pubchem> "943" ;
+                                                                         <http://dbpedia.org/property/inchikey> "NHNBFGGVMKEFGY-UHFFFAOYSA-N" ;
+                                                                         rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/943> ;
                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                          <http://www.w3.org/2004/02/skos/core#notation> "Nit3" ;
                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Nitrate (NO3-) - soluble"@en ;
@@ -9260,8 +9537,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/N2/c1-2" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "947" ;
+                                                                           <http://dbpedia.org/property/inchikey> "IJGRMHOSHXDMSA-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/947> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Nittot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Nitrogen (N) - total"@en ;
@@ -9270,18 +9553,30 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pho
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pho> rdf:type owl:NamedIndividual ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                  <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://dbpedia.org/ontology/inchi> "1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-3" ;
+                                                                        <http://dbpedia.org/ontology/pubchem> "1061" ;
+                                                                        <http://dbpedia.org/property/inchikey> "NBIIXXVUZAFLBC-UHFFFAOYSA-K" ;
+                                                                        rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/1061> ;
                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                         <http://www.w3.org/2004/02/skos/core#notation> "Pho" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Phosphate (PO4--) - soluble"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Phosphate (PO4---) - soluble"@en ;
                                                                         <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/P" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462309" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OAICVXFJPJFONN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462309> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Phoext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Phosphorus (P) - extractable"@en ;
@@ -9290,8 +9585,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phooxa
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phooxa> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/P" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462309" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OAICVXFJPJFONN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462309> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Phooxa" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Phosphorus (P) - oxalate extractable"@en ;
@@ -9300,8 +9601,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoret
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoret> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/P" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462309" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OAICVXFJPJFONN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462309> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Phoret" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Phosphorus (P) - retention"@en ;
@@ -9310,8 +9617,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Photot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Photot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/P" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462309" ;
+                                                                           <http://dbpedia.org/property/inchikey> "OAICVXFJPJFONN-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462309> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Photot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Phosphorus (P) - total"@en ;
@@ -9320,8 +9633,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potexc
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potexc> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/K/q+1" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "813" ;
+                                                                           <http://dbpedia.org/property/inchikey> "NPYPAHLBTDXSSS-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/813> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Potexc" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Potassium (K+) - exchangeable"@en ;
@@ -9330,8 +9649,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/K" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462222" ;
+                                                                           <http://dbpedia.org/property/inchikey> "ZLMJMSJWJFRBEC-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462222> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Potext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Potassium (K) - extractable"@en ;
@@ -9340,8 +9665,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potsol
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potsol> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/K/q+1" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "813" ;
+                                                                           <http://dbpedia.org/property/inchikey> "NPYPAHLBTDXSSS-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/813> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Potsol" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Potassium (K+) - soluble"@en ;
@@ -9350,8 +9681,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pottot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pottot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/K" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5462222" ;
+                                                                           <http://dbpedia.org/property/inchikey> "ZLMJMSJWJFRBEC-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462222> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Pottot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Potassium (K) - total"@en ;
@@ -9360,8 +9697,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Selext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Selext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Se" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "6326970" ;
+                                                                           <http://dbpedia.org/property/inchikey> "BUGBHKTXTAQXES-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/6326970> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Selext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Selenium (Se) - extractable"@en ;
@@ -9370,8 +9713,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Seltot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Seltot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Se" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "6326970" ;
+                                                                           <http://dbpedia.org/property/inchikey> "BUGBHKTXTAQXES-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/6326970> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Seltot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Selenium (Se) - total"@en ;
@@ -9380,8 +9729,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Siloxa
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Siloxa> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Si" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5461123" ;
+                                                                           <http://dbpedia.org/property/inchikey> "XUIMIQQOPSSXEZ-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5461123> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Siloxa" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Silicon (Si) - oxalate extractable"@en ;
@@ -9390,28 +9745,46 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodexc
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodexc> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Na/q+1" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "923" ;
+                                                                           <http://dbpedia.org/property/inchikey> "FKNQFGJONOIPTF-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/923> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Sodexc" ;
-                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Sodium (Na+) - exchangeable"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Sodium (Na+) - exchangeable %"@en ;
                                                                            <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodexp
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodexp> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Na/q+1" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "923" ;
+                                                                           <http://dbpedia.org/property/inchikey> "FKNQFGJONOIPTF-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/923> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Sodexp" ;
-                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Sodium (Na+) - exchangeable %"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Sodium (Na+) - exchangeable"@en ;
                                                                            <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Na" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5360545" ;
+                                                                           <http://dbpedia.org/property/inchikey> "KEAYESYHFKHZAL-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5360545> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Sodext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Sodium (Na) - extractable"@en ;
@@ -9420,8 +9793,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodsol
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodsol> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Na/q+1" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "923" ;
+                                                                           <http://dbpedia.org/property/inchikey> "FKNQFGJONOIPTF-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/923> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Sodsol" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Sodium (Na+) - soluble"@en ;
@@ -9430,8 +9809,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodtot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodtot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Na" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5360545" ;
+                                                                           <http://dbpedia.org/property/inchikey> "KEAYESYHFKHZAL-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5360545> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Sodtot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Sodium (Na) - total"@en ;
@@ -9440,8 +9825,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sul
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sul> rdf:type owl:NamedIndividual ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                  <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://dbpedia.org/ontology/inchi> "1S/H2O4S/c1-5(2,3)4/h(H2,1,2,3,4)/p-2" ;
+                                                                        <http://dbpedia.org/ontology/pubchem> "1117" ;
+                                                                        <http://dbpedia.org/property/inchikey> "QAOWNCQODCNURD-UHFFFAOYSA-L" ;
+                                                                        rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/1117> ;
                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                         <http://www.w3.org/2004/02/skos/core#notation> "Sul" ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Sulfate (SO4--) - soluble"@en ;
@@ -9450,8 +9841,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sulext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sulext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/S" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5362487" ;
+                                                                           <http://dbpedia.org/property/inchikey> "NINIDFKCEFEMDL-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5362487> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Sulext" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Sulfur (S) - extractable"@en ;
@@ -9460,8 +9857,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sultot
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sultot> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/S" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "5362487" ;
+                                                                           <http://dbpedia.org/property/inchikey> "NINIDFKCEFEMDL-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5362487> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Sultot" ;
                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Sulfur (S) - total"@en ;
@@ -9500,21 +9903,33 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zin
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zin> rdf:type owl:NamedIndividual ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                 <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                  <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://dbpedia.org/ontology/inchi> "1S/Zn" ;
+                                                                        <http://dbpedia.org/ontology/pubchem> "23994" ;
+                                                                        <http://dbpedia.org/property/inchikey> "HCHKCACWOHOZIP-UHFFFAOYSA-N" ;
+                                                                        rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23994> ;
                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                         <http://www.w3.org/2004/02/skos/core#notation> "Zin" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Zinc (Zn)"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Zinc (Zn) - extractable"@en ;
                                                                         <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zinext
 <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zinext> rdf:type owl:NamedIndividual ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalCompound> ,
+                                                                                    <http://dbpedia.org/ontology/ChemicalSubstance> ,
                                                                                     <http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode> ,
                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                           <http://dbpedia.org/ontology/inchi> "1S/Zn" ;
+                                                                           <http://dbpedia.org/ontology/pubchem> "23994" ;
+                                                                           <http://dbpedia.org/property/inchikey> "HCHKCACWOHOZIP-UHFFFAOYSA-N" ;
+                                                                           rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23994> ;
                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> ;
                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Zinext" ;
-                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Zinc (Zn) - extractable"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Zinc (Zn)"@en ;
                                                                            <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode> .
 
 
@@ -11300,94 +11715,14 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for slopeGradientClassValue - codelist scheme"@en .
 
 
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-01
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-01> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "01" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Flat"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-02
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-02> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "02" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Level"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-03
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-03> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "03" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Nearly level"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-04
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-04> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "04" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very gently sloping "@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-05
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-05> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "05" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Gently sloping"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-06
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-06> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "06" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Sloping"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-07
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-07> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "07" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Strongly sloping"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-08
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-08> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "08" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderately steep"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-09
-<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-09> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "09" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Steep"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-1
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-1> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "1" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Flat"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-10
@@ -11398,6 +11733,86 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                         <http://www.w3.org/2004/02/skos/core#notation> "10" ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Very steep"@en ;
                                                                         <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-2
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-2> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "2" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Level"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-3
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-3> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "3" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Nearly level"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-4
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-4> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "4" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Very gently sloping "@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-5
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-5> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "5" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Gently sloping"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-6
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-6> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "6" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Sloping"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-7
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-7> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "7" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Strongly sloping"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-8
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-8> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "8" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Moderately steep"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
+
+
+###  http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-9
+<http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-9> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "9" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Steep"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode> .
 
 
 ###  http://w3id.org/glosis/model/codelists/slopePathwaysValueCode
@@ -11884,7 +12299,6 @@ _:genid5 rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
                                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                                         rdfs:label "Code list for textureUnconsolidatedValue - codelist scheme"@en ;
                                                                         rdfs:seeAlso <http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#definition> "table is missing" ;
                                                                         <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for textureUnconsolidated."@en ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for textureUnconsolidatedValue - codelist scheme"@en .
 
