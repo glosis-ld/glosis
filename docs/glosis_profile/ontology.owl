@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/glosis/model/profile#"
+     xml:base="http://w3id.org/glosis/model/profile"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:schema1="https://schema.org/"
+     xmlns:ontology="http://dbpedia.org/ontology/"
+     xmlns:property="http://dbpedia.org/property/">
+    <owl:Ontology rdf:about="http://w3id.org/glosis/model/profile">
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/profile/1.3.1"/>
+        <owl:imports rdf:resource="http://w3id.org/glosis/model/codelists/"/>
+        <owl:imports rdf:resource="http://w3id.org/glosis/model/common/"/>
+        <owl:imports rdf:resource="http://w3id.org/glosis/model/iso28258/2013/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1hgdl6a4ix995"/>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:creator rdf:nodeID="genid3"/>
+        <terms:description xml:lang="en">GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:description>
+        <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/</terms:rights>
+        <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
+        <terms:title xml:lang="en">GlOSIS Ontology: Profile module</terms:title>
+        <rdfs:comment xml:lang="en">This module contains the classes and properties to describe a soil profile, which is a describable representation of the soil that is characterised by a vertical succession of horizons or at least one or several parent materials layers. Soil profile is an ordered set of soil horizons and/or layers.</rdfs:comment>
+        <owl:versionInfo>1.3.1</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <foaf:name>Bogusz Janiak</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/InfiltrationRateClass -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/InfiltrationRateClass">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/InfiltrationRateNumeric -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/InfiltrationRateNumeric">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepth -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/SoilDepth">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepthBedrock -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/SoilDepthBedrock">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepthRootable -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/SoilDepthRootable">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepthRootableClass -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/SoilDepthRootableClass">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/glosis/model/common/SoilDepthSampled -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/common/SoilDepthSampled">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://w3id.org/glosis/model/profile/GL_Profile -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/profile/GL_Profile">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/iso28258/2013/Profile"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">GL_Profile</rdfs:label>
+        <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/profile/ProfileDescriptionStatus -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/profile/ProfileDescriptionStatus">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/ProfileDescriptionStatusValueCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">ProfileDescriptionStatus</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 1</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/profile/SoilClassification -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/profile/SoilClassification">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/profile/GL_Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/profile/soilTypeProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">SoilClassification</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/profile/SoilClassificationFAO -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/profile/SoilClassificationFAO">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/profile/SoilClassification"/>
+        <rdfs:label xml:lang="en">SoilClassificationFAO</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/profile/SoilClassificationUSDA -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/profile/SoilClassificationUSDA">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/profile/SoilClassification"/>
+        <rdfs:label xml:lang="en">SoilClassificationUSDA</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/profile/SoilClassificationWRB -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/profile/SoilClassificationWRB">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/profile/SoilClassification"/>
+        <rdfs:label xml:lang="en">SoilClassificationWRB</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">profileDescriptionStatusProperty</rdfs:label>
+        <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 1</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/profile/soilTypeProperty -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/profile/soilTypeProperty">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:label xml:lang="en">soilTypeProperty</rdfs:label>
+        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
