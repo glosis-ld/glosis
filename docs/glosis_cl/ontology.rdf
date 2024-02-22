@@ -9,11 +9,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="https://schema.org/">
+     xmlns:schema="https://schema.org/"
+     xmlns:ontology="http://dbpedia.org/ontology/"
+     xmlns:property="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/codelists">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/codelists/v1.2.1"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1h8m0nvh8x3"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1h8m0nvh8x5"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/codelists/1.3.1"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1hn8jq1lvx3"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1hn8jq1lvx5"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -22,7 +24,7 @@
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GLOSIS code lists</terms:title>
         <rdfs:comment xml:lang="en">This module contains all the code lists of observable properties and results codes.</rdfs:comment>
-        <owl:versionInfo>v1.2.1</owl:versionInfo>
+        <owl:versionInfo>1.3.1</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
@@ -62,6 +64,27 @@
      -->
 
 
+    
+
+
+    <!-- http://dbpedia.org/ontology/inchi -->
+
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/ontology/inchi"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/pubchem -->
+
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/ontology/pubchem"/>
+    
+
+
+    <!-- http://dbpedia.org/property/inchikey -->
+
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/property/inchikey"/>
     
 
 
@@ -179,6 +202,20 @@
      -->
 
 
+    
+
+
+    <!-- http://dbpedia.org/ontology/ChemicalCompound -->
+
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/ChemicalCompound"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/ChemicalSubstance -->
+
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/ChemicalSubstance"/>
     
 
 
@@ -1049,7 +1086,6 @@
         <rdfs:comment xml:lang="en">This code list provides the FloodDurationValue.</rdfs:comment>
         <rdfs:label xml:lang="en">Code list for FloodDurationValue - codelist class</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/floodDurationValueCode"/>
-        <skos:definition>Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
     </owl:Class>
     
 
@@ -1062,7 +1098,6 @@
         <rdfs:comment xml:lang="en">This code list provides the FloodFrequencyValue.</rdfs:comment>
         <rdfs:label xml:lang="en">Code list for FloodFrequencyValue - codelist class</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/floodFrequencyValueCode"/>
-        <skos:definition>Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
     </owl:Class>
     
 
@@ -1757,7 +1792,6 @@
         <rdfs:comment xml:lang="en">This code list provides the OrganicMatterClassValue.</rdfs:comment>
         <rdfs:label xml:lang="en">Code list for OrganicMatterClassValue - codelist class</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/organicMatterClassValueCode"/>
-        <skos:definition>table is missing!</skos:definition>
     </owl:Class>
     
 
@@ -1847,6 +1881,7 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluoxa"/>
@@ -1858,8 +1893,13 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bassum"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Borext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bortot"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bro"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brod"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDwhole"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CaN"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calfra"/>
@@ -1868,16 +1908,20 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Car"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carful"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carhum"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carorg"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carpyr"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartoh"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartot"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Ccetot"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Chl"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Copext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Coptot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hyd"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irodit"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iroext"/>
@@ -1894,14 +1938,17 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manoxa"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manpyr"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mantot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit2"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit3"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pho"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phooxa"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoret"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Photot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potsol"/>
@@ -1914,6 +1961,7 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodsol"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodtot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sul"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sulext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sultot"/>
@@ -1931,6 +1979,7 @@
         <rdfs:comment xml:lang="en">This code list provides the PhysioChemicalProperty.</rdfs:comment>
         <rdfs:label xml:lang="en">Code list for PhysioChemicalProperty - codelist class</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:definition>ISRIC Report 2014/01: Africa Soil Profiles Database Version 1.2. Annex 3a</skos:definition>
         <skos:definition>ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
     </owl:Class>
     
@@ -2471,16 +2520,16 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-01"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-02"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-03"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-04"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-05"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-06"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-07"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-08"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-09"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-1"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-10"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-2"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-3"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-4"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-5"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-6"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-7"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-8"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-9"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -2636,7 +2685,6 @@
         <rdfs:comment xml:lang="en">This code list provides the TextureUnconsolidatedValue.</rdfs:comment>
         <rdfs:label xml:lang="en">Code list for TextureUnconsolidatedValue - codelist class</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/textureUnconsolidatedValueCode"/>
-        <skos:definition>table is missing</skos:definition>
     </owl:Class>
     
 
@@ -6942,7 +6990,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">Code list for floodDurationValue - codelist scheme</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/FloodDurationValueCode"/>
-        <skos:definition>Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
         <skos:note xml:lang="en">This code list provides analysis procedures for floodDuration.</skos:note>
         <skos:prefLabel xml:lang="en">Code list for floodDurationValue - codelist scheme</skos:prefLabel>
     </owl:NamedIndividual>
@@ -6956,7 +7003,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">Code list for floodFrequencyValue - codelist scheme</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode"/>
-        <skos:definition>Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
         <skos:note xml:lang="en">This code list provides analysis procedures for floodFrequency.</skos:note>
         <skos:prefLabel xml:lang="en">Code list for floodFrequencyValue - codelist scheme</skos:prefLabel>
     </owl:NamedIndividual>
@@ -11662,7 +11708,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">Code list for organicMatterClassValue - codelist scheme</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode"/>
-        <skos:definition>table is missing!</skos:definition>
         <skos:note xml:lang="en">This code list provides analysis procedures for organicMatterClass.</skos:note>
         <skos:prefLabel xml:lang="en">Code list for organicMatterClassValue - codelist scheme</skos:prefLabel>
     </owl:NamedIndividual>
@@ -11976,6 +12021,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">Code list for physioChemicalProperty - codelist scheme</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <skos:definition>ISRIC Report 2014/01: Africa Soil Profiles Database Version 1.2. Annex 3a</skos:definition>
         <skos:definition>ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
         <skos:note xml:lang="en">This code list provides analysis procedures for physioChemical.</skos:note>
         <skos:prefLabel xml:lang="en">Code list for physioChemicalProperty - codelist scheme</skos:prefLabel>
@@ -12015,10 +12061,30 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>259</ontology:pubchem>
+        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Alu</skos:notation>
+        <skos:prefLabel xml:lang="en">Aluminium (Al)</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-        <skos:notation>Alu</skos:notation>
+        <skos:notation>AluFe</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) + 0.5 Fe oxalate</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
@@ -12029,8 +12095,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>259</ontology:pubchem>
+        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aludit</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - dithionite extractable</skos:prefLabel>
@@ -12043,8 +12115,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al/q+3</ontology:inchi>
+        <ontology:pubchem>104727</ontology:pubchem>
+        <property:inchikey>REDXJYDRNCIFBQ-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/104727"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aluexc</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al+++) - exchangeable</skos:prefLabel>
@@ -12057,8 +12135,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluoxa">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>259</ontology:pubchem>
+        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aluoxa</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - oxalate extractable</skos:prefLabel>
@@ -12071,8 +12155,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alupyr">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>259</ontology:pubchem>
+        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Alupyr</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - pyrophosphate extractable</skos:prefLabel>
@@ -12085,8 +12175,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al/q+3</ontology:inchi>
+        <ontology:pubchem>104727</ontology:pubchem>
+        <property:inchikey>REDXJYDRNCIFBQ-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/104727"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Alusat</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al+++) - saturation  (ESP)</skos:prefLabel>
@@ -12155,8 +12251,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Borext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/B</ontology:inchi>
+        <ontology:pubchem>5462311</ontology:pubchem>
+        <property:inchikey>ZOXJGFHDIHLPTG-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462311"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Borext</skos:notation>
         <skos:prefLabel xml:lang="en">Boron (B) - extractable</skos:prefLabel>
@@ -12169,8 +12271,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bortot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/B</ontology:inchi>
+        <ontology:pubchem>5462311</ontology:pubchem>
+        <property:inchikey>ZOXJGFHDIHLPTG-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462311"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Bortot</skos:notation>
         <skos:prefLabel xml:lang="en">Boron (B) - total</skos:prefLabel>
@@ -12179,15 +12287,83 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bro -->
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brod -->
 
 
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bro">
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brod">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/BrH/h1H/p-1</ontology:inchi>
+        <ontology:pubchem>259</ontology:pubchem>
+        <property:inchikey>CPELXLSAUQHCOX-UHFFFAOYSA-M</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Brod</skos:notation>
+        <skos:prefLabel xml:lang="en">Bromide (Br-) - extractable</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brot -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/BrHO2/c2-1-3/h(H,2,3)/p-1</ontology:inchi>
+        <ontology:pubchem>5460628</ontology:pubchem>
+        <property:inchikey>DKSMCEUSSQTGBK-UHFFFAOYSA-M</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5460628"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Brot</skos:notation>
+        <skos:prefLabel xml:lang="en">Bromite (BrO2-)</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-        <skos:notation>Bro</skos:notation>
-        <skos:prefLabel xml:lang="en">Bromite (Br-) - extractable</skos:prefLabel>
+        <skos:notation>BulDfine</skos:notation>
+        <skos:prefLabel xml:lang="en">Bulk Density of the fine earth fraction</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDwhole -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDwhole">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>BulDwhole</skos:notation>
+        <skos:prefLabel xml:lang="en">Bulk Density of the whole soil</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>CEC</skos:notation>
+        <skos:prefLabel xml:lang="en">Cation exchange capacity (CEC)</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12207,12 +12383,38 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Cd</ontology:inchi>
+        <ontology:pubchem>23973</ontology:pubchem>
+        <property:inchikey>BDOSMKKIYDKNTQ-UHFFFAOYSA-N  </property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23973"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Cad</skos:notation>
+        <skos:prefLabel xml:lang="en">Cadmium (Cd)</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calexc -->
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calexc">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Ca/q+2</ontology:inchi>
+        <ontology:pubchem>271</ontology:pubchem>
+        <property:inchikey>BHPQYMZQTOCNFJ-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/271"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Calexc</skos:notation>
         <skos:prefLabel xml:lang="en">Calcium (Ca++) - exchangeable</skos:prefLabel>
@@ -12225,8 +12427,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Ca/q+2</ontology:inchi>
+        <ontology:pubchem>271</ontology:pubchem>
+        <property:inchikey>BHPQYMZQTOCNFJ-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/271"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Calext</skos:notation>
         <skos:prefLabel xml:lang="en">Calcium (Ca++) - extractable</skos:prefLabel>
@@ -12239,8 +12447,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calfra">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/CH2O3.Ca/c2-1(3)4;/h(H2,2,3,4);/q;+2/p-2</ontology:inchi>
+        <ontology:pubchem>10112</ontology:pubchem>
+        <property:inchikey>VTYYLEPIZMXCLO-UHFFFAOYSA-L</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/10112"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Calfra</skos:notation>
         <skos:prefLabel xml:lang="en">Calcium carbonate equivalent - fraction</skos:prefLabel>
@@ -12253,8 +12467,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calsol">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Ca/q+2</ontology:inchi>
+        <ontology:pubchem>271</ontology:pubchem>
+        <property:inchikey>BHPQYMZQTOCNFJ-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/271"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Calsol</skos:notation>
         <skos:prefLabel xml:lang="en">Calcium (Ca++) - soluble</skos:prefLabel>
@@ -12267,8 +12487,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Caltot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Ca/q+2</ontology:inchi>
+        <ontology:pubchem>271</ontology:pubchem>
+        <property:inchikey>BHPQYMZQTOCNFJ-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/271"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Caltot</skos:notation>
         <skos:prefLabel xml:lang="en">Calcium (Ca++) - total</skos:prefLabel>
@@ -12281,8 +12507,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Car">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/CH2O3/c2-1(3)4/h(H2,2,3,4)/p-2</ontology:inchi>
+        <ontology:pubchem>19660</ontology:pubchem>
+        <property:inchikey>BVKZGUZCCUSVTD-UHFFFAOYSA-L</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/19660"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Car</skos:notation>
         <skos:prefLabel xml:lang="en">Carbonate (CO3--) - soluble</skos:prefLabel>
@@ -12295,11 +12527,17 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carful">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/C</ontology:inchi>
+        <ontology:pubchem>5462310</ontology:pubchem>
+        <property:inchikey>OKTJSMMVPCPJKN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Carful</skos:notation>
-        <skos:prefLabel xml:lang="en">Carbon - fulvic acid</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carbon (C) - fulvic acid</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12309,11 +12547,37 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carhum">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/C</ontology:inchi>
+        <ontology:pubchem>5462310</ontology:pubchem>
+        <property:inchikey>OKTJSMMVPCPJKN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Carhum</skos:notation>
-        <skos:prefLabel xml:lang="en">Carbon - humic acid</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carbon (C) - humic acid</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/C</ontology:inchi>
+        <ontology:pubchem>5462310</ontology:pubchem>
+        <property:inchikey>OKTJSMMVPCPJKN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Carinorg</skos:notation>
+        <skos:prefLabel xml:lang="en">Carbon (C) - inorganic</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12323,8 +12587,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carorg">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/C</ontology:inchi>
+        <ontology:pubchem>5462310</ontology:pubchem>
+        <property:inchikey>OKTJSMMVPCPJKN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Carorg</skos:notation>
         <skos:prefLabel xml:lang="en">Carbon (C) - organic</skos:prefLabel>
@@ -12337,8 +12607,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carpyr">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/C</ontology:inchi>
+        <ontology:pubchem>5462310</ontology:pubchem>
+        <property:inchikey>OKTJSMMVPCPJKN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Carpyr</skos:notation>
         <skos:prefLabel xml:lang="en">Carbon (C) - pyrophosphate extractable</skos:prefLabel>
@@ -12351,11 +12627,17 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartoh">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/C</ontology:inchi>
+        <ontology:pubchem>5462310</ontology:pubchem>
+        <property:inchikey>OKTJSMMVPCPJKN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Cartoh</skos:notation>
-        <skos:prefLabel xml:lang="en">Carbon - total humic</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carbon (C) - total humic</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12365,8 +12647,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/C</ontology:inchi>
+        <ontology:pubchem>5462310</ontology:pubchem>
+        <property:inchikey>OKTJSMMVPCPJKN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Cartot</skos:notation>
         <skos:prefLabel xml:lang="en">Carbon (C) - total</skos:prefLabel>
@@ -12379,8 +12667,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Ccetot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/CH2O3.Ca/c2-1(3)4;/h(H2,2,3,4);/q;+2/p-2</ontology:inchi>
+        <ontology:pubchem>10112</ontology:pubchem>
+        <property:inchikey>VTYYLEPIZMXCLO-UHFFFAOYSA-L</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/10112"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Ccetot</skos:notation>
         <skos:prefLabel xml:lang="en">Calcium carbonate equivalent - total</skos:prefLabel>
@@ -12393,25 +12687,17 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Chl">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/ClH/h1H/p-1</ontology:inchi>
+        <ontology:pubchem>312</ontology:pubchem>
+        <property:inchikey>VEXZGXHMUGYJMC-UHFFFAOYSA-M</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/312"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Chl</skos:notation>
         <skos:prefLabel xml:lang="en">Chloride (Cl-) - soluble</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-        <skos:notation>CoaFra</skos:notation>
-        <skos:prefLabel xml:lang="en">Coarse fragments</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12421,8 +12707,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Copext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Cu</ontology:inchi>
+        <ontology:pubchem>23978</ontology:pubchem>
+        <property:inchikey>RYGMFSIKBFXOCR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23978"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Copext</skos:notation>
         <skos:prefLabel xml:lang="en">Copper (Cu) - extractable</skos:prefLabel>
@@ -12435,11 +12727,63 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Coptot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Cu</ontology:inchi>
+        <ontology:pubchem>23978</ontology:pubchem>
+        <property:inchikey>RYGMFSIKBFXOCR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23978"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Coptot</skos:notation>
         <skos:prefLabel xml:lang="en">Copper (Cu) - total</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>ECEC</skos:notation>
+        <skos:prefLabel xml:lang="en">Cation exchange capacity effective (ECEC)</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Eleccond</skos:notation>
+        <skos:prefLabel xml:lang="en">Electrical conductivity</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:pubchem>24497</ontology:pubchem>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/24497"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Gyp</skos:notation>
+        <skos:prefLabel xml:lang="en">Gypsum content - weight</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12449,11 +12793,31 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hyd">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/CH2O3/c2-1(3)4/h(H2,2,3,4)/p-1</ontology:inchi>
+        <ontology:pubchem>769</ontology:pubchem>
+        <property:inchikey>BVKZGUZCCUSVTD-UHFFFAOYSA-M</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/769"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Hyd</skos:notation>
         <skos:prefLabel xml:lang="en">Hydrocarbonate (HCO3-) - soluble</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Hydcond</skos:notation>
+        <skos:prefLabel xml:lang="en">Hydraulic conductivity</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12463,8 +12827,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydexc">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/p+1</ontology:inchi>
+        <ontology:pubchem>1038</ontology:pubchem>
+        <property:inchikey>GPRLSGONYQIRFK-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/1038"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Hydexc</skos:notation>
         <skos:prefLabel xml:lang="en">Hydrogen (H+) - exchangeable</skos:prefLabel>
@@ -12477,8 +12847,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irodit">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Fe</ontology:inchi>
+        <ontology:pubchem>23925</ontology:pubchem>
+        <property:inchikey>XEEYBQQBJWHFJM-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23925"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Irodit</skos:notation>
         <skos:prefLabel xml:lang="en">Iron (Fe) - dithionite extractable</skos:prefLabel>
@@ -12491,8 +12867,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iroext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Fe</ontology:inchi>
+        <ontology:pubchem>23925</ontology:pubchem>
+        <property:inchikey>XEEYBQQBJWHFJM-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23925"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Iroext</skos:notation>
         <skos:prefLabel xml:lang="en">Iron (Fe) - extractable</skos:prefLabel>
@@ -12505,8 +12887,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irooxa">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Fe</ontology:inchi>
+        <ontology:pubchem>23925</ontology:pubchem>
+        <property:inchikey>XEEYBQQBJWHFJM-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23925"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Irooxa</skos:notation>
         <skos:prefLabel xml:lang="en">Iron (Fe) - oxalate extractable</skos:prefLabel>
@@ -12519,8 +12907,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iropyr">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Fe</ontology:inchi>
+        <ontology:pubchem>23925</ontology:pubchem>
+        <property:inchikey>XEEYBQQBJWHFJM-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23925"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Iropyr</skos:notation>
         <skos:prefLabel xml:lang="en">Iron (Fe) - pyrophosphate extractable</skos:prefLabel>
@@ -12533,8 +12927,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irotot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Fe</ontology:inchi>
+        <ontology:pubchem>23925</ontology:pubchem>
+        <property:inchikey>XEEYBQQBJWHFJM-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23925"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Irotot</skos:notation>
         <skos:prefLabel xml:lang="en">Iron (Fe) - total</skos:prefLabel>
@@ -12547,8 +12947,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magexc">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mg/q+2</ontology:inchi>
+        <ontology:pubchem>888</ontology:pubchem>
+        <property:inchikey>JLVVSXFLKOJNIY-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/888"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Magexc</skos:notation>
         <skos:prefLabel xml:lang="en">Magnesium (Mg++) - exchangeable</skos:prefLabel>
@@ -12561,8 +12967,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mg</ontology:inchi>
+        <ontology:pubchem>5462224</ontology:pubchem>
+        <property:inchikey>FYYHWMGAXLPEAU-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462224"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Magext</skos:notation>
         <skos:prefLabel xml:lang="en">Magnesium (Mg) - extractable</skos:prefLabel>
@@ -12575,8 +12987,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magsol">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mg/q+2</ontology:inchi>
+        <ontology:pubchem>888</ontology:pubchem>
+        <property:inchikey>JLVVSXFLKOJNIY-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/888"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Magsol</skos:notation>
         <skos:prefLabel xml:lang="en">Magnesium (Mg++) - soluble</skos:prefLabel>
@@ -12589,8 +13007,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magtot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mg</ontology:inchi>
+        <ontology:pubchem>5462224</ontology:pubchem>
+        <property:inchikey>FYYHWMGAXLPEAU-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462224"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Magtot</skos:notation>
         <skos:prefLabel xml:lang="en">Magnesium (Mg) - total</skos:prefLabel>
@@ -12603,8 +13027,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ManKCl">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mn </ontology:inchi>
+        <ontology:pubchem>23930</ontology:pubchem>
+        <property:inchikey>PWHULOQIROXLJO-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23930"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>ManKCl</skos:notation>
         <skos:prefLabel xml:lang="en">Manganese (Mn) - KCl extractable</skos:prefLabel>
@@ -12617,8 +13047,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mandit">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mn </ontology:inchi>
+        <ontology:pubchem>23930</ontology:pubchem>
+        <property:inchikey>PWHULOQIROXLJO-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23930"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Mandit</skos:notation>
         <skos:prefLabel xml:lang="en">Manganese (Mn) - dithionite extractable</skos:prefLabel>
@@ -12631,8 +13067,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mn </ontology:inchi>
+        <ontology:pubchem>23930</ontology:pubchem>
+        <property:inchikey>PWHULOQIROXLJO-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23930"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Manext</skos:notation>
         <skos:prefLabel xml:lang="en">Manganese (Mn) - extractable</skos:prefLabel>
@@ -12645,8 +13087,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manoxa">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mn </ontology:inchi>
+        <ontology:pubchem>23930</ontology:pubchem>
+        <property:inchikey>PWHULOQIROXLJO-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23930"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Manoxa</skos:notation>
         <skos:prefLabel xml:lang="en">Manganese (Mn) - oxalate extractable</skos:prefLabel>
@@ -12659,8 +13107,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manpyr">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mn </ontology:inchi>
+        <ontology:pubchem>23930</ontology:pubchem>
+        <property:inchikey>PWHULOQIROXLJO-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23930"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Manpyr</skos:notation>
         <skos:prefLabel xml:lang="en">Manganese (Mn) - pyrophosphate extractable</skos:prefLabel>
@@ -12673,11 +13127,35 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mantot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Mn </ontology:inchi>
+        <ontology:pubchem>23930</ontology:pubchem>
+        <property:inchikey>PWHULOQIROXLJO-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23930"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Mantot</skos:notation>
         <skos:prefLabel xml:lang="en">Manganese (Mn) - total</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:pubchem>23932</ontology:pubchem>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23932"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Mol</skos:notation>
+        <skos:prefLabel xml:lang="en">Molybdenum</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12687,8 +13165,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit2">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/HNO2/c2-1-3/h(H,2,3)/p-1</ontology:inchi>
+        <ontology:pubchem>946</ontology:pubchem>
+        <property:inchikey>IOVCWXUNBOPUCH-UHFFFAOYSA-M</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/946"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Nit2</skos:notation>
         <skos:prefLabel xml:lang="en">Nitrite (NO2-) - soluble</skos:prefLabel>
@@ -12701,8 +13185,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit3">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/NO3/c2-1(3)4/q-1</ontology:inchi>
+        <ontology:pubchem>943</ontology:pubchem>
+        <property:inchikey>NHNBFGGVMKEFGY-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/943"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Nit3</skos:notation>
         <skos:prefLabel xml:lang="en">Nitrate (NO3-) - soluble</skos:prefLabel>
@@ -12715,11 +13205,31 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/N2/c1-2</ontology:inchi>
+        <ontology:pubchem>947</ontology:pubchem>
+        <property:inchikey>IJGRMHOSHXDMSA-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/947"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Nittot</skos:notation>
         <skos:prefLabel xml:lang="en">Nitrogen (N) - total</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Orgmat</skos:notation>
+        <skos:prefLabel xml:lang="en">Organic matter</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12729,11 +13239,17 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pho">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-3</ontology:inchi>
+        <ontology:pubchem>1061</ontology:pubchem>
+        <property:inchikey>NBIIXXVUZAFLBC-UHFFFAOYSA-K</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/1061"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Pho</skos:notation>
-        <skos:prefLabel xml:lang="en">Phosphate (PO4--) - soluble</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Phosphate (PO4---) - soluble</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12743,8 +13259,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/P</ontology:inchi>
+        <ontology:pubchem>5462309</ontology:pubchem>
+        <property:inchikey>OAICVXFJPJFONN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462309"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Phoext</skos:notation>
         <skos:prefLabel xml:lang="en">Phosphorus (P) - extractable</skos:prefLabel>
@@ -12757,8 +13279,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phooxa">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/P</ontology:inchi>
+        <ontology:pubchem>5462309</ontology:pubchem>
+        <property:inchikey>OAICVXFJPJFONN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462309"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Phooxa</skos:notation>
         <skos:prefLabel xml:lang="en">Phosphorus (P) - oxalate extractable</skos:prefLabel>
@@ -12771,8 +13299,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoret">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/P</ontology:inchi>
+        <ontology:pubchem>5462309</ontology:pubchem>
+        <property:inchikey>OAICVXFJPJFONN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462309"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Phoret</skos:notation>
         <skos:prefLabel xml:lang="en">Phosphorus (P) - retention</skos:prefLabel>
@@ -12785,11 +13319,31 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Photot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/P</ontology:inchi>
+        <ontology:pubchem>5462309</ontology:pubchem>
+        <property:inchikey>OAICVXFJPJFONN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462309"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Photot</skos:notation>
         <skos:prefLabel xml:lang="en">Phosphorus (P) - total</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Por</skos:notation>
+        <skos:prefLabel xml:lang="en">Porosity</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12799,8 +13353,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potexc">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/K/q+1</ontology:inchi>
+        <ontology:pubchem>813</ontology:pubchem>
+        <property:inchikey>NPYPAHLBTDXSSS-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/813"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Potexc</skos:notation>
         <skos:prefLabel xml:lang="en">Potassium (K+) - exchangeable</skos:prefLabel>
@@ -12813,8 +13373,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/K</ontology:inchi>
+        <ontology:pubchem>5462222</ontology:pubchem>
+        <property:inchikey>ZLMJMSJWJFRBEC-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462222"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Potext</skos:notation>
         <skos:prefLabel xml:lang="en">Potassium (K) - extractable</skos:prefLabel>
@@ -12827,8 +13393,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potsol">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/K/q+1</ontology:inchi>
+        <ontology:pubchem>813</ontology:pubchem>
+        <property:inchikey>NPYPAHLBTDXSSS-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/813"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Potsol</skos:notation>
         <skos:prefLabel xml:lang="en">Potassium (K+) - soluble</skos:prefLabel>
@@ -12841,8 +13413,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pottot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/K</ontology:inchi>
+        <ontology:pubchem>5462222</ontology:pubchem>
+        <property:inchikey>ZLMJMSJWJFRBEC-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462222"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Pottot</skos:notation>
         <skos:prefLabel xml:lang="en">Potassium (K) - total</skos:prefLabel>
@@ -12855,8 +13433,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Selext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Se</ontology:inchi>
+        <ontology:pubchem>6326970</ontology:pubchem>
+        <property:inchikey>BUGBHKTXTAQXES-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/6326970"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Selext</skos:notation>
         <skos:prefLabel xml:lang="en">Selenium (Se) - extractable</skos:prefLabel>
@@ -12869,8 +13453,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Seltot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Se</ontology:inchi>
+        <ontology:pubchem>6326970</ontology:pubchem>
+        <property:inchikey>BUGBHKTXTAQXES-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/6326970"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Seltot</skos:notation>
         <skos:prefLabel xml:lang="en">Selenium (Se) - total</skos:prefLabel>
@@ -12883,8 +13473,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Siloxa">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Si</ontology:inchi>
+        <ontology:pubchem>5461123</ontology:pubchem>
+        <property:inchikey>XUIMIQQOPSSXEZ-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5461123"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Siloxa</skos:notation>
         <skos:prefLabel xml:lang="en">Silicon (Si) - oxalate extractable</skos:prefLabel>
@@ -12897,11 +13493,17 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodexc">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Na/q+1</ontology:inchi>
+        <ontology:pubchem>923</ontology:pubchem>
+        <property:inchikey>FKNQFGJONOIPTF-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/923"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Sodexc</skos:notation>
-        <skos:prefLabel xml:lang="en">Sodium (Na+) - exchangeable</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Sodium (Na+) - exchangeable %</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12911,11 +13513,17 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodexp">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Na/q+1</ontology:inchi>
+        <ontology:pubchem>923</ontology:pubchem>
+        <property:inchikey>FKNQFGJONOIPTF-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/923"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Sodexp</skos:notation>
-        <skos:prefLabel xml:lang="en">Sodium (Na+) - exchangeable %</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Sodium (Na+) - exchangeable</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12925,8 +13533,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Na</ontology:inchi>
+        <ontology:pubchem>5360545</ontology:pubchem>
+        <property:inchikey>KEAYESYHFKHZAL-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5360545"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Sodext</skos:notation>
         <skos:prefLabel xml:lang="en">Sodium (Na) - extractable</skos:prefLabel>
@@ -12939,8 +13553,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodsol">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Na/q+1</ontology:inchi>
+        <ontology:pubchem>923</ontology:pubchem>
+        <property:inchikey>FKNQFGJONOIPTF-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/923"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Sodsol</skos:notation>
         <skos:prefLabel xml:lang="en">Sodium (Na+) - soluble</skos:prefLabel>
@@ -12953,11 +13573,31 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodtot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Na</ontology:inchi>
+        <ontology:pubchem>5360545</ontology:pubchem>
+        <property:inchikey>KEAYESYHFKHZAL-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5360545"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Sodtot</skos:notation>
         <skos:prefLabel xml:lang="en">Sodium (Na) - total</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Solsal</skos:notation>
+        <skos:prefLabel xml:lang="en">Soluble salts</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12967,8 +13607,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sul">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/H2O4S/c1-5(2,3)4/h(H2,1,2,3,4)/p-2</ontology:inchi>
+        <ontology:pubchem>1117</ontology:pubchem>
+        <property:inchikey>QAOWNCQODCNURD-UHFFFAOYSA-L</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/1117"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Sul</skos:notation>
         <skos:prefLabel xml:lang="en">Sulfate (SO4--) - soluble</skos:prefLabel>
@@ -12981,8 +13627,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sulext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/S</ontology:inchi>
+        <ontology:pubchem>5362487</ontology:pubchem>
+        <property:inchikey>NINIDFKCEFEMDL-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5362487"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Sulext</skos:notation>
         <skos:prefLabel xml:lang="en">Sulfur (S) - extractable</skos:prefLabel>
@@ -12995,8 +13647,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sultot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/S</ontology:inchi>
+        <ontology:pubchem>5362487</ontology:pubchem>
+        <property:inchikey>NINIDFKCEFEMDL-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5362487"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Sultot</skos:notation>
         <skos:prefLabel xml:lang="en">Sulfur (S) - total</skos:prefLabel>
@@ -13051,8 +13709,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zin">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Zn</ontology:inchi>
+        <ontology:pubchem>23994</ontology:pubchem>
+        <property:inchikey>HCHKCACWOHOZIP-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23994"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Zin</skos:notation>
         <skos:prefLabel xml:lang="en">Zinc (Zn)</skos:prefLabel>
@@ -13065,8 +13729,14 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zinext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Zn</ontology:inchi>
+        <ontology:pubchem>23994</ontology:pubchem>
+        <property:inchikey>HCHKCACWOHOZIP-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23994"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Zinext</skos:notation>
         <skos:prefLabel xml:lang="en">Zinc (Zn) - extractable</skos:prefLabel>
@@ -15529,127 +16199,15 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-01 -->
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-1 -->
 
 
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-01">
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-1">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>01</skos:notation>
+        <skos:notation>1</skos:notation>
         <skos:prefLabel xml:lang="en">Flat</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-02 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-02">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>02</skos:notation>
-        <skos:prefLabel xml:lang="en">Level</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-03 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-03">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>03</skos:notation>
-        <skos:prefLabel xml:lang="en">Nearly level</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-04 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-04">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>04</skos:notation>
-        <skos:prefLabel xml:lang="en">Very gently sloping </skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-05 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-05">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>05</skos:notation>
-        <skos:prefLabel xml:lang="en">Gently sloping</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-06 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-06">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>06</skos:notation>
-        <skos:prefLabel xml:lang="en">Sloping</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-07 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-07">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>07</skos:notation>
-        <skos:prefLabel xml:lang="en">Strongly sloping</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-08 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-08">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>08</skos:notation>
-        <skos:prefLabel xml:lang="en">Moderately steep</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-09 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-09">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
-        <skos:notation>09</skos:notation>
-        <skos:prefLabel xml:lang="en">Steep</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
     </owl:NamedIndividual>
     
@@ -15664,6 +16222,118 @@
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
         <skos:notation>10</skos:notation>
         <skos:prefLabel xml:lang="en">Very steep</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-2">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+        <skos:notation>2</skos:notation>
+        <skos:prefLabel xml:lang="en">Level</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-3">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+        <skos:notation>3</skos:notation>
+        <skos:prefLabel xml:lang="en">Nearly level</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-4">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+        <skos:notation>4</skos:notation>
+        <skos:prefLabel xml:lang="en">Very gently sloping </skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-5">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+        <skos:notation>5</skos:notation>
+        <skos:prefLabel xml:lang="en">Gently sloping</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-6">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+        <skos:notation>6</skos:notation>
+        <skos:prefLabel xml:lang="en">Sloping</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-7">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+        <skos:notation>7</skos:notation>
+        <skos:prefLabel xml:lang="en">Strongly sloping</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-8">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+        <skos:notation>8</skos:notation>
+        <skos:prefLabel xml:lang="en">Moderately steep</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode-9">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SlopeGradientClassValueCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
+        <skos:notation>9</skos:notation>
+        <skos:prefLabel xml:lang="en">Steep</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/slopeGradientClassValueCode"/>
     </owl:NamedIndividual>
     
@@ -16335,7 +17005,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">Code list for textureUnconsolidatedValue - codelist scheme</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode"/>
-        <skos:definition>table is missing</skos:definition>
         <skos:note xml:lang="en">This code list provides analysis procedures for textureUnconsolidated.</skos:note>
         <skos:prefLabel xml:lang="en">Code list for textureUnconsolidatedValue - codelist scheme</skos:prefLabel>
     </owl:NamedIndividual>
