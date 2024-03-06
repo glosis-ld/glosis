@@ -3,6 +3,7 @@
 - [Table of contents](#table-of-contents)
 - [Info](#info)
 - [Documentation](#documentation)
+- [Meta-data](#meta-data)
 - [Tools](#tools)
   - [Transformer-tool](#transformer-tool)
     - [Installation](#installation)
@@ -28,7 +29,15 @@ Configuration files for WiDoco are generated automatically with a [bespoke
 tool](https://github.com/glosis-ld/glosis/blob/master/docs/README_WiDoco.md).
 Documentation pages are maintained in the [docs folder](https://github.com/glosis-ld/glosis/blob/master/docs).
 
-The documentation for each module can be accessed via the [documentation entry page](https://glosis-ld.github.io/glosis/)
+The documentation for each module can be accessed via the [documentation entry page](https://glosis-ld.github.io/glosis/).
+
+# Meta-data
+
+Besides the meta-data encoded in RDF with the ontology itself, there is also a
+meta-data record for GloSIS at the
+[FAIRSharing.org](https://fairsharing.org/5073) catalogue. The DOI of this
+record is
+[https://doi.org/10.25504/FAIRsharing.af87a1](https://doi.org/10.25504/FAIRsharing.af87a1) 
 
 # Tools
 
