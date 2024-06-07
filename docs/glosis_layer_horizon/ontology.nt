@@ -6,8 +6,8 @@
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/glosis/model/unit/> .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/> .
 <http://w3id.org/glosis/model/layerhorizon> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
-<http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/layerhorizon_:genid-nodeid-node1hn8jspupx1001> .
-<http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/layerhorizon_:genid-nodeid-node1hn8jspupx1003> .
+<http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/layerhorizon_:genid-nodeid-node1hvouggotx1001> .
+<http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/layerhorizon_:genid-nodeid-node1hvouggotx1003> .
 <http://w3id.org/glosis/model/layerhorizon> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
 _:genid1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
@@ -54,6 +54,15 @@ _:genid6 <http://xmlns.com/foaf/0.1/name> "ISRIC" .
 # 
 # http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://w3id.org/glosis/model/common/BleachedSand
 <http://w3id.org/glosis/model/common/BleachedSand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
@@ -1331,17 +1340,17 @@ _:genid254 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/glosis/model/layerhorizon/PhysioChemical> .
 <http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid255 .
-_:genid255 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/procedure/TextureProcedure> .
-<http://w3id.org/glosis/model/procedure/TextureProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid255 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
+_:genid255 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay> .
+_:genid255 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
 _:genid255 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid256 .
-_:genid256 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/layerhorizon/ClayFractionTextureValue> .
-_:genid256 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid256 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/procedure/PSAProcedure> .
+<http://w3id.org/glosis/model/procedure/PSAProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid256 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
 _:genid256 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid257 .
-_:genid257 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay> .
-_:genid257 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid257 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/layerhorizon/ClayFractionTextureValue> .
+_:genid257 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
 _:genid257 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture> <http://www.w3.org/2000/01/rdf-schema#label> "ClayFractionTexture"@en .
 <http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
@@ -3563,16 +3572,16 @@ _:genid668 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <http://w3id.org/glosis/model/layerhorizon/SandFractionTexture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/glosis/model/layerhorizon/SandFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/glosis/model/layerhorizon/PhysioChemical> .
 <http://w3id.org/glosis/model/layerhorizon/SandFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid669 .
-_:genid669 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/procedure/TextureProcedure> .
-_:genid669 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
+_:genid669 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand> .
+_:genid669 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
 _:genid669 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/SandFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid670 .
-_:genid670 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/layerhorizon/SandFractionTextureValue> .
-_:genid670 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid670 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/procedure/PSAProcedure> .
+_:genid670 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
 _:genid670 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/SandFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid671 .
-_:genid671 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand> .
-_:genid671 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid671 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/layerhorizon/SandFractionTextureValue> .
+_:genid671 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
 _:genid671 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/SandFractionTexture> <http://www.w3.org/2000/01/rdf-schema#label> "SandFractionTexture"@en .
 <http://w3id.org/glosis/model/layerhorizon/SandFractionTexture> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
@@ -3658,16 +3667,16 @@ _:genid686 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/glosis/model/layerhorizon/PhysioChemical> .
 <http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid687 .
-_:genid687 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/procedure/TextureProcedure> .
-_:genid687 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
+_:genid687 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt> .
+_:genid687 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
 _:genid687 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid688 .
-_:genid688 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/layerhorizon/SiltFractionTextureValue> .
-_:genid688 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:genid688 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/glosis/model/procedure/PSAProcedure> .
+_:genid688 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
 _:genid688 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid689 .
-_:genid689 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt> .
-_:genid689 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+_:genid689 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/glosis/model/layerhorizon/SiltFractionTextureValue> .
+_:genid689 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
 _:genid689 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture> <http://www.w3.org/2000/01/rdf-schema#label> "SiltFractionTexture"@en .
 <http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
@@ -4327,13 +4336,13 @@ _:genid800 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # http://w3id.org/glosis/model/procedure/PHProcedure
 # 
+# http://w3id.org/glosis/model/procedure/PSAProcedure
+# 
 # http://w3id.org/glosis/model/procedure/PhosphorusRetentionProcedure
 # 
 # http://w3id.org/glosis/model/procedure/PorosityProcedure
 # 
 # http://w3id.org/glosis/model/procedure/SolubleSaltsProcedure
-# 
-# http://w3id.org/glosis/model/procedure/TextureProcedure
 # 
 # http://w3id.org/glosis/model/procedure/TotalCarbonateEquivalentProcedure
 # 

@@ -14,8 +14,8 @@
                                                          <http://w3id.org/glosis/model/unit/> ,
                                                          <http://www.w3.org/ns/sosa/> ,
                                                          <http://www.w3.org/ns/ssn/> ;
-                                             <http://purl.org/dc/terms/creator> _:genid-nodeid-node1hn8jspupx1001 ,
-                                                                                _:genid-nodeid-node1hn8jspupx1003 ,
+                                             <http://purl.org/dc/terms/creator> _:genid-nodeid-node1hvouggotx1001 ,
+                                                                                _:genid-nodeid-node1hvouggotx1003 ,
                                                                                 _:genid1 ,
                                                                                 _:genid3 ,
                                                                                 _:genid5 ;
@@ -57,6 +57,18 @@ _:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "ISR
 
 ###  http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand> rdf:type owl:Class .
+
+
+###  http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt
+<http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt> rdf:type owl:Class .
 
 
 ###  http://w3id.org/glosis/model/common/BleachedSand
@@ -1238,16 +1250,16 @@ _:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "ISR
 <http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://w3id.org/glosis/model/layerhorizon/PhysioChemical> ,
                                                                                 [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/usedProcedure> ;
-                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/procedure/TextureProcedure>
+                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/procedure/PSAProcedure>
                                                                                 ] ,
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
                                                                                   owl:allValuesFrom <http://w3id.org/glosis/model/layerhorizon/ClayFractionTextureValue>
-                                                                                ] ,
-                                                                                [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                                  owl:hasValue <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay>
                                                                                 ] ;
                                                                 rdfs:label "ClayFractionTexture"@en ;
                                                                 <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
@@ -3339,16 +3351,16 @@ _:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "ISR
 <http://w3id.org/glosis/model/layerhorizon/SandFractionTexture> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://w3id.org/glosis/model/layerhorizon/PhysioChemical> ,
                                                                                 [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/usedProcedure> ;
-                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/procedure/TextureProcedure>
+                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/procedure/PSAProcedure>
                                                                                 ] ,
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
                                                                                   owl:allValuesFrom <http://w3id.org/glosis/model/layerhorizon/SandFractionTextureValue>
-                                                                                ] ,
-                                                                                [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                                  owl:hasValue <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand>
                                                                                 ] ;
                                                                 rdfs:label "SandFractionTexture"@en ;
                                                                 <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
@@ -3430,16 +3442,16 @@ _:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "ISR
 <http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://w3id.org/glosis/model/layerhorizon/PhysioChemical> ,
                                                                                 [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
+                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/usedProcedure> ;
-                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/procedure/TextureProcedure>
+                                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/procedure/PSAProcedure>
                                                                                 ] ,
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
                                                                                   owl:allValuesFrom <http://w3id.org/glosis/model/layerhorizon/SiltFractionTextureValue>
-                                                                                ] ,
-                                                                                [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                                  owl:hasValue <http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt>
                                                                                 ] ;
                                                                 rdfs:label "SiltFractionTexture"@en ;
                                                                 <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
@@ -4117,6 +4129,10 @@ _:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "ISR
 <http://w3id.org/glosis/model/procedure/PHProcedure> rdf:type owl:Class .
 
 
+###  http://w3id.org/glosis/model/procedure/PSAProcedure
+<http://w3id.org/glosis/model/procedure/PSAProcedure> rdf:type owl:Class .
+
+
 ###  http://w3id.org/glosis/model/procedure/PhosphorusRetentionProcedure
 <http://w3id.org/glosis/model/procedure/PhosphorusRetentionProcedure> rdf:type owl:Class .
 
@@ -4127,10 +4143,6 @@ _:genid5 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "ISR
 
 ###  http://w3id.org/glosis/model/procedure/SolubleSaltsProcedure
 <http://w3id.org/glosis/model/procedure/SolubleSaltsProcedure> rdf:type owl:Class .
-
-
-###  http://w3id.org/glosis/model/procedure/TextureProcedure
-<http://w3id.org/glosis/model/procedure/TextureProcedure> rdf:type owl:Class .
 
 
 ###  http://w3id.org/glosis/model/procedure/TotalCarbonateEquivalentProcedure
