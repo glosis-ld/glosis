@@ -23,8 +23,8 @@
         <owl:imports rdf:resource="http://w3id.org/glosis/model/unit/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1hn8jspupx1001"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1hn8jspupx1003"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i038ge6tx1001"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i038ge6tx1003"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -103,6 +103,27 @@
 
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt"/>
     
 
 
@@ -1993,20 +2014,20 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/layerhorizon/PhysioChemical"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/layerhorizon/ClayFractionTextureValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ClayFractionTexture</rdfs:label>
@@ -5247,20 +5268,20 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/layerhorizon/PhysioChemical"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/layerhorizon/SandFractionTextureValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SandFractionTexture</rdfs:label>
@@ -5388,20 +5409,20 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/layerhorizon/PhysioChemical"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/layerhorizon/SiltFractionTextureValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SiltFractionTexture</rdfs:label>
@@ -6467,6 +6488,13 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/procedure/PSAProcedure -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+    
+
+
     <!-- http://w3id.org/glosis/model/procedure/PhosphorusRetentionProcedure -->
 
 
@@ -6485,13 +6513,6 @@
 
 
     <owl:Class rdf:about="http://w3id.org/glosis/model/procedure/SolubleSaltsProcedure"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/TextureProcedure -->
-
-
-    <owl:Class rdf:about="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
     
 
 
