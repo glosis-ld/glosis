@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/codelists","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/codelists","name":"GLOSIS code lists", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology.  The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources.  The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or SKOS for the representation of codelists.<br>This module contains all the code lists of observable properties and results codes.", "datePublished":"Date of release", "version":"1.3.1", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"},{"@type":"Person","name":"Luís Moreira de Sousa","url":"http://orcid.org/0000-0002-5851-2071"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/codelists","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/codelists","name":"GLOSIS code lists", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology.  The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources.  The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or SKOS for the representation of codelists.<br>This module contains all the code lists of observable properties and results codes.", "datePublished":"Date of release", "version":"1.4", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"},{"@type":"Person","name":"Luís Moreira de Sousa","url":"http://orcid.org/0000-0002-5851-2071"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -60,9 +60,9 @@ $(function(){
 
 <dl>
 <dt>This version:</dt>
-<dd><a href="http://w3id.org/glosis/model/codelists/1.3.1">http://w3id.org/glosis/model/codelists/1.3.1</a></dd>
+<dd><a href="http://w3id.org/glosis/model/codelists/1.4">http://w3id.org/glosis/model/codelists/1.4</a></dd>
 <dt>Revision:</dt>
-<dd>1.3.1</dd>
+<dd>1.4</dd>
 <dt>Authors:</dt>
 <dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a></dd><dd>Bogusz Janiak</dd><dd><a href="http://orcid.org/0000-0002-5851-2071">Luís Moreira de Sousa</a></dd>
 
@@ -442,6 +442,24 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#/SurfaceAgeValueCode"
          title="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode">Code list for SurfaceAgeValue - codelist class</a>
+   </li>
+   <li>
+      <a href="#/TextclayPropertyCode"
+         title="http://w3id.org/glosis/model/codelists/TextclayPropertyCode">
+         <span>Code list for TextclayProperty - codelist class Code list for TextclayProperty - codelist scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">
+         <span>Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">
+         <span>Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</span>
+      </a>
    </li>
    <li>
       <a href="#/TextureUnconsolidatedValueCode"
@@ -1065,6 +1083,10 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UU1">clay</a>
    </li>
    <li>
+      <a href="#/TextclayPropertyCode-Cl"
+         title="http://w3id.org/glosis/model/codelists/TextclayPropertyCode-Cl">Clay (&lt; 0.002 mm)</a>
+   </li>
+   <li>
       <a href="#/mineralConcNatureValueCode-C"
          title="http://w3id.org/glosis/model/codelists/mineralConcNatureValueCode-C">Clay (argillaceous)</a>
    </li>
@@ -1081,10 +1103,6 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UM2">clay and silt</a>
    </li>
    <li>
-      <a href="#/physioChemicalPropertyCode-Textclay"
-         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay">Clay texture fraction</a>
-   </li>
-   <li>
       <a href="#/lithologyValueCode-UF2"
          title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UF2">clay, silt and loam</a>
    </li>
@@ -1095,18 +1113,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#/clayPropertyCode-CNC"
          title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CNC">ClayNonCarbonate</a>
-   </li>
-   <li>
-      <a href="#/clayPropertyCode-CSF1"
-         title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF1">ClaySizeFraction01</a>
-   </li>
-   <li>
-      <a href="#/clayPropertyCode-CSF2"
-         title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF2">ClaySizeFraction02</a>
-   </li>
-   <li>
-      <a href="#/clayPropertyCode-CT"
-         title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CT">ClayTotal</a>
    </li>
    <li>
       <a href="#/clayPropertyCode-CWT"
@@ -1185,8 +1191,28 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-CS">Coarse sand</a>
    </li>
    <li>
+      <a href="#/TextsandPropertyCode-cSa_ISSS"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS">Coarse sand (0.2 - 2 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-cSa_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA">Coarse sand (0.5 - 1 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-cSa_ISO"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO">Coarse sand (0.63 - 2 mm)</a>
+   </li>
+   <li>
       <a href="#/sandyTextureValueCode-CSL"
          title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-CSL">Coarse sandy loam</a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode-cSi_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA">Coarse silt (0.02 - 0.05 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode-cSi_ISO"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO">Coarse silt (0.02 - 0.063 mm)</a>
    </li>
    <li>
       <a href="#/structureSizeValueCode-CO"
@@ -1539,6 +1565,24 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#/surfaceAgeValueCode"
          title="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode">Code list for surfaceAgeValue - codelist scheme Code list for surfaceAgeValue - codelist scheme</a>
+   </li>
+   <li>
+      <a href="#/TextclayPropertyCode"
+         title="http://w3id.org/glosis/model/codelists/TextclayPropertyCode">
+         <span>Code list for TextclayProperty - codelist class Code list for TextclayProperty - codelist scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">
+         <span>Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">
+         <span>Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</span>
+      </a>
    </li>
    <li>
       <a href="#/textureUnconsolidatedValueCode"
@@ -2025,8 +2069,28 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-FS">Fine sand</a>
    </li>
    <li>
+      <a href="#/TextsandPropertyCode-fSa_ISSS"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS">Fine sand (0.02 - 0.2 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-fSa_ISO"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO">Fine sand (0.063 - 0.2 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-fSa_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA">Fine sand (0.1 - 0.25 mm)</a>
+   </li>
+   <li>
       <a href="#/sandyTextureValueCode-FSL"
          title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-FSL">Fine sandy loam</a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode-fSi_ISO"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO">Fine silt (0.002 - 0.0063 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode-fSi_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA">Fine silt (0.002 - 0.02 mm)</a>
    </li>
    <li>
       <a href="#/structureSizeValueCode-FI"
@@ -2793,6 +2857,22 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-MS">Medium sand</a>
    </li>
    <li>
+      <a href="#/TextsandPropertyCode-mSa_ISO"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO">Medium sand (0.2 - 0.63 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-mSa_ISSS"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS">Medium sand (0.2 - 0.63 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-mSa_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA">Medium sand (0.25 - 0.5 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode-mSi_ISO"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO">Medium silt (0.0063 - 0.02 mm)</a>
+   </li>
+   <li>
       <a href="#/majorLandFormValueCode-SE"
          title="http://w3id.org/glosis/model/codelists/majorLandFormValueCode-SE">medium-gradient escarpment zone</a>
    </li>
@@ -3489,6 +3569,18 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UU3">sand</a>
    </li>
    <li>
+      <a href="#/TextsandPropertyCode-Sa_ISSS"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS">Sand (0.02 - 2 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-Sa_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA">Sand (0.050  - 2 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-Sa_ISO"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO">Sand (0.063  - 2 mm)</a>
+   </li>
+   <li>
       <a href="#/humanInfluenceClassValueCode-MS"
          title="http://w3id.org/glosis/model/codelists/humanInfluenceClassValueCode-MS">Sand additions</a>
    </li>
@@ -3501,56 +3593,8 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/coatingNatureValueCode-SA">Sand coatings</a>
    </li>
    <li>
-      <a href="#/physioChemicalPropertyCode-Textsand"
-         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand">Sand texture fraction</a>
-   </li>
-   <li>
       <a href="#/sandyTextureValueCode-US"
          title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-US">Sand, unsorted</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF1"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF1">SandSizeFraction01</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF2"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF2">SandSizeFraction02</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF3"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF3">SandSizeFraction03</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF4"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF4">SandSizeFraction04</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF5"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF5">SandSizeFraction05</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF6"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF6">SandSizeFraction06</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF7"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF7">SandSizeFraction07</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF8"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF8">SandSizeFraction08</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF9"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF9">SandSizeFraction09</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSF10"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF10">SandSizeFraction10</a>
-   </li>
-   <li>
-      <a href="#/sandPropertyCode-SSFT"
-         title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT">SandSizeFractionTotal</a>
    </li>
    <li>
       <a href="#/lithologyValueCode-SC2"
@@ -3705,6 +3749,18 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Siloxa">Silicon (Si) - oxalate extractable</a>
    </li>
    <li>
+      <a href="#/TextsiltPropertyCode-Si_ISSS"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISSS">Silt (0.002 - 0.02 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode-Si_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA">Silt (0.002 - 0.05 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsiltPropertyCode-Si_ISO"
+         title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO">Silt (0.002 - 0.063 mm)</a>
+   </li>
+   <li>
       <a href="#/lithologyValueCode-UL2"
          title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UL2">silt and clay</a>
    </li>
@@ -3713,28 +3769,8 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/coatingNatureValueCode-ST">Silt coatings</a>
    </li>
    <li>
-      <a href="#/physioChemicalPropertyCode-Textsilt"
-         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt">Silt texture fraction</a>
-   </li>
-   <li>
       <a href="#/lithologyValueCode-SC3"
          title="http://w3id.org/glosis/model/codelists/lithologyValueCode-SC3">silt-, mud-, claystone</a>
-   </li>
-   <li>
-      <a href="#/siltPropertyCode-SSF1"
-         title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF1">SiltSizeFraction01</a>
-   </li>
-   <li>
-      <a href="#/siltPropertyCode-SSF2"
-         title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF2">SiltSizeFraction02</a>
-   </li>
-   <li>
-      <a href="#/siltPropertyCode-SSF3"
-         title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF3">SiltSizeFraction03</a>
-   </li>
-   <li>
-      <a href="#/siltPropertyCode-SSFT"
-         title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT">SiltSizeFractionTotal</a>
    </li>
    <li>
       <a href="#/siltPropertyCode-SWDF1"
@@ -4161,6 +4197,14 @@ This ontology has the following classes and properties.</span>
          title="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode-VC">Very coarse</a>
    </li>
    <li>
+      <a href="#/TextsandPropertyCode-vcSa_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA">Very coarse sand (1 - 2 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-vcSa_ISSS"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS">Very coarse sand (1.25 - 2 mm)</a>
+   </li>
+   <li>
       <a href="#/structureSizeValueCode-VC"
          title="http://w3id.org/glosis/model/codelists/structureSizeValueCode-VC">Very coarse/thick</a>
    </li>
@@ -4219,6 +4263,14 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#/sandyTextureValueCode-VFS"
          title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-VFS">Very fine sand</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-vfSa_USDA"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA">Very fine sand (0.05 - 0.1 mm)</a>
+   </li>
+   <li>
+      <a href="#/TextsandPropertyCode-vfSa_ISSS"
+         title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS">Very fine sand (0.063 - 0.125 mm)</a>
    </li>
    <li>
       <a href="#/structureSizeValueCode-VF"
@@ -4927,6 +4979,24 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode">Code list for SurfaceAgeValue - codelist class</a>
       </li>
       <li>
+         <a href="#/TextclayPropertyCode"
+            title="http://w3id.org/glosis/model/codelists/TextclayPropertyCode">
+            <span>Code list for TextclayProperty - codelist class Code list for TextclayProperty - codelist scheme</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">
+            <span>Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">
+            <span>Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</span>
+         </a>
+      </li>
+      <li>
          <a href="#/TextureUnconsolidatedValueCode"
             title="http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode">Code list for TextureUnconsolidatedValue - codelist class</a>
       </li>
@@ -5609,10 +5679,7 @@ This section provides details for each class and property defined by GloSIS Onto
          <dt>is equivalent to</dt>
          <dd>{ <a href="#/clayPropertyCode-CC"
                title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CC">ClayCarbonate</a> , <a href="#/clayPropertyCode-CNC"
-               title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CNC">ClayNonCarbonate</a> , <a href="#/clayPropertyCode-CSF1"
-               title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF1">ClaySizeFraction01</a> , <a href="#/clayPropertyCode-CSF2"
-               title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF2">ClaySizeFraction02</a> , <a href="#/clayPropertyCode-CT"
-               title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CT">ClayTotal</a> , <a href="#/clayPropertyCode-CWT"
+               title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CNC">ClayNonCarbonate</a> , <a href="#/clayPropertyCode-CWT"
                title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CWT">ClayWaterDispersible</a> }</dd>
          <dt>has super-classes</dt>
          <dd>
@@ -5630,12 +5697,6 @@ This section provides details for each class and property defined by GloSIS Onto
                title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CC">ClayCarbonate</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/clayPropertyCode-CNC"
                title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CNC">ClayNonCarbonate</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/clayPropertyCode-CSF1"
-               title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF1">ClaySizeFraction01</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/clayPropertyCode-CSF2"
-               title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF2">ClaySizeFraction02</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/clayPropertyCode-CT"
-               title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CT">ClayTotal</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/clayPropertyCode-CWT"
                title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CWT">ClayWaterDispersible</a>
             <sup class="type-ni" title="named individual">ni</sup>
@@ -8425,10 +8486,7 @@ This section provides details for each class and property defined by GloSIS Onto
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal">Soluble salts</a> , <a href="#/physioChemicalPropertyCode-Sul"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sul">Sulfate (SO4--) - soluble</a> , <a href="#/physioChemicalPropertyCode-Sulext"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sulext">Sulfur (S) - extractable</a> , <a href="#/physioChemicalPropertyCode-Sultot"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sultot">Sulfur (S) - total</a> , <a href="#/physioChemicalPropertyCode-Textclay"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay">Clay texture fraction</a> , <a href="#/physioChemicalPropertyCode-Textsand"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand">Sand texture fraction</a> , <a href="#/physioChemicalPropertyCode-Textsilt"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt">Silt texture fraction</a> , <a href="#/physioChemicalPropertyCode-Zin"
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sultot">Sulfur (S) - total</a> , <a href="#/physioChemicalPropertyCode-Zin"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zin">Zinc (Zn)</a> , <a href="#/physioChemicalPropertyCode-Zinext"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zinext">Zinc (Zn) - extractable</a> , <a href="#/physioChemicalPropertyCode-pH"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-pH">pH - Hydrogen potential</a> }</dd>
@@ -8520,8 +8578,6 @@ This section provides details for each class and property defined by GloSIS Onto
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC">Cation exchange capacity effective (ECEC)</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Chl"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Chl">Chloride (Cl-) - soluble</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Textclay"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay">Clay texture fraction</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Copext"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Copext">Copper (Cu) - extractable</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Coptot"
@@ -8596,16 +8652,12 @@ This section provides details for each class and property defined by GloSIS Onto
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potexc">Potassium (K+) - exchangeable</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Potsol"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potsol">Potassium (K+) - soluble</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Textsand"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand">Sand texture fraction</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Selext"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Selext">Selenium (Se) - extractable</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Seltot"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Seltot">Selenium (Se) - total</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Siloxa"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Siloxa">Silicon (Si) - oxalate extractable</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Textsilt"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt">Silt texture fraction</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Sodext"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodext">Sodium (Na) - extractable</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Sodtot"
@@ -9349,18 +9401,7 @@ This section provides details for each class and property defined by GloSIS Onto
       </div>
       <dl class="description">
          <dt>is equivalent to</dt>
-         <dd>{ <a href="#/sandPropertyCode-SSF1"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF1">SandSizeFraction01</a> , <a href="#/sandPropertyCode-SSF10"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF10">SandSizeFraction10</a> , <a href="#/sandPropertyCode-SSF2"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF2">SandSizeFraction02</a> , <a href="#/sandPropertyCode-SSF3"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF3">SandSizeFraction03</a> , <a href="#/sandPropertyCode-SSF4"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF4">SandSizeFraction04</a> , <a href="#/sandPropertyCode-SSF5"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF5">SandSizeFraction05</a> , <a href="#/sandPropertyCode-SSF6"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF6">SandSizeFraction06</a> , <a href="#/sandPropertyCode-SSF7"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF7">SandSizeFraction07</a> , <a href="#/sandPropertyCode-SSF8"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF8">SandSizeFraction08</a> , <a href="#/sandPropertyCode-SSF9"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF9">SandSizeFraction09</a> , <a href="#/sandPropertyCode-SSFT"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT">SandSizeFractionTotal</a> , <a href="#/sandPropertyCode-SWD1"
+         <dd>{ <a href="#/sandPropertyCode-SWD1"
                title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SWD1">SandWaterDispersible01</a> , <a href="#/sandPropertyCode-SWD2"
                title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SWD2">SandWaterDispersible02</a> , <a href="#/sandPropertyCode-SWD3"
                title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SWD3">SandWaterDispersible03</a> , <a href="#/sandPropertyCode-SWD4"
@@ -9379,29 +9420,7 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#/sandPropertyCode-SSF1"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF1">SandSizeFraction01</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF2"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF2">SandSizeFraction02</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF3"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF3">SandSizeFraction03</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF4"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF4">SandSizeFraction04</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF5"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF5">SandSizeFraction05</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF6"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF6">SandSizeFraction06</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF7"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF7">SandSizeFraction07</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF8"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF8">SandSizeFraction08</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF9"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF9">SandSizeFraction09</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSF10"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF10">SandSizeFraction10</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SSFT"
-               title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT">SandSizeFractionTotal</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SWD1"
+            <a href="#/sandPropertyCode-SWD1"
                title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SWD1">SandWaterDispersible01</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/sandPropertyCode-SWD2"
                title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SWD2">SandWaterDispersible02</a>
@@ -9576,11 +9595,7 @@ This section provides details for each class and property defined by GloSIS Onto
       </div>
       <dl class="description">
          <dt>is equivalent to</dt>
-         <dd>{ <a href="#/siltPropertyCode-SSF1"
-               title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF1">SiltSizeFraction01</a> , <a href="#/siltPropertyCode-SSF2"
-               title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF2">SiltSizeFraction02</a> , <a href="#/siltPropertyCode-SSF3"
-               title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF3">SiltSizeFraction03</a> , <a href="#/siltPropertyCode-SSFT"
-               title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT">SiltSizeFractionTotal</a> , <a href="#/siltPropertyCode-SWDF1"
+         <dd>{ <a href="#/siltPropertyCode-SWDF1"
                title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SWDF1">SiltWaterDispersibleFraction01</a> , <a href="#/siltPropertyCode-SWDF2"
                title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SWDF2">SiltWaterDispersibleFraction02</a> , <a href="#/siltPropertyCode-SWDFT"
                title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SWDFT">SiltWaterDispersibleFractionTotal</a> }</dd>
@@ -9596,15 +9611,7 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#/siltPropertyCode-SSF1"
-               title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF1">SiltSizeFraction01</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/siltPropertyCode-SSF2"
-               title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF2">SiltSizeFraction02</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/siltPropertyCode-SSF3"
-               title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF3">SiltSizeFraction03</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/siltPropertyCode-SSFT"
-               title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT">SiltSizeFractionTotal</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/siltPropertyCode-SWDF1"
+            <a href="#/siltPropertyCode-SWDF1"
                title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SWDF1">SiltWaterDispersibleFraction01</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/siltPropertyCode-SWDF2"
                title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SWDF2">SiltWaterDispersibleFraction02</a>
@@ -9979,6 +9986,196 @@ This section provides details for each class and property defined by GloSIS Onto
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/surfaceAgeValueCode-Yn"
                title="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode-Yn">Young natural</a>
             <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextclayPropertyCode">
+      <h3>Code list for TextclayProperty - codelist class Code list for TextclayProperty - codelist scheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextclayPropertyCode</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="http://w3id.org/glosis/model/codelists/textclayPropertyCode-Cl"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textclayPropertyCode-Cl">textclay property code cl</a> }</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#/TextclayPropertyCode-Cl"
+               title="http://w3id.org/glosis/model/codelists/TextclayPropertyCode-Cl">Clay (&lt; 0.002 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>
+            <a href="#/TextclayPropertyCode">named individual</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode">
+      <h3>Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISO"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISO">textsand property code sa i s o</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISSS"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISSS">textsand property code sa i s s s</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_USDA">textsand property code sa u s d a</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISO"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISO">textsand property code c sa i s o</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISSS"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISSS">textsand property code c sa i s s s</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_USDA">textsand property code c sa u s d a</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISO"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISO">textsand property code f sa i s o</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISSS"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISSS">textsand property code f sa i s s s</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_USDA">textsand property code f sa u s d a</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISO"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISO">textsand property code m sa i s o</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISSS"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISSS">textsand property code m sa i s s s</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_USDA">textsand property code m sa u s d a</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_ISSS"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_ISSS">textsand property code vc sa i s s s</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_USDA">textsand property code vc sa u s d a</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_ISSS"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_ISSS">textsand property code vf sa i s s s</a> , <a href="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_USDA">textsand property code vf sa u s d a</a> }</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode-cSa_ISSS"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS">Coarse sand (0.2 - 2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-cSa_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA">Coarse sand (0.5 - 1 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-cSa_ISO"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO">Coarse sand (0.63 - 2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-fSa_ISSS"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS">Fine sand (0.02 - 0.2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-fSa_ISO"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO">Fine sand (0.063 - 0.2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-fSa_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA">Fine sand (0.1 - 0.25 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-mSa_ISO"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO">Medium sand (0.2 - 0.63 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-mSa_ISSS"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS">Medium sand (0.2 - 0.63 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-mSa_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA">Medium sand (0.25 - 0.5 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-Sa_ISSS"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS">Sand (0.02 - 2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-Sa_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA">Sand (0.050  - 2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-Sa_ISO"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO">Sand (0.063  - 2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-vcSa_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA">Very coarse sand (1 - 2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-vcSa_ISSS"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS">Very coarse sand (1.25 - 2 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-vfSa_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA">Very fine sand (0.05 - 0.1 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsandPropertyCode-vfSa_ISSS"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS">Very fine sand (0.063 - 0.125 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode">named individual</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode">
+      <h3>Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISO"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISO">textsilt property code si i s o</a> , <a href="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISSS"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISSS">textsilt property code si i s s s</a> , <a href="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_USDA">textsilt property code si u s d a</a> , <a href="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_ISO"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_ISO">textsilt property code c si i s o</a> , <a href="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_USDA">textsilt property code c si u s d a</a> , <a href="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_ISO"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_ISO">textsilt property code f si i s o</a> , <a href="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_USDA"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_USDA">textsilt property code f si u s d a</a> , <a href="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-mSi_ISO"
+               target="_blank"
+               title="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-mSi_ISO">textsilt property code m si i s o</a> }</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode-cSi_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA">Coarse silt (0.02 - 0.05 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsiltPropertyCode-cSi_ISO"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO">Coarse silt (0.02 - 0.063 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsiltPropertyCode-fSi_ISO"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO">Fine silt (0.002 - 0.0063 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsiltPropertyCode-fSi_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA">Fine silt (0.002 - 0.02 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsiltPropertyCode-mSi_ISO"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO">Medium silt (0.0063 - 0.02 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsiltPropertyCode-Si_ISSS"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISSS">Silt (0.002 - 0.02 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsiltPropertyCode-Si_USDA"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA">Silt (0.002 - 0.05 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/TextsiltPropertyCode-Si_ISO"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO">Silt (0.002 - 0.063 mm)</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode">named individual</a>
          </dd>
       </dl>
    </div>
@@ -10994,6 +11191,10 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UU1">clay</a>
       </li>
       <li>
+         <a href="#/TextclayPropertyCode-Cl"
+            title="http://w3id.org/glosis/model/codelists/TextclayPropertyCode-Cl">Clay (&lt; 0.002 mm)</a>
+      </li>
+      <li>
          <a href="#/mineralConcNatureValueCode-C"
             title="http://w3id.org/glosis/model/codelists/mineralConcNatureValueCode-C">Clay (argillaceous)</a>
       </li>
@@ -11010,10 +11211,6 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UM2">clay and silt</a>
       </li>
       <li>
-         <a href="#/physioChemicalPropertyCode-Textclay"
-            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay">Clay texture fraction</a>
-      </li>
-      <li>
          <a href="#/lithologyValueCode-UF2"
             title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UF2">clay, silt and loam</a>
       </li>
@@ -11024,18 +11221,6 @@ This section provides details for each class and property defined by GloSIS Onto
       <li>
          <a href="#/clayPropertyCode-CNC"
             title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CNC">ClayNonCarbonate</a>
-      </li>
-      <li>
-         <a href="#/clayPropertyCode-CSF1"
-            title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF1">ClaySizeFraction01</a>
-      </li>
-      <li>
-         <a href="#/clayPropertyCode-CSF2"
-            title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF2">ClaySizeFraction02</a>
-      </li>
-      <li>
-         <a href="#/clayPropertyCode-CT"
-            title="http://w3id.org/glosis/model/codelists/clayPropertyCode-CT">ClayTotal</a>
       </li>
       <li>
          <a href="#/clayPropertyCode-CWT"
@@ -11114,8 +11299,28 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-CS">Coarse sand</a>
       </li>
       <li>
+         <a href="#/TextsandPropertyCode-cSa_ISSS"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS">Coarse sand (0.2 - 2 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-cSa_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA">Coarse sand (0.5 - 1 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-cSa_ISO"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO">Coarse sand (0.63 - 2 mm)</a>
+      </li>
+      <li>
          <a href="#/sandyTextureValueCode-CSL"
             title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-CSL">Coarse sandy loam</a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode-cSi_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA">Coarse silt (0.02 - 0.05 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode-cSi_ISO"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO">Coarse silt (0.02 - 0.063 mm)</a>
       </li>
       <li>
          <a href="#/structureSizeValueCode-CO"
@@ -11468,6 +11673,24 @@ This section provides details for each class and property defined by GloSIS Onto
       <li>
          <a href="#/surfaceAgeValueCode"
             title="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode">Code list for surfaceAgeValue - codelist scheme Code list for surfaceAgeValue - codelist scheme</a>
+      </li>
+      <li>
+         <a href="#/TextclayPropertyCode"
+            title="http://w3id.org/glosis/model/codelists/TextclayPropertyCode">
+            <span>Code list for TextclayProperty - codelist class Code list for TextclayProperty - codelist scheme</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">
+            <span>Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">
+            <span>Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</span>
+         </a>
       </li>
       <li>
          <a href="#/textureUnconsolidatedValueCode"
@@ -11954,8 +12177,28 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-FS">Fine sand</a>
       </li>
       <li>
+         <a href="#/TextsandPropertyCode-fSa_ISSS"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS">Fine sand (0.02 - 0.2 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-fSa_ISO"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO">Fine sand (0.063 - 0.2 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-fSa_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA">Fine sand (0.1 - 0.25 mm)</a>
+      </li>
+      <li>
          <a href="#/sandyTextureValueCode-FSL"
             title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-FSL">Fine sandy loam</a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode-fSi_ISO"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO">Fine silt (0.002 - 0.0063 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode-fSi_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA">Fine silt (0.002 - 0.02 mm)</a>
       </li>
       <li>
          <a href="#/structureSizeValueCode-FI"
@@ -12722,6 +12965,22 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-MS">Medium sand</a>
       </li>
       <li>
+         <a href="#/TextsandPropertyCode-mSa_ISO"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO">Medium sand (0.2 - 0.63 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-mSa_ISSS"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS">Medium sand (0.2 - 0.63 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-mSa_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA">Medium sand (0.25 - 0.5 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode-mSi_ISO"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO">Medium silt (0.0063 - 0.02 mm)</a>
+      </li>
+      <li>
          <a href="#/majorLandFormValueCode-SE"
             title="http://w3id.org/glosis/model/codelists/majorLandFormValueCode-SE">medium-gradient escarpment zone</a>
       </li>
@@ -13418,6 +13677,18 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UU3">sand</a>
       </li>
       <li>
+         <a href="#/TextsandPropertyCode-Sa_ISSS"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS">Sand (0.02 - 2 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-Sa_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA">Sand (0.050  - 2 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-Sa_ISO"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO">Sand (0.063  - 2 mm)</a>
+      </li>
+      <li>
          <a href="#/humanInfluenceClassValueCode-MS"
             title="http://w3id.org/glosis/model/codelists/humanInfluenceClassValueCode-MS">Sand additions</a>
       </li>
@@ -13430,56 +13701,8 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/coatingNatureValueCode-SA">Sand coatings</a>
       </li>
       <li>
-         <a href="#/physioChemicalPropertyCode-Textsand"
-            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand">Sand texture fraction</a>
-      </li>
-      <li>
          <a href="#/sandyTextureValueCode-US"
             title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-US">Sand, unsorted</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF1"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF1">SandSizeFraction01</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF2"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF2">SandSizeFraction02</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF3"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF3">SandSizeFraction03</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF4"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF4">SandSizeFraction04</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF5"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF5">SandSizeFraction05</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF6"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF6">SandSizeFraction06</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF7"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF7">SandSizeFraction07</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF8"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF8">SandSizeFraction08</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF9"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF9">SandSizeFraction09</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSF10"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF10">SandSizeFraction10</a>
-      </li>
-      <li>
-         <a href="#/sandPropertyCode-SSFT"
-            title="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT">SandSizeFractionTotal</a>
       </li>
       <li>
          <a href="#/lithologyValueCode-SC2"
@@ -13634,6 +13857,18 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Siloxa">Silicon (Si) - oxalate extractable</a>
       </li>
       <li>
+         <a href="#/TextsiltPropertyCode-Si_ISSS"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISSS">Silt (0.002 - 0.02 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode-Si_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA">Silt (0.002 - 0.05 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsiltPropertyCode-Si_ISO"
+            title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO">Silt (0.002 - 0.063 mm)</a>
+      </li>
+      <li>
          <a href="#/lithologyValueCode-UL2"
             title="http://w3id.org/glosis/model/codelists/lithologyValueCode-UL2">silt and clay</a>
       </li>
@@ -13642,28 +13877,8 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/coatingNatureValueCode-ST">Silt coatings</a>
       </li>
       <li>
-         <a href="#/physioChemicalPropertyCode-Textsilt"
-            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt">Silt texture fraction</a>
-      </li>
-      <li>
          <a href="#/lithologyValueCode-SC3"
             title="http://w3id.org/glosis/model/codelists/lithologyValueCode-SC3">silt-, mud-, claystone</a>
-      </li>
-      <li>
-         <a href="#/siltPropertyCode-SSF1"
-            title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF1">SiltSizeFraction01</a>
-      </li>
-      <li>
-         <a href="#/siltPropertyCode-SSF2"
-            title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF2">SiltSizeFraction02</a>
-      </li>
-      <li>
-         <a href="#/siltPropertyCode-SSF3"
-            title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF3">SiltSizeFraction03</a>
-      </li>
-      <li>
-         <a href="#/siltPropertyCode-SSFT"
-            title="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT">SiltSizeFractionTotal</a>
       </li>
       <li>
          <a href="#/siltPropertyCode-SWDF1"
@@ -14090,6 +14305,14 @@ This section provides details for each class and property defined by GloSIS Onto
             title="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode-VC">Very coarse</a>
       </li>
       <li>
+         <a href="#/TextsandPropertyCode-vcSa_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA">Very coarse sand (1 - 2 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-vcSa_ISSS"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS">Very coarse sand (1.25 - 2 mm)</a>
+      </li>
+      <li>
          <a href="#/structureSizeValueCode-VC"
             title="http://w3id.org/glosis/model/codelists/structureSizeValueCode-VC">Very coarse/thick</a>
       </li>
@@ -14148,6 +14371,14 @@ This section provides details for each class and property defined by GloSIS Onto
       <li>
          <a href="#/sandyTextureValueCode-VFS"
             title="http://w3id.org/glosis/model/codelists/sandyTextureValueCode-VFS">Very fine sand</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-vfSa_USDA"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA">Very fine sand (0.05 - 0.1 mm)</a>
+      </li>
+      <li>
+         <a href="#/TextsandPropertyCode-vfSa_ISSS"
+            title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS">Very fine sand (0.063 - 0.125 mm)</a>
       </li>
       <li>
          <a href="#/structureSizeValueCode-VF"
@@ -18141,6 +18372,31 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
+   <div class="entity" id="/TextclayPropertyCode-Cl">
+      <h3>Clay (&lt; 0.002 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextclayPropertyCode-Cl</p>
+      <div class="comment">
+         <span class="markdown">Very fine mineral particles smaller than 2 µm</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextclayPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextclayPropertyCode">Code list for TextclayProperty - codelist class Code list for TextclayProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="/mineralConcNatureValueCode-C">
       <h3>Clay (argillaceous)<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -18229,28 +18485,6 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
-   <div class="entity" id="/physioChemicalPropertyCode-Textclay">
-      <h3>Clay texture fraction<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/PhysioChemicalPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode">Code list for PhysioChemicalProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="/lithologyValueCode-UF2">
       <h3>clay, silt and loam<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -18302,72 +18536,6 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/clayPropertyCode-CNC</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/ClayPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/ClayPropertyCode">Code list for ClayProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/clayPropertyCode-CSF1">
-      <h3>ClaySizeFraction01<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF1</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/ClayPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/ClayPropertyCode">Code list for ClayProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/clayPropertyCode-CSF2">
-      <h3>ClaySizeFraction02<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF2</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/ClayPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/ClayPropertyCode">Code list for ClayProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/clayPropertyCode-CT">
-      <h3>ClayTotal<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/clayPropertyCode-CT</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -18822,6 +18990,81 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
+   <div class="entity" id="/TextsandPropertyCode-cSa_ISSS">
+      <h3>Coarse sand (0.2 - 2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.2-2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-cSa_USDA">
+      <h3>Coarse sand (0.5 - 1 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.5-1 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-cSa_ISO">
+      <h3>Coarse sand (0.63 - 2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.63-2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="/sandyTextureValueCode-CSL">
       <h3>Coarse sandy loam<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -18834,6 +19077,56 @@ This section provides details for each class and property defined by GloSIS Onto
          <dd>
             <a href="#/SandyTextureValueCode"
                title="http://w3id.org/glosis/model/codelists/SandyTextureValueCode">Code list for SandyTextureValue - codelist class</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode-cSi_USDA">
+      <h3>Coarse silt (0.02 - 0.05 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 20-50 µm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode-cSi_ISO">
+      <h3>Coarse silt (0.02 - 0.063 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 20-63 µm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -20944,6 +21237,69 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
+   <div class="entity" id="/TextclayPropertyCode">
+      <h3>Code list for TextclayProperty - codelist class Code list for TextclayProperty - codelist scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextclayPropertyCode</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>
+            <a href="#/TextclayPropertyCode">class</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode">
+      <h3>Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode">class</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode">
+      <h3>Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode">class</a>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="/textureUnconsolidatedValueCode">
       <h3>Code list for textureUnconsolidatedValue - codelist scheme<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -21280,7 +21636,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-C</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)50–200 ;&gt; 2 mm (number)5–20</span>
+         <span class="markdown">&lt; 2 mm (number)50–200 , &gt; 2 mm (number)5–20 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -21355,7 +21711,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-C</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)50–200 ;&gt; 2 mm (number)5–20</span>
+         <span class="markdown">&lt; 2 mm (number)50–200 , &gt; 2 mm (number)5–20 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -22976,7 +23332,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/consistenceMoistValueCode-EFI</p>
       <div class="comment">
-         <span class="markdown">Soil material crushes only under very strong pressure; cannot be crushed between thumb and forefinger.</span>
+         <span class="markdown">Soil material crushes only under very strong pressure,  cannot be crushed between thumb and forefinger. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -23026,7 +23382,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/consistenceDryValueCode-EHA</p>
       <div class="comment">
-         <span class="markdown">Extremely resistant to pressure; cannot be broken in the hands.</span>
+         <span class="markdown">Extremely resistant to pressure,  cannot be broken in the hands. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -23408,7 +23764,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-F</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)20–50;&gt; 2 mm (number) 2–5</span>
+         <span class="markdown">&lt; 2 mm (number)20–50, &gt; 2 mm (number) 2–5 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -23483,7 +23839,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-F</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)20–50;&gt; 2 mm (number) 2–5</span>
+         <span class="markdown">&lt; 2 mm (number)20–50, &gt; 2 mm (number) 2–5 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -23779,6 +24135,81 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
+   <div class="entity" id="/TextsandPropertyCode-fSa_ISSS">
+      <h3>Fine sand (0.02 - 0.2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.02-0.2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-fSa_ISO">
+      <h3>Fine sand (0.063 - 0.2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.063-0.2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-fSa_USDA">
+      <h3>Fine sand (0.1 - 0.25 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.1-0.25 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="/sandyTextureValueCode-FSL">
       <h3>Fine sandy loam<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -23791,6 +24222,56 @@ This section provides details for each class and property defined by GloSIS Onto
          <dd>
             <a href="#/SandyTextureValueCode"
                title="http://w3id.org/glosis/model/codelists/SandyTextureValueCode">Code list for SandyTextureValue - codelist class</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode-fSi_ISO">
+      <h3>Fine silt (0.002 - 0.0063 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 2-6.3 µm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode-fSi_USDA">
+      <h3>Fine silt (0.002 - 0.02 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 2-20 µm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -24892,7 +25373,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/consistenceDryValueCode-HA</p>
       <div class="comment">
-         <span class="markdown">Moderately resistant to pressure; can be broken in the hands; not breakable between thumb and forefinger.</span>
+         <span class="markdown">Moderately resistant to pressure,  can be broken in the hands ,  not breakable between thumb and forefinger. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -27791,7 +28272,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-M</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)&gt; 200 ;&gt; 2 mm (number)&gt; 20</span>
+         <span class="markdown">&lt; 2 mm (number)&gt; 200 , &gt; 2 mm (number)&gt; 20 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -27866,7 +28347,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-M</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)&gt; 200 ;&gt; 2 mm (number)&gt; 20</span>
+         <span class="markdown">&lt; 2 mm (number)&gt; 200 , &gt; 2 mm (number)&gt; 20 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -28365,6 +28846,106 @@ This section provides details for each class and property defined by GloSIS Onto
          <dd>
             <a href="#/SandyTextureValueCode"
                title="http://w3id.org/glosis/model/codelists/SandyTextureValueCode">Code list for SandyTextureValue - codelist class</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-mSa_ISO">
+      <h3>Medium sand (0.2 - 0.63 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.02-0.63 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-mSa_ISSS">
+      <h3>Medium sand (0.2 - 0.63 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.2-0.63 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-mSa_USDA">
+      <h3>Medium sand (0.25 - 0.5 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.25-0.5 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode-mSi_ISO">
+      <h3>Medium silt (0.0063 - 0.02 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 6.3-20 µm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -29704,7 +30285,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-N</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)0;&gt; 2 mm (number)0</span>
+         <span class="markdown">&lt; 2 mm (number)0, &gt; 2 mm (number)0 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -29776,7 +30357,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-N</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)0;&gt; 2 mm (number)0</span>
+         <span class="markdown">&lt; 2 mm (number)0, &gt; 2 mm (number)0 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -30991,7 +31572,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/plasticityValueCode-PL</p>
       <div class="comment">
-         <span class="markdown">Wire formable but breaks if bent into a ring; slight to moderate force required for deformation of the soil mass.</span>
+         <span class="markdown">Wire formable but breaks if bent into a ring,  slight to moderate force required for deformation of the soil mass. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -32503,6 +33084,81 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
+   <div class="entity" id="/TextsandPropertyCode-Sa_ISSS">
+      <h3>Sand (0.02 - 2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.020-2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-Sa_USDA">
+      <h3>Sand (0.050  - 2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.050-2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-Sa_ISO">
+      <h3>Sand (0.063  - 2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.063-2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="/humanInfluenceClassValueCode-MS">
       <h3>Sand additions<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -32569,28 +33225,6 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
-   <div class="entity" id="/physioChemicalPropertyCode-Textsand">
-      <h3>Sand texture fraction<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/PhysioChemicalPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode">Code list for PhysioChemicalProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="/sandyTextureValueCode-US">
       <h3>Sand, unsorted<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -32603,248 +33237,6 @@ This section provides details for each class and property defined by GloSIS Onto
          <dd>
             <a href="#/SandyTextureValueCode"
                title="http://w3id.org/glosis/model/codelists/SandyTextureValueCode">Code list for SandyTextureValue - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF1">
-      <h3>SandSizeFraction01<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF1</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF2">
-      <h3>SandSizeFraction02<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF2</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF3">
-      <h3>SandSizeFraction03<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF3</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF4">
-      <h3>SandSizeFraction04<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF4</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF5">
-      <h3>SandSizeFraction05<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF5</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF6">
-      <h3>SandSizeFraction06<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF6</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF7">
-      <h3>SandSizeFraction07<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF7</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF8">
-      <h3>SandSizeFraction08<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF8</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF9">
-      <h3>SandSizeFraction09<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF9</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSF10">
-      <h3>SandSizeFraction10<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF10</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/sandPropertyCode-SSFT">
-      <h3>SandSizeFractionTotal<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SandPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SandPropertyCode">Code list for SandProperty - codelist class</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -33733,6 +34125,81 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
+   <div class="entity" id="/TextsiltPropertyCode-Si_ISSS">
+      <h3>Silt (0.002 - 0.02 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISSS</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 2-20 µm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode-Si_USDA">
+      <h3>Silt (0.002 - 0.05 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 2-50 µm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsiltPropertyCode-Si_ISO">
+      <h3>Silt (0.002 - 0.063 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 2-63 µm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsiltPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">Code list for TextsiltProperty - codelist class Code list for TextsiltProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="/lithologyValueCode-UL2">
       <h3>silt and clay<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -33777,28 +34244,6 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
-   <div class="entity" id="/physioChemicalPropertyCode-Textsilt">
-      <h3>Silt texture fraction<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/PhysioChemicalPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode">Code list for PhysioChemicalProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="/lithologyValueCode-SC3">
       <h3>silt-, mud-, claystone<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -33811,94 +34256,6 @@ This section provides details for each class and property defined by GloSIS Onto
          <dd>
             <a href="#/LithologyValueCode"
                title="http://w3id.org/glosis/model/codelists/LithologyValueCode">Code list for LithologyValue - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/siltPropertyCode-SSF1">
-      <h3>SiltSizeFraction01<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF1</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SiltPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SiltPropertyCode">Code list for SiltProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/siltPropertyCode-SSF2">
-      <h3>SiltSizeFraction02<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF2</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SiltPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SiltPropertyCode">Code list for SiltProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/siltPropertyCode-SSF3">
-      <h3>SiltSizeFraction03<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF3</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SiltPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SiltPropertyCode">Code list for SiltProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/siltPropertyCode-SSFT">
-      <h3>SiltSizeFractionTotal<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#/SiltPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/SiltPropertyCode">Code list for SiltProperty - codelist class</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -34168,7 +34525,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/consistenceDryValueCode-SHA</p>
       <div class="comment">
-         <span class="markdown">Weakly resistant to pressure; easily broken between thumb and forefinger.</span>
+         <span class="markdown">Weakly resistant to pressure,  easily broken between thumb and forefinger. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -34240,7 +34597,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/plasticityValueCode-SPL</p>
       <div class="comment">
-         <span class="markdown">Wire formable but breaks immediately if bent into a ring; soil mass deformed by very slight force.</span>
+         <span class="markdown">Wire formable but breaks immediately if bent into a ring,  soil mass deformed by very slight force. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -34645,7 +35002,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/consistenceDryValueCode-SO</p>
       <div class="comment">
-         <span class="markdown">Soil mass is very weakly coherent and fragile; breaks to powder or individual grains under very slight pressure.</span>
+         <span class="markdown">Soil mass is very weakly coherent and fragile,  breaks to powder or individual grains under very slight pressure. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -36436,6 +36793,56 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
+   <div class="entity" id="/TextsandPropertyCode-vcSa_USDA">
+      <h3>Very coarse sand (1 - 2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 1-2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-vcSa_ISSS">
+      <h3>Very coarse sand (1.25 - 2 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 1.25-2 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="/structureSizeValueCode-VC">
       <h3>Very coarse/thick<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -36566,7 +36973,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-V</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)1–20 ;&gt; 2 mm (number)1–2</span>
+         <span class="markdown">&lt; 2 mm (number)1–20 , &gt; 2 mm (number)1–2 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -36641,7 +37048,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-V</p>
       <div class="comment">
-         <span class="markdown">&lt; 2 mm (number)1–20 ;&gt; 2 mm (number)1–2</span>
+         <span class="markdown">&lt; 2 mm (number)1–20 , &gt; 2 mm (number)1–2 </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -36805,6 +37212,56 @@ This section provides details for each class and property defined by GloSIS Onto
          </dd>
       </dl>
    </div>
+   <div class="entity" id="/TextsandPropertyCode-vfSa_USDA">
+      <h3>Very fine sand (0.05 - 0.1 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.05-0.1 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TextsandPropertyCode-vfSa_ISSS">
+      <h3>Very fine sand (0.063 - 0.125 mm)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS</p>
+      <div class="comment">
+         <span class="markdown">Content of mineral particles with sizes between 0.063-0.125 mm in soil</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#/TextsandPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">Code list for TextsandProperty - codelist class Code list for TextsandProperty - codelist scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="/structureSizeValueCode-VF">
       <h3>Very fine/thin<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -36838,7 +37295,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/consistenceMoistValueCode-VFI</p>
       <div class="comment">
-         <span class="markdown">Soil material crushes under strong pressures; barely crushable between thumb and forefinger.</span>
+         <span class="markdown">Soil material crushes under strong pressures,  barely crushable between thumb and forefinger. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -36910,7 +37367,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/consistenceDryValueCode-VHA</p>
       <div class="comment">
-         <span class="markdown">Very hard Very resistant to pressure; can be broken in the hands only with difficulty.</span>
+         <span class="markdown">Very hard Very resistant to pressure,  can be broken in the hands only with difficulty. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -37054,7 +37511,7 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/plasticityValueCode-VPL</p>
       <div class="comment">
-         <span class="markdown">Wire formable and can be bent into a ring; moderately strong to very strong force required for deformation of the soil mass.</span>
+         <span class="markdown">Wire formable and can be bent into a ring,  moderately strong to very strong force required for deformation of the soil mass. </span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
