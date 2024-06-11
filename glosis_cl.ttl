@@ -24,8 +24,50 @@
     dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
     dct:title "GLOSIS code lists"@en ;
     rdfs:comment "This module contains all the code lists of observable properties and results codes."@en ;
-    owl:versionIRI glosis_cl:1.3.1 ;
-    owl:versionInfo "1.3.1" .
+    owl:versionIRI glosis_cl:1.4 ;
+    owl:versionInfo "1.4" .
+
+glosis_cl:TextclayPropertyCode a owl:Class,
+        skos:ConceptScheme ;
+    rdfs:label "Code list for TextclayProperty - codelist class"@en,
+        "Code list for TextclayProperty - codelist scheme"@en ;
+    rdfs:comment "This code list provides the TextclayProperty."@en ;
+    rdfs:seeAlso glosis_cl:TextclayPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:textclayPropertyCode-Cl ) ;
+    skos:definition "Eva Corral-Pazos-de-Provens, Ígor Rapp-Arrarás and Juan M. Domingo-Santos, Estimating textural fractions of the USDA using those of the International System: A quantile approach, Geoderma, Volume 416, 2022." ;
+    skos:note "This code list provides analysis procedures for Textclay."@en ;
+    skos:prefLabel "Code list for TextclayProperty - codelist scheme"@en .
+
+glosis_cl:TextsandPropertyCode a owl:Class,
+        skos:ConceptScheme ;
+    rdfs:label "Code list for TextsandProperty - codelist class"@en,
+        "Code list for TextsandProperty - codelist scheme"@en ;
+    rdfs:comment "This code list provides the TextsandProperty."@en ;
+    rdfs:seeAlso glosis_cl:TextsandPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:textsandPropertyCode-Sa_ISO glosis_cl:textsandPropertyCode-Sa_USDA glosis_cl:textsandPropertyCode-Sa_ISSS glosis_cl:textsandPropertyCode-cSa_ISO glosis_cl:textsandPropertyCode-mSa_ISO glosis_cl:textsandPropertyCode-fSa_ISO glosis_cl:textsandPropertyCode-cSa_ISSS glosis_cl:textsandPropertyCode-fSa_ISSS glosis_cl:textsandPropertyCode-vcSa_ISSS glosis_cl:textsandPropertyCode-cSa_ISSS glosis_cl:textsandPropertyCode-mSa_ISSS glosis_cl:textsandPropertyCode-fSa_ISSS glosis_cl:textsandPropertyCode-vfSa_ISSS glosis_cl:textsandPropertyCode-vcSa_USDA glosis_cl:textsandPropertyCode-cSa_USDA glosis_cl:textsandPropertyCode-mSa_USDA glosis_cl:textsandPropertyCode-fSa_USDA glosis_cl:textsandPropertyCode-vfSa_USDA ) ;
+    skos:definition "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil ",
+        "International Society of Soil Science (ISSS), 1929. The minutes of the First Commission meetings, International Congress of Soil Science, Washington 1927. Proc. Int. Soc. Soil Sci. 4 (3), pp. 215–222.",
+        "S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " ;
+    skos:note "This code list provides analysis procedures for Textsand."@en ;
+    skos:prefLabel "Code list for TextsandProperty - codelist scheme"@en .
+
+glosis_cl:TextsiltPropertyCode a owl:Class,
+        skos:ConceptScheme ;
+    rdfs:label "Code list for TextsiltProperty - codelist class"@en,
+        "Code list for TextsiltProperty - codelist scheme"@en ;
+    rdfs:comment "This code list provides the TextsiltProperty."@en ;
+    rdfs:seeAlso glosis_cl:TextsiltPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:textsiltPropertyCode-Si_ISO glosis_cl:textsiltPropertyCode-Si_USDA glosis_cl:textsiltPropertyCode-Si_ISSS glosis_cl:textsiltPropertyCode-cSi_ISO glosis_cl:textsiltPropertyCode-mSi_ISO glosis_cl:textsiltPropertyCode-fSi_ISO glosis_cl:textsiltPropertyCode-cSi_USDA glosis_cl:textsiltPropertyCode-fSi_USDA ) ;
+    skos:definition "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil ",
+        "S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " ;
+    skos:note "This code list provides analysis procedures for Textsilt."@en ;
+    skos:prefLabel "Code list for TextsiltProperty - codelist scheme"@en .
 
 glosis_cl:biologicalAbundanceValueCode a skos:ConceptScheme ;
     rdfs:label "Code list for biologicalAbundanceValue - codelist scheme"@en ;
@@ -786,7 +828,7 @@ glosis_cl:ClayPropertyCode a owl:Class ;
     rdfs:seeAlso glosis_cl:clayPropertyCode ;
     rdfs:subClassOf skos:Concept,
         sosa:ObservableProperty ;
-    owl:oneOf ( glosis_cl:clayPropertyCode-CNC glosis_cl:clayPropertyCode-CSF1 glosis_cl:clayPropertyCode-CWT glosis_cl:clayPropertyCode-CT glosis_cl:clayPropertyCode-CC glosis_cl:clayPropertyCode-CSF2 ) ;
+    owl:oneOf ( glosis_cl:clayPropertyCode-CNC glosis_cl:clayPropertyCode-CWT glosis_cl:clayPropertyCode-CC ) ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" .
 
 glosis_cl:CoatingAbundanceValueCode a owl:Class ;
@@ -1133,7 +1175,7 @@ glosis_cl:PhysioChemicalPropertyCode a owl:Class ;
     rdfs:seeAlso glosis_cl:physioChemicalPropertyCode ;
     rdfs:subClassOf skos:Concept,
         sosa:ObservableProperty ;
-    owl:oneOf ( glosis_cl:physioChemicalPropertyCode-Aciexc glosis_cl:physioChemicalPropertyCode-Aciext glosis_cl:physioChemicalPropertyCode-Alu glosis_cl:physioChemicalPropertyCode-AluFe glosis_cl:physioChemicalPropertyCode-Aludit glosis_cl:physioChemicalPropertyCode-Aluexc glosis_cl:physioChemicalPropertyCode-Aluoxa glosis_cl:physioChemicalPropertyCode-Alupyr glosis_cl:physioChemicalPropertyCode-Alusat glosis_cl:physioChemicalPropertyCode-Avavol glosis_cl:physioChemicalPropertyCode-Bascal glosis_cl:physioChemicalPropertyCode-Basexc glosis_cl:physioChemicalPropertyCode-Bassum glosis_cl:physioChemicalPropertyCode-Borext glosis_cl:physioChemicalPropertyCode-Bortot glosis_cl:physioChemicalPropertyCode-Brod glosis_cl:physioChemicalPropertyCode-Brot glosis_cl:physioChemicalPropertyCode-BulDfine glosis_cl:physioChemicalPropertyCode-BulDwhole glosis_cl:physioChemicalPropertyCode-Cad glosis_cl:physioChemicalPropertyCode-Calexc glosis_cl:physioChemicalPropertyCode-Calext glosis_cl:physioChemicalPropertyCode-Calfra glosis_cl:physioChemicalPropertyCode-Calsol glosis_cl:physioChemicalPropertyCode-Caltot glosis_cl:physioChemicalPropertyCode-CaN glosis_cl:physioChemicalPropertyCode-Car glosis_cl:physioChemicalPropertyCode-Carful glosis_cl:physioChemicalPropertyCode-Carhum glosis_cl:physioChemicalPropertyCode-Carinorg glosis_cl:physioChemicalPropertyCode-Carorg glosis_cl:physioChemicalPropertyCode-Carpyr glosis_cl:physioChemicalPropertyCode-Cartoh glosis_cl:physioChemicalPropertyCode-Cartot glosis_cl:physioChemicalPropertyCode-CEC glosis_cl:physioChemicalPropertyCode-ECEC glosis_cl:physioChemicalPropertyCode-Ccetot glosis_cl:physioChemicalPropertyCode-Chl glosis_cl:physioChemicalPropertyCode-Copext glosis_cl:physioChemicalPropertyCode-Coptot glosis_cl:physioChemicalPropertyCode-Eleccond glosis_cl:physioChemicalPropertyCode-Gyp glosis_cl:physioChemicalPropertyCode-Hydcond glosis_cl:physioChemicalPropertyCode-Hyd glosis_cl:physioChemicalPropertyCode-Hydexc glosis_cl:physioChemicalPropertyCode-Irodit glosis_cl:physioChemicalPropertyCode-Iroext glosis_cl:physioChemicalPropertyCode-Irooxa glosis_cl:physioChemicalPropertyCode-Iropyr glosis_cl:physioChemicalPropertyCode-Irotot glosis_cl:physioChemicalPropertyCode-Magexc glosis_cl:physioChemicalPropertyCode-Magext glosis_cl:physioChemicalPropertyCode-Magsol glosis_cl:physioChemicalPropertyCode-Magtot glosis_cl:physioChemicalPropertyCode-Mandit glosis_cl:physioChemicalPropertyCode-Manext glosis_cl:physioChemicalPropertyCode-ManKCl glosis_cl:physioChemicalPropertyCode-Manoxa glosis_cl:physioChemicalPropertyCode-Manpyr glosis_cl:physioChemicalPropertyCode-Mantot glosis_cl:physioChemicalPropertyCode-Mol glosis_cl:physioChemicalPropertyCode-Nit2 glosis_cl:physioChemicalPropertyCode-Nit3 glosis_cl:physioChemicalPropertyCode-Nittot glosis_cl:physioChemicalPropertyCode-Orgmat glosis_cl:physioChemicalPropertyCode-pH glosis_cl:physioChemicalPropertyCode-Pho glosis_cl:physioChemicalPropertyCode-Phoext glosis_cl:physioChemicalPropertyCode-Phooxa glosis_cl:physioChemicalPropertyCode-Phoret glosis_cl:physioChemicalPropertyCode-Photot glosis_cl:physioChemicalPropertyCode-Por glosis_cl:physioChemicalPropertyCode-Potexc glosis_cl:physioChemicalPropertyCode-Potext glosis_cl:physioChemicalPropertyCode-Potsol glosis_cl:physioChemicalPropertyCode-Pottot glosis_cl:physioChemicalPropertyCode-Selext glosis_cl:physioChemicalPropertyCode-Seltot glosis_cl:physioChemicalPropertyCode-Siloxa glosis_cl:physioChemicalPropertyCode-Sodexc glosis_cl:physioChemicalPropertyCode-Sodexp glosis_cl:physioChemicalPropertyCode-Sodext glosis_cl:physioChemicalPropertyCode-Sodsol glosis_cl:physioChemicalPropertyCode-Sodtot glosis_cl:physioChemicalPropertyCode-Solsal glosis_cl:physioChemicalPropertyCode-Sul glosis_cl:physioChemicalPropertyCode-Sulext glosis_cl:physioChemicalPropertyCode-Sultot glosis_cl:physioChemicalPropertyCode-Textclay glosis_cl:physioChemicalPropertyCode-Textsand glosis_cl:physioChemicalPropertyCode-Textsilt glosis_cl:physioChemicalPropertyCode-Zinext glosis_cl:physioChemicalPropertyCode-Zin ) ;
+    owl:oneOf ( glosis_cl:physioChemicalPropertyCode-Aciexc glosis_cl:physioChemicalPropertyCode-Aciext glosis_cl:physioChemicalPropertyCode-Alu glosis_cl:physioChemicalPropertyCode-AluFe glosis_cl:physioChemicalPropertyCode-Aludit glosis_cl:physioChemicalPropertyCode-Aluexc glosis_cl:physioChemicalPropertyCode-Aluoxa glosis_cl:physioChemicalPropertyCode-Alupyr glosis_cl:physioChemicalPropertyCode-Alusat glosis_cl:physioChemicalPropertyCode-Avavol glosis_cl:physioChemicalPropertyCode-Bascal glosis_cl:physioChemicalPropertyCode-Basexc glosis_cl:physioChemicalPropertyCode-Bassum glosis_cl:physioChemicalPropertyCode-Borext glosis_cl:physioChemicalPropertyCode-Bortot glosis_cl:physioChemicalPropertyCode-Brod glosis_cl:physioChemicalPropertyCode-Brot glosis_cl:physioChemicalPropertyCode-BulDfine glosis_cl:physioChemicalPropertyCode-BulDwhole glosis_cl:physioChemicalPropertyCode-Cad glosis_cl:physioChemicalPropertyCode-Calexc glosis_cl:physioChemicalPropertyCode-Calext glosis_cl:physioChemicalPropertyCode-Calfra glosis_cl:physioChemicalPropertyCode-Calsol glosis_cl:physioChemicalPropertyCode-Caltot glosis_cl:physioChemicalPropertyCode-CaN glosis_cl:physioChemicalPropertyCode-Car glosis_cl:physioChemicalPropertyCode-Carful glosis_cl:physioChemicalPropertyCode-Carhum glosis_cl:physioChemicalPropertyCode-Carinorg glosis_cl:physioChemicalPropertyCode-Carorg glosis_cl:physioChemicalPropertyCode-Carpyr glosis_cl:physioChemicalPropertyCode-Cartoh glosis_cl:physioChemicalPropertyCode-Cartot glosis_cl:physioChemicalPropertyCode-CEC glosis_cl:physioChemicalPropertyCode-ECEC glosis_cl:physioChemicalPropertyCode-Ccetot glosis_cl:physioChemicalPropertyCode-Chl glosis_cl:physioChemicalPropertyCode-Copext glosis_cl:physioChemicalPropertyCode-Coptot glosis_cl:physioChemicalPropertyCode-Eleccond glosis_cl:physioChemicalPropertyCode-Gyp glosis_cl:physioChemicalPropertyCode-Hydcond glosis_cl:physioChemicalPropertyCode-Hyd glosis_cl:physioChemicalPropertyCode-Hydexc glosis_cl:physioChemicalPropertyCode-Irodit glosis_cl:physioChemicalPropertyCode-Iroext glosis_cl:physioChemicalPropertyCode-Irooxa glosis_cl:physioChemicalPropertyCode-Iropyr glosis_cl:physioChemicalPropertyCode-Irotot glosis_cl:physioChemicalPropertyCode-Magexc glosis_cl:physioChemicalPropertyCode-Magext glosis_cl:physioChemicalPropertyCode-Magsol glosis_cl:physioChemicalPropertyCode-Magtot glosis_cl:physioChemicalPropertyCode-Mandit glosis_cl:physioChemicalPropertyCode-Manext glosis_cl:physioChemicalPropertyCode-ManKCl glosis_cl:physioChemicalPropertyCode-Manoxa glosis_cl:physioChemicalPropertyCode-Manpyr glosis_cl:physioChemicalPropertyCode-Mantot glosis_cl:physioChemicalPropertyCode-Mol glosis_cl:physioChemicalPropertyCode-Nit2 glosis_cl:physioChemicalPropertyCode-Nit3 glosis_cl:physioChemicalPropertyCode-Nittot glosis_cl:physioChemicalPropertyCode-Orgmat glosis_cl:physioChemicalPropertyCode-pH glosis_cl:physioChemicalPropertyCode-Pho glosis_cl:physioChemicalPropertyCode-Phoext glosis_cl:physioChemicalPropertyCode-Phooxa glosis_cl:physioChemicalPropertyCode-Phoret glosis_cl:physioChemicalPropertyCode-Photot glosis_cl:physioChemicalPropertyCode-Por glosis_cl:physioChemicalPropertyCode-Potexc glosis_cl:physioChemicalPropertyCode-Potext glosis_cl:physioChemicalPropertyCode-Potsol glosis_cl:physioChemicalPropertyCode-Pottot glosis_cl:physioChemicalPropertyCode-Selext glosis_cl:physioChemicalPropertyCode-Seltot glosis_cl:physioChemicalPropertyCode-Siloxa glosis_cl:physioChemicalPropertyCode-Sodexc glosis_cl:physioChemicalPropertyCode-Sodexp glosis_cl:physioChemicalPropertyCode-Sodext glosis_cl:physioChemicalPropertyCode-Sodsol glosis_cl:physioChemicalPropertyCode-Sodtot glosis_cl:physioChemicalPropertyCode-Solsal glosis_cl:physioChemicalPropertyCode-Sul glosis_cl:physioChemicalPropertyCode-Sulext glosis_cl:physioChemicalPropertyCode-Sultot glosis_cl:physioChemicalPropertyCode-Zinext glosis_cl:physioChemicalPropertyCode-Zin ) ;
     skos:definition "ISRIC Report 2014/01: Africa Soil Profiles Database Version 1.2. Annex 3a",
         "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" .
 
@@ -1255,7 +1297,7 @@ glosis_cl:SandPropertyCode a owl:Class ;
     rdfs:seeAlso glosis_cl:sandPropertyCode ;
     rdfs:subClassOf skos:Concept,
         sosa:ObservableProperty ;
-    owl:oneOf ( glosis_cl:sandPropertyCode-SSF1 glosis_cl:sandPropertyCode-SWD2 glosis_cl:sandPropertyCode-SSF4 glosis_cl:sandPropertyCode-SSF6 glosis_cl:sandPropertyCode-SSF5 glosis_cl:sandPropertyCode-SSF8 glosis_cl:sandPropertyCode-SWDT glosis_cl:sandPropertyCode-SSF2 glosis_cl:sandPropertyCode-SSFT glosis_cl:sandPropertyCode-SSF7 glosis_cl:sandPropertyCode-SSF9 glosis_cl:sandPropertyCode-SWD5 glosis_cl:sandPropertyCode-SSF10 glosis_cl:sandPropertyCode-SSF3 glosis_cl:sandPropertyCode-SWD3 glosis_cl:sandPropertyCode-SWD1 glosis_cl:sandPropertyCode-SWD4 ) ;
+    owl:oneOf ( glosis_cl:sandPropertyCode-SWD2 glosis_cl:sandPropertyCode-SWDT glosis_cl:sandPropertyCode-SWD5 glosis_cl:sandPropertyCode-SWD3 glosis_cl:sandPropertyCode-SWD1 glosis_cl:sandPropertyCode-SWD4 ) ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" .
 
 glosis_cl:SandyTextureValueCode a owl:Class ;
@@ -1288,7 +1330,7 @@ glosis_cl:SiltPropertyCode a owl:Class ;
     rdfs:seeAlso glosis_cl:siltPropertyCode ;
     rdfs:subClassOf skos:Concept,
         sosa:ObservableProperty ;
-    owl:oneOf ( glosis_cl:siltPropertyCode-SSF2 glosis_cl:siltPropertyCode-SSFT glosis_cl:siltPropertyCode-SWDF1 glosis_cl:siltPropertyCode-SWDFT glosis_cl:siltPropertyCode-SWDF2 glosis_cl:siltPropertyCode-SSF1 glosis_cl:siltPropertyCode-SSF3 ) ;
+    owl:oneOf ( glosis_cl:siltPropertyCode-SWDF1 glosis_cl:siltPropertyCode-SWDFT glosis_cl:siltPropertyCode-SWDF2 ) ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" .
 
 glosis_cl:SlopeFormValueCode a owl:Class ;
@@ -1401,6 +1443,253 @@ glosis_cl:WeatheringValueCode a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     owl:oneOf ( glosis_cl:weatheringValueCode-S glosis_cl:weatheringValueCode-W glosis_cl:weatheringValueCode-F ) ;
     skos:definition "Guidelines for Soil Description issued by the FAO: table 29" .
+
+glosis_cl:TextclayPropertyCode-Cl a glosis_cl:TextclayPropertyCode,
+        skos:Concept ;
+    skos:definition "Very fine mineral particles smaller than 2 µm" ;
+    skos:inScheme glosis_cl:TextclayPropertyCode ;
+    skos:notation "Cl" ;
+    skos:prefLabel "Clay (< 0.002 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> ;
+    skos:topConceptOf glosis_cl:TextclayPropertyCode .
+
+glosis_cl:TextsandPropertyCode-Sa_ISO a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:definition "Content of mineral particles with sizes between 0.063-2 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:narrower glosis_cl:TextsandPropertyCode-cSa_ISO,
+        glosis_cl:TextsandPropertyCode-fSa_ISO,
+        glosis_cl:TextsandPropertyCode-mSa_ISO ;
+    skos:notation "Sa_ISO" ;
+    skos:prefLabel "Sand (0.063  - 2 mm)"@en ;
+    skos:scopeNote <https://www.iso.org/standard/66345.html> ;
+    skos:topConceptOf glosis_cl:TextsandPropertyCode .
+
+glosis_cl:TextsandPropertyCode-Sa_ISSS a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:definition "Content of mineral particles with sizes between 0.020-2 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:narrower glosis_cl:TextsandPropertyCode-cSa_ISSS,
+        glosis_cl:TextsandPropertyCode-fSa_ISSS,
+        glosis_cl:TextsandPropertyCode-mSa_ISSS,
+        glosis_cl:TextsandPropertyCode-vcSa_ISSS,
+        glosis_cl:TextsandPropertyCode-vfSa_ISSS ;
+    skos:notation "Sa_ISSS" ;
+    skos:prefLabel "Sand (0.02 - 2 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> ;
+    skos:topConceptOf glosis_cl:TextsandPropertyCode .
+
+glosis_cl:TextsandPropertyCode-Sa_USDA a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:definition "Content of mineral particles with sizes between 0.050-2 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:narrower glosis_cl:TextsandPropertyCode-cSa_USDA,
+        glosis_cl:TextsandPropertyCode-fSa_USDA,
+        glosis_cl:TextsandPropertyCode-mSa_USDA,
+        glosis_cl:TextsandPropertyCode-vcSa_USDA,
+        glosis_cl:TextsandPropertyCode-vfSa_USDA ;
+    skos:notation "Sa_USDA" ;
+    skos:prefLabel "Sand (0.050  - 2 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> ;
+    skos:topConceptOf glosis_cl:TextsandPropertyCode .
+
+glosis_cl:TextsandPropertyCode-cSa_ISO a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_ISO ;
+    skos:definition "Content of mineral particles with sizes between 0.63-2 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "cSa_ISO" ;
+    skos:prefLabel "Coarse sand (0.63 - 2 mm)"@en ;
+    skos:scopeNote <https://www.iso.org/standard/66345.html> .
+
+glosis_cl:TextsandPropertyCode-cSa_ISSS a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_ISSS ;
+    skos:definition "Content of mineral particles with sizes between 0.2-2 mm in soil",
+        "Content of mineral particles with sizes between 0.63-1.25 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "cSa_ISSS" ;
+    skos:prefLabel "Coarse sand (0.2 - 2 mm)"@en,
+        "Coarse sand (0.63 - 1.25 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
+
+glosis_cl:TextsandPropertyCode-cSa_USDA a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_USDA ;
+    skos:definition "Content of mineral particles with sizes between 0.5-1 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "cSa_USDA" ;
+    skos:prefLabel "Coarse sand (0.5 - 1 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+glosis_cl:TextsandPropertyCode-fSa_ISO a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_ISO ;
+    skos:definition "Content of mineral particles with sizes between 0.063-0.2 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "fSa_ISO" ;
+    skos:prefLabel "Fine sand (0.063 - 0.2 mm)"@en ;
+    skos:scopeNote <https://www.iso.org/standard/66345.html> .
+
+glosis_cl:TextsandPropertyCode-fSa_ISSS a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_ISSS ;
+    skos:definition "Content of mineral particles with sizes between 0.02-0.2 mm in soil",
+        "Content of mineral particles with sizes between 0.125-0.2 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "fSa_ISSS" ;
+    skos:prefLabel "Fine sand (0.02 - 0.2 mm)"@en,
+        "Fine sand (0.125 - 0.2 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
+
+glosis_cl:TextsandPropertyCode-fSa_USDA a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_USDA ;
+    skos:definition "Content of mineral particles with sizes between 0.1-0.25 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "fSa_USDA" ;
+    skos:prefLabel "Fine sand (0.1 - 0.25 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+glosis_cl:TextsandPropertyCode-mSa_ISO a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_ISO ;
+    skos:definition "Content of mineral particles with sizes between 0.02-0.63 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "mSa_ISO" ;
+    skos:prefLabel "Medium sand (0.2 - 0.63 mm)"@en ;
+    skos:scopeNote <https://www.iso.org/standard/66345.html> .
+
+glosis_cl:TextsandPropertyCode-mSa_ISSS a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_ISSS ;
+    skos:definition "Content of mineral particles with sizes between 0.2-0.63 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "mSa_ISSS" ;
+    skos:prefLabel "Medium sand (0.2 - 0.63 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
+
+glosis_cl:TextsandPropertyCode-mSa_USDA a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_USDA ;
+    skos:definition "Content of mineral particles with sizes between 0.25-0.5 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "mSa_USDA" ;
+    skos:prefLabel "Medium sand (0.25 - 0.5 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+glosis_cl:TextsandPropertyCode-vcSa_ISSS a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_ISSS ;
+    skos:definition "Content of mineral particles with sizes between 1.25-2 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "vcSa_ISSS" ;
+    skos:prefLabel "Very coarse sand (1.25 - 2 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
+
+glosis_cl:TextsandPropertyCode-vcSa_USDA a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_USDA ;
+    skos:definition "Content of mineral particles with sizes between 1-2 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "vcSa_USDA" ;
+    skos:prefLabel "Very coarse sand (1 - 2 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+glosis_cl:TextsandPropertyCode-vfSa_ISSS a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_ISSS ;
+    skos:definition "Content of mineral particles with sizes between 0.063-0.125 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "vfSa_ISSS" ;
+    skos:prefLabel "Very fine sand (0.063 - 0.125 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
+
+glosis_cl:TextsandPropertyCode-vfSa_USDA a glosis_cl:TextsandPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsandPropertyCode-Sa_USDA ;
+    skos:definition "Content of mineral particles with sizes between 0.05-0.1 mm in soil" ;
+    skos:inScheme glosis_cl:TextsandPropertyCode ;
+    skos:notation "vfSa_USDA" ;
+    skos:prefLabel "Very fine sand (0.05 - 0.1 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+glosis_cl:TextsiltPropertyCode-Si_ISO a glosis_cl:TextsiltPropertyCode,
+        skos:Concept ;
+    skos:definition "Content of mineral particles with sizes between 2-63 µm in soil" ;
+    skos:inScheme glosis_cl:TextsiltPropertyCode ;
+    skos:narrower glosis_cl:TextsiltPropertyCode-cSi_ISO,
+        glosis_cl:TextsiltPropertyCode-fSi_ISO,
+        glosis_cl:TextsiltPropertyCode-mSi_ISO ;
+    skos:notation "Si_ISO" ;
+    skos:prefLabel "Silt (0.002 - 0.063 mm)"@en ;
+    skos:scopeNote <https://www.iso.org/standard/66345.html> ;
+    skos:topConceptOf glosis_cl:TextsiltPropertyCode .
+
+glosis_cl:TextsiltPropertyCode-Si_ISSS a glosis_cl:TextsiltPropertyCode,
+        skos:Concept ;
+    skos:definition "Content of mineral particles with sizes between 2-20 µm in soil" ;
+    skos:inScheme glosis_cl:TextsiltPropertyCode ;
+    skos:notation "Si_ISSS" ;
+    skos:prefLabel "Silt (0.002 - 0.02 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> ;
+    skos:topConceptOf glosis_cl:TextsiltPropertyCode .
+
+glosis_cl:TextsiltPropertyCode-Si_USDA a glosis_cl:TextsiltPropertyCode,
+        skos:Concept ;
+    skos:definition "Content of mineral particles with sizes between 2-50 µm in soil" ;
+    skos:inScheme glosis_cl:TextsiltPropertyCode ;
+    skos:narrower glosis_cl:TextsiltPropertyCode-cSi_USDA,
+        glosis_cl:TextsiltPropertyCode-fSi_USDA ;
+    skos:notation "Si_USDA" ;
+    skos:prefLabel "Silt (0.002 - 0.05 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> ;
+    skos:topConceptOf glosis_cl:TextsiltPropertyCode .
+
+glosis_cl:TextsiltPropertyCode-cSi_ISO a glosis_cl:TextsiltPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsiltPropertyCode-Si_ISO ;
+    skos:definition "Content of mineral particles with sizes between 20-63 µm in soil" ;
+    skos:inScheme glosis_cl:TextsiltPropertyCode ;
+    skos:notation "cSi_ISO" ;
+    skos:prefLabel "Coarse silt (0.02 - 0.063 mm)"@en ;
+    skos:scopeNote <https://www.iso.org/standard/66345.html> .
+
+glosis_cl:TextsiltPropertyCode-cSi_USDA a glosis_cl:TextsiltPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsiltPropertyCode-Si_USDA ;
+    skos:definition "Content of mineral particles with sizes between 20-50 µm in soil" ;
+    skos:inScheme glosis_cl:TextsiltPropertyCode ;
+    skos:notation "cSi_USDA" ;
+    skos:prefLabel "Coarse silt (0.02 - 0.05 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+glosis_cl:TextsiltPropertyCode-fSi_ISO a glosis_cl:TextsiltPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsiltPropertyCode-Si_ISO ;
+    skos:definition "Content of mineral particles with sizes between 2-6.3 µm in soil" ;
+    skos:inScheme glosis_cl:TextsiltPropertyCode ;
+    skos:notation "fSi_ISO" ;
+    skos:prefLabel "Fine silt (0.002 - 0.0063 mm)"@en ;
+    skos:scopeNote <https://www.iso.org/standard/66345.html> .
+
+glosis_cl:TextsiltPropertyCode-fSi_USDA a glosis_cl:TextsiltPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsiltPropertyCode-Si_USDA ;
+    skos:definition "Content of mineral particles with sizes between 2-20 µm in soil" ;
+    skos:inScheme glosis_cl:TextsiltPropertyCode ;
+    skos:notation "fSi_USDA" ;
+    skos:prefLabel "Fine silt (0.002 - 0.02 mm)"@en ;
+    skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+glosis_cl:TextsiltPropertyCode-mSi_ISO a glosis_cl:TextsiltPropertyCode,
+        skos:Concept ;
+    skos:broader glosis_cl:TextsiltPropertyCode-Si_ISO ;
+    skos:definition "Content of mineral particles with sizes between 6.3-20 µm in soil" ;
+    skos:inScheme glosis_cl:TextsiltPropertyCode ;
+    skos:notation "mSi_ISO" ;
+    skos:prefLabel "Medium silt (0.0063 - 0.02 mm)"@en ;
+    skos:scopeNote <https://www.iso.org/standard/66345.html> .
 
 glosis_cl:biologicalAbundanceValueCode-C a glosis_cl:BiologicalAbundanceValueCode,
         skos:Concept ;
@@ -1984,27 +2273,6 @@ glosis_cl:clayPropertyCode-CNC a glosis_cl:ClayPropertyCode,
     skos:prefLabel "ClayNonCarbonate"@en ;
     skos:topConceptOf glosis_cl:clayPropertyCode .
 
-glosis_cl:clayPropertyCode-CSF1 a glosis_cl:ClayPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:clayPropertyCode ;
-    skos:notation "CSF1" ;
-    skos:prefLabel "ClaySizeFraction01"@en ;
-    skos:topConceptOf glosis_cl:clayPropertyCode .
-
-glosis_cl:clayPropertyCode-CSF2 a glosis_cl:ClayPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:clayPropertyCode ;
-    skos:notation "CSF2" ;
-    skos:prefLabel "ClaySizeFraction02"@en ;
-    skos:topConceptOf glosis_cl:clayPropertyCode .
-
-glosis_cl:clayPropertyCode-CT a glosis_cl:ClayPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:clayPropertyCode ;
-    skos:notation "CT" ;
-    skos:prefLabel "ClayTotal"@en ;
-    skos:topConceptOf glosis_cl:clayPropertyCode .
-
 glosis_cl:clayPropertyCode-CWT a glosis_cl:ClayPropertyCode,
         skos:Concept ;
     skos:inScheme glosis_cl:clayPropertyCode ;
@@ -2318,7 +2586,7 @@ glosis_cl:coatingNatureValueCode-ST a glosis_cl:CoatingNatureValueCode,
 
 glosis_cl:consistenceDryValueCode-EHA a glosis_cl:ConsistenceDryValueCode,
         skos:Concept ;
-    skos:definition "Extremely resistant to pressure; cannot be broken in the hands." ;
+    skos:definition "Extremely resistant to pressure,  cannot be broken in the hands. " ;
     skos:inScheme glosis_cl:consistenceDryValueCode ;
     skos:notation "EHA" ;
     skos:prefLabel "Extremely hard"@en ;
@@ -2326,7 +2594,7 @@ glosis_cl:consistenceDryValueCode-EHA a glosis_cl:ConsistenceDryValueCode,
 
 glosis_cl:consistenceDryValueCode-HA a glosis_cl:ConsistenceDryValueCode,
         skos:Concept ;
-    skos:definition "Moderately resistant to pressure; can be broken in the hands; not breakable between thumb and forefinger." ;
+    skos:definition "Moderately resistant to pressure,  can be broken in the hands ,  not breakable between thumb and forefinger. " ;
     skos:inScheme glosis_cl:consistenceDryValueCode ;
     skos:notation "HA" ;
     skos:prefLabel "Hard"@en ;
@@ -2350,7 +2618,7 @@ glosis_cl:consistenceDryValueCode-LO a glosis_cl:ConsistenceDryValueCode,
 
 glosis_cl:consistenceDryValueCode-SHA a glosis_cl:ConsistenceDryValueCode,
         skos:Concept ;
-    skos:definition "Weakly resistant to pressure; easily broken between thumb and forefinger." ;
+    skos:definition "Weakly resistant to pressure,  easily broken between thumb and forefinger. " ;
     skos:inScheme glosis_cl:consistenceDryValueCode ;
     skos:notation "SHA" ;
     skos:prefLabel "Slightly hard"@en ;
@@ -2366,7 +2634,7 @@ glosis_cl:consistenceDryValueCode-SHH a glosis_cl:ConsistenceDryValueCode,
 
 glosis_cl:consistenceDryValueCode-SO a glosis_cl:ConsistenceDryValueCode,
         skos:Concept ;
-    skos:definition "Soil mass is very weakly coherent and fragile; breaks to powder or individual grains under very slight pressure." ;
+    skos:definition "Soil mass is very weakly coherent and fragile,  breaks to powder or individual grains under very slight pressure. " ;
     skos:inScheme glosis_cl:consistenceDryValueCode ;
     skos:notation "SO" ;
     skos:prefLabel "Soft"@en ;
@@ -2382,7 +2650,7 @@ glosis_cl:consistenceDryValueCode-SSH a glosis_cl:ConsistenceDryValueCode,
 
 glosis_cl:consistenceDryValueCode-VHA a glosis_cl:ConsistenceDryValueCode,
         skos:Concept ;
-    skos:definition "Very hard Very resistant to pressure; can be broken in the hands only with difficulty." ;
+    skos:definition "Very hard Very resistant to pressure,  can be broken in the hands only with difficulty. " ;
     skos:inScheme glosis_cl:consistenceDryValueCode ;
     skos:notation "VHA" ;
     skos:prefLabel "Very hard"@en ;
@@ -2390,7 +2658,7 @@ glosis_cl:consistenceDryValueCode-VHA a glosis_cl:ConsistenceDryValueCode,
 
 glosis_cl:consistenceMoistValueCode-EFI a glosis_cl:ConsistenceMoistValueCode,
         skos:Concept ;
-    skos:definition "Soil material crushes only under very strong pressure; cannot be crushed between thumb and forefinger." ;
+    skos:definition "Soil material crushes only under very strong pressure,  cannot be crushed between thumb and forefinger. " ;
     skos:inScheme glosis_cl:consistenceMoistValueCode ;
     skos:notation "EFI" ;
     skos:prefLabel "Extremely firm"@en ;
@@ -2422,7 +2690,7 @@ glosis_cl:consistenceMoistValueCode-LO a glosis_cl:ConsistenceMoistValueCode,
 
 glosis_cl:consistenceMoistValueCode-VFI a glosis_cl:ConsistenceMoistValueCode,
         skos:Concept ;
-    skos:definition "Soil material crushes under strong pressures; barely crushable between thumb and forefinger." ;
+    skos:definition "Soil material crushes under strong pressures,  barely crushable between thumb and forefinger. " ;
     skos:inScheme glosis_cl:consistenceMoistValueCode ;
     skos:notation "VFI" ;
     skos:prefLabel "Very firm "@en ;
@@ -6732,27 +7000,6 @@ glosis_cl:physioChemicalPropertyCode-Sultot a dbo:ChemicalCompound,
     skos:prefLabel "Sulfur (S) - total"@en ;
     skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalPropertyCode-Textclay a glosis_cl:PhysioChemicalPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
-    skos:notation "Textclay" ;
-    skos:prefLabel "Clay texture fraction"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
-
-glosis_cl:physioChemicalPropertyCode-Textsand a glosis_cl:PhysioChemicalPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
-    skos:notation "Textsand" ;
-    skos:prefLabel "Sand texture fraction"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
-
-glosis_cl:physioChemicalPropertyCode-Textsilt a glosis_cl:PhysioChemicalPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
-    skos:notation "Textsilt" ;
-    skos:prefLabel "Silt texture fraction"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
-
 glosis_cl:physioChemicalPropertyCode-Zin a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
         glosis_cl:PhysioChemicalPropertyCode,
@@ -6876,7 +7123,7 @@ glosis_cl:plasticityValueCode-NPL a glosis_cl:PlasticityValueCode,
 
 glosis_cl:plasticityValueCode-PL a glosis_cl:PlasticityValueCode,
         skos:Concept ;
-    skos:definition "Wire formable but breaks if bent into a ring; slight to moderate force required for deformation of the soil mass." ;
+    skos:definition "Wire formable but breaks if bent into a ring,  slight to moderate force required for deformation of the soil mass. " ;
     skos:inScheme glosis_cl:plasticityValueCode ;
     skos:notation "PL" ;
     skos:prefLabel "Plastic"@en ;
@@ -6891,7 +7138,7 @@ glosis_cl:plasticityValueCode-PVP a glosis_cl:PlasticityValueCode,
 
 glosis_cl:plasticityValueCode-SPL a glosis_cl:PlasticityValueCode,
         skos:Concept ;
-    skos:definition "Wire formable but breaks immediately if bent into a ring; soil mass deformed by very slight force." ;
+    skos:definition "Wire formable but breaks immediately if bent into a ring,  soil mass deformed by very slight force. " ;
     skos:inScheme glosis_cl:plasticityValueCode ;
     skos:notation "SPL" ;
     skos:prefLabel "Slightly plastic"@en ;
@@ -6906,7 +7153,7 @@ glosis_cl:plasticityValueCode-SPP a glosis_cl:PlasticityValueCode,
 
 glosis_cl:plasticityValueCode-VPL a glosis_cl:PlasticityValueCode,
         skos:Concept ;
-    skos:definition "Wire formable and can be bent into a ring; moderately strong to very strong force required for deformation of the soil mass." ;
+    skos:definition "Wire formable and can be bent into a ring,  moderately strong to very strong force required for deformation of the soil mass. " ;
     skos:inScheme glosis_cl:plasticityValueCode ;
     skos:notation "VPL" ;
     skos:prefLabel "Very plastic"@en ;
@@ -6914,7 +7161,7 @@ glosis_cl:plasticityValueCode-VPL a glosis_cl:PlasticityValueCode,
 
 glosis_cl:poresAbundanceValueCode-C a glosis_cl:PoresAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)50–200 ;> 2 mm (number)5–20" ;
+    skos:definition "< 2 mm (number)50–200 , > 2 mm (number)5–20 " ;
     skos:inScheme glosis_cl:poresAbundanceValueCode ;
     skos:notation "C" ;
     skos:prefLabel "Common"@en ;
@@ -6922,7 +7169,7 @@ glosis_cl:poresAbundanceValueCode-C a glosis_cl:PoresAbundanceValueCode,
 
 glosis_cl:poresAbundanceValueCode-F a glosis_cl:PoresAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)20–50;> 2 mm (number) 2–5" ;
+    skos:definition "< 2 mm (number)20–50, > 2 mm (number) 2–5 " ;
     skos:inScheme glosis_cl:poresAbundanceValueCode ;
     skos:notation "F" ;
     skos:prefLabel "Few"@en ;
@@ -6930,7 +7177,7 @@ glosis_cl:poresAbundanceValueCode-F a glosis_cl:PoresAbundanceValueCode,
 
 glosis_cl:poresAbundanceValueCode-M a glosis_cl:PoresAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)> 200 ;> 2 mm (number)> 20" ;
+    skos:definition "< 2 mm (number)> 200 , > 2 mm (number)> 20 " ;
     skos:inScheme glosis_cl:poresAbundanceValueCode ;
     skos:notation "M" ;
     skos:prefLabel "Many"@en ;
@@ -6938,7 +7185,7 @@ glosis_cl:poresAbundanceValueCode-M a glosis_cl:PoresAbundanceValueCode,
 
 glosis_cl:poresAbundanceValueCode-N a glosis_cl:PoresAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)0;> 2 mm (number)0" ;
+    skos:definition "< 2 mm (number)0, > 2 mm (number)0 " ;
     skos:inScheme glosis_cl:poresAbundanceValueCode ;
     skos:notation "N" ;
     skos:prefLabel "None"@en ;
@@ -6946,7 +7193,7 @@ glosis_cl:poresAbundanceValueCode-N a glosis_cl:PoresAbundanceValueCode,
 
 glosis_cl:poresAbundanceValueCode-V a glosis_cl:PoresAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)1–20 ;> 2 mm (number)1–2" ;
+    skos:definition "< 2 mm (number)1–20 , > 2 mm (number)1–2 " ;
     skos:inScheme glosis_cl:poresAbundanceValueCode ;
     skos:notation "V" ;
     skos:prefLabel "Very few"@en ;
@@ -7405,7 +7652,7 @@ glosis_cl:rockSizeValueCode-SB a glosis_cl:RockSizeValueCode,
 
 glosis_cl:rootsAbundanceValueCode-C a glosis_cl:RootsAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)50–200 ;> 2 mm (number)5–20" ;
+    skos:definition "< 2 mm (number)50–200 , > 2 mm (number)5–20 " ;
     skos:inScheme glosis_cl:rootsAbundanceValueCode ;
     skos:notation "C" ;
     skos:prefLabel "Common"@en ;
@@ -7413,7 +7660,7 @@ glosis_cl:rootsAbundanceValueCode-C a glosis_cl:RootsAbundanceValueCode,
 
 glosis_cl:rootsAbundanceValueCode-F a glosis_cl:RootsAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)20–50;> 2 mm (number) 2–5" ;
+    skos:definition "< 2 mm (number)20–50, > 2 mm (number) 2–5 " ;
     skos:inScheme glosis_cl:rootsAbundanceValueCode ;
     skos:notation "F" ;
     skos:prefLabel "Few"@en ;
@@ -7421,7 +7668,7 @@ glosis_cl:rootsAbundanceValueCode-F a glosis_cl:RootsAbundanceValueCode,
 
 glosis_cl:rootsAbundanceValueCode-M a glosis_cl:RootsAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)> 200 ;> 2 mm (number)> 20" ;
+    skos:definition "< 2 mm (number)> 200 , > 2 mm (number)> 20 " ;
     skos:inScheme glosis_cl:rootsAbundanceValueCode ;
     skos:notation "M" ;
     skos:prefLabel "Many"@en ;
@@ -7429,7 +7676,7 @@ glosis_cl:rootsAbundanceValueCode-M a glosis_cl:RootsAbundanceValueCode,
 
 glosis_cl:rootsAbundanceValueCode-N a glosis_cl:RootsAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)0;> 2 mm (number)0" ;
+    skos:definition "< 2 mm (number)0, > 2 mm (number)0 " ;
     skos:inScheme glosis_cl:rootsAbundanceValueCode ;
     skos:notation "N" ;
     skos:prefLabel "None"@en ;
@@ -7437,7 +7684,7 @@ glosis_cl:rootsAbundanceValueCode-N a glosis_cl:RootsAbundanceValueCode,
 
 glosis_cl:rootsAbundanceValueCode-V a glosis_cl:RootsAbundanceValueCode,
         skos:Concept ;
-    skos:definition "< 2 mm (number)1–20 ;> 2 mm (number)1–2" ;
+    skos:definition "< 2 mm (number)1–20 , > 2 mm (number)1–2 " ;
     skos:inScheme glosis_cl:rootsAbundanceValueCode ;
     skos:notation "V" ;
     skos:prefLabel "Very few"@en ;
@@ -7569,83 +7816,6 @@ glosis_cl:saltThicknessValueCode-V a glosis_cl:SaltThicknessValueCode,
     skos:notation "V" ;
     skos:prefLabel "Very thick"@en ;
     skos:topConceptOf glosis_cl:saltThicknessValueCode .
-
-glosis_cl:sandPropertyCode-SSF1 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF1" ;
-    skos:prefLabel "SandSizeFraction01"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF10 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF10" ;
-    skos:prefLabel "SandSizeFraction10"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF2 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF2" ;
-    skos:prefLabel "SandSizeFraction02"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF3 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF3" ;
-    skos:prefLabel "SandSizeFraction03"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF4 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF4" ;
-    skos:prefLabel "SandSizeFraction04"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF5 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF5" ;
-    skos:prefLabel "SandSizeFraction05"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF6 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF6" ;
-    skos:prefLabel "SandSizeFraction06"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF7 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF7" ;
-    skos:prefLabel "SandSizeFraction07"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF8 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF8" ;
-    skos:prefLabel "SandSizeFraction08"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSF9 a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSF9" ;
-    skos:prefLabel "SandSizeFraction09"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
-
-glosis_cl:sandPropertyCode-SSFT a glosis_cl:SandPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:sandPropertyCode ;
-    skos:notation "SSFT" ;
-    skos:prefLabel "SandSizeFractionTotal"@en ;
-    skos:topConceptOf glosis_cl:sandPropertyCode .
 
 glosis_cl:sandPropertyCode-SWD1 a glosis_cl:SandPropertyCode,
         skos:Concept ;
@@ -7825,34 +7995,6 @@ glosis_cl:sealingThicknessValueCode-V a glosis_cl:SealingThicknessValueCode,
     skos:notation "V" ;
     skos:prefLabel "Very thick"@en ;
     skos:topConceptOf glosis_cl:sealingThicknessValueCode .
-
-glosis_cl:siltPropertyCode-SSF1 a glosis_cl:SiltPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:siltPropertyCode ;
-    skos:notation "SSF1" ;
-    skos:prefLabel "SiltSizeFraction01"@en ;
-    skos:topConceptOf glosis_cl:siltPropertyCode .
-
-glosis_cl:siltPropertyCode-SSF2 a glosis_cl:SiltPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:siltPropertyCode ;
-    skos:notation "SSF2" ;
-    skos:prefLabel "SiltSizeFraction02"@en ;
-    skos:topConceptOf glosis_cl:siltPropertyCode .
-
-glosis_cl:siltPropertyCode-SSF3 a glosis_cl:SiltPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:siltPropertyCode ;
-    skos:notation "SSF3" ;
-    skos:prefLabel "SiltSizeFraction03"@en ;
-    skos:topConceptOf glosis_cl:siltPropertyCode .
-
-glosis_cl:siltPropertyCode-SSFT a glosis_cl:SiltPropertyCode,
-        skos:Concept ;
-    skos:inScheme glosis_cl:siltPropertyCode ;
-    skos:notation "SSFT" ;
-    skos:prefLabel "SiltSizeFractionTotal"@en ;
-    skos:topConceptOf glosis_cl:siltPropertyCode .
 
 glosis_cl:siltPropertyCode-SWDF1 a glosis_cl:SiltPropertyCode,
         skos:Concept ;
