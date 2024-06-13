@@ -13,9 +13,9 @@
      xmlns:ontology="http://dbpedia.org/ontology/"
      xmlns:property="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/codelists">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/codelists/1.4"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i038hk9bx3"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i038hk9bx5"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/codelists/1.3.1"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i08so7fqx3"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i08so7fqx5"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -24,14 +24,14 @@
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GLOSIS code lists</terms:title>
         <rdfs:comment xml:lang="en">This module contains all the code lists of observable properties and results codes.</rdfs:comment>
-        <owl:versionInfo>1.4</owl:versionInfo>
+        <owl:versionInfo>1.3.1</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
-        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0002-5851-2071"/>
-        <foaf:name>Luís Moreira de Sousa</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
         <schema:affiliation>
             <rdf:Description>
-                <foaf:name>ISRIC</foaf:name>
+                <foaf:name>PSNC</foaf:name>
             </rdf:Description>
         </schema:affiliation>
     </rdf:Description>
@@ -44,11 +44,11 @@
         </schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid5">
-        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
-        <foaf:name>Raul Palma</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0002-5851-2071"/>
+        <foaf:name>Luís Moreira de Sousa</foaf:name>
         <schema:affiliation>
             <rdf:Description>
-                <foaf:name>PSNC</foaf:name>
+                <foaf:name>ISRIC</foaf:name>
             </rdf:Description>
         </schema:affiliation>
     </rdf:Description>
@@ -1885,9 +1885,9 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluoxa"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alupyr"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat"/>
@@ -12527,30 +12527,11 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">
-        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
-        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <ontology:inchi>1S/Al</ontology:inchi>
-        <ontology:pubchem>259</ontology:pubchem>
-        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <skos:definition>Sum of the oxalate-extractable aluminium concentration plus half the oxalate-extractable iron concentration</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Alu</skos:notation>
-        <skos:prefLabel xml:lang="en">Aluminium (Al)</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-        <skos:notation>AluFe</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) + 0.5 Fe oxalate</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
@@ -12566,9 +12547,10 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <ontology:inchi>1S/Al</ontology:inchi>
-        <ontology:pubchem>259</ontology:pubchem>
+        <ontology:pubchem>5359268</ontology:pubchem>
         <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>&quot;Free&quot; aluminium content extracted from amorphous compounds (weathering products) as well as crystaline, primary aluminium compounds (parent material) in the soil.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aludit</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - dithionite extractable</skos:prefLabel>
@@ -12589,9 +12571,31 @@
         <ontology:pubchem>104727</ontology:pubchem>
         <property:inchikey>REDXJYDRNCIFBQ-UHFFFAOYSA-N</property:inchikey>
         <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/104727"/>
+        <skos:definition>Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aluexc</skos:notation>
-        <skos:prefLabel xml:lang="en">Aluminium (Al+++) - exchangeable</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Aluminium exchangeable</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>5359268</ontology:pubchem>
+        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>Aluminium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Aluext</skos:notation>
+        <skos:prefLabel xml:lang="en">Aluminium extractable</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12606,9 +12610,10 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <ontology:inchi>1S/Al</ontology:inchi>
-        <ontology:pubchem>259</ontology:pubchem>
+        <ontology:pubchem>5359268</ontology:pubchem>
         <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>&quot;Active&quot; aluminium content extracted from amorphous aluminium compounds that are the products of the weathering of primary soil particles</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aluoxa</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - oxalate extractable</skos:prefLabel>
@@ -12626,9 +12631,10 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <ontology:inchi>1S/Al</ontology:inchi>
-        <ontology:pubchem>259</ontology:pubchem>
+        <ontology:pubchem>5359268</ontology:pubchem>
         <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>Aluminium in soil that is organically bound in organo-metal complexes</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Alupyr</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - pyrophosphate extractable</skos:prefLabel>
@@ -12649,9 +12655,10 @@
         <ontology:pubchem>104727</ontology:pubchem>
         <property:inchikey>REDXJYDRNCIFBQ-UHFFFAOYSA-N</property:inchikey>
         <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/104727"/>
+        <skos:definition>Measure to describe the relative abundance of alumium in the soil. It is the percentage of the CEC occupied by aluminium</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Alusat</skos:notation>
-        <skos:prefLabel xml:lang="en">Aluminium (Al+++) - saturation  (ESP)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Aluminium saturation</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
