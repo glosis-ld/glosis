@@ -23,8 +23,8 @@
         <owl:imports rdf:resource="http://w3id.org/glosis/model/unit/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i038ge6tx1001"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i038ge6tx1003"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i08sp5i1x1001"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i08sp5i1x1003"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -38,11 +38,11 @@
     <rdf:Description rdf:nodeID="genid1">
         <schema:affiliation>
             <rdf:Description>
-                <foaf:name>PSNC</foaf:name>
+                <foaf:name>ISRIC</foaf:name>
             </rdf:Description>
         </schema:affiliation>
-        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
-        <foaf:name>Raul Palma</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0002-5851-2071"/>
+        <foaf:name>Luís Moreira de Sousa</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
         <schema:affiliation>
@@ -55,11 +55,11 @@
     <rdf:Description rdf:nodeID="genid5">
         <schema:affiliation>
             <rdf:Description>
-                <foaf:name>ISRIC</foaf:name>
+                <foaf:name>PSNC</foaf:name>
             </rdf:Description>
         </schema:affiliation>
-        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0002-5851-2071"/>
-        <foaf:name>Luís Moreira de Sousa</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
     </rdf:Description>
     
 
@@ -106,24 +106,24 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay -->
+    <!-- http://w3id.org/glosis/model/codelists/TextclayPropertyCode -->
 
 
-    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay"/>
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextclayPropertyCode"/>
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand -->
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode -->
 
 
-    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand"/>
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt -->
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode -->
 
 
-    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt"/>
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
     
 
 
@@ -588,7 +588,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">AluminiumExtractableElements</rdfs:label>
@@ -2015,7 +2015,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/TextclayPropertyCode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5269,7 +5269,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5410,7 +5410,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6602,6 +6602,13 @@
 
 
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/PH"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext"/>
     
 
 
