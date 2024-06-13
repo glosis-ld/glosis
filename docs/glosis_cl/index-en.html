@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/codelists","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/codelists","name":"GLOSIS code lists", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology.  The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources.  The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or SKOS for the representation of codelists.<br>This module contains all the code lists of observable properties and results codes.", "datePublished":"Date of release", "version":"1.4", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"},{"@type":"Person","name":"Luís Moreira de Sousa","url":"http://orcid.org/0000-0002-5851-2071"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/codelists","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/codelists","name":"GLOSIS code lists", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology.  The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources.  The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or SKOS for the representation of codelists.<br>This module contains all the code lists of observable properties and results codes.", "datePublished":"Date of release", "version":"1.3.1", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"},{"@type":"Person","name":"Luís Moreira de Sousa","url":"http://orcid.org/0000-0002-5851-2071"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -60,9 +60,9 @@ $(function(){
 
 <dl>
 <dt>This version:</dt>
-<dd><a href="http://w3id.org/glosis/model/codelists/1.4">http://w3id.org/glosis/model/codelists/1.4</a></dd>
+<dd><a href="http://w3id.org/glosis/model/codelists/1.3.1">http://w3id.org/glosis/model/codelists/1.3.1</a></dd>
 <dt>Revision:</dt>
-<dd>1.4</dd>
+<dd>1.3.1</dd>
 <dt>Authors:</dt>
 <dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a></dd><dd>Bogusz Janiak</dd><dd><a href="http://orcid.org/0000-0002-5851-2071">Luís Moreira de Sousa</a></dd>
 
@@ -712,11 +712,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#/physioChemicalPropertyCode-Alu"
-         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">Aluminium (Al)</a>
-   </li>
-   <li>
-      <a href="#/physioChemicalPropertyCode-AluFe"
-         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe">Aluminium (Al) + 0.5 Fe oxalate</a>
+         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">Aluminium (Al) + 0.5 Fe oxalate</a>
    </li>
    <li>
       <a href="#/physioChemicalPropertyCode-Aludit"
@@ -732,11 +728,15 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#/physioChemicalPropertyCode-Aluexc"
-         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">Aluminium (Al+++) - exchangeable</a>
+         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">Aluminium exchangeable</a>
+   </li>
+   <li>
+      <a href="#/physioChemicalPropertyCode-Aluext"
+         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext">Aluminium extractable</a>
    </li>
    <li>
       <a href="#/physioChemicalPropertyCode-Alusat"
-         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">Aluminium (Al+++) - saturation  (ESP)</a>
+         title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">Aluminium saturation</a>
    </li>
    <li>
       <a href="#/lithologyValueCode-MB5"
@@ -8402,13 +8402,13 @@ This section provides details for each class and property defined by GloSIS Onto
          <dd>{ <a href="#/physioChemicalPropertyCode-Aciexc"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc">Acidity - exchangeable</a> , <a href="#/physioChemicalPropertyCode-Aciext"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciext">Acidity - extractable</a> , <a href="#/physioChemicalPropertyCode-Alu"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">Aluminium (Al)</a> , <a href="#/physioChemicalPropertyCode-AluFe"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe">Aluminium (Al) + 0.5 Fe oxalate</a> , <a href="#/physioChemicalPropertyCode-Aludit"
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">Aluminium (Al) + 0.5 Fe oxalate</a> , <a href="#/physioChemicalPropertyCode-Aludit"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit">Aluminium (Al) - dithionite extractable</a> , <a href="#/physioChemicalPropertyCode-Aluexc"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">Aluminium (Al+++) - exchangeable</a> , <a href="#/physioChemicalPropertyCode-Aluoxa"
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">Aluminium exchangeable</a> , <a href="#/physioChemicalPropertyCode-Aluext"
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext">Aluminium extractable</a> , <a href="#/physioChemicalPropertyCode-Aluoxa"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluoxa">Aluminium (Al) - oxalate extractable</a> , <a href="#/physioChemicalPropertyCode-Alupyr"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alupyr">Aluminium (Al) - pyrophosphate extractable</a> , <a href="#/physioChemicalPropertyCode-Alusat"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">Aluminium (Al+++) - saturation  (ESP)</a> , <a href="#/physioChemicalPropertyCode-Avavol"
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">Aluminium saturation</a> , <a href="#/physioChemicalPropertyCode-Avavol"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Avavol">Available water capacity - volumetric (FC to WP)</a> , <a href="#/physioChemicalPropertyCode-Bascal"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bascal">Base saturation - calculated</a> , <a href="#/physioChemicalPropertyCode-Basexc"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Basexc">Bases - exchangeable</a> , <a href="#/physioChemicalPropertyCode-Bassum"
@@ -8507,9 +8507,7 @@ This section provides details for each class and property defined by GloSIS Onto
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Aciext"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciext">Acidity - extractable</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Alu"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">Aluminium (Al)</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-AluFe"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe">Aluminium (Al) + 0.5 Fe oxalate</a>
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">Aluminium (Al) + 0.5 Fe oxalate</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Aludit"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit">Aluminium (Al) - dithionite extractable</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Aluoxa"
@@ -8517,9 +8515,11 @@ This section provides details for each class and property defined by GloSIS Onto
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Alupyr"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alupyr">Aluminium (Al) - pyrophosphate extractable</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Aluexc"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">Aluminium (Al+++) - exchangeable</a>
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">Aluminium exchangeable</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Aluext"
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext">Aluminium extractable</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Alusat"
-               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">Aluminium (Al+++) - saturation  (ESP)</a>
+               title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">Aluminium saturation</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Avavol"
                title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Avavol">Available water capacity - volumetric (FC to WP)</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#/physioChemicalPropertyCode-Bascal"
@@ -10820,11 +10820,7 @@ This section provides details for each class and property defined by GloSIS Onto
       </li>
       <li>
          <a href="#/physioChemicalPropertyCode-Alu"
-            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">Aluminium (Al)</a>
-      </li>
-      <li>
-         <a href="#/physioChemicalPropertyCode-AluFe"
-            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe">Aluminium (Al) + 0.5 Fe oxalate</a>
+            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">Aluminium (Al) + 0.5 Fe oxalate</a>
       </li>
       <li>
          <a href="#/physioChemicalPropertyCode-Aludit"
@@ -10840,11 +10836,15 @@ This section provides details for each class and property defined by GloSIS Onto
       </li>
       <li>
          <a href="#/physioChemicalPropertyCode-Aluexc"
-            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">Aluminium (Al+++) - exchangeable</a>
+            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc">Aluminium exchangeable</a>
+      </li>
+      <li>
+         <a href="#/physioChemicalPropertyCode-Aluext"
+            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext">Aluminium extractable</a>
       </li>
       <li>
          <a href="#/physioChemicalPropertyCode-Alusat"
-            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">Aluminium (Al+++) - saturation  (ESP)</a>
+            title="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat">Aluminium saturation</a>
       </li>
       <li>
          <a href="#/lithologyValueCode-MB5"
@@ -15988,46 +15988,15 @@ This section provides details for each class and property defined by GloSIS Onto
       </dl>
    </div>
    <div class="entity" id="/physioChemicalPropertyCode-Alu">
-      <h3>Aluminium (Al)<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="http://dbpedia.org/ontology/ChemicalCompound"
-               target="_blank"
-               title="http://dbpedia.org/ontology/ChemicalCompound">chemical compound</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://dbpedia.org/ontology/ChemicalSubstance"
-               target="_blank"
-               title="http://dbpedia.org/ontology/ChemicalSubstance">chemical substance</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#/PhysioChemicalPropertyCode"
-               title="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode">Code list for PhysioChemicalProperty - codelist class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#Concept"
-               target="_blank"
-               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="/physioChemicalPropertyCode-AluFe">
       <h3>Aluminium (Al) + 0.5 Fe oxalate<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-AluFe</p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu</p>
+      <div class="comment">
+         <span class="markdown">Sum of the oxalate-extractable aluminium concentration plus half the oxalate-extractable iron concentration</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -16050,6 +16019,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit</p>
+      <div class="comment">
+         <span class="markdown">"Free" aluminium content extracted from amorphous compounds (weathering products) as well as crystaline, primary aluminium compounds (parent material) in the soil.</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -16084,6 +16056,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluoxa</p>
+      <div class="comment">
+         <span class="markdown">"Active" aluminium content extracted from amorphous aluminium compounds that are the products of the weathering of primary soil particles</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -16118,6 +16093,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alupyr</p>
+      <div class="comment">
+         <span class="markdown">Aluminium in soil that is organically bound in organo-metal complexes</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -16146,12 +16124,52 @@ This section provides details for each class and property defined by GloSIS Onto
       </dl>
    </div>
    <div class="entity" id="/physioChemicalPropertyCode-Aluexc">
-      <h3>Aluminium (Al+++) - exchangeable<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Aluminium exchangeable<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc</p>
+      <div class="comment">
+         <span class="markdown">Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://dbpedia.org/ontology/ChemicalCompound"
+               target="_blank"
+               title="http://dbpedia.org/ontology/ChemicalCompound">chemical compound</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://dbpedia.org/ontology/ChemicalSubstance"
+               target="_blank"
+               title="http://dbpedia.org/ontology/ChemicalSubstance">chemical substance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#/PhysioChemicalPropertyCode"
+               title="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode">Code list for PhysioChemicalProperty - codelist class</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/physioChemicalPropertyCode-Aluext">
+      <h3>Aluminium extractable<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext</p>
+      <div class="comment">
+         <span class="markdown">Aluminium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -16180,12 +16198,15 @@ This section provides details for each class and property defined by GloSIS Onto
       </dl>
    </div>
    <div class="entity" id="/physioChemicalPropertyCode-Alusat">
-      <h3>Aluminium (Al+++) - saturation  (ESP)<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Aluminium saturation<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat</p>
+      <div class="comment">
+         <span class="markdown">Measure to describe the relative abundance of alumium in the soil. It is the percentage of the CEC occupied by aluminium</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
