@@ -13,9 +13,9 @@
      xmlns:ontology="http://dbpedia.org/ontology/"
      xmlns:property="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/codelists">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/codelists/v1.3.1"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1hgdl3n2cx3"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1hgdl3n2cx5"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/codelists/1.4"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i2u43h80x3"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i2u43h80x5"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -24,7 +24,7 @@
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GLOSIS code lists</terms:title>
         <rdfs:comment xml:lang="en">This module contains all the code lists of observable properties and results codes.</rdfs:comment>
-        <owl:versionInfo>v1.3.1</owl:versionInfo>
+        <owl:versionInfo>1.4</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
@@ -169,6 +169,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
     
 
 
@@ -571,9 +578,6 @@
                 <owl:oneOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CC"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CNC"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF1"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF2"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CT"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CWT"/>
                 </owl:oneOf>
             </owl:Class>
@@ -1883,6 +1887,7 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aludit"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluoxa"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alupyr"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alusat"/>
@@ -1894,7 +1899,11 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bortot"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brod"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Brot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDwhole"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CaN"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calfra"/>
@@ -1903,6 +1912,7 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Car"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carful"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carhum"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carorg"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carpyr"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartoh"/>
@@ -1911,7 +1921,11 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Chl"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Copext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Coptot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hyd"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irodit"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iroext"/>
@@ -1928,14 +1942,17 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manoxa"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manpyr"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mantot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit2"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit3"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pho"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phooxa"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoret"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Photot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potexc"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potsol"/>
@@ -1948,12 +1965,10 @@
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodsol"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodtot"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sul"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sulext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sultot"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zin"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zinext"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-pH"/>
@@ -1965,6 +1980,7 @@
         <rdfs:comment xml:lang="en">This code list provides the PhysioChemicalProperty.</rdfs:comment>
         <rdfs:label xml:lang="en">Code list for PhysioChemicalProperty - codelist class</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:definition>ISRIC Report 2014/01: Africa Soil Profiles Database Version 1.2. Annex 3a</skos:definition>
         <skos:definition>ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
     </owl:Class>
     
@@ -2341,17 +2357,6 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF1"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF10"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF2"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF3"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF4"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF5"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF6"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF7"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF8"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF9"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SWD1"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SWD2"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SWD3"/>
@@ -2454,10 +2459,6 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF1"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF2"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF3"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SWDF1"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SWDF2"/>
                     <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SWDFT"/>
@@ -2658,6 +2659,79 @@
         <rdfs:label xml:lang="en">Code list for SurfaceAgeValue - codelist class</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode"/>
         <skos:definition>Guidelines for Soil Description issued by the FAO: table 13</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextclayPropertyCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextclayPropertyCode">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textclayPropertyCode-Cl"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISO"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISSS"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_USDA"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISO"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISSS"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_USDA"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISO"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISSS"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_USDA"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISO"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISSS"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_USDA"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_ISSS"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_USDA"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_ISSS"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_USDA"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISO"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISSS"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_USDA"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_ISO"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_USDA"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_ISO"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_USDA"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-mSi_ISO"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
     </owl:Class>
     
 
@@ -2892,6 +2966,455 @@
      -->
 
 
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextclayPropertyCode -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextclayPropertyCode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextclayPropertyCode-Cl -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextclayPropertyCode-Cl">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextclayPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Very fine mineral particles smaller than 2 µm</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextclayPropertyCode"/>
+        <skos:notation>Cl</skos:notation>
+        <skos:prefLabel xml:lang="en">Clay (&lt; 0.002 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1016/j.geoderma.2022.115783"/>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/TextclayPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Content of mineral particles with sizes between 0.063-2 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO"/>
+        <skos:notation>Sa_ISO</skos:notation>
+        <skos:prefLabel xml:lang="en">Sand (0.063  - 2 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.iso.org/standard/66345.html"/>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Content of mineral particles with sizes between 0.020-2 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS"/>
+        <skos:notation>Sa_ISSS</skos:notation>
+        <skos:prefLabel xml:lang="en">Sand (0.02 - 2 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1016/j.geoderma.2022.115783"/>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Content of mineral particles with sizes between 0.050-2 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA"/>
+        <skos:notation>Sa_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Sand (0.050  - 2 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO"/>
+        <skos:definition>Content of mineral particles with sizes between 0.63-2 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>cSa_ISO</skos:notation>
+        <skos:prefLabel xml:lang="en">Coarse sand (0.63 - 2 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.iso.org/standard/66345.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS"/>
+        <skos:definition>Content of mineral particles with sizes between 0.2-2 mm in soil</skos:definition>
+        <skos:definition>Content of mineral particles with sizes between 0.63-1.25 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>cSa_ISSS</skos:notation>
+        <skos:prefLabel xml:lang="en">Coarse sand (0.2 - 2 mm)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Coarse sand (0.63 - 1.25 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1016/j.geoderma.2022.115783"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA"/>
+        <skos:definition>Content of mineral particles with sizes between 0.5-1 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>cSa_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Coarse sand (0.5 - 1 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO"/>
+        <skos:definition>Content of mineral particles with sizes between 0.063-0.2 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>fSa_ISO</skos:notation>
+        <skos:prefLabel xml:lang="en">Fine sand (0.063 - 0.2 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.iso.org/standard/66345.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS"/>
+        <skos:definition>Content of mineral particles with sizes between 0.02-0.2 mm in soil</skos:definition>
+        <skos:definition>Content of mineral particles with sizes between 0.125-0.2 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>fSa_ISSS</skos:notation>
+        <skos:prefLabel xml:lang="en">Fine sand (0.02 - 0.2 mm)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Fine sand (0.125 - 0.2 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1016/j.geoderma.2022.115783"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA"/>
+        <skos:definition>Content of mineral particles with sizes between 0.1-0.25 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>fSa_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Fine sand (0.1 - 0.25 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO"/>
+        <skos:definition>Content of mineral particles with sizes between 0.02-0.63 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>mSa_ISO</skos:notation>
+        <skos:prefLabel xml:lang="en">Medium sand (0.2 - 0.63 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.iso.org/standard/66345.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS"/>
+        <skos:definition>Content of mineral particles with sizes between 0.2-0.63 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>mSa_ISSS</skos:notation>
+        <skos:prefLabel xml:lang="en">Medium sand (0.2 - 0.63 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1016/j.geoderma.2022.115783"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA"/>
+        <skos:definition>Content of mineral particles with sizes between 0.25-0.5 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>mSa_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Medium sand (0.25 - 0.5 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS"/>
+        <skos:definition>Content of mineral particles with sizes between 1.25-2 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>vcSa_ISSS</skos:notation>
+        <skos:prefLabel xml:lang="en">Very coarse sand (1.25 - 2 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1016/j.geoderma.2022.115783"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA"/>
+        <skos:definition>Content of mineral particles with sizes between 1-2 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>vcSa_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Very coarse sand (1 - 2 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS"/>
+        <skos:definition>Content of mineral particles with sizes between 0.063-0.125 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>vfSa_ISSS</skos:notation>
+        <skos:prefLabel xml:lang="en">Very fine sand (0.063 - 0.125 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1016/j.geoderma.2022.115783"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA"/>
+        <skos:definition>Content of mineral particles with sizes between 0.05-0.1 mm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:notation>vfSa_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Very fine sand (0.05 - 0.1 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Content of mineral particles with sizes between 2-63 µm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO"/>
+        <skos:notation>Si_ISO</skos:notation>
+        <skos:prefLabel xml:lang="en">Silt (0.002 - 0.063 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.iso.org/standard/66345.html"/>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISSS">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Content of mineral particles with sizes between 2-20 µm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:notation>Si_ISSS</skos:notation>
+        <skos:prefLabel xml:lang="en">Silt (0.002 - 0.02 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1016/j.geoderma.2022.115783"/>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Content of mineral particles with sizes between 2-50 µm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA"/>
+        <skos:narrower rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA"/>
+        <skos:notation>Si_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Silt (0.002 - 0.05 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO"/>
+        <skos:definition>Content of mineral particles with sizes between 20-63 µm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:notation>cSi_ISO</skos:notation>
+        <skos:prefLabel xml:lang="en">Coarse silt (0.02 - 0.063 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.iso.org/standard/66345.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA"/>
+        <skos:definition>Content of mineral particles with sizes between 20-50 µm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:notation>cSi_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Coarse silt (0.02 - 0.05 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO"/>
+        <skos:definition>Content of mineral particles with sizes between 2-6.3 µm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:notation>fSi_ISO</skos:notation>
+        <skos:prefLabel xml:lang="en">Fine silt (0.002 - 0.0063 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.iso.org/standard/66345.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA"/>
+        <skos:definition>Content of mineral particles with sizes between 2-20 µm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:notation>fSi_USDA</skos:notation>
+        <skos:prefLabel xml:lang="en">Fine silt (0.002 - 0.02 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://doi.org/10.1111/j.1365-3091.2012.01335.x"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO"/>
+        <skos:definition>Content of mineral particles with sizes between 6.3-20 µm in soil</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:notation>mSi_ISO</skos:notation>
+        <skos:prefLabel xml:lang="en">Medium silt (0.0063 - 0.02 mm)</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.iso.org/standard/66345.html"/>
+    </owl:NamedIndividual>
     
 
 
@@ -3209,7 +3732,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/boundaryClassificationValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/BoundaryClassificationValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0.5–2</skos:definition>
+        <skos:definition>0.5-2</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/boundaryClassificationValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Clear</skos:prefLabel>
@@ -3268,7 +3791,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/boundaryDistinctnessValueCode-A">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/BoundaryDistinctnessValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0cm–2cm</skos:definition>
+        <skos:definition>0cm-2cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/boundaryDistinctnessValueCode"/>
         <skos:notation>A</skos:notation>
         <skos:prefLabel xml:lang="en">Abrupt</skos:prefLabel>
@@ -3283,7 +3806,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/boundaryDistinctnessValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/BoundaryDistinctnessValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2cm–5cm</skos:definition>
+        <skos:definition>2cm-5cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/boundaryDistinctnessValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Clear</skos:prefLabel>
@@ -3313,7 +3836,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/boundaryDistinctnessValueCode-G">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/BoundaryDistinctnessValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5cm–15cm</skos:definition>
+        <skos:definition>5cm-15cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/boundaryDistinctnessValueCode"/>
         <skos:notation>G</skos:notation>
         <skos:prefLabel xml:lang="en">Gradual</skos:prefLabel>
@@ -3464,7 +3987,7 @@
         <skos:definition>Loamy soils with high clay content, clayey soils. Sample remains intact when dropped, no further disintegration after application of very large pressure.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/bulkDensityMineralValueCode"/>
         <skos:notation>BD4</skos:notation>
-        <skos:prefLabel xml:lang="en">Knife penetrates only 1–2 cm into the moist soil, some effort required, sample disintegrates into few fragments, which cannot be subdivided further.</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Knife penetrates only 1-2 cm into the moist soil, some effort required, sample disintegrates into few fragments, which cannot be subdivided further.</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/bulkDensityMineralValueCode"/>
     </owl:NamedIndividual>
     
@@ -3521,7 +4044,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/bulkDensityPeatValueCode"/>
         <skos:notation>BD2</skos:notation>
-        <skos:prefLabel xml:lang="en">0.04–0.07g cm-3</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">0.04-0.07g cm-3</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/bulkDensityPeatValueCode"/>
     </owl:NamedIndividual>
     
@@ -3535,7 +4058,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/bulkDensityPeatValueCode"/>
         <skos:notation>BD3</skos:notation>
-        <skos:prefLabel xml:lang="en">0.07–0.11g cm-3</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">0.07-0.11g cm-3</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/bulkDensityPeatValueCode"/>
     </owl:NamedIndividual>
     
@@ -3549,7 +4072,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/bulkDensityPeatValueCode"/>
         <skos:notation>BD4</skos:notation>
-        <skos:prefLabel xml:lang="en">0.11–0.17g cm-3</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">0.11-0.17g cm-3</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/bulkDensityPeatValueCode"/>
     </owl:NamedIndividual>
     
@@ -3605,7 +4128,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/carbonatesContentValueCode"/>
         <skos:notation>MO</skos:notation>
-        <skos:prefLabel xml:lang="en">≈ 2–10 Moderately calcareous Visible effervescence.</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">≈ 2-10 Moderately calcareous Visible effervescence.</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/carbonatesContentValueCode"/>
     </owl:NamedIndividual>
     
@@ -3633,7 +4156,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/carbonatesContentValueCode"/>
         <skos:notation>SL</skos:notation>
-        <skos:prefLabel xml:lang="en">≈ 0–2 Slightly calcareous Audible effervescence but not visible.</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">≈ 0-2 Slightly calcareous Audible effervescence but not visible.</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/carbonatesContentValueCode"/>
     </owl:NamedIndividual>
     
@@ -3647,7 +4170,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/carbonatesContentValueCode"/>
         <skos:notation>ST</skos:notation>
-        <skos:prefLabel xml:lang="en">≈ 10–25 Strongly calcareous Strong visible effervescence. Bubbles form a low foam.</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">≈ 10-25 Strongly calcareous Strong visible effervescence. Bubbles form a low foam.</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/carbonatesContentValueCode"/>
     </owl:NamedIndividual>
     
@@ -3815,7 +4338,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/cementationContinuityValueCode-D">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/CementationContinuityValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>The layer is 50–90 percent cemented or compacted, and in general shows a regular appearance.</skos:definition>
+        <skos:definition>The layer is 50-90 percent cemented or compacted, and in general shows a regular appearance.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cementationContinuityValueCode"/>
         <skos:notation>D</skos:notation>
         <skos:prefLabel xml:lang="en">Discontinuous</skos:prefLabel>
@@ -4038,7 +4561,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cementationNatureValueCode"/>
         <skos:notation>CS</skos:notation>
-        <skos:prefLabel xml:lang="en">Clay–sesquioxides</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Clay-sesquioxides</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cementationNatureValueCode"/>
     </owl:NamedIndividual>
     
@@ -4066,7 +4589,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cementationNatureValueCode"/>
         <skos:notation>FM</skos:notation>
-        <skos:prefLabel xml:lang="en">Iron–manganese (sesquioxides)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Iron-manganese (sesquioxides)</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cementationNatureValueCode"/>
     </owl:NamedIndividual>
     
@@ -4080,7 +4603,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cementationNatureValueCode"/>
         <skos:notation>FO</skos:notation>
-        <skos:prefLabel xml:lang="en">Iron–organic matter</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Iron-organic matter</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cementationNatureValueCode"/>
     </owl:NamedIndividual>
     
@@ -4136,7 +4659,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cementationNatureValueCode"/>
         <skos:notation>KQ</skos:notation>
-        <skos:prefLabel xml:lang="en">Carbonates–silica</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carbonates-silica</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cementationNatureValueCode"/>
     </owl:NamedIndividual>
     
@@ -4240,48 +4763,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF1 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF1">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ClayPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/clayPropertyCode"/>
-        <skos:notation>CSF1</skos:notation>
-        <skos:prefLabel xml:lang="en">ClaySizeFraction01</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/clayPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF2 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CSF2">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ClayPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/clayPropertyCode"/>
-        <skos:notation>CSF2</skos:notation>
-        <skos:prefLabel xml:lang="en">ClaySizeFraction02</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/clayPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/clayPropertyCode-CT -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/clayPropertyCode-CT">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ClayPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/clayPropertyCode"/>
-        <skos:notation>CT</skos:notation>
-        <skos:prefLabel xml:lang="en">ClayTotal</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/clayPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/codelists/clayPropertyCode-CWT -->
 
 
@@ -4316,7 +4797,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode-A">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/CoatingAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>40–80</skos:definition>
+        <skos:definition>40-80</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode"/>
         <skos:notation>A</skos:notation>
         <skos:prefLabel xml:lang="en">Abundant</skos:prefLabel>
@@ -4331,7 +4812,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/CoatingAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5–15</skos:definition>
+        <skos:definition>5-15</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Common</skos:prefLabel>
@@ -4361,7 +4842,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/CoatingAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–5</skos:definition>
+        <skos:definition>2-5</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Few</skos:prefLabel>
@@ -4376,7 +4857,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/CoatingAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>15–40</skos:definition>
+        <skos:definition>15-40</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Many</skos:prefLabel>
@@ -4406,7 +4887,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode-V">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/CoatingAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0–2</skos:definition>
+        <skos:definition>0-2</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/coatingAbundanceValueCode"/>
         <skos:notation>V</skos:notation>
         <skos:prefLabel xml:lang="en">Very few </skos:prefLabel>
@@ -4435,7 +4916,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/coatingContrastValueCode-D">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/CoatingContrastValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Surface of coating is distinctly smoother or different in colour from the adjacent surface. Fine sand grains are enveloped in the coating but their outlines are still visible. Lamellae are 2–5 mm thick.</skos:definition>
+        <skos:definition>Surface of coating is distinctly smoother or different in colour from the adjacent surface. Fine sand grains are enveloped in the coating but their outlines are still visible. Lamellae are 2-5 mm thick.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/coatingContrastValueCode"/>
         <skos:notation>D</skos:notation>
         <skos:prefLabel xml:lang="en">Distinct</skos:prefLabel>
@@ -4984,7 +5465,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/consistenceDryValueCode-EHA">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ConsistenceDryValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Extremely resistant to pressure; cannot be broken in the hands.</skos:definition>
+        <skos:definition>Extremely resistant to pressure,  cannot be broken in the hands. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/consistenceDryValueCode"/>
         <skos:notation>EHA</skos:notation>
         <skos:prefLabel xml:lang="en">Extremely hard</skos:prefLabel>
@@ -4999,7 +5480,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/consistenceDryValueCode-HA">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ConsistenceDryValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Moderately resistant to pressure; can be broken in the hands; not breakable between thumb and forefinger.</skos:definition>
+        <skos:definition>Moderately resistant to pressure,  can be broken in the hands ,  not breakable between thumb and forefinger. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/consistenceDryValueCode"/>
         <skos:notation>HA</skos:notation>
         <skos:prefLabel xml:lang="en">Hard</skos:prefLabel>
@@ -5044,7 +5525,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/consistenceDryValueCode-SHA">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ConsistenceDryValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Weakly resistant to pressure; easily broken between thumb and forefinger.</skos:definition>
+        <skos:definition>Weakly resistant to pressure,  easily broken between thumb and forefinger. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/consistenceDryValueCode"/>
         <skos:notation>SHA</skos:notation>
         <skos:prefLabel xml:lang="en">Slightly hard</skos:prefLabel>
@@ -5074,7 +5555,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/consistenceDryValueCode-SO">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ConsistenceDryValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Soil mass is very weakly coherent and fragile; breaks to powder or individual grains under very slight pressure.</skos:definition>
+        <skos:definition>Soil mass is very weakly coherent and fragile,  breaks to powder or individual grains under very slight pressure. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/consistenceDryValueCode"/>
         <skos:notation>SO</skos:notation>
         <skos:prefLabel xml:lang="en">Soft</skos:prefLabel>
@@ -5104,7 +5585,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/consistenceDryValueCode-VHA">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ConsistenceDryValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Very hard Very resistant to pressure; can be broken in the hands only with difficulty.</skos:definition>
+        <skos:definition>Very hard Very resistant to pressure,  can be broken in the hands only with difficulty. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/consistenceDryValueCode"/>
         <skos:notation>VHA</skos:notation>
         <skos:prefLabel xml:lang="en">Very hard</skos:prefLabel>
@@ -5133,7 +5614,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/consistenceMoistValueCode-EFI">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ConsistenceMoistValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Soil material crushes only under very strong pressure; cannot be crushed between thumb and forefinger.</skos:definition>
+        <skos:definition>Soil material crushes only under very strong pressure,  cannot be crushed between thumb and forefinger. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/consistenceMoistValueCode"/>
         <skos:notation>EFI</skos:notation>
         <skos:prefLabel xml:lang="en">Extremely firm</skos:prefLabel>
@@ -5193,7 +5674,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/consistenceMoistValueCode-VFI">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ConsistenceMoistValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Soil material crushes under strong pressures; barely crushable between thumb and forefinger.</skos:definition>
+        <skos:definition>Soil material crushes under strong pressures,  barely crushable between thumb and forefinger. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/consistenceMoistValueCode"/>
         <skos:notation>VFI</skos:notation>
         <skos:prefLabel xml:lang="en">Very firm </skos:prefLabel>
@@ -5298,7 +5779,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cracksDepthValueCode"/>
         <skos:notation>D</skos:notation>
-        <skos:prefLabel xml:lang="en">Deep 10–20</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Deep 10-20</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cracksDepthValueCode"/>
     </owl:NamedIndividual>
     
@@ -5312,7 +5793,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cracksDepthValueCode"/>
         <skos:notation>M</skos:notation>
-        <skos:prefLabel xml:lang="en">Medium 2–10</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Medium 2-10</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cracksDepthValueCode"/>
     </owl:NamedIndividual>
     
@@ -5382,7 +5863,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cracksDistanceValueCode"/>
         <skos:notation>D</skos:notation>
-        <skos:prefLabel xml:lang="en">Closely spaced 0.2–0.5</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Closely spaced 0.2-0.5</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cracksDistanceValueCode"/>
     </owl:NamedIndividual>
     
@@ -5396,7 +5877,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cracksDistanceValueCode"/>
         <skos:notation>M</skos:notation>
-        <skos:prefLabel xml:lang="en">Moderately widely spaced 0.5–2</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Moderately widely spaced 0.5-2</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cracksDistanceValueCode"/>
     </owl:NamedIndividual>
     
@@ -5424,7 +5905,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cracksDistanceValueCode"/>
         <skos:notation>W</skos:notation>
-        <skos:prefLabel xml:lang="en">Widely spaced 2–5</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Widely spaced 2-5</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cracksDistanceValueCode"/>
     </owl:NamedIndividual>
     
@@ -5480,7 +5961,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cracksWidthValueCode"/>
         <skos:notation>M</skos:notation>
-        <skos:prefLabel xml:lang="en">Medium 1cm–2cm</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Medium 1cm-2cm</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cracksWidthValueCode"/>
     </owl:NamedIndividual>
     
@@ -5494,7 +5975,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cracksWidthValueCode"/>
         <skos:notation>V</skos:notation>
-        <skos:prefLabel xml:lang="en">Very wide 5cm–10cm</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Very wide 5cm-10cm</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cracksWidthValueCode"/>
     </owl:NamedIndividual>
     
@@ -5508,7 +5989,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/cracksWidthValueCode"/>
         <skos:notation>W</skos:notation>
-        <skos:prefLabel xml:lang="en">Wide 2cm–5cm</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Wide 2cm-5cm</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/cracksWidthValueCode"/>
     </owl:NamedIndividual>
     
@@ -6435,7 +6916,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/erosionActivityPeriodValueCode-R">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/ErosionActivityPeriodValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Active in recent past (previous 50–100 years)</skos:definition>
+        <skos:definition>Active in recent past (previous 50-100 years)</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/erosionActivityPeriodValueCode"/>
         <skos:notation>R</skos:notation>
         <skos:prefLabel xml:lang="en">Active in recent past</skos:prefLabel>
@@ -6906,7 +7387,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/erosionTotalAreaAffectedValueCode"/>
         <skos:notation>1</skos:notation>
-        <skos:prefLabel xml:lang="en">0–5</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">0-5</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/erosionTotalAreaAffectedValueCode"/>
     </owl:NamedIndividual>
     
@@ -6920,7 +7401,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/erosionTotalAreaAffectedValueCode"/>
         <skos:notation>2</skos:notation>
-        <skos:prefLabel xml:lang="en">5–10</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5-10</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/erosionTotalAreaAffectedValueCode"/>
     </owl:NamedIndividual>
     
@@ -6934,7 +7415,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/erosionTotalAreaAffectedValueCode"/>
         <skos:notation>3</skos:notation>
-        <skos:prefLabel xml:lang="en">10–25</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">10-25</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/erosionTotalAreaAffectedValueCode"/>
     </owl:NamedIndividual>
     
@@ -6948,7 +7429,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/erosionTotalAreaAffectedValueCode"/>
         <skos:notation>4</skos:notation>
-        <skos:prefLabel xml:lang="en">25–50</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">25-50</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/erosionTotalAreaAffectedValueCode"/>
     </owl:NamedIndividual>
     
@@ -7014,7 +7495,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode-A">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>40%–80%</skos:definition>
+        <skos:definition>40%-80%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode"/>
         <skos:notation>A</skos:notation>
         <skos:prefLabel xml:lang="en">Abundant</skos:prefLabel>
@@ -7029,7 +7510,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5%–15%</skos:definition>
+        <skos:definition>5%-15%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Common </skos:prefLabel>
@@ -7059,7 +7540,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2%–5%</skos:definition>
+        <skos:definition>2%-5%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Few</skos:prefLabel>
@@ -7074,7 +7555,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>15%–40%</skos:definition>
+        <skos:definition>15%-40%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Many</skos:prefLabel>
@@ -7104,7 +7585,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode-V">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0%–2%</skos:definition>
+        <skos:definition>0%-2%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentCoverValueCode"/>
         <skos:notation>V</skos:notation>
         <skos:prefLabel xml:lang="en">Very few</skos:prefLabel>
@@ -7287,7 +7768,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode-B">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>20cm–60cm</skos:definition>
+        <skos:definition>20cm-60cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode"/>
         <skos:notation>B</skos:notation>
         <skos:prefLabel xml:lang="en">Boulders</skos:prefLabel>
@@ -7302,7 +7783,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2cm–6cm</skos:definition>
+        <skos:definition>2cm-6cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Coarse gravel</skos:prefLabel>
@@ -7317,7 +7798,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0.2cm–0.6cm</skos:definition>
+        <skos:definition>0.2cm-0.6cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Fine gravel</skos:prefLabel>
@@ -7332,7 +7813,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode-L">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>60cm–200cm</skos:definition>
+        <skos:definition>60cm-200cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode"/>
         <skos:notation>L</skos:notation>
         <skos:prefLabel xml:lang="en">Large boulders</skos:prefLabel>
@@ -7347,7 +7828,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0.6cm–2.0cm</skos:definition>
+        <skos:definition>0.6cm-2.0cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Medium gravel</skos:prefLabel>
@@ -7362,7 +7843,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode-S">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>6cm–20cm</skos:definition>
+        <skos:definition>6cm-20cm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/fragmentsSizeValueCode"/>
         <skos:notation>S</skos:notation>
         <skos:prefLabel xml:lang="en">Stones</skos:prefLabel>
@@ -7406,7 +7887,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/gypsumContentValueCode-MO">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/GypsumContentValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>≈ 5–15 EC = &gt; 1.8 dS m-1 in 10 g soil/250 ml H2O</skos:definition>
+        <skos:definition>≈ 5-15 EC = &gt; 1.8 dS m-1 in 10 g soil/250 ml H2O</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/gypsumContentValueCode"/>
         <skos:notation>MO</skos:notation>
         <skos:prefLabel xml:lang="en">Moderately gypsiric</skos:prefLabel>
@@ -7436,7 +7917,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/gypsumContentValueCode-SL">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/GypsumContentValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>≈ 0–5 EC = &lt; 1.8 dS m-1 in 10 g soil/250 ml H2O</skos:definition>
+        <skos:definition>≈ 0-5 EC = &lt; 1.8 dS m-1 in 10 g soil/250 ml H2O</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/gypsumContentValueCode"/>
         <skos:notation>SL</skos:notation>
         <skos:prefLabel xml:lang="en">Slightly gypsiric</skos:prefLabel>
@@ -7451,7 +7932,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/gypsumContentValueCode-ST">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/GypsumContentValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>≈ 15–60 higher amounts may be differentiated by abundance of H2O-soluble pseudomycelia/crystals and soil colour</skos:definition>
+        <skos:definition>≈ 15-60 higher amounts may be differentiated by abundance of H2O-soluble pseudomycelia/crystals and soil colour</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/gypsumContentValueCode"/>
         <skos:notation>ST</skos:notation>
         <skos:prefLabel xml:lang="en">Strongly gypsiric</skos:prefLabel>
@@ -7496,7 +7977,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/gypsumFormsValueCode"/>
         <skos:notation>G</skos:notation>
-        <skos:prefLabel xml:lang="en">“gazha” (clayey water-saturated layer with high gypsum content)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">gazha (clayey water-saturated layer with high gypsum content)</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/gypsumFormsValueCode"/>
     </owl:NamedIndividual>
     
@@ -9420,7 +9901,7 @@
         <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/lithologyValueCode-MB"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/lithologyValueCode"/>
         <skos:notation>MB3</skos:notation>
-        <skos:prefLabel xml:lang="en">gneiss rich in Fe–Mg minerals</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">gneiss rich in Fe-Mg minerals</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -11001,7 +11482,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcNatureValueCode"/>
         <skos:notation>CS</skos:notation>
-        <skos:prefLabel xml:lang="en">Clay–sesquioxides</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Clay-sesquioxides</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcNatureValueCode"/>
     </owl:NamedIndividual>
     
@@ -11029,7 +11510,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcNatureValueCode"/>
         <skos:notation>FM</skos:notation>
-        <skos:prefLabel xml:lang="en">Iron–manganese (sesquioxides)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Iron-manganese (sesquioxides)</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcNatureValueCode"/>
     </owl:NamedIndividual>
     
@@ -11099,7 +11580,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcNatureValueCode"/>
         <skos:notation>KQ</skos:notation>
-        <skos:prefLabel xml:lang="en">Carbonates–silica</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carbonates-silica</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcNatureValueCode"/>
     </owl:NamedIndividual>
     
@@ -11294,7 +11775,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mineralConcSizeValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MineralConcSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2mm–6mm</skos:definition>
+        <skos:definition>2mm-6mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcSizeValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Fine</skos:prefLabel>
@@ -11309,7 +11790,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mineralConcSizeValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MineralConcSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>6mm–20mm</skos:definition>
+        <skos:definition>6mm-20mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcSizeValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
@@ -11353,7 +11834,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode-A">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MineralConcVolumeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>40–80</skos:definition>
+        <skos:definition>40-80</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode"/>
         <skos:notation>A</skos:notation>
         <skos:prefLabel xml:lang="en">Abundant</skos:prefLabel>
@@ -11368,7 +11849,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MineralConcVolumeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5–15</skos:definition>
+        <skos:definition>5-15</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Common</skos:prefLabel>
@@ -11398,7 +11879,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MineralConcVolumeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–5</skos:definition>
+        <skos:definition>2-5</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Few</skos:prefLabel>
@@ -11413,7 +11894,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MineralConcVolumeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>15–40</skos:definition>
+        <skos:definition>15-40</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Many</skos:prefLabel>
@@ -11443,7 +11924,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode-V">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MineralConcVolumeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0–2</skos:definition>
+        <skos:definition>0-2</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mineralConcVolumeValueCode"/>
         <skos:notation>V</skos:notation>
         <skos:prefLabel xml:lang="en">Very few</skos:prefLabel>
@@ -11543,7 +12024,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mottlesAbundanceValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MottlesAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5–15</skos:definition>
+        <skos:definition>5-15</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mottlesAbundanceValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Common</skos:prefLabel>
@@ -11558,7 +12039,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mottlesAbundanceValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MottlesAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–5</skos:definition>
+        <skos:definition>2-5</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mottlesAbundanceValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Few</skos:prefLabel>
@@ -11573,7 +12054,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mottlesAbundanceValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MottlesAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>15–40</skos:definition>
+        <skos:definition>15-40</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mottlesAbundanceValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Many</skos:prefLabel>
@@ -11603,7 +12084,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mottlesAbundanceValueCode-V">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MottlesAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0–2</skos:definition>
+        <skos:definition>0-2</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mottlesAbundanceValueCode"/>
         <skos:notation>V</skos:notation>
         <skos:prefLabel xml:lang="en">Very few</skos:prefLabel>
@@ -11647,7 +12128,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mottlesSizeValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MottlesSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–6</skos:definition>
+        <skos:definition>2-6</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mottlesSizeValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">F Fine</skos:prefLabel>
@@ -11662,7 +12143,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/mottlesSizeValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/MottlesSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>6–20</skos:definition>
+        <skos:definition>6-20</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/mottlesSizeValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">M Medium</skos:prefLabel>
@@ -11951,7 +12432,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/peatVolumeValueCode"/>
         <skos:notation>SV2</skos:notation>
-        <skos:prefLabel xml:lang="en">3– &lt; 5%</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">3- &lt; 5%</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/peatVolumeValueCode"/>
     </owl:NamedIndividual>
     
@@ -11965,7 +12446,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/peatVolumeValueCode"/>
         <skos:notation>SV3</skos:notation>
-        <skos:prefLabel xml:lang="en">5– &lt; 8%</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5- &lt; 8%</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/peatVolumeValueCode"/>
     </owl:NamedIndividual>
     
@@ -11979,7 +12460,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/peatVolumeValueCode"/>
         <skos:notation>SV4</skos:notation>
-        <skos:prefLabel xml:lang="en">8– &lt; 12%</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">8- &lt; 12%</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/peatVolumeValueCode"/>
     </owl:NamedIndividual>
     
@@ -12006,6 +12487,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">Code list for physioChemicalProperty - codelist scheme</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <skos:definition>ISRIC Report 2014/01: Africa Soil Profiles Database Version 1.2. Annex 3a</skos:definition>
         <skos:definition>ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
         <skos:note xml:lang="en">This code list provides analysis procedures for physioChemical.</skos:note>
         <skos:prefLabel xml:lang="en">Code list for physioChemicalProperty - codelist scheme</skos:prefLabel>
@@ -12045,8 +12527,15 @@
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Alu">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>5359268</ontology:pubchem>
+        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>Sum of the oxalate-extractable aluminium concentration plus half the oxalate-extractable iron concentration</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Alu</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) + 0.5 Fe oxalate</skos:prefLabel>
@@ -12064,9 +12553,10 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <ontology:inchi>1S/Al</ontology:inchi>
-        <ontology:pubchem>259</ontology:pubchem>
+        <ontology:pubchem>5359268</ontology:pubchem>
         <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>&quot;Free&quot; aluminium content extracted from amorphous compounds (weathering products) as well as crystaline, primary aluminium compounds (parent material) in the soil.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aludit</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - dithionite extractable</skos:prefLabel>
@@ -12083,13 +12573,35 @@
         <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <ontology:inchi>1S/Al/q+3</ontology:inchi>
-        <ontology:pubchem>104727</ontology:pubchem>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>5359268</ontology:pubchem>
         <property:inchikey>REDXJYDRNCIFBQ-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/104727"/>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aluexc</skos:notation>
-        <skos:prefLabel xml:lang="en">Aluminium (Al+++) - exchangeable</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Aluminium (Al) exchangeable</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>5359268</ontology:pubchem>
+        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>Aluminium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Aluext</skos:notation>
+        <skos:prefLabel xml:lang="en">Aluminium (Al) extractable</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12104,9 +12616,10 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <ontology:inchi>1S/Al</ontology:inchi>
-        <ontology:pubchem>259</ontology:pubchem>
+        <ontology:pubchem>5359268</ontology:pubchem>
         <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>&quot;Active&quot; aluminium content extracted from amorphous aluminium compounds that are the products of the weathering of primary soil particles</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Aluoxa</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - oxalate extractable</skos:prefLabel>
@@ -12124,9 +12637,10 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <ontology:inchi>1S/Al</ontology:inchi>
-        <ontology:pubchem>259</ontology:pubchem>
+        <ontology:pubchem>5359268</ontology:pubchem>
         <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/259"/>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>Aluminium in soil that is organically bound in organo-metal complexes</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Alupyr</skos:notation>
         <skos:prefLabel xml:lang="en">Aluminium (Al) - pyrophosphate extractable</skos:prefLabel>
@@ -12143,13 +12657,14 @@
         <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <ontology:inchi>1S/Al/q+3</ontology:inchi>
-        <ontology:pubchem>104727</ontology:pubchem>
-        <property:inchikey>REDXJYDRNCIFBQ-UHFFFAOYSA-N</property:inchikey>
-        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/104727"/>
+        <ontology:inchi>1S/Al</ontology:inchi>
+        <ontology:pubchem>5359268</ontology:pubchem>
+        <property:inchikey>XAGFODPZIPBFFR-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5359268"/>
+        <skos:definition>Measure to describe the relative abundance of alumium in the soil. It is the percentage of the CEC occupied by aluminium</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Alusat</skos:notation>
-        <skos:prefLabel xml:lang="en">Aluminium (Al+++) - saturation  (ESP)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Aluminium (Al) saturation</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12291,6 +12806,48 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>BulDfine</skos:notation>
+        <skos:prefLabel xml:lang="en">Bulk Density of the fine earth fraction</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDwhole -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDwhole">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>BulDwhole</skos:notation>
+        <skos:prefLabel xml:lang="en">Bulk Density of the whole soil</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>CEC</skos:notation>
+        <skos:prefLabel xml:lang="en">Cation exchange capacity (CEC)</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CaN -->
 
 
@@ -12300,6 +12857,26 @@
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>CaN</skos:notation>
         <skos:prefLabel xml:lang="en">Carbon/Nitrogen (C/N) ratio</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/Cd</ontology:inchi>
+        <ontology:pubchem>23973</ontology:pubchem>
+        <property:inchikey>BDOSMKKIYDKNTQ-UHFFFAOYSA-N  </property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23973"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Cad</skos:notation>
+        <skos:prefLabel xml:lang="en">Cadmium (Cd)</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12439,7 +13016,7 @@
         <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Carful</skos:notation>
-        <skos:prefLabel xml:lang="en">Carbon - fulvic acid</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carbon (C) - fulvic acid</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12459,7 +13036,27 @@
         <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Carhum</skos:notation>
-        <skos:prefLabel xml:lang="en">Carbon - humic acid</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carbon (C) - humic acid</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:inchi>1S/C</ontology:inchi>
+        <ontology:pubchem>5462310</ontology:pubchem>
+        <property:inchikey>OKTJSMMVPCPJKN-UHFFFAOYSA-N</property:inchikey>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Carinorg</skos:notation>
+        <skos:prefLabel xml:lang="en">Carbon (C) - inorganic</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12519,7 +13116,7 @@
         <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/5462310"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Cartoh</skos:notation>
-        <skos:prefLabel xml:lang="en">Carbon - total humic</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carbon (C) - total humic</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12625,6 +13222,52 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>ECEC</skos:notation>
+        <skos:prefLabel xml:lang="en">Cation exchange capacity effective (ECEC)</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Eleccond</skos:notation>
+        <skos:prefLabel xml:lang="en">Electrical conductivity</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:pubchem>24497</ontology:pubchem>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/24497"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Gyp</skos:notation>
+        <skos:prefLabel xml:lang="en">Gypsum content - weight</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hyd -->
 
 
@@ -12640,6 +13283,20 @@
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Hyd</skos:notation>
         <skos:prefLabel xml:lang="en">Hydrocarbonate (HCO3-) - soluble</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Hydcond</skos:notation>
+        <skos:prefLabel xml:lang="en">Hydraulic conductivity</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -12965,6 +13622,24 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalCompound"/>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/ChemicalSubstance"/>
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <ontology:pubchem>23932</ontology:pubchem>
+        <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23932"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Mol</skos:notation>
+        <skos:prefLabel xml:lang="en">Molybdenum</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nit2 -->
 
 
@@ -13020,6 +13695,20 @@
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Nittot</skos:notation>
         <skos:prefLabel xml:lang="en">Nitrogen (N) - total</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Orgmat</skos:notation>
+        <skos:prefLabel xml:lang="en">Organic matter</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -13120,6 +13809,20 @@
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Photot</skos:notation>
         <skos:prefLabel xml:lang="en">Phosphorus (P) - total</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Por</skos:notation>
+        <skos:prefLabel xml:lang="en">Porosity</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -13365,6 +14068,20 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+        <skos:notation>Solsal</skos:notation>
+        <skos:prefLabel xml:lang="en">Soluble salts</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sul -->
 
 
@@ -13425,48 +14142,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-        <skos:notation>Textclay</skos:notation>
-        <skos:prefLabel xml:lang="en">Clay texture fraction</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-        <skos:notation>Textsand</skos:notation>
-        <skos:prefLabel xml:lang="en">Sand texture fraction</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PhysioChemicalPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-        <skos:notation>Textsilt</skos:notation>
-        <skos:prefLabel xml:lang="en">Silt texture fraction</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zin -->
 
 
@@ -13481,7 +14156,7 @@
         <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23994"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Zin</skos:notation>
-        <skos:prefLabel xml:lang="en">Zinc (Zn) - extractable</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Zinc (Zn)</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -13501,7 +14176,7 @@
         <rdfs:seeAlso rdf:resource="https://pubchem.ncbi.nlm.nih.gov/compound/23994"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
         <skos:notation>Zinext</skos:notation>
-        <skos:prefLabel xml:lang="en">Zinc (Zn)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Zinc (Zn) - extractable</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode"/>
     </owl:NamedIndividual>
     
@@ -13720,7 +14395,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/plasticityValueCode-PL">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PlasticityValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Wire formable but breaks if bent into a ring; slight to moderate force required for deformation of the soil mass.</skos:definition>
+        <skos:definition>Wire formable but breaks if bent into a ring,  slight to moderate force required for deformation of the soil mass. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/plasticityValueCode"/>
         <skos:notation>PL</skos:notation>
         <skos:prefLabel xml:lang="en">Plastic</skos:prefLabel>
@@ -13749,7 +14424,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/plasticityValueCode-SPL">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PlasticityValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Wire formable but breaks immediately if bent into a ring; soil mass deformed by very slight force.</skos:definition>
+        <skos:definition>Wire formable but breaks immediately if bent into a ring,  soil mass deformed by very slight force. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/plasticityValueCode"/>
         <skos:notation>SPL</skos:notation>
         <skos:prefLabel xml:lang="en">Slightly plastic</skos:prefLabel>
@@ -13778,7 +14453,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/plasticityValueCode-VPL">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PlasticityValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Wire formable and can be bent into a ring; moderately strong to very strong force required for deformation of the soil mass.</skos:definition>
+        <skos:definition>Wire formable and can be bent into a ring,  moderately strong to very strong force required for deformation of the soil mass. </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/plasticityValueCode"/>
         <skos:notation>VPL</skos:notation>
         <skos:prefLabel xml:lang="en">Very plastic</skos:prefLabel>
@@ -13807,7 +14482,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PoresAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)50–200 ;&gt; 2 mm (number)5–20</skos:definition>
+        <skos:definition>&lt; 2 mm (number)50-200 , &gt; 2 mm (number)5-20 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Common</skos:prefLabel>
@@ -13822,7 +14497,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PoresAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)20–50;&gt; 2 mm (number) 2–5</skos:definition>
+        <skos:definition>&lt; 2 mm (number)20-50, &gt; 2 mm (number) 2-5 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Few</skos:prefLabel>
@@ -13837,7 +14512,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PoresAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)&gt; 200 ;&gt; 2 mm (number)&gt; 20</skos:definition>
+        <skos:definition>&lt; 2 mm (number)&gt; 200 , &gt; 2 mm (number)&gt; 20 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Many</skos:prefLabel>
@@ -13852,7 +14527,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-N">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PoresAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)0;&gt; 2 mm (number)0</skos:definition>
+        <skos:definition>&lt; 2 mm (number)0, &gt; 2 mm (number)0 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode"/>
         <skos:notation>N</skos:notation>
         <skos:prefLabel xml:lang="en">None</skos:prefLabel>
@@ -13867,7 +14542,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode-V">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PoresAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)1–20 ;&gt; 2 mm (number)1–2</skos:definition>
+        <skos:definition>&lt; 2 mm (number)1-20 , &gt; 2 mm (number)1-2 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/poresAbundanceValueCode"/>
         <skos:notation>V</skos:notation>
         <skos:prefLabel xml:lang="en">Very few</skos:prefLabel>
@@ -13911,7 +14586,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/porosityClassValueCode-2">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PorosityClassValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–5</skos:definition>
+        <skos:definition>2-5</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/porosityClassValueCode"/>
         <skos:notation>2</skos:notation>
         <skos:prefLabel xml:lang="en">Low</skos:prefLabel>
@@ -13926,7 +14601,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/porosityClassValueCode-3">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PorosityClassValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5–15</skos:definition>
+        <skos:definition>5-15</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/porosityClassValueCode"/>
         <skos:notation>3</skos:notation>
         <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
@@ -13941,7 +14616,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/porosityClassValueCode-4">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/PorosityClassValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>15–40</skos:definition>
+        <skos:definition>15-40</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/porosityClassValueCode"/>
         <skos:notation>4</skos:notation>
         <skos:prefLabel xml:lang="en">High</skos:prefLabel>
@@ -14138,7 +14813,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode-A">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>40%–80%</skos:definition>
+        <skos:definition>40%-80%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode"/>
         <skos:notation>A</skos:notation>
         <skos:prefLabel xml:lang="en">Abundant </skos:prefLabel>
@@ -14153,7 +14828,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5%–15%</skos:definition>
+        <skos:definition>5%-15%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Common</skos:prefLabel>
@@ -14183,7 +14858,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2%–5%</skos:definition>
+        <skos:definition>2%-5%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Few</skos:prefLabel>
@@ -14198,7 +14873,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>15%–40%</skos:definition>
+        <skos:definition>15%-40%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Many</skos:prefLabel>
@@ -14243,7 +14918,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode-V">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0%–2%</skos:definition>
+        <skos:definition>0%-2%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockAbundanceValueCode"/>
         <skos:notation>V</skos:notation>
         <skos:prefLabel xml:lang="en">Very few</skos:prefLabel>
@@ -14272,7 +14947,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode-A">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>40–80 5 &lt; 2</skos:definition>
+        <skos:definition>40-80 5 &lt; 2</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Abundant</skos:prefLabel>
@@ -14287,7 +14962,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5–15 3 5–20</skos:definition>
+        <skos:definition>5-15 3 5-20</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Common</skos:prefLabel>
@@ -14317,7 +14992,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–5 2 20–50</skos:definition>
+        <skos:definition>2-5 2 20-50</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Few</skos:prefLabel>
@@ -14332,7 +15007,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>15–40 4 2–5</skos:definition>
+        <skos:definition>15-40 4 2-5</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Many</skos:prefLabel>
@@ -14361,7 +15036,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode-V">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockOutcropsCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0–2 1 &gt; 50</skos:definition>
+        <skos:definition>0-2 1 &gt; 50</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsCoverValueCode"/>
         <skos:notation>V</skos:notation>
         <skos:prefLabel xml:lang="en">Very few</skos:prefLabel>
@@ -14406,7 +15081,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsDistanceValueCode"/>
         <skos:notation>2</skos:notation>
-        <skos:prefLabel xml:lang="en">20–50</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">20-50</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsDistanceValueCode"/>
     </owl:NamedIndividual>
     
@@ -14420,7 +15095,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsDistanceValueCode"/>
         <skos:notation>3</skos:notation>
-        <skos:prefLabel xml:lang="en">5–20</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">5-20</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsDistanceValueCode"/>
     </owl:NamedIndividual>
     
@@ -14434,7 +15109,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsDistanceValueCode"/>
         <skos:notation>4</skos:notation>
-        <skos:prefLabel xml:lang="en">2–5</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">2-5</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/rockOutcropsDistanceValueCode"/>
     </owl:NamedIndividual>
     
@@ -14579,7 +15254,7 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode-A"/>
-        <skos:definition>2mm–6mm</skos:definition>
+        <skos:definition>2mm-6mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode"/>
         <skos:notation>AF</skos:notation>
         <skos:prefLabel xml:lang="en">Fine artefacts</skos:prefLabel>
@@ -14594,7 +15269,7 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode-A"/>
-        <skos:definition>6mm–20mm</skos:definition>
+        <skos:definition>6mm-20mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode"/>
         <skos:notation>AM</skos:notation>
         <skos:prefLabel xml:lang="en">Medium artefacts</skos:prefLabel>
@@ -14720,7 +15395,7 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode-R"/>
-        <skos:definition>60mm–200mm</skos:definition>
+        <skos:definition>60mm-200mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode"/>
         <skos:notation>RB</skos:notation>
         <skos:prefLabel xml:lang="en">Boulders</skos:prefLabel>
@@ -14735,7 +15410,7 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode-R"/>
-        <skos:definition>20mm–60mm</skos:definition>
+        <skos:definition>20mm-60mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode"/>
         <skos:notation>RC</skos:notation>
         <skos:prefLabel xml:lang="en">Coarse gravel</skos:prefLabel>
@@ -14750,7 +15425,7 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode-R"/>
-        <skos:definition>2mm–6mm</skos:definition>
+        <skos:definition>2mm-6mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode"/>
         <skos:notation>RF</skos:notation>
         <skos:prefLabel xml:lang="en">Fine gravel</skos:prefLabel>
@@ -14780,7 +15455,7 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode-R"/>
-        <skos:definition>6mm–20mm</skos:definition>
+        <skos:definition>6mm-20mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode"/>
         <skos:notation>RM</skos:notation>
         <skos:prefLabel xml:lang="en">Medium gravel</skos:prefLabel>
@@ -14795,7 +15470,7 @@
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RockSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode-R"/>
-        <skos:definition>60mm–200mm</skos:definition>
+        <skos:definition>60mm-200mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rockSizeValueCode"/>
         <skos:notation>RS</skos:notation>
         <skos:prefLabel xml:lang="en">Stones</skos:prefLabel>
@@ -14837,7 +15512,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RootsAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)50–200 ;&gt; 2 mm (number)5–20</skos:definition>
+        <skos:definition>&lt; 2 mm (number)50-200 , &gt; 2 mm (number)5-20 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Common</skos:prefLabel>
@@ -14852,7 +15527,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RootsAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)20–50;&gt; 2 mm (number) 2–5</skos:definition>
+        <skos:definition>&lt; 2 mm (number)20-50, &gt; 2 mm (number) 2-5 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Few</skos:prefLabel>
@@ -14867,7 +15542,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RootsAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)&gt; 200 ;&gt; 2 mm (number)&gt; 20</skos:definition>
+        <skos:definition>&lt; 2 mm (number)&gt; 200 , &gt; 2 mm (number)&gt; 20 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Many</skos:prefLabel>
@@ -14882,7 +15557,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-N">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RootsAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)0;&gt; 2 mm (number)0</skos:definition>
+        <skos:definition>&lt; 2 mm (number)0, &gt; 2 mm (number)0 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode"/>
         <skos:notation>N</skos:notation>
         <skos:prefLabel xml:lang="en">None</skos:prefLabel>
@@ -14897,7 +15572,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode-V">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/RootsAbundanceValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>&lt; 2 mm (number)1–20 ;&gt; 2 mm (number)1–2</skos:definition>
+        <skos:definition>&lt; 2 mm (number)1-20 , &gt; 2 mm (number)1-2 </skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/rootsAbundanceValueCode"/>
         <skos:notation>V</skos:notation>
         <skos:prefLabel xml:lang="en">Very few</skos:prefLabel>
@@ -14941,7 +15616,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltContentValueCode-MO">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltContentValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–4</skos:definition>
+        <skos:definition>2-4</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltContentValueCode"/>
         <skos:notation>MO</skos:notation>
         <skos:prefLabel xml:lang="en">Moderately salty</skos:prefLabel>
@@ -14971,7 +15646,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltContentValueCode-SL">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltContentValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0.75–2</skos:definition>
+        <skos:definition>0.75-2</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltContentValueCode"/>
         <skos:notation>SL</skos:notation>
         <skos:prefLabel xml:lang="en">Slightly salty</skos:prefLabel>
@@ -14986,7 +15661,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltContentValueCode-ST">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltContentValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>4–8</skos:definition>
+        <skos:definition>4-8</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltContentValueCode"/>
         <skos:notation>ST</skos:notation>
         <skos:prefLabel xml:lang="en">Strongly salty</skos:prefLabel>
@@ -15001,7 +15676,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltContentValueCode-VST">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltContentValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>8–15</skos:definition>
+        <skos:definition>8-15</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltContentValueCode"/>
         <skos:notation>VST</skos:notation>
         <skos:prefLabel xml:lang="en">Very strongly salty</skos:prefLabel>
@@ -15030,7 +15705,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltCoverValueCode-0">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0%–2%</skos:definition>
+        <skos:definition>0%-2%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltCoverValueCode"/>
         <skos:notation>0</skos:notation>
         <skos:prefLabel xml:lang="en">None</skos:prefLabel>
@@ -15045,7 +15720,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltCoverValueCode-1">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2%–15%</skos:definition>
+        <skos:definition>2%-15%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltCoverValueCode"/>
         <skos:notation>1</skos:notation>
         <skos:prefLabel xml:lang="en">Low</skos:prefLabel>
@@ -15060,7 +15735,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltCoverValueCode-2">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>15%–40%</skos:definition>
+        <skos:definition>15%-40%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltCoverValueCode"/>
         <skos:notation>2</skos:notation>
         <skos:prefLabel xml:lang="en">Moderate</skos:prefLabel>
@@ -15075,7 +15750,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltCoverValueCode-3">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltCoverValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>40%–80%</skos:definition>
+        <skos:definition>40%-80%</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltCoverValueCode"/>
         <skos:notation>3</skos:notation>
         <skos:prefLabel xml:lang="en">High</skos:prefLabel>
@@ -15119,7 +15794,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltThicknessValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltThicknessValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5mm–20mm</skos:definition>
+        <skos:definition>5mm-20mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltThicknessValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Thick</skos:prefLabel>
@@ -15149,7 +15824,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/saltThicknessValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SaltThicknessValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2mm–5mm</skos:definition>
+        <skos:definition>2mm-5mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/saltThicknessValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
@@ -15197,160 +15872,6 @@
         <skos:definition>ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
         <skos:note xml:lang="en">This code list provides analysis procedures for sand.</skos:note>
         <skos:prefLabel xml:lang="en">Code list for sandProperty - codelist scheme</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF1 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF1">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF1</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction01</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF10 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF10">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF10</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction10</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF2 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF2">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF2</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction02</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF3 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF3">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF3</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction03</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF4 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF4">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF4</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction04</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF5 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF5">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF5</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction05</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF6 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF6">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF6</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction06</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF7 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF7">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF7</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction07</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF8 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF8">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF8</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction08</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF9 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSF9">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSF9</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFraction09</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sandPropertyCode-SSFT">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SandPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
-        <skos:notation>SSFT</skos:notation>
-        <skos:prefLabel xml:lang="en">SandSizeFractionTotal</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/sandPropertyCode"/>
     </owl:NamedIndividual>
     
 
@@ -15683,7 +16204,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sealingThicknessValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SealingThicknessValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5mm–20mm</skos:definition>
+        <skos:definition>5mm-20mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sealingThicknessValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Thick</skos:prefLabel>
@@ -15713,7 +16234,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/sealingThicknessValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SealingThicknessValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2mm–5mm</skos:definition>
+        <skos:definition>2mm-5mm</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/sealingThicknessValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
@@ -15761,62 +16282,6 @@
         <skos:definition>ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
         <skos:note xml:lang="en">This code list provides analysis procedures for silt.</skos:note>
         <skos:prefLabel xml:lang="en">Code list for siltProperty - codelist scheme</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF1 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF1">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SiltPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/siltPropertyCode"/>
-        <skos:notation>SSF1</skos:notation>
-        <skos:prefLabel xml:lang="en">SiltSizeFraction01</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/siltPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF2 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF2">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SiltPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/siltPropertyCode"/>
-        <skos:notation>SSF2</skos:notation>
-        <skos:prefLabel xml:lang="en">SiltSizeFraction02</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/siltPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF3 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSF3">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SiltPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/siltPropertyCode"/>
-        <skos:notation>SSF3</skos:notation>
-        <skos:prefLabel xml:lang="en">SiltSizeFraction03</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/siltPropertyCode"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/siltPropertyCode-SSFT">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SiltPropertyCode"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/siltPropertyCode"/>
-        <skos:notation>SSFT</skos:notation>
-        <skos:prefLabel xml:lang="en">SiltSizeFractionTotal</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/siltPropertyCode"/>
     </owl:NamedIndividual>
     
 
@@ -16452,7 +16917,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/structureSizeValueCode-CO">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/StructureSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5–10 50–100 20–50</skos:definition>
+        <skos:definition>5-10 50-100 20-50</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/structureSizeValueCode"/>
         <skos:notation>CO</skos:notation>
         <skos:prefLabel xml:lang="en">Coarse/thick</skos:prefLabel>
@@ -16467,7 +16932,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/structureSizeValueCode-EC">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/StructureSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>– &gt; 500 –</skos:definition>
+        <skos:definition>- &gt; 500 -</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/structureSizeValueCode"/>
         <skos:notation>EC</skos:notation>
         <skos:prefLabel xml:lang="en">Extremely coarse</skos:prefLabel>
@@ -16482,7 +16947,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/structureSizeValueCode-FI">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/StructureSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>1–2 10–20 5–10</skos:definition>
+        <skos:definition>1-2 10-20 5-10</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/structureSizeValueCode"/>
         <skos:notation>FI</skos:notation>
         <skos:prefLabel xml:lang="en">Fine/thin</skos:prefLabel>
@@ -16497,7 +16962,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/structureSizeValueCode-ME">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/StructureSizeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–5 20–50 10–20</skos:definition>
+        <skos:definition>2-5 20-50 10-20</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/structureSizeValueCode"/>
         <skos:notation>ME</skos:notation>
         <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
@@ -16556,7 +17021,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode-Ha">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Holocene (100–10 000 years) anthropogeomorphic: human-made relief modifications, such as terracing of forming hills or walls by early civilizations or during the Middle Ages or earlier, restriction of flooding by dykes, or surface raising.</skos:definition>
+        <skos:definition>Holocene (100-10 000 years) anthropogeomorphic: human-made relief modifications, such as terracing of forming hills or walls by early civilizations or during the Middle Ages or earlier, restriction of flooding by dykes, or surface raising.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode"/>
         <skos:notation>Ha</skos:notation>
         <skos:prefLabel xml:lang="en">Holocene anthropogeomorphic</skos:prefLabel>
@@ -16571,7 +17036,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode-Hn">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Holocene (100–10 000 years) natural: with loss by erosion or deposition of materials such as on tidal flats, of coastal dunes, in river valleys, landslides or desert areas.</skos:definition>
+        <skos:definition>Holocene (100-10 000 years) natural: with loss by erosion or deposition of materials such as on tidal flats, of coastal dunes, in river valleys, landslides or desert areas.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode"/>
         <skos:notation>Hn</skos:notation>
         <skos:prefLabel xml:lang="en">Holocene natural</skos:prefLabel>
@@ -16616,7 +17081,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode-Ya">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Young (10–100 years) anthropogeomorphic: with complete disturbance of any natural surfaces (and soils) such as in urban, industrial and mining areas with early soil development from fresh natural, technogenic or a mixture of materials, or restriction of flooding by dykes.</skos:definition>
+        <skos:definition>Young (10-100 years) anthropogeomorphic: with complete disturbance of any natural surfaces (and soils) such as in urban, industrial and mining areas with early soil development from fresh natural, technogenic or a mixture of materials, or restriction of flooding by dykes.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode"/>
         <skos:notation>Ya</skos:notation>
         <skos:prefLabel xml:lang="en">Young anthropogeomorphic</skos:prefLabel>
@@ -16631,7 +17096,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode-Yn">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Young (10–100 years) natural: with loss by erosion or deposition of materials such as on tidal flats, of coastal dunes, river valleys, landslides or desert areas.</skos:definition>
+        <skos:definition>Young (10-100 years) natural: with loss by erosion or deposition of materials such as on tidal flats, of coastal dunes, river valleys, landslides or desert areas.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode"/>
         <skos:notation>Yn</skos:notation>
         <skos:prefLabel xml:lang="en">Young natural</skos:prefLabel>
@@ -16736,7 +17201,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode-vYa">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Very young (1–10 years) anthropogeomorphic: with complete disturbance of natural surfaces (and soils) such as in urban, industrial and mining areas with very early soil development from fresh natural or technogenic or mixed materials.</skos:definition>
+        <skos:definition>Very young (1-10 years) anthropogeomorphic: with complete disturbance of natural surfaces (and soils) such as in urban, industrial and mining areas with very early soil development from fresh natural or technogenic or mixed materials.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode"/>
         <skos:notation>vYa</skos:notation>
         <skos:prefLabel xml:lang="en">Very young anthropogeomorphic</skos:prefLabel>
@@ -16751,12 +17216,187 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode-vYn">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/SurfaceAgeValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Very young (1–10 years) natural: with loss by erosion or deposition of materials such as on tidal flats, of coastal dunes, in river valleys, landslides or desert areas.</skos:definition>
+        <skos:definition>Very young (1-10 years) natural: with loss by erosion or deposition of materials such as on tidal flats, of coastal dunes, in river valleys, landslides or desert areas.</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode"/>
         <skos:notation>vYn</skos:notation>
         <skos:prefLabel xml:lang="en">Very young natural</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/surfaceAgeValueCode"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textclayPropertyCode-Cl -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textclayPropertyCode-Cl"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISO"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISSS"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISO"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISSS"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISO"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISSS"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISO"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISSS"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_ISSS"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_ISSS"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISO"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISSS"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_ISO"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_ISO"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_USDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_USDA"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/textsiltPropertyCode-mSi_ISO -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/textsiltPropertyCode-mSi_ISO"/>
     
 
 
@@ -17324,7 +17964,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode-C">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/VoidsDiameterValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>5–20</skos:definition>
+        <skos:definition>5-20</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode"/>
         <skos:notation>C</skos:notation>
         <skos:prefLabel xml:lang="en">Coarse</skos:prefLabel>
@@ -17339,7 +17979,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode-F">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/VoidsDiameterValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>0.5–2</skos:definition>
+        <skos:definition>0.5-2</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode"/>
         <skos:notation>F</skos:notation>
         <skos:prefLabel xml:lang="en">Fine</skos:prefLabel>
@@ -17382,7 +18022,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode-M">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/VoidsDiameterValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>2–5</skos:definition>
+        <skos:definition>2-5</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode"/>
         <skos:notation>M</skos:notation>
         <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
@@ -17426,7 +18066,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode-VC">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/codelists/VoidsDiameterValueCode"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>20–50</skos:definition>
+        <skos:definition>20-50</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/codelists/voidsDiameterValueCode"/>
         <skos:notation>VC</skos:notation>
         <skos:prefLabel xml:lang="en">Very coarse</skos:prefLabel>
@@ -17923,6 +18563,48 @@
         <skos:prefLabel xml:lang="en">Weathered</skos:prefLabel>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/codelists/weatheringValueCode"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/TextclayPropertyCode">
+        <rdfs:comment xml:lang="en">This code list provides the TextclayProperty.</rdfs:comment>
+        <rdfs:label xml:lang="en">Code list for TextclayProperty - codelist class</rdfs:label>
+        <rdfs:label xml:lang="en">Code list for TextclayProperty - codelist scheme</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/TextclayPropertyCode"/>
+        <skos:definition>Eva Corral-Pazos-de-Provens, Ígor Rapp-Arrarás and Juan M. Domingo-Santos, Estimating textural fractions of the USDA using those of the International System: A quantile approach, Geoderma, Volume 416, 2022.</skos:definition>
+        <skos:note xml:lang="en">This code list provides analysis procedures for Textclay.</skos:note>
+        <skos:prefLabel xml:lang="en">Code list for TextclayProperty - codelist scheme</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode">
+        <rdfs:comment xml:lang="en">This code list provides the TextsandProperty.</rdfs:comment>
+        <rdfs:label xml:lang="en">Code list for TextsandProperty - codelist class</rdfs:label>
+        <rdfs:label xml:lang="en">Code list for TextsandProperty - codelist scheme</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+        <skos:definition>ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil </skos:definition>
+        <skos:definition>International Society of Soil Science (ISSS), 1929. The minutes of the First Commission meetings, International Congress of Soil Science, Washington 1927. Proc. Int. Soc. Soil Sci. 4 (3), pp. 215-222.</skos:definition>
+        <skos:definition>S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  </skos:definition>
+        <skos:note xml:lang="en">This code list provides analysis procedures for Textsand.</skos:note>
+        <skos:prefLabel xml:lang="en">Code list for TextsandProperty - codelist scheme</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode">
+        <rdfs:comment xml:lang="en">This code list provides the TextsiltProperty.</rdfs:comment>
+        <rdfs:label xml:lang="en">Code list for TextsiltProperty - codelist class</rdfs:label>
+        <rdfs:label xml:lang="en">Code list for TextsiltProperty - codelist scheme</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+        <skos:definition>ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil </skos:definition>
+        <skos:definition>S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  </skos:definition>
+        <skos:note xml:lang="en">This code list provides analysis procedures for Textsilt.</skos:note>
+        <skos:prefLabel xml:lang="en">Code list for TextsiltProperty - codelist scheme</skos:prefLabel>
+    </rdf:Description>
 </rdf:RDF>
 
 
