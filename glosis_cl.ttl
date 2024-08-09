@@ -24,8 +24,8 @@
     dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
     dct:title "GLOSIS code lists"@en ;
     rdfs:comment "This module contains all the code lists of observable properties and results codes."@en ;
-    owl:versionIRI glosis_cl:1.3.1 ;
-    owl:versionInfo "1.3.1" .
+    owl:versionIRI glosis_cl:1.4 ;
+    owl:versionInfo "1.4" .
 
 glosis_cl:TextclayPropertyCode a owl:Class,
         skos:ConceptScheme ;
@@ -5989,8 +5989,14 @@ glosis_cl:physioChemicalPropertyCode-Aciext a glosis_cl:PhysioChemicalPropertyCo
     skos:prefLabel "Acidity - extractable"@en ;
     skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalPropertyCode-Alu a glosis_cl:PhysioChemicalPropertyCode,
+glosis_cl:physioChemicalPropertyCode-Alu a dbo:ChemicalCompound,
+        dbo:ChemicalSubstance,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
+    dbo:inchi "1S/Al" ;
+    dbo:pubchem "5359268" ;
+    dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
+    rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Sum of the oxalate-extractable aluminium concentration plus half the oxalate-extractable iron concentration" ;
     skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Alu" ;
@@ -6015,14 +6021,14 @@ glosis_cl:physioChemicalPropertyCode-Aluexc a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
         glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
-    dbo:inchi "1S/Al/q+3" ;
-    dbo:pubchem "104727" ;
-    dbprop:inchikey "REDXJYDRNCIFBQ-UHFFFAOYSA-N" ;
-    rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/104727> ;
+    dbo:inchi "1S/Al" ;
+    dbo:pubchem "5359268" ;
+    dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
+    rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange" ;
     skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Aluexc" ;
-    skos:prefLabel "Aluminium exchangeable"@en ;
+    skos:prefLabel "Aluminium (Al) exchangeable"@en ;
     skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
 glosis_cl:physioChemicalPropertyCode-Aluext a dbo:ChemicalCompound,
@@ -6036,7 +6042,7 @@ glosis_cl:physioChemicalPropertyCode-Aluext a dbo:ChemicalCompound,
     skos:definition "Aluminium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
     skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Aluext" ;
-    skos:prefLabel "Aluminium extractable"@en ;
+    skos:prefLabel "Aluminium (Al) extractable"@en ;
     skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
 glosis_cl:physioChemicalPropertyCode-Aluoxa a dbo:ChemicalCompound,
@@ -6071,14 +6077,14 @@ glosis_cl:physioChemicalPropertyCode-Alusat a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
         glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
-    dbo:inchi "1S/Al/q+3" ;
-    dbo:pubchem "104727" ;
-    dbprop:inchikey "REDXJYDRNCIFBQ-UHFFFAOYSA-N" ;
-    rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/104727> ;
+    dbo:inchi "1S/Al" ;
+    dbo:pubchem "5359268" ;
+    dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
+    rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Measure to describe the relative abundance of alumium in the soil. It is the percentage of the CEC occupied by aluminium" ;
     skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Alusat" ;
-    skos:prefLabel "Aluminium saturation"@en ;
+    skos:prefLabel "Aluminium (Al) saturation"@en ;
     skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
 glosis_cl:physioChemicalPropertyCode-Avavol a glosis_cl:PhysioChemicalPropertyCode,
