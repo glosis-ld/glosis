@@ -15,7 +15,7 @@ Script can transform in two ways:
 2) from rdf -> csv  ``python transform_to_csv.py [path to rdf file]``
 
 *examples:*    
-```python transform_to_rdf.py data/test.csv data/myquery.rq output.ttl 1.1.1```
+```python transform_to_rdf.py csv_codelists/glosis_cl.csv example_queries/glosis_cl_example.rq output.ttl 1.1.1```
 
 ```python transform_to_csv.py input.ttl```
 (this creates a csv file with corresponding filename in the location of TURTLE file)
