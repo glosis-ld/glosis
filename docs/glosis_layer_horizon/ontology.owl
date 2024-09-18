@@ -16,15 +16,15 @@
      xmlns:ontology="http://dbpedia.org/ontology/"
      xmlns:property="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/layerhorizon">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/layerhorizon/1.3.1"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/layerhorizon/1.4.0"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/codelists/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/common/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/iso28258/2013/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/unit/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1hgdl4smex1001"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1hgdl4smex1003"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i82nvhgsx1001"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i82nvhgsx1003"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -33,7 +33,7 @@
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GlOSIS Ontology: Layer-Horizon module</terms:title>
         <rdfs:comment xml:lang="en">This module contains all classes and properties to describe the domain of soil with a certain vertical extension, which is a layer (developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains) or a horizon (more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in-situ sedimented organic residues of up-growing plants (peat)).</rdfs:comment>
-        <owl:versionInfo>1.3.1</owl:versionInfo>
+        <owl:versionInfo>1.4.0</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <schema:affiliation>
@@ -41,8 +41,7 @@
                 <foaf:name>PSNC</foaf:name>
             </rdf:Description>
         </schema:affiliation>
-        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
-        <foaf:name>Raul Palma</foaf:name>
+        <foaf:name>Bogusz Janiak</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
         <schema:affiliation>
@@ -59,7 +58,8 @@
                 <foaf:name>PSNC</foaf:name>
             </rdf:Description>
         </schema:affiliation>
-        <foaf:name>Bogusz Janiak</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
     </rdf:Description>
     
 
@@ -103,6 +103,27 @@
 
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextclayPropertyCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextclayPropertyCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsandPropertyCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/TextsiltPropertyCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
     
 
 
@@ -567,7 +588,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/aluminiumProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">AluminiumExtractableElements</rdfs:label>
@@ -993,7 +1014,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/bulkDensityFineEarthProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">BulkDensityFineEarth</rdfs:label>
@@ -1111,7 +1132,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/bulkDensityWholeSoilProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">BulkDensityWholeSoil</rdfs:label>
@@ -1163,7 +1184,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/cadmiumProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">CadmiumExtractableElements</rdfs:label>
@@ -1209,7 +1230,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/cadmiumProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">CadmiumTotalElements</rdfs:label>
@@ -1393,7 +1414,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/carbonInorganicProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">CarbonInorganic</rdfs:label>
@@ -1721,7 +1742,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacitycSoilProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">CationExchangeCapacitycSoil</rdfs:label>
@@ -1993,20 +2014,20 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/layerhorizon/PhysioChemical"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/TextclayPropertyCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/layerhorizon/ClayFractionTextureValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ClayFractionTexture</rdfs:label>
@@ -2501,7 +2522,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/effectiveCecProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">EffectiveCec</rdfs:label>
@@ -2547,7 +2568,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/electricalConductivityProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ElectricalConductivity</rdfs:label>
@@ -2699,7 +2720,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/gypsumProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Gypsum</rdfs:label>
@@ -2876,7 +2897,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/hydraulicConductivityProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">HydraulicConductivity</rdfs:label>
@@ -3198,7 +3219,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/manganeseProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mantot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ManganeseExchangeableBases</rdfs:label>
@@ -3814,7 +3835,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/molybdenumProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">MolybdenumExtractableElements</rdfs:label>
@@ -3860,7 +3881,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/molybdenumProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">MolybdenumTotalElements</rdfs:label>
@@ -4191,7 +4212,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/organicMatterProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">OrganicMatter</rdfs:label>
@@ -4814,7 +4835,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/porosityProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Porosity</rdfs:label>
@@ -5247,20 +5268,20 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/layerhorizon/PhysioChemical"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/TextsandPropertyCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/layerhorizon/SandFractionTextureValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SandFractionTexture</rdfs:label>
@@ -5388,20 +5409,20 @@
         <rdfs:subClassOf rdf:resource="http://w3id.org/glosis/model/layerhorizon/PhysioChemical"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/codelists/TextsiltPropertyCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
                 <owl:allValuesFrom rdf:resource="http://w3id.org/glosis/model/layerhorizon/SiltFractionTextureValue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SiltFractionTexture</rdfs:label>
@@ -5726,7 +5747,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/solubleSaltsProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SolubleSalts</rdfs:label>
@@ -6042,7 +6063,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/totalCarbonateEquivalentProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Ccetot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">TotalCarbonateEquivalent</rdfs:label>
@@ -6301,7 +6322,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
-                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/layerhorizon/zincProperty"/>
+                <owl:hasValue rdf:resource="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ZincTotalElements</rdfs:label>
@@ -6467,6 +6488,13 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/procedure/PSAProcedure -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+    
+
+
     <!-- http://w3id.org/glosis/model/procedure/PhosphorusRetentionProcedure -->
 
 
@@ -6485,13 +6513,6 @@
 
 
     <owl:Class rdf:about="http://w3id.org/glosis/model/procedure/SolubleSaltsProcedure"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/TextureProcedure -->
-
-
-    <owl:Class rdf:about="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
     
 
 
@@ -6584,6 +6605,41 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg"/>
+    
+
+
     <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra -->
 
 
@@ -6591,15 +6647,66 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por"/>
+    
+
+
+    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal"/>
+    
+
+
     <!-- http://w3id.org/glosis/model/layerhorizon/aluminiumProperty -->
 
 
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/aluminiumProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">aluminiumProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/aluminiumProperty"/>
     
 
 
@@ -6647,18 +6754,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/layerhorizon/bulkDensityFineEarthProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/bulkDensityFineEarthProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">bulkDensityFineEarthProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/layerhorizon/bulkDensityMineralProperty -->
 
 
@@ -6677,41 +6772,6 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">bulkDensityPeatProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 59,3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/bulkDensityWholeSoilProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/bulkDensityWholeSoilProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">bulkDensityWholeSoilProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/cadmiumProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/cadmiumProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">cadmiumProperty</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/carbonInorganicProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/carbonInorganicProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">carbonInorganicProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6757,18 +6817,6 @@
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">cationExchangeCapacityProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacitycSoilProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacitycSoilProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">cationExchangeCapacitycSoilProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
     </owl:NamedIndividual>
     
@@ -6918,30 +6966,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/layerhorizon/effectiveCecProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/effectiveCecProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">effectiveCecProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/electricalConductivityProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/electricalConductivityProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">electricalConductivityProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/layerhorizon/fragmentsClassProperty -->
 
 
@@ -6976,18 +7000,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/layerhorizon/gypsumProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/gypsumProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">gypsumProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/layerhorizon/gypsumWeightProperty -->
 
 
@@ -6996,29 +7008,6 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">gypsumWeightProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/hydraulicConductivityProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/hydraulicConductivityProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">hydraulicConductivityProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/manganeseProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/manganeseProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">manganeseProperty</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7157,17 +7146,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/layerhorizon/molybdenumProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/molybdenumProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">molybdenumProperty</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/layerhorizon/mottlesAbundanceProperty -->
 
 
@@ -7231,18 +7209,6 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">mottlesSizeProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 33</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/organicMatterProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/organicMatterProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">organicMatterProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -7348,18 +7314,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/layerhorizon/porosityProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/porosityProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">porosityProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/layerhorizon/rootsAbundanceProperty -->
 
 
@@ -7441,18 +7395,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/layerhorizon/solubleSaltsProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/solubleSaltsProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">solubleSaltsProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/layerhorizon/stickinessProperty -->
 
 
@@ -7507,18 +7449,6 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/layerhorizon/totalCarbonateEquivalentProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/totalCarbonateEquivalentProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">totalCarbonateEquivalentProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://w3id.org/glosis/model/layerhorizon/voidsClassificationProperty -->
 
 
@@ -7547,18 +7477,6 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/wetPlasticityProperty">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">wetPlasticityProperty</rdfs:label>
-        <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/layerhorizon/zincProperty -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/layerhorizon/zincProperty">
-        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:label xml:lang="en">zincProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
     </owl:NamedIndividual>
 </rdf:RDF>
