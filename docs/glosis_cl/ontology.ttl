@@ -7,9 +7,9 @@
 @base <http://w3id.org/glosis/model/codelists#> .
 
 <http://w3id.org/glosis/model/codelists> rdf:type owl:Ontology ;
-                                          owl:versionIRI <http://w3id.org/glosis/model/codelists/1.4> ;
-                                          <http://purl.org/dc/terms/creator> _:genid-nodeid-node1i4rn333rx3 ,
-                                                                             _:genid-nodeid-node1i4rn333rx5 ,
+                                          owl:versionIRI <http://w3id.org/glosis/model/codelists/1.4.0> ;
+                                          <http://purl.org/dc/terms/creator> _:genid-nodeid-node1i82nv192x3 ,
+                                                                             _:genid-nodeid-node1i82nv192x5 ,
                                                                              _:genid1 ,
                                                                              _:genid3 ,
                                                                              _:genid5 ;
@@ -18,7 +18,7 @@
                                           <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
                                           <http://purl.org/dc/terms/title> "GLOSIS code lists"@en ;
                                           rdfs:comment "This module contains all the code lists of observable properties and results codes."@en ;
-                                          owl:versionInfo "1.4" .
+                                          owl:versionInfo "1.4.0" .
 
 _:genid1 rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
           <http://xmlns.com/foaf/0.1/name> "Raul Palma" ;
@@ -796,7 +796,8 @@ the classes defined by SOTER
                                                                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 rdfs:comment "This code list provides the FloodDurationValue."@en ;
                                                                 rdfs:label "Code list for FloodDurationValue - codelist class"@en ;
-                                                                rdfs:seeAlso <http://w3id.org/glosis/model/codelists/floodDurationValueCode> .
+                                                                rdfs:seeAlso <http://w3id.org/glosis/model/codelists/floodDurationValueCode> ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" .
 
 
 ###  http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode
@@ -804,7 +805,8 @@ the classes defined by SOTER
                                                                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                  rdfs:comment "This code list provides the FloodFrequencyValue."@en ;
                                                                  rdfs:label "Code list for FloodFrequencyValue - codelist class"@en ;
-                                                                 rdfs:seeAlso <http://w3id.org/glosis/model/codelists/floodFrequencyValueCode> .
+                                                                 rdfs:seeAlso <http://w3id.org/glosis/model/codelists/floodFrequencyValueCode> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" .
 
 
 ###  http://w3id.org/glosis/model/codelists/FragmentCoverValueCode
@@ -1380,7 +1382,8 @@ exposed surface that the mottles
                                                                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      rdfs:comment "This code list provides the OrganicMatterClassValue."@en ;
                                                                      rdfs:label "Code list for OrganicMatterClassValue - codelist class"@en ;
-                                                                     rdfs:seeAlso <http://w3id.org/glosis/model/codelists/organicMatterClassValueCode> .
+                                                                     rdfs:seeAlso <http://w3id.org/glosis/model/codelists/organicMatterClassValueCode> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" .
 
 
 ###  http://w3id.org/glosis/model/codelists/PeatDecompostionValueCode
@@ -2069,56 +2072,71 @@ it is pressed between thumb and
 duration of the occurrence of soil formation processes can be derived. See more in guidelines for Soil Description issued by the FAO: table 13""" .
 
 
-###  http://w3id.org/glosis/model/codelists/TextclayPropertyCode
-<http://w3id.org/glosis/model/codelists/TextclayPropertyCode> rdf:type owl:Class ;
+###  http://w3id.org/glosis/model/codelists/TextClayPropertyCode
+<http://w3id.org/glosis/model/codelists/TextClayPropertyCode> rdf:type owl:Class ;
                                                               owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                    owl:oneOf ( <http://w3id.org/glosis/model/codelists/textclayPropertyCode-Cl>
+                                                                                    owl:oneOf ( <http://w3id.org/glosis/model/codelists/textClayPropertyCode-Cl>
                                                                                               )
                                                                                   ] ;
                                                               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
-                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> .
+                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                              rdfs:comment "This code list provides the TextClayProperty."@en ;
+                                                              rdfs:label "Code list for TextClayProperty - codelist class"@en ;
+                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/textClayPropertyCode> ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Eva Corral-Pazos-de-Provens, Ígor Rapp-Arrarás and Juan M. Domingo-Santos, Estimating textural fractions of the USDA using those of the International System: A quantile approach, Geoderma, Volume 416, 2022." .
 
 
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode> rdf:type owl:Class ;
+###  http://w3id.org/glosis/model/codelists/TextSandPropertyCode
+<http://w3id.org/glosis/model/codelists/TextSandPropertyCode> rdf:type owl:Class ;
                                                               owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                    owl:oneOf ( <http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISO>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISSS>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_USDA>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISO>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISSS>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_USDA>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISO>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISSS>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_USDA>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISO>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISSS>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_USDA>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_ISSS>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_USDA>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_ISSS>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_USDA>
+                                                                                    owl:oneOf ( <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISO>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISSS>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_USDA>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_ISO>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_ISSS>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_USDA>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_ISO>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_ISSS>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_USDA>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_ISO>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_ISSS>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_USDA>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-vcSa_ISSS>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-vcSa_USDA>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-vfSa_ISSS>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSandPropertyCode-vfSa_USDA>
                                                                                               )
                                                                                   ] ;
                                                               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
-                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> .
+                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                              rdfs:comment "This code list provides the TextSandProperty."@en ;
+                                                              rdfs:label "Code list for TextSandProperty - codelist class"@en ;
+                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil " ,
+                                                                                                               "International Society of Soil Science (ISSS), 1929. The minutes of the First Commission meetings, International Congress of Soil Science, Washington 1927. Proc. Int. Soc. Soil Sci. 4 (3), pp. 215–222." ,
+                                                                                                               "S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " .
 
 
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> rdf:type owl:Class ;
+###  http://w3id.org/glosis/model/codelists/TextSiltPropertyCode
+<http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> rdf:type owl:Class ;
                                                               owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                    owl:oneOf ( <http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISO>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISSS>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_USDA>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_ISO>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_USDA>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_ISO>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_USDA>
-                                                                                                <http://w3id.org/glosis/model/codelists/textsiltPropertyCode-mSi_ISO>
+                                                                                    owl:oneOf ( <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISO>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISSS>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_USDA>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-cSi_ISO>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-cSi_USDA>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-fSi_ISO>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-fSi_USDA>
+                                                                                                <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-mSi_ISO>
                                                                                               )
                                                                                   ] ;
                                                               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
-                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> .
+                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                              rdfs:comment "This code list provides the TextSiltProperty."@en ;
+                                                              rdfs:label "Code list for TextSiltProperty - codelist class"@en ;
+                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil " ,
+                                                                                                               "S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " .
 
 
 ###  http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode
@@ -2126,7 +2144,8 @@ duration of the occurrence of soil formation processes can be derived. See more 
                                                                         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                         rdfs:comment "This code list provides the TextureUnconsolidatedValue."@en ;
                                                                         rdfs:label "Code list for TextureUnconsolidatedValue - codelist class"@en ;
-                                                                        rdfs:seeAlso <http://w3id.org/glosis/model/codelists/textureUnconsolidatedValueCode> .
+                                                                        rdfs:seeAlso <http://w3id.org/glosis/model/codelists/textureUnconsolidatedValueCode> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" .
 
 
 ###  http://w3id.org/glosis/model/codelists/VegetationClassValueCode
@@ -2294,343 +2313,6 @@ soil-forming processes, such as cracking, translocation and leaching. See more i
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://w3id.org/glosis/model/codelists/TextclayPropertyCode
-<http://w3id.org/glosis/model/codelists/TextclayPropertyCode> rdf:type owl:NamedIndividual ,
-                                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextclayPropertyCode-Cl
-<http://w3id.org/glosis/model/codelists/TextclayPropertyCode-Cl> rdf:type owl:NamedIndividual ,
-                                                                          <http://w3id.org/glosis/model/codelists/TextclayPropertyCode> ,
-                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                 <http://www.w3.org/2004/02/skos/core#definition> "Very fine mineral particles smaller than 2 µm" ;
-                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextclayPropertyCode> ;
-                                                                 <http://www.w3.org/2004/02/skos/core#notation> "Cl" ;
-                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Clay (< 0.002 mm)"@en ;
-                                                                 <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> ;
-                                                                 <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/TextclayPropertyCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode> rdf:type owl:NamedIndividual ,
-                                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO> rdf:type owl:NamedIndividual ,
-                                                                              <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.063-2 mm in soil" ;
-                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO> ,
-                                                                                                                    <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO> ,
-                                                                                                                    <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#notation> "Sa_ISO" ;
-                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Sand (0.063  - 2 mm)"@en ;
-                                                                     <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.020-2 mm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "Sa_ISSS" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Sand (0.02 - 2 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.050-2 mm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "Sa_USDA" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Sand (0.050  - 2 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISO> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.63-2 mm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "cSa_ISO" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse sand (0.63 - 2 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_ISSS> rdf:type owl:NamedIndividual ,
-                                                                                <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.2-2 mm in soil" ,
-                                                                                                                        "Content of mineral particles with sizes between 0.63-1.25 mm in soil" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#notation> "cSa_ISSS" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse sand (0.2 - 2 mm)"@en ,
-                                                                                                                       "Coarse sand (0.63 - 1.25 mm)"@en ;
-                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-cSa_USDA> rdf:type owl:NamedIndividual ,
-                                                                                <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.5-1 mm in soil" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#notation> "cSa_USDA" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse sand (0.5 - 1 mm)"@en ;
-                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISO> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.063-0.2 mm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "fSa_ISO" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine sand (0.063 - 0.2 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_ISSS> rdf:type owl:NamedIndividual ,
-                                                                                <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.02-0.2 mm in soil" ,
-                                                                                                                        "Content of mineral particles with sizes between 0.125-0.2 mm in soil" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#notation> "fSa_ISSS" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine sand (0.02 - 0.2 mm)"@en ,
-                                                                                                                       "Fine sand (0.125 - 0.2 mm)"@en ;
-                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-fSa_USDA> rdf:type owl:NamedIndividual ,
-                                                                                <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.1-0.25 mm in soil" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#notation> "fSa_USDA" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine sand (0.1 - 0.25 mm)"@en ;
-                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISO> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISO> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.02-0.63 mm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "mSa_ISO" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium sand (0.2 - 0.63 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_ISSS> rdf:type owl:NamedIndividual ,
-                                                                                <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.2-0.63 mm in soil" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#notation> "mSa_ISSS" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium sand (0.2 - 0.63 mm)"@en ;
-                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-mSa_USDA> rdf:type owl:NamedIndividual ,
-                                                                                <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.25-0.5 mm in soil" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#notation> "mSa_USDA" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium sand (0.25 - 0.5 mm)"@en ;
-                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_ISSS> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 1.25-2 mm in soil" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "vcSa_ISSS" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very coarse sand (1.25 - 2 mm)"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vcSa_USDA> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 1-2 mm in soil" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "vcSa_USDA" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very coarse sand (1 - 2 mm)"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_ISSS> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_ISSS> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.063-0.125 mm in soil" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "vfSa_ISSS" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very fine sand (0.063 - 0.125 mm)"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode-vfSa_USDA> rdf:type owl:NamedIndividual ,
-                                                                                 <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ,
-                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode-Sa_USDA> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.05-0.1 mm in soil" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                                        <http://www.w3.org/2004/02/skos/core#notation> "vfSa_USDA" ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very fine sand (0.05 - 0.1 mm)"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> rdf:type owl:NamedIndividual ,
-                                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO> rdf:type owl:NamedIndividual ,
-                                                                              <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ,
-                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-63 µm in soil" ;
-                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO> ,
-                                                                                                                    <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO> ,
-                                                                                                                    <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#notation> "Si_ISO" ;
-                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Silt (0.002 - 0.063 mm)"@en ;
-                                                                     <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> ;
-                                                                     <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISSS
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISSS> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-20 µm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "Si_ISSS" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Silt (0.002 - 0.02 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-50 µm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA> ,
-                                                                                                                     <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "Si_USDA" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Silt (0.002 - 0.05 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_ISO> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 20-63 µm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "cSi_ISO" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse silt (0.02 - 0.063 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-cSi_USDA> rdf:type owl:NamedIndividual ,
-                                                                                <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ,
-                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 20-50 µm in soil" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#notation> "cSi_USDA" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse silt (0.02 - 0.05 mm)"@en ;
-                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_ISO> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-6.3 µm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "fSi_ISO" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine silt (0.002 - 0.0063 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-fSi_USDA> rdf:type owl:NamedIndividual ,
-                                                                                <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ,
-                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_USDA> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-20 µm in soil" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                                       <http://www.w3.org/2004/02/skos/core#notation> "fSi_USDA" ;
-                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine silt (0.002 - 0.02 mm)"@en ;
-                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
-
-
-###  http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-mSi_ISO> rdf:type owl:NamedIndividual ,
-                                                                               <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ,
-                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode-Si_ISO> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 6.3-20 µm in soil" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                                      <http://www.w3.org/2004/02/skos/core#notation> "mSi_ISO" ;
-                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium silt (0.0063 - 0.02 mm)"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
-
 
 ###  http://w3id.org/glosis/model/codelists/biologicalAbundanceValueCode
 <http://w3id.org/glosis/model/codelists/biologicalAbundanceValueCode> rdf:type owl:NamedIndividual ,
@@ -5768,6 +5450,7 @@ the classes defined by SOTER
                                                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                                 rdfs:label "Code list for floodDurationValue - codelist scheme"@en ;
                                                                 rdfs:seeAlso <http://w3id.org/glosis/model/codelists/FloodDurationValueCode> ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" ;
                                                                 <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for floodDuration."@en ;
                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for floodDurationValue - codelist scheme"@en .
 
@@ -5777,6 +5460,7 @@ the classes defined by SOTER
                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                                  rdfs:label "Code list for floodFrequencyValue - codelist scheme"@en ;
                                                                  rdfs:seeAlso <http://w3id.org/glosis/model/codelists/FloodFrequencyValueCode> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" ;
                                                                  <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for floodFrequency."@en ;
                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for floodFrequencyValue - codelist scheme"@en .
 
@@ -9517,6 +9201,7 @@ exposed surface that the mottles
                                                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                                      rdfs:label "Code list for organicMatterClassValue - codelist scheme"@en ;
                                                                      rdfs:seeAlso <http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" ;
                                                                      <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for organicMatterClass."@en ;
                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for organicMatterClassValue - codelist scheme"@en .
 
@@ -13438,104 +13123,359 @@ duration of the occurrence of soil formation processes can be derived. See more 
                                                                  <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/surfaceAgeValueCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/textclayPropertyCode-Cl
-<http://w3id.org/glosis/model/codelists/textclayPropertyCode-Cl> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textClayPropertyCode
+<http://w3id.org/glosis/model/codelists/textClayPropertyCode> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                              rdfs:label "Code list for textClayProperty - codelist scheme"@en ;
+                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/TextClayPropertyCode> ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Eva Corral-Pazos-de-Provens, Ígor Rapp-Arrarás and Juan M. Domingo-Santos, Estimating textural fractions of the USDA using those of the International System: A quantile approach, Geoderma, Volume 416, 2022." ;
+                                                              <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for textClay."@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for textClayProperty - codelist scheme"@en .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISO
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISO> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textClayPropertyCode-Cl
+<http://w3id.org/glosis/model/codelists/textClayPropertyCode-Cl> rdf:type owl:NamedIndividual ,
+                                                                          <http://w3id.org/glosis/model/codelists/TextClayPropertyCode> ,
+                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "Very fine mineral particles smaller than 2 µm" ;
+                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textClayPropertyCode> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#notation> "Cl" ;
+                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Clay (< 0.002 mm)"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/textClayPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISSS
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_ISSS> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                              rdfs:label "Code list for textSandProperty - codelist scheme"@en ;
+                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil " ,
+                                                                                                               "International Society of Soil Science (ISSS), 1929. The minutes of the First Commission meetings, International Congress of Soil Science, Washington 1927. Proc. Int. Soc. Soil Sci. 4 (3), pp. 215–222." ,
+                                                                                                               "S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " ;
+                                                              <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for textSand."@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for textSandProperty - codelist scheme"@en .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_USDA
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-Sa_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISO
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISO> rdf:type owl:NamedIndividual ,
+                                                                              <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.063-2 mm in soil" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_ISO> ,
+                                                                                                                    <http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_ISO> ,
+                                                                                                                    <http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_ISO> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#notation> "Sa_ISO" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Sand (0.063  - 2 mm)"@en ;
+                                                                     <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISO
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISO> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISSS
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISSS> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.020-2 mm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_ISSS> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_ISSS> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_ISSS> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSandPropertyCode-vcSa_ISSS> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSandPropertyCode-vfSa_ISSS> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "Sa_ISSS" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Sand (0.02 - 2 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISSS
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_ISSS> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_USDA
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_USDA> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.050-2 mm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_USDA> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_USDA> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_USDA> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSandPropertyCode-vcSa_USDA> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSandPropertyCode-vfSa_USDA> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "Sa_USDA" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Sand (0.050  - 2 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_USDA
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-cSa_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_ISO
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_ISO> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISO> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.63-2 mm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "cSa_ISO" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse sand (0.63 - 2 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISO
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISO> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_ISSS
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_ISSS> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISSS> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.2-2 mm in soil" ,
+                                                                                                                        "Content of mineral particles with sizes between 0.63-1.25 mm in soil" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "cSa_ISSS" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse sand (0.2 - 2 mm)"@en ,
+                                                                                                                       "Coarse sand (0.63 - 1.25 mm)"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISSS
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_ISSS> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_USDA
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-cSa_USDA> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_USDA> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.5-1 mm in soil" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "cSa_USDA" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse sand (0.5 - 1 mm)"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_USDA
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-fSa_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_ISO
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_ISO> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISO> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.063-0.2 mm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "fSa_ISO" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine sand (0.063 - 0.2 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISO
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISO> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_ISSS
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_ISSS> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISSS> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.02-0.2 mm in soil" ,
+                                                                                                                        "Content of mineral particles with sizes between 0.125-0.2 mm in soil" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "fSa_ISSS" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine sand (0.02 - 0.2 mm)"@en ,
+                                                                                                                       "Fine sand (0.125 - 0.2 mm)"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISSS
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_ISSS> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_USDA
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-fSa_USDA> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_USDA> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.1-0.25 mm in soil" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "fSa_USDA" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine sand (0.1 - 0.25 mm)"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_USDA
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-mSa_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_ISO
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_ISO> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISO> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.02-0.63 mm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "mSa_ISO" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium sand (0.2 - 0.63 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_ISSS
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_ISSS> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_ISSS
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_ISSS> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISSS> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.2-0.63 mm in soil" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "mSa_ISSS" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium sand (0.2 - 0.63 mm)"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_USDA
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-vcSa_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_USDA
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-mSa_USDA> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_USDA> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.25-0.5 mm in soil" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "mSa_USDA" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium sand (0.25 - 0.5 mm)"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_ISSS
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_ISSS> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-vcSa_ISSS
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-vcSa_ISSS> rdf:type owl:NamedIndividual ,
+                                                                                 <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISSS> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 1.25-2 mm in soil" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#notation> "vcSa_ISSS" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very coarse sand (1.25 - 2 mm)"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_USDA
-<http://w3id.org/glosis/model/codelists/textsandPropertyCode-vfSa_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-vcSa_USDA
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-vcSa_USDA> rdf:type owl:NamedIndividual ,
+                                                                                 <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_USDA> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 1-2 mm in soil" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#notation> "vcSa_USDA" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very coarse sand (1 - 2 mm)"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISO
-<http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISO> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-vfSa_ISSS
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-vfSa_ISSS> rdf:type owl:NamedIndividual ,
+                                                                                 <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_ISSS> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.063-0.125 mm in soil" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#notation> "vfSa_ISSS" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very fine sand (0.063 - 0.125 mm)"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISSS
-<http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_ISSS> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSandPropertyCode-vfSa_USDA
+<http://w3id.org/glosis/model/codelists/textSandPropertyCode-vfSa_USDA> rdf:type owl:NamedIndividual ,
+                                                                                 <http://w3id.org/glosis/model/codelists/TextSandPropertyCode> ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSandPropertyCode-Sa_USDA> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 0.05-0.1 mm in soil" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSandPropertyCode> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#notation> "vfSa_USDA" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Very fine sand (0.05 - 0.1 mm)"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_USDA
-<http://w3id.org/glosis/model/codelists/textsiltPropertyCode-Si_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                              rdfs:label "Code list for textSiltProperty - codelist scheme"@en ;
+                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil " ,
+                                                                                                               "S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " ;
+                                                              <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for textSilt."@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for textSiltProperty - codelist scheme"@en .
 
 
-###  http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_ISO
-<http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_ISO> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISO
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISO> rdf:type owl:NamedIndividual ,
+                                                                              <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ,
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-63 µm in soil" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-cSi_ISO> ,
+                                                                                                                    <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-fSi_ISO> ,
+                                                                                                                    <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-mSi_ISO> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#notation> "Si_ISO" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Silt (0.002 - 0.063 mm)"@en ;
+                                                                     <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> ;
+                                                                     <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_USDA
-<http://w3id.org/glosis/model/codelists/textsiltPropertyCode-cSi_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISSS
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISSS> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-20 µm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "Si_ISSS" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Silt (0.002 - 0.02 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1016/j.geoderma.2022.115783> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_ISO
-<http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_ISO> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_USDA
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_USDA> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-50 µm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#narrower> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-cSi_USDA> ,
+                                                                                                                     <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-fSi_USDA> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "Si_USDA" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Silt (0.002 - 0.05 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_USDA
-<http://w3id.org/glosis/model/codelists/textsiltPropertyCode-fSi_USDA> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode-cSi_ISO
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode-cSi_ISO> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISO> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 20-63 µm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "cSi_ISO" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse silt (0.02 - 0.063 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
 
 
-###  http://w3id.org/glosis/model/codelists/textsiltPropertyCode-mSi_ISO
-<http://w3id.org/glosis/model/codelists/textsiltPropertyCode-mSi_ISO> rdf:type owl:NamedIndividual .
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode-cSi_USDA
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode-cSi_USDA> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_USDA> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 20-50 µm in soil" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "cSi_USDA" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Coarse silt (0.02 - 0.05 mm)"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode-fSi_ISO
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode-fSi_ISO> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISO> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-6.3 µm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "fSi_ISO" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine silt (0.002 - 0.0063 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
+
+
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode-fSi_USDA
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode-fSi_USDA> rdf:type owl:NamedIndividual ,
+                                                                                <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_USDA> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 2-20 µm in soil" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "fSi_USDA" ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Fine silt (0.002 - 0.02 mm)"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
+
+
+###  http://w3id.org/glosis/model/codelists/textSiltPropertyCode-mSi_ISO
+<http://w3id.org/glosis/model/codelists/textSiltPropertyCode-mSi_ISO> rdf:type owl:NamedIndividual ,
+                                                                               <http://w3id.org/glosis/model/codelists/TextSiltPropertyCode> ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode-Si_ISO> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "Content of mineral particles with sizes between 6.3-20 µm in soil" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://w3id.org/glosis/model/codelists/textSiltPropertyCode> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "mSi_ISO" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium silt (0.0063 - 0.02 mm)"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#scopeNote> <https://www.iso.org/standard/66345.html> .
 
 
 ###  http://w3id.org/glosis/model/codelists/textureUnconsolidatedValueCode
@@ -13543,6 +13483,7 @@ duration of the occurrence of soil formation processes can be derived. See more 
                                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                                         rdfs:label "Code list for textureUnconsolidatedValue - codelist scheme"@en ;
                                                                         rdfs:seeAlso <http://w3id.org/glosis/model/codelists/TextureUnconsolidatedValueCode> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "table is missing!" ;
                                                                         <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for textureUnconsolidated."@en ;
                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for textureUnconsolidatedValue - codelist scheme"@en .
 
@@ -14418,40 +14359,6 @@ soil-forming processes, such as cracking, translocation and leaching. See more i
                                                                <http://www.w3.org/2004/02/skos/core#notation> "W" ;
                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Weathered"@en ;
                                                                <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/glosis/model/codelists/weatheringValueCode> .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-<http://w3id.org/glosis/model/codelists/TextclayPropertyCode> rdfs:comment "This code list provides the TextclayProperty."@en ;
-                                                              rdfs:label "Code list for TextclayProperty - codelist class"@en ,
-                                                                         "Code list for TextclayProperty - codelist scheme"@en ;
-                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/TextclayPropertyCode> ;
-                                                              <http://www.w3.org/2004/02/skos/core#definition> "Eva Corral-Pazos-de-Provens, Ígor Rapp-Arrarás and Juan M. Domingo-Santos, Estimating textural fractions of the USDA using those of the International System: A quantile approach, Geoderma, Volume 416, 2022." ;
-                                                              <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for Textclay."@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for TextclayProperty - codelist scheme"@en .
-
-
-<http://w3id.org/glosis/model/codelists/TextsandPropertyCode> rdfs:comment "This code list provides the TextsandProperty."@en ;
-                                                              rdfs:label "Code list for TextsandProperty - codelist class"@en ,
-                                                                         "Code list for TextsandProperty - codelist scheme"@en ;
-                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/TextsandPropertyCode> ;
-                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil " ,
-                                                                                                               "International Society of Soil Science (ISSS), 1929. The minutes of the First Commission meetings, International Congress of Soil Science, Washington 1927. Proc. Int. Soc. Soil Sci. 4 (3), pp. 215–222." ,
-                                                                                                               "S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " ;
-                                                              <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for Textsand."@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for TextsandProperty - codelist scheme"@en .
-
-
-<http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> rdfs:comment "This code list provides the TextsiltProperty."@en ;
-                                                              rdfs:label "Code list for TextsiltProperty - codelist class"@en ,
-                                                                         "Code list for TextsiltProperty - codelist scheme"@en ;
-                                                              rdfs:seeAlso <http://w3id.org/glosis/model/codelists/TextsiltPropertyCode> ;
-                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil " ,
-                                                                                                               "S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " ;
-                                                              <http://www.w3.org/2004/02/skos/core#note> "This code list provides analysis procedures for Textsilt."@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Code list for TextsiltProperty - codelist scheme"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
