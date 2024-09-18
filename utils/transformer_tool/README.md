@@ -19,3 +19,5 @@ Script can transform in two ways:
 
 ```python transform_to_csv.py input.ttl```
 (this creates a csv file with corresponding filename in the location of TURTLE file)
+
+Make sure you follow the **camelCase** naming convention when adjusting or adding new records under the attribute column in codelist CSV files. This is very important for the SPARQL query that then transforms the CSV into an RDF representation.
