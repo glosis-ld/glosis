@@ -20,10 +20,10 @@
     dct:description "This ontology represents the laboratory analysis procedures in GLOSIS, an extension to the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
     dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
     dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt and Africa Soil Profile Database"@en ;
-    dct:title "GLOSIS Procedures code list"@en ;
-    rdfs:comment "This module contains the code lists identifying laboratory processes employed to assess physio-chemical soil properties."@en ;    
-    owl:versionIRI <http://w3id.org/glosis/model/procedure/1.4.0> ;
-    owl:versionInfo "1.4.0" .
+    dct:title "GLOSIS Procedures"@en ;
+    rdfs:comment "This module contains the code lists identifying laboratory processes employed to assess physio-chemical soil properties."@en ;
+    owl:versionIRI glosis_proc:1.4.1 ;
+    owl:versionInfo "1.4.1" .
 
 glosis_proc:acidityExchangeableProcedure a skos:ConceptScheme ;
     rdfs:label "Code list for acidityExchangeable analysis procedures - codelist scheme"@en ;
@@ -220,7 +220,7 @@ glosis_proc:AcidityExchangeableProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:acidityExchangeableProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:acidityExchangeableProcedure-ExchAcid_ph8-unkn glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m glosis_proc:acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-nh4cl glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-unkn glosis_proc:acidityExchangeableProcedure-ExchAcid_ph7-caoac glosis_proc:acidityExchangeableProcedure-ExchAcid_ph7-unkn ) .
+    owl:oneOf ( glosis_proc:acidityExchangeableProcedure-ExchAcid_ph7-unkn glosis_proc:acidityExchangeableProcedure-ExchAcid_ph8-unkn glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-nh4cl glosis_proc:acidityExchangeableProcedure-ExchAcid_ph7-caoac glosis_proc:acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-unkn ) .
 
 glosis_proc:AvailableWaterHoldingCapacityProcedure a owl:Class ;
     rdfs:label "Procedures for AvailableWaterHoldingCapacity - codelist class"@en ;
@@ -228,7 +228,7 @@ glosis_proc:AvailableWaterHoldingCapacityProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:availableWaterHoldingCapacityProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp ) .
+    owl:oneOf ( glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp ) .
 
 glosis_proc:BaseSaturationProcedure a owl:Class ;
     rdfs:label "Procedures for BaseSaturation - codelist class"@en ;
@@ -244,7 +244,7 @@ glosis_proc:BulkDensityFineEarthProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:bulkDensityFineEarthProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-fc glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-od glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-od glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-fc glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-unkn glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-rpl-unkn glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn ) .
+    owl:oneOf ( glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-unkn glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-fc glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-od glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-od glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-rpl-unkn glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-fc glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn ) .
 
 glosis_proc:BulkDensityWholeSoilProcedure a owl:Class ;
     rdfs:label "Procedures for BulkDensityWholeSoil - codelist class"@en ;
@@ -252,7 +252,7 @@ glosis_proc:BulkDensityWholeSoilProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:bulkDensityWholeSoilProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-unkn glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-unkn glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-fc glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-od glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od ) .
+    owl:oneOf ( glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-unkn glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-fc glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-od glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-unkn ) .
 
 glosis_proc:CarbonInorganicProcedure a owl:Class ;
     rdfs:label "Procedures for CarbonInorganic - codelist class"@en ;
@@ -260,7 +260,7 @@ glosis_proc:CarbonInorganicProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:carbonInorganicProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:carbonInorganicProcedure-InOrgC_calcul-caco3 glosis_proc:carbonInorganicProcedure-InOrgC_calcul-tc-oc ) .
+    owl:oneOf ( glosis_proc:carbonInorganicProcedure-InOrgC_calcul-tc-oc glosis_proc:carbonInorganicProcedure-InOrgC_calcul-caco3 ) .
 
 glosis_proc:CarbonOrganicProcedure a owl:Class ;
     rdfs:label "Procedures for CarbonOrganic - codelist class"@en ;
@@ -268,7 +268,7 @@ glosis_proc:CarbonOrganicProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:carbonOrganicProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-lt glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-spec glosis_proc:carbonOrganicProcedure-OrgC_dc-lt-loi glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-ht glosis_proc:carbonOrganicProcedure-OrgC_dc-ht glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-mt glosis_proc:carbonOrganicProcedure-OrgC_wc glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-tiurin glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack glosis_proc:carbonOrganicProcedure-OrgC_acid-dc glosis_proc:carbonOrganicProcedure-OrgC_dc-lt glosis_proc:carbonOrganicProcedure-OrgC_dc-ht-analyser glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-lt-loi glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-nelson glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c glosis_proc:carbonOrganicProcedure-OrgC_dc-spec glosis_proc:carbonOrganicProcedure-OrgC_calcul-tc-ic glosis_proc:carbonOrganicProcedure-OrgC_dc glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-kurmies glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-kalembra glosis_proc:carbonOrganicProcedure-OrgC_dc-mt glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-jackson glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-knopp ) .
+    owl:oneOf ( glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-lt-loi glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-tiurin glosis_proc:carbonOrganicProcedure-OrgC_dc-mt glosis_proc:carbonOrganicProcedure-OrgC_dc-lt glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c glosis_proc:carbonOrganicProcedure-OrgC_acid-dc glosis_proc:carbonOrganicProcedure-OrgC_dc-ht glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-kalembra glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser glosis_proc:carbonOrganicProcedure-OrgC_dc glosis_proc:carbonOrganicProcedure-OrgC_wc glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-nelson glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-mt glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-knopp glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-spec glosis_proc:carbonOrganicProcedure-OrgC_calcul-tc-ic glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-kurmies glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-ht glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-jackson glosis_proc:carbonOrganicProcedure-OrgC_dc-ht-analyser glosis_proc:carbonOrganicProcedure-OrgC_dc-lt-loi glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-lt glosis_proc:carbonOrganicProcedure-OrgC_dc-spec ) .
 
 glosis_proc:CarbonTotalProcedure a owl:Class ;
     rdfs:label "Procedures for CarbonTotal - codelist class"@en ;
@@ -276,7 +276,7 @@ glosis_proc:CarbonTotalProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:carbonTotalProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:carbonTotalProcedure-TotC_dc-ht-spec glosis_proc:carbonTotalProcedure-TotC_calcul-ic-oc glosis_proc:carbonTotalProcedure-TotC_dc-ht glosis_proc:carbonTotalProcedure-TotC_dc-mt glosis_proc:carbonTotalProcedure-TotC_dc-ht-analyser ) .
+    owl:oneOf ( glosis_proc:carbonTotalProcedure-TotC_calcul-ic-oc glosis_proc:carbonTotalProcedure-TotC_dc-mt glosis_proc:carbonTotalProcedure-TotC_dc-ht-analyser glosis_proc:carbonTotalProcedure-TotC_dc-ht glosis_proc:carbonTotalProcedure-TotC_dc-ht-spec ) .
 
 glosis_proc:CationExchangeCapacitySoilProcedure a owl:Class ;
     rdfs:label "Procedures for CationExchangeCapacitySoil - codelist class"@en ;
@@ -284,7 +284,7 @@ glosis_proc:CationExchangeCapacitySoilProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:cationExchangeCapacitySoilProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-edta glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea ) .
+    owl:oneOf ( glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-edta glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn ) .
 
 glosis_proc:CoarseFragmentsProcedure a owl:Class ;
     rdfs:label "Procedures for CoarseFragments - codelist class"@en ;
@@ -292,7 +292,7 @@ glosis_proc:CoarseFragmentsProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:coarseFragmentsProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:coarseFragmentsProcedure-CrsFrg_fldcls glosis_proc:coarseFragmentsProcedure-CrsFrg_fld glosis_proc:coarseFragmentsProcedure-CrsFrg_lab ) .
+    owl:oneOf ( glosis_proc:coarseFragmentsProcedure-CrsFrg_fldcls glosis_proc:coarseFragmentsProcedure-CrsFrg_lab glosis_proc:coarseFragmentsProcedure-CrsFrg_fld ) .
 
 glosis_proc:EffectiveCecProcedure a owl:Class ;
     rdfs:label "Procedures for EffectiveCec - codelist class"@en ;
@@ -300,7 +300,7 @@ glosis_proc:EffectiveCecProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:effectiveCecProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:effectiveCecProcedure-EffCEC_calcul-ba glosis_proc:effectiveCecProcedure-EffCEC_calcul-b ) .
+    owl:oneOf ( glosis_proc:effectiveCecProcedure-EffCEC_calcul-b glosis_proc:effectiveCecProcedure-EffCEC_calcul-ba ) .
 
 glosis_proc:ElectricalConductivityProcedure a owl:Class ;
     rdfs:label "Procedures for ElectricalConductivity - codelist class"@en ;
@@ -308,7 +308,7 @@ glosis_proc:ElectricalConductivityProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:electricalConductivityProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:electricalConductivityProcedure-EC_ratio1-2.5 glosis_proc:electricalConductivityProcedure-EC_ratio1-5 glosis_proc:electricalConductivityProcedure-EC_ratio1-1 glosis_proc:electricalConductivityProcedure-ECe_sat glosis_proc:electricalConductivityProcedure-EC_ratio1-2 glosis_proc:electricalConductivityProcedure-EC_ratio1-10 ) .
+    owl:oneOf ( glosis_proc:electricalConductivityProcedure-ECe_sat glosis_proc:electricalConductivityProcedure-EC_ratio1-1 glosis_proc:electricalConductivityProcedure-EC_ratio1-5 glosis_proc:electricalConductivityProcedure-EC_ratio1-2 glosis_proc:electricalConductivityProcedure-EC_ratio1-2.5 glosis_proc:electricalConductivityProcedure-EC_ratio1-10 ) .
 
 glosis_proc:ExchangeableBasesProcedure a owl:Class ;
     rdfs:label "Procedures for ExchangeableBases - codelist class"@en ;
@@ -316,7 +316,7 @@ glosis_proc:ExchangeableBasesProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:exchangeableBasesProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:exchangeableBasesProcedure-ExchBases_ph8-unkn glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3 glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-unkn glosis_proc:exchangeableBasesProcedure-ExchBases_ph0-nh4cl glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac glosis_proc:exchangeableBasesProcedure-ExchBases_ph0-cohex glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp glosis_proc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-edta ) .
+    owl:oneOf ( glosis_proc:exchangeableBasesProcedure-ExchBases_ph8-unkn glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-unkn glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-edta glosis_proc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3 glosis_proc:exchangeableBasesProcedure-ExchBases_ph0-nh4cl glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp glosis_proc:exchangeableBasesProcedure-ExchBases_ph0-cohex glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec ) .
 
 glosis_proc:ExtractableElementsProcedure a owl:Class ;
     rdfs:label "Procedures for ExtractableElements - codelist class"@en ;
@@ -324,7 +324,7 @@ glosis_proc:ExtractableElementsProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:extractableElementsProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:extractableElementsProcedure-Extr_m3 glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-kurtz-bray glosis_proc:extractableElementsProcedure-Extr_ap20 glosis_proc:extractableElementsProcedure-Extr_m2 glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-bray1 glosis_proc:extractableElementsProcedure-Extr_h2so4-truog glosis_proc:extractableElementsProcedure-Extr_edta glosis_proc:extractableElementsProcedure-Extr_nahco3-olsen-dabin glosis_proc:extractableElementsProcedure-Extr_naoac-morgan glosis_proc:extractableElementsProcedure-Extr_ap14 glosis_proc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven glosis_proc:extractableElementsProcedure-Extr_hotwater glosis_proc:extractableElementsProcedure-Extr_ap21 glosis_proc:extractableElementsProcedure-Extr_capo4 glosis_proc:extractableElementsProcedure-Extr_m1 glosis_proc:extractableElementsProcedure-Extr_hno3 glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-bray2 glosis_proc:extractableElementsProcedure-Extr_m3-spec glosis_proc:extractableElementsProcedure-Extr_nahco3-olsen glosis_proc:extractableElementsProcedure-Extr_ap15 glosis_proc:extractableElementsProcedure-Extr_c6h8o7-reeuwijk glosis_proc:extractableElementsProcedure-Extr_dtpa glosis_proc:extractableElementsProcedure-Extr_hcl-h2so4-nelson glosis_proc:extractableElementsProcedure-Extr_cacl2 glosis_proc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1 ) .
+    owl:oneOf ( glosis_proc:extractableElementsProcedure-Extr_c6h8o7-reeuwijk glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-kurtz-bray glosis_proc:extractableElementsProcedure-Extr_nahco3-olsen glosis_proc:extractableElementsProcedure-Extr_hcl-h2so4-nelson glosis_proc:extractableElementsProcedure-Extr_cacl2 glosis_proc:extractableElementsProcedure-Extr_hno3 glosis_proc:extractableElementsProcedure-Extr_h2so4-truog glosis_proc:extractableElementsProcedure-Extr_m3-spec glosis_proc:extractableElementsProcedure-Extr_ap15 glosis_proc:extractableElementsProcedure-Extr_nahco3-olsen-dabin glosis_proc:extractableElementsProcedure-Extr_capo4 glosis_proc:extractableElementsProcedure-Extr_hotwater glosis_proc:extractableElementsProcedure-Extr_ap14 glosis_proc:extractableElementsProcedure-Extr_ap20 glosis_proc:extractableElementsProcedure-Extr_m3 glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-bray2 glosis_proc:extractableElementsProcedure-Extr_edta glosis_proc:extractableElementsProcedure-Extr_m2 glosis_proc:extractableElementsProcedure-Extr_m1 glosis_proc:extractableElementsProcedure-Extr_naoac-morgan glosis_proc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-bray1 glosis_proc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1 glosis_proc:extractableElementsProcedure-Extr_ap21 glosis_proc:extractableElementsProcedure-Extr_dtpa ) .
 
 glosis_proc:GypsumProcedure a owl:Class ;
     rdfs:label "Procedures for Gypsum - codelist class"@en ;
@@ -332,7 +332,7 @@ glosis_proc:GypsumProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:gypsumProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:gypsumProcedure-CaSO4_gy05 glosis_proc:gypsumProcedure-CaSO4_gy03 glosis_proc:gypsumProcedure-CaSO4_gy06 glosis_proc:gypsumProcedure-CaSO4_gy07 glosis_proc:gypsumProcedure-CaSO4_gy02 glosis_proc:gypsumProcedure-CaSO4_gy04 glosis_proc:gypsumProcedure-CaSO4_gy01 ) .
+    owl:oneOf ( glosis_proc:gypsumProcedure-CaSO4_gy02 glosis_proc:gypsumProcedure-CaSO4_gy07 glosis_proc:gypsumProcedure-CaSO4_gy05 glosis_proc:gypsumProcedure-CaSO4_gy03 glosis_proc:gypsumProcedure-CaSO4_gy06 glosis_proc:gypsumProcedure-CaSO4_gy01 glosis_proc:gypsumProcedure-CaSO4_gy04 ) .
 
 glosis_proc:HydraulicConductivityProcedure a owl:Class ;
     rdfs:label "Procedures for HydraulicConductivity - codelist class"@en ;
@@ -340,7 +340,7 @@ glosis_proc:HydraulicConductivityProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:hydraulicConductivityProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:hydraulicConductivityProcedure-Ksat_dblring glosis_proc:hydraulicConductivityProcedure-Ksat_bhole glosis_proc:hydraulicConductivityProcedure-Ksat_invbhole glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf glosis_proc:hydraulicConductivityProcedure-Ksat_column ) .
+    owl:oneOf ( glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton glosis_proc:hydraulicConductivityProcedure-Ksat_invbhole glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten glosis_proc:hydraulicConductivityProcedure-Ksat_column glosis_proc:hydraulicConductivityProcedure-Ksat_bhole glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf glosis_proc:hydraulicConductivityProcedure-Ksat_dblring ) .
 
 glosis_proc:MoistureContentProcedure a owl:Class ;
     rdfs:label "Procedures for MoistureContent - codelist class"@en ;
@@ -348,7 +348,7 @@ glosis_proc:MoistureContentProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:moistureContentProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:moistureContentProcedure-VMC_ud-cl glosis_proc:moistureContentProcedure-VMC_calcul-ptf-brookscorey glosis_proc:moistureContentProcedure-VMC_ud glosis_proc:moistureContentProcedure-VMC_d-ww glosis_proc:moistureContentProcedure-VMC_d glosis_proc:moistureContentProcedure-VMC_d-cl-ww glosis_proc:moistureContentProcedure-VMC_d-cl glosis_proc:moistureContentProcedure-VMC_calcul-ptf glosis_proc:moistureContentProcedure-VMC_ud-co ) .
+    owl:oneOf ( glosis_proc:moistureContentProcedure-VMC_d-cl glosis_proc:moistureContentProcedure-VMC_calcul-ptf glosis_proc:moistureContentProcedure-VMC_ud-cl glosis_proc:moistureContentProcedure-VMC_d-cl-ww glosis_proc:moistureContentProcedure-VMC_ud glosis_proc:moistureContentProcedure-VMC_d-ww glosis_proc:moistureContentProcedure-VMC_ud-co glosis_proc:moistureContentProcedure-VMC_calcul-ptf-brookscorey glosis_proc:moistureContentProcedure-VMC_d ) .
 
 glosis_proc:NitrogenTotalProcedure a owl:Class ;
     rdfs:label "Procedures for NitrogenTotal - codelist class"@en ;
@@ -356,7 +356,7 @@ glosis_proc:NitrogenTotalProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:nitrogenTotalProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:nitrogenTotalProcedure-TotalN_nelson glosis_proc:nitrogenTotalProcedure-TotalN_dc-ht-leco glosis_proc:nitrogenTotalProcedure-TotalN_tn08 glosis_proc:nitrogenTotalProcedure-TotalN_bremner glosis_proc:nitrogenTotalProcedure-TotalN_dc-ht-dumas glosis_proc:nitrogenTotalProcedure-TotalN_tn06 glosis_proc:nitrogenTotalProcedure-TotalN_h2so4 glosis_proc:nitrogenTotalProcedure-TotalN_calcul glosis_proc:nitrogenTotalProcedure-TotalN_kjeldahl-nh4 glosis_proc:nitrogenTotalProcedure-TotalN_tn04 glosis_proc:nitrogenTotalProcedure-TotalN_kjeldahl glosis_proc:nitrogenTotalProcedure-TotalN_dc-spec glosis_proc:nitrogenTotalProcedure-TotalN_calcul-oc10 glosis_proc:nitrogenTotalProcedure-TotalN_dc ) .
+    owl:oneOf ( glosis_proc:nitrogenTotalProcedure-TotalN_dc-ht-dumas glosis_proc:nitrogenTotalProcedure-TotalN_tn06 glosis_proc:nitrogenTotalProcedure-TotalN_kjeldahl glosis_proc:nitrogenTotalProcedure-TotalN_tn04 glosis_proc:nitrogenTotalProcedure-TotalN_nelson glosis_proc:nitrogenTotalProcedure-TotalN_dc-spec glosis_proc:nitrogenTotalProcedure-TotalN_bremner glosis_proc:nitrogenTotalProcedure-TotalN_dc-ht-leco glosis_proc:nitrogenTotalProcedure-TotalN_dc glosis_proc:nitrogenTotalProcedure-TotalN_calcul glosis_proc:nitrogenTotalProcedure-TotalN_calcul-oc10 glosis_proc:nitrogenTotalProcedure-TotalN_h2so4 glosis_proc:nitrogenTotalProcedure-TotalN_kjeldahl-nh4 glosis_proc:nitrogenTotalProcedure-TotalN_tn08 ) .
 
 glosis_proc:OrganicMatterProcedure a owl:Class ;
     rdfs:label "Procedures for OrganicMatter - codelist class"@en ;
@@ -364,7 +364,7 @@ glosis_proc:OrganicMatterProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:organicMatterProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:organicMatterProcedure-FulAcidC_unkn glosis_proc:organicMatterProcedure-HumAcidC_unkn glosis_proc:organicMatterProcedure-TotHumC_unkn glosis_proc:organicMatterProcedure-OrgM_calcul-oc1.73 ) .
+    owl:oneOf ( glosis_proc:organicMatterProcedure-HumAcidC_unkn glosis_proc:organicMatterProcedure-FulAcidC_unkn glosis_proc:organicMatterProcedure-OrgM_calcul-oc1.73 glosis_proc:organicMatterProcedure-TotHumC_unkn ) .
 
 glosis_proc:PHProcedure a owl:Class ;
     rdfs:label "Procedures for PH - codelist class"@en ;
@@ -372,7 +372,7 @@ glosis_proc:PHProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:pHProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:pHProcedure-pHH2O glosis_proc:pHProcedure-pHKCl_ratio1-1 glosis_proc:pHProcedure-pHH2O_unkn-spec glosis_proc:pHProcedure-pHCaCl2_ratio1-10 glosis_proc:pHProcedure-pHKCl_ratio1-10 glosis_proc:pHProcedure-pHH2O_sat glosis_proc:pHProcedure-pHKCl_ratio1-2 glosis_proc:pHProcedure-pHCaCl2_ratio1-2.5 glosis_proc:pHProcedure-pHNaF_ratio1-2 glosis_proc:pHProcedure-pHH2O_ratio1-5 glosis_proc:pHProcedure-pHH2O_ratio1-2 glosis_proc:pHProcedure-pHH2O_ratio1-2.5 glosis_proc:pHProcedure-pHNaF_ratio1-10 glosis_proc:pHProcedure-pHCaCl2 glosis_proc:pHProcedure-pHNaF_sat glosis_proc:pHProcedure-pHCaCl2_ratio1-2 glosis_proc:pHProcedure-pHNaF glosis_proc:pHProcedure-pHH2O_ratio1-10 glosis_proc:pHProcedure-pHNaF_ratio1-2.5 glosis_proc:pHProcedure-pHCaCl2_ratio1-5 glosis_proc:pHProcedure-pHCaCl2_sat glosis_proc:pHProcedure-pHH2O_ratio1-1 glosis_proc:pHProcedure-pHCaCl2_ratio1-1 glosis_proc:pHProcedure-pHKCl_ratio1-5 glosis_proc:pHProcedure-pHNaF_ratio1-5 glosis_proc:pHProcedure-pHNaF_ratio1-1 glosis_proc:pHProcedure-pHKCl_sat glosis_proc:pHProcedure-pHKCl glosis_proc:pHProcedure-pHKCl_ratio1-2.5 ) .
+    owl:oneOf ( glosis_proc:pHProcedure-pHNaF_ratio1-5 glosis_proc:pHProcedure-pHCaCl2 glosis_proc:pHProcedure-pHNaF glosis_proc:pHProcedure-pHCaCl2_ratio1-2 glosis_proc:pHProcedure-pHNaF_ratio1-1 glosis_proc:pHProcedure-pHH2O_ratio1-5 glosis_proc:pHProcedure-pHKCl_ratio1-2.5 glosis_proc:pHProcedure-pHH2O_ratio1-1 glosis_proc:pHProcedure-pHH2O_sat glosis_proc:pHProcedure-pHCaCl2_ratio1-1 glosis_proc:pHProcedure-pHH2O_unkn-spec glosis_proc:pHProcedure-pHKCl_ratio1-5 glosis_proc:pHProcedure-pHH2O_ratio1-10 glosis_proc:pHProcedure-pHNaF_sat glosis_proc:pHProcedure-pHH2O_ratio1-2.5 glosis_proc:pHProcedure-pHKCl_sat glosis_proc:pHProcedure-pHKCl_ratio1-1 glosis_proc:pHProcedure-pHNaF_ratio1-10 glosis_proc:pHProcedure-pHCaCl2_ratio1-10 glosis_proc:pHProcedure-pHKCl_ratio1-2 glosis_proc:pHProcedure-pHCaCl2_ratio1-5 glosis_proc:pHProcedure-pHCaCl2_sat glosis_proc:pHProcedure-pHKCl glosis_proc:pHProcedure-pHH2O glosis_proc:pHProcedure-pHNaF_ratio1-2 glosis_proc:pHProcedure-pHH2O_ratio1-2 glosis_proc:pHProcedure-pHKCl_ratio1-10 glosis_proc:pHProcedure-pHCaCl2_ratio1-2.5 glosis_proc:pHProcedure-pHNaF_ratio1-2.5 ) .
 
 glosis_proc:PhosphorusRetentionProcedure a owl:Class ;
     rdfs:label "Procedures for PhosphorusRetention - codelist class"@en ;
@@ -380,7 +380,7 @@ glosis_proc:PhosphorusRetentionProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:phosphorusRetentionProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:phosphorusRetentionProcedure-RetentP_unkn-spec glosis_proc:phosphorusRetentionProcedure-RetentP_blakemore ) .
+    owl:oneOf ( glosis_proc:phosphorusRetentionProcedure-RetentP_blakemore glosis_proc:phosphorusRetentionProcedure-RetentP_unkn-spec ) .
 
 glosis_proc:PorosityProcedure a owl:Class ;
     rdfs:label "Procedures for Porosity - codelist class"@en ;
@@ -396,7 +396,7 @@ glosis_proc:SolubleSaltsProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:solubleSaltsProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:solubleSaltsProcedure-SlbAn_calcul-unkn glosis_proc:solubleSaltsProcedure-SlbCat_calcul-unkn ) .
+    owl:oneOf ( glosis_proc:solubleSaltsProcedure-SlbCat_calcul-unkn glosis_proc:solubleSaltsProcedure-SlbAn_calcul-unkn ) .
 
 glosis_proc:TextureProcedure a owl:Class ;
     rdfs:label "Procedures for Texture - codelist class"@en ;
@@ -404,7 +404,7 @@ glosis_proc:TextureProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:textureProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-laser glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-pipette glosis_proc:textureProcedure-SaSiCl_2-20-2000u glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-beaker glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp glosis_proc:textureProcedure-SaSiCl_2-63-2000u glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-pipette glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp glosis_proc:textureProcedure-SaSiCl_2-20-2000u-adj100 glosis_proc:textureProcedure-SaSiCl_2-50-2000u-adj100 glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-spec glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-spec glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-laser glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-beaker glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-pipette glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-laser glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-spec glosis_proc:textureProcedure-SaSiCl_2-63-2000u-fld glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-pipette glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-spec glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-pipette glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-spec glosis_proc:textureProcedure-SaSiCl_2-50-2000u glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-pipette glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-20-2000u-fld glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-laser glosis_proc:textureProcedure-SaSiCl_2-63-2000u-adj100 glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-laser glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-beaker glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-laser glosis_proc:textureProcedure-SaSiCl_2-50-2000u-fld glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-spec ) .
+    owl:oneOf ( glosis_proc:textureProcedure-SaSiCl_2-50-2000u glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-laser glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-beaker glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-pipette glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-spec glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-spec glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-pipette glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-pipette glosis_proc:textureProcedure-SaSiCl_2-63-2000u-fld glosis_proc:textureProcedure-SaSiCl_2-20-2000u-adj100 glosis_proc:textureProcedure-SaSiCl_2-20-2000u glosis_proc:textureProcedure-SaSiCl_2-50-2000u-fld glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-spec glosis_proc:textureProcedure-SaSiCl_2-20-2000u-fld glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-pipette glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-pipette glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-50-2000u-adj100 glosis_proc:textureProcedure-SaSiCl_2-63-2000u-adj100 glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp-beaker glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-spec glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-beaker glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer-bouy glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-pipette glosis_proc:textureProcedure-SaSiCl_2-20-2000u-disp glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-laser glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-spec glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-laser glosis_proc:textureProcedure-SaSiCl_2-63-2000u-disp-laser glosis_proc:textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-63-2000u glosis_proc:textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp-laser glosis_proc:textureProcedure-SaSiCl_2-20-2000u-nodisp glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-spec glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp-laser glosis_proc:textureProcedure-SaSiCl_2-63-2000u-nodisp ) .
 
 glosis_proc:TextureSumProcedure a owl:Class ;
     rdfs:label "Procedures for TextureSum - codelist class"@en ;
@@ -420,7 +420,7 @@ glosis_proc:TotalCarbonateEquivalentProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:totalCarbonateEquivalentProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca04 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca03 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca02 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca08 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca05 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca06 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca07 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca10 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca11 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca01 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca09 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca12 ) .
+    owl:oneOf ( glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca07 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca05 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca08 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca02 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca12 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca01 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca03 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca09 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca06 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca11 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca10 glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca04 ) .
 
 glosis_proc:TotalElementsProcedure a owl:Class ;
     rdfs:label "Procedures for TotalElements - codelist class"@en ;
@@ -428,7 +428,7 @@ glosis_proc:TotalElementsProcedure a owl:Class ;
     rdfs:seeAlso glosis_proc:totalElementsProcedure ;
     rdfs:subClassOf skos:Concept,
         sosa:Procedure ;
-    owl:oneOf ( glosis_proc:totalElementsProcedure-Total_h2so4 glosis_proc:totalElementsProcedure-Total_xrd glosis_proc:totalElementsProcedure-Total_tp06 glosis_proc:totalElementsProcedure-Total_hcl glosis_proc:totalElementsProcedure-Total_tp04 glosis_proc:totalElementsProcedure-Total_xrf glosis_proc:totalElementsProcedure-Total_tp09 glosis_proc:totalElementsProcedure-Total_tp08 glosis_proc:totalElementsProcedure-Total_tp07 glosis_proc:totalElementsProcedure-Total_tp10 glosis_proc:totalElementsProcedure-Total_nh4-6mo7o24 glosis_proc:totalElementsProcedure-Total_hno3-aquafortis glosis_proc:totalElementsProcedure-Total_unkn glosis_proc:totalElementsProcedure-Total_tp05 glosis_proc:totalElementsProcedure-Total_tp03 glosis_proc:totalElementsProcedure-Total_xrf-p glosis_proc:totalElementsProcedure-Total_xtf-t glosis_proc:totalElementsProcedure-Total_hcl-aquaregia glosis_proc:totalElementsProcedure-Total_hclo4 ) .
+    owl:oneOf ( glosis_proc:totalElementsProcedure-Total_tp08 glosis_proc:totalElementsProcedure-Total_tp09 glosis_proc:totalElementsProcedure-Total_xrf-p glosis_proc:totalElementsProcedure-Total_tp07 glosis_proc:totalElementsProcedure-Total_xrd glosis_proc:totalElementsProcedure-Total_hclo4 glosis_proc:totalElementsProcedure-Total_tp05 glosis_proc:totalElementsProcedure-Total_xrf glosis_proc:totalElementsProcedure-Total_h2so4 glosis_proc:totalElementsProcedure-Total_tp06 glosis_proc:totalElementsProcedure-Total_tp10 glosis_proc:totalElementsProcedure-Total_nh4-6mo7o24 glosis_proc:totalElementsProcedure-Total_hno3-aquafortis glosis_proc:totalElementsProcedure-Total_tp03 glosis_proc:totalElementsProcedure-Total_unkn glosis_proc:totalElementsProcedure-Total_hcl glosis_proc:totalElementsProcedure-Total_tp04 glosis_proc:totalElementsProcedure-Total_hcl-aquaregia glosis_proc:totalElementsProcedure-Total_xtf-t ) .
 
 glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m a glosis_proc:AcidityExchangeableProcedure,
         skos:Concept ;

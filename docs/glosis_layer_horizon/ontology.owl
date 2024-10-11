@@ -6,7 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:qutd="http://qudt.org/schema/qutd/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
@@ -16,15 +16,15 @@
      xmlns:ontology="http://dbpedia.org/ontology/"
      xmlns:property="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/layerhorizon">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/layerhorizon/1.4.0"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/layerhorizon/1.4.1"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/codelists/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/common/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/iso28258/2013/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/unit/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i82nvhgsx1001"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i82nvhgsx1003"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i9tuutubx1021"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1i9tuutubx1023"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -33,17 +33,9 @@
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GlOSIS Ontology: Layer-Horizon module</terms:title>
         <rdfs:comment xml:lang="en">This module contains all classes and properties to describe the domain of soil with a certain vertical extension, which is a layer (developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains) or a horizon (more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in-situ sedimented organic residues of up-growing plants (peat)).</rdfs:comment>
-        <owl:versionInfo>1.4.0</owl:versionInfo>
+        <owl:versionInfo>1.4.1</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
-        <schema:affiliation>
-            <rdf:Description>
-                <foaf:name>PSNC</foaf:name>
-            </rdf:Description>
-        </schema:affiliation>
-        <foaf:name>Bogusz Janiak</foaf:name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid3">
         <schema:affiliation>
             <rdf:Description>
                 <foaf:name>ISRIC</foaf:name>
@@ -51,6 +43,14 @@
         </schema:affiliation>
         <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0002-5851-2071"/>
         <foaf:name>Luís Moreira de Sousa</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <foaf:name>Bogusz Janiak</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid5">
         <schema:affiliation>
@@ -96,13 +96,6 @@
      -->
 
 
-    
-
-
-    <!-- http://qudt.org/schema/qudt/Unit -->
-
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit"/>
     
 
 
@@ -6605,101 +6598,10 @@
     
 
 
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluext"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-BulDfine"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cad"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carinorg"/>
-    
-
-
     <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra -->
 
 
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CoaFra"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Eleccond"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Gyp"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mol"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Orgmat"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por"/>
-    
-
-
-    <!-- http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Solsal"/>
     
 
 
