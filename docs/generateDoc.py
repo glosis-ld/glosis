@@ -88,9 +88,9 @@ def addModuleDesc(g, config):
 
     for ont, rdfs_comment, desc in g.triples((None, RDFS.comment, None)):
         for ont, rdf_type, owl_ontology in g.triples((ont, RDF.type,  OWL.Ontology)):
-
             config["abstract"] = "%s<br>%s" % (config["abstract"], desc)
-            return(config)
+
+    return(config)
 
 
 if __name__ == "__main__":

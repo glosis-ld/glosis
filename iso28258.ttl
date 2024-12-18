@@ -19,8 +19,8 @@
 
 <http://w3id.org/glosis/model/iso28258/2013>
         a                owl:Ontology ;
-        owl:versionIRI   <http://w3id.org/glosis/model/iso28258/2013/1.3.0> ;
-        owl:versionInfo  "1.3.0" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/iso28258/2013/1.4.1> ;
+        owl:versionInfo  "1.4.1" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -135,8 +135,8 @@ iso28258:Profile.profileSite
   a owl:ObjectProperty ;
   rdfs:label "profileSite" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
-  rdfs:range  iso28258:Profile ;
-  rdfs:domain iso28258:Site .
+  rdfs:domain iso28258:Profile ;
+  rdfs:range iso28258:Site .
   
 iso28258:Site.samplingPlot
   a owl:ObjectProperty ;
@@ -241,7 +241,7 @@ iso19115_DQI:LI_Lineage
 iso28258:ProfileElement
   a owl:Class ;
   rdfs:label "ProfileElement" ;
-  skos:definition "Profle element is an abstract feature type grouping layers and horizons. Profle element may be considered as a horizontal feature that is parallel to the earth surface and that is part of the profle."  ;
+  skos:definition "Profile element is an abstract feature type grouping layers and horizons. Profile element may be considered as a horizontal feature that is parallel to the earth surface and that is part of the profile."  ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:subClassOf iso19156_SF:SF_SamplingFeature .
 

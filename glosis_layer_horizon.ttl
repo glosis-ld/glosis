@@ -24,8 +24,8 @@
 <http://w3id.org/glosis/model/layerhorizon>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: , glosis_u: ;
-        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.3.0> ;
-        owl:versionInfo  "1.3.0" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.4.1> ;
+        owl:versionInfo  "1.4.1" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -228,7 +228,7 @@ glosis_lh:bulkDensityMineralProperty a sosa:ObservableProperty ;
         skos:definition "The Bulk Density of Mineral Soil refers specifically to the density of the mineral portion of the soil, excluding organic matter. It provides insights into the physical state and compaction of mineral-dominated soils, influencing water movement and root growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 58"@en .
         
-glosis_cm:ColourWet rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
+glosis_cm:ColourMoist rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:PhysioChemical a owl:Class ;
         rdfs:label "PhysioChemical"@en ;
@@ -1277,11 +1277,6 @@ glosis_lh:BaseSaturationValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
-glosis_lh:bulkDensityFineEarthProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "bulkDensityFineEarthProperty"@en ;
-        skos:definition "The Bulk Density of Fine Earth measures the mass of dry soil (excluding coarse fragments) per unit volume. It is typically expressed in grams per cubic centimeter (g/cm³) and indicates soil compaction, porosity, and root penetration potential. Lower bulk density values often reflect higher organic matter content and better soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:BulkDensityFineEarth  a owl:Class ;
         rdfs:label "BulkDensityFineEarth"@en ;
         skos:definition "Bulk density of fine earth is the mass of dry soil divided by the volume it occupies, excluding coarse fragments (particles >2 mm). It influences root growth, water movement, and porosity. Source: Hillel, D. (2004). Soil Physics." ;
@@ -1290,7 +1285,7 @@ glosis_lh:BulkDensityFineEarth  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityFineEarthValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityFineEarthProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-BulDfine ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:BulkDensityFineEarthProcedure ] .
 
@@ -1301,11 +1296,6 @@ glosis_lh:BulkDensityFineEarthValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:KiloGM-PER-DeciM3 ] .
 
-glosis_lh:bulkDensityWholeSoilProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "bulkDensityWholeSoilProperty"@en ;
-        skos:definition "The Bulk Density of Whole Soil includes both the fine earth and coarse fragments (gravel, stones) in its measurement. It provides an overall estimate of soil compaction and is used in assessing soil weight for engineering or land management purposes. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:BulkDensityWholeSoil  a owl:Class ;
         rdfs:label "BulkDensityWholeSoil"@en ;
         skos:definition "Bulk density whole soil is the dry mass of the entire soil sample, including both fine earth and coarse fragments. It reflects total soil compaction and space available for roots and water. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
@@ -1314,7 +1304,7 @@ glosis_lh:BulkDensityWholeSoil  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityWholeSoilValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityWholeSoilProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-BulDfine ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:BulkDensityWholeSoilProcedure ] .
 
@@ -1326,11 +1316,6 @@ glosis_lh:BulkDensityWholeSoilValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:KiloGM-PER-DeciM3 ] .
 
-glosis_lh:cationExchangeCapacitycSoilProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "cationExchangeCapacitycSoilProperty"@en ;
-        skos:definition "The Cation Exchange Capacity of Soil (cSoil) is a specific measure of the CEC related to the soil’s clay and humus content. It provides a focused estimate of the soil’s ability to retain essential cations under variable conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:CationExchangeCapacitycSoil  a owl:Class ;
         rdfs:label "CationExchangeCapacitycSoil"@en ;
         skos:definition "This is synonymous with CEC but specifically refers to the total exchangeable cations in the whole soil, including both organic matter and mineral components. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
@@ -1339,7 +1324,7 @@ glosis_lh:CationExchangeCapacitycSoil  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacitycSoilValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:cationExchangeCapacitycSoilProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-CEC ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CationExchangeCapacitycSoilProcedure ] .
 
@@ -1369,11 +1354,6 @@ glosis_lh:CoarseFragmentsValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
-glosis_lh:effectiveCecProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "effectiveCecProperty"@en ;
-        skos:definition "The Effective Cation Exchange Capacity (Effective CEC) measures the soil's ability to exchange cations at a specific pH level under natural field conditions. It is particularly useful for assessing nutrient availability in acidic soils. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:EffectiveCec  a owl:Class ;
         rdfs:label "EffectiveCec"@en ;
         skos:definition "Effective CEC (ECEC) represents the sum of exchangeable bases and exchangeable acidity in soil at its natural pH. It helps evaluate soil fertility under current conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
@@ -1382,7 +1362,7 @@ glosis_lh:EffectiveCec  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:EffectiveCecValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:effectiveCecProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-ECEC ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:EffectiveCecProcedure ] .
 
@@ -1393,11 +1373,6 @@ glosis_lh:EffectiveCecValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiMOL-PER-KiloGM ] .
 
-glosis_lh:electricalConductivityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "electricalConductivityProperty"@en ;
-        skos:definition "The Electrical Conductivity (EC) Property measures the soil's ability to conduct an electrical current, which is directly related to the concentration of soluble salts. It is an important indicator of soil salinity, influencing plant growth and water quality. Source: USDA Natural Resources Conservation Service (NRCS)." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:ElectricalConductivity  a owl:Class ;
         rdfs:label "ElectricalConductivity"@en ;
         skos:definition "Electrical conductivity (EC) measures the ability of a soil solution to conduct an electric current. It is used to estimate soil salinity, as salts increase conductivity. Source: Rhoades, J.D. (1996). Methods of Soil Analysis." ;
@@ -1406,7 +1381,7 @@ glosis_lh:ElectricalConductivity  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ElectricalConductivityValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:electricalConductivityProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Eleccond ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ElectricalConductivityProcedure ] .
 
@@ -1588,10 +1563,6 @@ glosis_lh:MagnesiumTotalElementsValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
-glosis_lh:manganeseProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "manganeseProperty"@en ;
-        skos:definition "The Manganese Property assesses the concentration and forms of manganese in the soil, a micronutrient essential for plant growth. High levels may indicate toxicity, while deficiencies can impair photosynthesis and enzyme function in plants. Source: Kabata-Pendias, A. (2010). Trace Elements in Soils and Plants." .
-
 glosis_lh:ManganeseExchangeableBases  a	owl:Class ;
         rdfs:label "ManganeseExchangeableBases"@en ;
         skos:definition "Manganese exchangeable bases represent manganese ions adsorbed onto soil particles that can be readily exchanged. It plays a role in redox processes and plant nutrition. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils." ;
@@ -1600,7 +1571,7 @@ glosis_lh:ManganeseExchangeableBases  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ManganeseExchangeableBasesValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:manganeseProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Mantot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
@@ -1763,11 +1734,6 @@ glosis_lh:SodiumTotalElementsValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
-glosis_lh:aluminiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "aluminiumProperty"@en ;
-        skos:definition "The Aluminium Property measures aluminium concentration in soils, which can be exchangeable, extractable, or total. Exchangeable aluminium is of particular concern in acidic soils, as it can be toxic to plant roots and interfere with nutrient uptake. Aluminium also contributes to soil acidity and buffering capacity. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:AluminiumExtractableElements  a owl:Class ;
         rdfs:label "AluminiumExtractableElements"@en ;
         skos:definition "Extractable aluminum represents the fraction of aluminum that can be chemically extracted from soil using reagents. It reflects bioavailability and toxicity under certain conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
@@ -1779,7 +1745,7 @@ glosis_lh:AluminiumExtractableElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:aluminiumProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Aluext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1848,10 +1814,6 @@ glosis_lh:BoronTotalElementsValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
-glosis_lh:cadmiumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "cadmiumProperty"@en ;
-        skos:definition "The Cadmium Property measures cadmium levels in soil, a trace metal that can be toxic to plants and animals even at low concentrations. Cadmium accumulates in soil from natural processes and human activities, such as mining and agricultural inputs, and poses risks to food safety and soil health. Source: Kabata-Pendias, A., & Mukherjee, A.B. (2007). Trace Elements from Soil to Human." .
-
 glosis_lh:CadmiumExtractableElements  a	owl:Class ;
         rdfs:label "CadmiumExtractableElements"@en ;
         skos:definition "Extractable cadmium refers to the portion of cadmium in soil that is readily soluble or bioavailable. It is measured using chemical extractants and is critical for assessing soil contamination and plant uptake risks. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
@@ -1860,7 +1822,7 @@ glosis_lh:CadmiumExtractableElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CadmiumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:cadmiumProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Cad ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1879,7 +1841,7 @@ glosis_lh:CadmiumTotalElements a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CadmiumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:cadmiumProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Cad ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1966,10 +1928,6 @@ glosis_lh:IronTotalElementsValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
-glosis_lh:molybdenumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "molybdenumProperty"@en ;
-        skos:definition "The Molybdenum Property evaluates the concentration of molybdenum in soil, an essential micronutrient for nitrogen fixation and plant metabolism. Deficiencies can limit crop productivity, while excess levels may lead to toxicity. Source: Kabata-Pendias, A. (2010). Trace Elements in Soils and Plants." .
-
 glosis_lh:MolybdenumExtractableElements  a owl:Class ;
         rdfs:label "MolybdenumExtractableElements"@en ;
         skos:definition "Extractable molybdenum refers to the portion of molybdenum in soil that is chemically available for plant uptake, typically measured using extractants like ammonium oxalate. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils." ;
@@ -1978,7 +1936,7 @@ glosis_lh:MolybdenumExtractableElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MolybdenumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:molybdenumProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Mol ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1997,7 +1955,7 @@ glosis_lh:MolybdenumTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MolybdenumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:molybdenumProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Mol ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -2084,11 +2042,6 @@ glosis_lh:SulfurTotalElementsValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
-glosis_lh:zincProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "zincProperty"@en ;
-        skos:definition "The Zinc Property evaluates the concentration of zinc in soil, an essential micronutrient for plant growth. Zinc deficiency can impair crop yield and quality, while excessive zinc can lead to toxicity. Source: Kabata-Pendias, A. (2010). Trace Elements in Soils and Plants." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:ZincExtractableElements a owl:Class ;
         rdfs:label "ZincExtractableElements"@en ;
         skos:definition "Extractable zinc refers to the fraction of zinc that is bioavailable to plants and is measured using specific chemical extraction methods. Zinc is an essential micronutrient for plant growth. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
@@ -2116,7 +2069,7 @@ glosis_lh:ZincTotalElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ZincTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:zincProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Zin ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -2127,11 +2080,6 @@ glosis_lh:ZincTotalElementsValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:MilliGM-PER-KiloGM ] .
 
-glosis_lh:gypsumProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "gypsumProperty"@en ;
-        skos:definition "The Gypsum Property refers generally to the presence and distribution of gypsum in soil. It encompasses both the content and forms of gypsum, impacting soil salinity, fertility, and physical properties. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:Gypsum a owl:Class ;
         rdfs:label "Gypsum"@en ;
         skos:definition "Gypsum refers to calcium sulfate dihydrate (CaSO₄·2H₂O) in the soil, which can occur naturally or through amendments. It influences soil structure, fertility, and salinity management. Source: Soil Science Society of America (SSSA) Glossary." ;
@@ -2140,7 +2088,7 @@ glosis_lh:Gypsum a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:GypsumValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:gypsumProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Gyp ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:GypsumProcedure ] .
 
@@ -2151,11 +2099,6 @@ glosis_lh:GypsumValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:PERCENT ] .
 
-glosis_lh:hydraulicConductivityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "hydraulicConductivityProperty"@en ;
-        skos:definition "The Hydraulic Conductivity Property measures the rate at which water moves through soil pores under saturated conditions. It is critical for assessing soil drainage, irrigation needs, and the risk of waterlogging. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:HydraulicConductivity a owl:Class ;
         rdfs:label "HydraulicConductivity"@en ;
         skos:definition "Hydraulic conductivity is the rate at which water moves through soil pores under a hydraulic gradient. It reflects soil permeability and is critical for water management. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
@@ -2164,7 +2107,7 @@ glosis_lh:HydraulicConductivity a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:HydraulicConductivityValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:hydraulicConductivityProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Hydcond ];
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:HydraulicConductivityProcedure ] .
 
@@ -2175,11 +2118,6 @@ glosis_lh:HydraulicConductivityValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:CentiM-PER-HR ] .
 
-glosis_lh:carbonInorganicProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "carbonInorganicProperty"@en ;
-        skos:definition "The Inorganic Carbon Property refers to carbon stored in soil as carbonate minerals (e.g., calcium carbonate). It is an essential component of arid and semi-arid soils, influencing pH buffering capacity, soil structure, and carbon sequestration potential. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
-
 glosis_lh:CarbonInorganic a owl:Class ;
         rdfs:label "CarbonInorganic"@en ;
         skos:definition "Inorganic carbon in soils primarily occurs as carbonates (e.g., calcium carbonate). It plays a significant role in soil pH buffering and is common in arid and semi-arid regions. Source: Lal, R. (2006). Encyclopedia of Soil Science." ;
@@ -2188,7 +2126,7 @@ glosis_lh:CarbonInorganic a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CarbonInorganicValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:carbonInorganicProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Carinorg ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CarbonInorganicProcedure ] .
 
@@ -2245,10 +2183,6 @@ glosis_lh:CarbonOrganicValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
-glosis_lh:organicMatterProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "organicMatterProperty"@en ;
-        skos:definition "The Organic Matter Property measures the amount of decomposed plant and animal material in soil. Organic matter is crucial for soil fertility, water retention, and carbon storage, typically reported as a percentage of soil weight. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:OrganicMatter  a owl:Class ;
         rdfs:label "OrganicMatter"@en ;
@@ -2258,7 +2192,7 @@ glosis_lh:OrganicMatter  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:OrganicMatterValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:organicMatterProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Orgmat ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:OrganicMatterProcedure ] .
 
@@ -2307,10 +2241,6 @@ glosis_lh:PhosphorusRetentionValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:GM-PER-HectoGM ] .
 
-glosis_lh:porosityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "porosityProperty"@en ;
-        skos:definition "The Porosity Property measures the total volume of pore spaces in soil relative to the bulk volume. High porosity promotes drainage and root growth, while low porosity may indicate compaction or poor aeration. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:Porosity  a	owl:Class ;
         rdfs:label "Porosity"@en ;
@@ -2320,7 +2250,7 @@ glosis_lh:Porosity  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PorosityValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:porosityProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Por ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PorosityProcedure ] .
 
@@ -2331,10 +2261,6 @@ glosis_lh:PorosityValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue glosis_u:M3-PER-HundredM3 ] .
 
-glosis_lh:solubleSaltsProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "solubleSaltsProperty"@en ;
-        skos:definition "The Soluble Salts Property quantifies the amount of dissolved salts in soil, often measured as electrical conductivity. This property is crucial for managing soil salinity, crop selection, and irrigation practices. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SolubleSalts  a	owl:Class ;
         rdfs:label "SolubleSalts"@en ;
@@ -2344,7 +2270,7 @@ glosis_lh:SolubleSalts  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleSaltsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:solubleSaltsProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Solsal ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:SolubleSaltsProcedure ] .
 
@@ -2363,9 +2289,9 @@ glosis_lh:SandFractionTexture a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SandFractionTextureValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Textsand ] ;
+            sosa:observedProperty ; owl:someValuesFrom glosis_cl:TextsandPropertyCode ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TextureProcedure ] .
+            sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PSAProcedure ] .
 
 glosis_lh:SandFractionTextureValue a owl:Class ;
         rdfs:label "SandFractionTextureValue"@en ;
@@ -2382,9 +2308,9 @@ glosis_lh:SiltFractionTexture  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SiltFractionTextureValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Textsilt ] ;
+            sosa:observedProperty ; owl:someValuesFrom glosis_cl:TextsiltPropertyCode ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TextureProcedure ] .
+            sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PSAProcedure ] .
 
 glosis_lh:SiltFractionTextureValue a owl:Class ;
         rdfs:label "SiltFractionTextureValue"@en ;
@@ -2401,9 +2327,9 @@ glosis_lh:ClayFractionTexture a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ClayFractionTextureValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Textclay ] ;
+            sosa:observedProperty ; owl:someValuesFrom glosis_cl:TextclayPropertyCode ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TextureProcedure ] .
+            sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PSAProcedure ] .
 
 glosis_lh:ClayFractionTextureValue a owl:Class ;
         rdfs:label "ClayFractionTextureValue"@en ;
@@ -2431,10 +2357,6 @@ glosis_lh:CarbonTotalValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
-glosis_lh:totalCarbonateEquivalentProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "totalCarbonateEquivalentProperty"@en ;
-        skos:definition "The Total Carbonate Equivalent Property measures the total carbonate content in soil, often expressed as calcium carbonate (CaCO₃) equivalents. High carbonate levels indicate alkaline soils, influencing nutrient availability and pH. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:TotalCarbonateEquivalent  a	owl:Class ;
         rdfs:label "TotalCarbonateEquivalent"@en ;
@@ -2444,7 +2366,7 @@ glosis_lh:TotalCarbonateEquivalent  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:TotalCarbonateEquivalentValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:totalCarbonateEquivalentProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Ccetot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalCarbonateEquivalentProcedure ] .
 

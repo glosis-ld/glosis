@@ -20,8 +20,8 @@
 <http://w3id.org/glosis/model/surface>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: ;
-        owl:versionIRI   <http://w3id.org/glosis/model/surface/1.3.0> ;
-        owl:versionInfo  "1.3.0" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/surface/1.4.1> ;
+        owl:versionInfo  "1.4.1" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -108,7 +108,7 @@ glosis_su:SaltCover  a	owl:Class ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_su:saltCoverProperty ] .
 
 glosis_su:saltCoverProperty a sosa:ObservableProperty ;
-        rdfs:label "SaltCoverProperty"@en;
+        rdfs:label "saltCoverProperty"@en;
         skos:definition "Salt cover refers to the accumulation of salts on the surface of the soil, often visible as a crystalline crust. This phenomenon occurs when capillary action causes soluble salts to move upwards through the soil, where they crystallize as water evaporates. Salt cover can interfere with seed germination, plant growth, and water infiltration, and is commonly found in arid and semi-arid regions with high evaporation rates. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Education. " ;
         skos:definition "Guidelines for Soil Description issued by the FAO: 22,1"@en .
         
@@ -144,4 +144,4 @@ glosis_cm:RockShape rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:ha
 
 glosis_cm:ColourDry rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .
 
-glosis_cm:ColourWet rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .
+glosis_cm:ColourMoist rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .
