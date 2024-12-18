@@ -5,11 +5,12 @@
 @prefix schema: <http://schema.org/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 
 <http://w3id.org/glosis/model/unit>
     a                owl:Ontology ;
-    owl:versionIRI   <http://w3id.org/glosis/model/unit/1.4.1> ;
-    owl:versionInfo  "1.4.1" ;
+    owl:versionIRI   <http://w3id.org/glosis/model/unit/1.5.0> ;
+    owl:versionInfo  "1.5.0" ;
     dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                   rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                   foaf:name "Raul Palma"
@@ -31,17 +32,19 @@ glosis_u:CentiMOL-PER-L
   a qudt:Unit ;
   qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/AmountOfSubstancePerUnitVolume> ;
   qudt:plainTextDescription "0,01-fold of the SI base unit mole divided by the unit litre" ;
+  skos:definition "0,01-fold of the SI base unit mole divided by the unit litre" ;
   qudt:ucumCode "cmol.l-1"^^<http://qudt.org/schema/qudt/UCUMcs> ;
   qudt:ucumCode "cmol/l"^^<http://qudt.org/schema/qudt/UCUMcs> ;
   rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
   rdfs:label "Centimol Per Liter"@en-us ;
-  rdfs:label "Centimol Per Litre"@en ;
+  rdfs:label "Centimol Per Litre"@en ;  
 .
 
 glosis_u:GM-PER-HectoGM
   a qudt:Unit ;
   qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/MassRatio> ;
   qudt:plainTextDescription "0,001 fold of the SI base unit kilogram divided by 0,1-fold of the SI base unit kilogram" ;
+  skos:definition "0,001 fold of the SI base unit kilogram divided by 0,1-fold of the SI base unit kilogram" ;
   qudt:ucumCode "g/100g"^^<http://qudt.org/schema/qudt/UCUMcs> ;
   rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
   rdfs:label "Gram Per Hectogram"@en-us ;
@@ -52,6 +55,7 @@ glosis_u:M3-PER-HundredM3
   a qudt:Unit ;
   qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/VolumeFraction> ;
   qudt:plainTextDescription "SI base unit metre with the exponent 3 divided by 100-fold of the SI base unit metre with the exponent 3" ;
+  skos:definition "SI base unit metre with the exponent 3 divided by 100-fold of the SI base unit metre with the exponent 3" ;
   qudt:ucumCode "m3/100m3"^^<http://qudt.org/schema/qudt/UCUMcs> ;
   rdfs:isDefinedBy <http://w3id.org/glosis/model/unit> ;
   rdfs:label "Cubic meter per one hundred cubic meter"@en-us ;

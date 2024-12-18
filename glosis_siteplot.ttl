@@ -23,8 +23,8 @@
 <http://w3id.org/glosis/model/siteplot>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: ;
-        owl:versionIRI   <http://w3id.org/glosis/model/siteplot/1.4.1> ;
-        owl:versionInfo  "1.4.1" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/siteplot/1.5.0> ;
+        owl:versionInfo  "1.5.0" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -118,47 +118,55 @@ glosis_sp:GL_Site  a        owl:Class ;
 glosis_sp:location
         a            owl:DatatypeProperty ;
         rdfs:label "location"@en ;
+        skos:definition "Refers to the geographic location or descriptive details that pinpoint where a soil sample or observation is made." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:remarks
         a            owl:DatatypeProperty ;
         rdfs:label "remarks"@en ;
+        skos:definition "Refer to additional comments or annotations about a soil sample, observation, or dataset, often providing context or explanations for the data." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:responsibleOrganization
         a            owl:ObjectProperty ;
         rdfs:label "responsibleOrganization"@en ;
+        skos:definition "Refers to the entity or organization accountable for collecting, managing, or providing soil data or related information." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   foaf:Agent .
 
 glosis_sp:positionalAccuracy
         a            owl:ObjectProperty ;
         rdfs:label "positionalAccuracy"@en ;
+        skos:definition "Refers to the degree to which the geographic location of a soil sample or observation corresponds to its true location, often expressed as a range or error margin." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   ssn:Property .
 
 glosis_sp:altitude
         a      	      owl:ObjectProperty ;
         rdfs:label "altitude"@en ;
+        skos:definition "Refers to the vertical distance above or below a reference point, typically sea level, at which a soil sample or observation is located." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range    qudt:QuantityValue .
 
 glosis_sp:timestamp
         a            owl:ObjectProperty ;
         rdfs:label "timestamp"@en ;
+        skos:definition "Refers to the specific date and time when soil data was collected, recorded, or processed, providing temporal context for the data." ;
         rdfs:range   xsd:dateTime .
 
 glosis_sp:mapSheetID
         a            owl:DatatypeProperty ;
         rdfs:label "mapSheetID"@en ;
+        skos:definition "Refers to the unique identifier assigned to a specific map sheet or map section, which is used for referencing detailed geographic or soil data in mapping systems." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:country
         a            owl:ObjectProperty ;
         rdfs:label "country"@en ;
+        skos:definition "Refers to the national jurisdiction or geopolitical region in which the soil sample or observation was taken, indicating the broader context of the location" ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   lcc-cr:Alpha2Code .
 
@@ -178,7 +186,7 @@ glosis_sp:cropClassProperty a sosa:ObservableProperty ;
         
 glosis_sp:cropDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of crops at the site"@en ;
+        skos:definition  "Description of crops at the site"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_sp:Geology  a	owl:Class ;
@@ -241,13 +249,13 @@ glosis_sp:erosionAreaAffectedProperty a sosa:ObservableProperty ;
 
 glosis_sp:landUseRemark  a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of land use at the site"@en ;
+        skos:definition  "Description of land use at the site"@en ;
         rdfs:label "landUseRemark"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:landUseCropRotation a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of crop rotation at the site"@en ;
+        skos:definition  "Description of crop rotation at the site"@en ;
         rdfs:label "landUseCropRotation"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
@@ -488,7 +496,7 @@ glosis_sp:parentDepositionProperty a sosa:ObservableProperty ;
         
 glosis_sp:physiographyDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of the local physiography"@en ;
+        skos:definition  "Description of the local physiography"@en ;
         rdfs:label "physiographyDescription"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
@@ -522,7 +530,7 @@ glosis_sp:physiographyProperty a sosa:ObservableProperty ;
         
 glosis_sp:parentRemarks  a  owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Remarks on the parent material"@en ;
+        skos:definition  "Remarks on the parent material"@en ;
         rdfs:label "parentRemarks"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
@@ -549,7 +557,7 @@ glosis_sp:SlopeGradientNumericValue a owl:Class ;
 
 glosis_sp:vegetationDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of vegetation at the site"@en ;
+        skos:definition  "Description of vegetation at the site"@en ;
         rdfs:label "vegetationDescription"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 

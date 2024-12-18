@@ -24,8 +24,8 @@
 <http://w3id.org/glosis/model/layerhorizon>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: , glosis_u: ;
-        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.4.1> ;
-        owl:versionInfo  "1.4.1" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.5.0> ;
+        owl:versionInfo  "1.5.0" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -1765,7 +1765,7 @@ glosis_lh:AluminiumTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:aluminiumProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Alutot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
