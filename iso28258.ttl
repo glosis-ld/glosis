@@ -19,8 +19,8 @@
 
 <http://w3id.org/glosis/model/iso28258/2013>
         a                owl:Ontology ;
-        owl:versionIRI   <http://w3id.org/glosis/model/iso28258/2013/1.4.1> ;
-        owl:versionInfo  "1.4.1" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/iso28258/2013/1.5.0> ;
+        owl:versionInfo  "1.5.0" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -43,6 +43,7 @@
 iso19156_SF:SF_SamplingFeature.sampledFeature 
   a owl:ObjectProperty ;
   rdfs:label "sampledFeature" ;
+  skos:definition "relation from SF_SamplingFeature to GFI_DomainFeature or GFI_Feature" ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
   rdfs:domain iso19156_SF:SF_SamplingFeature ;
   rdfs:range iso19156_GFI:GFI_DomainFeature, iso19156_GFI:GFI_Feature .  
@@ -50,6 +51,7 @@ iso19156_SF:SF_SamplingFeature.sampledFeature
 iso19156_SF:SF_SamplingFeature.parameter
   a owl:ObjectProperty ;
   rdfs:label "parameter" ;
+  skos:definition "If present, the attributes parameter:NamedValue shall describe an arbitrary parameter associated with the SF_SamplingFeature. This might be a parameter that qualifies the interaction with the sampled feature, or an environmental parameter associated with the sampling process." ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
   rdfs:domain iso19156_SF:SF_SamplingFeature ;
   rdfs:range iso19156_OB:NamedValue . 
@@ -57,6 +59,7 @@ iso19156_SF:SF_SamplingFeature.parameter
 iso19156_SF:SF_SamplingFeature.lineage
   a owl:ObjectProperty ;
   rdfs:label "lineage" ;
+  skos:definition "If present, the attribute lineage:LI_Lineage shall describe the history and provenance of the SF_SamplingFeature. This might include information relating to the handling of the specimen, or details of the survey procedure of a spatial sampling feature." ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
   rdfs:domain iso19156_SF:SF_SamplingFeature ;
   rdfs:range  iso19115_DQI:LI_Lineage .   
@@ -64,6 +67,7 @@ iso19156_SF:SF_SamplingFeature.lineage
 iso28258:ProfileElement.lowerDepth
   a owl:ObjectProperty ;
   rdfs:label "lowerDepth" ;
+  skos:definition "lower depth of profile element" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:ProfileElement ;
   rdfs:range  [owl:oneOf (quantitykind:Depth)] . 
@@ -71,6 +75,7 @@ iso28258:ProfileElement.lowerDepth
 iso28258:ProfileElement.order
   a owl:ObjectProperty ;
   rdfs:label "order" ;
+  skos:definition "order number of profile element" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:ProfileElement ;
   rdfs:range  xsd:integer . 
@@ -78,6 +83,7 @@ iso28258:ProfileElement.order
 iso28258:ProfileElement.upperDepth
   a owl:ObjectProperty ;
   rdfs:label "upperDepth" ;
+  skos:definition "upper depth of profile element" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:ProfileElement ;
   rdfs:range  [owl:oneOf (quantitykind:Depth)] . 
@@ -85,6 +91,7 @@ iso28258:ProfileElement.upperDepth
 iso28258:Layer.developedHorizon
   a owl:ObjectProperty ;
   rdfs:label "developedHorizon" ;
+  skos:definition "relation from layer to horizon" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Layer ;
   rdfs:range  iso28258:Horizon .     
@@ -92,6 +99,7 @@ iso28258:Layer.developedHorizon
 iso28258:Horizon.horizonInLayer
   a owl:ObjectProperty ;
   rdfs:label "horizonInLayer" ;
+  skos:definition "relation from horizon to layer" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Horizon ;
   rdfs:range  iso28258:Layer .     
@@ -99,6 +107,7 @@ iso28258:Horizon.horizonInLayer
 iso28258:ProfileElement.elementOfProfile
   a owl:ObjectProperty ;
   rdfs:label "elementOfProfile" ;
+  skos:definition "relation from ProfileElement to Profile" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:ProfileElement ;
   rdfs:range  iso28258:Profile .
@@ -106,6 +115,7 @@ iso28258:ProfileElement.elementOfProfile
 iso28258:Profile.element
   a owl:ObjectProperty ;
   rdfs:label "element" ;
+  skos:definition "relation from Profile to ProfileElement" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Profile ;
   rdfs:range  iso28258:ProfileElement .
@@ -113,6 +123,7 @@ iso28258:Profile.element
 iso28258:Profile.samplingPlot
   a owl:ObjectProperty ;
   rdfs:label "samplingPlot" ;
+  skos:definition "a plot observed within this site" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Profile ;
   rdfs:range  iso28258:Plot .
@@ -120,6 +131,7 @@ iso28258:Profile.samplingPlot
 iso28258:Plot.profile
   a owl:ObjectProperty ;
   rdfs:label "profile" ;
+  skos:definition "relation from Plot to Profile" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Plot ;
   rdfs:range  iso28258:Profile .
@@ -127,6 +139,7 @@ iso28258:Plot.profile
 iso28258:Site.typicalProfile
   a owl:ObjectProperty ;
   rdfs:label "typicalProfile" ;
+  skos:definition "the most typical soil profile to characterize the site" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Site ;
   rdfs:range  iso28258:Profile .
@@ -134,6 +147,7 @@ iso28258:Site.typicalProfile
 iso28258:Profile.profileSite
   a owl:ObjectProperty ;
   rdfs:label "profileSite" ;
+  skos:definition "relation from Profile to Site" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Profile ;
   rdfs:range iso28258:Site .
@@ -141,6 +155,7 @@ iso28258:Profile.profileSite
 iso28258:Site.samplingPlot
   a owl:ObjectProperty ;
   rdfs:label "samplingPlot" ;
+  skos:definition "a plot observed within this site" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Site ;
   rdfs:range  iso28258:Plot .
@@ -148,6 +163,7 @@ iso28258:Site.samplingPlot
 iso28258:Plot.plotInSite
   a owl:ObjectProperty ;
   rdfs:label "plotInSite" ;
+  skos:definition "relation from Plot to Site" ;
   rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
   rdfs:domain iso28258:Plot ;
   rdfs:range  iso28258:Site .   
@@ -170,7 +186,7 @@ iso19156_GFI:GFI_DomainFeature
 iso19156_SF:SF_SamplingFeature
   a owl:Class ;
   rdfs:label "SF_SamplingFeature" ;
-  skos:definition ".lt.ul.gt.	.lt.li.gt..lt.b.gt.Role of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE	A .ldq.station.rdq. is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE	A transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. .lt.ul.gt.	.lt.li.gt..lt.b.gt.Classification of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10." ;
+  skos:definition "Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE	A station is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE	A transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. Classification of sampling features.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10." ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
   
@@ -230,12 +246,13 @@ iso28258:Horizon
 iso19156_OB:NamedValue
   a owl:Class ;
   rdfs:label "NamedValue" ;
-  skos:definition "The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes. </skos:definition><rdfs:isDefinedBy>http://standards.iso.org/iso/19156/ed-1/en/" ;
+  skos:definition "The class NamedValue provides for a generic soft-typed parameter value. NamedValue shall support two attributes." ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> .
 
 iso19115_DQI:LI_Lineage
   a owl:Class ;
   rdfs:label "LI_Lineage" ;
+  skos:definition "information about the events or source data used in constructing the data specified by the scope or lack of knowledge about lineage" ;
   rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> .
 
 iso28258:ProfileElement
