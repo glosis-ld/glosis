@@ -3,6 +3,7 @@
 - [Table of contents](#table-of-contents)
 - [Info](#info)
 - [Documentation](#documentation)
+- [Meta-data](#meta-data)
 - [Tools](#tools)
   - [Transformer-tool](#transformer-tool)
     - [Installation](#installation)
@@ -28,7 +29,15 @@ Configuration files for WiDoco are generated automatically with a [bespoke
 tool](https://github.com/glosis-ld/glosis/blob/master/docs/README_WiDoco.md).
 Documentation pages are maintained in the [docs folder](https://github.com/glosis-ld/glosis/blob/master/docs).
 
-The documentation for each module can be accessed via the [documentation entry page](https://glosis-ld.github.io/glosis/)
+The documentation for each module can be accessed via the [documentation entry page](https://glosis-ld.github.io/glosis/).
+
+# Meta-data
+
+Besides the meta-data encoded in RDF with the ontology itself, there is also a
+meta-data record for GloSIS at the
+[FAIRSharing.org](https://fairsharing.org/5073) catalogue. The DOI of this
+record is
+[https://doi.org/10.25504/FAIRsharing.af87a1](https://doi.org/10.25504/FAIRsharing.af87a1) 
 
 # Tools
 
@@ -74,6 +83,18 @@ python3
 # Contribution
 
 One can find the current list of code lists provided as CSV files under the *csv_codelists* directory. Those code lists can be used as input to modify the ontology using the [Transformer-tool](#transformer-tool). CI/CD pipeline is taking care of maintaining the current version of code lists. That means one needs to push modifications onlt via TURTLE files and don't need to worry about updating CSV code lists alongside.
+
+# Acknowledgment
+
+The work in this paper has been supported by and partially carried out in the
+scope of the SIEUSOIL and EJP SOIL projects and by ISRIC – World Soil
+Information. EJP SOIL and SIEUSOIL has received funding from the European
+Union’s Horizon 2020 research and innovation programme. The EJP SOIL Grant
+agreement No is 862695, the SIEUSOIL Grant agreement No is 818346. ISRIC – World
+Soil Information supports the soil community with soil, soil data, soil data
+exchange standard development to support soil data, information and knowledge
+provisioning at global, national and sub-national levels for application into
+sustainable management of soil and land.
 
 # Citing
 

@@ -89,6 +89,12 @@ class Transformer(object):
                             property_dict["notation"] = o.n3().strip('"')
                         elif p == rdflib.URIRef("http://www.w3.org/2004/02/skos/core#prefLabel"):
                             property_dict["label"] = o.n3().strip('"').removesuffix('"@en')
+                        elif p == rdflib.URIRef("http://dbpedia.org/property/inchikey"):
+                            property_dict["inchi_key"] = o.n3().strip('"').removesuffix('"@en')
+                        elif p == rdflib.URIRef("http://dbpedia.org/ontology/inchi"):
+                            property_dict["inchi"] = o.n3().strip('"').removesuffix('"@en')
+                        elif p == rdflib.URIRef("http://dbpedia.org/ontology/pubchem"):
+                            property_dict["pub_chem"] = o.n3().strip('"').removesuffix('"@en')
                         elif "scopeNote" in p:
                             if isinstance(o, rdflib.term.Literal):
                                 property_dict["citation"] = o.n3().strip('"')
@@ -115,5 +121,6 @@ class Transformer(object):
                 frames.append(pd.DataFrame({"attribute": k[0]}, index=[0]))
         df = pd.concat(frames)
         df = df.reindex(columns=["attribute", "instance", "parent_instance", "notation", "label", "definition",
-                                 "reference", "citation", "isproperty", "concept_definition"])
+                                 "reference", "citation", "isproperty", "concept_definition", "pub_chem", 
+                                 "inchi_key", "inchi"])
         df.to_csv(f"{self.output}.csv", index=False)
