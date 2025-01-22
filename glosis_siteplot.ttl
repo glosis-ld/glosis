@@ -23,8 +23,8 @@
 <http://w3id.org/glosis/model/siteplot>
         a                owl:Ontology ;
         owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: ;
-        owl:versionIRI   <http://w3id.org/glosis/model/siteplot/1.4.1> ;
-        owl:versionInfo  "1.4.1" ;
+        owl:versionIRI   <http://w3id.org/glosis/model/siteplot/1.5.0> ;
+        owl:versionInfo  "1.5.0" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
                       foaf:name "Raul Palma"
@@ -41,6 +41,7 @@
 
 glosis_sp:GL_Plot  a        owl:Class ;
         rdfs:label "GL_Plot"@en ;
+        skos:definition "Specialization for GloSIS of ISO iso28258 Plot soil feature type, defined as an elementary area where individual observations are made and/or samples are taken" ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:subClassOf  iso28258:Plot ;
         rdfs:subClassOf  [ a                owl:Restriction ;
@@ -78,6 +79,7 @@ glosis_sp:GL_Plot  a        owl:Class ;
 
 glosis_sp:GL_Site  a        owl:Class ;
         rdfs:label "GL_Site"@en ;
+        skos:definition "Specialization for GloSIS of ISO iso28258 Site soil feature type, defined as an defined area which is subject to a soil quality investigation" ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:subClassOf  iso28258:Site , sosa:FeatureOfInterest ;
         rdfs:subClassOf  [ a                owl:Restriction ;
@@ -116,52 +118,61 @@ glosis_sp:GL_Site  a        owl:Class ;
 glosis_sp:location
         a            owl:DatatypeProperty ;
         rdfs:label "location"@en ;
+        skos:definition "Refers to the geographic location or descriptive details that pinpoint where a soil sample or observation is made." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:remarks
         a            owl:DatatypeProperty ;
         rdfs:label "remarks"@en ;
+        skos:definition "Refer to additional comments or annotations about a soil sample, observation, or dataset, often providing context or explanations for the data." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:responsibleOrganization
         a            owl:ObjectProperty ;
         rdfs:label "responsibleOrganization"@en ;
+        skos:definition "Refers to the entity or organization accountable for collecting, managing, or providing soil data or related information." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   foaf:Agent .
 
 glosis_sp:positionalAccuracy
         a            owl:ObjectProperty ;
         rdfs:label "positionalAccuracy"@en ;
+        skos:definition "Refers to the degree to which the geographic location of a soil sample or observation corresponds to its true location, often expressed as a range or error margin." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   ssn:Property .
 
 glosis_sp:altitude
         a      	      owl:ObjectProperty ;
         rdfs:label "altitude"@en ;
+        skos:definition "Refers to the vertical distance above or below a reference point, typically sea level, at which a soil sample or observation is located." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range    qudt:QuantityValue .
 
 glosis_sp:timestamp
         a            owl:ObjectProperty ;
         rdfs:label "timestamp"@en ;
+        skos:definition "Refers to the specific date and time when soil data was collected, recorded, or processed, providing temporal context for the data." ;
         rdfs:range   xsd:dateTime .
 
 glosis_sp:mapSheetID
         a            owl:DatatypeProperty ;
         rdfs:label "mapSheetID"@en ;
+        skos:definition "Refers to the unique identifier assigned to a specific map sheet or map section, which is used for referencing detailed geographic or soil data in mapping systems." ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   xsd:string .
 
 glosis_sp:country
         a            owl:ObjectProperty ;
         rdfs:label "country"@en ;
+        skos:definition "Refers to the national jurisdiction or geopolitical region in which the soil sample or observation was taken, indicating the broader context of the location" ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:range   lcc-cr:Alpha2Code .
 
 glosis_sp:CropClass  a owl:Class ;
         rdfs:label "CropClass"@en ;
+        skos:definition "Crop Class refers to the classification system that categorizes different types of crops based on their growth characteristics, climate needs, and agricultural suitability. It is often used to understand how specific crops are adapted to varying soil and climatic conditions, aiding in crop management and agricultural planning. Source: FAO, 'Guidelines for Soil Profile Description'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 9"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -170,15 +181,17 @@ glosis_sp:CropClass  a owl:Class ;
 
 glosis_sp:cropClassProperty a sosa:ObservableProperty ;
         rdfs:label "cropClassProperty"@en ;
+        skos:definition "Crop Class Property refers to the categorization of land based on the type of crops cultivated. This property is used to assess soil management practices and land productivity, as different crops require specific soil conditions for optimal growth. Source: FAO, 'Guidelines for Soil Profile Description'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 9"@en .
         
 glosis_sp:cropDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of crops at the site"@en ;
+        skos:definition  "Description of crops at the site"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_sp:Geology  a	owl:Class ;
         rdfs:label "Geology"@en ;
+        skos:definition "Geology refers to the study of the Earth's crust, including the minerals and rocks that make up soil and landscape features. Soil properties such as texture and drainage can be heavily influenced by the underlying geology. Source: AGI, 'Geology in Environmental Management'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -187,12 +200,14 @@ glosis_sp:Geology  a	owl:Class ;
 
 glosis_sp:geologyProperty a sosa:ObservableProperty ;
         rdfs:label "geologyProperty"@en ;
+        skos:definition "Geology Property refers to the underlying geological composition of an area, including rock types, mineral content, and geological processes. The geology of a region influences soil formation, structure, fertility, and drainage properties. Source: AGI, 'Encyclopedia of Geology'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en .
         
 glosis_cm:SoilDepthRootable rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:SlopeOrientationClass  a	owl:Class ;
         rdfs:label "SlopeOrientationClass"@en ;
+        skos:definition "Slope Orientation Class refers to the classification of the direction a slope faces, such as north-facing, south-facing, east-facing, or west-facing. The orientation of a slope affects its exposure to sunlight, moisture, and wind, which in turn impacts soil temperature, moisture content, and vegetation cover. Source: FAO, 'Soil and Water Conservation'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -201,10 +216,12 @@ glosis_sp:SlopeOrientationClass  a	owl:Class ;
 
 glosis_sp:slopeOrientationClassProperty a sosa:ObservableProperty ;
         rdfs:label "slopeOrientationClassProperty"@en ;
+        skos:definition "Slope Orientation Class Property classifies the direction in which a slope faces (north, south, east, west) and can significantly affect local climate conditions, such as sunlight exposure, moisture, and temperature. For instance, south-facing slopes in the Northern Hemisphere receive more sunlight, influencing soil temperature, vegetation types, and soil moisture availability. Source: FAO, 'Soil and Water Conservation'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:ErosionCategory  a	owl:Class ;
         rdfs:label "ErosionCategory"@en;
+        skos:definition "This refers to the classification of erosion based on its severity, type (e.g., water, wind), or cause (natural vs. human-induced). Categories help in the assessment and management of erosion risks. Source: FAO, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 16"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -213,10 +230,12 @@ glosis_sp:ErosionCategory  a	owl:Class ;
 
 glosis_sp:erosionCategoryProperty a sosa:ObservableProperty ;
         rdfs:label "erosionCategoryProperty"@en;
+        skos:definition "Erosion Category Property classifies the type and severity of erosion in a given area. Categories are often based on the nature of the erosive forces (e.g., water, wind) and the degree of soil loss, ranging from slight to severe. This classification aids in prioritizing conservation efforts and understanding the potential impacts on soil quality. Source: FAO, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 16"@en .
         
 glosis_sp:ErosionAreaAffected  a owl:Class ;
         rdfs:label "ErosionAreaAffected"@en ;
+        skos:definition "Erosion Area Affected is the portion of land or soil area that is subject to erosion, either currently or historically. It measures the extent to which soil erosion has impacted the land, often used in land management to prioritize remediation efforts. Source: USDA NRCS, 'Soil Erosion Research and Technology Transfer'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 17"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -225,34 +244,39 @@ glosis_sp:ErosionAreaAffected  a owl:Class ;
 
 glosis_sp:erosionAreaAffectedProperty a sosa:ObservableProperty ;
         rdfs:label "erosionAreaAffectedProperty"@en ;
+        skos:definition "Erosion Area Affected Property refers to the extent of land area that has been impacted by erosion processes, such as water or wind erosion. This property is important for evaluating the severity of soil degradation in a given region and helps in identifying areas that require soil conservation measures. Source: USDA NRCS, 'Soil Erosion Research and Technology Transfer'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 17"@en .
 
 glosis_sp:landUseRemark  a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of land use at the site"@en ;
+        skos:definition  "Description of land use at the site"@en ;
         rdfs:label "landUseRemark"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:landUseCropRotation a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of crop rotation at the site"@en ;
+        skos:definition  "Description of crop rotation at the site"@en ;
         rdfs:label "landUseCropRotation"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:ParentTextureUnconsolidated a owl:Class ;
-        rdfs:subClassOf sosa:Observation ;
+        rdfs:label "ParentTextureUnconsolidated"@en ;
+        skos:definition "Parent Texture Unconsolidated refers to the texture of the parent material (e.g., sediment, loose rock) that has not yet been cemented or consolidated into solid rock. This texture influences the soil’s permeability, drainage, and overall fertility. Source: USDA NRCS, 'Soil Genesis and Classification'" ;
+        rdfs:subClassOf sosa:Observation ;        
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
                         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:TextureUnconsolidatedValueCode  ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:parentTextureUnconsolidatedProperty ] .
 
 glosis_sp:parentTextureUnconsolidatedProperty a sosa:ObservableProperty ;
         rdfs:label "parentTextureUnconsolidatedProperty"@en;
+        skos:definition "Parent Texture Unconsolidated Property refers to the texture of the unconsolidated parent material, such as loose sediments or debris, that has not been solidified into rock. This texture affects soil properties such as aeration, drainage, and root penetration, as well as its ability to retain nutrients. Source: USDA NRCS, 'Soil Genesis and Classification'" ;
         skos:definition "table is missing!"@en .
 
 glosis_sp:LandUseGrass  a owl:Class ;
         rdfs:label "LandUseGrass"@en ;
+        skos:definition "Land Use Grass refers to land areas that are covered by grasslands or pastures. These areas are often used for grazing and agricultural production, and the soil can vary in quality depending on management practices and grazing intensity. Source: FAO, 'Grassland Ecosystems and Management'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -261,6 +285,7 @@ glosis_sp:LandUseGrass  a owl:Class ;
 
 glosis_sp:grassAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "GrassAbundanceProperty"@en ;
+        skos:definition "Grass Abundance Property indicates the extent or percentage of land covered by grasses or herbaceous plants. This property is important for understanding land productivity, grazing capacity, and soil health, as grasses play a key role in preventing soil erosion, enhancing organic matter content, and maintaining soil structure. Source: FAO, 'Grassland Ecosystems and Management'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseGrassValue a owl:Class ;
@@ -272,6 +297,7 @@ glosis_sp:LandUseGrassValue a owl:Class ;
 
 glosis_sp:SurfaceAge  a	owl:Class ;
         rdfs:label "SurfaceAge"@en ;
+        skos:definition "Surface Age refers to the estimated age of a soil's surface or landform, often linked to the time since the last significant geomorphic event (e.g., glaciation, flooding). This affects the degree of soil development, weathering, and its ability to support vegetation. Source: FAO, 'Soil Formation and Evolution'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 13"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -280,10 +306,12 @@ glosis_sp:SurfaceAge  a	owl:Class ;
 
 glosis_sp:surfaceAgeProperty a sosa:ObservableProperty ;
         rdfs:label "surfaceAgeProperty"@en ;
+        skos:definition "Surface Age Property refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, 'Soil Formation and Evolution'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 13"@en .
         
 glosis_sp:WeatheringRock  a	owl:Class ;
         rdfs:label "WeatheringRock"@en ;
+        skos:definition "Weathering Rock refers to the process of rock decomposition due to environmental factors like temperature changes, water, and chemical reactions. This process is important in soil formation as it contributes to the breakdown of parent material into smaller particles that form soil. Source: AGI, 'Encyclopedia of Geology'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 29"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -296,6 +324,7 @@ glosis_sp:weatheringRockProperty a sosa:ObservableProperty ;
         
 glosis_sp:SlopeForm  a	owl:Class ;
         rdfs:label "SlopeForm"@en;
+        skos:definition "Weathering Rock Property describes the extent to which rocks in an area have undergone physical, chemical, or biological weathering, breaking down into smaller particles that contribute to soil formation. This property influences the mineral content of the soil, affecting its fertility, structure, and drainage characteristics. Source: AGI, 'Encyclopedia of Geology'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 6"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -304,10 +333,12 @@ glosis_sp:SlopeForm  a	owl:Class ;
 
 glosis_sp:slopeFormProperty a sosa:ObservableProperty ;
         rdfs:label "slopeFormProperty"@en;
+        skos:definition "Slope Form Property describes the shape or curvature of a slope, including its concave, convex, or straight profile. Slope form affects water runoff, erosion rates, and soil accumulation, influencing both the fertility and stability of the soil in hilly or mountainous regions. Source: FAO, 'Soil and Water Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 6"@en .
         
 glosis_sp:SlopeOrientationNumeric a owl:Class ;
         rdfs:label "SlopeOrientationNumeric"@en ;
+        skos:definition "Slope Orientation Numeric refers to the specific angle or direction of a slope, typically measured in degrees, relative to a cardinal direction (e.g., 0° for north, 90° for east, etc.). This helps in understanding the climatic conditions experienced by the slope, such as sun exposure or wind patterns. Source: USDA NRCS, 'Soil Erosion and Landscape Analysis'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -316,6 +347,7 @@ glosis_sp:SlopeOrientationNumeric a owl:Class ;
 
 glosis_sp:slopeOrientationProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "slopeOrientationProperty"@en ;
+        skos:definition "Slope Orientation Property refers to the precise directional orientation of a slope, measured in degrees from a cardinal direction (e.g., 0° for north, 180° for south). The slope orientation impacts factors such as solar radiation, evaporation rates, and vegetation cover, all of which affect soil temperature, moisture retention, and erosion potential. Source: USDA NRCS, 'Soil Erosion and Landscape Analysis'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:SlopeOrientationNumericValue a owl:Class ;
@@ -327,6 +359,7 @@ glosis_sp:SlopeOrientationNumericValue a owl:Class ;
 
 glosis_sp:ParentLithology  a	owl:Class ;
         rdfs:label "ParentLithology"@en ;
+        skos:definition "Parent Lithology is the geological composition of the parent material from which the soil forms, including its mineral content and structure. The lithology of the parent material has a direct impact on the chemical and physical properties of the soil. Source: AGI, 'Encyclopedia of Geology'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -335,12 +368,14 @@ glosis_sp:ParentLithology  a	owl:Class ;
 
 glosis_sp:parentLithologyProperty a sosa:ObservableProperty ;
         rdfs:label "parentLithologyProperty"@en ;
+        skos:definition "Parent Lithology Property is the specific geological composition of the parent material (e.g., bedrock or sediment) from which the soil develops. The mineral content and texture of this material directly affect the physical and chemical properties of the soil, such as fertility, permeability, and soil depth. Source: USDA NRCS, 'Soil Genesis and Classification'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 glosis_cm:SoilDepthSampled rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:SlopeGradientClass  a	owl:Class ;
         rdfs:label "SlopeGradientClass"@en ;
+        skos:definition "Slope Gradient Class is a classification system that categorizes slopes based on their steepness. This is typically done by dividing slopes into classes such as gentle, moderate, and steep, with steeper slopes being more prone to erosion. Source: FAO, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 7"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -349,10 +384,12 @@ glosis_sp:SlopeGradientClass  a	owl:Class ;
 
 glosis_sp:slopeGradientClassProperty a sosa:ObservableProperty ;
         rdfs:label "slopeGradientClassProperty"@en ;
+        skos:definition "Slope Gradient Class Property refers to the classification of slope steepness, such as flat, moderate, or steep, based on its angle. The gradient of a slope influences soil erosion rates, water drainage, and the suitability of land for agriculture, with steeper slopes typically being more prone to erosion. Source: USDA NRCS, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 7"@en .
         
 glosis_sp:ErosionDegree  a	owl:Class ;
         rdfs:label "ErosionDegree"@en ;
+        skos:definition "The degree of erosion refers to the severity of soil erosion, ranging from slight to severe, which helps in determining soil conservation needs and planning soil restoration efforts. Source: FAO, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 18"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -361,10 +398,12 @@ glosis_sp:ErosionDegree  a	owl:Class ;
 
 glosis_sp:erosionDegreeProperty a sosa:ObservableProperty ;
         rdfs:label "erosionDegreeProperty"@en ;
+        skos:definition "Erosion Degree Property refers to the level of intensity or severity of soil erosion in an area, categorized into classes such as slight, moderate, or severe. The degree of erosion helps in assessing the extent of soil degradation and informs decisions on soil conservation and land management. Source: FAO, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 18"@en .
         
 glosis_sp:LandformComplex  a	owl:Class ;
         rdfs:label "LandformComplex"@en ;
+        skos:definition "Landform Complex refers to a landscape unit composed of multiple interrelated landforms, such as hills, valleys, and plains. This classification helps in understanding soil types, hydrology, and erosion risks within a region. Source: USDA NRCS, 'Soil Survey Manual'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 5"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -373,10 +412,12 @@ glosis_sp:LandformComplex  a	owl:Class ;
 
 glosis_sp:landformComplexProperty a sosa:ObservableProperty ;
         rdfs:label "landformComplexProperty"@en ;
+        skos:definition "Landform Complex Property describes a region with multiple interrelated landforms such as ridges, valleys, and hills. This property is essential for understanding how diverse landforms within a landscape influence soil distribution, water flow, and erosion patterns, ultimately affecting soil management strategies. Source: FAO, 'Soil Formation and Classification'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 5"@en .
         
 glosis_sp:LandUseBareCover  a owl:Class ;
         rdfs:label "LandUseBareCover"@en ;
+        skos:definition "Land Use Bare Cover refers to the proportion of land area that is devoid of vegetation or artificial cover, such as urban development or barren land. This is a key indicator of soil exposure to erosion and degradation. Source: FAO, 'Land Use and Land Cover Classification'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -385,6 +426,7 @@ glosis_sp:LandUseBareCover  a owl:Class ;
 
 glosis_sp:bareCoverAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "bareCoverAbundanceProperty"@en ;
+        skos:definition "Bare Cover Abundance Property refers to the extent of land area without vegetation or artificial cover, such as bare soil or rocky surfaces. High proportions of bare cover increase the risk of soil erosion and desertification, particularly in areas with poor vegetation or human disturbance. Source: FAO, 'Land Use and Land Cover Classification'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseBareCoverValue a owl:Class ;
@@ -396,6 +438,7 @@ glosis_sp:LandUseBareCoverValue a owl:Class ;
 
 glosis_sp:WeatherPast  a owl:Class ;
         rdfs:label "WeatherPast"@en ;
+        skos:definition "Weather Past refers to historical weather data or patterns in a specific region, such as past rainfall, temperature fluctuations, and storm events. This information helps in predicting soil behavior, erosion risk, and vegetation growth patterns over time. Source: USDA NRCS, 'Climate and Soil Interactions'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -404,12 +447,14 @@ glosis_sp:WeatherPast  a owl:Class ;
 
 glosis_sp:weatherConditionsPastProperty a sosa:ObservableProperty ;
         rdfs:label "weatherConditionsPastProperty"@en ;
+        skos:definition "Weather Conditions Past Property refers to historical weather data, including past patterns of temperature, precipitation, and extreme weather events. Understanding past weather conditions helps in predicting soil behavior, erosion patterns, and agricultural productivity, as well as preparing for future changes in soil moisture and temperature. Source: USDA NRCS, 'Climate and Soil Interactions'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 2"@en .
         
 glosis_cm:SoilDepth  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:KoeppenClass  a	owl:Class ;
         rdfs:label "KoeppenClass"@en ;
+        skos:definition "The Köppen climate classification system divides the world into climate zones based on temperature, precipitation, and seasonal patterns. Soil characteristics such as moisture content, temperature, and organic matter are heavily influenced by the Köppen climate type of the region. Source: Köppen, W., 'Geiger's Climate Maps'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -418,10 +463,12 @@ glosis_sp:KoeppenClass  a	owl:Class ;
 
 glosis_sp:koeppenClassProperty a sosa:ObservableProperty ;
         rdfs:label "koeppenClassProperty"@en ;
+        skos:definition "Koeppen Class Property refers to the classification of climate zones based on temperature and precipitation patterns, as defined by the Köppen climate classification system. This classification directly influences soil temperature, moisture content, and vegetation types, which in turn affect soil formation and properties. Source: Köppen, W., 'Geiger's Climate Maps'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:RockOutcropsCover  a	owl:Class ;
         rdfs:label "RockOutcropsCover"@en ;
+        skos:definition "Rock Outcrops Cover refers to the proportion of an area where bedrock or exposed rock outcrops are visible at the surface. These outcrops can influence soil development by limiting soil depth and affecting water retention and nutrient cycling. Source: USDA NRCS, 'Soil Survey Manual'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 14,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -430,10 +477,12 @@ glosis_sp:RockOutcropsCover  a	owl:Class ;
 
 glosis_sp:rockOutcropsCoverProperty a sosa:ObservableProperty ;
         rdfs:label "rockOutcropsCoverProperty"@en ;
+        skos:definition "Rock Outcrops Cover Property measures the extent to which rock outcrops (exposed bedrock or rock masses) cover the landscape. The presence of rock outcrops can influence soil depth and water retention, as well as contribute to erosion and landscape stability, particularly in areas with minimal soil cover. Source: USDA NRCS, 'Soil Survey Manual'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 14,1"@en .
         
 glosis_sp:ParentDeposition  a	owl:Class ;
         rdfs:label "ParentDeposition"@en ;
+        skos:definition "Parent Deposition refers to the process through which the parent material (e.g., sediment or rock) that forms the soil is deposited. This process can significantly influence soil texture, structure, and fertility. Source: USDA NRCS, 'Soil Genesis and Classification'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 16"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -442,16 +491,18 @@ glosis_sp:ParentDeposition  a	owl:Class ;
 
 glosis_sp:parentDepositionProperty a sosa:ObservableProperty ;
         rdfs:label "ParentDepositionProperty"@en ;
+        skos:definition "Parent Deposition Property refers to the accumulation of materials, such as sediments or volcanic ash, that contribute to soil formation. These parent materials are deposited through natural processes such as erosion, weathering, or sediment transport, influencing soil texture, nutrient content, and water retention properties. Source: USDA NRCS, 'Soil Genesis and Classification'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 16"@en .
         
 glosis_sp:physiographyDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of the local physiography"@en ;
+        skos:definition  "Description of the local physiography"@en ;
         rdfs:label "physiographyDescription"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:FloodDuration a owl:Class ;
         rdfs:label "FloodDuration"@en ;
+        skos:definition "Flood duration measures the length of time that an area remains inundated with water during a flood event. It is an important metric in determining the potential impacts on soil structure and fertility. Source: USGS, 'Floodplain Management'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 174"@en ;
         rdfs:subClassOf sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -460,10 +511,12 @@ glosis_sp:FloodDuration a owl:Class ;
 
 glosis_sp:floodDurationProperty a sosa:ObservableProperty ;
         rdfs:label "floodDurationProperty"@en ;
+        skos:definition "Flood Duration Property refers to the length of time during which an area is inundated by floodwaters. The duration of flooding can significantly affect soil structure, nutrient availability, and plant growth, especially in flood-prone regions. Source: USGS, 'Floodplain Management'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 174"@en .
 
 glosis_sp:Physiography  a	owl:Class ;
         rdfs:label "Physiography"@en ;
+        skos:definition "Physiography refers to the physical features and landforms of the Earth's surface, including the shape, structure, and distribution of mountains, valleys, plateaus, and plains. These features influence soil formation, drainage, and the distribution of vegetation. Source: FAO, 'Soil Geography and Mapping'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: figure 2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -472,16 +525,18 @@ glosis_sp:Physiography  a	owl:Class ;
 
 glosis_sp:physiographyProperty a sosa:ObservableProperty ;
         rdfs:label "PhysiographyProperty"@en ;
+        skos:definition "Physiography Property describes the physical characteristics of a landscape, including its landforms, slopes, and elevation. These features influence soil properties such as drainage, erosion, and moisture retention, helping to determine soil suitability for various land uses. Source: FAO, 'Soil Geography and Mapping'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: figure 2"@en .
         
 glosis_sp:parentRemarks  a  owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Remarks on the parent material"@en ;
+        skos:definition  "Remarks on the parent material"@en ;
         rdfs:label "parentRemarks"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:SlopeGradientNumeric a owl:Class ;
         rdfs:label "SlopeGradientNumeric"@en ;
+        skos:definition "Slope Gradient Numeric provides a numerical value indicating the steepness or gradient of a slope, usually expressed as a percentage. For example, a slope with a 10% gradient rises 10 meters for every 100 meters of horizontal distance. Source: USDA NRCS, 'Soil Survey Manual'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -490,6 +545,7 @@ glosis_sp:SlopeGradientNumeric a owl:Class ;
 
 glosis_sp:slopeGradientProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "slopeGradientProperty"@en ;
+        skos:definition "Slope Gradient Property refers to the numerical measurement of the steepness of a slope, usually expressed as a percentage or angle. This property is crucial in determining soil erosion potential, water runoff, and suitability for land use, as steeper slopes are more prone to erosion and less suitable for cultivation without proper soil conservation measures. Source: USDA NRCS, 'Soil Erosion and Conservation'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:SlopeGradientNumericValue a owl:Class ;
@@ -501,12 +557,13 @@ glosis_sp:SlopeGradientNumericValue a owl:Class ;
 
 glosis_sp:vegetationDescription a owl:DatatypeProperty ;
         rdfs:range       xsd:string ;
-        rdfs:comment  "Description of vegetation at the site"@en ;
+        skos:definition  "Description of vegetation at the site"@en ;
         rdfs:label "vegetationDescription"@en ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseForest  a owl:Class ;
         rdfs:label "LandUseForest"@en ;
+        skos:definition "Land Use Forest refers to areas primarily designated for forest cover, whether natural or planted. Forest land use is closely tied to soil health, with forest soils typically having high organic matter and beneficial nutrient cycling. Source: FAO, 'Forest Resources Assessment'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -515,6 +572,7 @@ glosis_sp:LandUseForest  a owl:Class ;
 
 glosis_sp:forestAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "ForestAbundanceProperty"@en ;
+        skos:definition "Forest Abundance Property refers to the proportion or extent of land covered by forest vegetation in a given area. It is often quantified as the percentage of land area dominated by tree species, reflecting the ecological importance of forests in influencing soil fertility, moisture retention, and biodiversity. Forested areas typically contribute to soil formation and stabilization through leaf litter and root systems that reduce erosion. Source: FAO, 'Forest Resources Assessment'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseForestValue a owl:Class ;
@@ -526,6 +584,7 @@ glosis_sp:LandUseForestValue a owl:Class ;
 
 glosis_sp:RockOutcropsDistance  a	owl:Class ;
         rdfs:label "RockOutcropsDistance"@en ;
+        skos:definition "Rock Outcrops Distance measures the distance from a specific point or area to the nearest exposed rock outcrop. This is important for understanding the underlying geology and potential impacts on soil properties, such as drainage and nutrient availability. Source: FAO, 'Soil Formation and Classification'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 14,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -534,12 +593,14 @@ glosis_sp:RockOutcropsDistance  a	owl:Class ;
 
 glosis_sp:rockOutcropsDistanceProperty a sosa:ObservableProperty ;
         rdfs:label "rockOutcropsDistanceProperty"@en ;
+        skos:definition "Rock Outcrops Distance Property quantifies the distance from a given point or area to the nearest rock outcrop. The proximity to rock outcrops can influence soil development, with areas closer to outcrops often having thinner soils and higher vulnerability to erosion. Source: FAO, 'Soil Formation and Classification'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 14,2"@en .
         
 glosis_cm:SoilDepthRootableClass rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:LandUsePavedCover  a owl:Class ;
         rdfs:label "LandUsePavedCover"@en ;
+        skos:definition "Land Use Paved Cover indicates areas where the natural soil has been covered by impervious surfaces such as roads, buildings, or parking lots. This typically leads to increased runoff and reduced soil infiltration capacity. Source: FAO, 'Urban Soil Management'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -548,6 +609,7 @@ glosis_sp:LandUsePavedCover  a owl:Class ;
 
 glosis_sp:pavedAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "PavedAbundanceProperty"@en ;
+        skos:definition "Paved Abundance Property measures the extent of land covered by impervious surfaces, such as roads, parking lots, and buildings. The abundance of paved surfaces affects soil by reducing water infiltration, increasing runoff, and contributing to soil compaction in surrounding areas. High levels of paved surfaces can exacerbate flooding and decrease soil health. Source: FAO, 'Urban Soil Management'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUsePavedCoverValue a owl:Class ;
@@ -559,6 +621,7 @@ glosis_sp:LandUsePavedCoverValue a owl:Class ;
 
 glosis_sp:SlopePathways  a	owl:Class ;
         rdfs:label "SlopePathways"@en ;
+        skos:definition "Slope Pathways refers to the routes or pathways through which water, sediment, and other materials move across a slope. These pathways are critical for assessing erosion risks, water flow, and sediment transport in sloped areas. Source: FAO, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: figure 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -567,10 +630,12 @@ glosis_sp:SlopePathways  a	owl:Class ;
 
 glosis_sp:slopePathwaysProperty a sosa:ObservableProperty ;
         rdfs:label "slopePathwaysProperty"@en ;
+        skos:definition "Slope Pathways Property identifies the natural flow paths of water, sediment, or other materials across a slope. These pathways, often defined by the topography, influence how water moves, erodes soil, and accumulates nutrients or contaminants. Understanding these pathways is critical for effective erosion control and water management in sloped areas. Source: FAO, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: figure 3"@en .
         
 glosis_sp:MajorLandForm  a	owl:Class ;
         rdfs:label "MajorLandForm"@en ;
+        skos:definition "Major Land Form refers to large-scale natural land features, such as mountains, valleys, plateaus, and plains, that significantly influence soil formation, hydrology, and land use. These landforms provide important context for understanding soil properties and landscape behavior. Source: FAO, 'World Soil Resources Report'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 4"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -579,10 +644,12 @@ glosis_sp:MajorLandForm  a	owl:Class ;
 
 glosis_sp:majorLandFormProperty a sosa:ObservableProperty ;
         rdfs:label "MajorLandFormProperty"@en ;
+        skos:definition "Major Land Form Property refers to the significant physical features of the land, such as mountains, valleys, and plateaus, that influence soil development and landscape processes. These landforms shape the flow of water, sediment transport, and nutrient cycling, directly affecting the types of soils that form in different regions. Source: FAO, 'World Soil Resources Report'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 4"@en .
         
 glosis_sp:GroundwaterDepth  a owl:Class ;
         rdfs:label "GroundwaterDepth"@en ;
+        skos:definition "Groundwater depth is the vertical distance from the soil surface to the top of the groundwater table. This depth affects water availability, root penetration, and overall soil health. Source: USDA NRCS, 'Groundwater and Soil'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -591,6 +658,7 @@ glosis_sp:GroundwaterDepth  a owl:Class ;
 
 glosis_sp:groundwaterDepthProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "groundwaterDepthProperty"@en ;
+        skos:definition "Groundwater Depth Property indicates the depth from the soil surface to the water table, which affects soil moisture levels, plant growth, and root penetration. Shallow groundwater can influence soil salinity and nutrient availability, while deep groundwater may limit water access for plants. Source: USDA NRCS, 'Groundwater and Soil'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:GroundwaterDepthValue a owl:Class ;
@@ -602,6 +670,7 @@ glosis_sp:GroundwaterDepthValue a owl:Class ;
 
 glosis_sp:Lithology  a	owl:Class ;
         rdfs:label "Lithology"@en ;
+        skos:definition "Lithology is the study and description of the physical characteristics of rocks, particularly in terms of their mineral content and texture. This directly impacts the soil properties above them, influencing drainage, fertility, and root growth. Source: AGI, 'Encyclopedia of Geology'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -610,10 +679,12 @@ glosis_sp:Lithology  a	owl:Class ;
 
 glosis_sp:lithologyProperty a sosa:ObservableProperty ;
         rdfs:label "lithologyProperty"@en ;
+        skos:definition "Lithology Property refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, 'Encyclopedia of Geology'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 12"@en .
 
 glosis_sp:WeatherCurrent  a owl:Class ;
         rdfs:label "WeatherCurrent"@en ;
+        skos:definition "Weather Current refers to the present atmospheric conditions in a particular area, including factors such as temperature, precipitation, humidity, wind speed, and barometric pressure. These conditions influence soil moisture, temperature, and overall soil health. Source: USGS, 'Meteorological and Soil Interactions'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -622,10 +693,12 @@ glosis_sp:WeatherCurrent  a owl:Class ;
 
 glosis_sp:weatherConditionsCurrentProperty a sosa:ObservableProperty ;
         rdfs:label "weatherConditionsCurrentProperty"@en ;
+        skos:definition "Weather Conditions Current Property describes the current atmospheric conditions in a specific location, including factors like temperature, humidity, wind speed, and precipitation. These conditions directly affect soil moisture, temperature, and erosion rates, influencing soil fertility and the ability to support plant growth. Source: USGS, 'Meteorological and Soil Interactions'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 2"@en .
         
 glosis_sp:FloodFrequency a owl:Class ;
         rdfs:label "FloodFrequency"@en;
+        skos:definition "Flood frequency indicates how often a specific area is expected to experience flooding over a given time period. This is used in flood risk assessments and land-use planning. Source: USGS, 'Floodplain Management'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 174"@en ;
         rdfs:subClassOf sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -634,10 +707,12 @@ glosis_sp:FloodFrequency a owl:Class ;
 
 glosis_sp:floodFrequencyProperty a sosa:ObservableProperty ;
         rdfs:label "floodFrequencyProperty"@en;
+        skos:definition "Flood Frequency Property refers to how often flooding occurs in a particular area, typically expressed in terms of recurrence intervals (e.g., once every 10 years). This property is vital for assessing flood risk, soil erosion, and the potential for soil nutrient loss due to repeated flooding events. Source: USGS, 'Floodplain Management'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 174"@en .
 
 glosis_sp:HumanInfluenceClass  a	owl:Class ;
         rdfs:label "HumanInfluenceClass"@en ;
+        skos:definition "Human Influence Class refers to a categorization system used to assess the degree of human impact on a given landscape or ecosystem. This can range from undisturbed natural areas to heavily modified environments, influencing soil properties and vegetation cover. Source: FAO, 'Land Degradation Assessment in Drylands'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 10"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -646,12 +721,14 @@ glosis_sp:HumanInfluenceClass  a	owl:Class ;
 
 glosis_sp:humanInfluenceClassProperty a sosa:ObservableProperty ;
         rdfs:label "humanInfluenceClassProperty"@en ;
+        skos:definition "Human Influence Class Property classifies the extent of human impact on a landscape or ecosystem, ranging from minimal disturbance to high levels of modification. This classification helps in understanding the effects of urbanization, agriculture, or industrial activity on soil properties and ecosystem functions. Source: FAO, 'Land Degradation Assessment in Drylands'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 10"@en .
         
 glosis_cm:SoilDepthBedrock rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] .
 
 glosis_sp:LandUseShrubs  a owl:Class ;
         rdfs:label "LandUseShrubs"@en ;
+        skos:definition "Land Use Shrubs refers to land areas where shrubs dominate the vegetation cover. Shrubs can influence soil properties by stabilizing the soil and contributing to nutrient cycling, particularly in arid and semi-arid areas. Source: FAO, 'Vegetation and Land Use in Arid Zones'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -660,6 +737,7 @@ glosis_sp:LandUseShrubs  a owl:Class ;
 
 glosis_sp:shrubsAbundanceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "shrubsAbundanceProperty"@en ;
+        skos:definition "Shrubs Abundance Property refers to the extent or abundance of shrub vegetation in a given area. Shrubs influence soil structure by reducing erosion, improving soil organic matter through leaf litter, and enhancing nutrient cycling. They are also indicators of ecosystem health in many terrestrial environments. Source: FAO, 'Vegetation and Land Use in Arid Zones'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:LandUseShrubsValue a owl:Class ;
@@ -671,6 +749,7 @@ glosis_sp:LandUseShrubsValue a owl:Class ;
 
 glosis_sp:ErosionActivityPeriod  a	owl:Class ;
         rdfs:label "ErosionActivityPeriod"@en ;
+        skos:definition "This term refers to the time span during which soil erosion activities, such as water or wind erosion, are active. The period typically coincides with certain climatic conditions (like rainy seasons) or land-use activities that contribute to soil degradation. Source: USDA Natural Resources Conservation Service (NRCS)" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 19"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -679,10 +758,12 @@ glosis_sp:ErosionActivityPeriod  a	owl:Class ;
 
 glosis_sp:erosionActivityPeriodProperty a sosa:ObservableProperty ;
         rdfs:label "erosionActivityPeriodProperty"@en ;
+        skos:definition "Erosion Activity Period Property refers to the time frame during which soil erosion processes, such as wind or water erosion, are most active in a given area. This period is influenced by climatic conditions, seasonal rainfall, and land use, and it helps in assessing the vulnerability of soils to degradation. Source: USDA NRCS, 'Soil Erosion and Conservation'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 19"@en .
         
 glosis_sp:VegetationClass a owl:Class ;
         rdfs:label "VegetationClass"@en ;
+        skos:definition "Vegetation Class refers to the classification of land areas based on the type of vegetation that grows there, such as forest, grassland, shrubland, or wetland. This classification helps understand soil properties, hydrology, and land management practices. Source: FAO, 'Vegetation and Land Use in Arid Zones'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 11"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -691,10 +772,12 @@ glosis_sp:VegetationClass a owl:Class ;
 
 glosis_sp:vegetationClassProperty a sosa:ObservableProperty ;
         rdfs:label "VegetationClassProperty"@en ;
+        skos:definition "Vegetation Class Property refers to the categorization of vegetation types based on species composition and structure, such as forests, grasslands, and wetlands. The class of vegetation affects soil fertility, microbial activity, and water retention, which in turn influences agricultural potential and ecosystem services. Source: FAO, 'Vegetation and Land Use in Arid Zones'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 11"@en .
         
 glosis_sp:TreeDensity  a owl:Class ;
         rdfs:label "TreeDensity"@en ;
+        skos:definition "Tree Density measures the number of trees per unit area, typically expressed in trees per hectare. This is used to assess forest structure and soil health, as higher tree density can influence soil nutrients, organic matter, and water retention. Source: FAO, 'Forest Resources Assessment'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -703,6 +786,7 @@ glosis_sp:TreeDensity  a owl:Class ;
 
 glosis_sp:treeDensityProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "treeDensityProperty"@en ;
+        skos:definition "Tree Density Property refers to the number of trees per unit area, usually expressed as trees per hectare. High tree density is often associated with forested ecosystems that contribute to soil fertility through organic matter inputs, root structures that stabilize the soil, and enhanced moisture retention. Source: FAO, 'Forest Resources Assessment'" ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 glosis_sp:TreeDensityValue a owl:Class ;
@@ -714,6 +798,7 @@ glosis_sp:TreeDensityValue a owl:Class ;
 
 glosis_sp:ErosionTotalAreaAffected a owl:Class ;
         rdfs:label "ErosionTotalAreaAffected"@en ;
+        skos:definition "This term quantifies the total land area affected by erosion processes, encompassing all zones that have experienced erosion, whether through wind, water, or other agents. Source: USDA NRCS, 'Soil Erosion Research and Technology Transfer'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 17"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -722,10 +807,12 @@ glosis_sp:ErosionTotalAreaAffected a owl:Class ;
 
 glosis_sp:erosionTotalAreaAffectedProperty a sosa:ObservableProperty ;
         rdfs:label "erosionTotalAreaAffectedProperty"@en ;
+        skos:definition "Erosion Total Area Affected Property quantifies the total land area affected by erosion processes. It is an important measure in understanding the broader impact of erosion on soil health, productivity, and ecosystem services across a landscape. Source: USDA NRCS, 'Soil Erosion and Landscape Analysis'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 17"@en .
         
 glosis_sp:LandUseClass a owl:Class ;
         rdfs:label "LandUseClass"@en ;
+        skos:definition "Land Use Class categorizes land based on how it is used, such as agricultural land, forest, industrial, or urban. These classes help in determining soil management practices and conservation measures suitable for the area. Source: FAO, 'World Soil Resources Report'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 8"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] ] ;
@@ -734,18 +821,21 @@ glosis_sp:LandUseClass a owl:Class ;
 
 glosis_sp:landUseClassProperty a sosa:ObservableProperty ;
         rdfs:label "landUseClassProperty"@en ;
+        skos:definition "Land Use Class Property refers to the classification of land based on its primary use, such as agricultural, industrial, urban, or natural areas. This property helps assess the impact of land management practices on soil quality, including erosion risks, compaction, and fertility, and is critical for sustainable land-use planning. Source: FAO, 'Land Use and Land Cover Classification'" ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 8"@en .
 
 
 glosis_sp:SoilCarbonDensity a owl:Class ;
         rdfs:label "SoilCarbonDensity"@en ;
+        skos:definition "Soil Carbon Density refers to the amount of carbon stored in a given volume of soil. It is a key indicator of soil organic matter content and plays a significant role in soil fertility, carbon sequestration, and overall ecosystem health. Source: IPCC, 'Guidelines for National Greenhouse Gas Inventories'" ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_sp:GL_Plot] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_sp:SoilCarbonDensityValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_sp:soilCarbonDensityProperty ] .
 
 glosis_sp:soilCarbonDensityProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "soilCarbonDensityProperty"@en .
+        rdfs:label "soilCarbonDensityProperty"@en ;
+        skos:definition "Soil Carbon Density Property measures the amount of organic carbon stored in a given volume of soil, typically expressed in tons per hectare. This property is a key indicator of soil health, as organic carbon influences soil fertility, structure, and microbial activity, and plays a major role in carbon sequestration to mitigate climate change. Source: IPCC, 'Guidelines for National Greenhouse Gas Inventories'" .
 
 glosis_sp:SoilCarbonDensityValue a owl:Class ;
         rdfs:label "SoilCarbonDensityValue"@en ;
