@@ -1,8 +1,8 @@
 <http://w3id.org/glosis/model/common> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/glosis/model/common> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/glosis/model/common/1.4.1> .
+<http://w3id.org/glosis/model/common> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/glosis/model/common/1.5.0> .
 <http://w3id.org/glosis/model/common> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/sosa/> .
 <http://w3id.org/glosis/model/common> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
-<http://w3id.org/glosis/model/common> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/common_:genid-nodeid-node1i9tuulmfx3> .
+<http://w3id.org/glosis/model/common> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/common_:genid-nodeid-node1ii96np4rx3> .
 <http://w3id.org/glosis/model/common> <http://purl.org/dc/terms/creator> _:genid1 .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
 _:genid1 <http://schema.org/affiliation> _:genid2 .
@@ -17,7 +17,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/common> <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 <http://w3id.org/glosis/model/common> <http://purl.org/dc/terms/title> "GlOSIS Ontology: Common module"@en .
 <http://w3id.org/glosis/model/common> <http://www.w3.org/2000/01/rdf-schema#comment> "This module contains all classes and properties that are used among multiple modules."@en .
-<http://w3id.org/glosis/model/common> <http://www.w3.org/2002/07/owl#versionInfo> "1.4.1" .
+<http://w3id.org/glosis/model/common> <http://www.w3.org/2002/07/owl#versionInfo> "1.5.0" .
 # 
 # 
 # #################################################################
@@ -62,24 +62,28 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/common/chroma> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/glosis/model/common/chroma> <http://www.w3.org/2000/01/rdf-schema#label> "chroma"@en .
 <http://w3id.org/glosis/model/common/chroma> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/chroma> <http://www.w3.org/2004/02/skos/core#definition> "Chroma in the Munsell color system refers to the intensity or purity of a color. It measures how 'strong' or 'weak' a color appears, ranging from 0 (a neutral gray) to higher values that indicate more vivid or intense colors. In soils, chroma can provide insight into soil conditions such as aeration, organic matter content, and drainage. For instance, soils with high chroma (intense color) typically have better drainage and higher iron content, while low chroma can indicate waterlogged or poorly drained conditions. Source: Munsell Color, 2009. Munsell Soil Color Charts. " .
 # 
 # http://w3id.org/glosis/model/common/hue
 <http://w3id.org/glosis/model/common/hue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/glosis/model/common/hue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/glosis/model/common/hue> <http://www.w3.org/2000/01/rdf-schema#label> "hue"@en .
 <http://w3id.org/glosis/model/common/hue> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/hue> <http://www.w3.org/2004/02/skos/core#definition> "Hue is the aspect of color that refers to the dominant color family (such as red, yellow, or blue) in the Munsell color system. It is the first component of a Munsell color description and is denoted by a letter-number code (e.g., 10YR, which means yellow-red). In soil analysis, the hue gives an indication of the soil’s mineral composition and its drainage properties. For example, reddish hues often indicate the presence of iron oxide, while yellow hues may suggest a more neutral, well-drained soil environment. Source: Munsell Color, 2009. Munsell Soil Color Charts." .
 # 
 # http://w3id.org/glosis/model/common/munsellCompounded
 <http://w3id.org/glosis/model/common/munsellCompounded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/glosis/model/common/munsellCompounded> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://w3id.org/glosis/model/common/munsellCompounded> <http://www.w3.org/2000/01/rdf-schema#label> "munsellCompounded"@en .
 <http://w3id.org/glosis/model/common/munsellCompounded> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/munsellCompounded> <http://www.w3.org/2004/02/skos/core#definition> "In the context of soil color, Munsell Compounded refers to a combination of multiple Munsell color attributes (hue, value, and chroma) to describe a specific soil color. When a soil sample is described using the 'compounded' method, it involves detailing the hue (the actual color), value (lightness or darkness), and chroma (color intensity) in a compound format, such as '10YR 5/6' (which would indicate a yellow-red hue with a value of 5 and a chroma of 6). This system allows for precise identification of soil colors and is widely used in soil surveys to ensure consistency in color description. Source: Munsell Color, 2009. Munsell Soil Color Charts." .
 # 
 # http://w3id.org/glosis/model/common/value
 <http://w3id.org/glosis/model/common/value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/glosis/model/common/value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3id.org/glosis/model/common/value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
 <http://w3id.org/glosis/model/common/value> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/value> <http://www.w3.org/2004/02/skos/core#definition> "Value in the Munsell color system refers to the lightness or darkness of a color, with 0 representing black (no light reflection) and 10 representing white (maximum light reflection). In soil, a higher value indicates a lighter soil color, typically found in well-drained or less organic soils, while a lower value (darker color) suggests more organic material or poorer drainage. The value is an important indicator of soil properties like moisture content and aeration. Source: Munsell Color, 2009. Munsell Soil Color Charts." .
 # 
 # 
 # 
@@ -143,6 +147,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/o
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/BleachedSand> <http://www.w3.org/2000/01/rdf-schema#label> "BleachedSand"@en .
 <http://w3id.org/glosis/model/common/BleachedSand> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 23"@en .
+<http://w3id.org/glosis/model/common/BleachedSand> <http://www.w3.org/2004/02/skos/core#definition> "Bleached sand refers to sandy soils where the color has been significantly lightened due to the removal of iron and other minerals, usually through leaching processes in wet climates. This often results in a pale or white color, which is an indicator of a soil's history of leaching, typically in areas with high rainfall or poor drainage. These soils may have low fertility and poor nutrient-holding capacity. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # http://w3id.org/glosis/model/common/ColourDry
 <http://w3id.org/glosis/model/common/ColourDry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -158,6 +163,7 @@ _:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/o
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/ColourDry> <http://www.w3.org/2000/01/rdf-schema#label> "ColourDry"@en .
 <http://w3id.org/glosis/model/common/ColourDry> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/ColourDry> <http://www.w3.org/2004/02/skos/core#definition> "The color of soil when it is in a dry state. Soil color, when dry, can indicate the mineral composition and moisture retention of the soil. Dry soils often appear darker if they contain organic matter, while lighter colors may indicate the presence of sand or salts. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/ColourMoist
 <http://w3id.org/glosis/model/common/ColourMoist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -173,6 +179,7 @@ _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/ColourMoist> <http://www.w3.org/2000/01/rdf-schema#label> "ColourMoist"@en .
 <http://w3id.org/glosis/model/common/ColourMoist> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/ColourMoist> <http://www.w3.org/2004/02/skos/core#definition> "The color of soil when it is moist, which can reveal more about the soil’s content and moisture status. Moist soils tend to be darker because water enhances the color intensity, revealing organic matter content and the presence of minerals such as iron. For example, dark brown or black soils often indicate high organic matter content. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/CracksDepth
 <http://w3id.org/glosis/model/common/CracksDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -188,6 +195,7 @@ _:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/CracksDepth> <http://www.w3.org/2000/01/rdf-schema#label> "CracksDepth"@en .
 <http://w3id.org/glosis/model/common/CracksDepth> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,2"@en .
+<http://w3id.org/glosis/model/common/CracksDepth> <http://www.w3.org/2004/02/skos/core#definition> "Cracks depth refers to the vertical measurement of cracks that appear in the soil surface, often occurring during dry conditions when soil moisture decreases. The depth of cracks can indicate soil shrinkage, particularly in clayey soils, and is used to assess the soil's structural integrity and potential for erosion. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." .
 # 
 # http://w3id.org/glosis/model/common/CracksDistance
 <http://w3id.org/glosis/model/common/CracksDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -203,6 +211,7 @@ _:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/CracksDistance> <http://www.w3.org/2000/01/rdf-schema#label> "CracksDistance"@en .
 <http://w3id.org/glosis/model/common/CracksDistance> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,3"@en .
+<http://w3id.org/glosis/model/common/CracksDistance> <http://www.w3.org/2004/02/skos/core#definition> "The horizontal spacing between cracks in the soil, which can vary depending on soil type and moisture levels. Cracks generally occur due to soil shrinkage in dry conditions and can affect root penetration and water infiltration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." .
 # 
 # http://w3id.org/glosis/model/common/CracksWidth
 <http://w3id.org/glosis/model/common/CracksWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -218,6 +227,7 @@ _:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/CracksWidth> <http://www.w3.org/2000/01/rdf-schema#label> "CracksWidth"@en .
 <http://w3id.org/glosis/model/common/CracksWidth> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,1"@en .
+<http://w3id.org/glosis/model/common/CracksWidth> <http://www.w3.org/2004/02/skos/core#definition> "Cracks width refers to the measurement of the gap or space between the sides of soil cracks. Wider cracks can form in drier soils, particularly those with high clay content. They provide insights into soil structure, water retention, and the degree of shrinkage that has occurred due to moisture loss. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." .
 # 
 # http://w3id.org/glosis/model/common/FragmentCover
 <http://w3id.org/glosis/model/common/FragmentCover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -233,6 +243,7 @@ _:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/FragmentCover> <http://www.w3.org/2000/01/rdf-schema#label> "FragmentCover"@en .
 <http://w3id.org/glosis/model/common/FragmentCover> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 15,1"@en .
+<http://w3id.org/glosis/model/common/FragmentCover> <http://www.w3.org/2004/02/skos/core#definition> "Fragment cover is the percentage of the soil surface covered by coarse fragments, such as rocks, pebbles, or other larger pieces of material. High fragment cover can reduce soil erosion but may hinder water infiltration and root penetration. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/FragmentsSize
 <http://w3id.org/glosis/model/common/FragmentsSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -248,6 +259,7 @@ _:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/FragmentsSize> <http://www.w3.org/2000/01/rdf-schema#label> "FragmentsSize "@en .
 <http://w3id.org/glosis/model/common/FragmentsSize> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 15,2"@en .
+<http://w3id.org/glosis/model/common/FragmentsSize> <http://www.w3.org/2004/02/skos/core#definition> "The size of soil fragments is categorized by their dimensions, often from small gravel-sized particles to large boulders. Fragment size influences soil aeration, drainage, and root penetration, with larger fragments typically decreasing soil fertility and water retention. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # http://w3id.org/glosis/model/common/InfiltrationRateClass
 <http://w3id.org/glosis/model/common/InfiltrationRateClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -263,6 +275,7 @@ _:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/InfiltrationRateClass> <http://www.w3.org/2000/01/rdf-schema#label> "InfiltrationRateClass"@en .
 <http://w3id.org/glosis/model/common/InfiltrationRateClass> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/InfiltrationRateClass> <http://www.w3.org/2004/02/skos/core#definition> "Infiltration rate class refers to a qualitative classification of the soil's ability to absorb water, based on observed rates of water penetration. This is usually divided into categories such as slow, moderate, or rapid infiltration, which are important for managing irrigation and drainage systems. Source: Hillel, D. (2004). Introduction to Soil Physics. Academic Press." .
 # 
 # http://w3id.org/glosis/model/common/InfiltrationRateNumeric
 <http://w3id.org/glosis/model/common/InfiltrationRateNumeric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -277,6 +290,7 @@ _:genid24 <http://www.w3.org/2002/07/owl#hasValue> <http://w3id.org/glosis/model
 _:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/InfiltrationRateNumeric> <http://www.w3.org/2000/01/rdf-schema#label> "InfiltrationRateNumeric"@en .
+<http://w3id.org/glosis/model/common/InfiltrationRateNumeric> <http://www.w3.org/2004/02/skos/core#definition> "The numeric infiltration rate is the quantitative measurement of the rate at which water infiltrates the soil, typically expressed in millimeters per hour (mm/h). It is a critical factor in soil water management, affecting irrigation practices, runoff, and drainage efficiency. Source: Bouwer, H. (2000). Integrated Water Management for the 21st Century. Water Resources Research." .
 # 
 # http://w3id.org/glosis/model/common/InfiltrationRateNumericValue
 <http://w3id.org/glosis/model/common/InfiltrationRateNumericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -314,6 +328,7 @@ _:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/glosis/mod
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/MunsellColorValue> <http://www.w3.org/2000/01/rdf-schema#label> "MunsellColorValue"@en .
 <http://w3id.org/glosis/model/common/MunsellColorValue> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/MunsellColorValue> <http://www.w3.org/2004/02/skos/core#definition> "Munsell color value refers to the lightness or darkness of a soil's color, based on the Munsell color system. This system quantifies soil color using three dimensions: hue (the type of color), value (lightness or darkness), and chroma (intensity or purity of the color). The value component of Munsell color is a scale from 0 (black) to 10 (white), with higher numbers indicating lighter colors. Soil color can provide insights into drainage conditions, organic matter content, and mineral composition. Source: Munsell Color, 2009. Munsell Soil Color Charts." .
 # 
 # http://w3id.org/glosis/model/common/OrganicMatterClass
 <http://w3id.org/glosis/model/common/OrganicMatterClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -329,6 +344,7 @@ _:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/OrganicMatterClass> <http://www.w3.org/2000/01/rdf-schema#label> "OrganicMatterClass"@en .
 <http://w3id.org/glosis/model/common/OrganicMatterClass> <http://www.w3.org/2004/02/skos/core#definition> "table is missing!"@en .
+<http://w3id.org/glosis/model/common/OrganicMatterClass> <http://www.w3.org/2004/02/skos/core#definition> "Organic matter class refers to the classification of soil based on the quantity and type of organic material it contains, such as decomposed plant and animal residues. High organic matter content is generally beneficial for soil fertility, structure, and microbial activity. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # http://w3id.org/glosis/model/common/RockAbundance
 <http://w3id.org/glosis/model/common/RockAbundance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -344,6 +360,7 @@ _:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/RockAbundance> <http://www.w3.org/2000/01/rdf-schema#label> "RockAbundance"@en .
 <http://w3id.org/glosis/model/common/RockAbundance> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 26"@en .
+<http://w3id.org/glosis/model/common/RockAbundance> <http://www.w3.org/2004/02/skos/core#definition> "Rock abundance refers to the relative quantity of rocks or rock fragments within the soil profile, often expressed as a percentage of the total soil volume. High rock abundance can significantly affect soil tillage, root penetration, and water movement. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/RockShape
 <http://w3id.org/glosis/model/common/RockShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -359,6 +376,7 @@ _:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/RockShape> <http://www.w3.org/2000/01/rdf-schema#label> "RockShape"@en .
 <http://w3id.org/glosis/model/common/RockShape> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 28"@en .
+<http://w3id.org/glosis/model/common/RockShape> <http://www.w3.org/2004/02/skos/core#definition> "Rock shape describes the physical form of rock fragments in the soil, ranging from angular to rounded shapes. The shape of rocks affects soil aeration, water movement, and the difficulty of soil tillage and root penetration. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/RockSize
 <http://w3id.org/glosis/model/common/RockSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -374,6 +392,7 @@ _:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/RockSize> <http://www.w3.org/2000/01/rdf-schema#label> "RockSize"@en .
 <http://w3id.org/glosis/model/common/RockSize> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 27"@en .
+<http://w3id.org/glosis/model/common/RockSize> <http://www.w3.org/2004/02/skos/core#definition> "Rock size refers to the dimensions of rock fragments in the soil. The classification of rock size can range from small gravel-sized particles to large boulders. Larger rocks hinder root growth, water infiltration, and tillage. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/SoilDepth
 <http://w3id.org/glosis/model/common/SoilDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -389,6 +408,7 @@ _:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/SoilDepth> <http://www.w3.org/2000/01/rdf-schema#label> "SoilDepth"@en .
 <http://w3id.org/glosis/model/common/SoilDepth> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/SoilDepth> <http://www.w3.org/2004/02/skos/core#definition> "Soil depth is the vertical measurement from the soil surface to the underlying bedrock or impenetrable layer. Soil depth directly impacts plant growth, as deeper soils allow for more extensive root systems and greater water retention. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # http://w3id.org/glosis/model/common/SoilDepthBedrock
 <http://w3id.org/glosis/model/common/SoilDepthBedrock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -404,6 +424,7 @@ _:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/SoilDepthBedrock> <http://www.w3.org/2000/01/rdf-schema#label> "SoilDepthBedrock"@en .
 <http://w3id.org/glosis/model/common/SoilDepthBedrock> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/SoilDepthBedrock> <http://www.w3.org/2004/02/skos/core#definition> "Soil depth to bedrock is the measurement from the soil surface to the top of the bedrock layer. This depth can vary significantly depending on the landscape and is crucial for understanding rootable soil depth and drainage potential. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/SoilDepthBedrockValue
 <http://w3id.org/glosis/model/common/SoilDepthBedrockValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -434,6 +455,7 @@ _:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/SoilDepthRootable> <http://www.w3.org/2000/01/rdf-schema#label> "SoilDepthRootable"@en .
 <http://w3id.org/glosis/model/common/SoilDepthRootable> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/SoilDepthRootable> <http://www.w3.org/2004/02/skos/core#definition> "Soil depth rootable refers to the depth of soil that is capable of supporting plant roots, excluding impenetrable layers such as bedrock or compacted zones. This is an important factor for determining agricultural suitability. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/SoilDepthRootableClass
 <http://w3id.org/glosis/model/common/SoilDepthRootableClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -449,6 +471,7 @@ _:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/SoilDepthRootableClass> <http://www.w3.org/2000/01/rdf-schema#label> "SoilDepthRootableClass"@en .
 <http://w3id.org/glosis/model/common/SoilDepthRootableClass> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/SoilDepthRootableClass> <http://www.w3.org/2004/02/skos/core#definition> "Soil depth rootable class categorizes the soil based on the depth of the rootable zone, usually classifying soils as shallow, moderate, or deep. These classifications help determine land use suitability, particularly for agriculture. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/SoilDepthRootableValue
 <http://w3id.org/glosis/model/common/SoilDepthRootableValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -478,6 +501,7 @@ _:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/SoilDepthSampled> <http://www.w3.org/2000/01/rdf-schema#label> "SoilDepthSampled"@en .
 <http://w3id.org/glosis/model/common/SoilDepthSampled> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/SoilDepthSampled> <http://www.w3.org/2004/02/skos/core#definition> "Soil depth sampled refers to the specific depth of soil that was taken for analysis, often dictated by research or agricultural requirements. Sampling depth can affect the representativeness of the analysis. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/SoilDepthSampledValue
 <http://w3id.org/glosis/model/common/SoilDepthSampledValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -521,6 +545,7 @@ _:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/Texture> <http://www.w3.org/2000/01/rdf-schema#label> "Texture"@en .
 <http://w3id.org/glosis/model/common/Texture> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/Texture> <http://www.w3.org/2004/02/skos/core#definition> "Soil texture refers to the relative proportions of sand, silt, and clay in the soil. It determines a wide range of soil properties, such as permeability, water retention, and nutrient-holding capacity. Common textures include sandy, loamy, and clayey soils. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/WeatheringFragments
 <http://w3id.org/glosis/model/common/WeatheringFragments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -536,6 +561,7 @@ _:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/
 _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/glosis/model/common/WeatheringFragments> <http://www.w3.org/2000/01/rdf-schema#label> "WeatheringFragments"@en .
 <http://w3id.org/glosis/model/common/WeatheringFragments> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 29"@en .
+<http://w3id.org/glosis/model/common/WeatheringFragments> <http://www.w3.org/2004/02/skos/core#definition> "Weathering fragments are pieces of rock or mineral material that have been broken down into smaller particles due to physical, chemical, or biological weathering processes. The size and composition of these fragments influence soil texture, structure, and nutrient availability. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # 
 # 
@@ -554,110 +580,131 @@ _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://w3id.org/glosis/model/common/bleachedSandProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/bleachedSandProperty> <http://www.w3.org/2000/01/rdf-schema#label> "bleachedSandProperty"@en .
 <http://w3id.org/glosis/model/common/bleachedSandProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 23"@en .
+<http://w3id.org/glosis/model/common/bleachedSandProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Bleached Sand property refers to the physical characteristic of sandy soil that has undergone a bleaching process due to leaching, where minerals such as iron and other elements have been removed by water. This process often occurs in areas with high rainfall, leading to a soil that appears lighter in color. Bleached sand typically indicates low fertility and poor nutrient-holding capacity due to the lack of iron and other nutrients that are washed away. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # http://w3id.org/glosis/model/common/colourDryProperty
 <http://w3id.org/glosis/model/common/colourDryProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/colourDryProperty> <http://www.w3.org/2000/01/rdf-schema#label> "colourDryProperty"@en .
 <http://w3id.org/glosis/model/common/colourDryProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/colourDryProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Colour Dry property describes the color of soil when it is in a dry state. Soil color in the dry condition is influenced by the soil’s mineral composition and moisture content. For example, soils with high organic matter content typically appear dark brown or black when dry, while sandy or saline soils may appear lighter in color. Dry soil color is used in soil classification and can provide insights into the soil's composition and drainage. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/colourMoistProperty
 <http://w3id.org/glosis/model/common/colourMoistProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/colourMoistProperty> <http://www.w3.org/2000/01/rdf-schema#label> "colourMoistProperty"@en .
 <http://w3id.org/glosis/model/common/colourMoistProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+<http://w3id.org/glosis/model/common/colourMoistProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Colour Moist property refers to the soil's color when it is in a wet or moist condition. Moisture enhances the color intensity of the soil, which is often darker compared to its dry state. This is particularly helpful in determining organic matter content, iron oxide presence, and soil moisture retention. For instance, moist soils with abundant organic material tend to appear darker, whereas more mineral-rich soils can appear lighter in color. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/cracksDepthProperty
 <http://w3id.org/glosis/model/common/cracksDepthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/cracksDepthProperty> <http://www.w3.org/2000/01/rdf-schema#label> "cracksDepthProperty"@en .
 <http://w3id.org/glosis/model/common/cracksDepthProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,2"@en .
+<http://w3id.org/glosis/model/common/cracksDepthProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Cracks Depth property refers to the measurement of the vertical depth of cracks formed in soil, which is typically observed in dry conditions when the soil shrinks. Cracks are more common in clayey soils that experience significant shrinkage upon drying. The depth of these cracks can indicate soil moisture levels, compaction, and the ability of the soil to expand and contract, which affects water infiltration and root penetration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." .
 # 
 # http://w3id.org/glosis/model/common/cracksDistanceProperty
 <http://w3id.org/glosis/model/common/cracksDistanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/cracksDistanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "cracksDistanceProperty"@en .
 <http://w3id.org/glosis/model/common/cracksDistanceProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,3"@en .
+<http://w3id.org/glosis/model/common/cracksDistanceProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Cracks Distance property refers to the horizontal spacing between cracks in the soil surface, which can occur due to the shrinkage of soil as it dries. Cracks form when water content decreases, and their distance is an indicator of the soil's shrink-swell behavior. Larger distances between cracks generally indicate more severe soil shrinkage, which can affect root growth and water infiltration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." .
 # 
 # http://w3id.org/glosis/model/common/cracksWidthProperty
 <http://w3id.org/glosis/model/common/cracksWidthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/cracksWidthProperty> <http://www.w3.org/2000/01/rdf-schema#label> "cracksWidthProperty"@en .
 <http://w3id.org/glosis/model/common/cracksWidthProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,1"@en .
+<http://w3id.org/glosis/model/common/cracksWidthProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Cracks Width property refers to the measurement of the gap or space between the sides of soil cracks. The width of these cracks is typically influenced by soil moisture content and texture. Wider cracks are indicative of drier conditions and are commonly found in soils with high clay content, which tend to shrink and form deep cracks when the moisture content is reduced. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." .
 # 
 # http://w3id.org/glosis/model/common/fragmentCoverProperty
 <http://w3id.org/glosis/model/common/fragmentCoverProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/fragmentCoverProperty> <http://www.w3.org/2000/01/rdf-schema#label> "fragmentCoverProperty"@en .
 <http://w3id.org/glosis/model/common/fragmentCoverProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 15,1"@en .
+<http://w3id.org/glosis/model/common/fragmentCoverProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Fragment Cover property describes the proportion of the soil surface covered by coarse fragments such as rocks, stones, or other large particles. This property is important because a high fragment cover can reduce soil erosion but may also interfere with water infiltration and root growth. Fragment cover is often used as an indicator of soil stability and erosion potential. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/fragmentsSizeProperty
 <http://w3id.org/glosis/model/common/fragmentsSizeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/fragmentsSizeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "fragmentsSizeProperty"@en .
 <http://w3id.org/glosis/model/common/fragmentsSizeProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 15,2"@en .
+<http://w3id.org/glosis/model/common/fragmentsSizeProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Fragments Size property refers to the dimensions of rock or mineral fragments present in the soil. These fragments are categorized based on their size, ranging from small gravel particles to larger stones and boulders. Larger fragments tend to reduce soil fertility, inhibit root growth, and decrease water retention. Smaller fragments, in contrast, contribute to soil texture and permeability. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/infiltrationRateClassProperty
 <http://w3id.org/glosis/model/common/infiltrationRateClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/infiltrationRateClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "infiltrationRateClassProperty"@en .
 <http://w3id.org/glosis/model/common/infiltrationRateClassProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/infiltrationRateClassProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Infiltration Rate Class property classifies the soil’s ability to absorb water based on observed infiltration rates. This classification is typically divided into categories like slow, moderate, or rapid infiltration, based on how quickly water is absorbed into the soil. It is an essential property for understanding drainage, runoff, and irrigation needs. Source: Hillel, D. (2004). Introduction to Soil Physics. Academic Press." .
 # 
 # http://w3id.org/glosis/model/common/infiltrationRateNumericProperty
 <http://w3id.org/glosis/model/common/infiltrationRateNumericProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
 <http://w3id.org/glosis/model/common/infiltrationRateNumericProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/infiltrationRateNumericProperty> <http://www.w3.org/2000/01/rdf-schema#label> "infiltrationRateNumericProperty"@en .
 <http://w3id.org/glosis/model/common/infiltrationRateNumericProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/infiltrationRateNumericProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Infiltration Rate Numeric property provides a quantitative measure of the rate at which water enters the soil, usually expressed in units such as millimeters per hour (mm/h). This numeric value is essential for determining soil permeability, irrigation management, and runoff prediction. Higher infiltration rates indicate well-drained soils, while lower rates suggest compacted or clay-rich soils. Source: Bouwer, H. (2000). Integrated Water Management for the 21st Century. Water Resources Research." .
 # 
 # http://w3id.org/glosis/model/common/organicMatterClassProperty
 <http://w3id.org/glosis/model/common/organicMatterClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/organicMatterClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "organicMatterClassProperty"@en .
 <http://w3id.org/glosis/model/common/organicMatterClassProperty> <http://www.w3.org/2004/02/skos/core#definition> "table is missing!"@en .
+<http://w3id.org/glosis/model/common/organicMatterClassProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Organic Matter Class property classifies soil based on the amount and quality of organic matter it contains. Soils with high organic matter are usually fertile, retain moisture better, and support more biological activity. This classification helps in determining soil health and suitability for agricultural purposes. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # http://w3id.org/glosis/model/common/rockAbundanceProperty
 <http://w3id.org/glosis/model/common/rockAbundanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/rockAbundanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "rockAbundanceProperty"@en .
 <http://w3id.org/glosis/model/common/rockAbundanceProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 26"@en .
+<http://w3id.org/glosis/model/common/rockAbundanceProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Rock Abundance property refers to the proportion or percentage of rock fragments in the soil profile. High rock abundance can affect soil tillage, water retention, root penetration, and overall soil fertility. It is often used to assess land suitability for agriculture and vegetation. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/rockShapeProperty
 <http://w3id.org/glosis/model/common/rockShapeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/rockShapeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "rockShapeProperty"@en .
 <http://w3id.org/glosis/model/common/rockShapeProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 28"@en .
+<http://w3id.org/glosis/model/common/rockShapeProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Rock Shape property describes the physical form of rock fragments in the soil, which can range from angular to rounded. Angular rocks are generally a sign of recent weathering, while rounded rocks have been smoothed by long-term weathering processes. The shape of rocks influences soil texture, drainage, and tillage requirements. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/rockSizeProperty
 <http://w3id.org/glosis/model/common/rockSizeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/rockSizeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "rockSizeProperty"@en .
 <http://w3id.org/glosis/model/common/rockSizeProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 27"@en .
+<http://w3id.org/glosis/model/common/rockSizeProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Rock Size property refers to the dimensions of the rock fragments present in the soil. Rocks are typically classified by their size, from small gravel to large boulders. Larger rocks can limit root growth, hinder water infiltration, and complicate soil management practices. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/soilDepthBedrockProperty
 <http://w3id.org/glosis/model/common/soilDepthBedrockProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
 <http://w3id.org/glosis/model/common/soilDepthBedrockProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/soilDepthBedrockProperty> <http://www.w3.org/2000/01/rdf-schema#label> "soilDepthBedrockProperty"@en .
 <http://w3id.org/glosis/model/common/soilDepthBedrockProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/soilDepthBedrockProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Soil Depth Bedrock property refers to the distance from the soil surface to the underlying bedrock layer. This measurement is important for understanding the soil's capacity to support plant growth, as soils with shallow bedrock tend to have limited rooting depth, affecting water retention and nutrient availability. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/soilDepthProperty
 <http://w3id.org/glosis/model/common/soilDepthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
 <http://w3id.org/glosis/model/common/soilDepthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/soilDepthProperty> <http://www.w3.org/2000/01/rdf-schema#label> "soilDepthProperty"@en .
 <http://w3id.org/glosis/model/common/soilDepthProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/soilDepthProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Soil Depth property measures the vertical distance from the soil surface to an impenetrable layer, such as bedrock or a hardpan. Soil depth is a crucial factor influencing root development, water storage, and plant growth. Shallow soils may limit root growth, while deep soils can support more extensive root systems. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # http://w3id.org/glosis/model/common/soilDepthRootableClassProperty
 <http://w3id.org/glosis/model/common/soilDepthRootableClassProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/soilDepthRootableClassProperty> <http://www.w3.org/2000/01/rdf-schema#label> "soilDepthRootableClassProperty"@en .
 <http://w3id.org/glosis/model/common/soilDepthRootableClassProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/soilDepthRootableClassProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Soil Depth Rootable Class property classifies soils based on the depth of the rootable zone, which excludes impenetrable layers such as bedrock or compacted horizons. Soils are typically classified as shallow, moderately deep, or deep, depending on the depth of the root zone, which directly affects plant growth. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." .
 # 
 # http://w3id.org/glosis/model/common/soilDepthRootableProperty
 <http://w3id.org/glosis/model/common/soilDepthRootableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
 <http://w3id.org/glosis/model/common/soilDepthRootableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/soilDepthRootableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "soilDepthRootableProperty"@en .
 <http://w3id.org/glosis/model/common/soilDepthRootableProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/soilDepthRootableProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Soil Depth Rootable property refers to the actual vertical depth of soil that can support plant roots, excluding any non-rootable layers such as bedrock or a water-impervious horizon. This depth is crucial for determining the suitability of land for agriculture and vegetation. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/soilDepthSampledProperty
 <http://w3id.org/glosis/model/common/soilDepthSampledProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Quantitykind> .
 <http://w3id.org/glosis/model/common/soilDepthSampledProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/soilDepthSampledProperty> <http://www.w3.org/2000/01/rdf-schema#label> "soilDepthSampledProperty"@en .
 <http://w3id.org/glosis/model/common/soilDepthSampledProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/soilDepthSampledProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Soil Depth Sampled property indicates the specific depth of the soil profile that has been sampled for analysis. This property is important for understanding the representativeness of the sample, as different soil horizons may vary significantly in properties such as texture, fertility, and moisture content. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/textureProperty
 <http://w3id.org/glosis/model/common/textureProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/textureProperty> <http://www.w3.org/2000/01/rdf-schema#label> "textureProperty"@en .
 <http://w3id.org/glosis/model/common/textureProperty> <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+<http://w3id.org/glosis/model/common/textureProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Texture property refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." .
 # 
 # http://w3id.org/glosis/model/common/weatheringFragmentsProperty
 <http://w3id.org/glosis/model/common/weatheringFragmentsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/ObservableProperty> .
 <http://w3id.org/glosis/model/common/weatheringFragmentsProperty> <http://www.w3.org/2000/01/rdf-schema#label> "weatheringFragmentsProperty"@en .
 <http://w3id.org/glosis/model/common/weatheringFragmentsProperty> <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 29"@en .
+<http://w3id.org/glosis/model/common/weatheringFragmentsProperty> <http://www.w3.org/2004/02/skos/core#definition> "The Weathering Fragments property refers to soil particles or rock fragments that have been broken down through physical, chemical, or biological weathering. These fragments play a role in soil texture, structure, and nutrient availability. The degree of weathering can indicate the age and stability of the soil’s mineral content. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -7,8 +7,8 @@
       "en" : "ISO28258 ontology for GLOSIS"
     },
     "iri" : "http://w3id.org/glosis/model/iso28258/2013",
-    "version" : "1.4.1",
-    "author" : [ "_:genid-nodeid-node1i9tv1as4x3", "_:genid2147483649", "_:genid2147483651" ],
+    "version" : "1.5.0",
+    "author" : [ "_:genid-nodeid-node1ii96r7cqx3", "_:genid2147483649", "_:genid2147483648" ],
     "description" : {
       "en" : "The ontology represents a subset of the ISO28258 standard data model entities necessary for GLOSIS ontology"
     },
@@ -19,13 +19,13 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid-nodeid-node1i9tv1as4x3",
-        "type" : "iri"
+        "value" : "_:genid2147483648",
+        "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483651",
-        "type" : "label"
+        "value" : "_:genid-nodeid-node1ii96r7cqx3",
+        "type" : "iri"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
@@ -38,17 +38,17 @@
         "value" : "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.4.1",
-        "type" : "label"
-      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.5.0",
+        "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -308,7 +308,7 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "undefined",
-        "value" : "The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes. </skos:definition><rdfs:isDefinedBy>http://standards.iso.org/iso/19156/ed-1/en/",
+        "value" : "The class NamedValue provides for a generic soft-typed parameter value. NamedValue shall support two attributes.",
         "type" : "label"
       } ]
     },
@@ -380,6 +380,12 @@
         "language" : "undefined",
         "value" : "http://standards.iso.org/iso/19156/ed-1/en/",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "information about the events or source data used in constructing the data specified by the scope or lack of knowledge about lineage",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -439,7 +445,7 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "undefined",
-        "value" : ".lt.ul.gt.\t.lt.li.gt..lt.b.gt.Role of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE\tA .ldq.station.rdq. is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE\tA transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. .lt.ul.gt.\t.lt.li.gt..lt.b.gt.Classification of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10.",
+        "value" : "Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE\tA station is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE\tA transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. Classification of sampling features.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10.",
         "type" : "label"
       } ]
     },
@@ -662,6 +668,12 @@
         "language" : "undefined",
         "value" : "http://standards.iso.org/iso/19156/ed-1/en/",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "If present, the attributes parameter:NamedValue shall describe an arbitrary parameter associated with the SF_SamplingFeature. This might be a parameter that qualifies the interaction with the sampled feature, or an environmental parameter associated with the sampling process.",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -681,6 +693,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "order number of profile element",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -700,6 +718,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "upper depth of profile element",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -719,6 +743,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "relation from Plot to Profile",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -738,6 +768,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "relation from horizon to layer",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -757,6 +793,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "a plot observed within this site",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -776,6 +818,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "the most typical soil profile to characterize the site",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -795,6 +843,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "relation from ProfileElement to Profile",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -819,6 +873,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "lower depth of profile element",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -848,6 +908,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "relation from Profile to ProfileElement",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -887,6 +953,12 @@
         "language" : "undefined",
         "value" : "http://standards.iso.org/iso/19156/ed-1/en/",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "If present, the attribute lineage:LI_Lineage shall describe the history and provenance of the SF_SamplingFeature. This might include information relating to the handling of the specimen, or details of the survey procedure of a spatial sampling feature.",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -906,6 +978,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "relation from Plot to Site",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -945,6 +1023,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "relation from layer to horizon",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -964,6 +1048,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "a plot observed within this site",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -983,6 +1073,12 @@
         "language" : "undefined",
         "value" : "http://standards.iso.org/iso/19156/ed-1/en/",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "relation from SF_SamplingFeature to GFI_DomainFeature or GFI_Feature",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -1002,6 +1098,12 @@
         "language" : "undefined",
         "value" : "https://www.iso.org/standard/44595.html",
         "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "relation from Profile to Site",
+        "type" : "label"
       } ]
     },
     "label" : {

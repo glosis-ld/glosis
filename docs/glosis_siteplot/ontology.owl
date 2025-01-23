@@ -15,13 +15,13 @@
      xmlns:ontology="http://dbpedia.org/ontology/"
      xmlns:property="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/siteplot">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/siteplot/1.4.1"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/siteplot/1.5.0"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/codelists/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/common/"/>
         <owl:imports rdf:resource="http://w3id.org/glosis/model/iso28258/2013/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i9tv0dkmx1015"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1ii96qdmux1014"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:description xml:lang="en">GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:description>
@@ -29,7 +29,7 @@
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</terms:source>
         <terms:title xml:lang="en">GlOSIS Ontology: Site-Plot module</terms:title>
         <rdfs:comment xml:lang="en">This module contains the classes and properties to describe soil sites (a defined area which is subject to a soil quality investigation) and soil plots (an elementary area where individual observations are made and/or samples are taken).</rdfs:comment>
-        <owl:versionInfo>1.4.1</owl:versionInfo>
+        <owl:versionInfo>1.5.0</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <schema:affiliation>
@@ -70,6 +70,7 @@
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:label xml:lang="en">altitude</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Refers to the vertical distance above or below a reference point, typically sea level, at which a soil sample or observation is located.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -81,6 +82,7 @@
         <rdfs:range rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Alpha2Code"/>
         <rdfs:label xml:lang="en">country</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Refers to the national jurisdiction or geopolitical region in which the soil sample or observation was taken, indicating the broader context of the location</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -92,6 +94,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Property"/>
         <rdfs:label xml:lang="en">positionalAccuracy</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Refers to the degree to which the geographic location of a soil sample or observation corresponds to its true location, often expressed as a range or error margin.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -103,6 +106,7 @@
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="en">responsibleOrganization</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Refers to the entity or organization accountable for collecting, managing, or providing soil data or related information.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -131,7 +135,7 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/cropDescription">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Description of crops at the site</rdfs:comment>
+        <skos:definition xml:lang="en">Description of crops at the site</skos:definition>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</skos:definition>
     </owl:DatatypeProperty>
     
@@ -142,8 +146,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/landUseCropRotation">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Description of crop rotation at the site</rdfs:comment>
         <rdfs:label xml:lang="en">landUseCropRotation</rdfs:label>
+        <skos:definition xml:lang="en">Description of crop rotation at the site</skos:definition>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
@@ -154,8 +158,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/landUseRemark">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Description of land use at the site</rdfs:comment>
         <rdfs:label xml:lang="en">landUseRemark</rdfs:label>
+        <skos:definition xml:lang="en">Description of land use at the site</skos:definition>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
@@ -168,6 +172,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">location</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Refers to the geographic location or descriptive details that pinpoint where a soil sample or observation is made.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -179,6 +184,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">mapSheetID</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Refers to the unique identifier assigned to a specific map sheet or map section, which is used for referencing detailed geographic or soil data in mapping systems.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -188,9 +194,9 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/parentRemarks">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Remarks on the parent material</rdfs:comment>
         <rdfs:label xml:lang="en">parentRemarks</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition xml:lang="en">Remarks on the parent material</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -200,8 +206,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/physiographyDescription">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Description of the local physiography</rdfs:comment>
         <rdfs:label xml:lang="en">physiographyDescription</rdfs:label>
+        <skos:definition xml:lang="en">Description of the local physiography</skos:definition>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
@@ -214,6 +220,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">remarks</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Refer to additional comments or annotations about a soil sample, observation, or dataset, often providing context or explanations for the data.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -232,8 +239,8 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/glosis/model/siteplot/vegetationDescription">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Description of vegetation at the site</rdfs:comment>
         <rdfs:label xml:lang="en">vegetationDescription</rdfs:label>
+        <skos:definition xml:lang="en">Description of vegetation at the site</skos:definition>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
     </owl:DatatypeProperty>
     
@@ -416,6 +423,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">CropClass</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 9</skos:definition>
+        <skos:definition>Crop Class refers to the classification system that categorizes different types of crops based on their growth characteristics, climate needs, and agricultural suitability. It is often used to understand how specific crops are adapted to varying soil and climatic conditions, aiding in crop management and agricultural planning. Source: FAO, &apos;Guidelines for Soil Profile Description&apos;</skos:definition>
     </owl:Class>
     
 
@@ -452,6 +460,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ErosionActivityPeriod</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 19</skos:definition>
+        <skos:definition>This term refers to the time span during which soil erosion activities, such as water or wind erosion, are active. The period typically coincides with certain climatic conditions (like rainy seasons) or land-use activities that contribute to soil degradation. Source: USDA Natural Resources Conservation Service (NRCS)</skos:definition>
     </owl:Class>
     
 
@@ -488,6 +497,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ErosionAreaAffected</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</skos:definition>
+        <skos:definition>Erosion Area Affected is the portion of land or soil area that is subject to erosion, either currently or historically. It measures the extent to which soil erosion has impacted the land, often used in land management to prioritize remediation efforts. Source: USDA NRCS, &apos;Soil Erosion Research and Technology Transfer&apos;</skos:definition>
     </owl:Class>
     
 
@@ -524,6 +534,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ErosionCategory</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</skos:definition>
+        <skos:definition>This refers to the classification of erosion based on its severity, type (e.g., water, wind), or cause (natural vs. human-induced). Categories help in the assessment and management of erosion risks. Source: FAO, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:Class>
     
 
@@ -560,6 +571,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ErosionDegree</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 18</skos:definition>
+        <skos:definition>The degree of erosion refers to the severity of soil erosion, ranging from slight to severe, which helps in determining soil conservation needs and planning soil restoration efforts. Source: FAO, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:Class>
     
 
@@ -596,6 +608,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ErosionTotalAreaAffected</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</skos:definition>
+        <skos:definition>This term quantifies the total land area affected by erosion processes, encompassing all zones that have experienced erosion, whether through wind, water, or other agents. Source: USDA NRCS, &apos;Soil Erosion Research and Technology Transfer&apos;</skos:definition>
     </owl:Class>
     
 
@@ -632,6 +645,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">FloodDuration</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
+        <skos:definition>Flood duration measures the length of time that an area remains inundated with water during a flood event. It is an important metric in determining the potential impacts on soil structure and fertility. Source: USGS, &apos;Floodplain Management&apos;</skos:definition>
     </owl:Class>
     
 
@@ -668,6 +682,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">FloodFrequency</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
+        <skos:definition>Flood frequency indicates how often a specific area is expected to experience flooding over a given time period. This is used in flood risk assessments and land-use planning. Source: USGS, &apos;Floodplain Management&apos;</skos:definition>
     </owl:Class>
     
 
@@ -727,6 +742,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">GL_Plot</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Specialization for GloSIS of ISO iso28258 Plot soil feature type, defined as an elementary area where individual observations are made and/or samples are taken</skos:definition>
     </owl:Class>
     
 
@@ -787,6 +803,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">GL_Site</rdfs:label>
         <skos:definition xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</skos:definition>
+        <skos:definition>Specialization for GloSIS of ISO iso28258 Site soil feature type, defined as an defined area which is subject to a soil quality investigation</skos:definition>
     </owl:Class>
     
 
@@ -823,6 +840,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Geology</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
+        <skos:definition>Geology refers to the study of the Earth&apos;s crust, including the minerals and rocks that make up soil and landscape features. Soil properties such as texture and drainage can be heavily influenced by the underlying geology. Source: AGI, &apos;Geology in Environmental Management&apos;</skos:definition>
     </owl:Class>
     
 
@@ -859,6 +877,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">GroundwaterDepth</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Groundwater depth is the vertical distance from the soil surface to the top of the groundwater table. This depth affects water availability, root penetration, and overall soil health. Source: USDA NRCS, &apos;Groundwater and Soil&apos;</skos:definition>
     </owl:Class>
     
 
@@ -918,6 +937,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">HumanInfluenceClass</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 10</skos:definition>
+        <skos:definition>Human Influence Class refers to a categorization system used to assess the degree of human impact on a given landscape or ecosystem. This can range from undisturbed natural areas to heavily modified environments, influencing soil properties and vegetation cover. Source: FAO, &apos;Land Degradation Assessment in Drylands&apos;</skos:definition>
     </owl:Class>
     
 
@@ -954,6 +974,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">KoeppenClass</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>The Köppen climate classification system divides the world into climate zones based on temperature, precipitation, and seasonal patterns. Soil characteristics such as moisture content, temperature, and organic matter are heavily influenced by the Köppen climate type of the region. Source: Köppen, W., &apos;Geiger&apos;s Climate Maps&apos;</skos:definition>
     </owl:Class>
     
 
@@ -990,6 +1011,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">LandUseBareCover</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Land Use Bare Cover refers to the proportion of land area that is devoid of vegetation or artificial cover, such as urban development or barren land. This is a key indicator of soil exposure to erosion and degradation. Source: FAO, &apos;Land Use and Land Cover Classification&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1049,6 +1071,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">LandUseClass</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 8</skos:definition>
+        <skos:definition>Land Use Class categorizes land based on how it is used, such as agricultural land, forest, industrial, or urban. These classes help in determining soil management practices and conservation measures suitable for the area. Source: FAO, &apos;World Soil Resources Report&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1085,6 +1108,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">LandUseForest</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Land Use Forest refers to areas primarily designated for forest cover, whether natural or planted. Forest land use is closely tied to soil health, with forest soils typically having high organic matter and beneficial nutrient cycling. Source: FAO, &apos;Forest Resources Assessment&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1144,6 +1168,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">LandUseGrass</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Land Use Grass refers to land areas that are covered by grasslands or pastures. These areas are often used for grazing and agricultural production, and the soil can vary in quality depending on management practices and grazing intensity. Source: FAO, &apos;Grassland Ecosystems and Management&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1203,6 +1228,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">LandUsePavedCover</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Land Use Paved Cover indicates areas where the natural soil has been covered by impervious surfaces such as roads, buildings, or parking lots. This typically leads to increased runoff and reduced soil infiltration capacity. Source: FAO, &apos;Urban Soil Management&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1262,6 +1288,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">LandUseShrubs</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Land Use Shrubs refers to land areas where shrubs dominate the vegetation cover. Shrubs can influence soil properties by stabilizing the soil and contributing to nutrient cycling, particularly in arid and semi-arid areas. Source: FAO, &apos;Vegetation and Land Use in Arid Zones&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1321,6 +1348,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">LandformComplex</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 5</skos:definition>
+        <skos:definition>Landform Complex refers to a landscape unit composed of multiple interrelated landforms, such as hills, valleys, and plains. This classification helps in understanding soil types, hydrology, and erosion risks within a region. Source: USDA NRCS, &apos;Soil Survey Manual&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1357,6 +1385,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Lithology</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
+        <skos:definition>Lithology is the study and description of the physical characteristics of rocks, particularly in terms of their mineral content and texture. This directly impacts the soil properties above them, influencing drainage, fertility, and root growth. Source: AGI, &apos;Encyclopedia of Geology&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1393,6 +1422,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">MajorLandForm</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 4</skos:definition>
+        <skos:definition>Major Land Form refers to large-scale natural land features, such as mountains, valleys, plateaus, and plains, that significantly influence soil formation, hydrology, and land use. These landforms provide important context for understanding soil properties and landscape behavior. Source: FAO, &apos;World Soil Resources Report&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1429,6 +1459,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ParentDeposition</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</skos:definition>
+        <skos:definition>Parent Deposition refers to the process through which the parent material (e.g., sediment or rock) that forms the soil is deposited. This process can significantly influence soil texture, structure, and fertility. Source: USDA NRCS, &apos;Soil Genesis and Classification&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1465,6 +1496,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ParentLithology</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
+        <skos:definition>Parent Lithology is the geological composition of the parent material from which the soil forms, including its mineral content and structure. The lithology of the parent material has a direct impact on the chemical and physical properties of the soil. Source: AGI, &apos;Encyclopedia of Geology&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1499,6 +1531,8 @@
                 <owl:hasValue rdf:resource="http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">ParentTextureUnconsolidated</rdfs:label>
+        <skos:definition>Parent Texture Unconsolidated refers to the texture of the parent material (e.g., sediment, loose rock) that has not yet been cemented or consolidated into solid rock. This texture influences the soil’s permeability, drainage, and overall fertility. Source: USDA NRCS, &apos;Soil Genesis and Classification&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1535,6 +1569,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Physiography</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 2</skos:definition>
+        <skos:definition>Physiography refers to the physical features and landforms of the Earth&apos;s surface, including the shape, structure, and distribution of mountains, valleys, plateaus, and plains. These features influence soil formation, drainage, and the distribution of vegetation. Source: FAO, &apos;Soil Geography and Mapping&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1571,6 +1606,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">RockOutcropsCover</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,1</skos:definition>
+        <skos:definition>Rock Outcrops Cover refers to the proportion of an area where bedrock or exposed rock outcrops are visible at the surface. These outcrops can influence soil development by limiting soil depth and affecting water retention and nutrient cycling. Source: USDA NRCS, &apos;Soil Survey Manual&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1607,6 +1643,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">RockOutcropsDistance</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,2</skos:definition>
+        <skos:definition>Rock Outcrops Distance measures the distance from a specific point or area to the nearest exposed rock outcrop. This is important for understanding the underlying geology and potential impacts on soil properties, such as drainage and nutrient availability. Source: FAO, &apos;Soil Formation and Classification&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1643,6 +1680,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SlopeForm</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 6</skos:definition>
+        <skos:definition>Weathering Rock Property describes the extent to which rocks in an area have undergone physical, chemical, or biological weathering, breaking down into smaller particles that contribute to soil formation. This property influences the mineral content of the soil, affecting its fertility, structure, and drainage characteristics. Source: AGI, &apos;Encyclopedia of Geology&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1679,6 +1717,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SlopeGradientClass</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 7</skos:definition>
+        <skos:definition>Slope Gradient Class is a classification system that categorizes slopes based on their steepness. This is typically done by dividing slopes into classes such as gentle, moderate, and steep, with steeper slopes being more prone to erosion. Source: FAO, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1715,6 +1754,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SlopeGradientNumeric</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Slope Gradient Numeric provides a numerical value indicating the steepness or gradient of a slope, usually expressed as a percentage. For example, a slope with a 10% gradient rises 10 meters for every 100 meters of horizontal distance. Source: USDA NRCS, &apos;Soil Survey Manual&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1774,6 +1814,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SlopeOrientationClass</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Slope Orientation Class refers to the classification of the direction a slope faces, such as north-facing, south-facing, east-facing, or west-facing. The orientation of a slope affects its exposure to sunlight, moisture, and wind, which in turn impacts soil temperature, moisture content, and vegetation cover. Source: FAO, &apos;Soil and Water Conservation&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1810,6 +1851,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SlopeOrientationNumeric</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Slope Orientation Numeric refers to the specific angle or direction of a slope, typically measured in degrees, relative to a cardinal direction (e.g., 0° for north, 90° for east, etc.). This helps in understanding the climatic conditions experienced by the slope, such as sun exposure or wind patterns. Source: USDA NRCS, &apos;Soil Erosion and Landscape Analysis&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1869,6 +1911,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SlopePathways</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 3</skos:definition>
+        <skos:definition>Slope Pathways refers to the routes or pathways through which water, sediment, and other materials move across a slope. These pathways are critical for assessing erosion risks, water flow, and sediment transport in sloped areas. Source: FAO, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1897,6 +1940,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SoilCarbonDensity</rdfs:label>
+        <skos:definition>Soil Carbon Density refers to the amount of carbon stored in a given volume of soil. It is a key indicator of soil organic matter content and plays a significant role in soil fertility, carbon sequestration, and overall ecosystem health. Source: IPCC, &apos;Guidelines for National Greenhouse Gas Inventories&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1955,6 +1999,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">SurfaceAge</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 13</skos:definition>
+        <skos:definition>Surface Age refers to the estimated age of a soil&apos;s surface or landform, often linked to the time since the last significant geomorphic event (e.g., glaciation, flooding). This affects the degree of soil development, weathering, and its ability to support vegetation. Source: FAO, &apos;Soil Formation and Evolution&apos;</skos:definition>
     </owl:Class>
     
 
@@ -1991,6 +2036,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">TreeDensity</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Tree Density measures the number of trees per unit area, typically expressed in trees per hectare. This is used to assess forest structure and soil health, as higher tree density can influence soil nutrients, organic matter, and water retention. Source: FAO, &apos;Forest Resources Assessment&apos;</skos:definition>
     </owl:Class>
     
 
@@ -2050,6 +2096,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">VegetationClass</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 11</skos:definition>
+        <skos:definition>Vegetation Class refers to the classification of land areas based on the type of vegetation that grows there, such as forest, grassland, shrubland, or wetland. This classification helps understand soil properties, hydrology, and land management practices. Source: FAO, &apos;Vegetation and Land Use in Arid Zones&apos;</skos:definition>
     </owl:Class>
     
 
@@ -2086,6 +2133,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">WeatherCurrent</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</skos:definition>
+        <skos:definition>Weather Current refers to the present atmospheric conditions in a particular area, including factors such as temperature, precipitation, humidity, wind speed, and barometric pressure. These conditions influence soil moisture, temperature, and overall soil health. Source: USGS, &apos;Meteorological and Soil Interactions&apos;</skos:definition>
     </owl:Class>
     
 
@@ -2122,6 +2170,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">WeatherPast</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</skos:definition>
+        <skos:definition>Weather Past refers to historical weather data or patterns in a specific region, such as past rainfall, temperature fluctuations, and storm events. This information helps in predicting soil behavior, erosion risk, and vegetation growth patterns over time. Source: USDA NRCS, &apos;Climate and Soil Interactions&apos;</skos:definition>
     </owl:Class>
     
 
@@ -2158,6 +2207,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">WeatheringRock</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 29</skos:definition>
+        <skos:definition>Weathering Rock refers to the process of rock decomposition due to environmental factors like temperature changes, water, and chemical reactions. This process is important in soil formation as it contributes to the breakdown of parent material into smaller particles that form soil. Source: AGI, &apos;Encyclopedia of Geology&apos;</skos:definition>
     </owl:Class>
     
 
@@ -2210,6 +2260,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">bareCoverAbundanceProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Bare Cover Abundance Property refers to the extent of land area without vegetation or artificial cover, such as bare soil or rocky surfaces. High proportions of bare cover increase the risk of soil erosion and desertification, particularly in areas with poor vegetation or human disturbance. Source: FAO, &apos;Land Use and Land Cover Classification&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2221,6 +2272,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">cropClassProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 9</skos:definition>
+        <skos:definition>Crop Class Property refers to the categorization of land based on the type of crops cultivated. This property is used to assess soil management practices and land productivity, as different crops require specific soil conditions for optimal growth. Source: FAO, &apos;Guidelines for Soil Profile Description&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2232,6 +2284,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">erosionActivityPeriodProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 19</skos:definition>
+        <skos:definition>Erosion Activity Period Property refers to the time frame during which soil erosion processes, such as wind or water erosion, are most active in a given area. This period is influenced by climatic conditions, seasonal rainfall, and land use, and it helps in assessing the vulnerability of soils to degradation. Source: USDA NRCS, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2243,6 +2296,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">erosionAreaAffectedProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</skos:definition>
+        <skos:definition>Erosion Area Affected Property refers to the extent of land area that has been impacted by erosion processes, such as water or wind erosion. This property is important for evaluating the severity of soil degradation in a given region and helps in identifying areas that require soil conservation measures. Source: USDA NRCS, &apos;Soil Erosion Research and Technology Transfer&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2254,6 +2308,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">erosionCategoryProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</skos:definition>
+        <skos:definition>Erosion Category Property classifies the type and severity of erosion in a given area. Categories are often based on the nature of the erosive forces (e.g., water, wind) and the degree of soil loss, ranging from slight to severe. This classification aids in prioritizing conservation efforts and understanding the potential impacts on soil quality. Source: FAO, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2265,6 +2320,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">erosionDegreeProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 18</skos:definition>
+        <skos:definition>Erosion Degree Property refers to the level of intensity or severity of soil erosion in an area, categorized into classes such as slight, moderate, or severe. The degree of erosion helps in assessing the extent of soil degradation and informs decisions on soil conservation and land management. Source: FAO, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2276,6 +2332,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">erosionTotalAreaAffectedProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 17</skos:definition>
+        <skos:definition>Erosion Total Area Affected Property quantifies the total land area affected by erosion processes. It is an important measure in understanding the broader impact of erosion on soil health, productivity, and ecosystem services across a landscape. Source: USDA NRCS, &apos;Soil Erosion and Landscape Analysis&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2287,6 +2344,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">floodDurationProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
+        <skos:definition>Flood Duration Property refers to the length of time during which an area is inundated by floodwaters. The duration of flooding can significantly affect soil structure, nutrient availability, and plant growth, especially in flood-prone regions. Source: USGS, &apos;Floodplain Management&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2298,6 +2356,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">floodFrequencyProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 174</skos:definition>
+        <skos:definition>Flood Frequency Property refers to how often flooding occurs in a particular area, typically expressed in terms of recurrence intervals (e.g., once every 10 years). This property is vital for assessing flood risk, soil erosion, and the potential for soil nutrient loss due to repeated flooding events. Source: USGS, &apos;Floodplain Management&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2310,6 +2369,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">ForestAbundanceProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Forest Abundance Property refers to the proportion or extent of land covered by forest vegetation in a given area. It is often quantified as the percentage of land area dominated by tree species, reflecting the ecological importance of forests in influencing soil fertility, moisture retention, and biodiversity. Forested areas typically contribute to soil formation and stabilization through leaf litter and root systems that reduce erosion. Source: FAO, &apos;Forest Resources Assessment&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2321,6 +2381,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">geologyProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
+        <skos:definition>Geology Property refers to the underlying geological composition of an area, including rock types, mineral content, and geological processes. The geology of a region influences soil formation, structure, fertility, and drainage properties. Source: AGI, &apos;Encyclopedia of Geology&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2333,6 +2394,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">GrassAbundanceProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Grass Abundance Property indicates the extent or percentage of land covered by grasses or herbaceous plants. This property is important for understanding land productivity, grazing capacity, and soil health, as grasses play a key role in preventing soil erosion, enhancing organic matter content, and maintaining soil structure. Source: FAO, &apos;Grassland Ecosystems and Management&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2345,6 +2407,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">groundwaterDepthProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Groundwater Depth Property indicates the depth from the soil surface to the water table, which affects soil moisture levels, plant growth, and root penetration. Shallow groundwater can influence soil salinity and nutrient availability, while deep groundwater may limit water access for plants. Source: USDA NRCS, &apos;Groundwater and Soil&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2356,6 +2419,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">humanInfluenceClassProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 10</skos:definition>
+        <skos:definition>Human Influence Class Property classifies the extent of human impact on a landscape or ecosystem, ranging from minimal disturbance to high levels of modification. This classification helps in understanding the effects of urbanization, agriculture, or industrial activity on soil properties and ecosystem functions. Source: FAO, &apos;Land Degradation Assessment in Drylands&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2367,6 +2431,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">koeppenClassProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Koeppen Class Property refers to the classification of climate zones based on temperature and precipitation patterns, as defined by the Köppen climate classification system. This classification directly influences soil temperature, moisture content, and vegetation types, which in turn affect soil formation and properties. Source: Köppen, W., &apos;Geiger&apos;s Climate Maps&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2378,6 +2443,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">landUseClassProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 8</skos:definition>
+        <skos:definition>Land Use Class Property refers to the classification of land based on its primary use, such as agricultural, industrial, urban, or natural areas. This property helps assess the impact of land management practices on soil quality, including erosion risks, compaction, and fertility, and is critical for sustainable land-use planning. Source: FAO, &apos;Land Use and Land Cover Classification&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2389,6 +2455,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">landformComplexProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 5</skos:definition>
+        <skos:definition>Landform Complex Property describes a region with multiple interrelated landforms such as ridges, valleys, and hills. This property is essential for understanding how diverse landforms within a landscape influence soil distribution, water flow, and erosion patterns, ultimately affecting soil management strategies. Source: FAO, &apos;Soil Formation and Classification&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2400,6 +2467,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">lithologyProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
+        <skos:definition>Lithology Property refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, &apos;Encyclopedia of Geology&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2411,6 +2479,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">MajorLandFormProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 4</skos:definition>
+        <skos:definition>Major Land Form Property refers to the significant physical features of the land, such as mountains, valleys, and plateaus, that influence soil development and landscape processes. These landforms shape the flow of water, sediment transport, and nutrient cycling, directly affecting the types of soils that form in different regions. Source: FAO, &apos;World Soil Resources Report&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2422,6 +2491,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">ParentDepositionProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 16</skos:definition>
+        <skos:definition>Parent Deposition Property refers to the accumulation of materials, such as sediments or volcanic ash, that contribute to soil formation. These parent materials are deposited through natural processes such as erosion, weathering, or sediment transport, influencing soil texture, nutrient content, and water retention properties. Source: USDA NRCS, &apos;Soil Genesis and Classification&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2433,6 +2503,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">parentLithologyProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 12</skos:definition>
+        <skos:definition>Parent Lithology Property is the specific geological composition of the parent material (e.g., bedrock or sediment) from which the soil develops. The mineral content and texture of this material directly affect the physical and chemical properties of the soil, such as fertility, permeability, and soil depth. Source: USDA NRCS, &apos;Soil Genesis and Classification&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2444,6 +2515,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">parentTextureUnconsolidatedProperty</rdfs:label>
         <skos:definition xml:lang="en">table is missing!</skos:definition>
+        <skos:definition>Parent Texture Unconsolidated Property refers to the texture of the unconsolidated parent material, such as loose sediments or debris, that has not been solidified into rock. This texture affects soil properties such as aeration, drainage, and root penetration, as well as its ability to retain nutrients. Source: USDA NRCS, &apos;Soil Genesis and Classification&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2456,6 +2528,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">PavedAbundanceProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Paved Abundance Property measures the extent of land covered by impervious surfaces, such as roads, parking lots, and buildings. The abundance of paved surfaces affects soil by reducing water infiltration, increasing runoff, and contributing to soil compaction in surrounding areas. High levels of paved surfaces can exacerbate flooding and decrease soil health. Source: FAO, &apos;Urban Soil Management&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2467,6 +2540,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">PhysiographyProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 2</skos:definition>
+        <skos:definition>Physiography Property describes the physical characteristics of a landscape, including its landforms, slopes, and elevation. These features influence soil properties such as drainage, erosion, and moisture retention, helping to determine soil suitability for various land uses. Source: FAO, &apos;Soil Geography and Mapping&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2478,6 +2552,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">rockOutcropsCoverProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,1</skos:definition>
+        <skos:definition>Rock Outcrops Cover Property measures the extent to which rock outcrops (exposed bedrock or rock masses) cover the landscape. The presence of rock outcrops can influence soil depth and water retention, as well as contribute to erosion and landscape stability, particularly in areas with minimal soil cover. Source: USDA NRCS, &apos;Soil Survey Manual&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2489,6 +2564,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">rockOutcropsDistanceProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 14,2</skos:definition>
+        <skos:definition>Rock Outcrops Distance Property quantifies the distance from a given point or area to the nearest rock outcrop. The proximity to rock outcrops can influence soil development, with areas closer to outcrops often having thinner soils and higher vulnerability to erosion. Source: FAO, &apos;Soil Formation and Classification&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2501,6 +2577,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">shrubsAbundanceProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Shrubs Abundance Property refers to the extent or abundance of shrub vegetation in a given area. Shrubs influence soil structure by reducing erosion, improving soil organic matter through leaf litter, and enhancing nutrient cycling. They are also indicators of ecosystem health in many terrestrial environments. Source: FAO, &apos;Vegetation and Land Use in Arid Zones&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2512,6 +2589,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">slopeFormProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 6</skos:definition>
+        <skos:definition>Slope Form Property describes the shape or curvature of a slope, including its concave, convex, or straight profile. Slope form affects water runoff, erosion rates, and soil accumulation, influencing both the fertility and stability of the soil in hilly or mountainous regions. Source: FAO, &apos;Soil and Water Conservation&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2523,6 +2601,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">slopeGradientClassProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 7</skos:definition>
+        <skos:definition>Slope Gradient Class Property refers to the classification of slope steepness, such as flat, moderate, or steep, based on its angle. The gradient of a slope influences soil erosion rates, water drainage, and the suitability of land for agriculture, with steeper slopes typically being more prone to erosion. Source: USDA NRCS, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2535,6 +2614,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">slopeGradientProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Slope Gradient Property refers to the numerical measurement of the steepness of a slope, usually expressed as a percentage or angle. This property is crucial in determining soil erosion potential, water runoff, and suitability for land use, as steeper slopes are more prone to erosion and less suitable for cultivation without proper soil conservation measures. Source: USDA NRCS, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2546,6 +2626,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">slopeOrientationClassProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Slope Orientation Class Property classifies the direction in which a slope faces (north, south, east, west) and can significantly affect local climate conditions, such as sunlight exposure, moisture, and temperature. For instance, south-facing slopes in the Northern Hemisphere receive more sunlight, influencing soil temperature, vegetation types, and soil moisture availability. Source: FAO, &apos;Soil and Water Conservation&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2558,6 +2639,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">slopeOrientationProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Slope Orientation Property refers to the precise directional orientation of a slope, measured in degrees from a cardinal direction (e.g., 0° for north, 180° for south). The slope orientation impacts factors such as solar radiation, evaporation rates, and vegetation cover, all of which affect soil temperature, moisture retention, and erosion potential. Source: USDA NRCS, &apos;Soil Erosion and Landscape Analysis&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2569,6 +2651,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">slopePathwaysProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: figure 3</skos:definition>
+        <skos:definition>Slope Pathways Property identifies the natural flow paths of water, sediment, or other materials across a slope. These pathways, often defined by the topography, influence how water moves, erodes soil, and accumulates nutrients or contaminants. Understanding these pathways is critical for effective erosion control and water management in sloped areas. Source: FAO, &apos;Soil Erosion and Conservation&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2580,6 +2663,7 @@
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Quantitykind"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">soilCarbonDensityProperty</rdfs:label>
+        <skos:definition>Soil Carbon Density Property measures the amount of organic carbon stored in a given volume of soil, typically expressed in tons per hectare. This property is a key indicator of soil health, as organic carbon influences soil fertility, structure, and microbial activity, and plays a major role in carbon sequestration to mitigate climate change. Source: IPCC, &apos;Guidelines for National Greenhouse Gas Inventories&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2591,6 +2675,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">surfaceAgeProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 13</skos:definition>
+        <skos:definition>Surface Age Property refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, &apos;Soil Formation and Evolution&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2603,6 +2688,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">treeDensityProperty</rdfs:label>
         <skos:definition xml:lang="en">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</skos:definition>
+        <skos:definition>Tree Density Property refers to the number of trees per unit area, usually expressed as trees per hectare. High tree density is often associated with forested ecosystems that contribute to soil fertility through organic matter inputs, root structures that stabilize the soil, and enhanced moisture retention. Source: FAO, &apos;Forest Resources Assessment&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2614,6 +2700,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">VegetationClassProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 11</skos:definition>
+        <skos:definition>Vegetation Class Property refers to the categorization of vegetation types based on species composition and structure, such as forests, grasslands, and wetlands. The class of vegetation affects soil fertility, microbial activity, and water retention, which in turn influences agricultural potential and ecosystem services. Source: FAO, &apos;Vegetation and Land Use in Arid Zones&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2625,6 +2712,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">weatherConditionsCurrentProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</skos:definition>
+        <skos:definition>Weather Conditions Current Property describes the current atmospheric conditions in a specific location, including factors like temperature, humidity, wind speed, and precipitation. These conditions directly affect soil moisture, temperature, and erosion rates, influencing soil fertility and the ability to support plant growth. Source: USGS, &apos;Meteorological and Soil Interactions&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2636,6 +2724,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
         <rdfs:label xml:lang="en">weatherConditionsPastProperty</rdfs:label>
         <skos:definition xml:lang="en">Guidelines for Soil Description issued by the FAO: table 2</skos:definition>
+        <skos:definition>Weather Conditions Past Property refers to historical weather data, including past patterns of temperature, precipitation, and extreme weather events. Understanding past weather conditions helps in predicting soil behavior, erosion patterns, and agricultural productivity, as well as preparing for future changes in soil moisture and temperature. Source: USDA NRCS, &apos;Climate and Soil Interactions&apos;</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -2662,6 +2751,7 @@
 
     <rdf:Description rdf:about="http://w3id.org/glosis/model/siteplot/timestamp">
         <rdfs:label xml:lang="en">timestamp</rdfs:label>
+        <skos:definition>Refers to the specific date and time when soil data was collected, recorded, or processed, providing temporal context for the data.</skos:definition>
     </rdf:Description>
 </rdf:RDF>
 
