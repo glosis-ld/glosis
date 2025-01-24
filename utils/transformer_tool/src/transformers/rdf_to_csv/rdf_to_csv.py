@@ -130,7 +130,8 @@ class Transformer(object):
         self._select_instances()
         self._get_instance_details()
         frames = []
-        self.logger.debug(f"{self.results=}")
+        # commented out, used only locally for debugging purposes
+        # self.logger.debug(f"{self.results=}")
         for k in self.results.keys():
             if self.results[k].keys():
                 for k2 in self.results[k].keys():
