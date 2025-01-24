@@ -1,4 +1,3 @@
-import csv
 import os
 import re
 import logging
@@ -21,15 +20,15 @@ class Transformer(object):
         self.output = output_filename if output_filename else os.path.splitext(file)[0]
 
         # setting up logger
-        self.logger = logging.getLogger(__name__)
-        self.logger.setLevel(logging.DEBUG)
-        self.formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
-        current_date = datetime.datetime.now()
-        self.log_path = os.path.join('logs',
-                                     f'rdf_to_csv_{current_date.year}-{current_date.month}-{current_date.day}.log')
-        self.file_handler = logging.FileHandler(self.log_path)
-        self.file_handler.setFormatter(self.formatter)
-        self.logger.addHandler(self.file_handler)
+        # self.logger = logging.getLogger(__name__)
+        # self.logger.setLevel(logging.DEBUG)
+        # self.formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
+        # current_date = datetime.datetime.now()
+        # self.log_path = os.path.join('logs',
+        #                              f'rdf_to_csv_{current_date.year}-{current_date.month}-{current_date.day}.log')
+        # self.file_handler = logging.FileHandler(self.log_path)
+        # self.file_handler.setFormatter(self.formatter)
+        # self.logger.addHandler(self.file_handler)
 
     def _parse_into_graph(self):
         g = rdflib.Graph()
