@@ -1,13 +1,13 @@
 <http://w3id.org/glosis/model/iso28258/2013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/glosis/model/iso28258/2013> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/glosis/model/iso28258/2013/1.4.1> .
-<http://w3id.org/glosis/model/iso28258/2013> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/iso28258/2013_:genid-nodeid-node1i9tv1as4x3> .
+<http://w3id.org/glosis/model/iso28258/2013> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/glosis/model/iso28258/2013/1.5.0> .
+<http://w3id.org/glosis/model/iso28258/2013> <http://purl.org/dc/terms/creator> <http://w3id.org/glosis/model/iso28258/2013_:genid-nodeid-node1ii96r7cqx3> .
 <http://w3id.org/glosis/model/iso28258/2013> <http://purl.org/dc/terms/creator> _:genid1 .
-_:genid1 <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
 _:genid1 <http://schema.org/affiliation> _:genid2 .
 _:genid2 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013> <http://purl.org/dc/terms/creator> _:genid3 .
-_:genid3 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
-_:genid3 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
 _:genid3 <http://schema.org/affiliation> _:genid4 .
 _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013> <http://purl.org/dc/terms/description> "The ontology represents a subset of the ISO28258 standard data model entities necessary for GLOSIS ontology"@en .
@@ -15,7 +15,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013> <http://purl.org/dc/terms/source> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013> <http://purl.org/dc/terms/title> "ISO28258 ontology for GLOSIS"@en .
 <http://w3id.org/glosis/model/iso28258/2013> <http://www.w3.org/2000/01/rdf-schema#comment> "This module contains all ISO 28258 elements necessary to represent GloSIS, along with the mappings between ISO ontologies, SOSA/SSN, and GeoSPARQL."@en .
-<http://w3id.org/glosis/model/iso28258/2013> <http://www.w3.org/2002/07/owl#versionInfo> "1.4.1" .
+<http://w3id.org/glosis/model/iso28258/2013> <http://www.w3.org/2002/07/owl#versionInfo> "1.5.0" .
 # 
 # 
 # #################################################################
@@ -64,6 +64,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage> <http://www.w3.org/2000/01/rdf-schema#range> <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://standards.iso.org/iso/19156/ed-1/en/> .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage> <http://www.w3.org/2000/01/rdf-schema#label> "lineage" .
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage> <http://www.w3.org/2004/02/skos/core#definition> "If present, the attribute lineage:LI_Lineage shall describe the history and provenance of the SF_SamplingFeature. This might include information relating to the handling of the specimen, or details of the survey procedure of a spatial sampling feature." .
 # 
 # http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -71,6 +72,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://standards.iso.org/iso/19156/ed-1/en/> .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> <http://www.w3.org/2000/01/rdf-schema#label> "parameter" .
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> <http://www.w3.org/2004/02/skos/core#definition> "If present, the attributes parameter:NamedValue shall describe an arbitrary parameter associated with the SF_SamplingFeature. This might be a parameter that qualifies the interaction with the sampled feature, or an environmental parameter associated with the sampling process." .
 # 
 # http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -79,6 +81,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://standards.iso.org/iso/19156/ed-1/en/> .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> <http://www.w3.org/2000/01/rdf-schema#label> "sampledFeature" .
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> <http://www.w3.org/2004/02/skos/core#definition> "relation from SF_SamplingFeature to GFI_DomainFeature or GFI_Feature" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer
 <http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -86,6 +89,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Layer> .
 <http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer> <http://www.w3.org/2000/01/rdf-schema#label> "horizonInLayer" .
+<http://w3id.org/glosis/model/iso28258/2013/Horizon.horizonInLayer> <http://www.w3.org/2004/02/skos/core#definition> "relation from horizon to layer" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon
 <http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -93,6 +97,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Horizon> .
 <http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon> <http://www.w3.org/2000/01/rdf-schema#label> "developedHorizon" .
+<http://w3id.org/glosis/model/iso28258/2013/Layer.developedHorizon> <http://www.w3.org/2004/02/skos/core#definition> "relation from layer to horizon" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite
 <http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -100,6 +105,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Site> .
 <http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite> <http://www.w3.org/2000/01/rdf-schema#label> "plotInSite" .
+<http://w3id.org/glosis/model/iso28258/2013/Plot.plotInSite> <http://www.w3.org/2004/02/skos/core#definition> "relation from Plot to Site" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Plot.profile
 <http://w3id.org/glosis/model/iso28258/2013/Plot.profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -107,6 +113,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013/Plot.profile> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Profile> .
 <http://w3id.org/glosis/model/iso28258/2013/Plot.profile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Plot.profile> <http://www.w3.org/2000/01/rdf-schema#label> "profile" .
+<http://w3id.org/glosis/model/iso28258/2013/Plot.profile> <http://www.w3.org/2004/02/skos/core#definition> "relation from Plot to Profile" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Profile.element
 <http://w3id.org/glosis/model/iso28258/2013/Profile.element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -114,6 +121,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.element> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/ProfileElement> .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.element> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.element> <http://www.w3.org/2000/01/rdf-schema#label> "element" .
+<http://w3id.org/glosis/model/iso28258/2013/Profile.element> <http://www.w3.org/2004/02/skos/core#definition> "relation from Profile to ProfileElement" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite
 <http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -121,6 +129,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Site> .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite> <http://www.w3.org/2000/01/rdf-schema#label> "profileSite" .
+<http://w3id.org/glosis/model/iso28258/2013/Profile.profileSite> <http://www.w3.org/2004/02/skos/core#definition> "relation from Profile to Site" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot
 <http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -128,6 +137,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Plot> .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot> <http://www.w3.org/2000/01/rdf-schema#label> "samplingPlot" .
+<http://w3id.org/glosis/model/iso28258/2013/Profile.samplingPlot> <http://www.w3.org/2004/02/skos/core#definition> "a plot observed within this site" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -135,6 +145,7 @@ _:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Profile> .
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile> <http://www.w3.org/2000/01/rdf-schema#label> "elementOfProfile" .
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.elementOfProfile> <http://www.w3.org/2004/02/skos/core#definition> "relation from ProfileElement to Profile" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -148,6 +159,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth> <http://www.w3.org/2000/01/rdf-schema#label> "lowerDepth" .
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.lowerDepth> <http://www.w3.org/2004/02/skos/core#definition> "lower depth of profile element" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -164,6 +176,7 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth> <http://www.w3.org/2000/01/rdf-schema#label> "upperDepth" .
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.upperDepth> <http://www.w3.org/2004/02/skos/core#definition> "upper depth of profile element" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot
 <http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -171,6 +184,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Plot> .
 <http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot> <http://www.w3.org/2000/01/rdf-schema#label> "samplingPlot" .
+<http://w3id.org/glosis/model/iso28258/2013/Site.samplingPlot> <http://www.w3.org/2004/02/skos/core#definition> "a plot observed within this site" .
 # 
 # http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile
 <http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -178,6 +192,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/glosis/model/iso28258/2013/Profile> .
 <http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile> <http://www.w3.org/2000/01/rdf-schema#label> "typicalProfile" .
+<http://w3id.org/glosis/model/iso28258/2013/Site.typicalProfile> <http://www.w3.org/2004/02/skos/core#definition> "the most typical soil profile to characterize the site" .
 # 
 # 
 # 
@@ -205,6 +220,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://standards.iso.org/iso/19156/ed-1/en/> .
 <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> <http://www.w3.org/2000/01/rdf-schema#label> "LI_Lineage" .
+<http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> <http://www.w3.org/2004/02/skos/core#definition> "information about the events or source data used in constructing the data specified by the scope or lack of knowledge about lineage" .
 # 
 # http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature
 <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -225,7 +241,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://standards.iso.org/iso/19156/ed-1/en/> .
 <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> <http://www.w3.org/2000/01/rdf-schema#label> "NamedValue" .
-<http://def.isotc211.org/iso19156/2011/Observation#NamedValue> <http://www.w3.org/2004/02/skos/core#definition> "The class .lt.i.gt.NamedValue.lt..sl.i.gt. provides for a generic soft-typed parameter value. NamedValue shall support two attributes. </skos:definition><rdfs:isDefinedBy>http://standards.iso.org/iso/19156/ed-1/en/" .
+<http://def.isotc211.org/iso19156/2011/Observation#NamedValue> <http://www.w3.org/2004/02/skos/core#definition> "The class NamedValue provides for a generic soft-typed parameter value. NamedValue shall support two attributes." .
 # 
 # http://def.isotc211.org/iso19156/2011/Observation#OM_Observation
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -242,7 +258,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://standards.iso.org/iso/19156/ed-1/en/> .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> <http://www.w3.org/2000/01/rdf-schema#label> "SF_SamplingFeature" .
-<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> <http://www.w3.org/2004/02/skos/core#definition> ".lt.ul.gt.\t.lt.li.gt..lt.b.gt.Role of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE\tA .ldq.station.rdq. is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE\tA transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. .lt.ul.gt.\t.lt.li.gt..lt.b.gt.Classification of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10." .
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> <http://www.w3.org/2004/02/skos/core#definition> "Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE\tA station is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE\tA transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. Classification of sampling features.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10." .
 # 
 # http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature
 <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -332,5 +348,6 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.iso.org/standard/44595.html> .
 <http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order> <http://www.w3.org/2000/01/rdf-schema#label> "order" .
+<http://w3id.org/glosis/model/iso28258/2013/ProfileElement.order> <http://www.w3.org/2004/02/skos/core#definition> "order number of profile element" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

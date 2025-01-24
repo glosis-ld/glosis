@@ -8,12 +8,13 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/unit">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/unit/1.4.1"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i9tv18q9x3"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1i9tv18q9x5"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/unit/1.5.0"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1ii96r641x3"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1ii96r641x5"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -22,7 +23,7 @@
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt and Africa Soil Profile Database</terms:source>
         <terms:title xml:lang="en">GLOSIS units of measurement</terms:title>
         <rdfs:comment xml:lang="en">This module that introduces additional units of measurement that are absent from the qudt ontology.</rdfs:comment>
-        <owl:versionInfo>1.4.1</owl:versionInfo>
+        <owl:versionInfo>1.5.0</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
         <schema:affiliation>
@@ -128,6 +129,13 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/name -->
 
 
@@ -197,6 +205,7 @@
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/glosis/model/unit"/>
         <rdfs:label xml:lang="en-us">Centimol Per Liter</rdfs:label>
         <rdfs:label xml:lang="en">Centimol Per Litre</rdfs:label>
+        <skos:definition>0,01-fold of the SI base unit mole divided by the unit litre</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -212,6 +221,7 @@
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/glosis/model/unit"/>
         <rdfs:label xml:lang="en">Gram Per Hectogram</rdfs:label>
         <rdfs:label xml:lang="en-us">Gram Per Hectogram</rdfs:label>
+        <skos:definition>0,001 fold of the SI base unit kilogram divided by 0,1-fold of the SI base unit kilogram</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -227,6 +237,7 @@
         <rdfs:isDefinedBy rdf:resource="http://w3id.org/glosis/model/unit"/>
         <rdfs:label xml:lang="en-us">Cubic meter per one hundred cubic meter</rdfs:label>
         <rdfs:label xml:lang="en">Cubic metre per one hundred cubic metre</rdfs:label>
+        <skos:definition>SI base unit metre with the exponent 3 divided by 100-fold of the SI base unit metre with the exponent 3</skos:definition>
     </owl:NamedIndividual>
 </rdf:RDF>
 
