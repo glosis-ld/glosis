@@ -45,7 +45,7 @@
 
 glosis_lh:GL_Horizon  a        owl:Class ;
         rdfs:label "GL_Horizon"@en ;
-        skos:definition "Specialization for GloSIS of the ISO 28258 Horizon soil feature type, defined as the domain of a soil with a certain vertical extension, which is more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in situ sedimented organic residues of up-growing plants (peat)" ;
+        rdfs:comment "Specialization for GloSIS of the ISO 28258 Horizon soil feature type, defined as the domain of a soil with a certain vertical extension, which is more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in situ sedimented organic residues of up-growing plants (peat)" ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:subClassOf  iso28258:Horizon ;
         rdfs:subClassOf  [ a                owl:Restriction ;
@@ -67,7 +67,7 @@ glosis_lh:GL_Horizon  a        owl:Class ;
 
 glosis_lh:GL_Layer  a        owl:Class ;
         rdfs:label "GL_Layer"@en ;
-        skos:definition "Specialization for GloSIS of the ISO 28258 Layer soil feature type, defined as the domain of a soil with a certain vertical extension developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains" ;
+        rdfs:comment "Specialization for GloSIS of the ISO 28258 Layer soil feature type, defined as the domain of a soil with a certain vertical extension developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains" ;
         skos:definition "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
         rdfs:subClassOf  iso28258:Layer ;
                 rdfs:subClassOf  [ a                owl:Restriction ;
@@ -95,7 +95,7 @@ glosis_cm:FragmentsSize rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sos
 
 glosis_lh:CoatingNature  a owl:Class ;
         rdfs:label "CoatingNature"@en ;
-        skos:definition "Coating nature refers to the composition of coatings, which could include clay, organic matter, carbonates, or iron oxides. This indicates pedogenic processes. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
+        rdfs:comment "Coating nature refers to the composition of coatings, which could include clay, organic matter, carbonates, or iron oxides. This indicates pedogenic processes. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 66"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -104,12 +104,12 @@ glosis_lh:CoatingNature  a owl:Class ;
 
 glosis_lh:coatingNatureProperty a sosa:ObservableProperty ;
         rdfs:label "coatingNatureProperty"@en ;
-        skos:definition "The Coating Nature Property examines the composition of soil coatings, such as organic, clay, or iron-rich coatings. The nature of these coatings can influence nutrient retention, soil color, and water dynamics. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Coating Nature Property examines the composition of soil coatings, such as organic, clay, or iron-rich coatings. The nature of these coatings can influence nutrient retention, soil color, and water dynamics. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 66"@en .
         
 glosis_lh:TextureLabClass  a	owl:Class ;
         rdfs:label "TextureLabClass"@en ;
-        skos:definition "Texture lab class categorizes soil texture based on the proportions of sand, silt, and clay determined through laboratory analysis. It is classified into standard texture classes like sandy loam, silty clay, and others. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "Texture lab class categorizes soil texture based on the proportions of sand, silt, and clay determined through laboratory analysis. It is classified into standard texture classes like sandy loam, silty clay, and others. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -118,12 +118,12 @@ glosis_lh:TextureLabClass  a	owl:Class ;
 
 glosis_lh:textureLabClassProperty a sosa:ObservableProperty ;
         rdfs:label "textureLabClassProperty"@en ;
-        skos:definition "The Texture Lab Class Property defines soil texture using laboratory-determined particle size distributions. This property provides a precise classification of soil as sand, silt, or clay using standard methods. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Texture Lab Class Property defines soil texture using laboratory-determined particle size distributions. This property provides a precise classification of soil as sand, silt, or clay using standard methods. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CementationDegree  a owl:Class ;
         rdfs:label "CementationDegree"@en ;
-        skos:definition "Cementation degree indicates the strength of the cemented material in a soil horizon. It ranges from weakly cemented, which can be broken with hand pressure, to strongly cemented, which resists breaking. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Cementation degree indicates the strength of the cemented material in a soil horizon. It ranges from weakly cemented, which can be broken with hand pressure, to strongly cemented, which resists breaking. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 72"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -132,14 +132,14 @@ glosis_lh:CementationDegree  a owl:Class ;
 
 glosis_lh:cementationDegreeProperty a sosa:ObservableProperty ;
         rdfs:label "cementationDegreeProperty"@en ;
-        skos:definition "The Cementation Degree Property measures how strongly soil particles are bonded by cementing agents. It ranges from weakly cemented (friable) to strongly cemented (hard). This property influences soil strength and its suitability for agricultural and engineering purposes. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Cementation Degree Property measures how strongly soil particles are bonded by cementing agents. It ranges from weakly cemented (friable) to strongly cemented (hard). This property influences soil strength and its suitability for agricultural and engineering purposes. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 72"@en .
         
 glosis_cm:ColourDry rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:CoatingContrast  a owl:Class ;
         rdfs:label "CoatingContrast"@en ;
-        skos:definition "Coating contrast describes the degree of visual distinction between coatings and the surrounding soil matrix. It may range from faint to prominent. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Coating contrast describes the degree of visual distinction between coatings and the surrounding soil matrix. It may range from faint to prominent. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 65"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -148,12 +148,12 @@ glosis_lh:CoatingContrast  a owl:Class ;
 
 glosis_lh:coatingContrastProperty a sosa:ObservableProperty ;
         rdfs:label "coatingContrastProperty"@en;
-        skos:definition "The Coating Contrast Property assesses the visual distinction between coatings on soil particles and the underlying material. High contrast indicates significant differences in composition or color, providing clues about soil processes like illuviation or biological activity. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Coating Contrast Property assesses the visual distinction between coatings on soil particles and the underlying material. High contrast indicates significant differences in composition or color, providing clues about soil processes like illuviation or biological activity. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 65"@en .
         
 glosis_lh:BiologicalAbundance  a owl:Class ;
         rdfs:label "BiologicalAbundance"@en ;
-        skos:definition "This term refers to the quantity of living organisms (bacteria, fungi, protozoa, and earthworms) in the soil. Biological abundance is a key indicator of soil health and nutrient cycling processes. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
+        rdfs:comment "This term refers to the quantity of living organisms (bacteria, fungi, protozoa, and earthworms) in the soil. Biological abundance is a key indicator of soil health and nutrient cycling processes. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 81"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -162,12 +162,12 @@ glosis_lh:BiologicalAbundance  a owl:Class ;
 
 glosis_lh:biologicalAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "biologicalAbundanceProperty"@en;
-        skos:definition "The Biological Abundance Property evaluates the presence and quantity of soil organisms, such as microbes, insects, and earthworms. This property reflects soil health, nutrient cycling, and organic matter decomposition, which are vital for maintaining soil fertility. Source: Lavelle, P., & Spain, A.V. (2001). Soil Ecology." ;
+        rdfs:comment "The Biological Abundance Property evaluates the presence and quantity of soil organisms, such as microbes, insects, and earthworms. This property reflects soil health, nutrient cycling, and organic matter decomposition, which are vital for maintaining soil fertility. Source: Lavelle, P., & Spain, A.V. (2001). Soil Ecology." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 81"@en .
         
 glosis_lh:MottlesPresence  a	owl:Class ;
         rdfs:label "MottlesPresence"@en ;
-        skos:definition "Mottle presence indicates the occurrence of color variations in the soil profile, which can reveal information about soil drainage and waterlogged conditions. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mottle presence indicates the occurrence of color variations in the soil profile, which can reveal information about soil drainage and waterlogged conditions. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -176,7 +176,7 @@ glosis_lh:MottlesPresence  a	owl:Class ;
 
 glosis_lh:mottlesPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "mottlesPresenceProperty"@en ;
-        skos:definition "The Mottles Presence Property refers to the existence of mottles in soil, often signaling periodic water saturation, drainage problems, or fluctuating redox conditions. This property is essential for wetland delineation and soil health assessment. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Mottles Presence Property refers to the existence of mottles in soil, often signaling periodic water saturation, drainage problems, or fluctuating redox conditions. This property is essential for wetland delineation and soil health assessment. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:MottlesPresenceValue a owl:Class ;
@@ -188,7 +188,7 @@ glosis_lh:MottlesPresenceValue a owl:Class ;
 
 glosis_lh:VoidsClassification  a owl:Class ;
         rdfs:label "VoidsClassification"@en ;
-        skos:definition "Voids classification describes the type and arrangement of voids or pores in the soil, which affects water movement, air circulation, and root penetration. It includes macropores, mesopores, and micropores. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Voids classification describes the type and arrangement of voids or pores in the soil, which affects water movement, air circulation, and root penetration. It includes macropores, mesopores, and micropores. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 61"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -197,12 +197,12 @@ glosis_lh:VoidsClassification  a owl:Class ;
 
 glosis_lh:voidsClassificationProperty a sosa:ObservableProperty ;
         rdfs:label "VoidsClassificationProperty"@en;
-        skos:definition "The Voids Classification Property categorizes voids or pores in the soil based on size, shape, and arrangement. These voids are critical for water movement, air circulation, and root penetration. They are classified into macropores (large), mesopores (medium), and micropores (small). Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "The Voids Classification Property categorizes voids or pores in the soil based on size, shape, and arrangement. These voids are critical for water movement, air circulation, and root penetration. They are classified into macropores (large), mesopores (medium), and micropores (small). Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 61"@en .
 
 glosis_lh:MineralConcKind  a owl:Class ;
         rdfs:label "MineralConcKind"@en ;
-        skos:definition "Mineral concentration kind identifies the type of mineral accumulation, such as gypsum, calcite, or hematite, which informs pedogenic processes. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mineral concentration kind identifies the type of mineral accumulation, such as gypsum, calcite, or hematite, which informs pedogenic processes. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 74"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -211,12 +211,12 @@ glosis_lh:MineralConcKind  a owl:Class ;
 
 glosis_lh:mineralConcKindProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcKindProperty"@en;
-        skos:definition "The Mineral Concentration Kind Property identifies the specific type of mineral concentrations found in soil, such as gypsum, calcite, or hematite. This classification aids in understanding soil genesis and chemistry. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Mineral Concentration Kind Property identifies the specific type of mineral concentrations found in soil, such as gypsum, calcite, or hematite. This classification aids in understanding soil genesis and chemistry. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 74"@en .
         
 glosis_lh:BulkDensityMineral  a owl:Class ;
         rdfs:label "BulkDensityMineral"@en ;
-        skos:definition "Bulk density mineral refers to the dry bulk density of mineral soils, focusing on soils with minimal organic matter content. It affects soil strength, aeration, and compaction. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Bulk density mineral refers to the dry bulk density of mineral soils, focusing on soils with minimal organic matter content. It affects soil strength, aeration, and compaction. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 58"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -225,14 +225,14 @@ glosis_lh:BulkDensityMineral  a owl:Class ;
 
 glosis_lh:bulkDensityMineralProperty a sosa:ObservableProperty ;
         rdfs:label "bulkDensityMineralProperty"@en;
-        skos:definition "The Bulk Density of Mineral Soil refers specifically to the density of the mineral portion of the soil, excluding organic matter. It provides insights into the physical state and compaction of mineral-dominated soils, influencing water movement and root growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Bulk Density of Mineral Soil refers specifically to the density of the mineral portion of the soil, excluding organic matter. It provides insights into the physical state and compaction of mineral-dominated soils, influencing water movement and root growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 58"@en .
         
 glosis_cm:ColourMoist rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:PhysioChemical a owl:Class ;
         rdfs:label "PhysioChemical"@en ;
-        skos:definition "Physiochemical refers to the physical and chemical properties of soil, such as pH, texture, structure, nutrient content, and cation exchange capacity. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "Physiochemical refers to the physical and chemical properties of soil, such as pH, texture, structure, nutrient content, and cation exchange capacity. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -248,7 +248,7 @@ glosis_lh:PhysioChemicalValue a owl:Class ;
 
 glosis_lh:CationsSum  a	owl:Class ;
         rdfs:label "CationsSum"@en ;
-        skos:definition "The cations sum represents the total concentration of all exchangeable and soluble cations present in the soil, including calcium, magnesium, potassium, sodium, and hydrogen. Source: Soil Fertility and Nutrient Management (Havlin et al., 2016)." ;
+        rdfs:comment "The cations sum represents the total concentration of all exchangeable and soluble cations present in the soil, including calcium, magnesium, potassium, sodium, and hydrogen. Source: Soil Fertility and Nutrient Management (Havlin et al., 2016)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -257,7 +257,7 @@ glosis_lh:CationsSum  a	owl:Class ;
 
 glosis_lh:cationsSumProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "cationsSumProperty"@en ;
-        skos:definition "The Cations Sum Property calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "The Cations Sum Property calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CationsSumValue a owl:Class ;
@@ -269,7 +269,7 @@ glosis_lh:CationsSumValue a owl:Class ;
 
 glosis_lh:MottlesColour  a	owl:Class ;
         rdfs:label "MottlesColour"@en ;
-        skos:definition "Mottle color refers to the hue, value, and chroma of mottles within the soil, often linked to oxidation-reduction conditions or iron and manganese accumulations. Source: Munsell Soil Color Charts (2020)." ;
+        rdfs:comment "Mottle color refers to the hue, value, and chroma of mottles within the soil, often linked to oxidation-reduction conditions or iron and manganese accumulations. Source: Munsell Soil Color Charts (2020)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -278,12 +278,12 @@ glosis_lh:MottlesColour  a	owl:Class ;
 
 glosis_lh:mottlesColourProperty a sosa:ObservableProperty ;
         rdfs:label "mottlesColourProperty"@en ;
-        skos:definition "The Mottles Colour Property evaluates the color of soil mottles, often indicative of oxidation states of iron or manganese. For example, reddish colors suggest oxidation, while gray colors indicate reduction and poor drainage. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Mottles Colour Property evaluates the color of soil mottles, often indicative of oxidation states of iron or manganese. For example, reddish colors suggest oxidation, while gray colors indicate reduction and poor drainage. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .                      
 
 glosis_lh:DryConsistency a	owl:Class ;
         rdfs:label "DryConsistency"@en ;
-        skos:definition "Dry consistency measures the strength and behavior of soil when dry, such as its tendency to crumble or remain intact. It is vital for evaluating soil engineering properties. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Dry consistency measures the strength and behavior of soil when dry, such as its tendency to crumble or remain intact. It is vital for evaluating soil engineering properties. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -292,12 +292,12 @@ glosis_lh:DryConsistency a	owl:Class ;
 
 glosis_lh:dryConsistencyProperty a sosa:ObservableProperty ;
         rdfs:label "dryConsistencyProperty"@en ;
-        skos:definition "The Dry Consistency Property is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Dry Consistency Property is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CoatingAbundance  a owl:Class ;
         rdfs:label "CoatingAbundance"@en ;
-        skos:definition "Coating abundance refers to the quantity or percentage of coatings (e.g., clay films, oxide layers) on soil particles or aggregates. Coatings indicate soil movement and development processes. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Coating abundance refers to the quantity or percentage of coatings (e.g., clay films, oxide layers) on soil particles or aggregates. Coatings indicate soil movement and development processes. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 64"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -306,12 +306,12 @@ glosis_lh:CoatingAbundance  a owl:Class ;
 
 glosis_lh:coatingAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "coatingAbundanceProperty"@en;
-        skos:definition "The Coating Abundance Property evaluates the quantity of coatings on soil particles, such as organic matter, clay, or iron oxides. Coatings influence soil color, nutrient availability, and water movement. The abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Coating Abundance Property evaluates the quantity of coatings on soil particles, such as organic matter, clay, or iron oxides. Coatings influence soil color, nutrient availability, and water movement. The abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 64"@en .
 
 glosis_lh:ConsistenceDry  a owl:Class ;
         rdfs:label "ConsistenceDry"@en ;
-        skos:definition "Dry consistence describes the resistance of dry soil to crushing or deformation. Categories include loose, soft, hard, and extremely hard. It provides information on soil strength when dry. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Dry consistence describes the resistance of dry soil to crushing or deformation. Categories include loose, soft, hard, and extremely hard. It provides information on soil strength when dry. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 53"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -320,14 +320,14 @@ glosis_lh:ConsistenceDry  a owl:Class ;
 
 glosis_lh:consistenceDryProperty a sosa:ObservableProperty ;
         rdfs:label "consistenceDryProperty"@en ;
-        skos:definition "The Consistence Dry Property evaluates the soil's behavior when dry, including its resistance to deformation or crumbling. It ranges from loose to hard and provides information about soil compaction and management practices. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Consistence Dry Property evaluates the soil's behavior when dry, including its resistance to deformation or crumbling. It ranges from loose to hard and provides information about soil compaction and management practices. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 53"@en .
         
 glosis_cm:InfiltrationRateNumeric rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:GypsumForms a owl:Class ;
         rdfs:label "GypsumForms"@en ;
-        skos:definition "Gypsum forms describe the physical state in which gypsum occurs in the soil, such as crystals, nodules, veins, or powdery accumulations. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Gypsum forms describe the physical state in which gypsum occurs in the soil, such as crystals, nodules, veins, or powdery accumulations. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 41"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -336,12 +336,12 @@ glosis_lh:GypsumForms a owl:Class ;
 
 glosis_lh:gypsumFormsProperty a sosa:ObservableProperty ;
         rdfs:label "gypsumFormsProperty"@en ;
-        skos:definition "The Gypsum Forms Property describes the morphology of gypsum within the soil, such as crystals, veins, or nodules. The form indicates the processes of soil formation and water movement in gypsum-rich soils. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Gypsum Forms Property describes the morphology of gypsum within the soil, such as crystals, veins, or nodules. The form indicates the processes of soil formation and water movement in gypsum-rich soils. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 41"@en .
         
 glosis_lh:MineralConcNature a owl:Class ;
         rdfs:label "MineralConcNature"@en ;
-        skos:definition "Mineral concentration nature describes the chemical composition and formation processes of specific mineral accumulations in the soil profile. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
+        rdfs:comment "Mineral concentration nature describes the chemical composition and formation processes of specific mineral accumulations in the soil profile. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 77"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -350,14 +350,14 @@ glosis_lh:MineralConcNature a owl:Class ;
 
 glosis_lh:mineralConcNatureProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcNatureProperty"@en;
-        skos:definition "The Mineral Concentration Nature Property examines the origin and composition of concentrated minerals in soil. It provides clues about weathering, leaching, and other pedogenic processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Mineral Concentration Nature Property examines the origin and composition of concentrated minerals in soil. It provides clues about weathering, leaching, and other pedogenic processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 77"@en .
 
 glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
         
 glosis_lh:ParticleSizeFractionsSum  a	owl:Class ;
         rdfs:label "ParticleSizeFractionsSum"@en ;
-        skos:definition "The particle size fractions sum refers to the total proportions of sand, silt, and clay in the soil, which determine soil texture. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The particle size fractions sum refers to the total proportions of sand, silt, and clay in the soil, which determine soil texture. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -366,7 +366,7 @@ glosis_lh:ParticleSizeFractionsSum  a	owl:Class ;
 
 glosis_lh:particleSizeFractionsSumProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "ParticleSizeFractionsSumProperty"@en ;
-        skos:definition "The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:ParticleSizeFractionsSumValue a owl:Class ;
@@ -378,7 +378,7 @@ glosis_lh:ParticleSizeFractionsSumValue a owl:Class ;
 
 glosis_lh:BoundaryDistinctness a owl:Class ;
         rdfs:label "BoundaryDistinctness"@en ;
-        skos:definition "Boundary distinctness refers to the clarity or sharpness of the boundary between two soil horizons. It is classified based on the thickness of the transitional zone and helps determine soil formation processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Boundary distinctness refers to the clarity or sharpness of the boundary between two soil horizons. It is classified based on the thickness of the transitional zone and helps determine soil formation processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 24.1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -387,12 +387,12 @@ glosis_lh:BoundaryDistinctness a owl:Class ;
 
 glosis_lh:boundaryDistinctnessProperty a sosa:ObservableProperty ;
         rdfs:label "boundaryDistinctnessProperty"@en ;
-        skos:definition "The Boundary Distinctness Property describes the sharpness of transitions between soil horizons. Boundaries can range from abrupt (clear demarcation) to diffuse (gradual blending), providing insights into soil formation processes and profile development. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Boundary Distinctness Property describes the sharpness of transitions between soil horizons. Boundaries can range from abrupt (clear demarcation) to diffuse (gradual blending), providing insights into soil formation processes and profile development. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 24.1"@en .
 
 glosis_lh:RootsPresence  a	owl:Class ;
         rdfs:label "RootsPresence"@en ;
-        skos:definition "Roots presence indicates the occurrence and visibility of roots within soil horizons, reflecting root growth, soil structure, and plant activity. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Roots presence indicates the occurrence and visibility of roots within soil horizons, reflecting root growth, soil structure, and plant activity. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -401,7 +401,7 @@ glosis_lh:RootsPresence  a	owl:Class ;
 
 glosis_lh:rootsPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "RootsPresenceProperty"@en ;
-        skos:definition "The Roots Presence Property identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Roots Presence Property identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:RootsPresenceValue a owl:Class ;
@@ -413,7 +413,7 @@ glosis_lh:RootsPresenceValue a owl:Class ;
 
 glosis_lh:CementationFabric a owl:Class ;
         rdfs:label "CementationFabric"@en ;
-        skos:definition "Cementation fabric describes the internal arrangement of cemented materials, including the texture, layering, and structural patterns formed by cementing agents like carbonates or oxides. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
+        rdfs:comment "Cementation fabric describes the internal arrangement of cemented materials, including the texture, layering, and structural patterns formed by cementing agents like carbonates or oxides. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 70"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -422,12 +422,12 @@ glosis_lh:CementationFabric a owl:Class ;
 
 glosis_lh:cementationFabricProperty a sosa:ObservableProperty ;
         rdfs:label "cementationFabricProperty"@en ;
-        skos:definition "The Cementation Fabric Property examines the texture, structure, and arrangement of cementing materials within the soil. It provides insights into soil formation processes and the mechanical stability of the soil matrix. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Cementation Fabric Property examines the texture, structure, and arrangement of cementing materials within the soil. It provides insights into soil formation processes and the mechanical stability of the soil matrix. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 70"@en .
         
 glosis_lh:MottlesSize a owl:Class ;
         rdfs:label "MottlesSize"@en ;
-        skos:definition "Mottle size refers to the dimensions of individual mottles within the soil, categorized into fine, medium, and coarse. This helps characterize soil hydrology. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mottle size refers to the dimensions of individual mottles within the soil, categorized into fine, medium, and coarse. This helps characterize soil hydrology. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 33"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -436,12 +436,12 @@ glosis_lh:MottlesSize a owl:Class ;
 
 glosis_lh:mottlesSizeProperty a sosa:ObservableProperty ;
         rdfs:label "mottlesSizeProperty"@en ;
-        skos:definition "The Mottles Size Property describes the dimensions of soil mottles, typically classified as fine, medium, or coarse. The size reflects the intensity and scale of soil processes such as oxidation and reduction. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Mottles Size Property describes the dimensions of soil mottles, typically classified as fine, medium, or coarse. The size reflects the intensity and scale of soil processes such as oxidation and reduction. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 33"@en .
         
 glosis_lh:PorosityClass a owl:Class ;
         rdfs:label "PorosityClass"@en ;
-        skos:definition "Porosity class categorizes soils based on their pore size distribution and total porosity. It is used to evaluate soil aeration and permeability properties. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Porosity class categorizes soils based on their pore size distribution and total porosity. It is used to evaluate soil aeration and permeability properties. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 60"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -450,12 +450,12 @@ glosis_lh:PorosityClass a owl:Class ;
 
 glosis_lh:porosityClassProperty a sosa:ObservableProperty ;
         rdfs:label "porosityClassProperty"@en ;
-        skos:definition "The Porosity Class Property classifies soil by the proportion of pore spaces, typically expressed as a percentage. Classes include high, medium, or low porosity, influencing water and air movement in the soil. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "The Porosity Class Property classifies soil by the proportion of pore spaces, typically expressed as a percentage. Classes include high, medium, or low porosity, influencing water and air movement in the soil. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 60"@en .
 
 glosis_lh:Silt a owl:Class ;
         rdfs:label "Silt"@en ;
-        skos:definition "Silt particles are intermediate in size between sand and clay (0.002 to 0.05 mm). Soils high in silt are fertile, smooth, and moderately water-retentive. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Silt particles are intermediate in size between sand and clay (0.002 to 0.05 mm). Soils high in silt are fertile, smooth, and moderately water-retentive. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -471,7 +471,7 @@ glosis_lh:SiltValue a owl:Class ;
 
 glosis_lh:MottlesAbundance a owl:Class ;
         rdfs:label "MottlesAbundance"@en;
-        skos:definition "Mottle abundance refers to the quantity of color variations or mottling in a soil horizon, often indicating fluctuating water conditions or redox processes. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mottle abundance refers to the quantity of color variations or mottling in a soil horizon, often indicating fluctuating water conditions or redox processes. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 32"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -480,12 +480,12 @@ glosis_lh:MottlesAbundance a owl:Class ;
 
 glosis_lh:mottlesAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "mottlesAbundanceProperty"@en;
-        skos:definition "The Mottles Abundance Property describes the frequency of mottling (spots of contrasting color) in soil horizons. Mottling indicates variations in soil aeration, drainage, or water saturation. Abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Mottles Abundance Property describes the frequency of mottling (spots of contrasting color) in soil horizons. Mottling indicates variations in soil aeration, drainage, or water saturation. Abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 32"@en .
         
 glosis_lh:VoidsDiameter a owl:Class ;
         rdfs:label "VoidsDiameter"@en ;
-        skos:definition "Voids diameter measures the size of the soil pores or spaces, which directly influences soil aeration, infiltration, and water retention. Larger diameters correspond to macropores, while smaller ones are micropores. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "Voids diameter measures the size of the soil pores or spaces, which directly influences soil aeration, infiltration, and water retention. Larger diameters correspond to macropores, while smaller ones are micropores. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 62"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -494,12 +494,12 @@ glosis_lh:VoidsDiameter a owl:Class ;
 
 glosis_lh:voidsDiameterProperty a sosa:ObservableProperty ;
         rdfs:label "voidsDiameterProperty"@en ;
-        skos:definition "The Voids Diameter Property refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "The Voids Diameter Property refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 62"@en .
         
 glosis_lh:StructureGrade a owl:Class ;
         rdfs:label "StructureGrade"@en;
-        skos:definition "Structure grade describes the degree of soil aggregation and the strength of soil structure. Grades range from structureless to well-developed structural units. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Structure grade describes the degree of soil aggregation and the strength of soil structure. Grades range from structureless to well-developed structural units. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 47"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -508,14 +508,14 @@ glosis_lh:StructureGrade a owl:Class ;
 
 glosis_lh:structureGradeProperty a sosa:ObservableProperty ;
         rdfs:label "structureGradeProperty"@en;
-        skos:definition "The Structure Grade Property assesses the development and stability of soil aggregates, classified as weak, moderate, or strong. It reflects soil tilth, aeration, and resistance to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Structure Grade Property assesses the development and stability of soil aggregates, classified as weak, moderate, or strong. It reflects soil tilth, aeration, and resistance to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 47"@en .
         
 glosis_cm:FragmentCover rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:BiologicalFeatures  a	owl:Class ;
         rdfs:label "BiologicalFeatures"@en ;
-        skos:definition "Biological features of soil include microbial communities, faunal activity, and organic residues that influence decomposition, nutrient cycling, and soil structure. These features contribute to soil productivity and ecosystem functioning. Source: Doran, J.W., & Parkin, T.B. (1994). Defining and Assessing Soil Quality." ;
+        rdfs:comment "Biological features of soil include microbial communities, faunal activity, and organic residues that influence decomposition, nutrient cycling, and soil structure. These features contribute to soil productivity and ecosystem functioning. Source: Doran, J.W., & Parkin, T.B. (1994). Defining and Assessing Soil Quality." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 82"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -524,14 +524,14 @@ glosis_lh:BiologicalFeatures  a	owl:Class ;
 
 glosis_lh:biologicalFeaturesProperty a sosa:ObservableProperty ;
         rdfs:label "biologicalFeaturesProperty"@en ;
-        skos:definition "The Biological Features Property examines qualitative aspects of soil biological activity, including the types of organisms present, their diversity, and their roles in soil ecosystems. It encompasses processes like nitrogen fixation, organic matter decomposition, and bioturbation. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "The Biological Features Property examines qualitative aspects of soil biological activity, including the types of organisms present, their diversity, and their roles in soil ecosystems. It encompasses processes like nitrogen fixation, organic matter decomposition, and bioturbation. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 82"@en .
         
 glosis_cm:Texture rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:MineralContent a owl:Class ;
         rdfs:label "MineralContent"@en ;
-        skos:definition "Mineral content measures the total proportion of minerals in the soil, including both primary and secondary minerals, influencing soil fertility and texture. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Mineral content measures the total proportion of minerals in the soil, including both primary and secondary minerals, influencing soil fertility and texture. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -540,7 +540,7 @@ glosis_lh:MineralContent a owl:Class ;
 
 glosis_lh:mineralContentProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "mineralContentProperty"@en ;
-        skos:definition "The Mineral Content Property evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "The Mineral Content Property evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:MineralContentValue a owl:Class ;
@@ -552,7 +552,7 @@ glosis_lh:MineralContentValue a owl:Class ;
 
 glosis_lh:PoresSize  a	owl:Class ;
         rdfs:label "PoresSize"@en ;
-        skos:definition "Pore size refers to the dimensions of void spaces within the soil matrix. It affects water infiltration, retention, and air movement. Pores are classified as macropores, mesopores, and micropores based on size. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "Pore size refers to the dimensions of void spaces within the soil matrix. It affects water infiltration, retention, and air movement. Pores are classified as macropores, mesopores, and micropores based on size. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 62"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -561,14 +561,14 @@ glosis_lh:PoresSize  a	owl:Class ;
 
 glosis_lh:poresSizeProperty a sosa:ObservableProperty ;
         rdfs:label "poresSizeProperty"@en ;
-        skos:definition "The Pores Size Property categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Pores Size Property categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 62"@en .
         
 glosis_cm:RockShape rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:StructureSize a owl:Class ;
         rdfs:label "StructureSize"@en ;
-        skos:definition "Structure size refers to the dimensions of soil structural units (e.g., granular, blocky, platy). It affects soil porosity, water movement, and root growth. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Structure size refers to the dimensions of soil structural units (e.g., granular, blocky, platy). It affects soil porosity, water movement, and root growth. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 50"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -577,12 +577,12 @@ glosis_lh:StructureSize a owl:Class ;
 
 glosis_lh:structureSizeProperty a sosa:ObservableProperty ;
         rdfs:label "structureSizeProperty"@en ;
-        skos:definition "The Structure Size Property describes the dimensions of soil aggregates or structural units, such as granular, blocky, or platy. Structure size affects root penetration, water infiltration, and soil stability. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Structure Size Property describes the dimensions of soil aggregates or structural units, such as granular, blocky, or platy. Structure size affects root penetration, water infiltration, and soil stability. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 50"@en .
         
 glosis_lh:MineralConcShape a owl:Class ;
         rdfs:label "MineralConcShape"@en ;
-        skos:definition "Mineral concentration shape describes the physical form or morphology of mineral accumulations, such as nodules, coatings, or concretions. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mineral concentration shape describes the physical form or morphology of mineral accumulations, such as nodules, coatings, or concretions. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 75,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -591,12 +591,12 @@ glosis_lh:MineralConcShape a owl:Class ;
 
 glosis_lh:mineralConcShapeProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcShapeProperty"@en ;
-        skos:definition "The Mineral Concentration Shape Property describes the physical shape of mineral accumulations, such as rounded, angular, or irregular. These shapes help infer soil formation processes and transport history. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Mineral Concentration Shape Property describes the physical shape of mineral accumulations, such as rounded, angular, or irregular. These shapes help infer soil formation processes and transport history. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 75,2"@en .
         
 glosis_lh:WaterRetention  a	owl:Class ;
         rdfs:label "WaterRetention"@en ;
-        skos:definition "Water retention refers to the soil’s ability to hold water against gravity. It is influenced by soil texture, structure, and organic matter content, and is critical for plant growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Water retention refers to the soil’s ability to hold water against gravity. It is influenced by soil texture, structure, and organic matter content, and is critical for plant growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -612,7 +612,7 @@ glosis_lh:WaterRetentionValue a owl:Class ;
 
 glosis_lh:Sand  a owl:Class ;
         rdfs:label "Sand"@en ;
-        skos:definition "Sand is the coarsest soil particle, ranging in size from 0.05 to 2.0 mm. Sandy soils have high permeability but low water and nutrient retention. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Sand is the coarsest soil particle, ranging in size from 0.05 to 2.0 mm. Sandy soils have high permeability but low water and nutrient retention. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -630,13 +630,13 @@ glosis_cm:OrganicMatterClass rdfs:subClassOf [ a owl:Restriction ; owl:onPropert
 
 glosis_lh:clayMineralogy a owl:DatatypeProperty ;
         rdfs:label "clayMineralogy"@en ;
-        skos:definition "Clay Mineralogy refers to the composition and types of clay minerals present in the soil, which are critical for understanding soil behavior, fertility, and physical properties. Clay minerals, such as kaolinite, illite, and montmorillonite, influence water retention, cation exchange capacity (CEC), and soil structure. These minerals have distinct characteristics based on their chemical composition and crystalline structure, which affect soil stability, nutrient availability, and its ability to retain moisture. Analyzing the clay mineralogy of soil helps in predicting soil performance in agriculture, engineering, and environmental management. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Clay Mineralogy refers to the composition and types of clay minerals present in the soil, which are critical for understanding soil behavior, fertility, and physical properties. Clay minerals, such as kaolinite, illite, and montmorillonite, influence water retention, cation exchange capacity (CEC), and soil structure. These minerals have distinct characteristics based on their chemical composition and crystalline structure, which affect soil stability, nutrient availability, and its ability to retain moisture. Analyzing the clay mineralogy of soil helps in predicting soil performance in agriculture, engineering, and environmental management. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:range   xsd:string .
 
 glosis_lh:GypsumWeight  a owl:Class ;
         rdfs:label "GypsumWeight"@en ;
-        skos:definition "Gypsum weight indicates the mass of gypsum per unit weight of soil. It is relevant for soil quality evaluation and agronomic management practices. Source: Rhoades, J.D. (1996). Methods of Soil Analysis." ;
+        rdfs:comment "Gypsum weight indicates the mass of gypsum per unit weight of soil. It is relevant for soil quality evaluation and agronomic management practices. Source: Rhoades, J.D. (1996). Methods of Soil Analysis." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -645,7 +645,7 @@ glosis_lh:GypsumWeight  a owl:Class ;
 
 glosis_lh:gypsumWeightProperty a sosa:ObservableProperty , qudt:Quantitykind ;
         rdfs:label "gypsumWeightProperty"@en ;
-        skos:definition "The Gypsum Weight Property measures the mass of gypsum in the soil profile. This value helps evaluate the potential for soil salinity issues and influences decisions for agricultural or land reclamation practices. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Gypsum Weight Property measures the mass of gypsum in the soil profile. This value helps evaluate the potential for soil salinity issues and influences decisions for agricultural or land reclamation practices. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:GypsumWeightValue a owl:Class ;
@@ -657,7 +657,7 @@ glosis_lh:GypsumWeightValue a owl:Class ;
 
 glosis_lh:PeatDrainage  a owl:Class ;
         rdfs:label "PeatDrainage"@en ;
-        skos:definition "Peat drainage describes the extent of water movement or drainage within peat soils. Poor drainage leads to anaerobic conditions and slow decomposition. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Peat drainage describes the extent of water movement or drainage within peat soils. Poor drainage leads to anaerobic conditions and slow decomposition. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -666,14 +666,14 @@ glosis_lh:PeatDrainage  a owl:Class ;
 
 glosis_lh:peatDrainageProperty a sosa:ObservableProperty ;
         rdfs:label "peatDrainageProperty"@en ;
-        skos:definition "The Peat Drainage Property assesses the water removal capacity in peat soils, essential for determining their suitability for agriculture, conservation, or other uses. Poorly drained peat often accumulates organic material due to low decomposition rates. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Peat Drainage Property assesses the water removal capacity in peat soils, essential for determining their suitability for agriculture, conservation, or other uses. Poorly drained peat often accumulates organic material due to low decomposition rates. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,1"@en .
         
 glosis_cm:BleachedSand rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:SandyTexture  a owl:Class ;
         rdfs:label "SandyTexture"@en ;
-        skos:definition "Sandy texture indicates a soil dominated by sand-sized particles. Sandy soils are loose, well-drained, and low in nutrient-holding capacity. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Sandy texture indicates a soil dominated by sand-sized particles. Sandy soils are loose, well-drained, and low in nutrient-holding capacity. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: figure 4,3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -682,12 +682,12 @@ glosis_lh:SandyTexture  a owl:Class ;
 
 glosis_lh:sandyTextureProperty a sosa:ObservableProperty ;
         rdfs:label "sandyTextureProperty"@en;
-        skos:definition "The Sandy Texture Property refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "The Sandy Texture Property refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: figure 4,3"@en .
 
 glosis_lh:SolubleCationsTotal  a owl:Class ;
         rdfs:label "SolubleCationsTotal"@en ;
-        skos:definition "Soluble cations total measures the sum of positively charged ions (e.g., sodium, calcium, magnesium, potassium) dissolved in soil solution. These affect soil salinity and nutrient availability. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
+        rdfs:comment "Soluble cations total measures the sum of positively charged ions (e.g., sodium, calcium, magnesium, potassium) dissolved in soil solution. These affect soil salinity and nutrient availability. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -696,7 +696,7 @@ glosis_lh:SolubleCationsTotal  a owl:Class ;
 
 glosis_lh:solubleCationsTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "solubleCationsTotalProperty"@en ;
-        skos:definition "The Soluble Cations Total Property evaluates the sum of cations (e.g., sodium, potassium, calcium, magnesium) in soil solution. It is an indicator of soil salinity, fertility, and chemical balance. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Soluble Cations Total Property evaluates the sum of cations (e.g., sodium, potassium, calcium, magnesium) in soil solution. It is an indicator of soil salinity, fertility, and chemical balance. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SolubleCationsTotalValue a owl:Class ;
@@ -708,7 +708,7 @@ glosis_lh:SolubleCationsTotalValue a owl:Class ;
 
 glosis_lh:CementationNature a	owl:Class ;
         rdfs:label "CementationNature"@en ;
-        skos:definition "Cementation nature refers to the composition and type of cementing agents present in the soil, such as calcium carbonate, silica, or iron oxides, and their impact on soil properties. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Cementation nature refers to the composition and type of cementing agents present in the soil, such as calcium carbonate, silica, or iron oxides, and their impact on soil properties. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 71"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -717,12 +717,12 @@ glosis_lh:CementationNature a	owl:Class ;
 
 glosis_lh:cementationNatureProperty a sosa:ObservableProperty ;
         rdfs:label "cementationNatureProperty"@en ;
-        skos:definition "The Cementation Nature Property identifies the specific type of material responsible for binding soil particles, such as carbonates, silica, or iron oxides. Understanding this helps in soil classification and predicting behavior under varying environmental conditions. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Cementation Nature Property identifies the specific type of material responsible for binding soil particles, such as carbonates, silica, or iron oxides. Understanding this helps in soil classification and predicting behavior under varying environmental conditions. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 71"@en .
 
 glosis_lh:Salt  a owl:Class ;
         rdfs:label "Salt"@en ;
-        skos:definition "Salt in soil refers to the presence of soluble salts, such as sodium, calcium, and magnesium chlorides and sulfates. High salt content can lead to salinity issues. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
+        rdfs:comment "Salt in soil refers to the presence of soluble salts, such as sodium, calcium, and magnesium chlorides and sulfates. High salt content can lead to salinity issues. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -731,7 +731,7 @@ glosis_lh:Salt  a owl:Class ;
 
 glosis_lh:saltProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "saltProperty"@en ;
-        skos:definition "The Salt Property encompasses all forms of salts present in soil, including sodium chloride, calcium sulfate, and magnesium sulfate. It influences soil chemistry, structure, and plant tolerance to salinity. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Salt Property encompasses all forms of salts present in soil, including sodium chloride, calcium sulfate, and magnesium sulfate. It influences soil chemistry, structure, and plant tolerance to salinity. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SaltValue a owl:Class ;
@@ -743,7 +743,7 @@ glosis_lh:SaltValue a owl:Class ;
 
 glosis_lh:SolubleAnionsTotal  a	owl:Class ;
         rdfs:label "SolubleAnionsTotal"@en ;
-        skos:definition "Soluble anions total refers to the total concentration of negatively charged ions, such as chloride, sulfate, and bicarbonate, in the soil solution. These influence soil salinity and alkalinity. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Soluble anions total refers to the total concentration of negatively charged ions, such as chloride, sulfate, and bicarbonate, in the soil solution. These influence soil salinity and alkalinity. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -752,7 +752,7 @@ glosis_lh:SolubleAnionsTotal  a	owl:Class ;
 
 glosis_lh:solubleAnionsTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "solubleAnionsTotalProperty"@en ;
-        skos:definition "The Soluble Anions Total Property measures the concentration of anions (e.g., chloride, sulfate, nitrate) in soil solution. High levels may indicate salinity, nutrient availability, or contamination. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "The Soluble Anions Total Property measures the concentration of anions (e.g., chloride, sulfate, nitrate) in soil solution. High levels may indicate salinity, nutrient availability, or contamination. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SolubleAnionsTotalValue a owl:Class ;
@@ -766,7 +766,7 @@ glosis_cm:CracksDepth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:
 
 glosis_lh:BulkDensityPeat a owl:Class ;
         rdfs:label "BulkDensityPeat"@en ;
-        skos:definition "This is the bulk density measurement of peat soils, which are rich in organic matter. Peat soils have very low bulk density due to their high porosity and organic composition. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
+        rdfs:comment "This is the bulk density measurement of peat soils, which are rich in organic matter. Peat soils have very low bulk density due to their high porosity and organic composition. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -775,12 +775,12 @@ glosis_lh:BulkDensityPeat a owl:Class ;
 
 glosis_lh:bulkDensityPeatProperty a sosa:ObservableProperty ;
         rdfs:label "bulkDensityPeatProperty"@en ;
-        skos:definition "The Bulk Density of Peat measures the mass of dry organic soil (peat) per unit volume. Peat soils typically have low bulk density due to their high organic matter content and porosity, which significantly affects their water retention and drainage characteristics. Source: Rydin, H., & Jeglum, J. (2006). The Biology of Peatlands." ;
+        rdfs:comment "The Bulk Density of Peat measures the mass of dry organic soil (peat) per unit volume. Peat soils typically have low bulk density due to their high organic matter content and porosity, which significantly affects their water retention and drainage characteristics. Source: Rydin, H., & Jeglum, J. (2006). The Biology of Peatlands." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,3"@en .
 
 glosis_lh:MineralFragments a owl:Class ;
         rdfs:label "MineralFragments"@en ;
-        skos:definition "Mineral fragments are particles of rock or minerals found in the soil matrix, often larger than the clay or silt fraction. Their composition influences soil texture and structure. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mineral fragments are particles of rock or minerals found in the soil matrix, often larger than the clay or silt fraction. Their composition influences soil texture and structure. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 30"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -789,12 +789,12 @@ glosis_lh:MineralFragments a owl:Class ;
 
 glosis_lh:mineralFragmentsProperty a sosa:ObservableProperty ;
         rdfs:label "mineralFragmentsProperty"@en ;
-        skos:definition "The Mineral Fragments Property refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Mineral Fragments Property refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 30"@en .
 
 glosis_lh:MottlesBoundaryClassification a owl:Class ;
         rdfs:label "MottlesBoundaryClassification"@en ;
-        skos:definition "Mottle boundary classification describes the sharpness or gradation of boundaries between mottles and the surrounding soil matrix, reflecting pedogenic processes. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mottle boundary classification describes the sharpness or gradation of boundaries between mottles and the surrounding soil matrix, reflecting pedogenic processes. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 35"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -803,12 +803,12 @@ glosis_lh:MottlesBoundaryClassification a owl:Class ;
 
 glosis_lh:mottlesBoundaryClassificationProperty a sosa:ObservableProperty ;
         rdfs:label "mottlesBoundaryClassificationProperty"@en ;
-        skos:definition "The Mottles Boundary Classification Property assesses the sharpness and distinctness of boundaries between mottled and non-mottled areas within the soil. It provides clues about soil processes such as oxidation-reduction reactions. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Mottles Boundary Classification Property assesses the sharpness and distinctness of boundaries between mottled and non-mottled areas within the soil. It provides clues about soil processes such as oxidation-reduction reactions. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 35"@en .
 
 glosis_lh:CationExchangeCapacity  a owl:Class ;
         rdfs:label "CationExchangeCapacity"@en ;
-        skos:definition "CEC is the soil’s ability to hold and exchange cations (positively charged ions) such as calcium, magnesium, potassium, and sodium. It is a critical property for soil fertility and nutrient retention. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "CEC is the soil’s ability to hold and exchange cations (positively charged ions) such as calcium, magnesium, potassium, and sodium. It is a critical property for soil fertility and nutrient retention. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -817,7 +817,7 @@ glosis_lh:CationExchangeCapacity  a owl:Class ;
 
 glosis_lh:cationExchangeCapacityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "cationExchangeCapacityProperty"@en ;
-        skos:definition "The Cation Exchange Capacity (CEC) measures the soil's total capacity to hold and exchange positively charged ions (cations). It is influenced by clay and organic matter content and is a critical indicator of soil fertility and nutrient retention. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Cation Exchange Capacity (CEC) measures the soil's total capacity to hold and exchange positively charged ions (cations). It is influenced by clay and organic matter content and is a critical indicator of soil fertility and nutrient retention. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CationExchangeCapacityValue a owl:Class ;
@@ -829,7 +829,7 @@ glosis_lh:CationExchangeCapacityValue a owl:Class ;
 
 glosis_lh:PeatDecompostion a owl:Class ;
         rdfs:label "PeatDecompostion"@en ;
-        skos:definition "Peat decomposition assesses the degree to which organic material in peat soils has broken down. It is described in terms of fibric, hemic, or sapric decomposition stages. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Peat decomposition assesses the degree to which organic material in peat soils has broken down. It is described in terms of fibric, hemic, or sapric decomposition stages. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 31"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -838,12 +838,12 @@ glosis_lh:PeatDecompostion a owl:Class ;
 
 glosis_lh:peatDecompostionProperty a sosa:ObservableProperty ;
         rdfs:label "peatDecompostionProperty"@en ;
-        skos:definition "The Peat Decomposition Property evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Peat Decomposition Property evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 31"@en .
 
 glosis_lh:PeatVolume a	owl:Class ;
         rdfs:label "PeatVolume"@en ;
-        skos:definition "Peat volume measures the proportion of organic material in a soil profile relative to mineral soil, indicating the extent of peat accumulation. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Peat volume measures the proportion of organic material in a soil profile relative to mineral soil, indicating the extent of peat accumulation. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -852,12 +852,12 @@ glosis_lh:PeatVolume a	owl:Class ;
 
 glosis_lh:peatVolumeProperty a sosa:ObservableProperty ;
         rdfs:label "peatVolumeProperty"@en ;
-        skos:definition "The Peat Volume Property quantifies the proportion of peat material in a given soil volume. It is critical for land use planning, carbon sequestration assessments, and wetland management. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Peat Volume Property quantifies the proportion of peat material in a given soil volume. It is critical for land use planning, carbon sequestration assessments, and wetland management. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,2"@en .
 
 glosis_lh:BoundaryTopography a	owl:Class ;
         rdfs:label "BoundaryTopography"@en ;
-        skos:definition "Boundary topography describes the shape or contour of the boundary between soil horizons. It can be smooth, wavy, irregular, or broken, indicating the processes of soil development and deposition. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Boundary topography describes the shape or contour of the boundary between soil horizons. It can be smooth, wavy, irregular, or broken, indicating the processes of soil development and deposition. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 24,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -866,12 +866,12 @@ glosis_lh:BoundaryTopography a	owl:Class ;
 
 glosis_lh:boundaryTopographyProperty a sosa:ObservableProperty ;
         rdfs:label "boundaryTopographyProperty"@en ;
-        skos:definition "The Boundary Topography Property characterizes the shape of soil horizon boundaries, which may be smooth, wavy, irregular, or broken. It reflects processes like erosion, deposition, or biological activity that influence horizon development. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Boundary Topography Property characterizes the shape of soil horizon boundaries, which may be smooth, wavy, irregular, or broken. It reflects processes like erosion, deposition, or biological activity that influence horizon development. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 24,2"@en .
 
 glosis_lh:CarbonatesContent a owl:Class ;
         rdfs:label "CarbonatesContent"@en ;
-        skos:definition "Carbonates content refers to the amount of carbonates (e.g., calcium carbonate, magnesium carbonate) in the soil, which influences soil pH, nutrient availability, and buffering capacity. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Carbonates content refers to the amount of carbonates (e.g., calcium carbonate, magnesium carbonate) in the soil, which influences soil pH, nutrient availability, and buffering capacity. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 38"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -880,12 +880,12 @@ glosis_lh:CarbonatesContent a owl:Class ;
 
 glosis_lh:carbonatesContentProperty a sosa:ObservableProperty ;
         rdfs:label "carbonatesContentProperty"@en ;
-        skos:definition "The Carbonates Content Property quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Carbonates Content Property quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 38"@en .
 
 glosis_lh:MineralConcColour a owl:Class ;
         rdfs:label "MineralConcColour"@en ;
-        skos:definition "Mineral concentration color describes the color of mineral accumulations in soil horizons. It is often related to iron oxides, carbonates, or other mineral constituents. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mineral concentration color describes the color of mineral accumulations in soil horizons. It is often related to iron oxides, carbonates, or other mineral constituents. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 78"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -894,12 +894,12 @@ glosis_lh:MineralConcColour a owl:Class ;
 
 glosis_lh:mineralConcColourProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcColourProperty"@en ;
-        skos:definition "The Mineral Concentration Colour Property describes the color of concentrated mineral deposits in the soil, such as iron oxides (red) or manganese nodules (black). It helps identify soil processes like oxidation or leaching. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Mineral Concentration Colour Property describes the color of concentrated mineral deposits in the soil, such as iron oxides (red) or manganese nodules (black). It helps identify soil processes like oxidation or leaching. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 78"@en .
 
 glosis_lh:CationExchangeCapacityEffective  a owl:Class ;
         rdfs:label "CationExchangeCapacityEffective"@en ;
-        skos:definition "Effective CEC measures the soil’s exchange capacity under current pH conditions. It includes exchangeable bases and exchangeable acidity. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Effective CEC measures the soil’s exchange capacity under current pH conditions. It includes exchangeable bases and exchangeable acidity. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -908,7 +908,7 @@ glosis_lh:CationExchangeCapacityEffective  a owl:Class ;
 
 glosis_lh:cationExchangeCapacityEffectiveProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "cationExchangeCapacityEffectiveProperty"@en ;
-        skos:definition "The Effective Cation Exchange Capacity (ECEC) measures the ability of soil to hold and exchange cations at a given pH, often near field conditions. It provides insight into soil fertility, nutrient availability, and buffering capacity in acidic soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Effective Cation Exchange Capacity (ECEC) measures the ability of soil to hold and exchange cations at a given pH, often near field conditions. It provides insight into soil fertility, nutrient availability, and buffering capacity in acidic soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CationExchangeCapacityEffectiveValue a owl:Class ;
@@ -920,7 +920,7 @@ glosis_lh:CationExchangeCapacityEffectiveValue a owl:Class ;
 
 glosis_lh:Plasticity a	owl:Class ;
         rdfs:label "Plasticity"@en ;
-        skos:definition "Plasticity describes the ability of soil to deform without cracking or breaking under applied pressure. It is a property of clay-rich soils. Source: Soil Mechanics (Terzaghi et al., 1996)." ;
+        rdfs:comment "Plasticity describes the ability of soil to deform without cracking or breaking under applied pressure. It is a property of clay-rich soils. Source: Soil Mechanics (Terzaghi et al., 1996)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 56"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -929,12 +929,12 @@ glosis_lh:Plasticity a	owl:Class ;
 
 glosis_lh:plasticityProperty a sosa:ObservableProperty ;
         rdfs:label "plasticityProperty"@en ;
-        skos:definition "The Plasticity Property measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "The Plasticity Property measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 56"@en .
 
 glosis_lh:MottlesContrast a owl:Class ;
         rdfs:label "MottlesContrast"@en ;
-        skos:definition "Mottle contrast describes the degree of visual distinction between mottles and the surrounding soil, classified as faint, distinct, or prominent. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mottle contrast describes the degree of visual distinction between mottles and the surrounding soil, classified as faint, distinct, or prominent. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 34"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -943,12 +943,12 @@ glosis_lh:MottlesContrast a owl:Class ;
 
 glosis_lh:mottlesContrastProperty a sosa:ObservableProperty ;
         rdfs:label "mottlesContrastProperty"@en ;
-        skos:definition "The Mottles Contrast Property measures the visual distinction between mottles and the surrounding soil matrix. High contrast indicates stark differences, often linked to fluctuating water tables or drainage issues. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Mottles Contrast Property measures the visual distinction between mottles and the surrounding soil matrix. High contrast indicates stark differences, often linked to fluctuating water tables or drainage issues. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 34"@en .
 
 glosis_lh:ConsistenceMoist a owl:Class ;
         rdfs:label "ConsistenceMoist"@en ;
-        skos:definition "Moist consistence describes the resistance of moist soil to deformation or rupture. It ranges from loose to firm, reflecting the soil’s cohesiveness under field moisture conditions. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Moist consistence describes the resistance of moist soil to deformation or rupture. It ranges from loose to firm, reflecting the soil’s cohesiveness under field moisture conditions. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 54"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -957,12 +957,12 @@ glosis_lh:ConsistenceMoist a owl:Class ;
 
 glosis_lh:consistenceMoistProperty a sosa:ObservableProperty ;
         rdfs:label "consistenceMoistProperty"@en ;
-        skos:definition "The Consistence Moist Property assesses how soil responds to pressure when moist. Categories include friable, firm, or plastic. This property is essential for understanding soil workability and water retention. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Consistence Moist Property assesses how soil responds to pressure when moist. Categories include friable, firm, or plastic. This property is essential for understanding soil workability and water retention. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 54"@en .
 
 glosis_lh:MineralConcVolume a owl:Class ;
         rdfs:label "MineralConcVolume"@en ;
-        skos:definition "Mineral concentration volume quantifies the proportion of soil volume occupied by mineral accumulations, which impacts soil porosity and nutrient cycling. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Mineral concentration volume quantifies the proportion of soil volume occupied by mineral accumulations, which impacts soil porosity and nutrient cycling. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 73"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -971,14 +971,14 @@ glosis_lh:MineralConcVolume a owl:Class ;
 
 glosis_lh:mineralConcVolumeProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcVolumeProperty"@en ;
-        skos:definition "The Mineral Concentration Volume Property quantifies the proportion of soil volume occupied by mineral concentrations. It is used to assess the impact of these materials on soil structure and permeability. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Mineral Concentration Volume Property quantifies the proportion of soil volume occupied by mineral concentrations. It is used to assess the impact of these materials on soil structure and permeability. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 73"@en .
 
 glosis_cm:CracksDistance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:Clay a owl:Class ;
         rdfs:label "Clay"@en ;
-        skos:definition "Clay refers to soil particles smaller than 0.002 mm in diameter. It has a large surface area, high water-holding capacity, and significant cation exchange capacity, which makes it essential for soil fertility and structure. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Clay refers to soil particles smaller than 0.002 mm in diameter. It has a large surface area, high water-holding capacity, and significant cation exchange capacity, which makes it essential for soil fertility and structure. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -994,7 +994,7 @@ glosis_lh:ClayValue a owl:Class ;
 
 glosis_lh:SaltContent a	owl:Class ;
         rdfs:label "SaltContent"@en ;
-        skos:definition "Salt content quantifies the total soluble salts in the soil, often expressed as electrical conductivity (EC) of a soil extract. It is crucial for assessing salinity risk. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "Salt content quantifies the total soluble salts in the soil, often expressed as electrical conductivity (EC) of a soil extract. It is crucial for assessing salinity risk. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 42"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1003,12 +1003,12 @@ glosis_lh:SaltContent a	owl:Class ;
 
 glosis_lh:saltContentProperty a sosa:ObservableProperty ;
         rdfs:label "saltContentProperty"@en ;
-        skos:definition "The Salt Content Property measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "The Salt Content Property measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 42"@en .
 
 glosis_lh:GypsumContent a owl:Class ;
         rdfs:label "GypsumContent"@en ;
-        skos:definition "Gypsum content measures the proportion of gypsum present in a soil sample. High gypsum levels can affect soil water retention and cause structural instability when dissolved. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "Gypsum content measures the proportion of gypsum present in a soil sample. High gypsum levels can affect soil water retention and cause structural instability when dissolved. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 40"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1017,12 +1017,12 @@ glosis_lh:GypsumContent a owl:Class ;
 
 glosis_lh:gypsumContentProperty a sosa:ObservableProperty ;
         rdfs:label "gypsumContentProperty"@en ;
-        skos:definition "The Gypsum Content Property quantifies the amount of gypsum (calcium sulfate dihydrate) present in the soil. Gypsum affects soil structure, water infiltration, and nutrient availability, especially in arid and semi-arid regions. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Gypsum Content Property quantifies the amount of gypsum (calcium sulfate dihydrate) present in the soil. Gypsum affects soil structure, water infiltration, and nutrient availability, especially in arid and semi-arid regions. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 40"@en .
 
 glosis_lh:CoatingForm a	owl:Class ;
         rdfs:label "CoatingForm"@en ;
-        skos:definition "Coating form refers to the specific physical shape or arrangement of soil coatings, such as laminar films, streaks, or bridges between particles. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Coating form refers to the specific physical shape or arrangement of soil coatings, such as laminar films, streaks, or bridges between particles. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 67"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1031,12 +1031,12 @@ glosis_lh:CoatingForm a	owl:Class ;
 
 glosis_lh:coatingFormProperty a sosa:ObservableProperty ;
         rdfs:label "coatingFormProperty"@en ;
-        skos:definition "The Coating Form Property describes the shape and distribution of coatings on soil particles, such as patchy, continuous, or layered. These forms are indicative of soil genesis and chemical weathering processes. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "The Coating Form Property describes the shape and distribution of coatings on soil particles, such as patchy, continuous, or layered. These forms are indicative of soil genesis and chemical weathering processes. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 67"@en .
 
 glosis_lh:OxalateExtractableOpticalDensity  a owl:Class ;
         rdfs:label "OxalateExtractableOpticalDensity"@en ;
-        skos:definition "Oxalate-extractable optical density measures the presence of poorly crystalline minerals, such as amorphous iron and aluminum oxides, by assessing light absorption in an oxalate extract. Source: Schwertmann, U. (1973). Soil Sci. Soc. Am. J." ;
+        rdfs:comment "Oxalate-extractable optical density measures the presence of poorly crystalline minerals, such as amorphous iron and aluminum oxides, by assessing light absorption in an oxalate extract. Source: Schwertmann, U. (1973). Soil Sci. Soc. Am. J." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1045,7 +1045,7 @@ glosis_lh:OxalateExtractableOpticalDensity  a owl:Class ;
 
 glosis_lh:oxalateExtractableOpticalDensityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "oxalateExtractableOpticalDensityProperty"@en ;
-        skos:definition "The Oxalate Extractable Optical Density Property measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "The Oxalate Extractable Optical Density Property measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:OxalateExtractableOpticalDensityValue a owl:Class ;
@@ -1057,7 +1057,7 @@ glosis_lh:OxalateExtractableOpticalDensityValue a owl:Class ;
 
 glosis_lh:MineralConcHardness a	owl:Class ;
         rdfs:label "MineralConcHardness"@en ;
-        skos:definition "Mineral concentration hardness refers to the resistance of mineral accumulations in the soil to being broken apart, typically related to the degree of cementation. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mineral concentration hardness refers to the resistance of mineral accumulations in the soil to being broken apart, typically related to the degree of cementation. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 76"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1066,12 +1066,12 @@ glosis_lh:MineralConcHardness a	owl:Class ;
 
 glosis_lh:mineralConcHardnessProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcHardnessProperty"@en ;
-        skos:definition "The Mineral Concentration Hardness Property assesses the physical hardness of mineral deposits in soil. Hardness influences soil strength and resistance to erosion or mechanical disruption. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "The Mineral Concentration Hardness Property assesses the physical hardness of mineral deposits in soil. Hardness influences soil strength and resistance to erosion or mechanical disruption. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 76"@en .
 
 glosis_lh:PoresAbundance a owl:Class ;
         rdfs:label "PoresAbundance"@en ;
-        skos:definition "Pore abundance refers to the quantity of voids or pores in the soil that facilitate air and water movement. It impacts root growth and soil aeration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Pore abundance refers to the quantity of voids or pores in the soil that facilitate air and water movement. It impacts root growth and soil aeration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 63"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1080,14 +1080,14 @@ glosis_lh:PoresAbundance a owl:Class ;
 
 glosis_lh:poresAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "poresAbundanceProperty"@en ;
-        skos:definition "The Pores Abundance Property describes the quantity of soil pores, ranging from few to many. It influences water infiltration, root growth, and soil aeration. Pore abundance is crucial for assessing soil health and productivity. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Pores Abundance Property describes the quantity of soil pores, ranging from few to many. It influences water infiltration, root growth, and soil aeration. Pore abundance is crucial for assessing soil health and productivity. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 63"@en .
 
 glosis_cm:CracksWidth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:MineralConcSize a owl:Class ;
         rdfs:label "MineralConcSize"@en ;
-        skos:definition "Mineral concentration size refers to the dimensions or scale of mineral accumulations in the soil, ranging from microscopic to large features. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Mineral concentration size refers to the dimensions or scale of mineral accumulations in the soil, ranging from microscopic to large features. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 75,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1096,12 +1096,12 @@ glosis_lh:MineralConcSize a owl:Class ;
 
 glosis_lh:mineralConcSizeProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcSizeeProperty"@en ;
-        skos:definition "The Mineral Concentration Size Property measures the dimensions of concentrated mineral deposits in soil, typically expressed in millimeters. Size categories range from small grains to large nodules or concretions. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Mineral Concentration Size Property measures the dimensions of concentrated mineral deposits in soil, typically expressed in millimeters. Size categories range from small grains to large nodules or concretions. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 75,1"@en .
 
 glosis_lh:Stickiness a	owl:Class ;
         rdfs:label "Stickiness"@en ;
-        skos:definition "Stickiness is a measure of how soil adheres to objects when moist. It is influenced by clay content and is classified as non-sticky, slightly sticky, sticky, or very sticky. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Stickiness is a measure of how soil adheres to objects when moist. It is influenced by clay content and is classified as non-sticky, slightly sticky, sticky, or very sticky. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 55"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1110,12 +1110,12 @@ glosis_lh:Stickiness a	owl:Class ;
 
 glosis_lh:stickinessProperty a sosa:ObservableProperty ;
         rdfs:label "stickinessProperty"@en ;
-        skos:definition "The Stickiness Property measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "The Stickiness Property measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 55"@en .
 
 glosis_lh:MoistConsistency  a	owl:Class ;
         rdfs:label "MoistConsistency"@en ;
-        skos:definition "Moist consistency refers to the strength and behavior of soil when moist. It describes the soil's ability to stick, deform, or crumble under pressure. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Moist consistency refers to the strength and behavior of soil when moist. It describes the soil's ability to stick, deform, or crumble under pressure. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1124,12 +1124,12 @@ glosis_lh:MoistConsistency  a	owl:Class ;
 
 glosis_lh:moistConsistencyProperty a sosa:ObservableProperty ;
         rdfs:label "moistConsistencyProperty"@en ;
-        skos:definition "The Moist Consistency Property evaluates the soil's behavior under pressure when moist. Categories include friable, firm, or plastic. It provides insights into soil workability and its ability to support plant growth. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Moist Consistency Property evaluates the soil's behavior under pressure when moist. Categories include friable, firm, or plastic. It provides insights into soil workability and its ability to support plant growth. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:CoatingLocation a owl:Class ;
         rdfs:label "CoatingLocation"@en ;
-        skos:definition "Coating location indicates where the coating appears within the soil, such as on aggregate surfaces, pore walls, or within soil matrix voids. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Coating location indicates where the coating appears within the soil, such as on aggregate surfaces, pore walls, or within soil matrix voids. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 68"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1138,14 +1138,14 @@ glosis_lh:CoatingLocation a owl:Class ;
 
 glosis_lh:coatingLocationProperty a sosa:ObservableProperty ;
         rdfs:label "coatingLocationProperty"@en ;
-        skos:definition "The Coating Location Property identifies where coatings are found within the soil profile, such as along root channels, pore spaces, or on particle surfaces. This property helps determine the movement of water and nutrients in the soil. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "The Coating Location Property identifies where coatings are found within the soil profile, such as along root channels, pore spaces, or on particle surfaces. This property helps determine the movement of water and nutrients in the soil. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 68"@en .
 
 glosis_cm:RockAbundance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ]] .
 
 glosis_lh:TextureFieldClass  a	owl:Class ;
         rdfs:label "TextureFieldClass"@en ;
-        skos:definition "Texture field class identifies the soil texture using field-based assessments such as the feel method (e.g., gritty, smooth, or sticky). It provides a rapid estimate of soil particle composition. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "Texture field class identifies the soil texture using field-based assessments such as the feel method (e.g., gritty, smooth, or sticky). It provides a rapid estimate of soil particle composition. Source: FAO (2006). Guidelines for Soil Description." ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
@@ -1153,11 +1153,11 @@ glosis_lh:TextureFieldClass  a	owl:Class ;
 
 glosis_lh:textureFieldClassProperty a sosa:ObservableProperty ;
         rdfs:label "textureFieldClassProperty"@en ;
-        skos:definition "The Texture Field Class Property categorizes soil texture based on the relative proportions of sand, silt, and clay, as assessed by field methods like the ribbon test. Field classes include sandy loam, clay loam, etc. Source: Soil Survey Manual (USDA, 2017)." .
+        rdfs:comment "The Texture Field Class Property categorizes soil texture based on the relative proportions of sand, silt, and clay, as assessed by field methods like the ribbon test. Field classes include sandy loam, clay loam, etc. Source: Soil Survey Manual (USDA, 2017)." .
 
 glosis_lh:CarbonatesForms a owl:Class ;
         rdfs:label "CarbonatesForms"@en ;
-        skos:definition "This term describes the specific types or forms of carbonates found in soil, such as calcite or dolomite. These forms influence soil chemical properties and are common in arid soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "This term describes the specific types or forms of carbonates found in soil, such as calcite or dolomite. These forms influence soil chemical properties and are common in arid soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 39"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1166,17 +1166,17 @@ glosis_lh:CarbonatesForms a owl:Class ;
 
 glosis_lh:carbonatesFormsProperty a sosa:ObservableProperty ;
         rdfs:label "carbonatesFormsProperty"@en ;
-        skos:definition "The Carbonates Forms Property describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "The Carbonates Forms Property describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 39"@en .
 
 glosis_lh:fragmentsClassProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "fragmentsClassProperty"@en ;
-        skos:definition "The Fragments Class Property categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Fragments Class Property categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:FragmentsClass  a owl:Class ;
         rdfs:label "FragmentsClass"@en ;
-        skos:definition "Fragments class refers to the classification of coarse fragments in soil based on size and type, such as gravel, cobbles, stones, or boulders. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Fragments class refers to the classification of coarse fragments in soil based on size and type, such as gravel, cobbles, stones, or boulders. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1185,7 +1185,7 @@ glosis_lh:FragmentsClass  a owl:Class ;
 
 glosis_lh:WetPlasticity  a owl:Class ;
         rdfs:label "WetPlasticity"@en ;
-        skos:definition "Wet plasticity describes the soil's ability to deform under stress when wet. It is influenced by clay content and mineralogy, and is measured as part of soil consistency properties. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Wet plasticity describes the soil's ability to deform under stress when wet. It is influenced by clay content and mineralogy, and is measured as part of soil consistency properties. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1194,12 +1194,12 @@ glosis_lh:WetPlasticity  a owl:Class ;
 
 glosis_lh:wetPlasticityProperty a sosa:ObservableProperty ;
         rdfs:label "wetPlasticityProperty"@en ;
-        skos:definition "The Wet Plasticity Property measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "The Wet Plasticity Property measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:MineralConcAbundance  a owl:Class ;
         rdfs:label "MineralConcAbundance"@en ;
-        skos:definition "Mineral concentration abundance refers to the amount or volume of specific mineral accumulations within the soil, which influences nutrient availability and soil properties. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Mineral concentration abundance refers to the amount or volume of specific mineral accumulations within the soil, which influences nutrient availability and soil properties. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1208,12 +1208,12 @@ glosis_lh:MineralConcAbundance  a owl:Class ;
 
 glosis_lh:mineralConcAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "mineralConcAbundanceProperty"@en ;
-        skos:definition "The Mineral Concentration Abundance Property evaluates the amount of specific minerals, such as quartz, feldspar, or mica, in the soil. This property provides insights into soil parent material and fertility. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Mineral Concentration Abundance Property evaluates the amount of specific minerals, such as quartz, feldspar, or mica, in the soil. This property provides insights into soil parent material and fertility. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:RootsAbundance a owl:Class ;
         rdfs:label "RootsAbundance"@en ;
-        skos:definition "Roots abundance measures the density and distribution of roots in a soil horizon. It is classified as few, common, or many based on root counts per unit volume. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Roots abundance measures the density and distribution of roots in a soil horizon. It is classified as few, common, or many based on root counts per unit volume. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 80"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1222,12 +1222,12 @@ glosis_lh:RootsAbundance a owl:Class ;
 
 glosis_lh:rootsAbundanceProperty a sosa:ObservableProperty ;
         rdfs:label "rootsAbundanceProperty"@en ;
-        skos:definition "The Roots Abundance Property describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "The Roots Abundance Property describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 80"@en .
 
 glosis_lh:CementationContinuity a owl:Class ;
         rdfs:label "CementationContinuity"@en ;
-        skos:definition "Cementation continuity refers to how continuous or pervasive cemented zones are within the soil profile. It describes the degree to which cemented materials (e.g., silica, iron oxides) bond soil particles together. Source: Soil Survey Manual (USDA, 2017)." ;
+        rdfs:comment "Cementation continuity refers to how continuous or pervasive cemented zones are within the soil profile. It describes the degree to which cemented materials (e.g., silica, iron oxides) bond soil particles together. Source: Soil Survey Manual (USDA, 2017)." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 69"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
@@ -1236,12 +1236,12 @@ glosis_lh:CementationContinuity a owl:Class ;
 
 glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
         rdfs:label "cementationContinuityProperty"@en ;
-        skos:definition "The Cementation Continuity Property describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The Cementation Continuity Property describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 69"@en .
 
 glosis_lh:AvailableWaterHoldingCapacity  a owl:Class ;
         rdfs:label "AvailableWaterHoldingCapacity"@en ;
-        skos:definition "Available Water Holding Capacity (AWHC) is the amount of water that a soil can hold and release for plant uptake, calculated as the difference between field capacity and permanent wilting point. This property is influenced by soil texture and structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "Available Water Holding Capacity (AWHC) is the amount of water that a soil can hold and release for plant uptake, calculated as the difference between field capacity and permanent wilting point. This property is influenced by soil texture and structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1260,7 +1260,7 @@ glosis_lh:AvailableWaterHoldingCapacityValue a owl:Class ;
 
 glosis_lh:BaseSaturation  a owl:Class ;
         rdfs:label "BaseSaturation"@en ;
-        skos:definition "Base saturation is the proportion of soil exchange sites occupied by basic cations (calcium, magnesium, potassium, and sodium) relative to the total cation exchange capacity (CEC). It indicates soil fertility and liming needs. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Base saturation is the proportion of soil exchange sites occupied by basic cations (calcium, magnesium, potassium, and sodium) relative to the total cation exchange capacity (CEC). It indicates soil fertility and liming needs. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1279,7 +1279,7 @@ glosis_lh:BaseSaturationValue a owl:Class ;
 
 glosis_lh:BulkDensityFineEarth  a owl:Class ;
         rdfs:label "BulkDensityFineEarth"@en ;
-        skos:definition "Bulk density of fine earth is the mass of dry soil divided by the volume it occupies, excluding coarse fragments (particles >2 mm). It influences root growth, water movement, and porosity. Source: Hillel, D. (2004). Soil Physics." ;
+        rdfs:comment "Bulk density of fine earth is the mass of dry soil divided by the volume it occupies, excluding coarse fragments (particles >2 mm). It influences root growth, water movement, and porosity. Source: Hillel, D. (2004). Soil Physics." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1298,7 +1298,7 @@ glosis_lh:BulkDensityFineEarthValue a owl:Class ;
 
 glosis_lh:BulkDensityWholeSoil  a owl:Class ;
         rdfs:label "BulkDensityWholeSoil"@en ;
-        skos:definition "Bulk density whole soil is the dry mass of the entire soil sample, including both fine earth and coarse fragments. It reflects total soil compaction and space available for roots and water. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
+        rdfs:comment "Bulk density whole soil is the dry mass of the entire soil sample, including both fine earth and coarse fragments. It reflects total soil compaction and space available for roots and water. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1318,7 +1318,7 @@ glosis_lh:BulkDensityWholeSoilValue a owl:Class ;
 
 glosis_lh:CationExchangeCapacitycSoil  a owl:Class ;
         rdfs:label "CationExchangeCapacitycSoil"@en ;
-        skos:definition "This is synonymous with CEC but specifically refers to the total exchangeable cations in the whole soil, including both organic matter and mineral components. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
+        rdfs:comment "This is synonymous with CEC but specifically refers to the total exchangeable cations in the whole soil, including both organic matter and mineral components. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1337,7 +1337,7 @@ glosis_lh:CationExchangeCapacitycSoilValue a owl:Class ;
 
 glosis_lh:CoarseFragments  a owl:Class ;
         rdfs:label "CoarseFragments"@en ;
-        skos:definition "Coarse fragments are soil particles larger than 2 mm in diameter, such as gravel, cobbles, and stones. They affect soil porosity, water infiltration, and root penetration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
+        rdfs:comment "Coarse fragments are soil particles larger than 2 mm in diameter, such as gravel, cobbles, and stones. They affect soil porosity, water infiltration, and root penetration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1356,7 +1356,7 @@ glosis_lh:CoarseFragmentsValue a owl:Class ;
 
 glosis_lh:EffectiveCec  a owl:Class ;
         rdfs:label "EffectiveCec"@en ;
-        skos:definition "Effective CEC (ECEC) represents the sum of exchangeable bases and exchangeable acidity in soil at its natural pH. It helps evaluate soil fertility under current conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Effective CEC (ECEC) represents the sum of exchangeable bases and exchangeable acidity in soil at its natural pH. It helps evaluate soil fertility under current conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1375,7 +1375,7 @@ glosis_lh:EffectiveCecValue a owl:Class ;
 
 glosis_lh:ElectricalConductivity  a owl:Class ;
         rdfs:label "ElectricalConductivity"@en ;
-        skos:definition "Electrical conductivity (EC) measures the ability of a soil solution to conduct an electric current. It is used to estimate soil salinity, as salts increase conductivity. Source: Rhoades, J.D. (1996). Methods of Soil Analysis." ;
+        rdfs:comment "Electrical conductivity (EC) measures the ability of a soil solution to conduct an electric current. It is used to estimate soil salinity, as salts increase conductivity. Source: Rhoades, J.D. (1996). Methods of Soil Analysis." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1394,7 +1394,7 @@ glosis_lh:ElectricalConductivityValue a owl:Class ;
 
 glosis_lh:AcidityExchangeable  a owl:Class ;
         rdfs:label "AcidityExchangeable"@en ;
-        skos:definition "Exchangeable acidity refers to the acidic cations (like hydrogen and aluminum) that are adsorbed onto the soil’s exchange sites and can be replaced by other cations. It influences soil pH and plant growth. High exchangeable acidity is common in highly weathered and acidic soils. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
+        rdfs:comment "Exchangeable acidity refers to the acidic cations (like hydrogen and aluminum) that are adsorbed onto the soil’s exchange sites and can be replaced by other cations. It influences soil pH and plant growth. High exchangeable acidity is common in highly weathered and acidic soils. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1413,7 +1413,7 @@ glosis_lh:AcidityExchangeableValue a owl:Class ;
 
 glosis_lh:AluminiumExchangeableBases  a	owl:Class ;
         rdfs:label "AluminiumExchangeableBases"@en ;
-        skos:definition "This refers to aluminum ions that occupy exchangeable sites within soil colloids. Exchangeable aluminum is significant because it becomes toxic to plants in acidic soils, affecting root development. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "This refers to aluminum ions that occupy exchangeable sites within soil colloids. Exchangeable aluminum is significant because it becomes toxic to plants in acidic soils, affecting root development. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1432,7 +1432,7 @@ glosis_lh:AluminiumExchangeableBasesValue a owl:Class ;
 
 glosis_lh:CalciumExchangeableBases  a	owl:Class ;
         rdfs:label "CalciumExchangeableBases"@en ;
-        skos:definition "Calcium exchangeable bases refer to calcium ions adsorbed on soil colloids that can be exchanged with other cations in the soil solution. Calcium is essential for soil structure and plant cell wall formation. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Calcium exchangeable bases refer to calcium ions adsorbed on soil colloids that can be exchanged with other cations in the soil solution. Calcium is essential for soil structure and plant cell wall formation. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1451,7 +1451,7 @@ glosis_lh:CalciumExchangeableBasesValue a owl:Class ;
 
 glosis_lh:CalciumExtractableElements  a	owl:Class ;
         rdfs:label "CalciumExtractableElements"@en ;
-        skos:definition "Extractable calcium is the calcium fraction that can be chemically removed using specific extractants. It represents calcium availability to plants. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Extractable calcium is the calcium fraction that can be chemically removed using specific extractants. It represents calcium availability to plants. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1470,7 +1470,7 @@ glosis_lh:CalciumExtractableElementsValue a owl:Class ;
 
 glosis_lh:CalciumTotalElements  a owl:Class ;
         rdfs:label "CalciumTotalElements"@en ;
-        skos:definition "Total calcium refers to the total amount of calcium present in the soil, including calcium in minerals, organic matter, and soil solution. Source: Soil Fertility and Nutrient Management (Havlin et al., 2016)." ;
+        rdfs:comment "Total calcium refers to the total amount of calcium present in the soil, including calcium in minerals, organic matter, and soil solution. Source: Soil Fertility and Nutrient Management (Havlin et al., 2016)." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1489,7 +1489,7 @@ glosis_lh:CalciumTotalElementsValue a owl:Class ;
 
 glosis_lh:HydrogenExchangeableBases  a	owl:Class ;
         rdfs:label "HydrogenExchangeableBases"@en ;
-        skos:definition "Hydrogen exchangeable bases refer to the exchangeable hydrogen ions in the soil, which contribute to soil acidity and influence cation exchange capacity (CEC). Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Hydrogen exchangeable bases refer to the exchangeable hydrogen ions in the soil, which contribute to soil acidity and influence cation exchange capacity (CEC). Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1508,7 +1508,7 @@ glosis_lh:HydrogenExchangeableBasesValue a owl:Class ;
 
 glosis_lh:MagnesiumExchangeableBases  a	owl:Class ;
         rdfs:label "MagnesiumExchangeableBases"@en ;
-        skos:definition "Magnesium exchangeable bases refer to the magnesium ions that are adsorbed onto soil colloids and available for exchange. It is vital for plant nutrition and soil structure. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Magnesium exchangeable bases refer to the magnesium ions that are adsorbed onto soil colloids and available for exchange. It is vital for plant nutrition and soil structure. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1527,7 +1527,7 @@ glosis_lh:MagnesiumExchangeableBasesValue a owl:Class ;
 
 glosis_lh:MagnesiumExtractableElements  a owl:Class ;
         rdfs:label "MagnesiumExtractableElements"@en ;
-        skos:definition "Extractable magnesium is the portion of total magnesium in soil that can be released and made available to plants, typically measured using chemical extraction methods. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "Extractable magnesium is the portion of total magnesium in soil that can be released and made available to plants, typically measured using chemical extraction methods. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1546,7 +1546,7 @@ glosis_lh:MagnesiumExtractableElementsValue a owl:Class ;
 
 glosis_lh:MagnesiumTotalElements  a	owl:Class ;
         rdfs:label "MagnesiumTotalElements"@en ;
-        skos:definition "Total magnesium refers to the entire amount of magnesium present in the soil, including both plant-available and mineral-bound forms. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants." ;
+        rdfs:comment "Total magnesium refers to the entire amount of magnesium present in the soil, including both plant-available and mineral-bound forms. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1565,7 +1565,7 @@ glosis_lh:MagnesiumTotalElementsValue a owl:Class ;
 
 glosis_lh:ManganeseExchangeableBases  a	owl:Class ;
         rdfs:label "ManganeseExchangeableBases"@en ;
-        skos:definition "Manganese exchangeable bases represent manganese ions adsorbed onto soil particles that can be readily exchanged. It plays a role in redox processes and plant nutrition. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils." ;
+        rdfs:comment "Manganese exchangeable bases represent manganese ions adsorbed onto soil particles that can be readily exchanged. It plays a role in redox processes and plant nutrition. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System."@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1584,7 +1584,7 @@ glosis_lh:ManganeseExchangeableBasesValue a owl:Class ;
 
 glosis_lh:ManganeseExtractableElements  a owl:Class ;
         rdfs:label "ManganeseExtractableElements"@en ;
-        skos:definition "Extractable manganese refers to the portion of manganese that is chemically available in soil, often determined with extractants like DTPA. It is critical for plant growth. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Extractable manganese refers to the portion of manganese that is chemically available in soil, often determined with extractants like DTPA. It is critical for plant growth. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1603,7 +1603,7 @@ glosis_lh:ManganeseExtractableElementsValue a owl:Class ;
 
 glosis_lh:ManganeseTotalElements  a owl:Class ;
         rdfs:label "ManganeseTotalElements"@en ;
-        skos:definition "Total manganese is the sum of all manganese forms in soil, including both bioavailable and mineral-bound fractions, important for soil fertility assessment. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
+        rdfs:comment "Total manganese is the sum of all manganese forms in soil, including both bioavailable and mineral-bound fractions, important for soil fertility assessment. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1622,7 +1622,7 @@ glosis_lh:ManganeseTotalElementsValue a owl:Class ;
 
 glosis_lh:PotassiumExchangeableBases  a	owl:Class ;
         rdfs:label "PotassiumExchangeableBases"@en ;
-        skos:definition "Exchangeable potassium refers to the form of potassium held on soil colloid surfaces and available for plant uptake. It is measured using ammonium acetate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Exchangeable potassium refers to the form of potassium held on soil colloid surfaces and available for plant uptake. It is measured using ammonium acetate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1641,7 +1641,7 @@ glosis_lh:PotassiumExchangeableBasesValue a owl:Class ;
 
 glosis_lh:PotassiumExtractableElements  a owl:Class ;
         rdfs:label "PotassiumExtractableElements"@en ;
-        skos:definition "Extractable potassium is the portion of potassium in the soil solution or loosely bound to particles that can be removed by chemical extractants and absorbed by plants. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Extractable potassium is the portion of potassium in the soil solution or loosely bound to particles that can be removed by chemical extractants and absorbed by plants. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1660,7 +1660,7 @@ glosis_lh:PotassiumExtractableElementsValue a owl:Class ;
 
 glosis_lh:PotassiumTotalElements  a owl:Class ;
         rdfs:label "PotassiumTotalElements"@en ;
-        skos:definition "Total potassium includes all potassium in the soil, whether plant-available, mineral-bound, or part of soil minerals like feldspar and mica. It is not immediately accessible to plants. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Total potassium includes all potassium in the soil, whether plant-available, mineral-bound, or part of soil minerals like feldspar and mica. It is not immediately accessible to plants. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1679,7 +1679,7 @@ glosis_lh:PotassiumTotalElementsValue a owl:Class ;
 
 glosis_lh:SodiumExchangeableBases  a owl:Class ;
         rdfs:label "SodiumExchangeableBases"@en ;
-        skos:definition "Exchangeable sodium refers to sodium ions held on soil colloid surfaces. High exchangeable sodium can cause soil dispersion, leading to poor structure and reduced permeability. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
+        rdfs:comment "Exchangeable sodium refers to sodium ions held on soil colloid surfaces. High exchangeable sodium can cause soil dispersion, leading to poor structure and reduced permeability. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1698,7 +1698,7 @@ glosis_lh:SodiumExchangeableBasesValue a owl:Class ;
 
 glosis_lh:SodiumExtractableElements  a	owl:Class ;
         rdfs:label "SodiumExtractableElements"@en ;
-        skos:definition "Extractable sodium is the fraction of sodium ions in soil that can be removed by chemical extractants and assessed for salinity or sodicity potential. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "Extractable sodium is the fraction of sodium ions in soil that can be removed by chemical extractants and assessed for salinity or sodicity potential. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1717,7 +1717,7 @@ glosis_lh:SodiumExtractableElementsValue a owl:Class ;
 
 glosis_lh:SodiumTotalElements  a owl:Class ;
         rdfs:label "SodiumTotalElements"@en ;
-        skos:definition "Total sodium includes all sodium present in the soil, including soluble, exchangeable, and mineral-bound forms. It is essential for understanding salinity issues. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
+        rdfs:comment "Total sodium includes all sodium present in the soil, including soluble, exchangeable, and mineral-bound forms. It is essential for understanding salinity issues. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1736,7 +1736,7 @@ glosis_lh:SodiumTotalElementsValue a owl:Class ;
 
 glosis_lh:AluminiumExtractableElements  a owl:Class ;
         rdfs:label "AluminiumExtractableElements"@en ;
-        skos:definition "Extractable aluminum represents the fraction of aluminum that can be chemically extracted from soil using reagents. It reflects bioavailability and toxicity under certain conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Extractable aluminum represents the fraction of aluminum that can be chemically extracted from soil using reagents. It reflects bioavailability and toxicity under certain conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1759,7 +1759,7 @@ glosis_lh:AluminiumExtractableElementsValue a owl:Class ;
 
 glosis_lh:AluminiumTotalElements  a owl:Class ;
         rdfs:label "AluminiumTotalElements"@en ;
-        skos:definition "Total aluminum indicates the complete amount of aluminum present in the soil, including its mineral and organic complexes. It is measured through total digestion methods and is often used for soil classification. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Total aluminum indicates the complete amount of aluminum present in the soil, including its mineral and organic complexes. It is measured through total digestion methods and is often used for soil classification. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1778,7 +1778,7 @@ glosis_lh:AluminiumTotalElementsValue a owl:Class ;
 
 glosis_lh:BoronExtractableElements a owl:Class ;
         rdfs:label "BoronExtractableElements"@en ;
-        skos:definition "Extractable boron refers to the boron fraction that is available for plant uptake. It is extracted with solutions like hot water or dilute acids and is crucial for plant growth in trace amounts. Source: Gupta, U.C. (1993). Boron and Its Role in Crop Production." ;
+        rdfs:comment "Extractable boron refers to the boron fraction that is available for plant uptake. It is extracted with solutions like hot water or dilute acids and is crucial for plant growth in trace amounts. Source: Gupta, U.C. (1993). Boron and Its Role in Crop Production." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1797,7 +1797,7 @@ glosis_lh:BoronExtractableElementsValue a owl:Class ;
 
 glosis_lh:BoronTotalElements  a	owl:Class ;
         rdfs:label "BoronTotalElements"@en ;
-        skos:definition "Total boron includes all forms of boron present in the soil, both available and unavailable, including those bound in minerals and organic matter. Source: Gupta, U.C. (1993). Boron and Its Role in Crop Production." ;
+        rdfs:comment "Total boron includes all forms of boron present in the soil, both available and unavailable, including those bound in minerals and organic matter. Source: Gupta, U.C. (1993). Boron and Its Role in Crop Production." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1816,7 +1816,7 @@ glosis_lh:BoronTotalElementsValue a owl:Class ;
 
 glosis_lh:CadmiumExtractableElements  a	owl:Class ;
         rdfs:label "CadmiumExtractableElements"@en ;
-        skos:definition "Extractable cadmium refers to the portion of cadmium in soil that is readily soluble or bioavailable. It is measured using chemical extractants and is critical for assessing soil contamination and plant uptake risks. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
+        rdfs:comment "Extractable cadmium refers to the portion of cadmium in soil that is readily soluble or bioavailable. It is measured using chemical extractants and is critical for assessing soil contamination and plant uptake risks. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System."@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1835,7 +1835,7 @@ glosis_lh:CadmiumExtractableElementsValue a owl:Class ;
 
 glosis_lh:CadmiumTotalElements a owl:Class ;
         rdfs:label "CadmiumTotalElements"@en ;
-        skos:definition "Total cadmium includes all forms of cadmium in soil, such as bound, mineralized, and free forms. It is used to assess long-term contamination levels. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants." ;
+        rdfs:comment "Total cadmium includes all forms of cadmium in soil, such as bound, mineralized, and free forms. It is used to assess long-term contamination levels. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System."@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1854,7 +1854,7 @@ glosis_lh:CadmiumTotalElementsValue a owl:Class ;
 
 glosis_lh:CopperExtractableElements  a	owl:Class ;
         rdfs:label "CopperExtractableElements"@en ;
-        skos:definition "Extractable copper refers to the portion of total copper in the soil that is available for plant uptake, measured using chemical extractants. It is an essential micronutrient but can be toxic at high concentrations. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
+        rdfs:comment "Extractable copper refers to the portion of total copper in the soil that is available for plant uptake, measured using chemical extractants. It is an essential micronutrient but can be toxic at high concentrations. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1873,7 +1873,7 @@ glosis_lh:CopperExtractableElementsValue a owl:Class ;
 
 glosis_lh:CopperTotalElements a owl:Class ;
         rdfs:label "CopperTotalElements"@en ;
-        skos:definition "Total copper refers to all copper present in the soil, including bound and free forms. It is measured to assess contamination or natural background levels. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants." ;
+        rdfs:comment "Total copper refers to all copper present in the soil, including bound and free forms. It is measured to assess contamination or natural background levels. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1892,7 +1892,7 @@ glosis_lh:CopperTotalElementsValue a owl:Class ;
 
 glosis_lh:IronExtractableElements a owl:Class ;
         rdfs:label "IronExtractableElements"@en ;
-        skos:definition "Extractable iron represents the portion of iron in soil that is chemically available for biological or geochemical processes, measured using specific extractants like DTPA or oxalate. Source: Lindsay, W.L., & Norvell, W.A. (1978). Soil Sci. Soc. Am. J." ;
+        rdfs:comment "Extractable iron represents the portion of iron in soil that is chemically available for biological or geochemical processes, measured using specific extractants like DTPA or oxalate. Source: Lindsay, W.L., & Norvell, W.A. (1978). Soil Sci. Soc. Am. J." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1911,7 +1911,7 @@ glosis_lh:IronExtractableElementsValue a owl:Class ;
 
 glosis_lh:IronTotalElements  a	owl:Class ;
         rdfs:label "IronTotalElements"@en ;
-        skos:definition "Total iron is the total quantity of iron present in the soil, including mineral and non-mineral forms. It is measured to assess background levels or environmental contamination. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants." ;
+        rdfs:comment "Total iron is the total quantity of iron present in the soil, including mineral and non-mineral forms. It is measured to assess background levels or environmental contamination. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1930,7 +1930,7 @@ glosis_lh:IronTotalElementsValue a owl:Class ;
 
 glosis_lh:MolybdenumExtractableElements  a owl:Class ;
         rdfs:label "MolybdenumExtractableElements"@en ;
-        skos:definition "Extractable molybdenum refers to the portion of molybdenum in soil that is chemically available for plant uptake, typically measured using extractants like ammonium oxalate. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils." ;
+        rdfs:comment "Extractable molybdenum refers to the portion of molybdenum in soil that is chemically available for plant uptake, typically measured using extractants like ammonium oxalate. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System."@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1949,7 +1949,7 @@ glosis_lh:MolybdenumExtractableElementsValue a owl:Class ;
 
 glosis_lh:MolybdenumTotalElements  a owl:Class ;
         rdfs:label "MolybdenumTotalElements"@en ;
-        skos:definition "Total molybdenum includes all molybdenum present in the soil, both in available and mineral-bound forms. Molybdenum is an essential micronutrient for plant nitrogen metabolism. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
+        rdfs:comment "Total molybdenum includes all molybdenum present in the soil, both in available and mineral-bound forms. Molybdenum is an essential micronutrient for plant nitrogen metabolism. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System."@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1968,7 +1968,7 @@ glosis_lh:MolybdenumTotalElementsValue a owl:Class ;
 
 glosis_lh:PhosphorusExtractableElements a owl:Class ;
         rdfs:label "PhosphorusExtractableElements"@en ;
-        skos:definition "Extractable phosphorus is the fraction of phosphorus in soil that is available for plant uptake, often determined using Bray or Olsen extraction methods. Source: Olsen, S.R., et al. (1954). Soil Sci." ;
+        rdfs:comment "Extractable phosphorus is the fraction of phosphorus in soil that is available for plant uptake, often determined using Bray or Olsen extraction methods. Source: Olsen, S.R., et al. (1954). Soil Sci." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -1987,7 +1987,7 @@ glosis_lh:PhosphorusExtractableElementsValue a owl:Class ;
 
 glosis_lh:PhosphorusTotalElements  a	owl:Class ;
         rdfs:label "PhosphorusTotalElements"@en ;
-        skos:definition "Total phosphorus measures the overall quantity of phosphorus in soil, including available and mineral-bound forms. It is essential for understanding soil fertility. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Total phosphorus measures the overall quantity of phosphorus in soil, including available and mineral-bound forms. It is essential for understanding soil fertility. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2006,7 +2006,7 @@ glosis_lh:PhosphorusTotalElementsValue a owl:Class ;
 
 glosis_lh:SulfurExtractableElements  a	owl:Class ;
         rdfs:label "SulfurExtractableElements"@en ;
-        skos:definition "Extractable sulfur refers to the sulfur present in a readily available form for plants, typically measured using chemical extractants. It includes forms such as sulfate sulfur, which is essential for plant nutrition. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Extractable sulfur refers to the sulfur present in a readily available form for plants, typically measured using chemical extractants. It includes forms such as sulfate sulfur, which is essential for plant nutrition. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2025,7 +2025,7 @@ glosis_lh:SulfurExtractableElementsValue a owl:Class ;
 
 glosis_lh:SulfurTotalElements  a owl:Class ;
         rdfs:label "SulfurTotalElements"@en ;
-        skos:definition "Total sulfur includes all forms of sulfur present in the soil, including organic sulfur, mineral sulfur, and soluble sulfates. It reflects the soil’s sulfur reserves. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Total sulfur includes all forms of sulfur present in the soil, including organic sulfur, mineral sulfur, and soluble sulfates. It reflects the soil’s sulfur reserves. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2044,7 +2044,7 @@ glosis_lh:SulfurTotalElementsValue a owl:Class ;
 
 glosis_lh:ZincExtractableElements a owl:Class ;
         rdfs:label "ZincExtractableElements"@en ;
-        skos:definition "Extractable zinc refers to the fraction of zinc that is bioavailable to plants and is measured using specific chemical extraction methods. Zinc is an essential micronutrient for plant growth. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
+        rdfs:comment "Extractable zinc refers to the fraction of zinc that is bioavailable to plants and is measured using specific chemical extraction methods. Zinc is an essential micronutrient for plant growth. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2063,7 +2063,7 @@ glosis_lh:ZincExtractableElementsValue a owl:Class ;
 
 glosis_lh:ZincTotalElements  a	owl:Class ;
         rdfs:label "ZincTotalElements"@en ;
-        skos:definition "Total zinc includes all forms of zinc in the soil, including soluble, exchangeable, and mineral-bound zinc. It reflects the total zinc reserves but does not indicate immediate bioavailability. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Total zinc includes all forms of zinc in the soil, including soluble, exchangeable, and mineral-bound zinc. It reflects the total zinc reserves but does not indicate immediate bioavailability. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2082,7 +2082,7 @@ glosis_lh:ZincTotalElementsValue a owl:Class ;
 
 glosis_lh:Gypsum a owl:Class ;
         rdfs:label "Gypsum"@en ;
-        skos:definition "Gypsum refers to calcium sulfate dihydrate (CaSO₄·2H₂O) in the soil, which can occur naturally or through amendments. It influences soil structure, fertility, and salinity management. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Gypsum refers to calcium sulfate dihydrate (CaSO₄·2H₂O) in the soil, which can occur naturally or through amendments. It influences soil structure, fertility, and salinity management. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2101,7 +2101,7 @@ glosis_lh:GypsumValue a owl:Class ;
 
 glosis_lh:HydraulicConductivity a owl:Class ;
         rdfs:label "HydraulicConductivity"@en ;
-        skos:definition "Hydraulic conductivity is the rate at which water moves through soil pores under a hydraulic gradient. It reflects soil permeability and is critical for water management. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "Hydraulic conductivity is the rate at which water moves through soil pores under a hydraulic gradient. It reflects soil permeability and is critical for water management. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2120,7 +2120,7 @@ glosis_lh:HydraulicConductivityValue a owl:Class ;
 
 glosis_lh:CarbonInorganic a owl:Class ;
         rdfs:label "CarbonInorganic"@en ;
-        skos:definition "Inorganic carbon in soils primarily occurs as carbonates (e.g., calcium carbonate). It plays a significant role in soil pH buffering and is common in arid and semi-arid regions. Source: Lal, R. (2006). Encyclopedia of Soil Science." ;
+        rdfs:comment "Inorganic carbon in soils primarily occurs as carbonates (e.g., calcium carbonate). It plays a significant role in soil pH buffering and is common in arid and semi-arid regions. Source: Lal, R. (2006). Encyclopedia of Soil Science." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2139,12 +2139,12 @@ glosis_lh:CarbonInorganicValue a owl:Class ;
 
 glosis_lh:moistureContentProperty a sosa:ObservableProperty, qudt:Quantitykind ;
         rdfs:label "moistureContentProperty"@en ;
-        skos:definition "The Moisture Content Property measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "The Moisture Content Property measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "Africa Soil Profiles Database Version 1.2. ISRIC Report 2014/01"@en .
 
 glosis_lh:MoistureContent a owl:Class ;
         rdfs:label "MoistureContent"@en ;
-        skos:definition "Moisture content is the amount of water in the soil, expressed as a percentage of the soil's dry weight. It is essential for assessing soil water availability for plants. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "Moisture content is the amount of water in the soil, expressed as a percentage of the soil's dry weight. It is essential for assessing soil water availability for plants. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "Africa Soil Profiles Database Version 1.2. ISRIC Report 2014/01"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2166,7 +2166,7 @@ glosis_lh:MoistureContentValue a owl:Class ;
 
 glosis_lh:CarbonOrganic a owl:Class ;
         rdfs:label "CarbonOrganic"@en ;
-        skos:definition "Organic carbon refers to carbon stored in soil organic matter, including plant residues, microorganisms, and humus. It is a key indicator of soil health and fertility. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
+        rdfs:comment "Organic carbon refers to carbon stored in soil organic matter, including plant residues, microorganisms, and humus. It is a key indicator of soil health and fertility. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2186,7 +2186,7 @@ glosis_lh:CarbonOrganicValue a owl:Class ;
 
 glosis_lh:OrganicMatter  a owl:Class ;
         rdfs:label "OrganicMatter"@en ;
-        skos:definition "Organic matter is the fraction of soil composed of plant and animal residues, living organisms, and decomposed organic materials. It improves soil structure, fertility, and water retention. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Organic matter is the fraction of soil composed of plant and animal residues, living organisms, and decomposed organic materials. It improves soil structure, fertility, and water retention. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2205,7 +2205,7 @@ glosis_lh:OrganicMatterValue a owl:Class ;
 
 glosis_lh:PH  a	owl:Class ;
         rdfs:label "PH"@en ;
-        skos:definition "Soil pH measures the hydrogen ion activity in soil solution, indicating whether the soil is acidic, neutral, or alkaline. It affects nutrient availability and biological activity. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Soil pH measures the hydrogen ion activity in soil solution, indicating whether the soil is acidic, neutral, or alkaline. It affects nutrient availability and biological activity. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2224,7 +2224,7 @@ glosis_lh:PHValue a owl:Class ;
 
 glosis_lh:PhosphorusRetention a owl:Class ;
         rdfs:label "PhosphorusRetention"@en ;
-        skos:definition "Phosphorus retention describes the soil’s ability to adsorb and hold phosphorus, preventing it from leaching or becoming unavailable for plants. It is influenced by soil minerals like aluminum and iron oxides. Source: McDowell, R.W., & Sharpley, A.N. (2001). J. Environ. Qual." ;
+        rdfs:comment "Phosphorus retention describes the soil’s ability to adsorb and hold phosphorus, preventing it from leaching or becoming unavailable for plants. It is influenced by soil minerals like aluminum and iron oxides. Source: McDowell, R.W., & Sharpley, A.N. (2001). J. Environ. Qual." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2244,7 +2244,7 @@ glosis_lh:PhosphorusRetentionValue a owl:Class ;
 
 glosis_lh:Porosity  a	owl:Class ;
         rdfs:label "Porosity"@en ;
-        skos:definition "Porosity is the percentage of soil volume occupied by pores or voids. It determines the soil’s ability to hold water and air, influencing plant growth and microbial activity. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Porosity is the percentage of soil volume occupied by pores or voids. It determines the soil’s ability to hold water and air, influencing plant growth and microbial activity. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2264,7 +2264,7 @@ glosis_lh:PorosityValue a owl:Class ;
 
 glosis_lh:SolubleSalts  a	owl:Class ;
         rdfs:label "SolubleSalts"@en ;
-        skos:definition "Soluble salts are salts dissolved in the soil solution that can move with water. Excessive soluble salts cause salinity, which impacts plant growth. Source: Soil Science Society of America (SSSA) Glossary." ;
+        rdfs:comment "Soluble salts are salts dissolved in the soil solution that can move with water. Excessive soluble salts cause salinity, which impacts plant growth. Source: Soil Science Society of America (SSSA) Glossary." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2283,7 +2283,7 @@ glosis_lh:SolubleSaltsValue a owl:Class ;
 
 glosis_lh:SandFractionTexture a owl:Class ;
         rdfs:label "SandFractionTexture"@en ;
-        skos:definition "Sand fraction texture describes the proportion of different sand particle sizes (very fine to coarse) within the soil, influencing soil texture and structure. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "Sand fraction texture describes the proportion of different sand particle sizes (very fine to coarse) within the soil, influencing soil texture and structure. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2302,7 +2302,7 @@ glosis_lh:SandFractionTextureValue a owl:Class ;
 
 glosis_lh:SiltFractionTexture  a owl:Class ;
         rdfs:label "SiltFractionTexture"@en ;
-        skos:definition "Silt fraction texture describes the relative proportion of silt particles in the soil. Silt contributes to soil fertility and moisture retention but is prone to erosion. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
+        rdfs:comment "Silt fraction texture describes the relative proportion of silt particles in the soil. Silt contributes to soil fertility and moisture retention but is prone to erosion. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2321,7 +2321,7 @@ glosis_lh:SiltFractionTextureValue a owl:Class ;
 
 glosis_lh:ClayFractionTexture a owl:Class ;
         rdfs:label "ClayFractionTexture"@en ;
-        skos:definition "Clay fraction texture describes the particle-size distribution and properties of the clay fraction within the soil. It influences water retention, aeration, and soil plasticity. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
+        rdfs:comment "Clay fraction texture describes the particle-size distribution and properties of the clay fraction within the soil. It influences water retention, aeration, and soil plasticity. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2340,7 +2340,7 @@ glosis_lh:ClayFractionTextureValue a owl:Class ;
 
 glosis_lh:CarbonTotal a owl:Class ;
         rdfs:label "CarbonTotal"@en ;
-        skos:definition "Total carbon is the sum of both organic and inorganic carbon present in the soil. It reflects the overall carbon stock and soil quality. Source: Lal, R. (2006). Encyclopedia of Soil Science." ;
+        rdfs:comment "Total carbon is the sum of both organic and inorganic carbon present in the soil. It reflects the overall carbon stock and soil quality. Source: Lal, R. (2006). Encyclopedia of Soil Science." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2360,7 +2360,7 @@ glosis_lh:CarbonTotalValue a owl:Class ;
 
 glosis_lh:TotalCarbonateEquivalent  a	owl:Class ;
         rdfs:label "TotalCarbonateEquivalent"@en ;
-        skos:definition "Total carbonate equivalent measures the amount of carbonates (mainly calcium carbonate and magnesium carbonate) present in the soil. It is expressed as the equivalent percentage of CaCO₃ and affects soil pH and fertility. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
+        rdfs:comment "Total carbonate equivalent measures the amount of carbonates (mainly calcium carbonate and magnesium carbonate) present in the soil. It is expressed as the equivalent percentage of CaCO₃ and affects soil pH and fertility. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
@@ -2379,7 +2379,7 @@ glosis_lh:TotalCarbonateEquivalentValue a owl:Class ;
 
 glosis_lh:NitrogenTotal  a owl:Class ;
         rdfs:label "NitrogenTotal"@en ;
-        skos:definition "Total nitrogen measures the total amount of nitrogen present in the soil, including organic and inorganic forms. It is critical for plant growth and soil fertility assessment. Source: Bremner, J.M. (1996). Methods of Soil Analysis." ;
+        rdfs:comment "Total nitrogen measures the total amount of nitrogen present in the soil, including organic and inorganic forms. It is critical for plant growth and soil fertility assessment. Source: Bremner, J.M. (1996). Methods of Soil Analysis." ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemical ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
