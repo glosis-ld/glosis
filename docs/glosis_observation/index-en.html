@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/observation","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/observation","name":"GlOSIS Ontology: Observation module", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology.  The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources.  The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or SKOS for the representation of codelists.<br>This module contains the spatial class to describe the observation process, which is a subtype of OM_Process, and it is used to generate the result of the observation.", "dateReleased":"Creation date", "dateModified":"Modified date", "version":"1.4.1", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"},{"@type":"Person","name":"W3C/OGC Spatial Data on the Web Working Group"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/glosis/model/observation","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/glosis/model/observation","name":"GlOSIS Ontology: Observation module", "headline":"This ontology is one of the modules comprising Global Soil Information System (GloSIS) ontology.  The GloSIS ontology was developed part of the SIEUSOIL project, which aims at implementing and testing a shared China-EU Web Observatory platform that will provide Linked (Open) Data to monitor status and threats of soil and land resources.  The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or SKOS for the representation of codelists.<br>This module contains the spatial class to describe the observation process, which is a subtype of OM_Process, and it is used to generate the result of the observation.", "dateReleased":"Creation date", "dateModified":"Modified date", "version":"1.5.0", "license":"https://creativecommons.org/licenses/by-nc-sa/3.0/igo/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"},{"@type":"Person","name":"Bogusz Janiak"},{"@type":"Person","name":"W3C/OGC Spatial Data on the Web Working Group"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -55,15 +55,15 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>GlOSIS Ontology: Observation module</h1>
-<h2>Release: Creation date</h2>
+<h2>Release: 23-12-2024</h2>
 
 
 <dl>
-<dt>Modified on: Modified date</dt>
+<dt>Modified on: 06-02-2025</dt>
 <dt>This version:</dt>
-<dd><a href="http://w3id.org/glosis/model/observation/1.4.1">http://w3id.org/glosis/model/observation/1.4.1</a></dd>
+<dd><a href="http://w3id.org/glosis/model/observation/1.5.0">http://w3id.org/glosis/model/observation/1.5.0</a></dd>
 <dt>Revision:</dt>
-<dd>1.4.1</dd>
+<dd>1.5.0</dd>
 <dt>Authors:</dt>
 <dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd><dd>Bogusz Janiak, PSNC</dd><dd>W3C/OGC Spatial Data on the Web Working Group</dd>
 
@@ -90,14 +90,13 @@ This ontology is one of the modules comprising Global Soil Information System (G
 
  The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or SKOS for the representation of codelists.
 
-<br>This module contains the spatial class to describe the observation process, which is a subtype of OM_Process, and it is used to generate the result of the observation.</span>
 </div>
 <div id="toc"></div> 
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+This module contains the spatial class to describe the observation process, which is a subtype of OM_Process, and it is used to generate the result of the observation.</span>
 </div>
   
 
@@ -117,13 +116,6 @@ This ontology has the following classes and properties.</span>
 </div>
   
 
-<!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">GloSIS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-
-<span class="markdown">This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.
-
-</span></div>
-   
 
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for GloSIS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -146,6 +138,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/observation/GL_Observation</p>
       <div class="comment">
+         <span class="markdown">Specialization for GloSIS of ISO iso19156 OM_Observation class, defined as an act that results in the estimation of the value of a feature property, and involves application of a specified procedure, such as a sensor, instrument, algorithm or process chain.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</span>
       </div>
       <dl class="description">
@@ -166,13 +161,6 @@ This section provides details for each class and property defined by GloSIS Onto
 </div>
     
 
-<!--REFERENCES SECTION-->
-  <div id="references">
-<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
-
-</div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>

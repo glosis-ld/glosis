@@ -7,13 +7,13 @@
 @base <http://w3id.org/glosis/model/surface#> .
 
 <http://w3id.org/glosis/model/surface> rdf:type owl:Ontology ;
-                                        owl:versionIRI <http://w3id.org/glosis/model/surface/1.4.1> ;
+                                        owl:versionIRI <http://w3id.org/glosis/model/surface/1.5.0> ;
                                         owl:imports <http://w3id.org/glosis/model/codelists/> ,
                                                     <http://w3id.org/glosis/model/common/> ,
                                                     <http://w3id.org/glosis/model/iso28258/2013/> ,
                                                     <http://www.w3.org/ns/sosa/> ,
                                                     <http://www.w3.org/ns/ssn/> ;
-                                        <http://purl.org/dc/terms/creator> _:genid-nodeid-node1i9tv0sv2x1015 ,
+                                        <http://purl.org/dc/terms/creator> _:genid-nodeid-node1ijdc3ol3x1014 ,
                                                                            _:genid1 ,
                                                                            _:genid3 ;
                                         <http://purl.org/dc/terms/description> "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
@@ -21,7 +21,7 @@
                                         <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
                                         <http://purl.org/dc/terms/title> "GlOSIS Ontology: Surface module"@en ;
                                         rdfs:comment "This module contains the classes and properties to describe soil surfaces (a subtype of a plot with surface shape. Surfaces may be located within other surfaces)."@en ;
-                                        owl:versionInfo "1.4.1" .
+                                        owl:versionInfo "1.5.0" .
 
 _:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
                                           ] ;
@@ -141,6 +141,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/surface/GL_Surface
 <http://w3id.org/glosis/model/surface/GL_Surface> rdf:type owl:Class ;
                                                   rdfs:subClassOf <http://w3id.org/glosis/model/iso28258/2013/Surface> ;
+                                                  rdfs:comment "Specialization for GloSIS of ISO iso28258 Surface soil feature type, which typically refers to the uppermost layer of the soil profile, which is crucial for various analyses and applications." ;
                                                   rdfs:label "GL_Surface"@en ;
                                                   <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
@@ -160,6 +161,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                    owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                    owl:hasValue <http://w3id.org/glosis/model/surface/saltCoverProperty>
                                                                  ] ;
+                                                 rdfs:comment "Salt cover is the visible accumulation of salts on the soil surface, typically forming a crust. This can occur in areas of high evaporation, leading to the upward movement of soluble salts from deeper soil layers. Source: US Salinity Laboratory Staff. (1954). Diagnosis and Improvement of Saline and Alkali Soils. U.S. Department of Agriculture Handbook No. 60." ;
                                                  rdfs:label "SaltCover"@en ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: 22,1"@en .
 
@@ -179,6 +181,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                       owl:hasValue <http://w3id.org/glosis/model/surface/saltPresenceProperty>
                                                                     ] ;
+                                                    rdfs:comment "Salt presence refers to the occurrence of soluble salts within the soil, typically measured by electrical conductivity (EC) or ion concentrations (e.g., sodium, calcium). High salt concentrations can lead to soil salinity, which affects plant growth and soil structure. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Education." ;
                                                     rdfs:label "SaltPresence"@en ;
                                                     <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
@@ -213,6 +216,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                        owl:hasValue <http://w3id.org/glosis/model/surface/saltThicknessProperty>
                                                                      ] ;
+                                                     rdfs:comment "Salt thickness describes the depth of the soil profile where significant salt concentrations are found, which may be determined using soil core samples or electrical conductivity measurements. Salt thickness is crucial in arid regions where salt accumulation occurs due to evaporation. Source: Rhoades, J.D., & Kandiah, A. (1992). Soil Salinity Management in Agriculture. Springer." ;
                                                      rdfs:label "SaltThickness"@en ;
                                                      <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 22,2"@en .
 
@@ -232,6 +236,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                             owl:hasValue <http://w3id.org/glosis/model/surface/sealingConsistenceProperty>
                                                                           ] ;
+                                                          rdfs:comment "Sealing consistence refers to the soil's ability to resist compaction and the formation of a surface crust, often caused by wetting and drying cycles, or rainfall impact. Soils with low sealing consistence are more prone to surface sealing. Source: Soil Science Society of America (SSSA). (2008). Glossary of Soil Science Terms. Soil Science Society of America." ;
                                                           rdfs:label "SealingConsistence"@en ;
                                                           <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 20,2"@en .
 
@@ -251,6 +256,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                           owl:hasValue <http://w3id.org/glosis/model/surface/sealingThicknessProperty>
                                                                         ] ;
+                                                        rdfs:comment "Sealing thickness refers to the depth of the compacted or sealed layer within the soil, which can hinder water infiltration, root growth, and soil aeration. This layer is often formed in fine-textured soils under intense rainfall or drying conditions. Source: Pagliai, M., & Vignozzi, N. (2002). Soil Structure and Soil Quality: A Review of the State of the Art. Agriculture, Ecosystems & Environment, 88(3), 77-86." ;
                                                         rdfs:label "SealingThickness"@en ;
                                                         <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: 20,1"@en .
 
@@ -262,6 +268,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/surface/saltCoverProperty
 <http://w3id.org/glosis/model/surface/saltCoverProperty> rdf:type owl:NamedIndividual ,
                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                         rdfs:comment "Salt cover refers to the accumulation of salts on the surface of the soil, often visible as a crystalline crust. This phenomenon occurs when capillary action causes soluble salts to move upwards through the soil, where they crystallize as water evaporates. Salt cover can interfere with seed germination, plant growth, and water infiltration, and is commonly found in arid and semi-arid regions with high evaporation rates. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Education. " ;
                                                          rdfs:label "saltCoverProperty"@en ;
                                                          <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: 22,1"@en .
 
@@ -270,6 +277,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/surface/saltPresenceProperty> rdf:type owl:NamedIndividual ,
                                                                      <http://qudt.org/schema/qudt/Quantitykind> ,
                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                            rdfs:comment "The salt presence property of soil refers to the concentration of soluble salts, such as sodium, calcium, and magnesium, within the soil profile. High salt levels can lead to soil salinity, negatively affecting plant growth by altering water availability and soil structure. The presence of salts is typically measured using electrical conductivity (EC) or specific ion concentration tests. Soils with high salt presence are often found in arid regions where evaporation exceeds precipitation, leading to salt accumulation at or near the surface. Source: Rhoades, J.D., & Kandiah, A. (1992). Soil Salinity Management in Agriculture. Springer. " ;
                                                             rdfs:label "saltPresenceProperty"@en ;
                                                             <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
@@ -277,6 +285,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/surface/saltThicknessProperty
 <http://w3id.org/glosis/model/surface/saltThicknessProperty> rdf:type owl:NamedIndividual ,
                                                                       <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                             rdfs:comment "Salt thickness refers to the depth of the soil profile at which soluble salts are present in significant concentrations. This property is particularly important in regions subject to evaporation and capillary rise, where salts accumulate near the surface or at specific depths. Salt thickness can impact soil fertility and water retention, as the concentrated salts can inhibit root growth and water uptake. This property is commonly determined through soil sampling and electrical conductivity measurements at various depths. Source: United States Salinity Laboratory Staff. (1954). Diagnosis and Improvement of Saline and Alkali Soils. U.S. Department of Agriculture Handbook No. 60. " ;
                                                              rdfs:label "SaltThicknessProperty"@en ;
                                                              <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 22,2"@en .
 
@@ -284,6 +293,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/surface/sealingConsistenceProperty
 <http://w3id.org/glosis/model/surface/sealingConsistenceProperty> rdf:type owl:NamedIndividual ,
                                                                            <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                  rdfs:comment "The sealing consistence property of soil describes the resistance of the soil to the formation of a surface crust or compacted layer, which can impede water infiltration and root penetration. This phenomenon typically occurs in fine-textured soils, such as clays and silts, where the particles are tightly bound, leading to a hardened surface layer upon wetting and drying. Sealing consistence affects water movement and can lead to surface runoff and erosion in agricultural soils. Source: Soil Science Society of America (SSSA). (2008). Glossary of Soil Science Terms. Soil Science Society of America. " ;
                                                                   rdfs:label "sealingConsistenceProperty"@en ;
                                                                   <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 20,2"@en .
 
@@ -291,6 +301,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/surface/sealingThicknessProperty
 <http://w3id.org/glosis/model/surface/sealingThicknessProperty> rdf:type owl:NamedIndividual ,
                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                rdfs:comment "The sealing thickness property refers to the depth of the compacted or sealed layer within the soil, which is typically a result of intense rainfall, drying, or tillage practices. This layer, which forms in fine-textured soils, can significantly reduce water infiltration and root growth, leading to reduced soil aeration and potential surface runoff. The sealing thickness property is crucial for understanding soil erosion risks and water management in agricultural systems. Source: Pagliai, M., & Vignozzi, N. (2002). Soil Structure and Soil Quality: A Review of the State of the Art. Agriculture, Ecosystems & Environment, 88(3), 77-86. " ;
                                                                 rdfs:label "sealingThicknessProperty"@en ;
                                                                 <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: 20,1"@en .
 

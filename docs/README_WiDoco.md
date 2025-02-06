@@ -74,4 +74,16 @@ in the `env` folder.
 
 ```
 ./generate_all.sh
-``` 
+```
+
+Manual editions
+---------------
+
+A few documentation aspects are not automated by WiDoco and must be edited manually. In the future these task should either be automated locally or added upstream to WiDoco.
+
+* Add release and modified dates
+* Move last sentence of each Abstract to the Introduction
+* Remove section Main Module Description
+* Remove Rules sub-section
+* Remove References section
+* Check imported ontologies (Main module)
