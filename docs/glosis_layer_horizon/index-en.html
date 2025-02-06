@@ -59,13 +59,13 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 23-12-2024</dt>
+<dt>Modified on: 06-02-2025</dt>
 <dt>This version:</dt>
 <dd><a href="http://w3id.org/glosis/model/layerhorizon/1.5.0">http://w3id.org/glosis/model/layerhorizon/1.5.0</a></dd>
 <dt>Revision:</dt>
 <dd>1.5.0</dd>
 <dt>Authors:</dt>
-<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd><dd>Bogusz Janiak, PSNC</dd><dd><a href="http://orcid.org/0000-0002-5851-2071">Luís Moreira de Sousa</a>, ISRIC</dd><dd>W3C/OGC Spatial Data on the Web Working Group</dd>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd><dd>Bogusz Janiak, PSNC</dd><dd><a href="http://orcid.org/0000-0002-5851-2071">Luís Moreira de Sousa</a>, Técnico ULisboa</dd><dd>W3C/OGC Spatial Data on the Web Working Group</dd>
 
 <dt>Imported Ontologies:</dt>
 <dd><a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a></dd><dd><a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a></dd><dd><a href="http://w3id.org/glosis/model/codelists/">http://w3id.org/glosis/model/codelists/</a></dd><dd><a href="http://w3id.org/glosis/model/common/">http://w3id.org/glosis/model/common/</a></dd><dd><a href="http://w3id.org/glosis/model/iso28258/2013/">http://w3id.org/glosis/model/iso28258/2013/</a></dd><dd><a href="http://w3id.org/glosis/model/unit/">http://w3id.org/glosis/model/unit/</a></dd>
@@ -90,7 +90,6 @@ This ontology is one of the modules comprising Global Soil Information System (G
 
  The GloSIS ontology enables the representation of soil related data in semantic format. The ontology has been derived from the UML GLOSIS data model v1.0, and it has been created in line with best practices and methodologies, reusing existing standard models and ontologies, including sosa/ssn for the representation of measurements, or SKOS for the representation of codelists.
 
-<br></span>
 </div>
 <div id="toc"></div> 
 
@@ -1244,8 +1243,6 @@ This ontology has the following classes and properties.</span>
 </div>
   
 
-   
-
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for GloSIS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by GloSIS Ontology: Main module.
@@ -2106,6 +2103,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/AcidityExchangeable</p>
       <div class="comment">
+         <span class="markdown">Exchangeable acidity refers to the acidic cations (like hydrogen and aluminum) that are adsorbed onto the soil’s exchange sites and can be replaced by other cations. It influences soil pH and plant growth. High exchangeable acidity is common in highly weathered and acidic soils. Source: Brady, N.C., &amp; Weil, R.R. (2017). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -2143,6 +2143,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/AluminiumExchangeableBases</p>
+      <div class="comment">
+         <span class="markdown">This refers to aluminum ions that occupy exchangeable sites within soil colloids. Exchangeable aluminum is significant because it becomes toxic to plants in acidic soils, affecting root development. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2182,6 +2185,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/AluminiumExtractableElements</p>
       <div class="comment">
+         <span class="markdown">Extractable aluminum represents the fraction of aluminum that can be chemically extracted from soil using reagents. It reflects bioavailability and toxicity under certain conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -2219,6 +2225,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/AluminiumTotalElements</p>
+      <div class="comment">
+         <span class="markdown">Total aluminum indicates the complete amount of aluminum present in the soil, including its mineral and organic complexes. It is measured through total digestion methods and is often used for soil classification. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2258,6 +2267,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/AvailableWaterHoldingCapacity</p>
       <div class="comment">
+         <span class="markdown">Available Water Holding Capacity (AWHC) is the amount of water that a soil can hold and release for plant uptake, calculated as the difference between field capacity and permanent wilting point. This property is influenced by soil texture and structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -2295,6 +2307,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BaseSaturation</p>
+      <div class="comment">
+         <span class="markdown">Base saturation is the proportion of soil exchange sites occupied by basic cations (calcium, magnesium, potassium, and sodium) relative to the total cation exchange capacity (CEC). It indicates soil fertility and liming needs. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2334,6 +2349,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BiologicalAbundance</p>
       <div class="comment">
+         <span class="markdown">This term refers to the quantity of living organisms (bacteria, fungi, protozoa, and earthworms) in the soil. Biological abundance is a key indicator of soil health and nutrient cycling processes. Source: Brady, N.C., &amp; Weil, R.R. (2017). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 81</span>
       </div>
       <dl class="description">
@@ -2353,6 +2371,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BiologicalFeatures</p>
       <div class="comment">
+         <span class="markdown">Biological features of soil include microbial communities, faunal activity, and organic residues that influence decomposition, nutrient cycling, and soil structure. These features contribute to soil productivity and ecosystem functioning. Source: Doran, J.W., &amp; Parkin, T.B. (1994). Defining and Assessing Soil Quality.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 82</span>
       </div>
       <dl class="description">
@@ -2371,6 +2392,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BoronExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable boron refers to the boron fraction that is available for plant uptake. It is extracted with solutions like hot water or dilute acids and is crucial for plant growth in trace amounts. Source: Gupta, U.C. (1993). Boron and Its Role in Crop Production.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2410,6 +2434,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BoronTotalElements</p>
       <div class="comment">
+         <span class="markdown">Total boron includes all forms of boron present in the soil, both available and unavailable, including those bound in minerals and organic matter. Source: Gupta, U.C. (1993). Boron and Its Role in Crop Production.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -2448,6 +2475,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BoundaryDistinctness</p>
       <div class="comment">
+         <span class="markdown">Boundary distinctness refers to the clarity or sharpness of the boundary between two soil horizons. It is classified based on the thickness of the transitional zone and helps determine soil formation processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 24.1</span>
       </div>
       <dl class="description">
@@ -2467,6 +2497,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BoundaryTopography</p>
       <div class="comment">
+         <span class="markdown">Boundary topography describes the shape or contour of the boundary between soil horizons. It can be smooth, wavy, irregular, or broken, indicating the processes of soil development and deposition. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 24,2</span>
       </div>
       <dl class="description">
@@ -2485,6 +2518,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BulkDensityFineEarth</p>
+      <div class="comment">
+         <span class="markdown">Bulk density of fine earth is the mass of dry soil divided by the volume it occupies, excluding coarse fragments (particles &gt;2 mm). It influences root growth, water movement, and porosity. Source: Hillel, D. (2004). Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2524,6 +2560,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BulkDensityMineral</p>
       <div class="comment">
+         <span class="markdown">Bulk density mineral refers to the dry bulk density of mineral soils, focusing on soils with minimal organic matter content. It affects soil strength, aeration, and compaction. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 58</span>
       </div>
       <dl class="description">
@@ -2543,6 +2582,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BulkDensityPeat</p>
       <div class="comment">
+         <span class="markdown">This is the bulk density measurement of peat soils, which are rich in organic matter. Peat soils have very low bulk density due to their high porosity and organic composition. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 59,3</span>
       </div>
       <dl class="description">
@@ -2561,6 +2603,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/BulkDensityWholeSoil</p>
+      <div class="comment">
+         <span class="markdown">Bulk density whole soil is the dry mass of the entire soil sample, including both fine earth and coarse fragments. It reflects total soil compaction and space available for roots and water. Source: Brady, N.C., &amp; Weil, R.R. (2017). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2600,6 +2645,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CadmiumExtractableElements</p>
       <div class="comment">
+         <span class="markdown">Extractable cadmium refers to the portion of cadmium in soil that is readily soluble or bioavailable. It is measured using chemical extractants and is critical for assessing soil contamination and plant uptake risks. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System.</span>
       </div>
       <dl class="description">
@@ -2637,6 +2685,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CadmiumTotalElements</p>
+      <div class="comment">
+         <span class="markdown">Total cadmium includes all forms of cadmium in soil, such as bound, mineralized, and free forms. It is used to assess long-term contamination levels. Source: Kabata-Pendias, A., &amp; Pendias, H. (2001). Trace Elements in Soils and Plants.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System.</span>
       </div>
@@ -2676,6 +2727,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CalciumExchangeableBases</p>
       <div class="comment">
+         <span class="markdown">Calcium exchangeable bases refer to calcium ions adsorbed on soil colloids that can be exchanged with other cations in the soil solution. Calcium is essential for soil structure and plant cell wall formation. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -2713,6 +2767,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CalciumExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable calcium is the calcium fraction that can be chemically removed using specific extractants. It represents calcium availability to plants. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2752,6 +2809,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CalciumTotalElements</p>
       <div class="comment">
+         <span class="markdown">Total calcium refers to the total amount of calcium present in the soil, including calcium in minerals, organic matter, and soil solution. Source: Soil Fertility and Nutrient Management (Havlin et al., 2016).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -2790,6 +2850,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CarbonatesContent</p>
       <div class="comment">
+         <span class="markdown">Carbonates content refers to the amount of carbonates (e.g., calcium carbonate, magnesium carbonate) in the soil, which influences soil pH, nutrient availability, and buffering capacity. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 38</span>
       </div>
       <dl class="description">
@@ -2809,6 +2872,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CarbonatesForms</p>
       <div class="comment">
+         <span class="markdown">This term describes the specific types or forms of carbonates found in soil, such as calcite or dolomite. These forms influence soil chemical properties and are common in arid soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 39</span>
       </div>
       <dl class="description">
@@ -2827,6 +2893,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CarbonInorganic</p>
+      <div class="comment">
+         <span class="markdown">Inorganic carbon in soils primarily occurs as carbonates (e.g., calcium carbonate). It plays a significant role in soil pH buffering and is common in arid and semi-arid regions. Source: Lal, R. (2006). Encyclopedia of Soil Science.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2866,6 +2935,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CarbonOrganic</p>
       <div class="comment">
+         <span class="markdown">Organic carbon refers to carbon stored in soil organic matter, including plant residues, microorganisms, and humus. It is a key indicator of soil health and fertility. Source: Brady, N.C., &amp; Weil, R.R. (2017). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -2903,6 +2975,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CarbonTotal</p>
+      <div class="comment">
+         <span class="markdown">Total carbon is the sum of both organic and inorganic carbon present in the soil. It reflects the overall carbon stock and soil quality. Source: Lal, R. (2006). Encyclopedia of Soil Science.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2942,6 +3017,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CationExchangeCapacity</p>
       <div class="comment">
+         <span class="markdown">CEC is the soil’s ability to hold and exchange cations (positively charged ions) such as calcium, magnesium, potassium, and sodium. It is a critical property for soil fertility and nutrient retention. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -2960,6 +3038,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CationExchangeCapacitycSoil</p>
+      <div class="comment">
+         <span class="markdown">This is synonymous with CEC but specifically refers to the total exchangeable cations in the whole soil, including both organic matter and mineral components. Source: Brady, N.C., &amp; Weil, R.R. (2017). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -2998,6 +3079,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CationExchangeCapacityEffective</p>
+      <div class="comment">
+         <span class="markdown">Effective CEC measures the soil’s exchange capacity under current pH conditions. It includes exchangeable bases and exchangeable acidity. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -3056,6 +3140,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CationsSum</p>
       <div class="comment">
+         <span class="markdown">The cations sum represents the total concentration of all exchangeable and soluble cations present in the soil, including calcium, magnesium, potassium, sodium, and hydrogen. Source: Soil Fertility and Nutrient Management (Havlin et al., 2016).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3094,6 +3181,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CementationContinuity</p>
       <div class="comment">
+         <span class="markdown">Cementation continuity refers to how continuous or pervasive cemented zones are within the soil profile. It describes the degree to which cemented materials (e.g., silica, iron oxides) bond soil particles together. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 69</span>
       </div>
       <dl class="description">
@@ -3112,6 +3202,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CementationDegree</p>
+      <div class="comment">
+         <span class="markdown">Cementation degree indicates the strength of the cemented material in a soil horizon. It ranges from weakly cemented, which can be broken with hand pressure, to strongly cemented, which resists breaking. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 72</span>
       </div>
@@ -3132,6 +3225,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CementationFabric</p>
       <div class="comment">
+         <span class="markdown">Cementation fabric describes the internal arrangement of cemented materials, including the texture, layering, and structural patterns formed by cementing agents like carbonates or oxides. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 70</span>
       </div>
       <dl class="description">
@@ -3150,6 +3246,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CementationNature</p>
+      <div class="comment">
+         <span class="markdown">Cementation nature refers to the composition and type of cementing agents present in the soil, such as calcium carbonate, silica, or iron oxides, and their impact on soil properties. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 71</span>
       </div>
@@ -3170,6 +3269,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/Clay</p>
       <div class="comment">
+         <span class="markdown">Clay refers to soil particles smaller than 0.002 mm in diameter. It has a large surface area, high water-holding capacity, and significant cation exchange capacity, which makes it essential for soil fertility and structure. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3188,6 +3290,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ClayFractionTexture</p>
+      <div class="comment">
+         <span class="markdown">Clay fraction texture describes the particle-size distribution and properties of the clay fraction within the soil. It influences water retention, aeration, and soil plasticity. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -3246,6 +3351,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CoarseFragments</p>
       <div class="comment">
+         <span class="markdown">Coarse fragments are soil particles larger than 2 mm in diameter, such as gravel, cobbles, and stones. They affect soil porosity, water infiltration, and root penetration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3284,6 +3392,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CoatingAbundance</p>
       <div class="comment">
+         <span class="markdown">Coating abundance refers to the quantity or percentage of coatings (e.g., clay films, oxide layers) on soil particles or aggregates. Coatings indicate soil movement and development processes. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 64</span>
       </div>
       <dl class="description">
@@ -3302,6 +3413,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CoatingContrast</p>
+      <div class="comment">
+         <span class="markdown">Coating contrast describes the degree of visual distinction between coatings and the surrounding soil matrix. It may range from faint to prominent. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 65</span>
       </div>
@@ -3322,6 +3436,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CoatingForm</p>
       <div class="comment">
+         <span class="markdown">Coating form refers to the specific physical shape or arrangement of soil coatings, such as laminar films, streaks, or bridges between particles. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 67</span>
       </div>
       <dl class="description">
@@ -3340,6 +3457,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CoatingLocation</p>
+      <div class="comment">
+         <span class="markdown">Coating location indicates where the coating appears within the soil, such as on aggregate surfaces, pore walls, or within soil matrix voids. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 68</span>
       </div>
@@ -3360,6 +3480,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CoatingNature</p>
       <div class="comment">
+         <span class="markdown">Coating nature refers to the composition of coatings, which could include clay, organic matter, carbonates, or iron oxides. This indicates pedogenic processes. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 66</span>
       </div>
       <dl class="description">
@@ -3378,6 +3501,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ConsistenceDry</p>
+      <div class="comment">
+         <span class="markdown">Dry consistence describes the resistance of dry soil to crushing or deformation. Categories include loose, soft, hard, and extremely hard. It provides information on soil strength when dry. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 53</span>
       </div>
@@ -3398,6 +3524,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ConsistenceMoist</p>
       <div class="comment">
+         <span class="markdown">Moist consistence describes the resistance of moist soil to deformation or rupture. It ranges from loose to firm, reflecting the soil’s cohesiveness under field moisture conditions. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 54</span>
       </div>
       <dl class="description">
@@ -3416,6 +3545,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CopperExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable copper refers to the portion of total copper in the soil that is available for plant uptake, measured using chemical extractants. It is an essential micronutrient but can be toxic at high concentrations. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -3455,6 +3587,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/CopperTotalElements</p>
       <div class="comment">
+         <span class="markdown">Total copper refers to all copper present in the soil, including bound and free forms. It is measured to assess contamination or natural background levels. Source: Kabata-Pendias, A., &amp; Pendias, H. (2001). Trace Elements in Soils and Plants.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3493,6 +3628,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/DryConsistency</p>
       <div class="comment">
+         <span class="markdown">Dry consistency measures the strength and behavior of soil when dry, such as its tendency to crumble or remain intact. It is vital for evaluating soil engineering properties. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3511,6 +3649,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/EffectiveCec</p>
+      <div class="comment">
+         <span class="markdown">Effective CEC (ECEC) represents the sum of exchangeable bases and exchangeable acidity in soil at its natural pH. It helps evaluate soil fertility under current conditions. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -3550,6 +3691,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ElectricalConductivity</p>
       <div class="comment">
+         <span class="markdown">Electrical conductivity (EC) measures the ability of a soil solution to conduct an electric current. It is used to estimate soil salinity, as salts increase conductivity. Source: Rhoades, J.D. (1996). Methods of Soil Analysis.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3588,6 +3732,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/FragmentsClass</p>
       <div class="comment">
+         <span class="markdown">Fragments class refers to the classification of coarse fragments in soil based on size and type, such as gravel, cobbles, stones, or boulders. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3606,6 +3753,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/GL_Horizon</p>
+      <div class="comment">
+         <span class="markdown">Specialization for GloSIS of the ISO 28258 Horizon soil feature type, defined as the domain of a soil with a certain vertical extension, which is more or less parallel to the surface and is homogeneous for most morphological and analytical characteristics, developed in a parent material through pedogenic processes or made up of in situ sedimented organic residues of up-growing plants (peat)</span>
+      </div>
       <div class="comment">
          <span class="markdown">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</span>
       </div>
@@ -3626,6 +3776,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/GL_Layer</p>
       <div class="comment">
+         <span class="markdown">Specialization for GloSIS of the ISO 28258 Layer soil feature type, defined as the domain of a soil with a certain vertical extension developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</span>
       </div>
       <dl class="description">
@@ -3644,6 +3797,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/Gypsum</p>
+      <div class="comment">
+         <span class="markdown">Gypsum refers to calcium sulfate dihydrate (CaSO₄·2H₂O) in the soil, which can occur naturally or through amendments. It influences soil structure, fertility, and salinity management. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -3664,6 +3820,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/GypsumContent</p>
       <div class="comment">
+         <span class="markdown">Gypsum content measures the proportion of gypsum present in a soil sample. High gypsum levels can affect soil water retention and cause structural instability when dissolved. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 40</span>
       </div>
       <dl class="description">
@@ -3682,6 +3841,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/GypsumForms</p>
+      <div class="comment">
+         <span class="markdown">Gypsum forms describe the physical state in which gypsum occurs in the soil, such as crystals, nodules, veins, or powdery accumulations. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 41</span>
       </div>
@@ -3721,6 +3883,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/GypsumWeight</p>
       <div class="comment">
+         <span class="markdown">Gypsum weight indicates the mass of gypsum per unit weight of soil. It is relevant for soil quality evaluation and agronomic management practices. Source: Rhoades, J.D. (1996). Methods of Soil Analysis.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3758,6 +3923,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/HydraulicConductivity</p>
+      <div class="comment">
+         <span class="markdown">Hydraulic conductivity is the rate at which water moves through soil pores under a hydraulic gradient. It reflects soil permeability and is critical for water management. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -3797,6 +3965,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/HydrogenExchangeableBases</p>
       <div class="comment">
+         <span class="markdown">Hydrogen exchangeable bases refer to the exchangeable hydrogen ions in the soil, which contribute to soil acidity and influence cation exchange capacity (CEC). Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3834,6 +4005,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/IronExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable iron represents the portion of iron in soil that is chemically available for biological or geochemical processes, measured using specific extractants like DTPA or oxalate. Source: Lindsay, W.L., &amp; Norvell, W.A. (1978). Soil Sci. Soc. Am. J.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -3873,6 +4047,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/IronTotalElements</p>
       <div class="comment">
+         <span class="markdown">Total iron is the total quantity of iron present in the soil, including mineral and non-mineral forms. It is measured to assess background levels or environmental contamination. Source: Kabata-Pendias, A., &amp; Pendias, H. (2001). Trace Elements in Soils and Plants.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3910,6 +4087,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MagnesiumExchangeableBases</p>
+      <div class="comment">
+         <span class="markdown">Magnesium exchangeable bases refer to the magnesium ions that are adsorbed onto soil colloids and available for exchange. It is vital for plant nutrition and soil structure. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -3949,6 +4129,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MagnesiumExtractableElements</p>
       <div class="comment">
+         <span class="markdown">Extractable magnesium is the portion of total magnesium in soil that can be released and made available to plants, typically measured using chemical extraction methods. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -3986,6 +4169,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MagnesiumTotalElements</p>
+      <div class="comment">
+         <span class="markdown">Total magnesium refers to the entire amount of magnesium present in the soil, including both plant-available and mineral-bound forms. Source: Kabata-Pendias, A., &amp; Pendias, H. (2001). Trace Elements in Soils and Plants.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -4025,6 +4211,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ManganeseExchangeableBases</p>
       <div class="comment">
+         <span class="markdown">Manganese exchangeable bases represent manganese ions adsorbed onto soil particles that can be readily exchanged. It plays a role in redox processes and plant nutrition. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System.</span>
       </div>
       <dl class="description">
@@ -4062,6 +4251,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ManganeseExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable manganese refers to the portion of manganese that is chemically available in soil, often determined with extractants like DTPA. It is critical for plant growth. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -4101,6 +4293,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ManganeseTotalElements</p>
       <div class="comment">
+         <span class="markdown">Total manganese is the sum of all manganese forms in soil, including both bioavailable and mineral-bound fractions, important for soil fertility assessment. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -4139,6 +4334,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralConcAbundance</p>
       <div class="comment">
+         <span class="markdown">Mineral concentration abundance refers to the amount or volume of specific mineral accumulations within the soil, which influences nutrient availability and soil properties. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -4157,6 +4355,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralConcColour</p>
+      <div class="comment">
+         <span class="markdown">Mineral concentration color describes the color of mineral accumulations in soil horizons. It is often related to iron oxides, carbonates, or other mineral constituents. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 78</span>
       </div>
@@ -4177,6 +4378,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralConcHardness</p>
       <div class="comment">
+         <span class="markdown">Mineral concentration hardness refers to the resistance of mineral accumulations in the soil to being broken apart, typically related to the degree of cementation. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 76</span>
       </div>
       <dl class="description">
@@ -4195,6 +4399,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralConcKind</p>
+      <div class="comment">
+         <span class="markdown">Mineral concentration kind identifies the type of mineral accumulation, such as gypsum, calcite, or hematite, which informs pedogenic processes. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 74</span>
       </div>
@@ -4215,6 +4422,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralConcNature</p>
       <div class="comment">
+         <span class="markdown">Mineral concentration nature describes the chemical composition and formation processes of specific mineral accumulations in the soil profile. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 77</span>
       </div>
       <dl class="description">
@@ -4233,6 +4443,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralConcShape</p>
+      <div class="comment">
+         <span class="markdown">Mineral concentration shape describes the physical form or morphology of mineral accumulations, such as nodules, coatings, or concretions. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 75,2</span>
       </div>
@@ -4253,6 +4466,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralConcSize</p>
       <div class="comment">
+         <span class="markdown">Mineral concentration size refers to the dimensions or scale of mineral accumulations in the soil, ranging from microscopic to large features. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 75,1</span>
       </div>
       <dl class="description">
@@ -4272,6 +4488,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralConcVolume</p>
       <div class="comment">
+         <span class="markdown">Mineral concentration volume quantifies the proportion of soil volume occupied by mineral accumulations, which impacts soil porosity and nutrient cycling. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 73</span>
       </div>
       <dl class="description">
@@ -4290,6 +4509,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralContent</p>
+      <div class="comment">
+         <span class="markdown">Mineral content measures the total proportion of minerals in the soil, including both primary and secondary minerals, influencing soil fertility and texture. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -4329,6 +4551,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MineralFragments</p>
       <div class="comment">
+         <span class="markdown">Mineral fragments are particles of rock or minerals found in the soil matrix, often larger than the clay or silt fraction. Their composition influences soil texture and structure. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 30</span>
       </div>
       <dl class="description">
@@ -4348,6 +4573,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MoistConsistency</p>
       <div class="comment">
+         <span class="markdown">Moist consistency refers to the strength and behavior of soil when moist. It describes the soil's ability to stick, deform, or crumble under pressure. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -4366,6 +4594,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MoistureContent</p>
+      <div class="comment">
+         <span class="markdown">Moisture content is the amount of water in the soil, expressed as a percentage of the soil's dry weight. It is essential for assessing soil water availability for plants. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Africa Soil Profiles Database Version 1.2. ISRIC Report 2014/01</span>
       </div>
@@ -4405,6 +4636,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MolybdenumExtractableElements</p>
       <div class="comment">
+         <span class="markdown">Extractable molybdenum refers to the portion of molybdenum in soil that is chemically available for plant uptake, typically measured using extractants like ammonium oxalate. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System.</span>
       </div>
       <dl class="description">
@@ -4442,6 +4676,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MolybdenumTotalElements</p>
+      <div class="comment">
+         <span class="markdown">Total molybdenum includes all molybdenum present in the soil, both in available and mineral-bound forms. Molybdenum is an essential micronutrient for plant nitrogen metabolism. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System.</span>
       </div>
@@ -4481,6 +4718,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MottlesAbundance</p>
       <div class="comment">
+         <span class="markdown">Mottle abundance refers to the quantity of color variations or mottling in a soil horizon, often indicating fluctuating water conditions or redox processes. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 32</span>
       </div>
       <dl class="description">
@@ -4499,6 +4739,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MottlesBoundaryClassification</p>
+      <div class="comment">
+         <span class="markdown">Mottle boundary classification describes the sharpness or gradation of boundaries between mottles and the surrounding soil matrix, reflecting pedogenic processes. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 35</span>
       </div>
@@ -4519,6 +4762,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MottlesColour</p>
       <div class="comment">
+         <span class="markdown">Mottle color refers to the hue, value, and chroma of mottles within the soil, often linked to oxidation-reduction conditions or iron and manganese accumulations. Source: Munsell Soil Color Charts (2020).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -4538,6 +4784,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MottlesContrast</p>
       <div class="comment">
+         <span class="markdown">Mottle contrast describes the degree of visual distinction between mottles and the surrounding soil, classified as faint, distinct, or prominent. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 34</span>
       </div>
       <dl class="description">
@@ -4556,6 +4805,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MottlesPresence</p>
+      <div class="comment">
+         <span class="markdown">Mottle presence indicates the occurrence of color variations in the soil profile, which can reveal information about soil drainage and waterlogged conditions. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -4595,6 +4847,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/MottlesSize</p>
       <div class="comment">
+         <span class="markdown">Mottle size refers to the dimensions of individual mottles within the soil, categorized into fine, medium, and coarse. This helps characterize soil hydrology. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 33</span>
       </div>
       <dl class="description">
@@ -4613,6 +4868,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/NitrogenTotal</p>
+      <div class="comment">
+         <span class="markdown">Total nitrogen measures the total amount of nitrogen present in the soil, including organic and inorganic forms. It is critical for plant growth and soil fertility assessment. Source: Bremner, J.M. (1996). Methods of Soil Analysis.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -4652,6 +4910,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/OrganicMatter</p>
       <div class="comment">
+         <span class="markdown">Organic matter is the fraction of soil composed of plant and animal residues, living organisms, and decomposed organic materials. It improves soil structure, fertility, and water retention. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -4689,6 +4950,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/OxalateExtractableOpticalDensity</p>
+      <div class="comment">
+         <span class="markdown">Oxalate-extractable optical density measures the presence of poorly crystalline minerals, such as amorphous iron and aluminum oxides, by assessing light absorption in an oxalate extract. Source: Schwertmann, U. (1973). Soil Sci. Soc. Am. J.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -4728,6 +4992,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ParticleSizeFractionsSum</p>
       <div class="comment">
+         <span class="markdown">The particle size fractions sum refers to the total proportions of sand, silt, and clay in the soil, which determine soil texture. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -4766,6 +5033,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PeatDecompostion</p>
       <div class="comment">
+         <span class="markdown">Peat decomposition assesses the degree to which organic material in peat soils has broken down. It is described in terms of fibric, hemic, or sapric decomposition stages. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 31</span>
       </div>
       <dl class="description">
@@ -4784,6 +5054,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PeatDrainage</p>
+      <div class="comment">
+         <span class="markdown">Peat drainage describes the extent of water movement or drainage within peat soils. Poor drainage leads to anaerobic conditions and slow decomposition. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 59,1</span>
       </div>
@@ -4804,6 +5077,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PeatVolume</p>
       <div class="comment">
+         <span class="markdown">Peat volume measures the proportion of organic material in a soil profile relative to mineral soil, indicating the extent of peat accumulation. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 59,2</span>
       </div>
       <dl class="description">
@@ -4823,6 +5099,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PH</p>
       <div class="comment">
+         <span class="markdown">Soil pH measures the hydrogen ion activity in soil solution, indicating whether the soil is acidic, neutral, or alkaline. It affects nutrient availability and biological activity. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -4841,6 +5120,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PhosphorusExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable phosphorus is the fraction of phosphorus in soil that is available for plant uptake, often determined using Bray or Olsen extraction methods. Source: Olsen, S.R., et al. (1954). Soil Sci.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -4880,6 +5162,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PhosphorusRetention</p>
       <div class="comment">
+         <span class="markdown">Phosphorus retention describes the soil’s ability to adsorb and hold phosphorus, preventing it from leaching or becoming unavailable for plants. It is influenced by soil minerals like aluminum and iron oxides. Source: McDowell, R.W., &amp; Sharpley, A.N. (2001). J. Environ. Qual.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -4917,6 +5202,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PhosphorusTotalElements</p>
+      <div class="comment">
+         <span class="markdown">Total phosphorus measures the overall quantity of phosphorus in soil, including available and mineral-bound forms. It is essential for understanding soil fertility. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -4974,6 +5262,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PhysioChemical</p>
+      <div class="comment">
+         <span class="markdown">Physiochemical refers to the physical and chemical properties of soil, such as pH, texture, structure, nutrient content, and cation exchange capacity. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -5252,6 +5543,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/Plasticity</p>
       <div class="comment">
+         <span class="markdown">Plasticity describes the ability of soil to deform without cracking or breaking under applied pressure. It is a property of clay-rich soils. Source: Soil Mechanics (Terzaghi et al., 1996).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 56</span>
       </div>
       <dl class="description">
@@ -5270,6 +5564,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PoresAbundance</p>
+      <div class="comment">
+         <span class="markdown">Pore abundance refers to the quantity of voids or pores in the soil that facilitate air and water movement. It impacts root growth and soil aeration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 63</span>
       </div>
@@ -5290,6 +5587,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PoresSize</p>
       <div class="comment">
+         <span class="markdown">Pore size refers to the dimensions of void spaces within the soil matrix. It affects water infiltration, retention, and air movement. Pores are classified as macropores, mesopores, and micropores based on size. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 62</span>
       </div>
       <dl class="description">
@@ -5309,6 +5609,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/Porosity</p>
       <div class="comment">
+         <span class="markdown">Porosity is the percentage of soil volume occupied by pores or voids. It determines the soil’s ability to hold water and air, influencing plant growth and microbial activity. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5327,6 +5630,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PorosityClass</p>
+      <div class="comment">
+         <span class="markdown">Porosity class categorizes soils based on their pore size distribution and total porosity. It is used to evaluate soil aeration and permeability properties. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 60</span>
       </div>
@@ -5366,6 +5672,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PotassiumExchangeableBases</p>
       <div class="comment">
+         <span class="markdown">Exchangeable potassium refers to the form of potassium held on soil colloid surfaces and available for plant uptake. It is measured using ammonium acetate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5403,6 +5712,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PotassiumExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable potassium is the portion of potassium in the soil solution or loosely bound to particles that can be removed by chemical extractants and absorbed by plants. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -5442,6 +5754,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/PotassiumTotalElements</p>
       <div class="comment">
+         <span class="markdown">Total potassium includes all potassium in the soil, whether plant-available, mineral-bound, or part of soil minerals like feldspar and mica. It is not immediately accessible to plants. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5480,6 +5795,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/RootsAbundance</p>
       <div class="comment">
+         <span class="markdown">Roots abundance measures the density and distribution of roots in a soil horizon. It is classified as few, common, or many based on root counts per unit volume. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 80</span>
       </div>
       <dl class="description">
@@ -5498,6 +5816,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/RootsPresence</p>
+      <div class="comment">
+         <span class="markdown">Roots presence indicates the occurrence and visibility of roots within soil horizons, reflecting root growth, soil structure, and plant activity. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -5537,6 +5858,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/Salt</p>
       <div class="comment">
+         <span class="markdown">Salt in soil refers to the presence of soluble salts, such as sodium, calcium, and magnesium chlorides and sulfates. High salt content can lead to salinity issues. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5555,6 +5879,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SaltContent</p>
+      <div class="comment">
+         <span class="markdown">Salt content quantifies the total soluble salts in the soil, often expressed as electrical conductivity (EC) of a soil extract. It is crucial for assessing salinity risk. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 42</span>
       </div>
@@ -5594,6 +5921,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/Sand</p>
       <div class="comment">
+         <span class="markdown">Sand is the coarsest soil particle, ranging in size from 0.05 to 2.0 mm. Sandy soils have high permeability but low water and nutrient retention. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5612,6 +5942,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SandFractionTexture</p>
+      <div class="comment">
+         <span class="markdown">Sand fraction texture describes the proportion of different sand particle sizes (very fine to coarse) within the soil, influencing soil texture and structure. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -5670,6 +6003,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SandyTexture</p>
       <div class="comment">
+         <span class="markdown">Sandy texture indicates a soil dominated by sand-sized particles. Sandy soils are loose, well-drained, and low in nutrient-holding capacity. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: figure 4,3</span>
       </div>
       <dl class="description">
@@ -5689,6 +6025,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/Silt</p>
       <div class="comment">
+         <span class="markdown">Silt particles are intermediate in size between sand and clay (0.002 to 0.05 mm). Soils high in silt are fertile, smooth, and moderately water-retentive. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5707,6 +6046,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SiltFractionTexture</p>
+      <div class="comment">
+         <span class="markdown">Silt fraction texture describes the relative proportion of silt particles in the soil. Silt contributes to soil fertility and moisture retention but is prone to erosion. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -5765,6 +6107,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SodiumExchangeableBases</p>
       <div class="comment">
+         <span class="markdown">Exchangeable sodium refers to sodium ions held on soil colloid surfaces. High exchangeable sodium can cause soil dispersion, leading to poor structure and reduced permeability. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5802,6 +6147,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SodiumExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable sodium is the fraction of sodium ions in soil that can be removed by chemical extractants and assessed for salinity or sodicity potential. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -5841,6 +6189,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SodiumTotalElements</p>
       <div class="comment">
+         <span class="markdown">Total sodium includes all sodium present in the soil, including soluble, exchangeable, and mineral-bound forms. It is essential for understanding salinity issues. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5878,6 +6229,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SolubleAnionsTotal</p>
+      <div class="comment">
+         <span class="markdown">Soluble anions total refers to the total concentration of negatively charged ions, such as chloride, sulfate, and bicarbonate, in the soil solution. These influence soil salinity and alkalinity. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -5917,6 +6271,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SolubleCationsTotal</p>
       <div class="comment">
+         <span class="markdown">Soluble cations total measures the sum of positively charged ions (e.g., sodium, calcium, magnesium, potassium) dissolved in soil solution. These affect soil salinity and nutrient availability. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -5954,6 +6311,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SolubleSalts</p>
+      <div class="comment">
+         <span class="markdown">Soluble salts are salts dissolved in the soil solution that can move with water. Excessive soluble salts cause salinity, which impacts plant growth. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -5993,6 +6353,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/Stickiness</p>
       <div class="comment">
+         <span class="markdown">Stickiness is a measure of how soil adheres to objects when moist. It is influenced by clay content and is classified as non-sticky, slightly sticky, sticky, or very sticky. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 55</span>
       </div>
       <dl class="description">
@@ -6011,6 +6374,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/StructureGrade</p>
+      <div class="comment">
+         <span class="markdown">Structure grade describes the degree of soil aggregation and the strength of soil structure. Grades range from structureless to well-developed structural units. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 47</span>
       </div>
@@ -6031,6 +6397,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/StructureSize</p>
       <div class="comment">
+         <span class="markdown">Structure size refers to the dimensions of soil structural units (e.g., granular, blocky, platy). It affects soil porosity, water movement, and root growth. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 50</span>
       </div>
       <dl class="description">
@@ -6049,6 +6418,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SulfurExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable sulfur refers to the sulfur present in a readily available form for plants, typically measured using chemical extractants. It includes forms such as sulfate sulfur, which is essential for plant nutrition. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6087,6 +6459,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/SulfurTotalElements</p>
+      <div class="comment">
+         <span class="markdown">Total sulfur includes all forms of sulfur present in the soil, including organic sulfur, mineral sulfur, and soluble sulfates. It reflects the soil’s sulfur reserves. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6145,6 +6520,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/TextureLabClass</p>
       <div class="comment">
+         <span class="markdown">Texture lab class categorizes soil texture based on the proportions of sand, silt, and clay determined through laboratory analysis. It is classified into standard texture classes like sandy loam, silty clay, and others. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -6163,6 +6541,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/TotalCarbonateEquivalent</p>
+      <div class="comment">
+         <span class="markdown">Total carbonate equivalent measures the amount of carbonates (mainly calcium carbonate and magnesium carbonate) present in the soil. It is expressed as the equivalent percentage of CaCO₃ and affects soil pH and fertility. Source: Richards, L.A. (1954). Diagnosis and Improvement of Saline and Alkali Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6202,6 +6583,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/VoidsClassification</p>
       <div class="comment">
+         <span class="markdown">Voids classification describes the type and arrangement of voids or pores in the soil, which affects water movement, air circulation, and root penetration. It includes macropores, mesopores, and micropores. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 61</span>
       </div>
       <dl class="description">
@@ -6221,6 +6605,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/VoidsDiameter</p>
       <div class="comment">
+         <span class="markdown">Voids diameter measures the size of the soil pores or spaces, which directly influences soil aeration, infiltration, and water retention. Larger diameters correspond to macropores, while smaller ones are micropores. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 62</span>
       </div>
       <dl class="description">
@@ -6239,6 +6626,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/WaterRetention</p>
+      <div class="comment">
+         <span class="markdown">Water retention refers to the soil’s ability to hold water against gravity. It is influenced by soil texture, structure, and organic matter content, and is critical for plant growth. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6278,6 +6668,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/WetPlasticity</p>
       <div class="comment">
+         <span class="markdown">Wet plasticity describes the soil's ability to deform under stress when wet. It is influenced by clay content and mineralogy, and is measured as part of soil consistency properties. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -6296,6 +6689,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ZincExtractableElements</p>
+      <div class="comment">
+         <span class="markdown">Extractable zinc refers to the fraction of zinc that is bioavailable to plants and is measured using specific chemical extraction methods. Zinc is an essential micronutrient for plant growth. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6334,6 +6730,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/ZincTotalElements</p>
+      <div class="comment">
+         <span class="markdown">Total zinc includes all forms of zinc in the soil, including soluble, exchangeable, and mineral-bound zinc. It reflects the total zinc reserves but does not indicate immediate bioavailability. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6382,6 +6781,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/clayMineralogy</p>
+      <div class="comment">
+         <span class="markdown">Clay Mineralogy refers to the composition and types of clay minerals present in the soil, which are critical for understanding soil behavior, fertility, and physical properties. Clay minerals, such as kaolinite, illite, and montmorillonite, influence water retention, cation exchange capacity (CEC), and soil structure. These minerals have distinct characteristics based on their chemical composition and crystalline structure, which affect soil stability, nutrient availability, and its ability to retain moisture. Analyzing the clay mineralogy of soil helps in predicting soil performance in agriculture, engineering, and environmental management. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6686,6 +7088,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/biologicalAbundanceProperty</p>
       <div class="comment">
+         <span class="markdown">The Biological Abundance Property evaluates the presence and quantity of soil organisms, such as microbes, insects, and earthworms. This property reflects soil health, nutrient cycling, and organic matter decomposition, which are vital for maintaining soil fertility. Source: Lavelle, P., &amp; Spain, A.V. (2001). Soil Ecology.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 81</span>
       </div>
       <dl class="description">
@@ -6704,6 +7109,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/biologicalFeaturesProperty</p>
+      <div class="comment">
+         <span class="markdown">The Biological Features Property examines qualitative aspects of soil biological activity, including the types of organisms present, their diversity, and their roles in soil ecosystems. It encompasses processes like nitrogen fixation, organic matter decomposition, and bioturbation. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 82</span>
       </div>
@@ -6724,6 +7132,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/boundaryDistinctnessProperty</p>
       <div class="comment">
+         <span class="markdown">The Boundary Distinctness Property describes the sharpness of transitions between soil horizons. Boundaries can range from abrupt (clear demarcation) to diffuse (gradual blending), providing insights into soil formation processes and profile development. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 24.1</span>
       </div>
       <dl class="description">
@@ -6742,6 +7153,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/boundaryTopographyProperty</p>
+      <div class="comment">
+         <span class="markdown">The Boundary Topography Property characterizes the shape of soil horizon boundaries, which may be smooth, wavy, irregular, or broken. It reflects processes like erosion, deposition, or biological activity that influence horizon development. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 24,2</span>
       </div>
@@ -6762,6 +7176,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/bulkDensityMineralProperty</p>
       <div class="comment">
+         <span class="markdown">The Bulk Density of Mineral Soil refers specifically to the density of the mineral portion of the soil, excluding organic matter. It provides insights into the physical state and compaction of mineral-dominated soils, influencing water movement and root growth. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 58</span>
       </div>
       <dl class="description">
@@ -6780,6 +7197,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/bulkDensityPeatProperty</p>
+      <div class="comment">
+         <span class="markdown">The Bulk Density of Peat measures the mass of dry organic soil (peat) per unit volume. Peat soils typically have low bulk density due to their high organic matter content and porosity, which significantly affects their water retention and drainage characteristics. Source: Rydin, H., &amp; Jeglum, J. (2006). The Biology of Peatlands.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 59,3</span>
       </div>
@@ -6800,6 +7220,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/carbonatesContentProperty</p>
       <div class="comment">
+         <span class="markdown">The Carbonates Content Property quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 38</span>
       </div>
       <dl class="description">
@@ -6819,6 +7242,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/carbonatesFormsProperty</p>
       <div class="comment">
+         <span class="markdown">The Carbonates Forms Property describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 39</span>
       </div>
       <dl class="description">
@@ -6837,6 +7263,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacityEffectiveProperty</p>
+      <div class="comment">
+         <span class="markdown">The Effective Cation Exchange Capacity (ECEC) measures the ability of soil to hold and exchange cations at a given pH, often near field conditions. It provides insight into soil fertility, nutrient availability, and buffering capacity in acidic soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6862,6 +7291,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacityProperty</p>
       <div class="comment">
+         <span class="markdown">The Cation Exchange Capacity (CEC) measures the soil's total capacity to hold and exchange positively charged ions (cations). It is influenced by clay and organic matter content and is a critical indicator of soil fertility and nutrient retention. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -6885,6 +7317,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/cationsSumProperty</p>
+      <div class="comment">
+         <span class="markdown">The Cations Sum Property calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -6910,6 +7345,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/cementationContinuityProperty</p>
       <div class="comment">
+         <span class="markdown">The Cementation Continuity Property describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 69</span>
       </div>
       <dl class="description">
@@ -6928,6 +7366,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/cementationDegreeProperty</p>
+      <div class="comment">
+         <span class="markdown">The Cementation Degree Property measures how strongly soil particles are bonded by cementing agents. It ranges from weakly cemented (friable) to strongly cemented (hard). This property influences soil strength and its suitability for agricultural and engineering purposes. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 72</span>
       </div>
@@ -6948,6 +7389,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/cementationFabricProperty</p>
       <div class="comment">
+         <span class="markdown">The Cementation Fabric Property examines the texture, structure, and arrangement of cementing materials within the soil. It provides insights into soil formation processes and the mechanical stability of the soil matrix. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 70</span>
       </div>
       <dl class="description">
@@ -6966,6 +7410,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/cementationNatureProperty</p>
+      <div class="comment">
+         <span class="markdown">The Cementation Nature Property identifies the specific type of material responsible for binding soil particles, such as carbonates, silica, or iron oxides. Understanding this helps in soil classification and predicting behavior under varying environmental conditions. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 71</span>
       </div>
@@ -6986,6 +7433,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/coatingAbundanceProperty</p>
       <div class="comment">
+         <span class="markdown">The Coating Abundance Property evaluates the quantity of coatings on soil particles, such as organic matter, clay, or iron oxides. Coatings influence soil color, nutrient availability, and water movement. The abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 64</span>
       </div>
       <dl class="description">
@@ -7004,6 +7454,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/coatingContrastProperty</p>
+      <div class="comment">
+         <span class="markdown">The Coating Contrast Property assesses the visual distinction between coatings on soil particles and the underlying material. High contrast indicates significant differences in composition or color, providing clues about soil processes like illuviation or biological activity. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 65</span>
       </div>
@@ -7024,6 +7477,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/coatingFormProperty</p>
       <div class="comment">
+         <span class="markdown">The Coating Form Property describes the shape and distribution of coatings on soil particles, such as patchy, continuous, or layered. These forms are indicative of soil genesis and chemical weathering processes. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 67</span>
       </div>
       <dl class="description">
@@ -7042,6 +7498,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/coatingLocationProperty</p>
+      <div class="comment">
+         <span class="markdown">The Coating Location Property identifies where coatings are found within the soil profile, such as along root channels, pore spaces, or on particle surfaces. This property helps determine the movement of water and nutrients in the soil. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 68</span>
       </div>
@@ -7062,6 +7521,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/coatingNatureProperty</p>
       <div class="comment">
+         <span class="markdown">The Coating Nature Property examines the composition of soil coatings, such as organic, clay, or iron-rich coatings. The nature of these coatings can influence nutrient retention, soil color, and water dynamics. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 66</span>
       </div>
       <dl class="description">
@@ -7080,6 +7542,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/consistenceDryProperty</p>
+      <div class="comment">
+         <span class="markdown">The Consistence Dry Property evaluates the soil's behavior when dry, including its resistance to deformation or crumbling. It ranges from loose to hard and provides information about soil compaction and management practices. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 53</span>
       </div>
@@ -7100,6 +7565,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/consistenceMoistProperty</p>
       <div class="comment">
+         <span class="markdown">The Consistence Moist Property assesses how soil responds to pressure when moist. Categories include friable, firm, or plastic. This property is essential for understanding soil workability and water retention. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 54</span>
       </div>
       <dl class="description">
@@ -7119,6 +7587,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/dryConsistencyProperty</p>
       <div class="comment">
+         <span class="markdown">The Dry Consistency Property is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -7137,6 +7608,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/fragmentsClassProperty</p>
+      <div class="comment">
+         <span class="markdown">The Fragments Class Property categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -7162,6 +7636,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/gypsumContentProperty</p>
       <div class="comment">
+         <span class="markdown">The Gypsum Content Property quantifies the amount of gypsum (calcium sulfate dihydrate) present in the soil. Gypsum affects soil structure, water infiltration, and nutrient availability, especially in arid and semi-arid regions. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 40</span>
       </div>
       <dl class="description">
@@ -7181,6 +7658,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/gypsumFormsProperty</p>
       <div class="comment">
+         <span class="markdown">The Gypsum Forms Property describes the morphology of gypsum within the soil, such as crystals, veins, or nodules. The form indicates the processes of soil formation and water movement in gypsum-rich soils. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 41</span>
       </div>
       <dl class="description">
@@ -7199,6 +7679,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/gypsumWeightProperty</p>
+      <div class="comment">
+         <span class="markdown">The Gypsum Weight Property measures the mass of gypsum in the soil profile. This value helps evaluate the potential for soil salinity issues and influences decisions for agricultural or land reclamation practices. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -7224,6 +7707,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralConcAbundanceProperty</p>
       <div class="comment">
+         <span class="markdown">The Mineral Concentration Abundance Property evaluates the amount of specific minerals, such as quartz, feldspar, or mica, in the soil. This property provides insights into soil parent material and fertility. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -7242,6 +7728,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralConcColourProperty</p>
+      <div class="comment">
+         <span class="markdown">The Mineral Concentration Colour Property describes the color of concentrated mineral deposits in the soil, such as iron oxides (red) or manganese nodules (black). It helps identify soil processes like oxidation or leaching. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 78</span>
       </div>
@@ -7262,6 +7751,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralConcHardnessProperty</p>
       <div class="comment">
+         <span class="markdown">The Mineral Concentration Hardness Property assesses the physical hardness of mineral deposits in soil. Hardness influences soil strength and resistance to erosion or mechanical disruption. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 76</span>
       </div>
       <dl class="description">
@@ -7280,6 +7772,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralConcKindProperty</p>
+      <div class="comment">
+         <span class="markdown">The Mineral Concentration Kind Property identifies the specific type of mineral concentrations found in soil, such as gypsum, calcite, or hematite. This classification aids in understanding soil genesis and chemistry. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 74</span>
       </div>
@@ -7300,6 +7795,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralConcNatureProperty</p>
       <div class="comment">
+         <span class="markdown">The Mineral Concentration Nature Property examines the origin and composition of concentrated minerals in soil. It provides clues about weathering, leaching, and other pedogenic processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 77</span>
       </div>
       <dl class="description">
@@ -7318,6 +7816,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralConcShapeProperty</p>
+      <div class="comment">
+         <span class="markdown">The Mineral Concentration Shape Property describes the physical shape of mineral accumulations, such as rounded, angular, or irregular. These shapes help infer soil formation processes and transport history. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 75,2</span>
       </div>
@@ -7338,6 +7839,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralConcSizeProperty</p>
       <div class="comment">
+         <span class="markdown">The Mineral Concentration Size Property measures the dimensions of concentrated mineral deposits in soil, typically expressed in millimeters. Size categories range from small grains to large nodules or concretions. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 75,1</span>
       </div>
       <dl class="description">
@@ -7357,6 +7861,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralConcVolumeProperty</p>
       <div class="comment">
+         <span class="markdown">The Mineral Concentration Volume Property quantifies the proportion of soil volume occupied by mineral concentrations. It is used to assess the impact of these materials on soil structure and permeability. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 73</span>
       </div>
       <dl class="description">
@@ -7375,6 +7882,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralContentProperty</p>
+      <div class="comment">
+         <span class="markdown">The Mineral Content Property evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -7400,6 +7910,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mineralFragmentsProperty</p>
       <div class="comment">
+         <span class="markdown">The Mineral Fragments Property refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 30</span>
       </div>
       <dl class="description">
@@ -7419,6 +7932,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/moistConsistencyProperty</p>
       <div class="comment">
+         <span class="markdown">The Moist Consistency Property evaluates the soil's behavior under pressure when moist. Categories include friable, firm, or plastic. It provides insights into soil workability and its ability to support plant growth. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -7437,6 +7953,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/moistureContentProperty</p>
+      <div class="comment">
+         <span class="markdown">The Moisture Content Property measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Africa Soil Profiles Database Version 1.2. ISRIC Report 2014/01</span>
       </div>
@@ -7462,6 +7981,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mottlesAbundanceProperty</p>
       <div class="comment">
+         <span class="markdown">The Mottles Abundance Property describes the frequency of mottling (spots of contrasting color) in soil horizons. Mottling indicates variations in soil aeration, drainage, or water saturation. Abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 32</span>
       </div>
       <dl class="description">
@@ -7480,6 +8002,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mottlesBoundaryClassificationProperty</p>
+      <div class="comment">
+         <span class="markdown">The Mottles Boundary Classification Property assesses the sharpness and distinctness of boundaries between mottled and non-mottled areas within the soil. It provides clues about soil processes such as oxidation-reduction reactions. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 35</span>
       </div>
@@ -7500,6 +8025,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mottlesColourProperty</p>
       <div class="comment">
+         <span class="markdown">The Mottles Colour Property evaluates the color of soil mottles, often indicative of oxidation states of iron or manganese. For example, reddish colors suggest oxidation, while gray colors indicate reduction and poor drainage. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -7519,6 +8047,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mottlesContrastProperty</p>
       <div class="comment">
+         <span class="markdown">The Mottles Contrast Property measures the visual distinction between mottles and the surrounding soil matrix. High contrast indicates stark differences, often linked to fluctuating water tables or drainage issues. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 34</span>
       </div>
       <dl class="description">
@@ -7537,6 +8068,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mottlesPresenceProperty</p>
+      <div class="comment">
+         <span class="markdown">The Mottles Presence Property refers to the existence of mottles in soil, often signaling periodic water saturation, drainage problems, or fluctuating redox conditions. This property is essential for wetland delineation and soil health assessment. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -7562,6 +8096,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/mottlesSizeProperty</p>
       <div class="comment">
+         <span class="markdown">The Mottles Size Property describes the dimensions of soil mottles, typically classified as fine, medium, or coarse. The size reflects the intensity and scale of soil processes such as oxidation and reduction. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 33</span>
       </div>
       <dl class="description">
@@ -7580,6 +8117,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/oxalateExtractableOpticalDensityProperty</p>
+      <div class="comment">
+         <span class="markdown">The Oxalate Extractable Optical Density Property measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -7605,6 +8145,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/particleSizeFractionsSumProperty</p>
       <div class="comment">
+         <span class="markdown">The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -7629,6 +8172,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/peatDecompostionProperty</p>
       <div class="comment">
+         <span class="markdown">The Peat Decomposition Property evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 31</span>
       </div>
       <dl class="description">
@@ -7647,6 +8193,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/peatDrainageProperty</p>
+      <div class="comment">
+         <span class="markdown">The Peat Drainage Property assesses the water removal capacity in peat soils, essential for determining their suitability for agriculture, conservation, or other uses. Poorly drained peat often accumulates organic material due to low decomposition rates. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 59,1</span>
       </div>
@@ -7667,6 +8216,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/peatVolumeProperty</p>
       <div class="comment">
+         <span class="markdown">The Peat Volume Property quantifies the proportion of peat material in a given soil volume. It is critical for land use planning, carbon sequestration assessments, and wetland management. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 59,2</span>
       </div>
       <dl class="description">
@@ -7685,6 +8237,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/plasticityProperty</p>
+      <div class="comment">
+         <span class="markdown">The Plasticity Property measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 56</span>
       </div>
@@ -7705,6 +8260,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/poresAbundanceProperty</p>
       <div class="comment">
+         <span class="markdown">The Pores Abundance Property describes the quantity of soil pores, ranging from few to many. It influences water infiltration, root growth, and soil aeration. Pore abundance is crucial for assessing soil health and productivity. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 63</span>
       </div>
       <dl class="description">
@@ -7723,6 +8281,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/poresSizeProperty</p>
+      <div class="comment">
+         <span class="markdown">The Pores Size Property categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 62</span>
       </div>
@@ -7743,6 +8304,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/porosityClassProperty</p>
       <div class="comment">
+         <span class="markdown">The Porosity Class Property classifies soil by the proportion of pore spaces, typically expressed as a percentage. Classes include high, medium, or low porosity, influencing water and air movement in the soil. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 60</span>
       </div>
       <dl class="description">
@@ -7762,6 +8326,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/rootsAbundanceProperty</p>
       <div class="comment">
+         <span class="markdown">The Roots Abundance Property describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017).</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 80</span>
       </div>
       <dl class="description">
@@ -7780,6 +8347,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/rootsPresenceProperty</p>
+      <div class="comment">
+         <span class="markdown">The Roots Presence Property identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -7805,6 +8375,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/saltContentProperty</p>
       <div class="comment">
+         <span class="markdown">The Salt Content Property measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 42</span>
       </div>
       <dl class="description">
@@ -7823,6 +8396,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/saltProperty</p>
+      <div class="comment">
+         <span class="markdown">The Salt Property encompasses all forms of salts present in soil, including sodium chloride, calcium sulfate, and magnesium sulfate. It influences soil chemistry, structure, and plant tolerance to salinity. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -7848,6 +8424,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/sandyTextureProperty</p>
       <div class="comment">
+         <span class="markdown">The Sandy Texture Property refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: figure 4,3</span>
       </div>
       <dl class="description">
@@ -7866,6 +8445,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/solubleAnionsTotalProperty</p>
+      <div class="comment">
+         <span class="markdown">The Soluble Anions Total Property measures the concentration of anions (e.g., chloride, sulfate, nitrate) in soil solution. High levels may indicate salinity, nutrient availability, or contamination. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -7891,6 +8473,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/solubleCationsTotalProperty</p>
       <div class="comment">
+         <span class="markdown">The Soluble Cations Total Property evaluates the sum of cations (e.g., sodium, potassium, calcium, magnesium) in soil solution. It is an indicator of soil salinity, fertility, and chemical balance. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -7915,6 +8500,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/stickinessProperty</p>
       <div class="comment">
+         <span class="markdown">The Stickiness Property measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 55</span>
       </div>
       <dl class="description">
@@ -7934,6 +8522,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/structureGradeProperty</p>
       <div class="comment">
+         <span class="markdown">The Structure Grade Property assesses the development and stability of soil aggregates, classified as weak, moderate, or strong. It reflects soil tilth, aeration, and resistance to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 47</span>
       </div>
       <dl class="description">
@@ -7952,6 +8543,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/structureSizeProperty</p>
+      <div class="comment">
+         <span class="markdown">The Structure Size Property describes the dimensions of soil aggregates or structural units, such as granular, blocky, or platy. Structure size affects root penetration, water infiltration, and soil stability. Source: FAO (2006). Guidelines for Soil Description.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 50</span>
       </div>
@@ -7991,6 +8585,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/textureLabClassProperty</p>
       <div class="comment">
+         <span class="markdown">The Texture Lab Class Property defines soil texture using laboratory-determined particle size distributions. This property provides a precise classification of soil as sand, silt, or clay using standard methods. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
       <dl class="description">
@@ -8009,6 +8606,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/voidsClassificationProperty</p>
+      <div class="comment">
+         <span class="markdown">The Voids Classification Property categorizes voids or pores in the soil based on size, shape, and arrangement. These voids are critical for water movement, air circulation, and root penetration. They are classified into macropores (large), mesopores (medium), and micropores (small). Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 61</span>
       </div>
@@ -8029,6 +8629,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/voidsDiameterProperty</p>
       <div class="comment">
+         <span class="markdown">The Voids Diameter Property refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 62</span>
       </div>
       <dl class="description">
@@ -8047,6 +8650,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/layerhorizon/wetPlasticityProperty</p>
+      <div class="comment">
+         <span class="markdown">The Wet Plasticity Property measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3</span>
       </div>
@@ -8069,6 +8675,7 @@ This section provides details for each class and property defined by GloSIS Onto
 </div>
 </div>
     
+
 
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

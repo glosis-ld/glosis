@@ -13,7 +13,7 @@
                                                     <http://w3id.org/glosis/model/iso28258/2013/> ,
                                                     <http://www.w3.org/ns/sosa/> ,
                                                     <http://www.w3.org/ns/ssn/> ;
-                                        <http://purl.org/dc/terms/creator> _:genid-nodeid-node1ii96q0d7x1014 ,
+                                        <http://purl.org/dc/terms/creator> _:genid-nodeid-node1ijdc2d02x1014 ,
                                                                            _:genid1 ,
                                                                            _:genid3 ;
                                         <http://purl.org/dc/terms/description> "GLOSIS ontology has been created from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
@@ -25,12 +25,12 @@
 
 _:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
                                           ] ;
-          <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
 
 _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
                                           ] ;
-          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
-          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+          <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
 
 #################################################################
 #    Classes
@@ -89,9 +89,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://w3id.org/glosis/model/profile/GL_Profile> rdf:type owl:Class ;
                                                   rdfs:subClassOf <http://w3id.org/glosis/model/iso28258/2013/Profile> ,
                                                                   <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                                                  rdfs:comment "Specialization for GloSIS of ISO iso28258 Profile soil feature type, defined as an abstract, ordered set of soil horizons and/or layers" ;
                                                   rdfs:label "GL_Profile"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ,
-                                                                                                   "Specialization for GloSIS of ISO iso28258 Profile soil feature type, defined as an abstract, ordered set of soil horizons and/or layers" .
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/ProfileDescriptionStatus
@@ -109,9 +109,9 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
                                                                                   owl:hasValue <http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty>
                                                                                 ] ;
+                                                                rdfs:comment "Profile Description Status refers to the documentation of observations made during the description of a soil profile, which includes information about soil horizons, color, texture, structure, and other physical or chemical features. This status helps assess the completeness and reliability of soil profile data, serving as a foundation for further analysis and classification. It ensures that soil characteristics are accurately recorded to support land management, agricultural practices, and environmental assessments. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS." ;
                                                                 rdfs:label "ProfileDescriptionStatus"@en ;
-                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 1"@en ,
-                                                                                                                 "Profile Description Status refers to the documentation of observations made during the description of a soil profile, which includes information about soil horizons, color, texture, structure, and other physical or chemical features. This status helps assess the completeness and reliability of soil profile data, serving as a foundation for further analysis and classification. It ensures that soil characteristics are accurately recorded to support land management, agricultural practices, and environmental assessments. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS." .
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 1"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/SoilClassification
@@ -129,33 +129,33 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
                                                                             owl:allValuesFrom xsd:string
                                                                           ] ;
+                                                          rdfs:comment "Soil Classification is the categorization of soils into defined groups based on their physical, chemical, and mineralogical properties and their processes of formation. It provides a framework to understand soil diversity and predict soil behavior under various land-use scenarios. Systems like USDA Soil Taxonomy and the World Reference Base for Soil Resources (WRB) enable effective communication among soil scientists and land managers, aiding in agricultural planning, engineering, and environmental conservation. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. " ;
                                                           rdfs:label "SoilClassification"@en ;
-                                                          <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ,
-                                                                                                           "Soil Classification is the categorization of soils into defined groups based on their physical, chemical, and mineralogical properties and their processes of formation. It provides a framework to understand soil diversity and predict soil behavior under various land-use scenarios. Systems like USDA Soil Taxonomy and the World Reference Base for Soil Resources (WRB) enable effective communication among soil scientists and land managers, aiding in agricultural planning, engineering, and environmental conservation. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. " .
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/SoilClassificationFAO
 <http://w3id.org/glosis/model/profile/SoilClassificationFAO> rdf:type owl:Class ;
                                                              rdfs:subClassOf <http://w3id.org/glosis/model/profile/SoilClassification> ;
+                                                             rdfs:comment "The FAO Soil Classification system, established by the Food and Agriculture Organization, provides a globally applicable framework for classifying soils based on major diagnostic horizons and soil properties. It is less detailed than USDA Soil Taxonomy and focuses on key soil characteristics relevant to global land use and environmental applications. The system aims to facilitate international communication and support sustainable land management practices. Source: FAO (1990). Guidelines for Soil Profile Description." ;
                                                              rdfs:label "SoilClassificationFAO"@en ;
-                                                             <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ,
-                                                                                                              "The FAO Soil Classification system, established by the Food and Agriculture Organization, provides a globally applicable framework for classifying soils based on major diagnostic horizons and soil properties. It is less detailed than USDA Soil Taxonomy and focuses on key soil characteristics relevant to global land use and environmental applications. The system aims to facilitate international communication and support sustainable land management practices. Source: FAO (1990). Guidelines for Soil Profile Description." .
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/SoilClassificationUSDA
 <http://w3id.org/glosis/model/profile/SoilClassificationUSDA> rdf:type owl:Class ;
                                                               rdfs:subClassOf <http://w3id.org/glosis/model/profile/SoilClassification> ;
+                                                              rdfs:comment "The USDA Soil Classification system, also known as Soil Taxonomy, is a hierarchical framework developed by the United States Department of Agriculture for categorizing soils based on measurable properties such as texture, structure, pH, and organic matter content. It divides soils into six hierarchical levels: order, suborder, great group, subgroup, family, and series. This system provides a standardized approach to studying and managing soils, supporting land use, agriculture, and environmental conservation. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys" ;
                                                               rdfs:label "SoilClassificationUSDA"@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ,
-                                                                                                               "The USDA Soil Classification system, also known as Soil Taxonomy, is a hierarchical framework developed by the United States Department of Agriculture for categorizing soils based on measurable properties such as texture, structure, pH, and organic matter content. It divides soils into six hierarchical levels: order, suborder, great group, subgroup, family, and series. This system provides a standardized approach to studying and managing soils, supporting land use, agriculture, and environmental conservation. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys" .
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/SoilClassificationWRB
 <http://w3id.org/glosis/model/profile/SoilClassificationWRB> rdf:type owl:Class ;
                                                              rdfs:subClassOf <http://w3id.org/glosis/model/profile/SoilClassification> ;
+                                                             rdfs:comment "The World Reference Base for Soil Resources (WRB) is an international soil classification system endorsed by the International Union of Soil Sciences. It classifies soils into Reference Soil Groups (RSGs) based on diagnostic horizons, properties, and materials, emphasizing soil formation processes and global soil distribution. The WRB is designed to provide a common language for global soil studies and is widely used in international soil research and environmental management. Source: IUSS Working Group WRB (2015). World Reference Base for Soil Resources 2014: International Soil Classification System for Naming Soils and Creating Legends for Soil Maps" ;
                                                              rdfs:label "SoilClassificationWRB"@en ;
-                                                             <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ,
-                                                                                                              "The World Reference Base for Soil Resources (WRB) is an international soil classification system endorsed by the International Union of Soil Sciences. It classifies soils into Reference Soil Groups (RSGs) based on diagnostic horizons, properties, and materials, emphasizing soil formation processes and global soil distribution. The WRB is designed to provide a common language for global soil studies and is widely used in international soil research and environmental management. Source: IUSS Working Group WRB (2015). World Reference Base for Soil Resources 2014: International Soil Classification System for Naming Soils and Creating Legends for Soil Maps" .
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 #################################################################
@@ -165,17 +165,17 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 ###  http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty
 <http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty> rdf:type owl:NamedIndividual ,
                                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                                        rdfs:comment "The Profile Description Status Property indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS." ;
                                                                         rdfs:label "profileDescriptionStatusProperty"@en ;
-                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 1"@en ,
-                                                                                                                         "The Profile Description Status Property indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS." .
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 1"@en .
 
 
 ###  http://w3id.org/glosis/model/profile/soilTypeProperty
 <http://w3id.org/glosis/model/profile/soilTypeProperty> rdf:type owl:NamedIndividual ,
                                                                  <http://www.w3.org/ns/sosa/ObservableProperty> ;
+                                                        rdfs:comment "The Soil Type Property categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. " ;
                                                         rdfs:label "soilTypeProperty"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en ,
-                                                                                                         "The Soil Type Property categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. " .
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

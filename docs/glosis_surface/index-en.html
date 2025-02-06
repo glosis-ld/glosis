@@ -59,13 +59,13 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 23-12-2024</dt>
+<dt>Modified on: 06-02-2025</dt>
 <dt>This version:</dt>
 <dd><a href="http://w3id.org/glosis/model/surface/1.5.0">http://w3id.org/glosis/model/surface/1.5.0</a></dd>
 <dt>Revision:</dt>
 <dd>1.5.0</dd>
 <dt>Authors:</dt>
-<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd><dd>Bogusz Janiak, PSNC</dd><dd>W3C/OGC Spatial Data on the Web Working Group</dd><dd><a href="http://orcid.org/0000-0002-5851-2071">Luís Moreira de Sousa, Técnico ULisboa</a></dd>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd><dd>Bogusz Janiak, PSNC</dd><dd>W3C/OGC Spatial Data on the Web Working Group</dd><dd><a href="http://orcid.org/0000-0002-5851-2071">Luís Moreira de Sousa</a>, Técnico ULisboa</dd>
 
 <dt>Imported Ontologies:</dt>
 <dd><a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a></dd><dd><a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a></dd><dd><a href="http://w3id.org/glosis/model/codelists/">http://w3id.org/glosis/model/codelists/</a></dd><dd><a href="http://w3id.org/glosis/model/common/">http://w3id.org/glosis/model/common/</a></dd><dd><a href="http://w3id.org/glosis/model/iso28258/2013/">http://w3id.org/glosis/model/iso28258/2013/</a></dd>
@@ -164,9 +164,6 @@ This ontology has the following classes and properties.</span>
 </div>
   
 
-
-   
-
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for GloSIS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by GloSIS Ontology: Main module.
@@ -210,6 +207,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/GL_Surface</p>
       <div class="comment">
+         <span class="markdown">Specialization for GloSIS of ISO iso28258 Surface soil feature type, which typically refers to the uppermost layer of the soil profile, which is crucial for various analyses and applications.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt</span>
       </div>
       <dl class="description">
@@ -229,6 +229,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SaltCover</p>
       <div class="comment">
+         <span class="markdown">Salt cover is the visible accumulation of salts on the soil surface, typically forming a crust. This can occur in areas of high evaporation, leading to the upward movement of soluble salts from deeper soil layers. Source: US Salinity Laboratory Staff. (1954). Diagnosis and Improvement of Saline and Alkali Soils. U.S. Department of Agriculture Handbook No. 60.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: 22,1</span>
       </div>
       <dl class="description">
@@ -247,6 +250,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SaltPresence</p>
+      <div class="comment">
+         <span class="markdown">Salt presence refers to the occurrence of soluble salts within the soil, typically measured by electrical conductivity (EC) or ion concentrations (e.g., sodium, calcium). High salt concentrations can lead to soil salinity, which affects plant growth and soil structure. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Education.</span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</span>
       </div>
@@ -286,6 +292,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SaltThickness</p>
       <div class="comment">
+         <span class="markdown">Salt thickness describes the depth of the soil profile where significant salt concentrations are found, which may be determined using soil core samples or electrical conductivity measurements. Salt thickness is crucial in arid regions where salt accumulation occurs due to evaporation. Source: Rhoades, J.D., &amp; Kandiah, A. (1992). Soil Salinity Management in Agriculture. Springer.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 22,2</span>
       </div>
       <dl class="description">
@@ -305,6 +314,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SealingConsistence</p>
       <div class="comment">
+         <span class="markdown">Sealing consistence refers to the soil's ability to resist compaction and the formation of a surface crust, often caused by wetting and drying cycles, or rainfall impact. Soils with low sealing consistence are more prone to surface sealing. Source: Soil Science Society of America (SSSA). (2008). Glossary of Soil Science Terms. Soil Science Society of America.</span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 20,2</span>
       </div>
       <dl class="description">
@@ -323,6 +335,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/SealingThickness</p>
+      <div class="comment">
+         <span class="markdown">Sealing thickness refers to the depth of the compacted or sealed layer within the soil, which can hinder water infiltration, root growth, and soil aeration. This layer is often formed in fine-textured soils under intense rainfall or drying conditions. Source: Pagliai, M., &amp; Vignozzi, N. (2002). Soil Structure and Soil Quality: A Review of the State of the Art. Agriculture, Ecosystems &amp; Environment, 88(3), 77-86.</span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: 20,1</span>
       </div>
@@ -369,6 +384,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/saltCoverProperty</p>
       <div class="comment">
+         <span class="markdown">Salt cover refers to the accumulation of salts on the surface of the soil, often visible as a crystalline crust. This phenomenon occurs when capillary action causes soluble salts to move upwards through the soil, where they crystallize as water evaporates. Salt cover can interfere with seed germination, plant growth, and water infiltration, and is commonly found in arid and semi-arid regions with high evaporation rates. Source: Brady, N.C., &amp; Weil, R.R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Education. </span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: 22,1</span>
       </div>
       <dl class="description">
@@ -387,6 +405,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/saltPresenceProperty</p>
+      <div class="comment">
+         <span class="markdown">The salt presence property of soil refers to the concentration of soluble salts, such as sodium, calcium, and magnesium, within the soil profile. High salt levels can lead to soil salinity, negatively affecting plant growth by altering water availability and soil structure. The presence of salts is typically measured using electrical conductivity (EC) or specific ion concentration tests. Soils with high salt presence are often found in arid regions where evaporation exceeds precipitation, leading to salt accumulation at or near the surface. Source: Rhoades, J.D., &amp; Kandiah, A. (1992). Soil Salinity Management in Agriculture. Springer. </span>
+      </div>
       <div class="comment">
          <span class="markdown">ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1</span>
       </div>
@@ -412,6 +433,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/saltThicknessProperty</p>
       <div class="comment">
+         <span class="markdown">Salt thickness refers to the depth of the soil profile at which soluble salts are present in significant concentrations. This property is particularly important in regions subject to evaporation and capillary rise, where salts accumulate near the surface or at specific depths. Salt thickness can impact soil fertility and water retention, as the concentrated salts can inhibit root growth and water uptake. This property is commonly determined through soil sampling and electrical conductivity measurements at various depths. Source: United States Salinity Laboratory Staff. (1954). Diagnosis and Improvement of Saline and Alkali Soils. U.S. Department of Agriculture Handbook No. 60. </span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 22,2</span>
       </div>
       <dl class="description">
@@ -431,6 +455,9 @@ This section provides details for each class and property defined by GloSIS Onto
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/sealingConsistenceProperty</p>
       <div class="comment">
+         <span class="markdown">The sealing consistence property of soil describes the resistance of the soil to the formation of a surface crust or compacted layer, which can impede water infiltration and root penetration. This phenomenon typically occurs in fine-textured soils, such as clays and silts, where the particles are tightly bound, leading to a hardened surface layer upon wetting and drying. Sealing consistence affects water movement and can lead to surface runoff and erosion in agricultural soils. Source: Soil Science Society of America (SSSA). (2008). Glossary of Soil Science Terms. Soil Science Society of America. </span>
+      </div>
+      <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: table 20,2</span>
       </div>
       <dl class="description">
@@ -449,6 +476,9 @@ This section provides details for each class and property defined by GloSIS Onto
       </h3>
       <p>
          <strong>IRI:</strong> http://w3id.org/glosis/model/surface/sealingThicknessProperty</p>
+      <div class="comment">
+         <span class="markdown">The sealing thickness property refers to the depth of the compacted or sealed layer within the soil, which is typically a result of intense rainfall, drying, or tillage practices. This layer, which forms in fine-textured soils, can significantly reduce water infiltration and root growth, leading to reduced soil aeration and potential surface runoff. The sealing thickness property is crucial for understanding soil erosion risks and water management in agricultural systems. Source: Pagliai, M., &amp; Vignozzi, N. (2002). Soil Structure and Soil Quality: A Review of the State of the Art. Agriculture, Ecosystems &amp; Environment, 88(3), 77-86. </span>
+      </div>
       <div class="comment">
          <span class="markdown">Guidelines for Soil Description issued by the FAO: 20,1</span>
       </div>
