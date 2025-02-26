@@ -148,21 +148,11 @@ if __name__ == "__main__":
 
     for key in config:
         a = textfile.write("%s=%s\n" % (key, config[key]))
-        print("Outputed key: %s", key)
 
     textfile.close()
 
     # Execute WiDoco
     os.system("mkdir %s" % ont_file)
-    print(
-        """java -jar %s \
-            -ontFile ../%s.ttl \
-            -outFolder %s \
-            -confFile %s \
-            -uniteSections \
-            -webVowl \
-            -rewriteAll""" % (widoco_jar, ont_file, ont_file, config_file))
-
 
     os.system(
         """java -jar %s \
