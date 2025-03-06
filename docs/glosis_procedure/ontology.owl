@@ -11,9 +11,9 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="http://w3id.org/glosis/model/procedure">
-        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/procedure/1.5.0"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1ijdbisitx3"/>
-        <terms:creator rdf:resource="_:genid-nodeid-node1ijdbisitx5"/>
+        <owl:versionIRI rdf:resource="http://w3id.org/glosis/model/procedure/v1.5.0"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1ilmc51d6x3"/>
+        <terms:creator rdf:resource="_:genid-nodeid-node1ilmc51d6x5"/>
         <terms:creator rdf:nodeID="genid1"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid5"/>
@@ -22,11 +22,10 @@
         <terms:source xml:lang="en">Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt and Africa Soil Profile Database</terms:source>
         <terms:title xml:lang="en">GLOSIS Procedures</terms:title>
         <rdfs:comment xml:lang="en">This module contains the code lists identifying laboratory processes employed to assess physio-chemical soil properties.</rdfs:comment>
-        <owl:versionInfo>1.5.0</owl:versionInfo>
+        <owl:versionInfo>v1.5.0</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
-        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
-        <foaf:name>Raul Palma</foaf:name>
+        <foaf:name>Bogusz Janiak</foaf:name>
         <schema:affiliation>
             <rdf:Description>
                 <foaf:name>PSNC</foaf:name>
@@ -34,7 +33,8 @@
         </schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
-        <foaf:name>Bogusz Janiak</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
         <schema:affiliation>
             <rdf:Description>
                 <foaf:name>PSNC</foaf:name>
@@ -766,6 +766,50 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/procedure/PSAProcedure -->
+
+
+    <owl:Class rdf:about="http://w3id.org/glosis/model/procedure/PSAProcedure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-disp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-disp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-nodisp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-nodisp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-unkdisp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-unkdisp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-fldest"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-disp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-disp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-nodisp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-nodisp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-unkdisp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-unkdisp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-disp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-disp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-nodisp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-nodisp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-unkdisp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-unkdisp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-disp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-disp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-nodisp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-nodisp-spec"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-unkdisp"/>
+                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-unkdisp-spec"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:comment xml:lang="en">This code list provides analysis procedures for PSA.</rdfs:comment>
+        <rdfs:label xml:lang="en">Procedures for PSA - codelist class</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/glosis/model/procedure/PhosphorusRetentionProcedure -->
 
 
@@ -824,73 +868,6 @@
         <rdfs:comment xml:lang="en">This code list provides analysis procedures for SolubleSalts.</rdfs:comment>
         <rdfs:label xml:lang="en">Procedures for SolubleSalts - codelist class</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/procedure/solubleSaltsProcedure"/>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/TextureProcedure -->
-
-
-    <owl:Class rdf:about="http://w3id.org/glosis/model/procedure/TextureProcedure">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-adj100"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-beaker"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer-bouy"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-laser"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-pipette"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-spec"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-fld"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer-bouy"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-laser"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-pipette"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-spec"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-adj100"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-beaker"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer-bouy"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-laser"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-pipette"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-spec"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-fld"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer-bouy"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-laser"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-pipette"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-spec"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-adj100"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-beaker"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer-bouy"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-laser"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-pipette"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-spec"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-fld"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer-bouy"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-laser"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-pipette"/>
-                    <rdf:Description rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-spec"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-        <rdfs:comment xml:lang="en">This code list provides analysis procedures for Texture.</rdfs:comment>
-        <rdfs:label xml:lang="en">Procedures for Texture - codelist class</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
     </owl:Class>
     
 
@@ -3726,7 +3703,7 @@
     <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-ww">
         <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/MoistureContentProcedure"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Volumetric moisture content in disturbed samples on weight/weight basis to be converted to v/v (with BD at appropriate humidity) </skos:definition>
+        <skos:definition>Volumetric moisture content in disturbed samples on weight/weight basis to be converted to v/v (with BD at appropriate humidity)</skos:definition>
         <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/moistureContentProcedure"/>
         <skos:notation>VMC_d-ww</skos:notation>
         <skos:prefLabel xml:lang="en">VMC_d-ww</skos:prefLabel>
@@ -4654,6 +4631,445 @@
     
 
 
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Code list for pSA analysis procedures - codelist scheme</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <skos:definition>AfSP-derived interpretation (RwaSP)</skos:definition>
+        <skos:note xml:lang="en">This code list provides analysis procedures for pSA.</skos:note>
+        <skos:prefLabel xml:lang="en">Code list for pSA analysis procedures - codelist scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-disp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-disp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with beaker method with appropriate dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>beaker-disp</skos:notation>
+        <skos:prefLabel xml:lang="en">beaker-dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-disp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-disp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the beaker method with appropriate dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>beaker-disp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">beaker-dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-nodisp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-nodisp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with beaker method with no dispersion of the primary particlesand pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>beaker-nodisp</skos:notation>
+        <skos:prefLabel xml:lang="en">beaker-no_dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-nodisp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-nodisp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the beaker method with no dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>beaker-nodisp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">beaker-no_dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-unkdisp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-unkdisp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with beaker method unknown dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>beaker-unkdisp</skos:notation>
+        <skos:prefLabel xml:lang="en">beaker-unknown_dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-unkdisp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-beaker-unkdisp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the beaker method unknown dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>beaker-unkdisp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">beaker-unknown_dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-fldest -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-fldest">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Field estimate of the particle size distribution, typically done by hand</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>fldest</skos:notation>
+        <skos:prefLabel xml:lang="en">field estimate</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-disp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-disp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with hydrometer (bouyoucos) method with appropriate dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>hydrometer-disp</skos:notation>
+        <skos:prefLabel xml:lang="en">hydrometer (bouyoucos)-dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-disp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-disp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the hydrometer (bouyoucos) method with appropriate dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>hydrometer-disp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">hydrometer (bouyoucos)-dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-nodisp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-nodisp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with hydrometer (bouyoucos) method with no dispersion of the primary particles and removal of cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>hydrometer-nodisp</skos:notation>
+        <skos:prefLabel xml:lang="en">hydrometer (bouyoucos)-no_dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-nodisp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-nodisp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the hydrometer (bouyoucos) method with no dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>hydrometer-nodisp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">hydrometer (bouyoucos)-no_dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-unkdisp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-unkdisp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with hydrometer (bouyoucos) method unknown dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>hydrometer-unkdisp</skos:notation>
+        <skos:prefLabel xml:lang="en">hydrometer (bouyoucos)-unknown_dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-unkdisp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-hydrometer-unkdisp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the hydrometer (bouyoucos) method unknown dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>hydrometer-unkdisp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">hydrometer (bouyoucos)-unknown_dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-laser-disp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-disp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with laser diffraction with appropriate disperson of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>laser-disp</skos:notation>
+        <skos:prefLabel xml:lang="en">laser diffraction-dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-laser-disp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-disp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with laser diffraction analysis with appropriate disperson of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>laser-disp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">laser diffraction-dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-laser-nodisp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-nodisp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with laser diffraction with no dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>laser-nodisp</skos:notation>
+        <skos:prefLabel xml:lang="en">laser diffraction-no_dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-laser-nodisp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-nodisp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with laser diffraction analysis with no dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>laser-nodisp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">laser diffraction-no_dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-laser-unkdisp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-unkdisp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with laser diffraction with unknown dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>laser-unkdisp</skos:notation>
+        <skos:prefLabel xml:lang="en">laser diffraction-unknown_dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-laser-unkdisp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-laser-unkdisp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with laser diffraction analysis with unknown dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>laser-unkdisp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">laser diffraction-unknown_dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-disp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-disp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with pipette method with appropriate dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>pipette-disp</skos:notation>
+        <skos:prefLabel xml:lang="en">pipette-dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-disp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-disp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the pipette method with appropriate dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>pipette-disp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">pipette-dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-nodisp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-nodisp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with pipette method with no dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>pipette-nodisp</skos:notation>
+        <skos:prefLabel xml:lang="en">pipette-no_dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-nodisp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-nodisp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the pipette method with no dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>pipette-nodisp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">pipette-no_dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-unkdisp -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-unkdisp">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Particle size analysis with pipette method unknown dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>pipette-unkdisp</skos:notation>
+        <skos:prefLabel xml:lang="en">pipette-unknown_dispersion</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-unkdisp-spec -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/pSAProcedure-pipette-unkdisp-spec">
+        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/PSAProcedure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition>Spectrally predicted based on measurments with the pipette method unknown dispersion of the primary particles and pretreatment to remove cementing particles (organic matter, carbonates)</skos:definition>
+        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+        <skos:notation>pipette-unkdisp-spec</skos:notation>
+        <skos:prefLabel xml:lang="en">pipette-unknown_dispersion-spectral</skos:prefLabel>
+        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
+        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/pSAProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/glosis/model/procedure/phosphorusRetentionProcedure -->
 
 
@@ -4776,863 +5192,6 @@
         <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
         <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
         <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/solubleSaltsProcedure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <rdfs:label xml:lang="en">Code list for texture analysis procedures - codelist scheme</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <skos:definition>AfSP-derived interpretation (RwaSP)</skos:definition>
-        <skos:note xml:lang="en">This code list provides analysis procedures for texture.</skos:note>
-        <skos:prefLabel xml:lang="en">Code list for texture analysis procedures - codelist scheme</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-adj100"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-fld"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp"/>
-        <skos:notation>SaSiCl_2-20-2000u</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-adj100 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-adj100">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-fractions adjusted to sum up to 100%</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-adj100</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-adj100</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-with appropriate dispersion</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-beaker"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer-bouy"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-laser"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-pipette"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-spec"/>
-        <skos:notation>SaSiCl_2-20-2000u-disp</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-disp</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-beaker -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-beaker">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-with appropriate dispersion-beaker</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-disp-beaker</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-disp-beaker</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-with appropriate dispersion-hydrometer</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-disp-hydrometer</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-disp-hydrometer</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer-bouy -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-hydrometer-bouy">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-with appropriate dispersion-hydrometer-Bouyoucos</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-disp-hydrometer-bouy</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-disp-hydrometer-bouy</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-laser -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-laser">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-with appropriate dispersion-laser</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-disp-laser</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-disp-laser</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-pipette -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-pipette">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-with appropriate dispersion-pipette</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-disp-pipette</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-disp-pipett</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-spec -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp-spec">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-with appropriate dispersion-spectrally measured and converted to sand, silt or clay</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-disp-spec</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-disp-spec</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-fld -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-fld">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-field estimate</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-fld</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-fld</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-no dispersion</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer-bouy"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-laser"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-pipette"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-spec"/>
-        <skos:notation>SaSiCl_2-20-2000u-nodisp</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-nodisp</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-no dispersion-hydrometer</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-nodisp-hydrometer</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-nodisp-hydrometer</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer-bouy -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-hydrometer-bouy">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-no dispersion-hydrometer-Bouyoucos</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-nodisp-hydrometer-bouy</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-nodisp-hydrometer-bouy</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-laser -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-laser">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-no dispersion-laser</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-nodisp-laser</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-nodisp-laser</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-pipette -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-pipette">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-no dispersion-pipette</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-nodisp-pipette</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-nodisp-pipett</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-spec -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp-spec">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-20-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-20-2000um)-no dispersion-spectrally measured and converted to sand, silt or clay</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-20-2000u-nodisp-spec</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-20-2000u-nodisp-spec</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-adj100"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-fld"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp"/>
-        <skos:notation>SaSiCl_2-50-2000u</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-adj100 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-adj100">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-fractions adjusted to sum up to 100%</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-adj100</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-adj100</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-with appropriate dispersion</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-beaker"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer-bouy"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-laser"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-pipette"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-spec"/>
-        <skos:notation>SaSiCl_2-50-2000u-disp</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-disp</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-beaker -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-beaker">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-with appropriate dispersion-beaker</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-disp-beaker</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-disp-beaker</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-with appropriate dispersion-hydrometer</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-disp-hydrometer</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-disp-hydrometer</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer-bouy -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-hydrometer-bouy">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-with appropriate dispersion-hydrometer-Bouyoucos</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-disp-hydrometer-bouy</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-disp-hydrometer-bouy</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-laser -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-laser">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-with appropriate dispersion-laser</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-disp-laser</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-disp-laser</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-pipette -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-pipette">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-with appropriate dispersion-pipette</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-disp-pipette</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-disp-pipett</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-spec -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp-spec">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-with appropriate dispersion-spectrally measured and converted to sand, silt or clay</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-disp-spec</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-disp-spec</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-fld -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-fld">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-field estimate</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-fld</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-fld</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-no dispersion</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer-bouy"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-laser"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-pipette"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-spec"/>
-        <skos:notation>SaSiCl_2-50-2000u-nodisp</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-nodisp</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-no dispersion-hydrometer</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-nodisp-hydrometer</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-nodisp-hydrometer</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer-bouy -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-hydrometer-bouy">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-no dispersion-hydrometer-Bouyoucos</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-nodisp-hydrometer-bouy</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-nodisp-hydrometer-bouy</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-laser -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-laser">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-no dispersion-laser</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-nodisp-laser</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-nodisp-laser</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-pipette -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-pipette">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-no dispersion-pipette</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-nodisp-pipette</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-nodisp-pipett</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-spec -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp-spec">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-50-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-50-2000um)-no dispersion-spectrally measured and converted to sand, silt or clay</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-50-2000u-nodisp-spec</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-50-2000u-nodisp-spec</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-adj100"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-fld"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp"/>
-        <skos:notation>SaSiCl_2-63-2000u</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-adj100 -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-adj100">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-fractions adjusted to sum up to 100%</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-adj100</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-adj100</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-with appropriate dispersion</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-beaker"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer-bouy"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-laser"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-pipette"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-spec"/>
-        <skos:notation>SaSiCl_2-63-2000u-disp</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-disp</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-beaker -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-beaker">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-with appropriate dispersion-beaker</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-disp-beaker</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-disp-beaker</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-with appropriate dispersion-hydrometer</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-disp-hydrometer</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-disp-hydrometer</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer-bouy -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-hydrometer-bouy">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-with appropriate dispersion-hydrometer-Bouyoucos</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-disp-hydrometer-bouy</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-disp-hydrometer-bouy</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-laser -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-laser">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-with appropriate dispersion-laser</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-disp-laser</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-disp-laser</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-pipette -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-pipette">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-with appropriate dispersion-pipette</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-disp-pipette</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-disp-pipett</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-spec -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp-spec">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-disp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-with appropriate dispersion-spectrally measured and converted to sand, silt or clay</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-disp-spec</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-disp-spec</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-fld -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-fld">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-field estimate</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-fld</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-fld</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-no dispersion</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer-bouy"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-laser"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-pipette"/>
-        <skos:narrower rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-spec"/>
-        <skos:notation>SaSiCl_2-63-2000u-nodisp</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-nodisp</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-no dispersion-hydrometer</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-nodisp-hydrometer</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-nodisp-hydrometer</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer-bouy -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-hydrometer-bouy">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-no dispersion-hydrometer-Bouyoucos</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-nodisp-hydrometer-bouy</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-nodisp-hydrometer-bouy</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-laser -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-laser">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-no dispersion-laser</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-nodisp-laser</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-nodisp-laser</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-pipette -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-pipette">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-no dispersion-pipette</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-nodisp-pipette</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-nodisp-pipett</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-spec -->
-
-
-    <owl:NamedIndividual rdf:about="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp-spec">
-        <rdf:type rdf:resource="http://w3id.org/glosis/model/procedure/TextureProcedure"/>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure-SaSiCl_2-63-2000u-nodisp"/>
-        <skos:definition>Sand, silt, clay fractions (2-63-2000um)-no dispersion-spectrally measured and converted to sand, silt or clay</skos:definition>
-        <skos:inScheme rdf:resource="http://w3id.org/glosis/model/procedure/textureProcedure"/>
-        <skos:notation>SaSiCl_2-63-2000u-nodisp-spec</skos:notation>
-        <skos:prefLabel xml:lang="en">SaSiCl_2-63-2000u-nodisp-spec</skos:prefLabel>
-        <skos:scopeNote rdf:resource="https://www.isric.org/sites/default/files/isric_report_2014_01.pdf"/>
-        <skos:scopeNote>Leenaars J.G.B., A.J.M. van Oostrum and M. Ruiperez Gonzalez, 2014. Africa Soil Profiles Database, Version 1.2. A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (with dataset). ISRIC Report 2014/01. Africa Soil Information Service (AfSIS) project and ISRIC - World Soil Information, Wageningen, the Netherlands. See Annex 4.</skos:scopeNote>
     </owl:NamedIndividual>
     
 
