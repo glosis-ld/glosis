@@ -88,7 +88,7 @@ def addModuleDesc(g, config):
 
     for ont, rdfs_comment, desc in g.triples((None, RDFS.comment, None)):
         for ont, rdf_type, owl_ontology in g.triples((ont, RDF.type,  OWL.Ontology)):
-            config["abstract"] = "%s<br>%s" % (config["abstract"], desc)
+            config["introduction"] = desc 
 
     return(config)
 
@@ -148,12 +148,12 @@ if __name__ == "__main__":
 
     for key in config:
         a = textfile.write("%s=%s\n" % (key, config[key]))
-        print("Outputed key: %s", key)
 
     textfile.close()
 
     # Execute WiDoco
     os.system("mkdir %s" % ont_file)
+
     os.system(
         """java -jar %s \
             -ontFile ../%s.ttl \

@@ -8,6 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <http://w3id.org/glosis/model/codelists> a owl:Ontology ;
     dct:creator [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
@@ -17,7 +18,7 @@
             schema:affiliation [ foaf:name "PSNC" ] ],
         [ rdfs:seeAlso <http://orcid.org/0000-0002-5851-2071> ;
             foaf:name "Luís Moreira de Sousa" ;
-            schema:affiliation [ foaf:name "ISRIC" ] ] ;
+            schema:affiliation [ foaf:name "Técnico ULisboa" ] ] ;
     dct:description "This ontology represents GLOSIS code lists extracted from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
     dct:rights "This ontology is distributed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO License - https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"@en ;
     dct:source "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
@@ -124,12 +125,12 @@ glosis_cl:cementationNatureValueCode a skos:ConceptScheme ;
     skos:note "This code list provides possible values for cementationNature."@en ;
     skos:prefLabel "Code list for cementationNatureValue - codelist scheme"@en .
 
-glosis_cl:clayValueCode a skos:ConceptScheme ;
-    rdfs:label "Code list for clayValue - codelist scheme"@en ;
-    rdfs:seeAlso glosis_cl:ClayValueCode ;
+glosis_cl:clayPropertyCode a skos:ConceptScheme ;
+    rdfs:label "Code list for clayProperty - codelist scheme"@en ;
+    rdfs:seeAlso glosis_cl:ClayPropertyCode ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" ;
     skos:note "This code list provides possible values for clay."@en ;
-    skos:prefLabel "Code list for clayValue - codelist scheme"@en .
+    skos:prefLabel "Code list for clayProperty - codelist scheme"@en .
 
 glosis_cl:coatingAbundanceValueCode a skos:ConceptScheme ;
     rdfs:label "Code list for coatingAbundanceValue - codelist scheme"@en ;
@@ -432,12 +433,12 @@ glosis_cl:peatVolumeValueCode a skos:ConceptScheme ;
     skos:note "This code list provides possible values for peatVolume."@en ;
     skos:prefLabel "Code list for peatVolumeValue - codelist scheme"@en .
 
-glosis_cl:physioChemicalValueCode a skos:ConceptScheme ;
-    rdfs:label "Code list for physioChemicalValue - codelist scheme"@en ;
-    rdfs:seeAlso glosis_cl:PhysioChemicalValueCode ;
+glosis_cl:physioChemicalPropertyCode a skos:ConceptScheme ;
+    rdfs:label "Code list for physioChemicalProperty - codelist scheme"@en ;
+    rdfs:seeAlso glosis_cl:PhysioChemicalPropertyCode ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3;ISRIC Report 2014/01: Africa Soil Profiles Database Version 1.2. Annex 3a" ;
     skos:note "This code list provides possible values for physioChemical."@en ;
-    skos:prefLabel "Code list for physioChemicalValue - codelist scheme"@en .
+    skos:prefLabel "Code list for physioChemicalProperty - codelist scheme"@en .
 
 glosis_cl:physiographyValueCode a skos:ConceptScheme ;
     rdfs:label "Code list for physiographyValue - codelist scheme"@en ;
@@ -537,12 +538,12 @@ glosis_cl:saltThicknessValueCode a skos:ConceptScheme ;
     skos:note "This code list provides possible values for saltThickness."@en ;
     skos:prefLabel "Code list for saltThicknessValue - codelist scheme"@en .
 
-glosis_cl:sandValueCode a skos:ConceptScheme ;
-    rdfs:label "Code list for sandValue - codelist scheme"@en ;
-    rdfs:seeAlso glosis_cl:SandValueCode ;
+glosis_cl:sandPropertyCode a skos:ConceptScheme ;
+    rdfs:label "Code list for sandProperty - codelist scheme"@en ;
+    rdfs:seeAlso glosis_cl:SandPropertyCode ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" ;
     skos:note "This code list provides possible values for sand."@en ;
-    skos:prefLabel "Code list for sandValue - codelist scheme"@en .
+    skos:prefLabel "Code list for sandProperty - codelist scheme"@en .
 
 glosis_cl:sandyTextureValueCode a skos:ConceptScheme ;
     rdfs:label "Code list for sandyTextureValue - codelist scheme"@en ;
@@ -565,12 +566,12 @@ glosis_cl:sealingThicknessValueCode a skos:ConceptScheme ;
     skos:note "This code list provides possible values for sealingThickness."@en ;
     skos:prefLabel "Code list for sealingThicknessValue - codelist scheme"@en .
 
-glosis_cl:siltValueCode a skos:ConceptScheme ;
-    rdfs:label "Code list for siltValue - codelist scheme"@en ;
-    rdfs:seeAlso glosis_cl:SiltValueCode ;
+glosis_cl:siltPropertyCode a skos:ConceptScheme ;
+    rdfs:label "Code list for siltProperty - codelist scheme"@en ;
+    rdfs:seeAlso glosis_cl:SiltPropertyCode ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" ;
     skos:note "This code list provides possible values for silt."@en ;
-    skos:prefLabel "Code list for siltValue - codelist scheme"@en .
+    skos:prefLabel "Code list for siltProperty - codelist scheme"@en .
 
 glosis_cl:slopeFormValueCode a skos:ConceptScheme ;
     rdfs:label "Code list for slopeFormValue - codelist scheme"@en ;
@@ -621,26 +622,26 @@ glosis_cl:surfaceAgeValueCode a skos:ConceptScheme ;
     skos:note "This code list provides possible values for surfaceAge."@en ;
     skos:prefLabel "Code list for surfaceAgeValue - codelist scheme"@en .
 
-glosis_cl:textClayValueCode a skos:ConceptScheme ;
-    rdfs:label "Code list for textClayValue - codelist scheme"@en ;
-    rdfs:seeAlso glosis_cl:TextClayValueCode ;
+glosis_cl:textClayPropertyCode a skos:ConceptScheme ;
+    rdfs:label "Code list for textClayProperty - codelist scheme"@en ;
+    rdfs:seeAlso glosis_cl:TextClayPropertyCode ;
     skos:definition "Eva Corral-Pazos-de-Provens, Ígor Rapp-Arrarás and Juan M. Domingo-Santos, Estimating textural fractions of the USDA using those of the International System: A quantile approach, Geoderma, Volume 416, 2022." ;
     skos:note "This code list provides possible values for textClay."@en ;
-    skos:prefLabel "Code list for textClayValue - codelist scheme"@en .
+    skos:prefLabel "Code list for textClayProperty - codelist scheme"@en .
 
-glosis_cl:textSandValueCode a skos:ConceptScheme ;
-    rdfs:label "Code list for textSandValue - codelist scheme"@en ;
-    rdfs:seeAlso glosis_cl:TextSandValueCode ;
+glosis_cl:textSandPropertyCode a skos:ConceptScheme ;
+    rdfs:label "Code list for textSandProperty - codelist scheme"@en ;
+    rdfs:seeAlso glosis_cl:TextSandPropertyCode ;
     skos:definition "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil ;S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  ;International Society of Soil Science (ISSS), 1929. The minutes of the First Commission meetings, International Congress of Soil Science, Washington 1927. Proc. Int. Soc. Soil Sci. 4 (3), pp. 215–222." ;
     skos:note "This code list provides possible values for textSand."@en ;
-    skos:prefLabel "Code list for textSandValue - codelist scheme"@en .
+    skos:prefLabel "Code list for textSandProperty - codelist scheme"@en .
 
-glosis_cl:textSiltValueCode a skos:ConceptScheme ;
-    rdfs:label "Code list for textSiltValue - codelist scheme"@en ;
-    rdfs:seeAlso glosis_cl:TextSiltValueCode ;
+glosis_cl:textSiltPropertyCode a skos:ConceptScheme ;
+    rdfs:label "Code list for textSiltProperty - codelist scheme"@en ;
+    rdfs:seeAlso glosis_cl:TextSiltPropertyCode ;
     skos:definition "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil ;S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " ;
     skos:note "This code list provides possible values for textSilt."@en ;
-    skos:prefLabel "Code list for textSiltValue - codelist scheme"@en .
+    skos:prefLabel "Code list for textSiltProperty - codelist scheme"@en .
 
 glosis_cl:textureUnconsolidatedValueCode a skos:ConceptScheme ;
     rdfs:label "Code list for textureUnconsolidatedValue - codelist scheme"@en ;
@@ -670,12 +671,12 @@ glosis_cl:voidsDiameterValueCode a skos:ConceptScheme ;
     skos:note "This code list provides possible values for voidsDiameter."@en ;
     skos:prefLabel "Code list for voidsDiameterValue - codelist scheme"@en .
 
-glosis_cl:waterRetentionValueCode a skos:ConceptScheme ;
-    rdfs:label "Code list for waterRetentionValue - codelist scheme"@en ;
-    rdfs:seeAlso glosis_cl:WaterRetentionValueCode ;
+glosis_cl:waterRetentionPropertyCode a skos:ConceptScheme ;
+    rdfs:label "Code list for waterRetentionProperty - codelist scheme"@en ;
+    rdfs:seeAlso glosis_cl:WaterRetentionPropertyCode ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" ;
     skos:note "This code list provides possible values for waterRetention."@en ;
-    skos:prefLabel "Code list for waterRetentionValue - codelist scheme"@en .
+    skos:prefLabel "Code list for waterRetentionProperty - codelist scheme"@en .
 
 glosis_cl:weatherConditionsValueCode a skos:ConceptScheme ;
     rdfs:label "Code list for weatherConditionsValue - codelist scheme"@en ;
@@ -803,12 +804,13 @@ glosis_cl:CementationNatureValueCode a owl:Class ;
     owl:oneOf ( glosis_cl:cementationNatureValueCode-Q glosis_cl:cementationNatureValueCode-CS glosis_cl:cementationNatureValueCode-C glosis_cl:cementationNatureValueCode-F glosis_cl:cementationNatureValueCode-I glosis_cl:cementationNatureValueCode-GY glosis_cl:cementationNatureValueCode-FO glosis_cl:cementationNatureValueCode-FM glosis_cl:cementationNatureValueCode-NK glosis_cl:cementationNatureValueCode-P glosis_cl:cementationNatureValueCode-K glosis_cl:cementationNatureValueCode-KQ glosis_cl:cementationNatureValueCode-M ) ;
     skos:definition "Classification of the nature of cementation/compaction. See more in Guidelines for Soil Description issued by the FAO: table 71" .
 
-glosis_cl:ClayValueCode a owl:Class ;
-    rdfs:label "Code list for ClayValue - codelist class"@en ;
-    rdfs:comment "This code list provides the ClayValue codes."@en ;
-    rdfs:seeAlso glosis_cl:clayValueCode ;
-    rdfs:subClassOf skos:Concept ;
-    owl:oneOf ( glosis_cl:clayValueCode-CC glosis_cl:clayValueCode-CNC glosis_cl:clayValueCode-CWT ) ;
+glosis_cl:ClayPropertyCode a owl:Class ;
+    rdfs:label "Code list for ClayProperty - codelist class"@en ;
+    rdfs:comment "This code list provides the ClayProperty codes."@en ;
+    rdfs:seeAlso glosis_cl:clayPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:clayPropertyCode-CC glosis_cl:clayPropertyCode-CNC glosis_cl:clayPropertyCode-CWT ) ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" .
 
 glosis_cl:CoatingAbundanceValueCode a owl:Class ;
@@ -1152,12 +1154,13 @@ glosis_cl:PeatVolumeValueCode a owl:Class ;
     owl:oneOf ( glosis_cl:peatVolumeValueCode-SV2 glosis_cl:peatVolumeValueCode-SV5 glosis_cl:peatVolumeValueCode-SV1 glosis_cl:peatVolumeValueCode-SV3 glosis_cl:peatVolumeValueCode-SV4 ) ;
     skos:definition "Field estimation of volume of solids and bulk density of peat soils. See more in Guidelines for Soil Description issued by the FAO: table 59,2" .
 
-glosis_cl:PhysioChemicalValueCode a owl:Class ;
-    rdfs:label "Code list for PhysioChemicalValue - codelist class"@en ;
-    rdfs:comment "This code list provides the PhysioChemicalValue codes."@en ;
-    rdfs:seeAlso glosis_cl:physioChemicalValueCode ;
-    rdfs:subClassOf skos:Concept ;
-    owl:oneOf ( glosis_cl:physioChemicalValueCode-Alusat glosis_cl:physioChemicalValueCode-Mandit glosis_cl:physioChemicalValueCode-Irodit glosis_cl:physioChemicalValueCode-Aluext glosis_cl:physioChemicalValueCode-Gyp glosis_cl:physioChemicalValueCode-Pottot glosis_cl:physioChemicalValueCode-Photot glosis_cl:physioChemicalValueCode-Basexc glosis_cl:physioChemicalValueCode-Bassum glosis_cl:physioChemicalValueCode-Aluoxa glosis_cl:physioChemicalValueCode-CaN glosis_cl:physioChemicalValueCode-Manpyr glosis_cl:physioChemicalValueCode-ManKCl glosis_cl:physioChemicalValueCode-Mol glosis_cl:physioChemicalValueCode-pH glosis_cl:physioChemicalValueCode-Manext glosis_cl:physioChemicalValueCode-Borext glosis_cl:physioChemicalValueCode-Sul glosis_cl:physioChemicalValueCode-Brot glosis_cl:physioChemicalValueCode-Calsol glosis_cl:physioChemicalValueCode-Sulext glosis_cl:physioChemicalValueCode-Alu glosis_cl:physioChemicalValueCode-Por glosis_cl:physioChemicalValueCode-Copext glosis_cl:physioChemicalValueCode-Irotot glosis_cl:physioChemicalValueCode-Aluexc glosis_cl:physioChemicalValueCode-Cartot glosis_cl:physioChemicalValueCode-Car glosis_cl:physioChemicalValueCode-Hyd glosis_cl:physioChemicalValueCode-Magext glosis_cl:physioChemicalValueCode-Caltot glosis_cl:physioChemicalValueCode-Phoret glosis_cl:physioChemicalValueCode-Aciexc glosis_cl:physioChemicalValueCode-Carpyr glosis_cl:physioChemicalValueCode-Potexc glosis_cl:physioChemicalValueCode-Avavol glosis_cl:physioChemicalValueCode-Cad glosis_cl:physioChemicalValueCode-Nittot glosis_cl:physioChemicalValueCode-Hydcond glosis_cl:physioChemicalValueCode-Nit2 glosis_cl:physioChemicalValueCode-Ccetot glosis_cl:physioChemicalValueCode-Siloxa glosis_cl:physioChemicalValueCode-Aciext glosis_cl:physioChemicalValueCode-Selext glosis_cl:physioChemicalValueCode-Hydexc glosis_cl:physioChemicalValueCode-Irooxa glosis_cl:physioChemicalValueCode-Seltot glosis_cl:physioChemicalValueCode-BulDwhole glosis_cl:physioChemicalValueCode-Sodexc glosis_cl:physioChemicalValueCode-Magtot glosis_cl:physioChemicalValueCode-Carhum glosis_cl:physioChemicalValueCode-Calext glosis_cl:physioChemicalValueCode-Potsol glosis_cl:physioChemicalValueCode-Eleccond glosis_cl:physioChemicalValueCode-Iropyr glosis_cl:physioChemicalValueCode-Carorg glosis_cl:physioChemicalValueCode-Cartoh glosis_cl:physioChemicalValueCode-Calfra glosis_cl:physioChemicalValueCode-Carinorg glosis_cl:physioChemicalValueCode-Sodsol glosis_cl:physioChemicalValueCode-Alutot glosis_cl:physioChemicalValueCode-BulDfine glosis_cl:physioChemicalValueCode-Sodexp glosis_cl:physioChemicalValueCode-Sultot glosis_cl:physioChemicalValueCode-Zin glosis_cl:physioChemicalValueCode-Bascal glosis_cl:physioChemicalValueCode-Phooxa glosis_cl:physioChemicalValueCode-Manoxa glosis_cl:physioChemicalValueCode-Pho glosis_cl:physioChemicalValueCode-Magexc glosis_cl:physioChemicalValueCode-Solsal glosis_cl:physioChemicalValueCode-Calexc glosis_cl:physioChemicalValueCode-Carful glosis_cl:physioChemicalValueCode-Potext glosis_cl:physioChemicalValueCode-Brod glosis_cl:physioChemicalValueCode-Aludit glosis_cl:physioChemicalValueCode-Zinext glosis_cl:physioChemicalValueCode-Iroext glosis_cl:physioChemicalValueCode-Sodext glosis_cl:physioChemicalValueCode-Alupyr glosis_cl:physioChemicalValueCode-CEC glosis_cl:physioChemicalValueCode-Chl glosis_cl:physioChemicalValueCode-Bortot glosis_cl:physioChemicalValueCode-Nit3 glosis_cl:physioChemicalValueCode-Orgmat glosis_cl:physioChemicalValueCode-Sodtot glosis_cl:physioChemicalValueCode-Phoext glosis_cl:physioChemicalValueCode-Mantot glosis_cl:physioChemicalValueCode-Coptot glosis_cl:physioChemicalValueCode-ECEC glosis_cl:physioChemicalValueCode-Magsol ) ;
+glosis_cl:PhysioChemicalPropertyCode a owl:Class ;
+    rdfs:label "Code list for PhysioChemicalProperty - codelist class"@en ;
+    rdfs:comment "This code list provides the PhysioChemicalProperty codes."@en ;
+    rdfs:seeAlso glosis_cl:physioChemicalPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:physioChemicalPropertyCode-Alusat glosis_cl:physioChemicalPropertyCode-Mandit glosis_cl:physioChemicalPropertyCode-Irodit glosis_cl:physioChemicalPropertyCode-Aluext glosis_cl:physioChemicalPropertyCode-Gyp glosis_cl:physioChemicalPropertyCode-Pottot glosis_cl:physioChemicalPropertyCode-Photot glosis_cl:physioChemicalPropertyCode-Basexc glosis_cl:physioChemicalPropertyCode-Bassum glosis_cl:physioChemicalPropertyCode-Aluoxa glosis_cl:physioChemicalPropertyCode-CaN glosis_cl:physioChemicalPropertyCode-Manpyr glosis_cl:physioChemicalPropertyCode-ManKCl glosis_cl:physioChemicalPropertyCode-Mol glosis_cl:physioChemicalPropertyCode-pH glosis_cl:physioChemicalPropertyCode-Manext glosis_cl:physioChemicalPropertyCode-Borext glosis_cl:physioChemicalPropertyCode-Sul glosis_cl:physioChemicalPropertyCode-Brot glosis_cl:physioChemicalPropertyCode-Calsol glosis_cl:physioChemicalPropertyCode-Sulext glosis_cl:physioChemicalPropertyCode-Alu glosis_cl:physioChemicalPropertyCode-Por glosis_cl:physioChemicalPropertyCode-Copext glosis_cl:physioChemicalPropertyCode-Irotot glosis_cl:physioChemicalPropertyCode-Aluexc glosis_cl:physioChemicalPropertyCode-Cartot glosis_cl:physioChemicalPropertyCode-Car glosis_cl:physioChemicalPropertyCode-Hyd glosis_cl:physioChemicalPropertyCode-Magext glosis_cl:physioChemicalPropertyCode-Caltot glosis_cl:physioChemicalPropertyCode-Phoret glosis_cl:physioChemicalPropertyCode-Aciexc glosis_cl:physioChemicalPropertyCode-Carpyr glosis_cl:physioChemicalPropertyCode-Potexc glosis_cl:physioChemicalPropertyCode-Avavol glosis_cl:physioChemicalPropertyCode-Cad glosis_cl:physioChemicalPropertyCode-Nittot glosis_cl:physioChemicalPropertyCode-Hydcond glosis_cl:physioChemicalPropertyCode-Nit2 glosis_cl:physioChemicalPropertyCode-Ccetot glosis_cl:physioChemicalPropertyCode-Siloxa glosis_cl:physioChemicalPropertyCode-Aciext glosis_cl:physioChemicalPropertyCode-Selext glosis_cl:physioChemicalPropertyCode-Hydexc glosis_cl:physioChemicalPropertyCode-Irooxa glosis_cl:physioChemicalPropertyCode-Seltot glosis_cl:physioChemicalPropertyCode-BulDwhole glosis_cl:physioChemicalPropertyCode-Sodexc glosis_cl:physioChemicalPropertyCode-Magtot glosis_cl:physioChemicalPropertyCode-Carhum glosis_cl:physioChemicalPropertyCode-Calext glosis_cl:physioChemicalPropertyCode-Potsol glosis_cl:physioChemicalPropertyCode-Eleccond glosis_cl:physioChemicalPropertyCode-Iropyr glosis_cl:physioChemicalPropertyCode-Carorg glosis_cl:physioChemicalPropertyCode-Cartoh glosis_cl:physioChemicalPropertyCode-Calfra glosis_cl:physioChemicalPropertyCode-Carinorg glosis_cl:physioChemicalPropertyCode-Sodsol glosis_cl:physioChemicalPropertyCode-Alutot glosis_cl:physioChemicalPropertyCode-BulDfine glosis_cl:physioChemicalPropertyCode-Sodexp glosis_cl:physioChemicalPropertyCode-Sultot glosis_cl:physioChemicalPropertyCode-Zin glosis_cl:physioChemicalPropertyCode-Bascal glosis_cl:physioChemicalPropertyCode-Phooxa glosis_cl:physioChemicalPropertyCode-Manoxa glosis_cl:physioChemicalPropertyCode-Pho glosis_cl:physioChemicalPropertyCode-Magexc glosis_cl:physioChemicalPropertyCode-Solsal glosis_cl:physioChemicalPropertyCode-Calexc glosis_cl:physioChemicalPropertyCode-Carful glosis_cl:physioChemicalPropertyCode-Potext glosis_cl:physioChemicalPropertyCode-Brod glosis_cl:physioChemicalPropertyCode-Aludit glosis_cl:physioChemicalPropertyCode-Zinext glosis_cl:physioChemicalPropertyCode-Iroext glosis_cl:physioChemicalPropertyCode-Sodext glosis_cl:physioChemicalPropertyCode-Alupyr glosis_cl:physioChemicalPropertyCode-CEC glosis_cl:physioChemicalPropertyCode-Chl glosis_cl:physioChemicalPropertyCode-Bortot glosis_cl:physioChemicalPropertyCode-Nit3 glosis_cl:physioChemicalPropertyCode-Orgmat glosis_cl:physioChemicalPropertyCode-Sodtot glosis_cl:physioChemicalPropertyCode-Phoext glosis_cl:physioChemicalPropertyCode-Mantot glosis_cl:physioChemicalPropertyCode-Coptot glosis_cl:physioChemicalPropertyCode-ECEC glosis_cl:physioChemicalPropertyCode-Magsol ) ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3;ISRIC Report 2014/01: Africa Soil Profiles Database Version 1.2. Annex 3a" .
 
 glosis_cl:PhysiographyValueCode a owl:Class ;
@@ -1272,12 +1275,13 @@ glosis_cl:SaltThicknessValueCode a owl:Class ;
     owl:oneOf ( glosis_cl:saltThicknessValueCode-N glosis_cl:saltThicknessValueCode-V glosis_cl:saltThicknessValueCode-F glosis_cl:saltThicknessValueCode-M glosis_cl:saltThicknessValueCode-C ) ;
     skos:definition "The occurrence of salt at the surface may be described in terms of cover, appearance and type of salt. See more in the Guidelines for Soil Description issued by the FAO: table 22,2" .
 
-glosis_cl:SandValueCode a owl:Class ;
-    rdfs:label "Code list for SandValue - codelist class"@en ;
-    rdfs:comment "This code list provides the SandValue codes."@en ;
-    rdfs:seeAlso glosis_cl:sandValueCode ;
-    rdfs:subClassOf skos:Concept ;
-    owl:oneOf ( glosis_cl:sandValueCode-SWD3 glosis_cl:sandValueCode-SWDT glosis_cl:sandValueCode-SWD2 glosis_cl:sandValueCode-SWD4 glosis_cl:sandValueCode-SWD1 glosis_cl:sandValueCode-SWD5 ) ;
+glosis_cl:SandPropertyCode a owl:Class ;
+    rdfs:label "Code list for SandProperty - codelist class"@en ;
+    rdfs:comment "This code list provides the SandProperty codes."@en ;
+    rdfs:seeAlso glosis_cl:sandPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:sandPropertyCode-SWD3 glosis_cl:sandPropertyCode-SWDT glosis_cl:sandPropertyCode-SWD2 glosis_cl:sandPropertyCode-SWD4 glosis_cl:sandPropertyCode-SWD1 glosis_cl:sandPropertyCode-SWD5 ) ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" .
 
 glosis_cl:SandyTextureValueCode a owl:Class ;
@@ -1304,12 +1308,13 @@ glosis_cl:SealingThicknessValueCode a owl:Class ;
     owl:oneOf ( glosis_cl:sealingThicknessValueCode-F glosis_cl:sealingThicknessValueCode-N glosis_cl:sealingThicknessValueCode-M glosis_cl:sealingThicknessValueCode-V glosis_cl:sealingThicknessValueCode-C ) ;
     skos:definition "Surface sealing is used to describe crusts that develop at the soil surface after the topsoil dries out. See more in Guidelines for Soil Description issued by the FAO: 20,1" .
 
-glosis_cl:SiltValueCode a owl:Class ;
-    rdfs:label "Code list for SiltValue - codelist class"@en ;
-    rdfs:comment "This code list provides the SiltValue codes."@en ;
-    rdfs:seeAlso glosis_cl:siltValueCode ;
-    rdfs:subClassOf skos:Concept ;
-    owl:oneOf ( glosis_cl:siltValueCode-SWDF2 glosis_cl:siltValueCode-SWDF1 glosis_cl:siltValueCode-SWDFT ) ;
+glosis_cl:SiltPropertyCode a owl:Class ;
+    rdfs:label "Code list for SiltProperty - codelist class"@en ;
+    rdfs:comment "This code list provides the SiltProperty codes."@en ;
+    rdfs:seeAlso glosis_cl:siltPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:siltPropertyCode-SWDF2 glosis_cl:siltPropertyCode-SWDF1 glosis_cl:siltPropertyCode-SWDFT ) ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" .
 
 glosis_cl:SlopeFormValueCode a owl:Class ;
@@ -1368,28 +1373,31 @@ glosis_cl:SurfaceAgeValueCode a owl:Class ;
     owl:oneOf ( glosis_cl:surfaceAgeValueCode-T glosis_cl:surfaceAgeValueCode-oPf glosis_cl:surfaceAgeValueCode-Ha glosis_cl:surfaceAgeValueCode-Ya glosis_cl:surfaceAgeValueCode-oPp glosis_cl:surfaceAgeValueCode-Yn glosis_cl:surfaceAgeValueCode-lPi glosis_cl:surfaceAgeValueCode-oPi glosis_cl:surfaceAgeValueCode-lPp glosis_cl:surfaceAgeValueCode-O glosis_cl:surfaceAgeValueCode-vYa glosis_cl:surfaceAgeValueCode-vYn glosis_cl:surfaceAgeValueCode-lPf glosis_cl:surfaceAgeValueCode-Hn ) ;
     skos:definition "The age of the landscape is important information from which the possible duration of the occurrence of soil formation processes can be derived. See more in guidelines for Soil Description issued by the FAO: table 13" .
 
-glosis_cl:TextClayValueCode a owl:Class ;
-    rdfs:label "Code list for TextClayValue - codelist class"@en ;
-    rdfs:comment "This code list provides the TextClayValue codes."@en ;
-    rdfs:seeAlso glosis_cl:textClayValueCode ;
-    rdfs:subClassOf skos:Concept ;
-    owl:oneOf ( glosis_cl:textClayValueCode-Cl ) ;
+glosis_cl:TextClayPropertyCode a owl:Class ;
+    rdfs:label "Code list for TextClayProperty - codelist class"@en ;
+    rdfs:comment "This code list provides the TextClayProperty codes."@en ;
+    rdfs:seeAlso glosis_cl:textClayPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:textClayPropertyCode-Cl ) ;
     skos:definition "Eva Corral-Pazos-de-Provens, Ígor Rapp-Arrarás and Juan M. Domingo-Santos, Estimating textural fractions of the USDA using those of the International System: A quantile approach, Geoderma, Volume 416, 2022." .
 
-glosis_cl:TextSandValueCode a owl:Class ;
-    rdfs:label "Code list for TextSandValue - codelist class"@en ;
-    rdfs:comment "This code list provides the TextSandValue codes."@en ;
-    rdfs:seeAlso glosis_cl:textSandValueCode ;
-    rdfs:subClassOf skos:Concept ;
-    owl:oneOf ( glosis_cl:textSandValueCode-fSa_ISSS glosis_cl:textSandValueCode-mSa_ISSS glosis_cl:textSandValueCode-cSa_USDA glosis_cl:textSandValueCode-vfSa_ISSS glosis_cl:textSandValueCode-vcSa_ISSS glosis_cl:textSandValueCode-cSa_ISO glosis_cl:textSandValueCode-fSa_ISO glosis_cl:textSandValueCode-Sa_ISSS glosis_cl:textSandValueCode-cSa_ISSS glosis_cl:textSandValueCode-mSa_USDA glosis_cl:textSandValueCode-vcSa_USDA glosis_cl:textSandValueCode-vfSa_USDA glosis_cl:textSandValueCode-Sa_ISO glosis_cl:textSandValueCode-Sa_USDA glosis_cl:textSandValueCode-mSa_ISO glosis_cl:textSandValueCode-fSa_USDA ) ;
+glosis_cl:TextSandPropertyCode a owl:Class ;
+    rdfs:label "Code list for TextSandProperty - codelist class"@en ;
+    rdfs:comment "This code list provides the TextSandProperty codes."@en ;
+    rdfs:seeAlso glosis_cl:textSandPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:textSandPropertyCode-fSa_ISSS glosis_cl:textSandPropertyCode-mSa_ISSS glosis_cl:textSandPropertyCode-cSa_USDA glosis_cl:textSandPropertyCode-vfSa_ISSS glosis_cl:textSandPropertyCode-vcSa_ISSS glosis_cl:textSandPropertyCode-cSa_ISO glosis_cl:textSandPropertyCode-fSa_ISO glosis_cl:textSandPropertyCode-Sa_ISSS glosis_cl:textSandPropertyCode-cSa_ISSS glosis_cl:textSandPropertyCode-mSa_USDA glosis_cl:textSandPropertyCode-vcSa_USDA glosis_cl:textSandPropertyCode-vfSa_USDA glosis_cl:textSandPropertyCode-Sa_ISO glosis_cl:textSandPropertyCode-Sa_USDA glosis_cl:textSandPropertyCode-mSa_ISO glosis_cl:textSandPropertyCode-fSa_USDA ) ;
     skos:definition "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil ;S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  ;International Society of Soil Science (ISSS), 1929. The minutes of the First Commission meetings, International Congress of Soil Science, Washington 1927. Proc. Int. Soc. Soil Sci. 4 (3), pp. 215–222." .
 
-glosis_cl:TextSiltValueCode a owl:Class ;
-    rdfs:label "Code list for TextSiltValue - codelist class"@en ;
-    rdfs:comment "This code list provides the TextSiltValue codes."@en ;
-    rdfs:seeAlso glosis_cl:textSiltValueCode ;
-    rdfs:subClassOf skos:Concept ;
-    owl:oneOf ( glosis_cl:textSiltValueCode-mSi_ISO glosis_cl:textSiltValueCode-fSi_ISO glosis_cl:textSiltValueCode-cSi_ISO glosis_cl:textSiltValueCode-Si_ISSS glosis_cl:textSiltValueCode-Si_USDA glosis_cl:textSiltValueCode-Si_ISO glosis_cl:textSiltValueCode-cSi_USDA glosis_cl:textSiltValueCode-fSi_USDA ) ;
+glosis_cl:TextSiltPropertyCode a owl:Class ;
+    rdfs:label "Code list for TextSiltProperty - codelist class"@en ;
+    rdfs:comment "This code list provides the TextSiltProperty codes."@en ;
+    rdfs:seeAlso glosis_cl:textSiltPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:textSiltPropertyCode-mSi_ISO glosis_cl:textSiltPropertyCode-fSi_ISO glosis_cl:textSiltPropertyCode-cSi_ISO glosis_cl:textSiltPropertyCode-Si_ISSS glosis_cl:textSiltPropertyCode-Si_USDA glosis_cl:textSiltPropertyCode-Si_ISO glosis_cl:textSiltPropertyCode-cSi_USDA glosis_cl:textSiltPropertyCode-fSi_USDA ) ;
     skos:definition "ISO 14688-1:2017 Geotechnical investigation and testing — Identification and classification of soil ;S.J. Blott and K. Pye, Particle size scales and classification of sediment types based on particle size distributions: Review and recommended procedures, Sedimentology, 59 (7) (2012), pp. 2071-2096.  " .
 
 glosis_cl:TextureUnconsolidatedValueCode a owl:Class ;
@@ -1423,12 +1431,13 @@ glosis_cl:VoidsDiameterValueCode a owl:Class ;
     owl:oneOf ( glosis_cl:voidsDiameterValueCode-MC glosis_cl:voidsDiameterValueCode-VC glosis_cl:voidsDiameterValueCode-M glosis_cl:voidsDiameterValueCode-FM glosis_cl:voidsDiameterValueCode-V glosis_cl:voidsDiameterValueCode-FF glosis_cl:voidsDiameterValueCode-C glosis_cl:voidsDiameterValueCode-F ) ;
     skos:definition "Voids include all empty spaces in the soil. They are related to the arrangement of the primary soil constituents, rooting patterns, burrowing of animals or any other soil-forming processes, such as cracking, translocation and leaching. See more in Guidelines for Soil Description issued by the FAO: table 62" .
 
-glosis_cl:WaterRetentionValueCode a owl:Class ;
-    rdfs:label "Code list for WaterRetentionValue - codelist class"@en ;
-    rdfs:comment "This code list provides the WaterRetentionValue codes."@en ;
-    rdfs:seeAlso glosis_cl:waterRetentionValueCode ;
-    rdfs:subClassOf skos:Concept ;
-    owl:oneOf ( glosis_cl:waterRetentionValueCode-WRG100 glosis_cl:waterRetentionValueCode-WRG33 glosis_cl:waterRetentionValueCode-WRG1500 glosis_cl:waterRetentionValueCode-WRV10 glosis_cl:waterRetentionValueCode-WRV1500 glosis_cl:waterRetentionValueCode-WRV33 glosis_cl:waterRetentionValueCode-WRV glosis_cl:waterRetentionValueCode-WRG6 glosis_cl:waterRetentionValueCode-WRV200 glosis_cl:waterRetentionValueCode-WRG10 glosis_cl:waterRetentionValueCode-WRG glosis_cl:waterRetentionValueCode-WRV6 glosis_cl:waterRetentionValueCode-WRG500 glosis_cl:waterRetentionValueCode-WRG200 glosis_cl:waterRetentionValueCode-WRV100 glosis_cl:waterRetentionValueCode-WRV500 ) ;
+glosis_cl:WaterRetentionPropertyCode a owl:Class ;
+    rdfs:label "Code list for WaterRetentionProperty - codelist class"@en ;
+    rdfs:comment "This code list provides the WaterRetentionProperty codes."@en ;
+    rdfs:seeAlso glosis_cl:waterRetentionPropertyCode ;
+    rdfs:subClassOf skos:Concept,
+        sosa:ObservableProperty ;
+    owl:oneOf ( glosis_cl:waterRetentionPropertyCode-WRG100 glosis_cl:waterRetentionPropertyCode-WRG33 glosis_cl:waterRetentionPropertyCode-WRG1500 glosis_cl:waterRetentionPropertyCode-WRV10 glosis_cl:waterRetentionPropertyCode-WRV1500 glosis_cl:waterRetentionPropertyCode-WRV33 glosis_cl:waterRetentionPropertyCode-WRV glosis_cl:waterRetentionPropertyCode-WRG6 glosis_cl:waterRetentionPropertyCode-WRV200 glosis_cl:waterRetentionPropertyCode-WRG10 glosis_cl:waterRetentionPropertyCode-WRG glosis_cl:waterRetentionPropertyCode-WRV6 glosis_cl:waterRetentionPropertyCode-WRG500 glosis_cl:waterRetentionPropertyCode-WRG200 glosis_cl:waterRetentionPropertyCode-WRV100 glosis_cl:waterRetentionPropertyCode-WRV500 ) ;
     skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3" .
 
 glosis_cl:WeatherConditionsValueCode a owl:Class ;
@@ -1761,7 +1770,7 @@ glosis_cl:bulkDensityPeatValueCode-BD5 a glosis_cl:BulkDensityPeatValueCode,
 
 glosis_cl:carbonatesContentValueCode-EX a glosis_cl:CarbonatesContentValueCode,
         skos:Concept ;
-    skos:definition "Extremely strong reaction forming thick foam forms quickly: ≈ > 25 " ;
+    skos:definition "Extremely strong reaction forming thick foam forms quickly: ≈ > 25" ;
     skos:inScheme glosis_cl:carbonatesContentValueCode ;
     skos:notation "EX" ;
     skos:prefLabel "Extremely calcareous"@en ;
@@ -1769,7 +1778,7 @@ glosis_cl:carbonatesContentValueCode-EX a glosis_cl:CarbonatesContentValueCode,
 
 glosis_cl:carbonatesContentValueCode-MO a glosis_cl:CarbonatesContentValueCode,
         skos:Concept ;
-    skos:definition "Visible effervescence: ≈ 2–10 " ;
+    skos:definition "Visible effervescence: ≈ 2–10" ;
     skos:inScheme glosis_cl:carbonatesContentValueCode ;
     skos:notation "MO" ;
     skos:prefLabel "Moderately calcareous"@en ;
@@ -1793,7 +1802,7 @@ glosis_cl:carbonatesContentValueCode-SL a glosis_cl:CarbonatesContentValueCode,
 
 glosis_cl:carbonatesContentValueCode-ST a glosis_cl:CarbonatesContentValueCode,
         skos:Concept ;
-    skos:definition "Strong visible effervescence. Bubbles form a low foam: ≈ 10–25 " ;
+    skos:definition "Strong visible effervescence. Bubbles form a low foam: ≈ 10–25" ;
     skos:inScheme glosis_cl:carbonatesContentValueCode ;
     skos:notation "ST" ;
     skos:prefLabel "Strongly calcareous"@en ;
@@ -2063,29 +2072,29 @@ glosis_cl:cementationNatureValueCode-Q a glosis_cl:CementationNatureValueCode,
     skos:prefLabel "Silica"@en ;
     skos:topConceptOf glosis_cl:cementationNatureValueCode .
 
-glosis_cl:clayValueCode-CC a glosis_cl:ClayValueCode,
+glosis_cl:clayPropertyCode-CC a glosis_cl:ClayPropertyCode,
         skos:Concept ;
     skos:definition "Clay carbonate refers to clay particles that are associated with or contain carbonate minerals, particularly calcium carbonate (CaCO₃). These carbonates are typically present in soils with higher pH (alkaline soils), and they play a significant role in buffering soil acidity. Clay-carbonate soils are found in regions with semi-arid and arid climates, where evaporation exceeds precipitation. These soils can have distinct properties, including a lower cation exchange capacity compared to non-carbonate soils and an ability to neutralize soil acidity, influencing both soil fertility and plant growth. Source: Brady & Weil (2017), The Nature and Properties of Soils." ;
-    skos:inScheme glosis_cl:clayValueCode ;
+    skos:inScheme glosis_cl:clayPropertyCode ;
     skos:notation "CC" ;
     skos:prefLabel "Clay Carbonate"@en ;
-    skos:topConceptOf glosis_cl:clayValueCode .
+    skos:topConceptOf glosis_cl:clayPropertyCode .
 
-glosis_cl:clayValueCode-CNC a glosis_cl:ClayValueCode,
+glosis_cl:clayPropertyCode-CNC a glosis_cl:ClayPropertyCode,
         skos:Concept ;
     skos:definition "Clay non-carbonate refers to the fraction of clay particles in soil that do not contain carbonates. Clay particles are very fine mineral components that contribute to the soil's texture and are typically smaller than 0.002 mm in diameter. The term non-carbonate implies that these clay particles are not associated with carbonate minerals, such as calcium carbonate (lime), which are commonly found in soils in arid or semi-arid regions. Non-carbonate clay soils are often more acidic, with higher cation exchange capacity, and may require different management practices, especially for nutrient availability and soil pH control. Source: Brady & Weil (2017), The Nature and Properties of Soils." ;
-    skos:inScheme glosis_cl:clayValueCode ;
+    skos:inScheme glosis_cl:clayPropertyCode ;
     skos:notation "CNC" ;
     skos:prefLabel "Clay Non-Carbonate"@en ;
-    skos:topConceptOf glosis_cl:clayValueCode .
+    skos:topConceptOf glosis_cl:clayPropertyCode .
 
-glosis_cl:clayValueCode-CWT a glosis_cl:ClayValueCode,
+glosis_cl:clayPropertyCode-CWT a glosis_cl:ClayPropertyCode,
         skos:Concept ;
     skos:definition "Clay water dispersible refers to the portion of clay particles in soil that can be dispersed into water, forming a suspension when the soil is wetted. This characteristic is significant in assessing soil stability, particularly in the presence of water. Water-dispersible clays can lead to erosion problems, as the particles are more easily detached and transported by water. This term is important in understanding soil erodibility, especially in soils with high clay content that are prone to degradation when subjected to rainfall or irrigation. The dispersibility of clay affects both the physical structure and water-holding capacity of the soil. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:clayValueCode ;
+    skos:inScheme glosis_cl:clayPropertyCode ;
     skos:notation "CWT" ;
     skos:prefLabel "Clay Water Dispersible"@en ;
-    skos:topConceptOf glosis_cl:clayValueCode .
+    skos:topConceptOf glosis_cl:clayPropertyCode .
 
 glosis_cl:coatingAbundanceValueCode-A a glosis_cl:CoatingAbundanceValueCode,
         skos:Concept ;
@@ -5111,7 +5120,7 @@ glosis_cl:lithologyValueCode-UF2 a glosis_cl:LithologyValueCode,
 glosis_cl:lithologyValueCode-UG a glosis_cl:LithologyValueCode,
         skos:Concept ;
     skos:broader glosis_cl:lithologyValueCode-U ;
-    skos:definition "Hierarchy of lithology from the major class of sedimentary rock (unconsolidated) and the group of glacial " ;
+    skos:definition "Hierarchy of lithology from the major class of sedimentary rock (unconsolidated) and the group of glacial" ;
     skos:inScheme glosis_cl:lithologyValueCode ;
     skos:narrower glosis_cl:lithologyValueCode-UG1,
         glosis_cl:lithologyValueCode-UG2,
@@ -6184,1173 +6193,1173 @@ glosis_cl:peatVolumeValueCode-SV5 a glosis_cl:PeatVolumeValueCode,
     skos:prefLabel "More than or equal to 12 %"@en ;
     skos:topConceptOf glosis_cl:peatVolumeValueCode .
 
-glosis_cl:physioChemicalValueCode-Aciexc a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Aciexc a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Exchangeable acidity represents the amount of hydrogen (H⁺) and aluminum (Al³⁺) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Aciexc" ;
     skos:prefLabel "Acidity - exchangeable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Aciext a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Aciext a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Extractable acidity measures the active acidity in soil, including hydrogen ions in the soil solution and weakly bound to colloids. It is critical for assessing lime requirements and addressing soil pH imbalances to improve plant growth. Source: Soil Chemistry by Bohn et al." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Aciext" ;
     skos:prefLabel "Acidity - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Alu a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Alu a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Al" ;
     dbo:pubchem "5359268" ;
     dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Sum of the oxalate-extractable aluminium concentration plus half the oxalate-extractable iron concentration" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Alu" ;
     skos:prefLabel "Aluminium (Al) + 0.5 Fe oxalate"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Aludit a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Aludit a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Al" ;
     dbo:pubchem "5359268" ;
     dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "'Free' aluminium content extracted from amorphous compounds (weathering products) as well as crystaline, primary aluminium compounds (parent material) in the soil." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Aludit" ;
     skos:prefLabel "Aluminium (Al) - dithionite extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Aluexc a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Aluexc a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Al" ;
     dbo:pubchem "5359268" ;
     dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Aluexc" ;
     skos:prefLabel "Aluminium (Al) exchangeable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Aluext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Aluext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Al" ;
     dbo:pubchem "5359268" ;
     dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Aluminium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Aluext" ;
     skos:prefLabel "Aluminium (Al) extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Aluoxa a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Aluoxa a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Al" ;
     dbo:pubchem "5359268" ;
     dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "'Active' aluminium content extracted from amorphous aluminium compounds that are the products of the weathering of primary soil particles" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Aluoxa" ;
     skos:prefLabel "Aluminium (Al) - oxalate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Alupyr a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Alupyr a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Al" ;
     dbo:pubchem "5359268" ;
     dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Aluminium in soil that is organically bound in organo-metal complexes" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Alupyr" ;
     skos:prefLabel "Aluminium (Al) - pyrophosphate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Alusat a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Alusat a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Al" ;
     dbo:pubchem "5359268" ;
     dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Measure to describe the relative abundance of alumium in the soil. It is the percentage of the CEC occupied by aluminium" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Alusat" ;
     skos:prefLabel "Aluminium (Al) saturation"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Alutot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Alutot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Al" ;
     dbo:pubchem "5359268" ;
     dbprop:inchikey "XAGFODPZIPBFFR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5359268> ;
     skos:definition "Total concentration of aluminium in the soil, including both soluble and insoluble forms, typically measured after complete digestion of the soil sample." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Alutot" ;
     skos:prefLabel "Aluminium (Al) total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Avavol a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Avavol a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Available water capacity (AWC) measures the volume of water soil can retain between field capacity and the permanent wilting point. It represents the water accessible to plants for uptake. High AWC supports better plant growth, while low AWC may necessitate irrigation. Source: USDA NRCS." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Avavol" ;
     skos:prefLabel "Available water capacity - volumetric (FC to WP)"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Bascal a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Bascal a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Bascal" ;
     skos:prefLabel "Base saturation - calculated"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Basexc a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Basexc a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Exchangeable bases refer to the cations (e.g., calcium, magnesium, potassium, and sodium) adsorbed onto soil colloids, which can readily exchange with soil solution ions. These cations are crucial for maintaining soil fertility, affecting nutrient availability and pH buffering capacity. High exchangeable base levels indicate fertile soil conducive to plant growth. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Basexc" ;
     skos:prefLabel "Bases - exchangeable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Bassum a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Bassum a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Base saturation calculated as the sum of cations represents the proportion of the cation exchange capacity (CEC) occupied by essential base cations like calcium, magnesium, potassium, and sodium. It provides insight into the soil's fertility status and its ability to resist acidification. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Bassum" ;
     skos:prefLabel "Base saturation - sum of cations"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Borext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Borext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/B" ;
     dbo:pubchem "5462311" ;
     dbprop:inchikey "ZOXJGFHDIHLPTG-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462311> ;
     skos:definition "Boron bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Borext" ;
     skos:prefLabel "Boron (B) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Bortot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Bortot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/B" ;
     dbo:pubchem "5462311" ;
     dbprop:inchikey "ZOXJGFHDIHLPTG-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462311> ;
     skos:definition "Total boron includes all boron forms in soil, crucial for plant cell wall formation and reproductive processes. Deficiency can impair growth, while toxicity is a risk in arid soils or with excessive irrigation. Source: Havlin et al. (2014)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Bortot" ;
     skos:prefLabel "Boron (B) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Brod a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Brod a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/BrH/h1H/p-1" ;
     dbo:pubchem "259" ;
     dbprop:inchikey "CPELXLSAUQHCOX-UHFFFAOYSA-M" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/259> ;
     skos:definition "Bromide bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Brod" ;
     skos:prefLabel "Bromide (Br-) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Brot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Brot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/BrHO2/c2-1-3/h(H,2,3)/p-1" ;
     dbo:pubchem "5460628" ;
     dbprop:inchikey "DKSMCEUSSQTGBK-UHFFFAOYSA-M" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5460628> ;
     skos:definition "Bromite (BrO₂⁻) is a rare intermediate oxidation state of bromine, generally not prevalent in natural soils. It may arise under specific chemical or environmental conditions and is of limited importance in typical soil science contexts. Source: Environmental Chemistry Textbooks." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Brot" ;
     skos:prefLabel "Bromite (BrO2-)"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-BulDfine a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-BulDfine a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "BulDfine" ;
     skos:prefLabel "Bulk Density of the fine earth fraction"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-BulDwhole a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-BulDwhole a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Bulk density measures the mass of soil per unit volume, including both solids and pore spaces. It is a critical parameter for assessing soil compaction, porosity, and water infiltration capacity. High bulk density often indicates poor aeration and root penetration, while low values are associated with high organic matter content and good structure. Source: USDA NRCS." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "BulDwhole" ;
     skos:prefLabel "Bulk Density of the whole soil"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-CEC a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-CEC a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "CEC measures the soil’s ability to hold and exchange positively charged ions (cations). It is a critical indicator of soil fertility, as higher CEC values imply greater capacity to retain essential nutrients like calcium, magnesium, and potassium. Clayey and organic-rich soils typically exhibit higher CEC. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "CEC" ;
     skos:prefLabel "Cation exchange capacity (CEC)"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-CaN a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-CaN a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "The C/N ratio represents the proportion of carbon to nitrogen in organic matter. It influences decomposition rates and nutrient availability. A lower C/N ratio promotes rapid organic matter breakdown and nitrogen release, while a high ratio may lead to nitrogen immobilization, affecting plant growth. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "CaN" ;
     skos:prefLabel "Carbon/Nitrogen (C/N) ratio"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Cad a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Cad a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Cd" ;
     dbo:pubchem "23973" ;
-    dbprop:inchikey "BDOSMKKIYDKNTQ-UHFFFAOYSA-N  " ;
+    dbprop:inchikey "BDOSMKKIYDKNTQ-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23973> ;
     skos:definition "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Cad" ;
     skos:prefLabel "Cadmium (Cd)"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Calexc a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Calexc a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Ca/q+2" ;
     dbo:pubchem "271" ;
     dbprop:inchikey "BHPQYMZQTOCNFJ-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/271> ;
     skos:definition "Calcium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Calexc" ;
     skos:prefLabel "Calcium (Ca++) - exchangeable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Calext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Calext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Ca/q+2" ;
     dbo:pubchem "271" ;
     dbprop:inchikey "BHPQYMZQTOCNFJ-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/271> ;
     skos:definition "Calcium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Calext" ;
     skos:prefLabel "Calcium (Ca++) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Calfra a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Calfra a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/CH2O3.Ca/c2-1(3)4;/h(H2,2,3,4);/q;+2/p-2" ;
     dbo:pubchem "10112" ;
     dbprop:inchikey "VTYYLEPIZMXCLO-UHFFFAOYSA-L" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/10112> ;
     skos:definition "This term quantifies the fraction of calcium carbonate (CaCO₃) in soil, indicating its lime content. Calcium carbonate acts as a pH buffer, neutralizing soil acidity and enhancing nutrient availability. High levels improve soil structure and aggregate stability, making it especially valuable for acidic soils. Source: FAO Soil Bulletin." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Calfra" ;
     skos:prefLabel "Calcium carbonate equivalent - fraction"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Calsol a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Calsol a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Ca/q+2" ;
     dbo:pubchem "271" ;
     dbprop:inchikey "BHPQYMZQTOCNFJ-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/271> ;
     skos:definition "Soluble Calcium cations accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Calsol" ;
     skos:prefLabel "Calcium (Ca++) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Caltot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Caltot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Ca/q+2" ;
     dbo:pubchem "271" ;
     dbprop:inchikey "BHPQYMZQTOCNFJ-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/271> ;
     skos:definition "Total calcium in soil includes all forms, from exchangeable calcium to calcium in minerals. It is essential for plant cell wall structure, enzyme activation, and soil aggregation. Calcium levels influence soil pH and nutrient availability. Source: Havlin et al. (2014)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Caltot" ;
     skos:prefLabel "Calcium (Ca++) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Car a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Car a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/CH2O3/c2-1(3)4/h(H2,2,3,4)/p-2" ;
     dbo:pubchem "19660" ;
     dbprop:inchikey "BVKZGUZCCUSVTD-UHFFFAOYSA-L" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/19660> ;
     skos:definition "Soluble carbonates contribute to soil alkalinity and act as a pH buffer. They play a role in nutrient availability, particularly in arid and semi-arid regions, but excessive carbonates can immobilize certain nutrients like phosphorus and iron. Source: Soil Chemistry by Bohn et al." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Car" ;
     skos:prefLabel "Carbonate (CO3--) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Carful a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Carful a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/C" ;
     dbo:pubchem "5462310" ;
     dbprop:inchikey "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
     skos:definition "Fulvic acid carbon is the most soluble and bioavailable fraction of soil organic matter. It plays a significant role in improving nutrient uptake, soil structure, and microbial activity, thereby enhancing soil productivity. Source: Stevenson, F.J. (1994)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Carful" ;
     skos:prefLabel "Carbon (C) - fulvic acid"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Carhum a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Carhum a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/C" ;
     dbo:pubchem "5462310" ;
     dbprop:inchikey "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
     skos:definition "Humic acid carbon is part of the soil organic matter, forming during the decomposition of plant and animal residues. It enhances nutrient retention, soil structure, and water-holding capacity, playing a vital role in maintaining soil fertility and resilience. Source: Stevenson, F.J. (1994). Humus Chemistry: Genesis, Composition, Reactions." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Carhum" ;
     skos:prefLabel "Carbon (C) - humic acid"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Carinorg a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Carinorg a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/C" ;
     dbo:pubchem "5462310" ;
     dbprop:inchikey "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
     skos:definition "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Carinorg" ;
     skos:prefLabel "Carbon (C) - inorganic"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Carorg a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Carorg a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/C" ;
     dbo:pubchem "5462310" ;
     dbprop:inchikey "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
     skos:definition "Organic carbon refers to the carbon component of soil organic matter, derived from decomposed plant and microbial residues. It serves as a key energy source for soil microbes and influences nutrient cycling, soil structure, and water retention. Organic carbon is a primary indicator of soil fertility and health. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Carorg" ;
     skos:prefLabel "Carbon (C) - organic"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Carpyr a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Carpyr a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/C" ;
     dbo:pubchem "5462310" ;
     dbprop:inchikey "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
     skos:definition "Carbon in soil that is organically bound in organo-metal complexes" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Carpyr" ;
     skos:prefLabel "Carbon (C) - pyrophosphate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Cartoh a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Cartoh a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/C" ;
     dbo:pubchem "5462310" ;
     dbprop:inchikey "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
     skos:definition "Total humic carbon represents the stable fraction of soil organic matter derived from humified materials. It improves soil structure, nutrient retention, and water-holding capacity, making it critical for long-term soil health and productivity. Source: Stevenson, F.J. (1994)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Cartoh" ;
     skos:prefLabel "Carbon (C) - total humic"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Cartot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Cartot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/C" ;
     dbo:pubchem "5462310" ;
     dbprop:inchikey "OKTJSMMVPCPJKN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462310> ;
     skos:definition "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Cartot" ;
     skos:prefLabel "Carbon (C) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Ccetot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Ccetot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/CH2O3.Ca/c2-1(3)4;/h(H2,2,3,4);/q;+2/p-2" ;
     dbo:pubchem "10112" ;
     dbprop:inchikey "VTYYLEPIZMXCLO-UHFFFAOYSA-L" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/10112> ;
     skos:definition "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Ccetot" ;
     skos:prefLabel "Calcium carbonate equivalent - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Chl a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Chl a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/ClH/h1H/p-1" ;
     dbo:pubchem "312" ;
     dbprop:inchikey "VEXZGXHMUGYJMC-UHFFFAOYSA-M" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/312> ;
     skos:definition "Soluble Chloride anions accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Chl" ;
     skos:prefLabel "Chloride (Cl-) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Copext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Copext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Cu" ;
     dbo:pubchem "23978" ;
     dbprop:inchikey "RYGMFSIKBFXOCR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23978> ;
     skos:definition "Copper bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Copext" ;
     skos:prefLabel "Copper (Cu) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Coptot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Coptot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Cu" ;
     dbo:pubchem "23978" ;
     dbprop:inchikey "RYGMFSIKBFXOCR-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23978> ;
     skos:definition "Total copper comprises all soil copper, including bound and free forms. Copper is vital for plant enzyme activation and metabolic processes. Deficiencies can lead to reduced growth and yields, while excess copper may inhibit root development. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Coptot" ;
     skos:prefLabel "Copper (Cu) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-ECEC a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-ECEC a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "ECEC is the sum of exchangeable cations in soil at its natural pH. It provides a measure of the soil’s fertility under acidic conditions, as it considers both base cations and exchangeable aluminum. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "ECEC" ;
     skos:prefLabel "Cation exchange capacity effective (ECEC)"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Eleccond a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Eleccond a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Electrical conductivity (EC) measures the ability of soil to conduct an electrical current, which is directly related to the concentration of soluble salts. It is an essential indicator of soil salinity and is used to assess soil's suitability for crop growth. High EC levels can reduce plant water uptake and affect germination, while low levels indicate low salinity and better soil health. Source: USDA NRCS." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Eleccond" ;
     skos:prefLabel "Electrical conductivity"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Gyp a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Gyp a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:pubchem "24497" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/24497> ;
     skos:definition "The gypsum content, expressed as weight, refers to the soil’s calcium sulfate levels. Gypsum improves soil structure, alleviates sodicity, and enhances water infiltration. It is commonly applied to saline-sodic soils for reclamation. Source: FAO Soil Bulletin." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Gyp" ;
     skos:prefLabel "Gypsum content - weight"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Hyd a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Hyd a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/CH2O3/c2-1(3)4/h(H2,2,3,4)/p-1" ;
     dbo:pubchem "769" ;
     dbprop:inchikey "BVKZGUZCCUSVTD-UHFFFAOYSA-M" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/769> ;
     skos:definition "Soluble Hydrocarbonate anions accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Hyd" ;
     skos:prefLabel "Hydrocarbonate (HCO3-) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Hydcond a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Hydcond a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Hydcond" ;
     skos:prefLabel "Hydraulic conductivity"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Hydexc a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Hydexc a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/p+1" ;
     dbo:pubchem "1038" ;
     dbprop:inchikey "GPRLSGONYQIRFK-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/1038> ;
     skos:definition "Hydrogen ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Hydexc" ;
     skos:prefLabel "Hydrogen (H+) - exchangeable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Irodit a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Irodit a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Fe" ;
     dbo:pubchem "23925" ;
     dbprop:inchikey "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
     skos:definition "'Free' iron content extracted from amorphous compounds (weathering products) as well as crystaline, primary aluminium compounds (parent material) in the soil." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Irodit" ;
     skos:prefLabel "Iron (Fe) - dithionite extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Iroext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Iroext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Fe" ;
     dbo:pubchem "23925" ;
     dbprop:inchikey "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
     skos:definition "Iron bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Iroext" ;
     skos:prefLabel "Iron (Fe) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Irooxa a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Irooxa a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Fe" ;
     dbo:pubchem "23925" ;
     dbprop:inchikey "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
     skos:definition "'Active' iron content extracted from amorphous iron compounds that are the products of the weathering of primary soil particles" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Irooxa" ;
     skos:prefLabel "Iron (Fe) - oxalate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Iropyr a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Iropyr a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Fe" ;
     dbo:pubchem "23925" ;
     dbprop:inchikey "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
     skos:definition "Iron in soil that is organically bound in organo-metal complexes" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Iropyr" ;
     skos:prefLabel "Iron (Fe) - pyrophosphate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Irotot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Irotot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Fe" ;
     dbo:pubchem "23925" ;
     dbprop:inchikey "XEEYBQQBJWHFJM-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23925> ;
     skos:definition "Total iron includes all iron forms in the soil, from soluble ferrous iron (Fe²⁺) to insoluble ferric iron (Fe³⁺). Iron is essential for plant chlorophyll synthesis and various enzymatic reactions. Deficiency, often seen in alkaline soils, results in chlorosis, while excessive iron can cause toxicity in acidic soils. Source: Soil Chemistry by Bohn et al." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Irotot" ;
     skos:prefLabel "Iron (Fe) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Magexc a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Magexc a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mg/q+2" ;
     dbo:pubchem "888" ;
     dbprop:inchikey "JLVVSXFLKOJNIY-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/888> ;
     skos:definition "Magnesium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Magexc" ;
     skos:prefLabel "Magnesium (Mg++) - exchangeable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Magext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Magext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mg" ;
     dbo:pubchem "5462224" ;
     dbprop:inchikey "FYYHWMGAXLPEAU-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462224> ;
     skos:definition "Magnesium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Magext" ;
     skos:prefLabel "Magnesium (Mg) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Magsol a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Magsol a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mg/q+2" ;
     dbo:pubchem "888" ;
     dbprop:inchikey "JLVVSXFLKOJNIY-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/888> ;
     skos:definition "Soluble Magnesium cations accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Magsol" ;
     skos:prefLabel "Magnesium (Mg++) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Magtot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Magtot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mg" ;
     dbo:pubchem "5462224" ;
     dbprop:inchikey "FYYHWMGAXLPEAU-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462224> ;
     skos:definition "Total magnesium in soil includes exchangeable, soluble, and mineral-bound forms. Magnesium is essential for chlorophyll synthesis, enzyme activation, and nutrient transport in plants. Its availability is influenced by soil pH and texture. Source: Havlin et al. (2014)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Magtot" ;
     skos:prefLabel "Magnesium (Mg) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-ManKCl a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-ManKCl a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mn" ;
     dbo:pubchem "23930" ;
     dbprop:inchikey "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
     skos:definition "KCl extractable manganese measures the readily available manganese fraction in soil. It provides a more accurate assessment of manganese availability to plants than total manganese. This method is commonly used for nutrient management. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "ManKCl" ;
     skos:prefLabel "Manganese (Mn) - KCl extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Mandit a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Mandit a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mn" ;
     dbo:pubchem "23930" ;
     dbprop:inchikey "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
     skos:definition "'Free' manganese content extracted from amorphous compounds (weathering products) as well as crystaline, primary aluminium compounds (parent material) in the soil." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Mandit" ;
     skos:prefLabel "Manganese (Mn) - dithionite extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Manext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Manext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mn" ;
     dbo:pubchem "23930" ;
     dbprop:inchikey "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
     skos:definition "Manganese bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Manext" ;
     skos:prefLabel "Manganese (Mn) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Manoxa a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Manoxa a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mn" ;
     dbo:pubchem "23930" ;
     dbprop:inchikey "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
     skos:definition "'Active' manganese content extracted from amorphous manganese compounds that are the products of the weathering of primary soil particles" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Manoxa" ;
     skos:prefLabel "Manganese (Mn) - oxalate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Manpyr a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Manpyr a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mn" ;
     dbo:pubchem "23930" ;
     dbprop:inchikey "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
     skos:definition "Manganese in soil that is organically bound in organo-metal complexes" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Manpyr" ;
     skos:prefLabel "Manganese (Mn) - pyrophosphate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Mantot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Mantot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Mn" ;
     dbo:pubchem "23930" ;
     dbprop:inchikey "PWHULOQIROXLJO-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23930> ;
     skos:definition "Total manganese refers to all forms of manganese in the soil, which is critical for photosynthesis, enzyme activation, and nitrogen metabolism in plants. Manganese deficiencies or toxicities are influenced by soil pH, with deficiencies occurring in high-pH soils and toxicities in low-pH, waterlogged soils.  Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Mantot" ;
     skos:prefLabel "Manganese (Mn) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Mol a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Mol a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:pubchem "23932" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23932> ;
     skos:definition "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Mol" ;
     skos:prefLabel "Molybdenum"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Nit2 a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Nit2 a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/HNO2/c2-1-3/h(H,2,3)/p-1" ;
     dbo:pubchem "946" ;
     dbprop:inchikey "IOVCWXUNBOPUCH-UHFFFAOYSA-M" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/946> ;
     skos:definition "Soluble Nitrite anions accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Nit2" ;
     skos:prefLabel "Nitrite (NO2-) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Nit3 a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Nit3 a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/NO3/c2-1(3)4/q-1" ;
     dbo:pubchem "943" ;
     dbprop:inchikey "NHNBFGGVMKEFGY-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/943> ;
     skos:definition "Soluble Nitrate anions accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Nit3" ;
     skos:prefLabel "Nitrate (NO3-) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Nittot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Nittot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/N2/c1-2" ;
     dbo:pubchem "947" ;
     dbprop:inchikey "IJGRMHOSHXDMSA-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/947> ;
     skos:definition "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Nittot" ;
     skos:prefLabel "Nitrogen (N) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Orgmat a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Orgmat a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Orgmat" ;
     skos:prefLabel "Organic matter"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Pho a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Pho a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-3" ;
     dbo:pubchem "1061" ;
     dbprop:inchikey "NBIIXXVUZAFLBC-UHFFFAOYSA-K" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/1061> ;
     skos:definition "Soluble Phosphate anions accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Pho" ;
     skos:prefLabel "Phosphate (PO4---) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Phoext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Phoext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/P" ;
     dbo:pubchem "5462309" ;
     dbprop:inchikey "OAICVXFJPJFONN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462309> ;
     skos:definition "Phosphorus bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Phoext" ;
     skos:prefLabel "Phosphorus (P) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Phooxa a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Phooxa a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/P" ;
     dbo:pubchem "5462309" ;
     dbprop:inchikey "OAICVXFJPJFONN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462309> ;
     skos:definition "'Active' phosphorus content extracted from amorphous phosphorus compounds that are the products of the weathering of primary soil particles" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Phooxa" ;
     skos:prefLabel "Phosphorus (P) - oxalate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Phoret a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Phoret a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/P" ;
     dbo:pubchem "5462309" ;
     dbprop:inchikey "OAICVXFJPJFONN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462309> ;
     skos:definition "Phosphorus retention measures a soil's capacity to adsorb and hold phosphorus, influenced by soil texture, pH, and mineralogy. While high retention reduces leaching, it may also limit phosphorus availability to plants. Understanding phosphorus retention helps optimize fertilization and minimize environmental impacts. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Phoret" ;
     skos:prefLabel "Phosphorus (P) - retention"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Photot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Photot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/P" ;
     dbo:pubchem "5462309" ;
     dbprop:inchikey "OAICVXFJPJFONN-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462309> ;
     skos:definition "Total phosphorus includes all forms of phosphorus in the soil, both organic and inorganic. While only a fraction is plant-available, total phosphorus serves as a long-term reserve for crop nutrition. Adequate phosphorus levels are crucial for energy transfer, photosynthesis, and root development in plants. Source: Soil Chemistry by Bohn et al." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Photot" ;
     skos:prefLabel "Phosphorus (P) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Por a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Por a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Por" ;
     skos:prefLabel "Porosity"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Potexc a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Potexc a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/K/q+1" ;
     dbo:pubchem "813" ;
     dbprop:inchikey "NPYPAHLBTDXSSS-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/813> ;
     skos:definition "Potassium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Potexc" ;
     skos:prefLabel "Potassium (K+) - exchangeable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Potext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Potext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/K" ;
     dbo:pubchem "5462222" ;
     dbprop:inchikey "ZLMJMSJWJFRBEC-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462222> ;
     skos:definition "Potassium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Potext" ;
     skos:prefLabel "Potassium (K) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Potsol a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Potsol a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/K/q+1" ;
     dbo:pubchem "813" ;
     dbprop:inchikey "NPYPAHLBTDXSSS-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/813> ;
     skos:definition "Soluble Potassium cations accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Potsol" ;
     skos:prefLabel "Potassium (K+) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Pottot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Pottot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/K" ;
     dbo:pubchem "5462222" ;
     dbprop:inchikey "ZLMJMSJWJFRBEC-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5462222> ;
     skos:definition "Total potassium includes all forms of potassium in soil, such as mineral-bound, exchangeable, and water-soluble potassium. It plays a vital role in plant growth by regulating water balance, enzyme activation, and photosynthesis. While only a fraction of total potassium is readily available to plants, it serves as a reserve to replenish exchangeable potassium over time. Adequate potassium levels improve crop yield, quality, and resistance to stress. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Pottot" ;
     skos:prefLabel "Potassium (K) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Selext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Selext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Se" ;
     dbo:pubchem "6326970" ;
     dbprop:inchikey "BUGBHKTXTAQXES-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/6326970> ;
     skos:definition "Selenium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Selext" ;
     skos:prefLabel "Selenium (Se) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Seltot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Seltot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Se" ;
     dbo:pubchem "6326970" ;
     dbprop:inchikey "BUGBHKTXTAQXES-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/6326970> ;
     skos:definition "Total selenium includes all selenium forms in soil, ranging from organic selenium in humus to inorganic selenium compounds. While trace amounts are essential for animal and human nutrition, excessive selenium can be toxic. Understanding selenium levels is critical for food safety and environmental management. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Seltot" ;
     skos:prefLabel "Selenium (Se) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Siloxa a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Siloxa a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Si" ;
     dbo:pubchem "5461123" ;
     dbprop:inchikey "XUIMIQQOPSSXEZ-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5461123> ;
     skos:definition "'Active' silicon content extracted from amorphous silicon compounds that are the products of the weathering of primary soil particles" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Siloxa" ;
     skos:prefLabel "Silicon (Si) - oxalate extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Sodexc a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Sodexc a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Na/q+1" ;
     dbo:pubchem "923" ;
     dbprop:inchikey "FKNQFGJONOIPTF-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/923> ;
     skos:definition "Exchangeable sodium percentage (ESP) measures the proportion of sodium ions in the cation exchange complex. High ESP levels (>15%) indicate sodic soils, which are prone to poor structure, reduced permeability, and nutrient imbalances. Management strategies include gypsum application and leaching. Source: USDA NRCS." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Sodexc" ;
     skos:prefLabel "Sodium (Na+) - exchangeable %"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Sodexp a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Sodexp a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Na/q+1" ;
     dbo:pubchem "923" ;
     dbprop:inchikey "FKNQFGJONOIPTF-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/923> ;
     skos:definition "Sodium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Sodexp" ;
     skos:prefLabel "Sodium (Na+) - exchangeable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Sodext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Sodext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Na" ;
     dbo:pubchem "5360545" ;
     dbprop:inchikey "KEAYESYHFKHZAL-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5360545> ;
     skos:definition "Sodium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Sodext" ;
     skos:prefLabel "Sodium (Na) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Sodsol a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Sodsol a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Na/q+1" ;
     dbo:pubchem "923" ;
     dbprop:inchikey "FKNQFGJONOIPTF-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/923> ;
     skos:definition "Soluble Sodium cations accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Sodsol" ;
     skos:prefLabel "Sodium (Na+) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Sodtot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Sodtot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Na" ;
     dbo:pubchem "5360545" ;
     dbprop:inchikey "KEAYESYHFKHZAL-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5360545> ;
     skos:definition "Total sodium includes all sodium present in soil, both soluble and bound. Excess sodium can lead to sodicity, which disrupts soil structure, reduces permeability, and impairs plant growth. Monitoring sodium levels is crucial for managing soil salinity in arid and irrigated regions. Source: Bohn, H.L., et al. (2001). Soil Chemistry." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Sodtot" ;
     skos:prefLabel "Sodium (Na) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Solsal a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-Solsal a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Soluble salts refer to dissolved salts in the soil solution, primarily composed of sodium, calcium, magnesium, chloride, and sulfate ions. Excessive soluble salts cause salinity, which can impair plant water uptake and lead to osmotic stress. EC testing helps monitor salinity levels for effective management. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Solsal" ;
     skos:prefLabel "Soluble salts"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Sul a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Sul a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/H2O4S/c1-5(2,3)4/h(H2,1,2,3,4)/p-2" ;
     dbo:pubchem "1117" ;
     dbprop:inchikey "QAOWNCQODCNURD-UHFFFAOYSA-L" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/1117> ;
     skos:definition "Soluble Sulfate anions accumulated in the soil. A contributor to soil salinisation." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Sul" ;
     skos:prefLabel "Sulfate (SO4--) - soluble"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Sulext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Sulext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/S" ;
     dbo:pubchem "5362487" ;
     dbprop:inchikey "NINIDFKCEFEMDL-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5362487> ;
     skos:definition "Sulfur bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Sulext" ;
     skos:prefLabel "Sulfur (S) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Sultot a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Sultot a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/S" ;
     dbo:pubchem "5362487" ;
     dbprop:inchikey "NINIDFKCEFEMDL-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/5362487> ;
     skos:definition "Total sulfur in soil includes both organic and inorganic forms, such as sulfates and sulfur in organic matter. Sulfur is essential for protein synthesis and enzyme functions in plants. Deficiency leads to stunted growth and yellowing of leaves. Total sulfur provides insight into the soil's potential to release plant-available sulfur over time, critical for sustaining crop health. Source: Havlin, J.L., et al. (2014). Soil Fertility and Fertilizers." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Sultot" ;
     skos:prefLabel "Sulfur (S) - total"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Zin a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Zin a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Zn" ;
     dbo:pubchem "23994" ;
     dbprop:inchikey "HCHKCACWOHOZIP-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23994> ;
     skos:definition "Zinc is a micronutrient essential for plant enzyme systems, protein synthesis, and growth regulation. Deficiency is common in calcareous soils and results in stunted growth and chlorosis. Zinc fertilizers or soil pH adjustments can address deficiencies. Source: Havlin et al. (2014)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Zin" ;
     skos:prefLabel "Zinc (Zn)"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-Zinext a dbo:ChemicalCompound,
+glosis_cl:physioChemicalPropertyCode-Zinext a dbo:ChemicalCompound,
         dbo:ChemicalSubstance,
-        glosis_cl:PhysioChemicalValueCode,
+        glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     dbo:inchi "1S/Zn" ;
     dbo:pubchem "23994" ;
     dbprop:inchikey "HCHKCACWOHOZIP-UHFFFAOYSA-N" ;
     rdfs:seeAlso <https://pubchem.ncbi.nlm.nih.gov/compound/23994> ;
     skos:definition "Zinc bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)" ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "Zinext" ;
     skos:prefLabel "Zinc (Zn) - extractable"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
-glosis_cl:physioChemicalValueCode-pH a glosis_cl:PhysioChemicalValueCode,
+glosis_cl:physioChemicalPropertyCode-pH a glosis_cl:PhysioChemicalPropertyCode,
         skos:Concept ;
     skos:definition "Soil pH measures the concentration of hydrogen ions (H⁺) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS)." ;
-    skos:inScheme glosis_cl:physioChemicalValueCode ;
+    skos:inScheme glosis_cl:physioChemicalPropertyCode ;
     skos:notation "pH" ;
     skos:prefLabel "pH - Hydrogen potential"@en ;
-    skos:topConceptOf glosis_cl:physioChemicalValueCode .
+    skos:topConceptOf glosis_cl:physioChemicalPropertyCode .
 
 glosis_cl:physiographyValueCode-BOdl a glosis_cl:PhysiographyValueCode,
         skos:Concept ;
@@ -8155,53 +8164,53 @@ glosis_cl:saltThicknessValueCode-V a glosis_cl:SaltThicknessValueCode,
     skos:prefLabel "Very thick"@en ;
     skos:topConceptOf glosis_cl:saltThicknessValueCode .
 
-glosis_cl:sandValueCode-SWD1 a glosis_cl:SandValueCode,
+glosis_cl:sandPropertyCode-SWD1 a glosis_cl:SandPropertyCode,
         skos:Concept ;
     skos:definition "Sand water dispersible at 0.1 indicates the sand fraction of soil that can be dispersed into water under a pressure of 0.1. This measure helps assess the ease with which sand particles can separate from aggregates and become suspended in water, impacting soil erosion potential and water retention characteristics. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:sandValueCode ;
+    skos:inScheme glosis_cl:sandPropertyCode ;
     skos:notation "SWD1" ;
     skos:prefLabel "Sand Water Dispersible 0.1"@en ;
-    skos:topConceptOf glosis_cl:sandValueCode .
+    skos:topConceptOf glosis_cl:sandPropertyCode .
 
-glosis_cl:sandValueCode-SWD2 a glosis_cl:SandValueCode,
+glosis_cl:sandPropertyCode-SWD2 a glosis_cl:SandPropertyCode,
         skos:Concept ;
     skos:definition "Sand water dispersible at 0.2 measures the sand fraction that can be dispersed at a 0.2 pressure. This parameter is crucial for evaluating the soil’s risk for erosion, particularly for sandy soils where the potential for particle dispersion can lead to structural degradation. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:sandValueCode ;
+    skos:inScheme glosis_cl:sandPropertyCode ;
     skos:notation "SWD2" ;
     skos:prefLabel "Sand Water Dispersible 0.2"@en ;
-    skos:topConceptOf glosis_cl:sandValueCode .
+    skos:topConceptOf glosis_cl:sandPropertyCode .
 
-glosis_cl:sandValueCode-SWD3 a glosis_cl:SandValueCode,
+glosis_cl:sandPropertyCode-SWD3 a glosis_cl:SandPropertyCode,
         skos:Concept ;
     skos:definition "Sand water dispersible at 0.3 refers to the portion of sand particles in the soil that can be dispersed into water under a specific condition, where the dispersion occurs at a 0.3 pressure. This measurement indicates how easily the sand fraction of the soil can break apart and be suspended in water. Dispersible sand is important in evaluating soil structure and its susceptibility to erosion and runoff. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:sandValueCode ;
+    skos:inScheme glosis_cl:sandPropertyCode ;
     skos:notation "SWD3" ;
     skos:prefLabel "Sand Water Dispersible 0.3"@en ;
-    skos:topConceptOf glosis_cl:sandValueCode .
+    skos:topConceptOf glosis_cl:sandPropertyCode .
 
-glosis_cl:sandValueCode-SWD4 a glosis_cl:SandValueCode,
+glosis_cl:sandPropertyCode-SWD4 a glosis_cl:SandPropertyCode,
         skos:Concept ;
     skos:definition "Sand water dispersible at 0.4 measures the fraction of sand particles that can be dispersed at a 0.4 pressure. This is useful for understanding how sand interacts with water under varying levels of stress, providing insight into soil stability, especially in sandy soils where dispersion might influence the soil structure and erosion potential. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:sandValueCode ;
+    skos:inScheme glosis_cl:sandPropertyCode ;
     skos:notation "SWD4" ;
     skos:prefLabel "Sand Water Dispersible 0.4"@en ;
-    skos:topConceptOf glosis_cl:sandValueCode .
+    skos:topConceptOf glosis_cl:sandPropertyCode .
 
-glosis_cl:sandValueCode-SWD5 a glosis_cl:SandValueCode,
+glosis_cl:sandPropertyCode-SWD5 a glosis_cl:SandPropertyCode,
         skos:Concept ;
     skos:definition "Sand water dispersible at 0.5 refers to the amount of sand particles that can be dispersed into water when subjected to a pressure of 0.5. This measure is used to assess the potential for soil degradation, particularly in sandy soils where dispersion may lead to erosion or changes in soil structure. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:sandValueCode ;
+    skos:inScheme glosis_cl:sandPropertyCode ;
     skos:notation "SWD5" ;
     skos:prefLabel "Sand Water Dispersible 0.5"@en ;
-    skos:topConceptOf glosis_cl:sandValueCode .
+    skos:topConceptOf glosis_cl:sandPropertyCode .
 
-glosis_cl:sandValueCode-SWDT a glosis_cl:SandValueCode,
+glosis_cl:sandPropertyCode-SWDT a glosis_cl:SandPropertyCode,
         skos:Concept ;
     skos:definition "Sand water dispersible total refers to the sum of all sand particles that can be dispersed into water across a range of pressures, usually reflecting the total amount of dispersible sand in the soil. This value is important in understanding the overall erodibility of a soil, as high dispersibility is linked to increased susceptibility to erosion and degradation. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:sandValueCode ;
+    skos:inScheme glosis_cl:sandPropertyCode ;
     skos:notation "SWDT" ;
     skos:prefLabel "Sand Water Dispersible Total"@en ;
-    skos:topConceptOf glosis_cl:sandValueCode .
+    skos:topConceptOf glosis_cl:sandPropertyCode .
 
 glosis_cl:sandyTextureValueCode-CS a glosis_cl:SandyTextureValueCode,
         skos:Concept ;
@@ -8355,29 +8364,29 @@ glosis_cl:sealingThicknessValueCode-V a glosis_cl:SealingThicknessValueCode,
     skos:prefLabel "Very thick"@en ;
     skos:topConceptOf glosis_cl:sealingThicknessValueCode .
 
-glosis_cl:siltValueCode-SWDF1 a glosis_cl:SiltValueCode,
+glosis_cl:siltPropertyCode-SWDF1 a glosis_cl:SiltPropertyCode,
         skos:Concept ;
     skos:definition "Silt water dispersible fraction at 0.1 refers to the portion of silt particles that can be dispersed into water when subjected to a 0.1 pressure. This measure helps determine the soil's erodibility, as silt tends to be more easily dispersed than sand, contributing to the formation of suspended particles in water, which can affect water quality and soil health. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:siltValueCode ;
+    skos:inScheme glosis_cl:siltPropertyCode ;
     skos:notation "SWDF1" ;
     skos:prefLabel "Silt Water Dispersible Fraction 0.1"@en ;
-    skos:topConceptOf glosis_cl:siltValueCode .
+    skos:topConceptOf glosis_cl:siltPropertyCode .
 
-glosis_cl:siltValueCode-SWDF2 a glosis_cl:SiltValueCode,
+glosis_cl:siltPropertyCode-SWDF2 a glosis_cl:SiltPropertyCode,
         skos:Concept ;
     skos:definition "Silt water dispersible fraction at 0.2 quantifies the amount of silt particles in the soil that can be dispersed at a 0.2 pressure. Dispersible silt can have a significant impact on soil stability and is particularly relevant for understanding how silt behaves under wet conditions, affecting erosion rates and water retention. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:siltValueCode ;
+    skos:inScheme glosis_cl:siltPropertyCode ;
     skos:notation "SWDF2" ;
     skos:prefLabel "Silt Water Dispersible Fraction 0.2"@en ;
-    skos:topConceptOf glosis_cl:siltValueCode .
+    skos:topConceptOf glosis_cl:siltPropertyCode .
 
-glosis_cl:siltValueCode-SWDFT a glosis_cl:SiltValueCode,
+glosis_cl:siltPropertyCode-SWDFT a glosis_cl:SiltPropertyCode,
         skos:Concept ;
     skos:definition "Silt water dispersible fraction total refers to the total amount of silt particles that can be dispersed into water across different pressures. This total measure indicates the overall dispersibility of silt in a soil, which is important for assessing the soil’s vulnerability to erosion and degradation, especially in soils with a high silt content. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:siltValueCode ;
+    skos:inScheme glosis_cl:siltPropertyCode ;
     skos:notation "SWDFT" ;
     skos:prefLabel "Silt Water Dispersible Fraction Total"@en ;
-    skos:topConceptOf glosis_cl:siltValueCode .
+    skos:topConceptOf glosis_cl:siltPropertyCode .
 
 glosis_cl:slopeFormValueCode-C a glosis_cl:SlopeFormValueCode,
         skos:Concept ;
@@ -8819,245 +8828,245 @@ glosis_cl:surfaceAgeValueCode-vYn a glosis_cl:SurfaceAgeValueCode,
     skos:prefLabel "Very young natural"@en ;
     skos:topConceptOf glosis_cl:surfaceAgeValueCode .
 
-glosis_cl:textClayValueCode-Cl a glosis_cl:TextClayValueCode,
+glosis_cl:textClayPropertyCode-Cl a glosis_cl:TextClayPropertyCode,
         skos:Concept ;
     skos:definition "Very fine mineral particles smaller than 2 µm" ;
-    skos:inScheme glosis_cl:textClayValueCode ;
+    skos:inScheme glosis_cl:textClayPropertyCode ;
     skos:notation "Cl" ;
     skos:prefLabel "Clay (< 0.002 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> ;
-    skos:topConceptOf glosis_cl:textClayValueCode .
+    skos:topConceptOf glosis_cl:textClayPropertyCode .
 
-glosis_cl:textSandValueCode-Sa_ISO a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-Sa_ISO a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
     skos:definition "Content of mineral particles with sizes between 0.063-2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
-    skos:narrower glosis_cl:textSandValueCode-cSa_ISO,
-        glosis_cl:textSandValueCode-fSa_ISO,
-        glosis_cl:textSandValueCode-mSa_ISO ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
+    skos:narrower glosis_cl:textSandPropertyCode-cSa_ISO,
+        glosis_cl:textSandPropertyCode-fSa_ISO,
+        glosis_cl:textSandPropertyCode-mSa_ISO ;
     skos:notation "Sa_ISO" ;
     skos:prefLabel "Sand (0.063  - 2 mm)"@en ;
     skos:scopeNote <https://www.iso.org/standard/66345.html> ;
-    skos:topConceptOf glosis_cl:textSandValueCode .
+    skos:topConceptOf glosis_cl:textSandPropertyCode .
 
-glosis_cl:textSandValueCode-Sa_ISSS a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-Sa_ISSS a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
     skos:definition "Content of mineral particles with sizes between 0.020-2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
-    skos:narrower glosis_cl:textSandValueCode-cSa_ISSS,
-        glosis_cl:textSandValueCode-fSa_ISSS,
-        glosis_cl:textSandValueCode-mSa_ISSS,
-        glosis_cl:textSandValueCode-vcSa_ISSS,
-        glosis_cl:textSandValueCode-vfSa_ISSS ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
+    skos:narrower glosis_cl:textSandPropertyCode-cSa_ISSS,
+        glosis_cl:textSandPropertyCode-fSa_ISSS,
+        glosis_cl:textSandPropertyCode-mSa_ISSS,
+        glosis_cl:textSandPropertyCode-vcSa_ISSS,
+        glosis_cl:textSandPropertyCode-vfSa_ISSS ;
     skos:notation "Sa_ISSS" ;
     skos:prefLabel "Sand (0.02 - 2 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> ;
-    skos:topConceptOf glosis_cl:textSandValueCode .
+    skos:topConceptOf glosis_cl:textSandPropertyCode .
 
-glosis_cl:textSandValueCode-Sa_USDA a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-Sa_USDA a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
     skos:definition "Content of mineral particles with sizes between 0.050-2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
-    skos:narrower glosis_cl:textSandValueCode-cSa_USDA,
-        glosis_cl:textSandValueCode-fSa_USDA,
-        glosis_cl:textSandValueCode-mSa_USDA,
-        glosis_cl:textSandValueCode-vcSa_USDA,
-        glosis_cl:textSandValueCode-vfSa_USDA ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
+    skos:narrower glosis_cl:textSandPropertyCode-cSa_USDA,
+        glosis_cl:textSandPropertyCode-fSa_USDA,
+        glosis_cl:textSandPropertyCode-mSa_USDA,
+        glosis_cl:textSandPropertyCode-vcSa_USDA,
+        glosis_cl:textSandPropertyCode-vfSa_USDA ;
     skos:notation "Sa_USDA" ;
     skos:prefLabel "Sand (0.050  - 2 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> ;
-    skos:topConceptOf glosis_cl:textSandValueCode .
+    skos:topConceptOf glosis_cl:textSandPropertyCode .
 
-glosis_cl:textSandValueCode-cSa_ISO a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-cSa_ISO a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_ISO ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_ISO ;
     skos:definition "Content of mineral particles with sizes between 0.63-2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "cSa_ISO" ;
     skos:prefLabel "Coarse sand (0.63 - 2 mm)"@en ;
     skos:scopeNote <https://www.iso.org/standard/66345.html> .
 
-glosis_cl:textSandValueCode-cSa_ISSS a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-cSa_ISSS a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_ISSS ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_ISSS ;
     skos:definition "Content of mineral particles with sizes between 0.2-2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "cSa_ISSS" ;
     skos:prefLabel "Coarse sand (0.2 - 2 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
-glosis_cl:textSandValueCode-cSa_USDA a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-cSa_USDA a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_USDA ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_USDA ;
     skos:definition "Content of mineral particles with sizes between 0.5-1 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "cSa_USDA" ;
     skos:prefLabel "Coarse sand (0.5 - 1 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
-glosis_cl:textSandValueCode-fSa_ISO a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-fSa_ISO a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_ISO ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_ISO ;
     skos:definition "Content of mineral particles with sizes between 0.063-0.2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "fSa_ISO" ;
     skos:prefLabel "Fine sand (0.063 - 0.2 mm)"@en ;
     skos:scopeNote <https://www.iso.org/standard/66345.html> .
 
-glosis_cl:textSandValueCode-fSa_ISSS a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-fSa_ISSS a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_ISSS ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_ISSS ;
     skos:definition "Content of mineral particles with sizes between 0.02-0.2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "fSa_ISSS" ;
     skos:prefLabel "Fine sand (0.125 - 0.2 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
-glosis_cl:textSandValueCode-fSa_USDA a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-fSa_USDA a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_USDA ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_USDA ;
     skos:definition "Content of mineral particles with sizes between 0.1-0.25 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "fSa_USDA" ;
     skos:prefLabel "Fine sand (0.1 - 0.25 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
-glosis_cl:textSandValueCode-mSa_ISO a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-mSa_ISO a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_ISO ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_ISO ;
     skos:definition "Content of mineral particles with sizes between 0.02-0.63 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "mSa_ISO" ;
     skos:prefLabel "Medium sand (0.2 - 0.63 mm)"@en ;
     skos:scopeNote <https://www.iso.org/standard/66345.html> .
 
-glosis_cl:textSandValueCode-mSa_ISSS a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-mSa_ISSS a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_ISSS ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_ISSS ;
     skos:definition "Content of mineral particles with sizes between 0.2-0.63 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "mSa_ISSS" ;
     skos:prefLabel "Medium sand (0.2 - 0.63 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
-glosis_cl:textSandValueCode-mSa_USDA a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-mSa_USDA a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_USDA ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_USDA ;
     skos:definition "Content of mineral particles with sizes between 0.25-0.5 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "mSa_USDA" ;
     skos:prefLabel "Medium sand (0.25 - 0.5 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
-glosis_cl:textSandValueCode-vcSa_ISSS a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-vcSa_ISSS a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_ISSS ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_ISSS ;
     skos:definition "Content of mineral particles with sizes between 1.25-2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "vcSa_ISSS" ;
     skos:prefLabel "Very coarse sand (1.25 - 2 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
-glosis_cl:textSandValueCode-vcSa_USDA a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-vcSa_USDA a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_USDA ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_USDA ;
     skos:definition "Content of mineral particles with sizes between 1-2 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "vcSa_USDA" ;
     skos:prefLabel "Very coarse sand (1 - 2 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
-glosis_cl:textSandValueCode-vfSa_ISSS a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-vfSa_ISSS a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_ISSS ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_ISSS ;
     skos:definition "Content of mineral particles with sizes between 0.063-0.125 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "vfSa_ISSS" ;
     skos:prefLabel "Very fine sand (0.063 - 0.125 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> .
 
-glosis_cl:textSandValueCode-vfSa_USDA a glosis_cl:TextSandValueCode,
+glosis_cl:textSandPropertyCode-vfSa_USDA a glosis_cl:TextSandPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSandValueCode-Sa_USDA ;
+    skos:broader glosis_cl:textSandPropertyCode-Sa_USDA ;
     skos:definition "Content of mineral particles with sizes between 0.05-0.1 mm in soil" ;
-    skos:inScheme glosis_cl:textSandValueCode ;
+    skos:inScheme glosis_cl:textSandPropertyCode ;
     skos:notation "vfSa_USDA" ;
     skos:prefLabel "Very fine sand (0.05 - 0.1 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
-glosis_cl:textSiltValueCode-Si_ISO a glosis_cl:TextSiltValueCode,
+glosis_cl:textSiltPropertyCode-Si_ISO a glosis_cl:TextSiltPropertyCode,
         skos:Concept ;
     skos:definition "Content of mineral particles with sizes between 2-63 µm in soil" ;
-    skos:inScheme glosis_cl:textSiltValueCode ;
-    skos:narrower glosis_cl:textSiltValueCode-cSi_ISO,
-        glosis_cl:textSiltValueCode-fSi_ISO,
-        glosis_cl:textSiltValueCode-mSi_ISO ;
+    skos:inScheme glosis_cl:textSiltPropertyCode ;
+    skos:narrower glosis_cl:textSiltPropertyCode-cSi_ISO,
+        glosis_cl:textSiltPropertyCode-fSi_ISO,
+        glosis_cl:textSiltPropertyCode-mSi_ISO ;
     skos:notation "Si_ISO" ;
     skos:prefLabel "Silt (0.002 - 0.063 mm)"@en ;
     skos:scopeNote <https://www.iso.org/standard/66345.html> ;
-    skos:topConceptOf glosis_cl:textSiltValueCode .
+    skos:topConceptOf glosis_cl:textSiltPropertyCode .
 
-glosis_cl:textSiltValueCode-Si_ISSS a glosis_cl:TextSiltValueCode,
+glosis_cl:textSiltPropertyCode-Si_ISSS a glosis_cl:TextSiltPropertyCode,
         skos:Concept ;
     skos:definition "Content of mineral particles with sizes between 2-20 µm in soil" ;
-    skos:inScheme glosis_cl:textSiltValueCode ;
+    skos:inScheme glosis_cl:textSiltPropertyCode ;
     skos:notation "Si_ISSS" ;
     skos:prefLabel "Silt (0.002 - 0.02 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1016/j.geoderma.2022.115783> ;
-    skos:topConceptOf glosis_cl:textSiltValueCode .
+    skos:topConceptOf glosis_cl:textSiltPropertyCode .
 
-glosis_cl:textSiltValueCode-Si_USDA a glosis_cl:TextSiltValueCode,
+glosis_cl:textSiltPropertyCode-Si_USDA a glosis_cl:TextSiltPropertyCode,
         skos:Concept ;
     skos:definition "Content of mineral particles with sizes between 2-50 µm in soil" ;
-    skos:inScheme glosis_cl:textSiltValueCode ;
-    skos:narrower glosis_cl:textSiltValueCode-cSi_USDA,
-        glosis_cl:textSiltValueCode-fSi_USDA ;
+    skos:inScheme glosis_cl:textSiltPropertyCode ;
+    skos:narrower glosis_cl:textSiltPropertyCode-cSi_USDA,
+        glosis_cl:textSiltPropertyCode-fSi_USDA ;
     skos:notation "Si_USDA" ;
     skos:prefLabel "Silt (0.002 - 0.05 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> ;
-    skos:topConceptOf glosis_cl:textSiltValueCode .
+    skos:topConceptOf glosis_cl:textSiltPropertyCode .
 
-glosis_cl:textSiltValueCode-cSi_ISO a glosis_cl:TextSiltValueCode,
+glosis_cl:textSiltPropertyCode-cSi_ISO a glosis_cl:TextSiltPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSiltValueCode-Si_ISO ;
+    skos:broader glosis_cl:textSiltPropertyCode-Si_ISO ;
     skos:definition "Content of mineral particles with sizes between 20-63 µm in soil" ;
-    skos:inScheme glosis_cl:textSiltValueCode ;
+    skos:inScheme glosis_cl:textSiltPropertyCode ;
     skos:notation "cSi_ISO" ;
     skos:prefLabel "Coarse silt (0.02 - 0.063 mm)"@en ;
     skos:scopeNote <https://www.iso.org/standard/66345.html> .
 
-glosis_cl:textSiltValueCode-cSi_USDA a glosis_cl:TextSiltValueCode,
+glosis_cl:textSiltPropertyCode-cSi_USDA a glosis_cl:TextSiltPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSiltValueCode-Si_USDA ;
+    skos:broader glosis_cl:textSiltPropertyCode-Si_USDA ;
     skos:definition "Content of mineral particles with sizes between 20-50 µm in soil" ;
-    skos:inScheme glosis_cl:textSiltValueCode ;
+    skos:inScheme glosis_cl:textSiltPropertyCode ;
     skos:notation "cSi_USDA" ;
     skos:prefLabel "Coarse silt (0.02 - 0.05 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
-glosis_cl:textSiltValueCode-fSi_ISO a glosis_cl:TextSiltValueCode,
+glosis_cl:textSiltPropertyCode-fSi_ISO a glosis_cl:TextSiltPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSiltValueCode-Si_ISO ;
+    skos:broader glosis_cl:textSiltPropertyCode-Si_ISO ;
     skos:definition "Content of mineral particles with sizes between 2-6.3 µm in soil" ;
-    skos:inScheme glosis_cl:textSiltValueCode ;
+    skos:inScheme glosis_cl:textSiltPropertyCode ;
     skos:notation "fSi_ISO" ;
     skos:prefLabel "Fine silt (0.002 - 0.0063 mm)"@en ;
     skos:scopeNote <https://www.iso.org/standard/66345.html> .
 
-glosis_cl:textSiltValueCode-fSi_USDA a glosis_cl:TextSiltValueCode,
+glosis_cl:textSiltPropertyCode-fSi_USDA a glosis_cl:TextSiltPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSiltValueCode-Si_USDA ;
+    skos:broader glosis_cl:textSiltPropertyCode-Si_USDA ;
     skos:definition "Content of mineral particles with sizes between 2-20 µm in soil" ;
-    skos:inScheme glosis_cl:textSiltValueCode ;
+    skos:inScheme glosis_cl:textSiltPropertyCode ;
     skos:notation "fSi_USDA" ;
     skos:prefLabel "Fine silt (0.002 - 0.02 mm)"@en ;
     skos:scopeNote <https://doi.org/10.1111/j.1365-3091.2012.01335.x> .
 
-glosis_cl:textSiltValueCode-mSi_ISO a glosis_cl:TextSiltValueCode,
+glosis_cl:textSiltPropertyCode-mSi_ISO a glosis_cl:TextSiltPropertyCode,
         skos:Concept ;
-    skos:broader glosis_cl:textSiltValueCode-Si_ISO ;
+    skos:broader glosis_cl:textSiltPropertyCode-Si_ISO ;
     skos:definition "Content of mineral particles with sizes between 6.3-20 µm in soil" ;
-    skos:inScheme glosis_cl:textSiltValueCode ;
+    skos:inScheme glosis_cl:textSiltPropertyCode ;
     skos:notation "mSi_ISO" ;
     skos:prefLabel "Medium silt (0.0063 - 0.02 mm)"@en ;
     skos:scopeNote <https://www.iso.org/standard/66345.html> .
@@ -9420,133 +9429,133 @@ glosis_cl:voidsDiameterValueCode-VC a glosis_cl:VoidsDiameterValueCode,
     skos:prefLabel "Very coarse"@en ;
     skos:topConceptOf glosis_cl:voidsDiameterValueCode .
 
-glosis_cl:waterRetentionValueCode-WRG a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRG a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Gravimetric water retention refers to the amount of water held by the soil measured by weight, often expressed in terms of mass per unit mass of soil. It is a fundamental method for assessing soil moisture content and can be determined at various suction pressures like 33 kPa or 1500 kPa. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRG" ;
     skos:prefLabel "Water Retention Gravimetric"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRG10 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRG10 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Gravimetric water retention at 10 kPa measures the water held in the soil at 10 kPa pressure, commonly representing the moisture content that is available to plants under normal growing conditions. This measurement is crucial for assessing the soil’s capacity to retain and supply water to plants. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRG10" ;
     skos:prefLabel "Water Retention Gravimetric 10 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRG100 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRG100 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Gravimetric water retention at 100 kPa measures the water retained by the soil at this specific pressure, using the gravimetric method. It indicates the moisture available to plants between field capacity and the wilting point, providing a useful measurement for soil water management. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRG100" ;
     skos:prefLabel "Water Retention Gravimetric 100 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRG1500 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRG1500 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Gravimetric water retention at 1500 kPa refers to the mass of water retained by the soil at this pressure, as measured by the gravimetric method (weighing the soil before and after drying). This pressure represents the point at which water is tightly held by the soil and is no longer easily accessible to plants, closely corresponding to the permanent wilting point. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRG1500" ;
     skos:prefLabel "Water Retention Gravimetric 1500 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRG200 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRG200 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Gravimetric water retention at 200 kPa is the mass of water retained by the soil at this specific suction pressure. It provides insight into the soil’s ability to retain water that is not easily lost by evaporation, offering a more accurate measurement of water held at pressures significant for plant growth. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRG200" ;
     skos:prefLabel "Water Retention Gravimetric 200 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRG33 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRG33 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Gravimetric water retention at 33 kPa measures the amount of water retained by the soil at this specific pressure, determined by the mass of water held in the soil when subjected to the 33 kPa suction. It reflects the soil’s capacity to hold water available to plants under conditions of moderate water stress. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRG33" ;
     skos:prefLabel "Water Retention Gravimetric 33 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRG500 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRG500 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Gravimetric water retention at 500 kPa indicates the amount of water retained in the soil at this pressure. This is closer to the permanent wilting point, with the gravimetric method determining the mass of water held in the soil at this specific tension. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRG500" ;
     skos:prefLabel "Water Retention Gravimetric 500 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRG6 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRG6 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Gravimetric water retention at 6 kPa measures the soil's water content at a low suction pressure, typically indicative of the moisture available to plants under less favorable conditions. The gravimetric method involves weighing the soil before and after drying to assess the retained water. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRG6" ;
     skos:prefLabel "Water Retention Gravimetric 6 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRV a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRV a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Volumetric water retention refers to the amount of water retained in the soil, expressed as a volume per unit volume of soil. This measure is crucial for understanding the soil's ability to retain and supply water to plants, and it is often assessed at different matric potentials, such as 33 kPa or 1500 kPa, depending on the context. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRV" ;
     skos:prefLabel "Water Retention Volumetric"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRV10 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRV10 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Water retention at 10 kPa measures the volumetric water content of the soil at this pressure, which is typically considered within the zone of plant-available water. At 10 kPa, the soil retains water that can be easily accessed by plants for growth and physiological processes. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRV10" ;
     skos:prefLabel "Water Retention Volumetric 10 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRV100 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRV100 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Water retention at 100 kPa measures the volumetric water content in the soil at this pressure. This value is often used to assess the availability of water for plant uptake under normal conditions, as it lies between field capacity and the wilting point for many soils. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRV100" ;
     skos:prefLabel "Water Retention Volumetric 100 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRV1500 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRV1500 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Water retention at 1500 kPa (or field capacity) measures the amount of water that a soil can hold at this specific suction pressure. This is a critical indicator of the soil's ability to retain water against gravity after it has drained. At 1500 kPa, the soil's moisture content represents the point at which most of the water available for plant use has been drained, and it is typically considered the permanent wilting point. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRV1500" ;
     skos:prefLabel "Water Retention Volumetric 1500 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRV200 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRV200 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Water retention at 200 kPa refers to the volumetric water content retained by the soil at a 200 kPa pressure. This measurement typically lies between the field capacity and wilting point, giving an indication of the soil’s ability to hold water that plants can access under moderate stress conditions. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRV200" ;
     skos:prefLabel "Water Retention Volumetric 200 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRV33 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRV33 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Water retention at 33 kPa represents the volumetric water content in soil at a pressure of 33 kPa, which is often associated with the field capacity of the soil. At this pressure, water is held in the soil that is available for most plant species, providing a balance between water retention and drainage. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRV33" ;
     skos:prefLabel "Water Retention Volumetric 33 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRV500 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRV500 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Water retention at 500 kPa measures the volumetric water content of the soil at a pressure of 500 kPa, which lies between field capacity and permanent wilting point. This pressure is commonly used in assessing soil water retention characteristics for plants that are not able to access water at extremely low pressures. The volumetric water content at 500 kPa indicates the soil's capacity to hold water that is readily available for plant uptake. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRV500" ;
     skos:prefLabel "Water Retention Volumetric 500 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
-glosis_cl:waterRetentionValueCode-WRV6 a glosis_cl:WaterRetentionValueCode,
+glosis_cl:waterRetentionPropertyCode-WRV6 a glosis_cl:WaterRetentionPropertyCode,
         skos:Concept ;
     skos:definition "Volumetric water retention at 6 kPa measures the soil’s ability to hold water at a low pressure, typically indicating the moisture content available to plants under conditions of mild water stress. It is important for understanding the soil's water-holding capacity and potential for plant growth. Source: Soil Science Society of America." ;
-    skos:inScheme glosis_cl:waterRetentionValueCode ;
+    skos:inScheme glosis_cl:waterRetentionPropertyCode ;
     skos:notation "WRV6" ;
     skos:prefLabel "Water Retention Volumetric 6 kPa"@en ;
-    skos:topConceptOf glosis_cl:waterRetentionValueCode .
+    skos:topConceptOf glosis_cl:waterRetentionPropertyCode .
 
 glosis_cl:weatherConditionsValueCode-OV a glosis_cl:WeatherConditionsValueCode,
         skos:Concept ;
