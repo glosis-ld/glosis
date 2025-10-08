@@ -20,10 +20,11 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix om: <https://raw.githubusercontent.com/HajoRijgersberg/OM/refs/heads/master/om-2.0.rdf/> .
 
 <http://w3id.org/glosis/model/layerhorizon>
         a                owl:Ontology ;
-        owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: , glosis_u: ;
+        owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: , glosis_u: , om: ;
         owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.5.1> ;
         owl:versionInfo  "1.5.1" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
@@ -467,7 +468,7 @@ glosis_lh:SiltValue a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:GM-PER-HectoGM] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue om:gramPerHectogram ] .
 
 glosis_lh:MottlesAbundance a owl:Class ;
         rdfs:label "MottlesAbundance"@en;
@@ -624,7 +625,7 @@ glosis_lh:SandValue a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:GM-PER-HectoGM] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue om:gramPerHectogram ] .
 
 glosis_cm:OrganicMatterClass rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
@@ -704,7 +705,7 @@ glosis_lh:SolubleCationsTotalValue a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:CentiMOL-PER-L ] . 
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue om:centimolePerLitre ] . 
 
 glosis_lh:CementationNature a	owl:Class ;
         rdfs:label "CementationNature"@en ;
@@ -760,7 +761,7 @@ glosis_lh:SolubleAnionsTotalValue a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue glosis_u:CentiMOL-PER-L ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue cm:centimolePerLitre ] .
 
 glosis_cm:CracksDepth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
@@ -2239,7 +2240,7 @@ glosis_lh:PhosphorusRetentionValue a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue glosis_u:GM-PER-HectoGM ] .
+        owl:hasValue om:gramPerHectogram ] .
 
 
 glosis_lh:Porosity  a	owl:Class ;
@@ -2279,7 +2280,7 @@ glosis_lh:SolubleSaltsValue a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue glosis_u:CentiMOL-PER-L ] .
+        owl:hasValue cm:centimolePerLitre ] .
 
 glosis_lh:SandFractionTexture a owl:Class ;
         rdfs:label "SandFractionTexture"@en ;
