@@ -1,0 +1,23 @@
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+SELECT DISTINCT ?uri ?label_foi ?label_list ?label ?comment ?definition
+WHERE
+{
+  ?uri a sosa:ObservableProperty ;
+     rdfs:label ?label ;
+     rdfs:comment ?comment ;
+     skos:definition ?definition .
+  ?obs rdfs:subClassOf ?restriction .
+  ?restriction a owl:Restriction ;
+      owl:onProperty sosa:hasFeatureOfInterest ;
+      owl:allValuesFrom ?foi .
+  OPTIONAL {?foi rdfs:label ?label_foi}
+  OPTIONAL {
+	?foi owl:unionOf ?list .
+	?list rdf:first ?foi_first .
+	?foi_first rdfs:label ?label_list .
+  }
+}
+ORDER BY ?uri
+
+
