@@ -1,0 +1,77 @@
+# Properties associated with Surface
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX glosis_su: <http://w3id.org/glosis/model/surface/>
+
+SELECT DISTINCT ?obs ?prop
+WHERE
+{
+    ?obs rdfs:subClassOf ?rest1 .
+    ?rest1 owl:onProperty sosa:hasFeatureOfInterest ; 
+          owl:allValuesFrom glosis_su:GL_Surface .
+
+    ?obs rdfs:subClassOf ?rest2 .
+    ?rest2 owl:onProperty sosa:observedProperty ; 
+           owl:hasValue ?prop .
+}
+
+# Properties associated with Profile
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX glosis_pr: <http://w3id.org/glosis/model/profile/>
+
+SELECT DISTINCT ?obs ?prop
+WHERE
+{
+    ?obs rdfs:subClassOf ?rest1 .
+    ?rest1 owl:onProperty sosa:hasFeatureOfInterest ; 
+          owl:allValuesFrom glosis_pr:GL_Profile .
+
+    ?obs rdfs:subClassOf ?rest2 .
+    ?rest2 owl:onProperty sosa:observedProperty ; 
+           owl:hasValue ?prop .
+}
+
+
+
+# Properties associated with Plot/Site
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX glosis_sp: <http://w3id.org/glosis/model/siteplot/>
+
+SELECT DISTINCT ?obs ?prop
+WHERE
+{
+    ?obs rdfs:subClassOf ?rest1 .
+    ?rest1 owl:onProperty sosa:hasFeatureOfInterest ; 
+           owl:allValuesFrom [owl:unionOf (glosis_sp:GL_Plot glosis_sp:GL_Site) ] .
+
+    ?obs rdfs:subClassOf ?rest2 .
+    ?rest2 owl:onProperty sosa:observedProperty ; 
+           owl:hasValue ?prop .
+}
+
+# Properties associated with Layer/Horizon
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX glosis_lh: <http://w3id.org/glosis/model/layerhorizon/>
+
+SELECT DISTINCT ?obs ?prop
+WHERE
+{
+    ?obs rdfs:subClassOf ?rest1 .
+    ?rest1 owl:onProperty sosa:hasFeatureOfInterest ; 
+           owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] .
+
+    ?obs rdfs:subClassOf ?rest2 .
+    ?rest2 owl:onProperty sosa:observedProperty ; 
+           owl:hasValue ?prop .
+}
