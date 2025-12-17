@@ -3,9 +3,10 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX glosis_su: <http://w3id.org/glosis/model/surface/>
 
-SELECT DISTINCT ?obs ?prop
+SELECT DISTINCT ?parent ?label ?virg1 ?label2 ?label_read ?comment ?virg2 ?definition ?obs
 WHERE
 {
     ?obs rdfs:subClassOf ?rest1 .
@@ -15,6 +16,16 @@ WHERE
     ?obs rdfs:subClassOf ?rest2 .
     ?rest2 owl:onProperty sosa:observedProperty ; 
            owl:hasValue ?prop .
+
+    ?prop rdfs:label ?label ;
+          rdfs:comment ?comment ;
+          skos:definition ?definition .
+
+    BIND ("Surface" AS ?parent)
+    BIND (?label AS ?label2)
+    BIND (CONCAT(UCASE(SUBSTR(?label, 1, 1)), SUBSTR(REPLACE(?label, "([A-Z])", " $1"), 2))  AS ?label_read)
+    BIND ("," AS ?virg1)
+    BIND (",,," AS ?virg2)
 }
 
 # Properties associated with Profile
@@ -24,7 +35,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX glosis_pr: <http://w3id.org/glosis/model/profile/>
 
-SELECT DISTINCT ?obs ?prop
+SELECT DISTINCT ?parent ?label ?virg1 ?label2 ?label_read ?comment ?virg2 ?definition ?obs
 WHERE
 {
     ?obs rdfs:subClassOf ?rest1 .
@@ -34,6 +45,16 @@ WHERE
     ?obs rdfs:subClassOf ?rest2 .
     ?rest2 owl:onProperty sosa:observedProperty ; 
            owl:hasValue ?prop .
+
+    ?prop rdfs:label ?label ;
+          rdfs:comment ?comment ;
+          skos:definition ?definition .
+
+    BIND ("Profile" AS ?parent)
+    BIND (?label AS ?label2)
+    BIND (CONCAT(UCASE(SUBSTR(?label, 1, 1)), SUBSTR(REPLACE(?label, "([A-Z])", " $1"), 2))  AS ?label_read)
+    BIND ("," AS ?virg1)
+    BIND (",,," AS ?virg2)
 }
 
 
@@ -45,7 +66,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX glosis_sp: <http://w3id.org/glosis/model/siteplot/>
 
-SELECT DISTINCT ?obs ?prop
+SELECT DISTINCT ?parent ?label ?virg1 ?label2 ?label_read ?comment ?virg2 ?definition ?obs
 WHERE
 {
     ?obs rdfs:subClassOf ?rest1 .
@@ -55,6 +76,16 @@ WHERE
     ?obs rdfs:subClassOf ?rest2 .
     ?rest2 owl:onProperty sosa:observedProperty ; 
            owl:hasValue ?prop .
+
+    ?prop rdfs:label ?label ;
+          rdfs:comment ?comment ;
+          skos:definition ?definition .
+    
+    BIND ("Plot-Site" AS ?parent)
+    BIND (?label AS ?label2)
+    BIND (CONCAT(UCASE(SUBSTR(?label, 1, 1)), SUBSTR(REPLACE(?label, "([A-Z])", " $1"), 2))  AS ?label_read)
+    BIND ("," AS ?virg1)
+    BIND (",,," AS ?virg2)
 }
 
 # Properties associated with Layer/Horizon
@@ -64,7 +95,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX glosis_lh: <http://w3id.org/glosis/model/layerhorizon/>
 
-SELECT DISTINCT ?obs ?prop
+SELECT DISTINCT ?parent ?label ?virg1 ?label2 ?label_read ?comment ?virg2 ?definition ?obs
 WHERE
 {
     ?obs rdfs:subClassOf ?rest1 .
@@ -74,4 +105,14 @@ WHERE
     ?obs rdfs:subClassOf ?rest2 .
     ?rest2 owl:onProperty sosa:observedProperty ; 
            owl:hasValue ?prop .
+
+    ?prop rdfs:label ?label ;
+          rdfs:comment ?comment ;
+          skos:definition ?definition .
+
+    BIND ("Surface" AS ?parent)
+    BIND (?label AS ?label2)
+    BIND (CONCAT(UCASE(SUBSTR(?label, 1, 1)), SUBSTR(REPLACE(?label, "([A-Z])", " $1"), 2))  AS ?label_read)
+    BIND ("," AS ?virg1)
+    BIND (",,," AS ?virg2)
 }
