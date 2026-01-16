@@ -1,5 +1,8 @@
-This folder contains the latest version of CSV files with codelists for the following modules: [glosis_cl](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl) and [glosis_procedure](https://github.com/rapw3k/glosis/blob/master/glosis_procedure.ttl).
+This folder contains the latest version of CSV files with codelists for the following modules:
 
-Those CSV files can be reused or updated using [the transformer_tool](https://github.com/rapw3k/glosis/tree/master/utils/transformer_tool). More details can be found in here: [transformer_tool_README](https://github.com/rapw3k/glosis/blob/master/utils/transformer_tool/README.md).
+- [glosis_cl](../glosis_cl.ttl), sources: [glosis_cl](./glosis_cl.csv), [glosis_result](./glosis_result.csv), [glosis_property_descriptive](./glosis_property_descriptive.csv), [glosis_property_physchem](.\glosis_property_physchem.csv)
+- [glosis_procedure](../glosis_procedure.ttl), source [glosis_procedure](./glosis_procedure.csv)
 
-As it stands for today the files are being updated on demand, but in the future we plan to have a CI/CD cycle that will guarantee that the folder contains the latests data. 
+A [the transformer_tool](../utils/transformer_tool) can be used to convert vocabularies from csv to .ttl or vice versa. More details can be found in the [transformer_tool_README](../utils/transformer_tool/README.md).
+
+As it stands today, the files are being updated on demand, but in the future we plan to have a CI/CD cycle that will guarantee that the folder contains the latests data. 
