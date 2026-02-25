@@ -6,17 +6,22 @@ import datetime
 import rdflib
 import pandas as pd
 
+base_uri_mapping = {
+    "results": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/results/'),
+    "desc_prop": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/descriptive/'),
+    "desc_pch": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/physiochemical/'),
+    "procedure": rdflib.term.URIRef(f'http://w3id.org/glosis/model/procedure/')
+}
+
 
 class Transformer(object):
     def __init__(self, file, file_type, output_filename=None):
         self.filename = file
         self.graph = self._parse_into_graph()
         self.file_type = file_type
-        self.postfix = self._set_postfix_based_on_type()
         self.attributes = []
         self.results = {}
-        self.base_uri = self._get_base_uri() if self.file_type == "procedure" else \
-            rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/')
+        self.base_uri = base_uri_mapping.get(self.file_type)
         self.output = output_filename if output_filename else os.path.splitext(file)[0]
 
         # setting up logger
@@ -38,17 +43,6 @@ class Transformer(object):
         except FileNotFoundError:
             print("File not found, please double-check the path that you provided!")
             return
-
-    def _get_base_uri(self):
-        return rdflib.term.URIRef(f'http://w3id.org/glosis/model/{self.postfix.lower()}/')
-
-    def _set_postfix_based_on_type(self):
-        if self.file_type == "procedure":
-            return "Procedure"
-        elif self.file_type == "codelist":
-            return "ValueCode"
-        else:
-            print("Unrecognized file_type! Has to be one of: procedure, codelist")
 
     def _get_attr_name(self, attribute):
         attr_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCode|Procedure)", attribute)[-1]
@@ -84,7 +78,7 @@ class Transformer(object):
     def _get_instance_details(self):
         for attribute in self.results.keys():
             concept_definition = None
-            if self.file_type == "codelist":
+            if not self.file_type == "procedure":
                 attr_uri = self.base_uri + attribute[0] + attribute[1]
                 for s, p, o in self.graph:
                     if s == attr_uri and p == rdflib.URIRef("http://www.w3.org/2004/02/skos/core#definition"):
