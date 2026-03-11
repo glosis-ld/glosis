@@ -75,6 +75,19 @@ class Transformer(object):
     def _is_property(phrase):
         return True if "PropertyCode" in phrase else False
 
+    @staticmethod
+    def _map_foi(foi_val):
+        if "GL_Profile" in foi_val:
+            return "Profile"
+        elif "GL_Horizon" in foi_val:
+            return "Layer-Horizon"
+        elif "GL_Plot" in foi_val:
+            return "Plot-Site"
+        elif "GL_Surface" in foi_val:
+            return "Surface"
+        else:
+            return None
+
     def _get_instance_details(self):
         for attribute in self.results.keys():
             concept_definition = None
@@ -104,6 +117,10 @@ class Transformer(object):
                                 property_dict["inchi"] = o.n3().strip('"').removesuffix('"@en')
                             elif p == rdflib.URIRef("http://dbpedia.org/ontology/pubchem"):
                                 property_dict["pub_chem"] = o.n3().strip('"').removesuffix('"@en')
+                            elif p == rdflib.URIRef("http://www.w3.org/ns/ssn/isPropertyOf"):
+                                mapped_value = self._map_foi(o.n3())
+                                if mapped_value:
+                                    property_dict.setdefault("foi", []).append(mapped_value)
                             elif "scopeNote" in p:
                                 if isinstance(o, rdflib.term.Literal):
                                     property_dict["citation"] = o.n3().strip('"')
@@ -135,14 +152,15 @@ class Transformer(object):
                         normalized_instance_data["instance"] = k2
                         normalized_instance_data["attribute"] = k[0]
                         frames.append(normalized_instance_data)
-                    # if there are no instances save only basic informations related to attribute
+                    # if there are no instances save only basic information related to attribute
                     else:
                         attribute_data = self.results[k]
                         normalized_attribute_data = pd.json_normalize(attribute_data)
                         normalized_attribute_data["attribute"] = k[0]
                         frames.append(normalized_attribute_data)
         df = pd.concat(frames)
-        df = df.reindex(columns=["attribute", "instance", "parent_instance", "notation", "label", "definition",
+        df = df.explode('foi')
+        df = df.reindex(columns=["foi", "attribute", "instance", "parent_instance", "notation", "label", "definition",
                                  "reference", "citation", "isproperty", "concept_definition", "pub_chem", 
                                  "inchi_key", "inchi"])
         df.drop_duplicates(inplace=True)

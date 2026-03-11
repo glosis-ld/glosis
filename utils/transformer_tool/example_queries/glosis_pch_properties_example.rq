@@ -1,10 +1,15 @@
 PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
-PREFIX sosa:  <http://www.w3.org/ns/sosa/> 
+PREFIX sosa:  <http://www.w3.org/ns/sosa/>
+PREFIX ssn:   <http://www.w3.org/ns/ssn/>
 PREFIX glosis_pch: <http://w3id.org/glosis/model/codelists/physiochemical/>
 PREFIX skos:  <http://www.w3.org/2004/02/skos/core#> 
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbprop: <http://dbpedia.org/property/>
+PREFIX glosis_pr: <http://w3id.org/glosis/model/profile/>
+PREFIX glosis_lh: <http://w3id.org/glosis/model/layerhorizon/>
+PREFIX glosis_sp: <http://w3id.org/glosis/model/siteplot/>
+PREFIX glosis_su: <http://w3id.org/glosis/model/surface/>
 
 
 CONSTRUCT {
@@ -13,7 +18,6 @@ CONSTRUCT {
     skos:prefLabel ?cs_label ;
     rdfs:label ?cs_label ;
     skos:note ?cs_note ;
-    skos:definition ?cs_definition ;
     rdfs:seeAlso ?URI2 ;
     .
     
@@ -23,7 +27,6 @@ CONSTRUCT {
     rdfs:subClassOf ?c_property ;
     rdfs:label ?c_label ;
     rdfs:comment ?c_comment ;
-    skos:definition ?cs_definition ;
     rdfs:seeAlso ?URI1 ;
     # the query omitts a collection connected to owl:oneOf on purpose, this will be
     # properly added in postprocessing phase due to the limitations of TARQL! 
@@ -35,10 +38,12 @@ CONSTRUCT {
     skos:prefLabel ?i_label ;
     skos:notation  ?i_notation ;
     skos:definition ?i_description ;
+    skos:definition ?cs_definition ;
     skos:scopeNote ?i_reference ;
     skos:scopeNote ?i_citation ;
     skos:inScheme ?URI1 ;
     skos:broader ?broaderURI ;
+    ssn:isPropertyOf ?foi_extracted ;
     # Chemical substances
     dbo:pubchem ?pub_chem_code ;
     dbo:inchi ?inchi_code ;
@@ -49,6 +54,14 @@ CONSTRUCT {
   ?broaderURI skos:narrower ?c_oneof .
 } 
 WHERE {
+  VALUES (?foi ?foi_extracted) {
+    ("Profile" glosis_pr:GL_Profile)
+    ("Layer-Horizon" glosis_lh:GL_Layer)
+    ("Layer-Horizon" glosis_lh:GL_Horizon)
+    ("Plot-Site" glosis_sp:GL_Plot)
+    ("Plot-Site" glosis_sp:GL_Site)
+    ("Surface" glosis_sp:GL_Surface)
+  }
   BIND (URI(CONCAT('http://www.w3.org/ns/sosa/', "ObservableProperty")) AS ?c_property)
   BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists/physiochemical/', ?attribute, 'PropertyCode')) AS ?URI1)
   BIND (STRLANG(CONCAT('Code list for ', ?attribute, 'Property', ' - codelist scheme'),"en") AS ?cs_label)
@@ -74,4 +87,5 @@ WHERE {
   BIND (IF(?inchi_key != '', ?inchi_key, ?nothing) AS ?inchi_key_code)
   BIND (IF(?inchi != '', ?inchi, ?nothing) AS ?inchi_code)
   BIND (IF(?pub_chem != '', dbo:ChemicalCompound, ?nothing) AS ?compoundURI)
+  FILTER(BOUND(?foi_extracted))
 }
