@@ -14,6 +14,8 @@ class HeaderAppender(object):
     def _extract_type(self):
         if "glosis_result" in self.input_csv:
             return "static/results_header.ttl"
+        elif "glosis_properties" in self.input_csv:
+            return "static/properties_header.ttl"
         elif "glosis_property_descriptive" in self.input_csv:
             return "static/prop_desc_header.ttl"
         elif "glosis_property_physchem" in self.input_csv:

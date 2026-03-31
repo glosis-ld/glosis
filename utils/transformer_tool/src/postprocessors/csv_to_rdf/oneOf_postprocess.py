@@ -20,6 +20,8 @@ class PostProcessor(object):
         self.the_object = URIRef("http://www.w3.org/2002/07/owl#" + "Class")
         if "glosis_result" in self.input_csv:
             self.base_uri = "http://w3id.org/glosis/model/codelists/results/"
+        elif "glosis_properties" in self.input_csv:
+            self.base_uri = "http://w3id.org/glosis/model/codelists/properties/"
         elif "glosis_property_descriptive" in self.input_csv:
             self.base_uri = "http://w3id.org/glosis/model/codelists/descriptive/"
         elif "glosis_property_physchem" in self.input_csv:
