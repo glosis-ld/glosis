@@ -46,12 +46,12 @@ class Transformer(object):
             return
 
     def _get_attr_name(self, attribute):
-        attr_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCode|Procedure)", attribute)[-1]
-        postfix = re.findall(r"ValueCode|PropertyCode|Procedure", attribute)[-1]
+        attr_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCollection|Procedure)", attribute)[-1]
+        postfix = re.findall(r"ValueCode|PropertyCollection|Procedure", attribute)[-1]
         return attr_name, postfix
 
     def _get_instance_name(self, instance):
-        return re.findall(r"(?:(?<=ValueCode\-)|(?<=PropertyCode\-)|(?<=Procedure\-)).*(?=>)", instance)[-1]
+        return re.findall(r"(?:(?<=ValueCode\-)|(?<=PropertyCollection\-)|(?<=Procedure\-)).*(?=>)", instance)[-1]
 
     def _select_attributes(self):
         concept_scheme = rdflib.term.URIRef('http://www.w3.org/2004/02/skos/core#ConceptScheme')
