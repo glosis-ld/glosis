@@ -8,7 +8,7 @@ import pandas as pd
 
 base_uri_mapping = {
     "results": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/results/'),
-    "properties": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/proprties/'),
+    "properties": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/properties/'),
     "desc_prop": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/descriptive/'),
     "desc_pch": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/physiochemical/'),
     "procedure": rdflib.term.URIRef(f'http://w3id.org/glosis/model/procedure/')
