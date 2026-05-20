@@ -38,6 +38,8 @@ CONSTRUCT {
     skos:scopeNote ?i_citation ;
     skos:inScheme ?URI1 ;
     skos:broader ?broaderURI ;
+    skos:exactMatch ?i_exactMatch ;
+    skos:closeMatch ?i_closeMatch ;
     # Chemical substances
     dbo:pubchem ?pub_chem_code ;
     dbo:inchi ?inchi_code ;
@@ -65,6 +67,8 @@ WHERE {
   BIND (IF(?citation != '', ?citation, ?nothing) AS ?i_citation)
   BIND (IF(?parent_instance = '', ?URI1, ?nothing) AS ?top_URI)
   BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists/results/', ?attribute, 'Value', 'Code', '-', ?parent_instance)) AS ?parentURI)
+  BIND (IF(?exact_match != '', ?exact_match, ?nothing) AS ?i_exactMatch)
+  BIND (IF(?close_match != '', ?close_match, ?nothing) AS ?i_closeMatch)
   BIND (IF(?parent_instance != '', ?parentURI, ?nothing) AS ?broaderURI)
   BIND (IF(?pub_chem != '', ?pub_chem, ?nothing) AS ?pub_chem_code)
   BIND (IF(?pub_chem != '', URI(CONCAT('https://pubchem.ncbi.nlm.nih.gov/compound/', ?pub_chem)), ?nothing) AS ?pub_chem_URI)
