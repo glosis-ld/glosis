@@ -6,17 +6,23 @@ import datetime
 import rdflib
 import pandas as pd
 
+base_uri_mapping = {
+    "results": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/results/'),
+    "properties": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/properties/'),
+    "desc_prop": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/descriptive/'),
+    "desc_pch": rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/physiochemical/'),
+    "procedure": rdflib.term.URIRef(f'http://w3id.org/glosis/model/procedure/')
+}
+
 
 class Transformer(object):
     def __init__(self, file, file_type, output_filename=None):
         self.filename = file
         self.graph = self._parse_into_graph()
         self.file_type = file_type
-        self.postfix = self._set_postfix_based_on_type()
         self.attributes = []
         self.results = {}
-        self.base_uri = self._get_base_uri() if self.file_type == "procedure" else \
-            rdflib.term.URIRef(f'http://w3id.org/glosis/model/codelists/')
+        self.base_uri = base_uri_mapping.get(self.file_type)
         self.output = output_filename if output_filename else os.path.splitext(file)[0]
 
         # setting up logger
@@ -39,24 +45,13 @@ class Transformer(object):
             print("File not found, please double-check the path that you provided!")
             return
 
-    def _get_base_uri(self):
-        return rdflib.term.URIRef(f'http://w3id.org/glosis/model/{self.postfix.lower()}/')
-
-    def _set_postfix_based_on_type(self):
-        if self.file_type == "procedure":
-            return "Procedure"
-        elif self.file_type == "codelist":
-            return "ValueCode"
-        else:
-            print("Unrecognized file_type! Has to be one of: procedure, codelist")
-
     def _get_attr_name(self, attribute):
-        attr_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCode|Procedure)", attribute)[-1]
-        postfix = re.findall(r"ValueCode|PropertyCode|Procedure", attribute)[-1]
+        attr_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCollection|Procedure)", attribute)[-1]
+        postfix = re.findall(r"ValueCode|PropertyCollection|Procedure", attribute)[-1]
         return attr_name, postfix
 
     def _get_instance_name(self, instance):
-        return re.findall(r"(?:(?<=ValueCode\-)|(?<=PropertyCode\-)|(?<=Procedure\-)).*(?=>)", instance)[-1]
+        return re.findall(r"(?:(?<=ValueCode\-)|(?<=PropertyCollection\-)|(?<=Procedure\-)).*(?=>)", instance)[-1]
 
     def _select_attributes(self):
         concept_scheme = rdflib.term.URIRef('http://www.w3.org/2004/02/skos/core#ConceptScheme')
@@ -81,10 +76,23 @@ class Transformer(object):
     def _is_property(phrase):
         return True if "PropertyCode" in phrase else False
 
+    @staticmethod
+    def _map_foi(foi_val):
+        if "GL_Profile" in foi_val:
+            return "Profile"
+        elif "GL_Horizon" in foi_val:
+            return "Layer-Horizon"
+        elif "GL_Plot" in foi_val:
+            return "Plot-Site"
+        elif "GL_Surface" in foi_val:
+            return "Surface"
+        else:
+            return None
+
     def _get_instance_details(self):
         for attribute in self.results.keys():
             concept_definition = None
-            if self.file_type == "codelist":
+            if not self.file_type == "procedure":
                 attr_uri = self.base_uri + attribute[0] + attribute[1]
                 for s, p, o in self.graph:
                     if s == attr_uri and p == rdflib.URIRef("http://www.w3.org/2004/02/skos/core#definition"):
@@ -110,6 +118,10 @@ class Transformer(object):
                                 property_dict["inchi"] = o.n3().strip('"').removesuffix('"@en')
                             elif p == rdflib.URIRef("http://dbpedia.org/ontology/pubchem"):
                                 property_dict["pub_chem"] = o.n3().strip('"').removesuffix('"@en')
+                            elif p == rdflib.URIRef("http://www.w3.org/ns/ssn/isPropertyOf"):
+                                mapped_value = self._map_foi(o.n3())
+                                if mapped_value:
+                                    property_dict.setdefault("foi", []).append(mapped_value)
                             elif "scopeNote" in p:
                                 if isinstance(o, rdflib.term.Literal):
                                     property_dict["citation"] = o.n3().strip('"')
@@ -141,14 +153,15 @@ class Transformer(object):
                         normalized_instance_data["instance"] = k2
                         normalized_instance_data["attribute"] = k[0]
                         frames.append(normalized_instance_data)
-                    # if there are no instances save only basic informations related to attribute
+                    # if there are no instances save only basic information related to attribute
                     else:
                         attribute_data = self.results[k]
                         normalized_attribute_data = pd.json_normalize(attribute_data)
                         normalized_attribute_data["attribute"] = k[0]
                         frames.append(normalized_attribute_data)
         df = pd.concat(frames)
-        df = df.reindex(columns=["attribute", "instance", "parent_instance", "notation", "label", "definition",
+        df = df.explode('foi')
+        df = df.reindex(columns=["foi", "attribute", "instance", "parent_instance", "notation", "label", "definition",
                                  "reference", "citation", "isproperty", "concept_definition", "pub_chem", 
                                  "inchi_key", "inchi"])
         df.drop_duplicates(inplace=True)
