@@ -1240,6 +1240,31 @@ glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
         rdfs:comment "The Cementation Continuity Property describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 69"@en .
 
+glosis_lh:MasterHorizonL a owl:Class ;
+        rdfs:label "MasterHorizon"@en ;
+        rdfs:comment ""The master soil horizon designation summarizes many observations of the soil description and gives an impression about the genetic processes that have formed the soil under observation. Source: FAO (2006). Guidelines for Soil Description." ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: Chapter 5"@en ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_lh:GL_Layer ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom [owl:unionOf (glosis_cl:MasterHorizonAllValueCode glosis_cl:MasterHorizonOnlyLValueCode) ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:masterHorizonProperty ] .
+
+glosis_lh:MasterHorizonH a owl:Class ;
+        rdfs:label "MasterHorizon"@en ;
+        rdfs:comment ""The master soil horizon designation summarizes many observations of the soil description and gives an impression about the genetic processes that have formed the soil under observation. Source: FAO (2006). Guidelines for Soil Description." ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: Chapter 5"@en ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_lh:GL_Layer ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom [owl:unionOf (glosis_cl:MasterHorizonAllValueCode glosis_cl:MasterHorizonOnlyHValueCode) ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:masterHorizonProperty ] .
+
+glosis_lh:masterHorizonProperty a sosa:ObservableProperty ;
+        rdfs:label "masterHorizonProperty"@en ;
+        rdfs:comment "The master soil horizon designation summarizes many observations of the soil description and gives an impression about the genetic processes that have formed the soil under observation. Source: FAO (2006). Guidelines for Soil Description." ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: Chapter 5"@en .
+
+
+
 glosis_lh:AvailableWaterHoldingCapacity  a owl:Class ;
         rdfs:label "AvailableWaterHoldingCapacity"@en ;
         rdfs:comment "Available Water Holding Capacity (AWHC) is the amount of water that a soil can hold and release for plant uptake, calculated as the difference between field capacity and permanent wilting point. This property is influenced by soil texture and structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
