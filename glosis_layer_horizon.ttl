@@ -21,6 +21,7 @@
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix om: <https://raw.githubusercontent.com/HajoRijgersberg/OM/refs/heads/master/om-2.0.rdf/> .
+@prefix cm: <https://example.com> .
 
 <http://w3id.org/glosis/model/layerhorizon>
         a                owl:Ontology ;
@@ -1242,20 +1243,20 @@ glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
 
 glosis_lh:MasterHorizonL a owl:Class ;
         rdfs:label "MasterHorizon"@en ;
-        rdfs:comment ""The master soil horizon designation summarizes many observations of the soil description and gives an impression about the genetic processes that have formed the soil under observation. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The master soil horizon designation summarizes many observations of the soil description and gives an impression about the genetic processes that have formed the soil under observation. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: Chapter 5"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_lh:GL_Layer ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom [owl:unionOf (glosis_cl:MasterHorizonAllValueCode glosis_cl:MasterHorizonOnlyLValueCode) ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom [owl:unionOf (glosis_cl:MasterHorizonAllValueCode glosis_cl:MasterHorizonOnlyLValueCode) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:masterHorizonProperty ] .
 
 glosis_lh:MasterHorizonH a owl:Class ;
         rdfs:label "MasterHorizon"@en ;
-        rdfs:comment ""The master soil horizon designation summarizes many observations of the soil description and gives an impression about the genetic processes that have formed the soil under observation. Source: FAO (2006). Guidelines for Soil Description." ;
+        rdfs:comment "The master soil horizon designation summarizes many observations of the soil description and gives an impression about the genetic processes that have formed the soil under observation. Source: FAO (2006). Guidelines for Soil Description." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: Chapter 5"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_lh:GL_Layer ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom [owl:unionOf (glosis_cl:MasterHorizonAllValueCode glosis_cl:MasterHorizonOnlyHValueCode) ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom [owl:unionOf (glosis_cl:MasterHorizonAllValueCode glosis_cl:MasterHorizonOnlyHValueCode) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:masterHorizonProperty ] .
 
 glosis_lh:masterHorizonProperty a sosa:ObservableProperty ;
