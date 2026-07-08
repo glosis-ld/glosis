@@ -5,7 +5,8 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix glosis_lh: <http://w3id.org/glosis/model/layerhorizon/> .
-@prefix glosis_cl: <http://w3id.org/glosis/model/codelists/> .
+@prefix glosis_res: <http://w3id.org/glosis/model/codelists/results/> .
+@prefix glosis_prop: <http://w3id.org/glosis/model/codelists/properties/> .
 @prefix glosis_cm: <http://w3id.org/glosis/model/common/> .
 @prefix glosis_proc: <http://w3id.org/glosis/model/procedure/> .
 @prefix glosis_u: <http://w3id.org/glosis/model/unit/> .
@@ -24,7 +25,7 @@
 
 <http://w3id.org/glosis/model/layerhorizon>
         a                owl:Ontology ;
-        owl:imports      ssn: , sosa: , glosis_cl: , glosis_cm: , iso28258: , glosis_u: , om: ;
+        owl:imports      ssn: , sosa: , glosis_res: , glosis_prop: , glosis_proc: , glosis_cm: , iso28258: , glosis_u: , om: ;
         owl:versionIRI   <http://w3id.org/glosis/model/layerhorizon/1.5.1> ;
         owl:versionInfo  "1.5.1" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
@@ -100,7 +101,7 @@ glosis_lh:CoatingNature  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 66"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CoatingNatureValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingNatureValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingNatureProperty ] .
 
 glosis_lh:coatingNatureProperty a sosa:ObservableProperty ;
@@ -128,7 +129,7 @@ glosis_lh:CementationDegree  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 72"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CementationDegreeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CementationDegreeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationDegreeProperty ] .
 
 glosis_lh:cementationDegreeProperty a sosa:ObservableProperty ;
@@ -144,7 +145,7 @@ glosis_lh:CoatingContrast  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 65"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CoatingContrastValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingContrastValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingContrastProperty ] .
 
 glosis_lh:coatingContrastProperty a sosa:ObservableProperty ;
@@ -158,7 +159,7 @@ glosis_lh:BiologicalAbundance  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 81"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BiologicalAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BiologicalAbundanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:biologicalAbundanceProperty ] .
 
 glosis_lh:biologicalAbundanceProperty a sosa:ObservableProperty ;
@@ -193,7 +194,7 @@ glosis_lh:VoidsClassification  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 61"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:VoidsClassificationValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:VoidsClassificationValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:voidsClassificationProperty ] .
 
 glosis_lh:voidsClassificationProperty a sosa:ObservableProperty ;
@@ -207,7 +208,7 @@ glosis_lh:MineralConcKind  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 74"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcKindValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcKindValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcKindProperty ] .
 
 glosis_lh:mineralConcKindProperty a sosa:ObservableProperty ;
@@ -221,7 +222,7 @@ glosis_lh:BulkDensityMineral  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 58"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BulkDensityMineralValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BulkDensityMineralValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityMineralProperty ] .
 
 glosis_lh:bulkDensityMineralProperty a sosa:ObservableProperty ;
@@ -238,7 +239,7 @@ glosis_lh:PhysioChemical a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:PhysioChemicalValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:PhysioChemicalPropertyCode ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_prop:PhysioChemicalPropertyCode ] .
 
 glosis_lh:PhysioChemicalValue a owl:Class ;
         rdfs:label "PhysioChemicalValue"@en ;
@@ -302,7 +303,7 @@ glosis_lh:CoatingAbundance  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 64"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CoatingAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingAbundanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingAbundanceProperty ] .
 
 glosis_lh:coatingAbundanceProperty a sosa:ObservableProperty ;
@@ -316,7 +317,7 @@ glosis_lh:ConsistenceDry  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 53"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ConsistenceDryValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:ConsistenceDryValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:consistenceDryProperty ] .
 
 glosis_lh:consistenceDryProperty a sosa:ObservableProperty ;
@@ -332,7 +333,7 @@ glosis_lh:GypsumForms a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 41"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:GypsumFormsValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:GypsumFormsValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumFormsProperty ] .
 
 glosis_lh:gypsumFormsProperty a sosa:ObservableProperty ;
@@ -346,7 +347,7 @@ glosis_lh:MineralConcNature a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 77"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcNatureValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcNatureValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcNatureProperty ] .
 
 glosis_lh:mineralConcNatureProperty a sosa:ObservableProperty ;
@@ -383,7 +384,7 @@ glosis_lh:BoundaryDistinctness a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 24.1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BoundaryDistinctnessValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BoundaryDistinctnessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:boundaryDistinctnessProperty ] .
 
 glosis_lh:boundaryDistinctnessProperty a sosa:ObservableProperty ;
@@ -418,7 +419,7 @@ glosis_lh:CementationFabric a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 70"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CementationFabricValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CementationFabricValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationFabricProperty ] .
 
 glosis_lh:cementationFabricProperty a sosa:ObservableProperty ;
@@ -432,7 +433,7 @@ glosis_lh:MottlesSize a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 33"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MottlesSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MottlesSizeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesSizeProperty ] .
 
 glosis_lh:mottlesSizeProperty a sosa:ObservableProperty ;
@@ -446,7 +447,7 @@ glosis_lh:PorosityClass a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 60"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PorosityClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PorosityClassValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:porosityClassProperty ] .
 
 glosis_lh:porosityClassProperty a sosa:ObservableProperty ;
@@ -461,7 +462,7 @@ glosis_lh:Silt a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SiltValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:SiltPropertyCode ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_res:SiltPropertyCode ] .
 
 glosis_lh:SiltValue a owl:Class ;
         rdfs:label "SiltValue"@en ;
@@ -476,7 +477,7 @@ glosis_lh:MottlesAbundance a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 32"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MottlesAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MottlesAbundanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesAbundanceProperty ] .
 
 glosis_lh:mottlesAbundanceProperty a sosa:ObservableProperty ;
@@ -490,7 +491,7 @@ glosis_lh:VoidsDiameter a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 62"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:VoidsDiameterValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:VoidsDiameterValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:voidsDiameterProperty ] .
 
 glosis_lh:voidsDiameterProperty a sosa:ObservableProperty ;
@@ -504,7 +505,7 @@ glosis_lh:StructureGrade a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 47"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:StructureGradeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:StructureGradeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:structureGradeProperty ] .
 
 glosis_lh:structureGradeProperty a sosa:ObservableProperty ;
@@ -520,7 +521,7 @@ glosis_lh:BiologicalFeatures  a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 82"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BiologicalFeaturesValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BiologicalFeaturesValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:biologicalFeaturesProperty ] .
 
 glosis_lh:biologicalFeaturesProperty a sosa:ObservableProperty ;
@@ -557,7 +558,7 @@ glosis_lh:PoresSize  a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 62"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:VoidsDiameterValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:VoidsDiameterValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:poresSizeProperty ] .
 
 glosis_lh:poresSizeProperty a sosa:ObservableProperty ;
@@ -573,7 +574,7 @@ glosis_lh:StructureSize a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 50"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:StructureSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:StructureSizeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:structureSizeProperty ] .
 
 glosis_lh:structureSizeProperty a sosa:ObservableProperty ;
@@ -587,7 +588,7 @@ glosis_lh:MineralConcShape a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 75,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcShapeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcShapeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcShapeProperty ] .
 
 glosis_lh:mineralConcShapeProperty a sosa:ObservableProperty ;
@@ -602,7 +603,7 @@ glosis_lh:WaterRetention  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:WaterRetentionValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:WaterRetentionPropertyCode ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_prop:WaterRetentionPropertyCode ] .
 
 glosis_lh:WaterRetentionValue a owl:Class ;
         rdfs:label "WaterRetentionValue"@en ;
@@ -618,7 +619,7 @@ glosis_lh:Sand  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SandValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:SandPropertyCode ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_prop:SandPropertyCode ] .
 
 glosis_lh:SandValue a owl:Class ;
         rdfs:label "SandValue"@en ;
@@ -662,7 +663,7 @@ glosis_lh:PeatDrainage  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PeatDrainageValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PeatDrainageValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatDrainageProperty ] .
 
 glosis_lh:peatDrainageProperty a sosa:ObservableProperty ;
@@ -678,7 +679,7 @@ glosis_lh:SandyTexture  a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: figure 4,3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SandyTextureValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:SandyTextureValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:sandyTextureProperty ] .
 
 glosis_lh:sandyTextureProperty a sosa:ObservableProperty ;
@@ -713,7 +714,7 @@ glosis_lh:CementationNature a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 71"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CementationNatureValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CementationNatureValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationNatureProperty ] .
 
 glosis_lh:cementationNatureProperty a sosa:ObservableProperty ;
@@ -771,7 +772,7 @@ glosis_lh:BulkDensityPeat a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BulkDensityPeatValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BulkDensityPeatValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityPeatProperty ] .
 
 glosis_lh:bulkDensityPeatProperty a sosa:ObservableProperty ;
@@ -785,7 +786,7 @@ glosis_lh:MineralFragments a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 30"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralFragmentsValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralFragmentsValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralFragmentsProperty ] .
 
 glosis_lh:mineralFragmentsProperty a sosa:ObservableProperty ;
@@ -799,7 +800,7 @@ glosis_lh:MottlesBoundaryClassification a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 35"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BoundaryClassificationValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BoundaryClassificationValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesBoundaryClassificationProperty ] .
 
 glosis_lh:mottlesBoundaryClassificationProperty a sosa:ObservableProperty ;
@@ -834,7 +835,7 @@ glosis_lh:PeatDecompostion a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 31"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PeatDecompostionValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PeatDecompostionValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatDecompostionProperty ] .
 
 glosis_lh:peatDecompostionProperty a sosa:ObservableProperty ;
@@ -848,7 +849,7 @@ glosis_lh:PeatVolume a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 59,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PeatVolumeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PeatVolumeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatVolumeProperty ] .
 
 glosis_lh:peatVolumeProperty a sosa:ObservableProperty ;
@@ -862,7 +863,7 @@ glosis_lh:BoundaryTopography a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 24,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BoundaryTopographyValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BoundaryTopographyValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:boundaryTopographyProperty ] .
 
 glosis_lh:boundaryTopographyProperty a sosa:ObservableProperty ;
@@ -876,7 +877,7 @@ glosis_lh:CarbonatesContent a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 38"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CarbonatesContentValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CarbonatesContentValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:carbonatesContentProperty ] .
 
 glosis_lh:carbonatesContentProperty a sosa:ObservableProperty ;
@@ -890,7 +891,7 @@ glosis_lh:MineralConcColour a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 78"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcColourValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcColourValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcColourProperty ] .
 
 glosis_lh:mineralConcColourProperty a sosa:ObservableProperty ;
@@ -925,7 +926,7 @@ glosis_lh:Plasticity a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 56"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PlasticityValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PlasticityValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:plasticityProperty ] .
 
 glosis_lh:plasticityProperty a sosa:ObservableProperty ;
@@ -939,7 +940,7 @@ glosis_lh:MottlesContrast a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 34"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ContrastValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:ContrastValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesContrastProperty ] .
 
 glosis_lh:mottlesContrastProperty a sosa:ObservableProperty ;
@@ -953,7 +954,7 @@ glosis_lh:ConsistenceMoist a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 54"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:ConsistenceMoistValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:ConsistenceMoistValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:consistenceMoistProperty ] .
 
 glosis_lh:consistenceMoistProperty a sosa:ObservableProperty ;
@@ -967,7 +968,7 @@ glosis_lh:MineralConcVolume a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 73"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcVolumeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcVolumeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcVolumeProperty ] .
 
 glosis_lh:mineralConcVolumeProperty a sosa:ObservableProperty ;
@@ -984,7 +985,7 @@ glosis_lh:Clay a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ClayValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_cl:ClayPropertyCode ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:someValuesFrom glosis_res:ClayPropertyCode ] .
 
 glosis_lh:ClayValue a owl:Class ;
         rdfs:label "ClayValue"@en ;
@@ -999,7 +1000,7 @@ glosis_lh:SaltContent a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 42"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:SaltContentValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:SaltContentValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:saltContentProperty ] .
 
 glosis_lh:saltContentProperty a sosa:ObservableProperty ;
@@ -1013,7 +1014,7 @@ glosis_lh:GypsumContent a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 40"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:GypsumContentValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:GypsumContentValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumContentProperty ] .
 
 glosis_lh:gypsumContentProperty a sosa:ObservableProperty ;
@@ -1027,7 +1028,7 @@ glosis_lh:CoatingForm a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 67"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CoatingFormValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingFormValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingFormProperty ] .
 
 glosis_lh:coatingFormProperty a sosa:ObservableProperty ;
@@ -1062,7 +1063,7 @@ glosis_lh:MineralConcHardness a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 76"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcHardnessValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcHardnessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcHardnessProperty ] .
 
 glosis_lh:mineralConcHardnessProperty a sosa:ObservableProperty ;
@@ -1076,7 +1077,7 @@ glosis_lh:PoresAbundance a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 63"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:PoresAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PoresAbundanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:poresAbundanceProperty ] .
 
 glosis_lh:poresAbundanceProperty a sosa:ObservableProperty ;
@@ -1092,7 +1093,7 @@ glosis_lh:MineralConcSize a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 75,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:MineralConcSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcSizeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcSizeProperty ] .
 
 glosis_lh:mineralConcSizeProperty a sosa:ObservableProperty ;
@@ -1106,7 +1107,7 @@ glosis_lh:Stickiness a	owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 55"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:StickinessValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:StickinessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:stickinessProperty ] .
 
 glosis_lh:stickinessProperty a sosa:ObservableProperty ;
@@ -1134,7 +1135,7 @@ glosis_lh:CoatingLocation a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 68"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CoatingLocationValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingLocationValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingLocationProperty ] .
 
 glosis_lh:coatingLocationProperty a sosa:ObservableProperty ;
@@ -1162,7 +1163,7 @@ glosis_lh:CarbonatesForms a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 39"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CarbonatesFormsValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CarbonatesFormsValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:carbonatesFormsProperty ] .
 
 glosis_lh:carbonatesFormsProperty a sosa:ObservableProperty ;
@@ -1181,7 +1182,7 @@ glosis_lh:FragmentsClass  a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:FragmentsClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:FragmentsClassValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:fragmentsClassProperty ] .
 
 glosis_lh:WetPlasticity  a owl:Class ;
@@ -1218,7 +1219,7 @@ glosis_lh:RootsAbundance a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 80"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RootsAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:RootsAbundanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:rootsAbundanceProperty ] .
 
 glosis_lh:rootsAbundanceProperty a sosa:ObservableProperty ;
@@ -1232,7 +1233,7 @@ glosis_lh:CementationContinuity a owl:Class ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 69"@en ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CementationContinuityValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CementationContinuityValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationContinuityProperty ] .
 
 glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
@@ -1248,7 +1249,7 @@ glosis_lh:AvailableWaterHoldingCapacity  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AvailableWaterHoldingCapacityValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Avavol ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Avavol ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:AvailableWaterHoldingCapacityProcedure ] .
 
@@ -1267,7 +1268,7 @@ glosis_lh:BaseSaturation  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BaseSaturationValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Bascal ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Bascal ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:BaseSaturationProcedure ] .
 
@@ -1286,7 +1287,7 @@ glosis_lh:BulkDensityFineEarth  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityFineEarthValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-BulDfine ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-BulDfine ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:BulkDensityFineEarthProcedure ] .
 
@@ -1305,7 +1306,7 @@ glosis_lh:BulkDensityWholeSoil  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BulkDensityWholeSoilValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-BulDfine ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-BulDfine ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:BulkDensityWholeSoilProcedure ] .
 
@@ -1325,7 +1326,7 @@ glosis_lh:CationExchangeCapacitycSoil  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacitycSoilValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-CEC ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-CEC ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CationExchangeCapacitySoilProcedure ] .
 
@@ -1344,7 +1345,7 @@ glosis_lh:CoarseFragments  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CoarseFragmentsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-CoaFra ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-CoaFra ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CoarseFragmentsProcedure ] .
 
@@ -1363,7 +1364,7 @@ glosis_lh:EffectiveCec  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:EffectiveCecValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-ECEC ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-ECEC ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:EffectiveCecProcedure ] .
 
@@ -1382,7 +1383,7 @@ glosis_lh:ElectricalConductivity  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ElectricalConductivityValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Eleccond ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Eleccond ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ElectricalConductivityProcedure ] .
 
@@ -1401,7 +1402,7 @@ glosis_lh:AcidityExchangeable  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AcidityExchangeableValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue  glosis_cl:physioChemicalPropertyCode-Aciexc ] ;
+            sosa:observedProperty ; owl:hasValue  glosis_prop:physioChemicalPropertyCode-Aciexc ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:AcidityExchangeableProcedure ] .
 
@@ -1420,7 +1421,7 @@ glosis_lh:AluminiumExchangeableBases  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumExchangeableBasesValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Aluexc ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Aluexc ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
@@ -1439,7 +1440,7 @@ glosis_lh:CalciumExchangeableBases  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumExchangeableBasesValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Calexc ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Calexc ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
@@ -1458,7 +1459,7 @@ glosis_lh:CalciumExtractableElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue  glosis_cl:physioChemicalPropertyCode-Calext ] ;
+            sosa:observedProperty ; owl:hasValue  glosis_prop:physioChemicalPropertyCode-Calext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1477,7 +1478,7 @@ glosis_lh:CalciumTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CalciumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Caltot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Caltot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1496,7 +1497,7 @@ glosis_lh:HydrogenExchangeableBases  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:HydrogenExchangeableBasesValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Hydexc ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Hydexc ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
@@ -1515,7 +1516,7 @@ glosis_lh:MagnesiumExchangeableBases  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MagnesiumExchangeableBasesValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Magexc ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Magexc ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
@@ -1534,7 +1535,7 @@ glosis_lh:MagnesiumExtractableElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MagnesiumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Magext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Magext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1553,7 +1554,7 @@ glosis_lh:MagnesiumTotalElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MagnesiumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Magtot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Magtot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1572,7 +1573,7 @@ glosis_lh:ManganeseExchangeableBases  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ManganeseExchangeableBasesValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Mantot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Mantot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
@@ -1591,7 +1592,7 @@ glosis_lh:ManganeseExtractableElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ManganeseExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Manext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Manext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1610,7 +1611,7 @@ glosis_lh:ManganeseTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ManganeseTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Mantot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Mantot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1629,7 +1630,7 @@ glosis_lh:PotassiumExchangeableBases  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PotassiumExchangeableBasesValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Potexc ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Potexc ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
@@ -1648,7 +1649,7 @@ glosis_lh:PotassiumExtractableElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PotassiumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Potext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Potext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1667,7 +1668,7 @@ glosis_lh:PotassiumTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PotassiumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Pottot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Pottot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1686,7 +1687,7 @@ glosis_lh:SodiumExchangeableBases  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SodiumExchangeableBasesValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Sodexp ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Sodexp ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExchangeableBasesProcedure ] .
 
@@ -1705,7 +1706,7 @@ glosis_lh:SodiumExtractableElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SodiumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Sodext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Sodext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1724,7 +1725,7 @@ glosis_lh:SodiumTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SodiumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Sodtot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Sodtot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1746,7 +1747,7 @@ glosis_lh:AluminiumExtractableElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Aluext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Aluext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1766,7 +1767,7 @@ glosis_lh:AluminiumTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:AluminiumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Alutot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Alutot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1785,7 +1786,7 @@ glosis_lh:BoronExtractableElements a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BoronExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Borext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Borext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1804,7 +1805,7 @@ glosis_lh:BoronTotalElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:BoronTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Bortot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Bortot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1823,7 +1824,7 @@ glosis_lh:CadmiumExtractableElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CadmiumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Cad ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Cad ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1842,7 +1843,7 @@ glosis_lh:CadmiumTotalElements a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CadmiumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Cad ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Cad ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1861,7 +1862,7 @@ glosis_lh:CopperExtractableElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CopperExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Copext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Copext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1880,7 +1881,7 @@ glosis_lh:CopperTotalElements a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CopperTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Coptot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Coptot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1899,7 +1900,7 @@ glosis_lh:IronExtractableElements a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:IronExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Iroext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Iroext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1918,7 +1919,7 @@ glosis_lh:IronTotalElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:IronTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Irotot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Irotot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1937,7 +1938,7 @@ glosis_lh:MolybdenumExtractableElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MolybdenumExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Mol ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Mol ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1956,7 +1957,7 @@ glosis_lh:MolybdenumTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MolybdenumTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Mol ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Mol ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -1975,7 +1976,7 @@ glosis_lh:PhosphorusExtractableElements a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PhosphorusExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Phoext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Phoext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -1994,7 +1995,7 @@ glosis_lh:PhosphorusTotalElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PhosphorusTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Photot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Photot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -2013,7 +2014,7 @@ glosis_lh:SulfurExtractableElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SulfurExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Sulext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Sulext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -2032,7 +2033,7 @@ glosis_lh:SulfurTotalElements  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SulfurTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Sultot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Sultot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -2051,7 +2052,7 @@ glosis_lh:ZincExtractableElements a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ZincExtractableElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Zinext ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Zinext ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:ExtractableElementsProcedure ] .
 
@@ -2070,7 +2071,7 @@ glosis_lh:ZincTotalElements  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ZincTotalElementsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Zin ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Zin ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalElementsProcedure ] .
 
@@ -2089,7 +2090,7 @@ glosis_lh:Gypsum a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:GypsumValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Gyp ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Gyp ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:GypsumProcedure ] .
 
@@ -2108,7 +2109,7 @@ glosis_lh:HydraulicConductivity a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:HydraulicConductivityValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Hydcond ];
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Hydcond ];
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:HydraulicConductivityProcedure ] .
 
@@ -2127,7 +2128,7 @@ glosis_lh:CarbonInorganic a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CarbonInorganicValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Carinorg ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Carinorg ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CarbonInorganicProcedure ] .
 
@@ -2173,7 +2174,7 @@ glosis_lh:CarbonOrganic a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CarbonOrganicValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Carorg ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Carorg ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CarbonOrganicProcedure ] .
 
@@ -2193,7 +2194,7 @@ glosis_lh:OrganicMatter  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:OrganicMatterValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Orgmat ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Orgmat ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:OrganicMatterProcedure ] .
 
@@ -2212,7 +2213,7 @@ glosis_lh:PH  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PHValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-pH ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-pH ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PHProcedure ] .
 
@@ -2231,7 +2232,7 @@ glosis_lh:PhosphorusRetention a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PhosphorusRetentionValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Phoret ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Phoret ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PhosphorusRetentionProcedure ] .
 
@@ -2251,7 +2252,7 @@ glosis_lh:Porosity  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:PorosityValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Por ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Por ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PorosityProcedure ] .
 
@@ -2271,7 +2272,7 @@ glosis_lh:SolubleSalts  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleSaltsValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Solsal ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Solsal ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:SolubleSaltsProcedure ] .
 
@@ -2290,7 +2291,7 @@ glosis_lh:SandFractionTexture a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SandFractionTextureValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:someValuesFrom glosis_cl:TextSandPropertyCode ] ;
+            sosa:observedProperty ; owl:someValuesFrom glosis_prop:TextSandPropertyCode ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PSAProcedure ] .
 
@@ -2309,7 +2310,7 @@ glosis_lh:SiltFractionTexture  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:SiltFractionTextureValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:someValuesFrom glosis_cl:TextSiltPropertyCode ] ;
+            sosa:observedProperty ; owl:someValuesFrom glosis_prop:TextSiltPropertyCode ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PSAProcedure ] .
 
@@ -2328,7 +2329,7 @@ glosis_lh:ClayFractionTexture a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:ClayFractionTextureValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:someValuesFrom glosis_cl:TextClayPropertyCode ] ;
+            sosa:observedProperty ; owl:someValuesFrom glosis_prop:TextClayPropertyCode ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:PSAProcedure ] .
 
@@ -2347,7 +2348,7 @@ glosis_lh:CarbonTotal a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:CarbonTotalValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Cartot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Cartot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:CarbonTotalProcedure ] .
 
@@ -2367,7 +2368,7 @@ glosis_lh:TotalCarbonateEquivalent  a	owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:TotalCarbonateEquivalentValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Ccetot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Ccetot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:TotalCarbonateEquivalentProcedure ] .
 
@@ -2386,7 +2387,7 @@ glosis_lh:NitrogenTotal  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:NitrogenTotalValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_cl:physioChemicalPropertyCode-Nittot ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:physioChemicalPropertyCode-Nittot ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:NitrogenTotalProcedure ] .
 
