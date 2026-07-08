@@ -6,6 +6,7 @@ PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbprop: <http://dbpedia.org/property/>
+PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX glosis_pr: <http://w3id.org/glosis/model/profile/>
 PREFIX glosis_lh: <http://w3id.org/glosis/model/layerhorizon/>
 PREFIX glosis_sp: <http://w3id.org/glosis/model/siteplot/>
@@ -22,8 +23,8 @@ CONSTRUCT {
 
 ### skos collection
   ?URI3 a skos:Collection ;
-    skos:prefLabel ?c_label ;
-    skos:note ?c_comment ;
+    skos:prefLabel ?col_label ;
+    skos:note ?col_comment ;
     skos:definition ?cs_definition ;
     rdfs:seeAlso ?URI2 ;
     skos:member ?c_oneof ;
@@ -52,6 +53,7 @@ CONSTRUCT {
     skos:inScheme ?URI1 ;
     skos:broader ?broaderURI ;
     ssn:isPropertyOf ?foi_extracted ;
+    dct:isPartOf ?URI3 ;
     # Chemical substances
     dbo:pubchem ?pub_chem_code ;
     dbo:inchi ?inchi_code ;
@@ -77,8 +79,10 @@ WHERE {
   BIND (CONCAT(UCASE(SUBSTR(?collection, 1, 1)), SUBSTR(?collection, 2)) AS ?collection_capitalize)
   BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists/properties/', ?collection_capitalize, 'Property', 'Code')) AS ?URI2)
   BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists/properties/', ?collection_capitalize, 'Property', 'Collection')) AS ?URI3)
-  BIND (STRLANG(CONCAT('Code list for ', ?collection_capitalize, 'Property', ' - codelist class'),"en")  AS ?c_label)
-  BIND (STRLANG(CONCAT('This code list provides the ', ?collection_capitalize, 'Property', ' codes.'), "en") AS ?c_comment)
+  BIND (STRLANG(CONCAT('Code list class for ', ?collection_capitalize, 'Property', ' - codelist class'),"en")  AS ?c_label)
+  BIND (STRLANG(CONCAT('This code list class provides the ', ?collection_capitalize, 'Property', ' codes.'), "en") AS ?c_comment)
+  BIND (STRLANG(CONCAT('Code list collection for ', ?collection_capitalize, 'Property', ' - codelist collection'),"en")  AS ?col_label)
+  BIND (STRLANG(CONCAT('This code list collection provides the ', ?collection_capitalize, 'Property', ' codes.'), "en") AS ?col_comment)
   BIND (URI(CONCAT('http://w3id.org/glosis/model/codelists/properties/', ?collection, 'Property', 'Code', '-', ?concept)) AS ?oneof)
   BIND (IF(?concept != '', ?oneof, ?nothing) AS ?c_oneof)
   BIND (STRLANG(?label, "en")  AS ?i_label)
