@@ -2,7 +2,7 @@
 @prefix ssn:   <http://www.w3.org/ns/ssn/> .
 @prefix sosa:  <http://www.w3.org/ns/sosa/> .
 @prefix glosis_cm: <http://w3id.org/glosis/model/common/> .
-@prefix glosis_cl: <http://w3id.org/glosis/model/codelists/> .
+@prefix glosis_res: <http://w3id.org/glosis/model/codelists/results/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -237,7 +237,7 @@ glosis_cm:BleachedSand  a	owl:Class ;
         rdfs:comment "Bleached sand refers to sandy soils where the color has been significantly lightened due to the removal of iron and other minerals, usually through leaching processes in wet climates. This often results in a pale or white color, which is an indicator of a soil's history of leaching, typically in areas with high rainfall or poor drainage. These soils may have low fertility and poor nutrient-holding capacity. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 23"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:BleachedSandValueCode] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BleachedSandValueCode] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:bleachedSandProperty ] .
 
 glosis_cm:bleachedSandProperty a sosa:ObservableProperty ;
@@ -250,7 +250,7 @@ glosis_cm:FragmentsSize  a	owl:Class ;
         rdfs:comment "The size of soil fragments is categorized by their dimensions, often from small gravel-sized particles to large boulders. Fragment size influences soil aeration, drainage, and root penetration, with larger fragments typically decreasing soil fertility and water retention. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 15,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:FragmentsSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:FragmentsSizeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:fragmentsSizeProperty ] .
 
 glosis_cm:fragmentsSizeProperty a sosa:ObservableProperty ;
@@ -263,7 +263,7 @@ glosis_cm:CracksDepth  a	owl:Class ;
         rdfs:comment "Cracks depth refers to the vertical measurement of cracks that appear in the soil surface, often occurring during dry conditions when soil moisture decreases. The depth of cracks can indicate soil shrinkage, particularly in clayey soils, and is used to assess the soil's structural integrity and potential for erosion. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 21,2"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CracksDepthValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CracksDepthValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:cracksDepthProperty ] .
 
 glosis_cm:cracksDepthProperty a sosa:ObservableProperty ;
@@ -275,7 +275,7 @@ glosis_cm:OrganicMatterClass  a	owl:Class ;
         rdfs:label "OrganicMatterClass"@en ;
         rdfs:comment "Organic matter class refers to the classification of soil based on the quantity and type of organic material it contains, such as decomposed plant and animal residues. High organic matter content is generally beneficial for soil fertility, structure, and microbial activity. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;        
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:OrganicMatterClassValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:OrganicMatterClassValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:organicMatterClassProperty ] .
 
 glosis_cm:organicMatterClassProperty a sosa:ObservableProperty ;
@@ -287,7 +287,7 @@ glosis_cm:CracksDistance  a	owl:Class ;
         rdfs:comment "The horizontal spacing between cracks in the soil, which can vary depending on soil type and moisture levels. Cracks generally occur due to soil shrinkage in dry conditions and can affect root penetration and water infiltration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 21,3"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CracksDistanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CracksDistanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:cracksDistanceProperty ] .
 
 glosis_cm:cracksDistanceProperty a sosa:ObservableProperty ;
@@ -300,7 +300,7 @@ glosis_cm:CracksWidth  a	owl:Class ;
         rdfs:comment "Cracks width refers to the measurement of the gap or space between the sides of soil cracks. Wider cracks can form in drier soils, particularly those with high clay content. They provide insights into soil structure, water retention, and the degree of shrinkage that has occurred due to moisture loss. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 21,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:CracksWidthValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CracksWidthValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:cracksWidthProperty ] .
 
 glosis_cm:cracksWidthProperty a sosa:ObservableProperty ;
@@ -313,7 +313,7 @@ glosis_cm:RockAbundance  a	owl:Class ;
         rdfs:comment "Rock abundance refers to the relative quantity of rocks or rock fragments within the soil profile, often expressed as a percentage of the total soil volume. High rock abundance can significantly affect soil tillage, root penetration, and water movement. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 26"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RockAbundanceValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:RockAbundanceValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:rockAbundanceProperty ] .
 
 glosis_cm:rockAbundanceProperty a sosa:ObservableProperty ;
@@ -342,7 +342,7 @@ glosis_cm:RockShape  a	owl:Class ;
         rdfs:comment "Rock shape describes the physical form of rock fragments in the soil, ranging from angular to rounded shapes. The shape of rocks affects soil aeration, water movement, and the difficulty of soil tillage and root penetration. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 28"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RockShapeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:RockShapeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:rockShapeProperty ] .
 
 glosis_cm:rockShapeProperty a sosa:ObservableProperty ;
@@ -355,7 +355,7 @@ glosis_cm:RockSize  a owl:Class ;
         rdfs:comment "Rock size refers to the dimensions of rock fragments in the soil. The classification of rock size can range from small gravel-sized particles to large boulders. Larger rocks hinder root growth, water infiltration, and tillage. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 27"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:RockSizeValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:RockSizeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:rockSizeProperty ] .
 
 glosis_cm:rockSizeProperty a sosa:ObservableProperty ;
@@ -368,7 +368,7 @@ glosis_cm:WeatheringFragments  a	owl:Class ;
         rdfs:comment "Weathering fragments are pieces of rock or mineral material that have been broken down into smaller particles due to physical, chemical, or biological weathering processes. The size and composition of these fragments influence soil texture, structure, and nutrient availability. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 29"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:WeatheringValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:WeatheringValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:weatheringFragmentsProperty ] .
 
 glosis_cm:weatheringFragmentsProperty a sosa:ObservableProperty ;
@@ -381,7 +381,7 @@ glosis_cm:FragmentCover  a	owl:Class ;
         rdfs:comment "Fragment cover is the percentage of the soil surface covered by coarse fragments, such as rocks, pebbles, or other larger pieces of material. High fragment cover can reduce soil erosion but may hinder water infiltration and root penetration. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
         skos:definition "Guidelines for Soil Description issued by the FAO: table 15,1"@en ;
         rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_cl:FragmentCoverValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:FragmentCoverValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_cm:fragmentCoverProperty ] .
 
 glosis_cm:fragmentCoverProperty a sosa:ObservableProperty ;
