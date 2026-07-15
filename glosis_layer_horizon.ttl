@@ -102,13 +102,8 @@ glosis_lh:CoatingNature  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingNatureValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingNatureProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-coatingNatureProperty ] .
 
-glosis_lh:coatingNatureProperty a sosa:ObservableProperty ;
-        rdfs:label "coatingNatureProperty"@en ;
-        rdfs:comment "The Coating Nature Property examines the composition of soil coatings, such as organic, clay, or iron-rich coatings. The nature of these coatings can influence nutrient retention, soil color, and water dynamics. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 66"@en .
-        
 glosis_lh:TextureLabClass  a	owl:Class ;
         rdfs:label "TextureLabClass"@en ;
         rdfs:comment "Texture lab class categorizes soil texture based on the proportions of sand, silt, and clay determined through laboratory analysis. It is classified into standard texture classes like sandy loam, silty clay, and others. Source: FAO (2006). Guidelines for Soil Description." ;
@@ -116,12 +111,7 @@ glosis_lh:TextureLabClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:textureLabClassProperty ] .
-
-glosis_lh:textureLabClassProperty a sosa:ObservableProperty ;
-        rdfs:label "textureLabClassProperty"@en ;
-        rdfs:comment "The Texture Lab Class Property defines soil texture using laboratory-determined particle size distributions. This property provides a precise classification of soil as sand, silt, or clay using standard methods. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-textureLabClassProperty ] .
 
 glosis_lh:CementationDegree  a owl:Class ;
         rdfs:label "CementationDegree"@en ;
@@ -130,13 +120,8 @@ glosis_lh:CementationDegree  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CementationDegreeValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationDegreeProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-cementationDegreeProperty ] .
 
-glosis_lh:cementationDegreeProperty a sosa:ObservableProperty ;
-        rdfs:label "cementationDegreeProperty"@en ;
-        rdfs:comment "The Cementation Degree Property measures how strongly soil particles are bonded by cementing agents. It ranges from weakly cemented (friable) to strongly cemented (hard). This property influences soil strength and its suitability for agricultural and engineering purposes. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 72"@en .
-        
 glosis_cm:ColourDry rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:CoatingContrast  a owl:Class ;
@@ -146,13 +131,8 @@ glosis_lh:CoatingContrast  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingContrastValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingContrastProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-coatingContrastProperty ] .
 
-glosis_lh:coatingContrastProperty a sosa:ObservableProperty ;
-        rdfs:label "coatingContrastProperty"@en;
-        rdfs:comment "The Coating Contrast Property assesses the visual distinction between coatings on soil particles and the underlying material. High contrast indicates significant differences in composition or color, providing clues about soil processes like illuviation or biological activity. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 65"@en .
-        
 glosis_lh:BiologicalAbundance  a owl:Class ;
         rdfs:label "BiologicalAbundance"@en ;
         rdfs:comment "This term refers to the quantity of living organisms (bacteria, fungi, protozoa, and earthworms) in the soil. Biological abundance is a key indicator of soil health and nutrient cycling processes. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils." ;
@@ -160,13 +140,8 @@ glosis_lh:BiologicalAbundance  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BiologicalAbundanceValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:biologicalAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-biologicalAbundanceProperty ] .
 
-glosis_lh:biologicalAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "biologicalAbundanceProperty"@en;
-        rdfs:comment "The Biological Abundance Property evaluates the presence and quantity of soil organisms, such as microbes, insects, and earthworms. This property reflects soil health, nutrient cycling, and organic matter decomposition, which are vital for maintaining soil fertility. Source: Lavelle, P., & Spain, A.V. (2001). Soil Ecology." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 81"@en .
-        
 glosis_lh:MottlesPresence  a	owl:Class ;
         rdfs:label "MottlesPresence"@en ;
         rdfs:comment "Mottle presence indicates the occurrence of color variations in the soil profile, which can reveal information about soil drainage and waterlogged conditions. Source: Soil Survey Manual (USDA, 2017)." ;
@@ -174,12 +149,7 @@ glosis_lh:MottlesPresence  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:MottlesPresenceValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesPresenceProperty ] .
-
-glosis_lh:mottlesPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "mottlesPresenceProperty"@en ;
-        rdfs:comment "The Mottles Presence Property refers to the existence of mottles in soil, often signaling periodic water saturation, drainage problems, or fluctuating redox conditions. This property is essential for wetland delineation and soil health assessment. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mottlesPresenceProperty ] .
 
 glosis_lh:MottlesPresenceValue a owl:Class ;
         rdfs:label "MottlesPresenceValue"@en ;
@@ -195,12 +165,7 @@ glosis_lh:VoidsClassification  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:VoidsClassificationValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:voidsClassificationProperty ] .
-
-glosis_lh:voidsClassificationProperty a sosa:ObservableProperty ;
-        rdfs:label "VoidsClassificationProperty"@en;
-        rdfs:comment "The Voids Classification Property categorizes voids or pores in the soil based on size, shape, and arrangement. These voids are critical for water movement, air circulation, and root penetration. They are classified into macropores (large), mesopores (medium), and micropores (small). Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 61"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-voidsClassificationProperty ] .
 
 glosis_lh:MineralConcKind  a owl:Class ;
         rdfs:label "MineralConcKind"@en ;
@@ -209,13 +174,8 @@ glosis_lh:MineralConcKind  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcKindValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcKindProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralConcKindProperty ] .
 
-glosis_lh:mineralConcKindProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcKindProperty"@en;
-        rdfs:comment "The Mineral Concentration Kind Property identifies the specific type of mineral concentrations found in soil, such as gypsum, calcite, or hematite. This classification aids in understanding soil genesis and chemistry. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 74"@en .
-        
 glosis_lh:BulkDensityMineral  a owl:Class ;
         rdfs:label "BulkDensityMineral"@en ;
         rdfs:comment "Bulk density mineral refers to the dry bulk density of mineral soils, focusing on soils with minimal organic matter content. It affects soil strength, aeration, and compaction. Source: Soil Science Society of America (SSSA) Glossary." ;
@@ -223,13 +183,8 @@ glosis_lh:BulkDensityMineral  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BulkDensityMineralValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityMineralProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-bulkDensityMineralProperty ] .
 
-glosis_lh:bulkDensityMineralProperty a sosa:ObservableProperty ;
-        rdfs:label "bulkDensityMineralProperty"@en;
-        rdfs:comment "The Bulk Density of Mineral Soil refers specifically to the density of the mineral portion of the soil, excluding organic matter. It provides insights into the physical state and compaction of mineral-dominated soils, influencing water movement and root growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 58"@en .
-        
 glosis_cm:ColourMoist rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:PhysioChemical a owl:Class ;
@@ -255,12 +210,7 @@ glosis_lh:CationsSum  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationsSumValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationsSumProperty ] .
-
-glosis_lh:cationsSumProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "cationsSumProperty"@en ;
-        rdfs:comment "The Cations Sum Property calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-cationsSumProperty ] .
 
 glosis_lh:CationsSumValue a owl:Class ;
         rdfs:label "CationsSumValue"@en ;
@@ -276,12 +226,7 @@ glosis_lh:MottlesColour  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom  glosis_cm:MunsellColorValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesColourProperty ] .
-
-glosis_lh:mottlesColourProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesColourProperty"@en ;
-        rdfs:comment "The Mottles Colour Property evaluates the color of soil mottles, often indicative of oxidation states of iron or manganese. For example, reddish colors suggest oxidation, while gray colors indicate reduction and poor drainage. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .                      
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mottlesColourProperty ] .
 
 glosis_lh:DryConsistency a	owl:Class ;
         rdfs:label "DryConsistency"@en ;
@@ -290,12 +235,7 @@ glosis_lh:DryConsistency a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:dryConsistencyProperty ] .
-
-glosis_lh:dryConsistencyProperty a sosa:ObservableProperty ;
-        rdfs:label "dryConsistencyProperty"@en ;
-        rdfs:comment "The Dry Consistency Property is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-dryConsistencyProperty ] .
 
 glosis_lh:CoatingAbundance  a owl:Class ;
         rdfs:label "CoatingAbundance"@en ;
@@ -304,12 +244,7 @@ glosis_lh:CoatingAbundance  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingAbundanceValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingAbundanceProperty ] .
-
-glosis_lh:coatingAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "coatingAbundanceProperty"@en;
-        rdfs:comment "The Coating Abundance Property evaluates the quantity of coatings on soil particles, such as organic matter, clay, or iron oxides. Coatings influence soil color, nutrient availability, and water movement. The abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 64"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-coatingAbundanceProperty ] .
 
 glosis_lh:ConsistenceDry  a owl:Class ;
         rdfs:label "ConsistenceDry"@en ;
@@ -318,13 +253,8 @@ glosis_lh:ConsistenceDry  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:ConsistenceDryValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:consistenceDryProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-consistenceDryProperty ] .
 
-glosis_lh:consistenceDryProperty a sosa:ObservableProperty ;
-        rdfs:label "consistenceDryProperty"@en ;
-        rdfs:comment "The Consistence Dry Property evaluates the soil's behavior when dry, including its resistance to deformation or crumbling. It ranges from loose to hard and provides information about soil compaction and management practices. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 53"@en .
-        
 glosis_cm:InfiltrationRateNumeric rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:GypsumForms a owl:Class ;
@@ -334,13 +264,8 @@ glosis_lh:GypsumForms a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:GypsumFormsValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumFormsProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-gypsumFormsProperty ] .
 
-glosis_lh:gypsumFormsProperty a sosa:ObservableProperty ;
-        rdfs:label "gypsumFormsProperty"@en ;
-        rdfs:comment "The Gypsum Forms Property describes the morphology of gypsum within the soil, such as crystals, veins, or nodules. The form indicates the processes of soil formation and water movement in gypsum-rich soils. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 41"@en .
-        
 glosis_lh:MineralConcNature a owl:Class ;
         rdfs:label "MineralConcNature"@en ;
         rdfs:comment "Mineral concentration nature describes the chemical composition and formation processes of specific mineral accumulations in the soil profile. Source: Soil Classification: A Global Desk Reference (Eswaran et al., 2003)." ;
@@ -348,12 +273,7 @@ glosis_lh:MineralConcNature a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcNatureValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcNatureProperty ] .
-
-glosis_lh:mineralConcNatureProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcNatureProperty"@en;
-        rdfs:comment "The Mineral Concentration Nature Property examines the origin and composition of concentrated minerals in soil. It provides clues about weathering, leaching, and other pedogenic processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 77"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralConcNatureProperty ] .
 
 glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
         
@@ -364,12 +284,7 @@ glosis_lh:ParticleSizeFractionsSum  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:ParticleSizeFractionsSumValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:particleSizeFractionsSumProperty ] .
-
-glosis_lh:particleSizeFractionsSumProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "ParticleSizeFractionsSumProperty"@en ;
-        rdfs:comment "The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-particleSizeFractionsSumProperty ] .
 
 glosis_lh:ParticleSizeFractionsSumValue a owl:Class ;
         rdfs:label "ParticleSizeFractionsSumValue"@en ;
@@ -385,12 +300,7 @@ glosis_lh:BoundaryDistinctness a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BoundaryDistinctnessValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:boundaryDistinctnessProperty ] .
-
-glosis_lh:boundaryDistinctnessProperty a sosa:ObservableProperty ;
-        rdfs:label "boundaryDistinctnessProperty"@en ;
-        rdfs:comment "The Boundary Distinctness Property describes the sharpness of transitions between soil horizons. Boundaries can range from abrupt (clear demarcation) to diffuse (gradual blending), providing insights into soil formation processes and profile development. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 24.1"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-boundaryDistinctnessProperty ] .
 
 glosis_lh:RootsPresence  a	owl:Class ;
         rdfs:label "RootsPresence"@en ;
@@ -399,12 +309,7 @@ glosis_lh:RootsPresence  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:RootsPresenceValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:rootsPresenceProperty ] .
-
-glosis_lh:rootsPresenceProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "RootsPresenceProperty"@en ;
-        rdfs:comment "The Roots Presence Property identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-rootsPresenceProperty ] .
 
 glosis_lh:RootsPresenceValue a owl:Class ;
         rdfs:label "RootsPresenceValue"@en ;
@@ -420,13 +325,8 @@ glosis_lh:CementationFabric a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CementationFabricValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationFabricProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-cementationFabricProperty ] .
 
-glosis_lh:cementationFabricProperty a sosa:ObservableProperty ;
-        rdfs:label "cementationFabricProperty"@en ;
-        rdfs:comment "The Cementation Fabric Property examines the texture, structure, and arrangement of cementing materials within the soil. It provides insights into soil formation processes and the mechanical stability of the soil matrix. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 70"@en .
-        
 glosis_lh:MottlesSize a owl:Class ;
         rdfs:label "MottlesSize"@en ;
         rdfs:comment "Mottle size refers to the dimensions of individual mottles within the soil, categorized into fine, medium, and coarse. This helps characterize soil hydrology. Source: Soil Survey Manual (USDA, 2017)." ;
@@ -434,13 +334,8 @@ glosis_lh:MottlesSize a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MottlesSizeValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesSizeProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mottlesSizeProperty ] .
 
-glosis_lh:mottlesSizeProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesSizeProperty"@en ;
-        rdfs:comment "The Mottles Size Property describes the dimensions of soil mottles, typically classified as fine, medium, or coarse. The size reflects the intensity and scale of soil processes such as oxidation and reduction. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 33"@en .
-        
 glosis_lh:PorosityClass a owl:Class ;
         rdfs:label "PorosityClass"@en ;
         rdfs:comment "Porosity class categorizes soils based on their pore size distribution and total porosity. It is used to evaluate soil aeration and permeability properties. Source: Soil Survey Manual (USDA, 2017)." ;
@@ -448,12 +343,7 @@ glosis_lh:PorosityClass a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PorosityClassValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:porosityClassProperty ] .
-
-glosis_lh:porosityClassProperty a sosa:ObservableProperty ;
-        rdfs:label "porosityClassProperty"@en ;
-        rdfs:comment "The Porosity Class Property classifies soil by the proportion of pore spaces, typically expressed as a percentage. Classes include high, medium, or low porosity, influencing water and air movement in the soil. Source: Soil Science Society of America (SSSA) Glossary." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 60"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-porosityClassProperty ] .
 
 glosis_lh:Silt a owl:Class ;
         rdfs:label "Silt"@en ;
@@ -478,13 +368,8 @@ glosis_lh:MottlesAbundance a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MottlesAbundanceValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesAbundanceProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mottlesAbundanceProperty ] .
 
-glosis_lh:mottlesAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesAbundanceProperty"@en;
-        rdfs:comment "The Mottles Abundance Property describes the frequency of mottling (spots of contrasting color) in soil horizons. Mottling indicates variations in soil aeration, drainage, or water saturation. Abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 32"@en .
-        
 glosis_lh:VoidsDiameter a owl:Class ;
         rdfs:label "VoidsDiameter"@en ;
         rdfs:comment "Voids diameter measures the size of the soil pores or spaces, which directly influences soil aeration, infiltration, and water retention. Larger diameters correspond to macropores, while smaller ones are micropores. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
@@ -492,13 +377,8 @@ glosis_lh:VoidsDiameter a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:VoidsDiameterValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:voidsDiameterProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-voidsDiameterProperty ] .
 
-glosis_lh:voidsDiameterProperty a sosa:ObservableProperty ;
-        rdfs:label "voidsDiameterProperty"@en ;
-        rdfs:comment "The Voids Diameter Property refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 62"@en .
-        
 glosis_lh:StructureGrade a owl:Class ;
         rdfs:label "StructureGrade"@en;
         rdfs:comment "Structure grade describes the degree of soil aggregation and the strength of soil structure. Grades range from structureless to well-developed structural units. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
@@ -506,13 +386,8 @@ glosis_lh:StructureGrade a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:StructureGradeValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:structureGradeProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-structureGradeProperty ] .
 
-glosis_lh:structureGradeProperty a sosa:ObservableProperty ;
-        rdfs:label "structureGradeProperty"@en;
-        rdfs:comment "The Structure Grade Property assesses the development and stability of soil aggregates, classified as weak, moderate, or strong. It reflects soil tilth, aeration, and resistance to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 47"@en .
-        
 glosis_cm:FragmentCover rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:BiologicalFeatures  a	owl:Class ;
@@ -522,13 +397,9 @@ glosis_lh:BiologicalFeatures  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BiologicalFeaturesValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:biologicalFeaturesProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-biologicalFeaturesProperty ] .
 
-glosis_lh:biologicalFeaturesProperty a sosa:ObservableProperty ;
-        rdfs:label "biologicalFeaturesProperty"@en ;
-        rdfs:comment "The Biological Features Property examines qualitative aspects of soil biological activity, including the types of organisms present, their diversity, and their roles in soil ecosystems. It encompasses processes like nitrogen fixation, organic matter decomposition, and bioturbation. Source: Soil Science Society of America (SSSA) Glossary." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 82"@en .
-        
+
 glosis_cm:Texture rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:MineralContent a owl:Class ;
@@ -538,12 +409,7 @@ glosis_lh:MineralContent a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:MineralContentValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralContentProperty ] .
-
-glosis_lh:mineralContentProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "mineralContentProperty"@en ;
-        rdfs:comment "The Mineral Content Property evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralContentProperty ] .
 
 glosis_lh:MineralContentValue a owl:Class ;
         rdfs:label "MineralContentValue"@en ;
@@ -559,13 +425,9 @@ glosis_lh:PoresSize  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:VoidsDiameterValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:poresSizeProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-poresSizeProperty ] .
 
-glosis_lh:poresSizeProperty a sosa:ObservableProperty ;
-        rdfs:label "poresSizeProperty"@en ;
-        rdfs:comment "The Pores Size Property categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 62"@en .
-        
+
 glosis_cm:RockShape rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:StructureSize a owl:Class ;
@@ -575,13 +437,8 @@ glosis_lh:StructureSize a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:StructureSizeValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:structureSizeProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-structureSizeProperty ] .
 
-glosis_lh:structureSizeProperty a sosa:ObservableProperty ;
-        rdfs:label "structureSizeProperty"@en ;
-        rdfs:comment "The Structure Size Property describes the dimensions of soil aggregates or structural units, such as granular, blocky, or platy. Structure size affects root penetration, water infiltration, and soil stability. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 50"@en .
-        
 glosis_lh:MineralConcShape a owl:Class ;
         rdfs:label "MineralConcShape"@en ;
         rdfs:comment "Mineral concentration shape describes the physical form or morphology of mineral accumulations, such as nodules, coatings, or concretions. Source: Soil Survey Manual (USDA, 2017)." ;
@@ -589,13 +446,8 @@ glosis_lh:MineralConcShape a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcShapeValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcShapeProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralConcShapeProperty ] .
 
-glosis_lh:mineralConcShapeProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcShapeProperty"@en ;
-        rdfs:comment "The Mineral Concentration Shape Property describes the physical shape of mineral accumulations, such as rounded, angular, or irregular. These shapes help infer soil formation processes and transport history. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 75,2"@en .
-        
 glosis_lh:WaterRetention  a	owl:Class ;
         rdfs:label "WaterRetention"@en ;
         rdfs:comment "Water retention refers to the soil’s ability to hold water against gravity. It is influenced by soil texture, structure, and organic matter content, and is critical for plant growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
@@ -643,12 +495,7 @@ glosis_lh:GypsumWeight  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:GypsumWeightValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumWeightProperty ] .
-
-glosis_lh:gypsumWeightProperty a sosa:ObservableProperty , qudt:Quantitykind ;
-        rdfs:label "gypsumWeightProperty"@en ;
-        rdfs:comment "The Gypsum Weight Property measures the mass of gypsum in the soil profile. This value helps evaluate the potential for soil salinity issues and influences decisions for agricultural or land reclamation practices. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-gypsumWeightProperty ] .
 
 glosis_lh:GypsumWeightValue a owl:Class ;
         rdfs:label "GypsumWeightValue"@en ;
@@ -664,13 +511,8 @@ glosis_lh:PeatDrainage  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PeatDrainageValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatDrainageProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-peatDrainageProperty ] .
 
-glosis_lh:peatDrainageProperty a sosa:ObservableProperty ;
-        rdfs:label "peatDrainageProperty"@en ;
-        rdfs:comment "The Peat Drainage Property assesses the water removal capacity in peat soils, essential for determining their suitability for agriculture, conservation, or other uses. Poorly drained peat often accumulates organic material due to low decomposition rates. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 59,1"@en .
-        
 glosis_cm:BleachedSand rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
 glosis_lh:SandyTexture  a owl:Class ;
@@ -680,12 +522,7 @@ glosis_lh:SandyTexture  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:SandyTextureValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:sandyTextureProperty ] .
-
-glosis_lh:sandyTextureProperty a sosa:ObservableProperty ;
-        rdfs:label "sandyTextureProperty"@en;
-        rdfs:comment "The Sandy Texture Property refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: figure 4,3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-sandyTextureProperty ] .
 
 glosis_lh:SolubleCationsTotal  a owl:Class ;
         rdfs:label "SolubleCationsTotal"@en ;
@@ -694,12 +531,7 @@ glosis_lh:SolubleCationsTotal  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleCationsTotalValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:solubleCationsTotalProperty ] .
-
-glosis_lh:solubleCationsTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "solubleCationsTotalProperty"@en ;
-        rdfs:comment "The Soluble Cations Total Property evaluates the sum of cations (e.g., sodium, potassium, calcium, magnesium) in soil solution. It is an indicator of soil salinity, fertility, and chemical balance. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-solubleCationsTotalProperty ] .
 
 glosis_lh:SolubleCationsTotalValue a owl:Class ;
         rdfs:label "SolubleCationsTotalValue"@en ;
@@ -715,12 +547,7 @@ glosis_lh:CementationNature a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CementationNatureValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationNatureProperty ] .
-
-glosis_lh:cementationNatureProperty a sosa:ObservableProperty ;
-        rdfs:label "cementationNatureProperty"@en ;
-        rdfs:comment "The Cementation Nature Property identifies the specific type of material responsible for binding soil particles, such as carbonates, silica, or iron oxides. Understanding this helps in soil classification and predicting behavior under varying environmental conditions. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 71"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-cementationNatureProperty ] .
 
 glosis_lh:Salt  a owl:Class ;
         rdfs:label "Salt"@en ;
@@ -730,11 +557,6 @@ glosis_lh:Salt  a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SaltValue ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:saltProperty ] .
-
-glosis_lh:saltProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "saltProperty"@en ;
-        rdfs:comment "The Salt Property encompasses all forms of salts present in soil, including sodium chloride, calcium sulfate, and magnesium sulfate. It influences soil chemistry, structure, and plant tolerance to salinity. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
 
 glosis_lh:SaltValue a owl:Class ;
         rdfs:label "SaltValue"@en ;
@@ -750,12 +572,7 @@ glosis_lh:SolubleAnionsTotal  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:SolubleAnionsTotalValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:solubleAnionsTotalProperty ] .
-
-glosis_lh:solubleAnionsTotalProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "solubleAnionsTotalProperty"@en ;
-        rdfs:comment "The Soluble Anions Total Property measures the concentration of anions (e.g., chloride, sulfate, nitrate) in soil solution. High levels may indicate salinity, nutrient availability, or contamination. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-solubleAnionsTotalProperty ] .
 
 glosis_lh:SolubleAnionsTotalValue a owl:Class ;
         rdfs:label "SolubleAnionsTotalValue"@en ;
@@ -773,12 +590,7 @@ glosis_lh:BulkDensityPeat a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BulkDensityPeatValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:bulkDensityPeatProperty ] .
-
-glosis_lh:bulkDensityPeatProperty a sosa:ObservableProperty ;
-        rdfs:label "bulkDensityPeatProperty"@en ;
-        rdfs:comment "The Bulk Density of Peat measures the mass of dry organic soil (peat) per unit volume. Peat soils typically have low bulk density due to their high organic matter content and porosity, which significantly affects their water retention and drainage characteristics. Source: Rydin, H., & Jeglum, J. (2006). The Biology of Peatlands." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 59,3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-bulkDensityPeatProperty ] .
 
 glosis_lh:MineralFragments a owl:Class ;
         rdfs:label "MineralFragments"@en ;
@@ -787,12 +599,7 @@ glosis_lh:MineralFragments a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralFragmentsValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralFragmentsProperty ] .
-
-glosis_lh:mineralFragmentsProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralFragmentsProperty"@en ;
-        rdfs:comment "The Mineral Fragments Property refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 30"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralFragmentsProperty ] .
 
 glosis_lh:MottlesBoundaryClassification a owl:Class ;
         rdfs:label "MottlesBoundaryClassification"@en ;
@@ -801,12 +608,7 @@ glosis_lh:MottlesBoundaryClassification a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BoundaryClassificationValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesBoundaryClassificationProperty ] .
-
-glosis_lh:mottlesBoundaryClassificationProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesBoundaryClassificationProperty"@en ;
-        rdfs:comment "The Mottles Boundary Classification Property assesses the sharpness and distinctness of boundaries between mottled and non-mottled areas within the soil. It provides clues about soil processes such as oxidation-reduction reactions. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 35"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mottlesBoundaryClassificationProperty ] .
 
 glosis_lh:CationExchangeCapacity  a owl:Class ;
         rdfs:label "CationExchangeCapacity"@en ;
@@ -815,12 +617,7 @@ glosis_lh:CationExchangeCapacity  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacityValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationExchangeCapacityProperty ] .
-
-glosis_lh:cationExchangeCapacityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "cationExchangeCapacityProperty"@en ;
-        rdfs:comment "The Cation Exchange Capacity (CEC) measures the soil's total capacity to hold and exchange positively charged ions (cations). It is influenced by clay and organic matter content and is a critical indicator of soil fertility and nutrient retention. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-cationExchangeCapacityProperty ] .
 
 glosis_lh:CationExchangeCapacityValue a owl:Class ;
         rdfs:label "CationExchangeCapacityValue"@en ;
@@ -836,12 +633,7 @@ glosis_lh:PeatDecompostion a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PeatDecompostionValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatDecompostionProperty ] .
-
-glosis_lh:peatDecompostionProperty a sosa:ObservableProperty ;
-        rdfs:label "peatDecompostionProperty"@en ;
-        rdfs:comment "The Peat Decomposition Property evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 31"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-peatDecompostionProperty ] .
 
 glosis_lh:PeatVolume a	owl:Class ;
         rdfs:label "PeatVolume"@en ;
@@ -850,12 +642,7 @@ glosis_lh:PeatVolume a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PeatVolumeValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:peatVolumeProperty ] .
-
-glosis_lh:peatVolumeProperty a sosa:ObservableProperty ;
-        rdfs:label "peatVolumeProperty"@en ;
-        rdfs:comment "The Peat Volume Property quantifies the proportion of peat material in a given soil volume. It is critical for land use planning, carbon sequestration assessments, and wetland management. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 59,2"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-peatVolumeProperty ] .
 
 glosis_lh:BoundaryTopography a	owl:Class ;
         rdfs:label "BoundaryTopography"@en ;
@@ -864,12 +651,7 @@ glosis_lh:BoundaryTopography a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:BoundaryTopographyValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:boundaryTopographyProperty ] .
-
-glosis_lh:boundaryTopographyProperty a sosa:ObservableProperty ;
-        rdfs:label "boundaryTopographyProperty"@en ;
-        rdfs:comment "The Boundary Topography Property characterizes the shape of soil horizon boundaries, which may be smooth, wavy, irregular, or broken. It reflects processes like erosion, deposition, or biological activity that influence horizon development. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 24,2"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-boundaryTopographyProperty ] .
 
 glosis_lh:CarbonatesContent a owl:Class ;
         rdfs:label "CarbonatesContent"@en ;
@@ -878,12 +660,7 @@ glosis_lh:CarbonatesContent a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CarbonatesContentValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:carbonatesContentProperty ] .
-
-glosis_lh:carbonatesContentProperty a sosa:ObservableProperty ;
-        rdfs:label "carbonatesContentProperty"@en ;
-        rdfs:comment "The Carbonates Content Property quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 38"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-carbonatesContentProperty ] .
 
 glosis_lh:MineralConcColour a owl:Class ;
         rdfs:label "MineralConcColour"@en ;
@@ -892,12 +669,7 @@ glosis_lh:MineralConcColour a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcColourValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcColourProperty ] .
-
-glosis_lh:mineralConcColourProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcColourProperty"@en ;
-        rdfs:comment "The Mineral Concentration Colour Property describes the color of concentrated mineral deposits in the soil, such as iron oxides (red) or manganese nodules (black). It helps identify soil processes like oxidation or leaching. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 78"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralConcColourProperty ] .
 
 glosis_lh:CationExchangeCapacityEffective  a owl:Class ;
         rdfs:label "CationExchangeCapacityEffective"@en ;
@@ -906,12 +678,7 @@ glosis_lh:CationExchangeCapacityEffective  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:CationExchangeCapacityEffectiveValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cationExchangeCapacityEffectiveProperty ] .
-
-glosis_lh:cationExchangeCapacityEffectiveProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "cationExchangeCapacityEffectiveProperty"@en ;
-        rdfs:comment "The Effective Cation Exchange Capacity (ECEC) measures the ability of soil to hold and exchange cations at a given pH, often near field conditions. It provides insight into soil fertility, nutrient availability, and buffering capacity in acidic soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-cationExchangeCapacityEffectiveProperty ] .
 
 glosis_lh:CationExchangeCapacityEffectiveValue a owl:Class ;
         rdfs:label "CationExchangeCapacityEffectiveValue"@en ;
@@ -927,12 +694,7 @@ glosis_lh:Plasticity a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PlasticityValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:plasticityProperty ] .
-
-glosis_lh:plasticityProperty a sosa:ObservableProperty ;
-        rdfs:label "plasticityProperty"@en ;
-        rdfs:comment "The Plasticity Property measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 56"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-plasticityProperty ] .
 
 glosis_lh:MottlesContrast a owl:Class ;
         rdfs:label "MottlesContrast"@en ;
@@ -941,12 +703,7 @@ glosis_lh:MottlesContrast a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:ContrastValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mottlesContrastProperty ] .
-
-glosis_lh:mottlesContrastProperty a sosa:ObservableProperty ;
-        rdfs:label "mottlesContrastProperty"@en ;
-        rdfs:comment "The Mottles Contrast Property measures the visual distinction between mottles and the surrounding soil matrix. High contrast indicates stark differences, often linked to fluctuating water tables or drainage issues. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 34"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mottlesContrastProperty ] .
 
 glosis_lh:ConsistenceMoist a owl:Class ;
         rdfs:label "ConsistenceMoist"@en ;
@@ -955,12 +712,7 @@ glosis_lh:ConsistenceMoist a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:ConsistenceMoistValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:consistenceMoistProperty ] .
-
-glosis_lh:consistenceMoistProperty a sosa:ObservableProperty ;
-        rdfs:label "consistenceMoistProperty"@en ;
-        rdfs:comment "The Consistence Moist Property assesses how soil responds to pressure when moist. Categories include friable, firm, or plastic. This property is essential for understanding soil workability and water retention. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 54"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-consistenceMoistProperty ] .
 
 glosis_lh:MineralConcVolume a owl:Class ;
         rdfs:label "MineralConcVolume"@en ;
@@ -969,12 +721,7 @@ glosis_lh:MineralConcVolume a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcVolumeValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcVolumeProperty ] .
-
-glosis_lh:mineralConcVolumeProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcVolumeProperty"@en ;
-        rdfs:comment "The Mineral Concentration Volume Property quantifies the proportion of soil volume occupied by mineral concentrations. It is used to assess the impact of these materials on soil structure and permeability. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 73"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralConcVolumeProperty ] .
 
 glosis_cm:CracksDistance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
@@ -1001,12 +748,7 @@ glosis_lh:SaltContent a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:SaltContentValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:saltContentProperty ] .
-
-glosis_lh:saltContentProperty a sosa:ObservableProperty ;
-        rdfs:label "saltContentProperty"@en ;
-        rdfs:comment "The Salt Content Property measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 42"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-saltContentProperty ] .
 
 glosis_lh:GypsumContent a owl:Class ;
         rdfs:label "GypsumContent"@en ;
@@ -1015,12 +757,7 @@ glosis_lh:GypsumContent a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:GypsumContentValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:gypsumContentProperty ] .
-
-glosis_lh:gypsumContentProperty a sosa:ObservableProperty ;
-        rdfs:label "gypsumContentProperty"@en ;
-        rdfs:comment "The Gypsum Content Property quantifies the amount of gypsum (calcium sulfate dihydrate) present in the soil. Gypsum affects soil structure, water infiltration, and nutrient availability, especially in arid and semi-arid regions. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 40"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-gypsumContentProperty ] .
 
 glosis_lh:CoatingForm a	owl:Class ;
         rdfs:label "CoatingForm"@en ;
@@ -1029,12 +766,7 @@ glosis_lh:CoatingForm a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingFormValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingFormProperty ] .
-
-glosis_lh:coatingFormProperty a sosa:ObservableProperty ;
-        rdfs:label "coatingFormProperty"@en ;
-        rdfs:comment "The Coating Form Property describes the shape and distribution of coatings on soil particles, such as patchy, continuous, or layered. These forms are indicative of soil genesis and chemical weathering processes. Source: Soil Science Society of America (SSSA) Glossary." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 67"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-coatingFormProperty ] .
 
 glosis_lh:OxalateExtractableOpticalDensity  a owl:Class ;
         rdfs:label "OxalateExtractableOpticalDensity"@en ;
@@ -1043,12 +775,7 @@ glosis_lh:OxalateExtractableOpticalDensity  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom glosis_lh:OxalateExtractableOpticalDensityValue ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:oxalateExtractableOpticalDensityProperty ] .
-
-glosis_lh:oxalateExtractableOpticalDensityProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "oxalateExtractableOpticalDensityProperty"@en ;
-        rdfs:comment "The Oxalate Extractable Optical Density Property measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-oxalateExtractableOpticalDensityProperty ] .
 
 glosis_lh:OxalateExtractableOpticalDensityValue a owl:Class ;
         rdfs:label "OxalateExtractableOpticalDensityValue"@en ;
@@ -1064,12 +791,7 @@ glosis_lh:MineralConcHardness a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcHardnessValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcHardnessProperty ] .
-
-glosis_lh:mineralConcHardnessProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcHardnessProperty"@en ;
-        rdfs:comment "The Mineral Concentration Hardness Property assesses the physical hardness of mineral deposits in soil. Hardness influences soil strength and resistance to erosion or mechanical disruption. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 76"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralConcHardnessProperty ] .
 
 glosis_lh:PoresAbundance a owl:Class ;
         rdfs:label "PoresAbundance"@en ;
@@ -1078,12 +800,7 @@ glosis_lh:PoresAbundance a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:PoresAbundanceValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:poresAbundanceProperty ] .
-
-glosis_lh:poresAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "poresAbundanceProperty"@en ;
-        rdfs:comment "The Pores Abundance Property describes the quantity of soil pores, ranging from few to many. It influences water infiltration, root growth, and soil aeration. Pore abundance is crucial for assessing soil health and productivity. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 63"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-poresAbundanceProperty ] .
 
 glosis_cm:CracksWidth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
@@ -1094,12 +811,7 @@ glosis_lh:MineralConcSize a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:MineralConcSizeValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcSizeProperty ] .
-
-glosis_lh:mineralConcSizeProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcSizeeProperty"@en ;
-        rdfs:comment "The Mineral Concentration Size Property measures the dimensions of concentrated mineral deposits in soil, typically expressed in millimeters. Size categories range from small grains to large nodules or concretions. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 75,1"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralConcSizeProperty ] .
 
 glosis_lh:Stickiness a	owl:Class ;
         rdfs:label "Stickiness"@en ;
@@ -1108,12 +820,7 @@ glosis_lh:Stickiness a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:StickinessValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:stickinessProperty ] .
-
-glosis_lh:stickinessProperty a sosa:ObservableProperty ;
-        rdfs:label "stickinessProperty"@en ;
-        rdfs:comment "The Stickiness Property measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 55"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-stickinessProperty ] .
 
 glosis_lh:MoistConsistency  a	owl:Class ;
         rdfs:label "MoistConsistency"@en ;
@@ -1122,12 +829,7 @@ glosis_lh:MoistConsistency  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:moistConsistencyProperty ] .
-
-glosis_lh:moistConsistencyProperty a sosa:ObservableProperty ;
-        rdfs:label "moistConsistencyProperty"@en ;
-        rdfs:comment "The Moist Consistency Property evaluates the soil's behavior under pressure when moist. Categories include friable, firm, or plastic. It provides insights into soil workability and its ability to support plant growth. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-moistConsistencyProperty ] .
 
 glosis_lh:CoatingLocation a owl:Class ;
         rdfs:label "CoatingLocation"@en ;
@@ -1136,12 +838,7 @@ glosis_lh:CoatingLocation a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CoatingLocationValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:coatingLocationProperty ] .
-
-glosis_lh:coatingLocationProperty a sosa:ObservableProperty ;
-        rdfs:label "coatingLocationProperty"@en ;
-        rdfs:comment "The Coating Location Property identifies where coatings are found within the soil profile, such as along root channels, pore spaces, or on particle surfaces. This property helps determine the movement of water and nutrients in the soil. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 68"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-coatingLocationProperty ] .
 
 glosis_cm:RockAbundance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ]] .
 
@@ -1151,11 +848,7 @@ glosis_lh:TextureFieldClass  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:textureFieldClassProperty ] .
-
-glosis_lh:textureFieldClassProperty a sosa:ObservableProperty ;
-        rdfs:label "textureFieldClassProperty"@en ;
-        rdfs:comment "The Texture Field Class Property categorizes soil texture based on the relative proportions of sand, silt, and clay, as assessed by field methods like the ribbon test. Field classes include sandy loam, clay loam, etc. Source: Soil Survey Manual (USDA, 2017)." .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-textureFieldClassProperty ] .
 
 glosis_lh:CarbonatesForms a owl:Class ;
         rdfs:label "CarbonatesForms"@en ;
@@ -1164,17 +857,7 @@ glosis_lh:CarbonatesForms a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CarbonatesFormsValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:carbonatesFormsProperty ] .
-
-glosis_lh:carbonatesFormsProperty a sosa:ObservableProperty ;
-        rdfs:label "carbonatesFormsProperty"@en ;
-        rdfs:comment "The Carbonates Forms Property describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 39"@en .
-
-glosis_lh:fragmentsClassProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "fragmentsClassProperty"@en ;
-        rdfs:comment "The Fragments Class Property categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-carbonatesFormsProperty ] .
 
 glosis_lh:FragmentsClass  a owl:Class ;
         rdfs:label "FragmentsClass"@en ;
@@ -1183,7 +866,7 @@ glosis_lh:FragmentsClass  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:FragmentsClassValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:fragmentsClassProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-fragmentsClassProperty ] .
 
 glosis_lh:WetPlasticity  a owl:Class ;
         rdfs:label "WetPlasticity"@en ;
@@ -1192,12 +875,7 @@ glosis_lh:WetPlasticity  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:wetPlasticityProperty ] .
-
-glosis_lh:wetPlasticityProperty a sosa:ObservableProperty ;
-        rdfs:label "wetPlasticityProperty"@en ;
-        rdfs:comment "The Wet Plasticity Property measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-wetPlasticityProperty ] .
 
 glosis_lh:MineralConcAbundance  a owl:Class ;
         rdfs:label "MineralConcAbundance"@en ;
@@ -1206,12 +884,7 @@ glosis_lh:MineralConcAbundance  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:mineralConcAbundanceProperty ] .
-
-glosis_lh:mineralConcAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "mineralConcAbundanceProperty"@en ;
-        rdfs:comment "The Mineral Concentration Abundance Property evaluates the amount of specific minerals, such as quartz, feldspar, or mica, in the soil. This property provides insights into soil parent material and fertility. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-mineralConcAbundanceProperty ] .
 
 glosis_lh:RootsAbundance a owl:Class ;
         rdfs:label "RootsAbundance"@en ;
@@ -1220,12 +893,7 @@ glosis_lh:RootsAbundance a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:RootsAbundanceValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:rootsAbundanceProperty ] .
-
-glosis_lh:rootsAbundanceProperty a sosa:ObservableProperty ;
-        rdfs:label "rootsAbundanceProperty"@en ;
-        rdfs:comment "The Roots Abundance Property describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017)." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 80"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-rootsAbundanceProperty ] .
 
 glosis_lh:CementationContinuity a owl:Class ;
         rdfs:label "CementationContinuity"@en ;
@@ -1234,12 +902,7 @@ glosis_lh:CementationContinuity a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:CementationContinuityValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_lh:cementationContinuityProperty ] .
-
-glosis_lh:cementationContinuityProperty a sosa:ObservableProperty ;
-        rdfs:label "cementationContinuityProperty"@en ;
-        rdfs:comment "The Cementation Continuity Property describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 69"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-cementationContinuityProperty ] .
 
 glosis_lh:AvailableWaterHoldingCapacity  a owl:Class ;
         rdfs:label "AvailableWaterHoldingCapacity"@en ;
@@ -2139,11 +1802,6 @@ glosis_lh:CarbonInorganicValue a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
         owl:hasValue unit:GM-PER-KiloGM ] .
 
-glosis_lh:moistureContentProperty a sosa:ObservableProperty, qudt:Quantitykind ;
-        rdfs:label "moistureContentProperty"@en ;
-        rdfs:comment "The Moisture Content Property measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
-        skos:definition "Africa Soil Profiles Database Version 1.2. ISRIC Report 2014/01"@en .
-
 glosis_lh:MoistureContent a owl:Class ;
         rdfs:label "MoistureContent"@en ;
         rdfs:comment "Moisture content is the amount of water in the soil, expressed as a percentage of the soil's dry weight. It is essential for assessing soil water availability for plants. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics." ;
@@ -2155,7 +1813,7 @@ glosis_lh:MoistureContent a owl:Class ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:hasResult ; owl:allValuesFrom glosis_lh:MoistureContentValue ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
-            sosa:observedProperty ; owl:hasValue glosis_lh:moistureContentProperty ] ;
+            sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-moistureContentProperty ] ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty
             sosa:usedProcedure ; owl:someValuesFrom glosis_proc:MoistureContentProcedure ] .
 
