@@ -51,13 +51,8 @@ glosis_pr:ProfileDescriptionStatus  a owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_pr:GL_Profile] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:ProfileDescriptionStatusValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_pr:profileDescriptionStatusProperty ] .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-profileDescriptionStatusProperty ] .
 
-glosis_pr:profileDescriptionStatusProperty a sosa:ObservableProperty ;
-        rdfs:label "profileDescriptionStatusProperty"@en ;
-        rdfs:comment "The Profile Description Status Property indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 1"@en .
-        
 glosis_cm:SoilDepth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_pr:GL_Profile] .
 
 glosis_pr:SoilClassification  a	owl:Class ;
@@ -67,12 +62,7 @@ glosis_pr:SoilClassification  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_pr:GL_Profile ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasSimpleResult ; owl:allValuesFrom xsd:string ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_pr:soilTypeProperty ] .
-
-glosis_pr:soilTypeProperty a sosa:ObservableProperty ;
-        rdfs:label "soilTypeProperty"@en ;
-        rdfs:comment "The Soil Type Property categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. " ;
-        skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-soilTypeProperty ] .
 
 glosis_pr:SoilClassificationUSDA  a	owl:Class ;
         rdfs:label "SoilClassificationUSDA"@en ;
