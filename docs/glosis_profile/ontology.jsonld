@@ -34,7 +34,7 @@
     "@id" : "http://www.w3.org/ns/sosa/hasResult"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://w3id.org/glosis/model/codelists/ProfileDescriptionStatusValueCode"
+    "@id" : "http://w3id.org/glosis/model/codelists/results/ProfileDescriptionStatusValueCode"
   } ]
 }, {
   "@id" : "_:genid13",
@@ -49,7 +49,7 @@
   "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty"
+    "@id" : "http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-profileDescriptionStatusProperty"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/sosa/observedProperty"
@@ -67,7 +67,7 @@
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://w3id.org/glosis/model/profile/soilTypeProperty"
+    "@id" : "http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilTypeProperty"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/sosa/observedProperty"
@@ -145,6 +145,15 @@
     "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
   } ]
 }, {
+  "@id" : "http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-profileDescriptionStatusProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilTypeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://w3id.org/glosis/model/codelists/results/ProfileDescriptionStatusValueCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://w3id.org/glosis/model/common/InfiltrationRateClass",
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid5"
@@ -183,7 +192,7 @@
   "@id" : "http://w3id.org/glosis/model/profile",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "http://w3id.org/glosis/model/profile_:genid-nodeid-node1ijdc2d02x1014"
+    "@id" : "http://w3id.org/glosis/model/profile_:genid-nodeid-node1juk5k43ux1957"
   }, {
     "@id" : "_:genid1"
   }, {
@@ -210,7 +219,9 @@
     "@value" : "This module contains the classes and properties to describe a soil profile, which is a describable representation of the soil that is characterised by a vertical succession of horizons or at least one or several parent materials layers. Soil profile is an ordered set of soil horizons and/or layers."
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://w3id.org/glosis/model/codelists/"
+    "@id" : "http://w3id.org/glosis/model/codelists/properties/"
+  }, {
+    "@id" : "http://w3id.org/glosis/model/codelists/results/"
   }, {
     "@id" : "http://w3id.org/glosis/model/common/"
   }, {
@@ -221,10 +232,10 @@
     "@id" : "http://www.w3.org/ns/ssn/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/glosis/model/profile/1.5.1"
+    "@id" : "http://w3id.org/glosis/model/profile/2.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.5.1"
+    "@value" : "2.0.0"
   } ]
 }, {
   "@id" : "http://w3id.org/glosis/model/profile/GL_Profile",
@@ -337,34 +348,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/glosis/model/profile/SoilClassification"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"
-  } ]
-}, {
-  "@id" : "http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/sosa/ObservableProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Profile Description Status Property indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "profileDescriptionStatusProperty"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Guidelines for Soil Description issued by the FAO: table 1"
-  } ]
-}, {
-  "@id" : "http://w3id.org/glosis/model/profile/soilTypeProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/sosa/ObservableProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Soil Type Property categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. "
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "soilTypeProperty"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
