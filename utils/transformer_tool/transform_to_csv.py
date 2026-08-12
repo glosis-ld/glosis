@@ -5,7 +5,7 @@ from src.transformers.rdf_to_csv import rdf_to_csv
 if __name__ == "__main__":
     rdf_file = sys.argv[1]
     output_filename = sys.argv[2] if sys.argv[2] else None
-    if "glosis_result" in rdf_file:
+    if "glosis_results" in rdf_file:
         transformer = rdf_to_csv.Transformer(file=rdf_file, file_type="results", output_filename=output_filename)
     elif "glosis_properties" in rdf_file:
         transformer = rdf_to_csv.Transformer(file=rdf_file, file_type="properties", output_filename=output_filename)
