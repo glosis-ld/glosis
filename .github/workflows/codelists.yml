@@ -3,13 +3,13 @@ name: CSV Codelists Auto-Generation
 on:
   pull_request:
     branches: [ "master" ]
-    paths: [ "glosis_properties.ttl" , "glosis_procedures.ttl" , "glosis_results.ttl" ]
+    paths: [ "glosis_properties.ttl" , "glosis_procedure.ttl" , "glosis_results.ttl" ]
 
 env:
     CODELIST_DIR: "csv_codelists"
     PROP_CODELIST: "glosis_properties.csv"
     RES_CODELIST: "glosis_results.csv"
-    PROC_CODELIST: "glosis_procedures.csv"
+    PROC_CODELIST: "glosis_procedure.csv"
 
 jobs:
   build:
@@ -38,7 +38,7 @@ jobs:
       run: |
         python transform_to_csv.py ../../glosis_results.ttl ../../csv_codelists/glosis_results
         python transform_to_csv.py ../../glosis_properties.ttl ../../csv_codelists/glosis_properties
-        python transform_to_csv.py ../../glosis_procedures.ttl ../../csv_codelists/glosis_procedures
+        python transform_to_csv.py ../../glosis_procedures.ttl ../../csv_codelists/glosis_procedure
     - name: Get current time and date
       if: ${{ success() }}
       run: echo "NOW=$(date)" >> $GITHUB_ENV
