@@ -4,7 +4,6 @@ source env/bin/activate
 
 python3 generateDoc.py glosis_cl
 python3 generateDoc.py glosis_common
-python3 generateDoc.py glosis_ext_property
 python3 generateDoc.py glosis_layer_horizon
 python3 generateDoc.py glosis_main
 python3 generateDoc.py glosis_observation

@@ -33,6 +33,8 @@ ontology file itself, except the following:
 - licenseURI
 - licenseName
 - licenseIconURL
+- dateCreated
+- dateModified
 
 Updated these items directly in the `template.json` file if you wish to modify them.
 
@@ -74,4 +76,15 @@ in the `env` folder.
 
 ```
 ./generate_all.sh
-``` 
+```
+
+Manual editions
+---------------
+
+A few documentation aspects are not automated by WiDoco and must be edited manually. In the future these task should either be automated locally or added upstream to WiDoco.
+
+* Remove section Main Module Description
+* Remove Rules sub-section
+* Remove References section
+
+
