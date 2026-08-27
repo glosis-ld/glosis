@@ -38,7 +38,7 @@ jobs:
       run: |
         python transform_to_csv.py ../../glosis_results.ttl ../../csv_codelists/glosis_results
         python transform_to_csv.py ../../glosis_properties.ttl ../../csv_codelists/glosis_properties
-        python transform_to_csv.py ../../glosis_procedures.ttl ../../csv_codelists/glosis_procedure
+        python transform_to_csv.py ../../glosis_procedure.ttl ../../csv_codelists/glosis_procedure
     - name: Get current time and date
       if: ${{ success() }}
       run: echo "NOW=$(date)" >> $GITHUB_ENV
