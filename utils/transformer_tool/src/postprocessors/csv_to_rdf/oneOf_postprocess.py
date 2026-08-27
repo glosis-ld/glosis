@@ -18,34 +18,40 @@ class PostProcessor(object):
 
     def _set_base_uri(self):
         self.the_object = URIRef("http://www.w3.org/2002/07/owl#" + "Class")
-        if "glosis_cl" in self.input_csv:
-            self.base_uri = "http://w3id.org/glosis/model/codelists/"
+        if "glosis_result" in self.input_csv:
+            self.base_uri = "http://w3id.org/glosis/model/codelists/results/"
+        elif "glosis_properties" in self.input_csv:
+            self.base_uri = "http://w3id.org/glosis/model/codelists/properties/"
+        elif "glosis_property_descriptive" in self.input_csv:
+            self.base_uri = "http://w3id.org/glosis/model/codelists/descriptive/"
+        elif "glosis_property_physchem" in self.input_csv:
+            self.base_uri = "http://w3id.org/glosis/model/codelists/physiochemical/"
         elif "glosis_procedure" in self.input_csv:
             self.base_uri = "http://w3id.org/glosis/model/procedure/"
         else:
             sys.exit("Input file not recognized.")
 
-    def _select_attrs_and_instances(self):
+    def _select_collection_and_concepts(self):
         df = pd.read_csv(self.input_csv)
-        unique_attrs = list(df["attribute"].unique())   # list of unique attrs
-        for attr in unique_attrs:
-            instances = list(df.instance[df["attribute"] == attr])
-            key_name = attr[0].upper() + attr[1:]   # capitalize first letter
-            if np.nan in instances:
-                instances = None
-            self.data[key_name] = instances
+        unique_collections = list(df["collection"].unique())   # list of unique attrs
+        for coll in unique_collections:
+            concepts = list(df.concept[df["collection"] == coll])
+            key_name = coll[0].upper() + coll[1:]   # capitalize first letter
+            if np.nan in concepts:
+                concepts = None
+            self.data[key_name] = concepts
 
-    def _get_attr_name(self, attribute):
-        attr_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCode|Procedure)", attribute)[-1]
-        postfix = re.findall(r"ValueCode|PropertyCode|Procedure", attribute)[-1]
-        return attr_name, postfix
+    def _get_concept_name(self, collection):
+        collection_name = re.findall(rf"(?<={self.base_uri}).*(?=ValueCode|PropertyCode|Procedure)", collection)[-1]
+        postfix = re.findall(r"ValueCode|PropertyCode|Procedure", collection)[-1]
+        return collection_name, postfix
 
-    def _generate_instance_uri(self, instance, postfix, attr):
-        return URIRef(self.base_uri + attr + postfix + "-" + instance)
+    def _generate_concept_uri(self, concept, postfix, collection):
+        return URIRef(self.base_uri + collection + postfix + "-" + concept)
 
     def run(self):
         self._set_base_uri()
-        self._select_attrs_and_instances()
+        self._select_collection_and_concepts()
         g = rdflib.Graph()
         g.parse(self.temp, format="turtle")
         g.namespace_manager.bind("owl", "http://www.w3.org/2002/07/owl#")
@@ -53,12 +59,12 @@ class PostProcessor(object):
         for s, p, o in g:
             if o == self.the_object and p == ns_type:
                 if any(word in s for word in ["ValueCode", "PropertyCode", "Procedure"]):
-                    attr_name, postfix = self._get_attr_name(attribute=s.n3())
-                    attr = attr_name[0].lower() + attr_name[1:]
-                    instances = self.data.get(attr_name)
-                    if instances:
-                        instance_uris = [self._generate_instance_uri(instance, postfix, attr) for instance in instances]
+                    collection_name, postfix = self._get_concept_name(collection=s.n3())
+                    coll = collection_name[0].lower() + collection_name[1:]
+                    concepts = self.data.get(collection_name)
+                    if concepts:
+                        concept_uris = [self._generate_concept_uri(concept, postfix, coll) for concept in concepts]
                         bn = BNode()
                         g.add((s, URIRef("http://www.w3.org/2002/07/owl#oneOf"), bn))
-                        Collection(g, bn, instance_uris)
+                        Collection(g, bn, concept_uris)
         return g

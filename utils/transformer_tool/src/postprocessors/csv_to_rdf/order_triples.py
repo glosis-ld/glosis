@@ -10,6 +10,6 @@ class Sequencer(object):
 
     def run(self):
         serializer = OrderedTurtleSerializer(self.graph)
-        serializer.class_order = [OWL.Ontology, SKOS.ConceptScheme, OWL.Class, SKOS.Concept]
+        serializer.class_order = [OWL.Ontology, SKOS.ConceptScheme, SKOS.Collection, OWL.Class, SKOS.Concept]
         with open(self.output, 'wb') as fp:
             serializer.serialize(fp)
