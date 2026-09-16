@@ -21,9 +21,10 @@ Documentation pages are maintained in the [docs folder](https://github.com/glosi
 * [Glosis Profile module](https://glosis-ld.github.io/glosis/glosis_profile/index-en.html)
 * [Glosis Layer-Horizon module](https://glosis-ld.github.io/glosis/glosis_layer_horizon/index-en.html)
 * [Glosis Observation module](https://glosis-ld.github.io/glosis/glosis_observation/index-en.html)
-* [Glosis Procedures codelist](https://glosis-ld.github.io/glosis/glosis_procedure/index-en.html)
+* [Glosis Properties](https://glosis-ld.github.io/glosis/glosis_properties/index-en.html)
+* [Glosis Results](https://glosis-ld.github.io/glosis/glosis_results/index-en.html)
+* [Glosis Procedures](https://glosis-ld.github.io/glosis/glosis_procedure/index-en.html)
 * [Glosis Units of measurement codelist](https://glosis-ld.github.io/glosis/glosis_unit/index-en.html)
-* [Glosis observable properties codelist](https://glosis-ld.github.io/glosis/glosis_cl/index-en.html)
 * [ISO28258 module](https://glosis-ld.github.io/glosis/iso28258/index-en.html)
 
 ### Codelist in OGC definition server
