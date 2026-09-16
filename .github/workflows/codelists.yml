@@ -3,11 +3,12 @@ name: CSV Codelists Auto-Generation
 on:
   pull_request:
     branches: [ "master" ]
-    paths: [ "glosis_cl.ttl" , "glosis_procedure.ttl" ]
+    paths: [ "glosis_properties.ttl" , "glosis_procedure.ttl" , "glosis_results.ttl" ]
 
 env:
     CODELIST_DIR: "csv_codelists"
-    CL_CODELIST: "glosis_cl.csv"
+    PROP_CODELIST: "glosis_properties.csv"
+    RES_CODELIST: "glosis_results.csv"
     PROC_CODELIST: "glosis_procedure.csv"
 
 jobs:
@@ -35,7 +36,8 @@ jobs:
     - name: Generate codelists
       working-directory: utils/transformer_tool
       run: |
-        python transform_to_csv.py ../../glosis_cl.ttl ../../csv_codelists/glosis_cl
+        python transform_to_csv.py ../../glosis_results.ttl ../../csv_codelists/glosis_results
+        python transform_to_csv.py ../../glosis_properties.ttl ../../csv_codelists/glosis_properties
         python transform_to_csv.py ../../glosis_procedure.ttl ../../csv_codelists/glosis_procedure
     - name: Get current time and date
       if: ${{ success() }}
@@ -44,6 +46,7 @@ jobs:
       if: ${{ success() }}
       uses: EndBug/add-and-commit@v9
       with:
-          add: "['${{ env.CODELIST_DIR }}/${{ env.CL_CODELIST }}', '${{ env.CODELIST_DIR }}/${{ env.PROC_CODELIST }}']"
+          add: "['${{ env.CODELIST_DIR }}/${{ env.RES_CODELIST }}', '${{ env.CODELIST_DIR }}/${{ env.PROP_CODELIST }}', 
+          '${{ env.CODELIST_DIR }}/${{ env.PROC_CODELIST }}']"
           message: "codelists generated automatically at ${{ env.NOW }}"
           default_author: github_actions

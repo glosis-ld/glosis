@@ -7,10 +7,10 @@
 @base <http://w3id.org/glosis/model/common#> .
 
 <http://w3id.org/glosis/model/common> rdf:type owl:Ontology ;
-                                       owl:versionIRI <http://w3id.org/glosis/model/common/1.5.1> ;
+                                       owl:versionIRI <http://w3id.org/glosis/model/common/2.0.0> ;
                                        owl:imports <http://www.w3.org/ns/sosa/> ,
                                                    <http://www.w3.org/ns/ssn/> ;
-                                       <http://purl.org/dc/terms/creator> _:genid-nodeid-node1ijdc0eclx3 ,
+                                       <http://purl.org/dc/terms/creator> _:genid-nodeid-node1juk5h6pmx3 ,
                                                                           _:genid1 ,
                                                                           _:genid3 ;
                                        <http://purl.org/dc/terms/description> "This ontology represents GLOSIS code lists extracted from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
@@ -18,16 +18,16 @@
                                        <http://purl.org/dc/terms/source> "Data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"@en ;
                                        <http://purl.org/dc/terms/title> "GlOSIS Ontology: Common module"@en ;
                                        rdfs:comment "This module contains all classes and properties that are used among multiple modules."@en ;
-                                       owl:versionInfo "1.5.1" .
+                                       owl:versionInfo "2.0.0" .
 
 _:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
                                           ] ;
-          <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
 
 _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
                                           ] ;
-          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
-          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+          <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
 
 #################################################################
 #    Annotation properties
@@ -97,52 +97,48 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class .
 
 
-###  http://qudt.org/schema/qudt/Quantitykind
-<http://qudt.org/schema/qudt/Quantitykind> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/BleachedSandValueCode
+<http://w3id.org/glosis/model/codelists/results/BleachedSandValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/BleachedSandValueCode
-<http://w3id.org/glosis/model/codelists/BleachedSandValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/CracksDepthValueCode
+<http://w3id.org/glosis/model/codelists/results/CracksDepthValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/CracksDepthValueCode
-<http://w3id.org/glosis/model/codelists/CracksDepthValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/CracksDistanceValueCode
+<http://w3id.org/glosis/model/codelists/results/CracksDistanceValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/CracksDistanceValueCode
-<http://w3id.org/glosis/model/codelists/CracksDistanceValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/CracksWidthValueCode
+<http://w3id.org/glosis/model/codelists/results/CracksWidthValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/CracksWidthValueCode
-<http://w3id.org/glosis/model/codelists/CracksWidthValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/FragmentCoverValueCode
+<http://w3id.org/glosis/model/codelists/results/FragmentCoverValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/FragmentCoverValueCode
-<http://w3id.org/glosis/model/codelists/FragmentCoverValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/FragmentsSizeValueCode
+<http://w3id.org/glosis/model/codelists/results/FragmentsSizeValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode
-<http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/OrganicMatterClassValueCode
+<http://w3id.org/glosis/model/codelists/results/OrganicMatterClassValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode
-<http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/RockAbundanceValueCode
+<http://w3id.org/glosis/model/codelists/results/RockAbundanceValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/RockAbundanceValueCode
-<http://w3id.org/glosis/model/codelists/RockAbundanceValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/RockShapeValueCode
+<http://w3id.org/glosis/model/codelists/results/RockShapeValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/RockShapeValueCode
-<http://w3id.org/glosis/model/codelists/RockShapeValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/RockSizeValueCode
+<http://w3id.org/glosis/model/codelists/results/RockSizeValueCode> rdf:type owl:Class .
 
 
-###  http://w3id.org/glosis/model/codelists/RockSizeValueCode
-<http://w3id.org/glosis/model/codelists/RockSizeValueCode> rdf:type owl:Class .
-
-
-###  http://w3id.org/glosis/model/codelists/WeatheringValueCode
-<http://w3id.org/glosis/model/codelists/WeatheringValueCode> rdf:type owl:Class .
+###  http://w3id.org/glosis/model/codelists/results/WeatheringValueCode
+<http://w3id.org/glosis/model/codelists/results/WeatheringValueCode> rdf:type owl:Class .
 
 
 ###  http://w3id.org/glosis/model/common/BleachedSand
@@ -150,11 +146,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                    [ rdf:type owl:Restriction ;
                                                                      owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                     owl:someValuesFrom <http://w3id.org/glosis/model/codelists/BleachedSandValueCode>
+                                                                     owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/BleachedSandValueCode>
                                                                    ] ,
                                                                    [ rdf:type owl:Restriction ;
                                                                      owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                     owl:hasValue <http://w3id.org/glosis/model/common/bleachedSandProperty>
+                                                                     owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-bleachedSandProperty>
                                                                    ] ;
                                                    rdfs:comment "Bleached sand refers to sandy soils where the color has been significantly lightened due to the removal of iron and other minerals, usually through leaching processes in wet climates. This often results in a pale or white color, which is an indicator of a soil's history of leaching, typically in areas with high rainfall or poor drainage. These soils may have low fertility and poor nutrient-holding capacity. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
                                                    rdfs:label "BleachedSand"@en ;
@@ -170,7 +166,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                 ] ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                  owl:hasValue <http://w3id.org/glosis/model/common/colourDryProperty>
+                                                                  owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-colourDryProperty>
                                                                 ] ;
                                                 rdfs:comment "The color of soil when it is in a dry state. Soil color, when dry, can indicate the mineral composition and moisture retention of the soil. Dry soils often appear darker if they contain organic matter, while lighter colors may indicate the presence of sand or salts. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
                                                 rdfs:label "ColourDry"@en ;
@@ -186,7 +182,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                   ] ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                    owl:hasValue <http://w3id.org/glosis/model/common/colourMoistProperty>
+                                                                    owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-colourMoistProperty>
                                                                   ] ;
                                                   rdfs:comment "The color of soil when it is moist, which can reveal more about the soil’s content and moisture status. Moist soils tend to be darker because water enhances the color intensity, revealing organic matter content and the presence of minerals such as iron. For example, dark brown or black soils often indicate high organic matter content. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
                                                   rdfs:label "ColourMoist"@en ;
@@ -198,11 +194,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                    owl:someValuesFrom <http://w3id.org/glosis/model/codelists/CracksDepthValueCode>
+                                                                    owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/CracksDepthValueCode>
                                                                   ] ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                    owl:hasValue <http://w3id.org/glosis/model/common/cracksDepthProperty>
+                                                                    owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksDepthProperty>
                                                                   ] ;
                                                   rdfs:comment "Cracks depth refers to the vertical measurement of cracks that appear in the soil surface, often occurring during dry conditions when soil moisture decreases. The depth of cracks can indicate soil shrinkage, particularly in clayey soils, and is used to assess the soil's structural integrity and potential for erosion. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
                                                   rdfs:label "CracksDepth"@en ;
@@ -214,11 +210,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                      rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                       owl:someValuesFrom <http://w3id.org/glosis/model/codelists/CracksDistanceValueCode>
+                                                                       owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/CracksDistanceValueCode>
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                       owl:hasValue <http://w3id.org/glosis/model/common/cracksDistanceProperty>
+                                                                       owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksDistanceProperty>
                                                                      ] ;
                                                      rdfs:comment "The horizontal spacing between cracks in the soil, which can vary depending on soil type and moisture levels. Cracks generally occur due to soil shrinkage in dry conditions and can affect root penetration and water infiltration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
                                                      rdfs:label "CracksDistance"@en ;
@@ -230,11 +226,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                    owl:someValuesFrom <http://w3id.org/glosis/model/codelists/CracksWidthValueCode>
+                                                                    owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/CracksWidthValueCode>
                                                                   ] ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                    owl:hasValue <http://w3id.org/glosis/model/common/cracksWidthProperty>
+                                                                    owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksWidthProperty>
                                                                   ] ;
                                                   rdfs:comment "Cracks width refers to the measurement of the gap or space between the sides of soil cracks. Wider cracks can form in drier soils, particularly those with high clay content. They provide insights into soil structure, water retention, and the degree of shrinkage that has occurred due to moisture loss. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
                                                   rdfs:label "CracksWidth"@en ;
@@ -246,11 +242,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                     rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/FragmentCoverValueCode>
+                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/FragmentCoverValueCode>
                                                                     ] ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                      owl:hasValue <http://w3id.org/glosis/model/common/fragmentCoverProperty>
+                                                                      owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-fragmentCoverProperty>
                                                                     ] ;
                                                     rdfs:comment "Fragment cover is the percentage of the soil surface covered by coarse fragments, such as rocks, pebbles, or other larger pieces of material. High fragment cover can reduce soil erosion but may hinder water infiltration and root penetration. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
                                                     rdfs:label "FragmentCover"@en ;
@@ -262,11 +258,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                     rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/FragmentsSizeValueCode>
+                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/FragmentsSizeValueCode>
                                                                     ] ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                      owl:hasValue <http://w3id.org/glosis/model/common/fragmentsSizeProperty>
+                                                                      owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-fragmentsSizeProperty>
                                                                     ] ;
                                                     rdfs:comment "The size of soil fragments is categorized by their dimensions, often from small gravel-sized particles to large boulders. Fragment size influences soil aeration, drainage, and root penetration, with larger fragments typically decreasing soil fertility and water retention. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
                                                     rdfs:label "FragmentsSize "@en ;
@@ -278,7 +274,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                             rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                              owl:hasValue <http://w3id.org/glosis/model/common/infiltrationRateClassProperty>
+                                                                              owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-infiltrationRateClassProperty>
                                                                             ] ,
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
@@ -298,7 +294,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                               ] ,
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                                owl:hasValue <http://w3id.org/glosis/model/common/infiltrationRateNumericProperty>
+                                                                                owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-infiltrationRateNumericProperty>
                                                                               ] ;
                                                               rdfs:comment "The numeric infiltration rate is the quantitative measurement of the rate at which water infiltrates the soil, typically expressed in millimeters per hour (mm/h). It is a critical factor in soil water management, affecting irrigation practices, runoff, and drainage efficiency. Source: Bouwer, H. (2000). Integrated Water Management for the 21st Century. Water Resources Research." ;
                                                               rdfs:label "InfiltrationRateNumeric"@en .
@@ -348,11 +344,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                          rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                          [ rdf:type owl:Restriction ;
                                                                            owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                           owl:someValuesFrom <http://w3id.org/glosis/model/codelists/OrganicMatterClassValueCode>
+                                                                           owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/OrganicMatterClassValueCode>
                                                                          ] ,
                                                                          [ rdf:type owl:Restriction ;
                                                                            owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                           owl:hasValue <http://w3id.org/glosis/model/common/organicMatterClassProperty>
+                                                                           owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-organicMatterClassProperty>
                                                                          ] ;
                                                          rdfs:comment "Organic matter class refers to the classification of soil based on the quantity and type of organic material it contains, such as decomposed plant and animal residues. High organic matter content is generally beneficial for soil fertility, structure, and microbial activity. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
                                                          rdfs:label "OrganicMatterClass"@en .
@@ -363,11 +359,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                     rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/RockAbundanceValueCode>
+                                                                      owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/RockAbundanceValueCode>
                                                                     ] ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                      owl:hasValue <http://w3id.org/glosis/model/common/rockAbundanceProperty>
+                                                                      owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockAbundanceProperty>
                                                                     ] ;
                                                     rdfs:comment "Rock abundance refers to the relative quantity of rocks or rock fragments within the soil profile, often expressed as a percentage of the total soil volume. High rock abundance can significantly affect soil tillage, root penetration, and water movement. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
                                                     rdfs:label "RockAbundance"@en ;
@@ -379,11 +375,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/codelists/RockShapeValueCode>
+                                                                  owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/RockShapeValueCode>
                                                                 ] ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                  owl:hasValue <http://w3id.org/glosis/model/common/rockShapeProperty>
+                                                                  owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockShapeProperty>
                                                                 ] ;
                                                 rdfs:comment "Rock shape describes the physical form of rock fragments in the soil, ranging from angular to rounded shapes. The shape of rocks affects soil aeration, water movement, and the difficulty of soil tillage and root penetration. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
                                                 rdfs:label "RockShape"@en ;
@@ -395,11 +391,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                 owl:someValuesFrom <http://w3id.org/glosis/model/codelists/RockSizeValueCode>
+                                                                 owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/RockSizeValueCode>
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                 owl:hasValue <http://w3id.org/glosis/model/common/rockSizeProperty>
+                                                                 owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockSizeProperty>
                                                                ] ;
                                                rdfs:comment "Rock size refers to the dimensions of rock fragments in the soil. The classification of rock size can range from small gravel-sized particles to large boulders. Larger rocks hinder root growth, water infiltration, and tillage. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
                                                rdfs:label "RockSize"@en ;
@@ -415,7 +411,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                 ] ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                  owl:hasValue <http://w3id.org/glosis/model/common/soilDepthProperty>
+                                                                  owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthProperty>
                                                                 ] ;
                                                 rdfs:comment "Soil depth is the vertical measurement from the soil surface to the underlying bedrock or impenetrable layer. Soil depth directly impacts plant growth, as deeper soils allow for more extensive root systems and greater water retention. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
                                                 rdfs:label "SoilDepth"@en ;
@@ -431,7 +427,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        ] ,
                                                                        [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                         owl:hasValue <http://w3id.org/glosis/model/common/soilDepthBedrockProperty>
+                                                                         owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthBedrockProperty>
                                                                        ] ;
                                                        rdfs:comment "Soil depth to bedrock is the measurement from the soil surface to the top of the bedrock layer. This depth can vary significantly depending on the landscape and is crucial for understanding rootable soil depth and drainage potential. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
                                                        rdfs:label "SoilDepthBedrock"@en ;
@@ -462,7 +458,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                         ] ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                          owl:hasValue <http://w3id.org/glosis/model/common/soilDepthRootableProperty>
+                                                                          owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthRootableProperty>
                                                                         ] ;
                                                         rdfs:comment "Soil depth rootable refers to the depth of soil that is capable of supporting plant roots, excluding impenetrable layers such as bedrock or compacted zones. This is an important factor for determining agricultural suitability. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
                                                         rdfs:label "SoilDepthRootable"@en ;
@@ -474,7 +470,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                              rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                               owl:hasValue <http://w3id.org/glosis/model/common/soilDepthRootableClassProperty>
+                                                                               owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthRootableClassProperty>
                                                                              ] ,
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
@@ -509,7 +505,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                                        ] ,
                                                                        [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                         owl:hasValue <http://w3id.org/glosis/model/common/soilDepthSampledProperty>
+                                                                         owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthSampledProperty>
                                                                        ] ;
                                                        rdfs:comment "Soil depth sampled refers to the specific depth of soil that was taken for analysis, often dictated by research or agricultural requirements. Sampling depth can affect the representativeness of the analysis. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
                                                        rdfs:label "SoilDepthSampled"@en ;
@@ -551,7 +547,7 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                               rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                owl:hasValue <http://w3id.org/glosis/model/common/textureProperty>
+                                                                owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-textureProperty>
                                                               ] ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasSimpleResult> ;
@@ -567,11 +563,11 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
                                                           rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/hasResult> ;
-                                                                            owl:someValuesFrom <http://w3id.org/glosis/model/codelists/WeatheringValueCode>
+                                                                            owl:someValuesFrom <http://w3id.org/glosis/model/codelists/results/WeatheringValueCode>
                                                                           ] ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty <http://www.w3.org/ns/sosa/observedProperty> ;
-                                                                            owl:hasValue <http://w3id.org/glosis/model/common/weatheringFragmentsProperty>
+                                                                            owl:hasValue <http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-weatheringFragmentsProperty>
                                                                           ] ;
                                                           rdfs:comment "Weathering fragments are pieces of rock or mineral material that have been broken down into smaller particles due to physical, chemical, or biological weathering processes. The size and composition of these fragments influence soil texture, structure, and nutrient availability. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
                                                           rdfs:label "WeatheringFragments"@en ;
@@ -590,176 +586,88 @@ _:genid3 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSN
 <http://qudt.org/vocab/unit/CentiM-PER-HR> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/bleachedSandProperty
-<http://w3id.org/glosis/model/common/bleachedSandProperty> rdf:type owl:NamedIndividual ,
-                                                                    <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                           rdfs:comment "The Bleached Sand property refers to the physical characteristic of sandy soil that has undergone a bleaching process due to leaching, where minerals such as iron and other elements have been removed by water. This process often occurs in areas with high rainfall, leading to a soil that appears lighter in color. Bleached sand typically indicates low fertility and poor nutrient-holding capacity due to the lack of iron and other nutrients that are washed away. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
-                                                           rdfs:label "bleachedSandProperty"@en ;
-                                                           <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 23"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-bleachedSandProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-bleachedSandProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/colourDryProperty
-<http://w3id.org/glosis/model/common/colourDryProperty> rdf:type owl:NamedIndividual ,
-                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                        rdfs:comment "The Colour Dry property describes the color of soil when it is in a dry state. Soil color in the dry condition is influenced by the soil’s mineral composition and moisture content. For example, soils with high organic matter content typically appear dark brown or black when dry, while sandy or saline soils may appear lighter in color. Dry soil color is used in soil classification and can provide insights into the soil's composition and drainage. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
-                                                        rdfs:label "colourDryProperty"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-colourDryProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-colourDryProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/colourMoistProperty
-<http://w3id.org/glosis/model/common/colourMoistProperty> rdf:type owl:NamedIndividual ,
-                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                          rdfs:comment "The Colour Moist property refers to the soil's color when it is in a wet or moist condition. Moisture enhances the color intensity of the soil, which is often darker compared to its dry state. This is particularly helpful in determining organic matter content, iron oxide presence, and soil moisture retention. For instance, moist soils with abundant organic material tend to appear darker, whereas more mineral-rich soils can appear lighter in color. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
-                                                          rdfs:label "colourMoistProperty"@en ;
-                                                          <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-colourMoistProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-colourMoistProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/cracksDepthProperty
-<http://w3id.org/glosis/model/common/cracksDepthProperty> rdf:type owl:NamedIndividual ,
-                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                          rdfs:comment "The Cracks Depth property refers to the measurement of the vertical depth of cracks formed in soil, which is typically observed in dry conditions when the soil shrinks. Cracks are more common in clayey soils that experience significant shrinkage upon drying. The depth of these cracks can indicate soil moisture levels, compaction, and the ability of the soil to expand and contract, which affects water infiltration and root penetration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
-                                                          rdfs:label "cracksDepthProperty"@en ;
-                                                          <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,2"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksDepthProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksDepthProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/cracksDistanceProperty
-<http://w3id.org/glosis/model/common/cracksDistanceProperty> rdf:type owl:NamedIndividual ,
-                                                                      <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                             rdfs:comment "The Cracks Distance property refers to the horizontal spacing between cracks in the soil surface, which can occur due to the shrinkage of soil as it dries. Cracks form when water content decreases, and their distance is an indicator of the soil's shrink-swell behavior. Larger distances between cracks generally indicate more severe soil shrinkage, which can affect root growth and water infiltration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
-                                                             rdfs:label "cracksDistanceProperty"@en ;
-                                                             <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,3"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksDistanceProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksDistanceProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/cracksWidthProperty
-<http://w3id.org/glosis/model/common/cracksWidthProperty> rdf:type owl:NamedIndividual ,
-                                                                   <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                          rdfs:comment "The Cracks Width property refers to the measurement of the gap or space between the sides of soil cracks. The width of these cracks is typically influenced by soil moisture content and texture. Wider cracks are indicative of drier conditions and are commonly found in soils with high clay content, which tend to shrink and form deep cracks when the moisture content is reduced. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press." ;
-                                                          rdfs:label "cracksWidthProperty"@en ;
-                                                          <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 21,1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksWidthProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-cracksWidthProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/fragmentCoverProperty
-<http://w3id.org/glosis/model/common/fragmentCoverProperty> rdf:type owl:NamedIndividual ,
-                                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                            rdfs:comment "The Fragment Cover property describes the proportion of the soil surface covered by coarse fragments such as rocks, stones, or other large particles. This property is important because a high fragment cover can reduce soil erosion but may also interfere with water infiltration and root growth. Fragment cover is often used as an indicator of soil stability and erosion potential. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
-                                                            rdfs:label "fragmentCoverProperty"@en ;
-                                                            <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 15,1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-fragmentCoverProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-fragmentCoverProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/fragmentsSizeProperty
-<http://w3id.org/glosis/model/common/fragmentsSizeProperty> rdf:type owl:NamedIndividual ,
-                                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                            rdfs:comment "The Fragments Size property refers to the dimensions of rock or mineral fragments present in the soil. These fragments are categorized based on their size, ranging from small gravel particles to larger stones and boulders. Larger fragments tend to reduce soil fertility, inhibit root growth, and decrease water retention. Smaller fragments, in contrast, contribute to soil texture and permeability. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
-                                                            rdfs:label "fragmentsSizeProperty"@en ;
-                                                            <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 15,2"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-fragmentsSizeProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-fragmentsSizeProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/infiltrationRateClassProperty
-<http://w3id.org/glosis/model/common/infiltrationRateClassProperty> rdf:type owl:NamedIndividual ,
-                                                                             <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                    rdfs:comment "The Infiltration Rate Class property classifies the soil’s ability to absorb water based on observed infiltration rates. This classification is typically divided into categories like slow, moderate, or rapid infiltration, based on how quickly water is absorbed into the soil. It is an essential property for understanding drainage, runoff, and irrigation needs. Source: Hillel, D. (2004). Introduction to Soil Physics. Academic Press." ;
-                                                                    rdfs:label "infiltrationRateClassProperty"@en ;
-                                                                    <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-infiltrationRateClassProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-infiltrationRateClassProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/infiltrationRateNumericProperty
-<http://w3id.org/glosis/model/common/infiltrationRateNumericProperty> rdf:type owl:NamedIndividual ,
-                                                                               <http://qudt.org/schema/qudt/Quantitykind> ,
-                                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                      rdfs:comment "The Infiltration Rate Numeric property provides a quantitative measure of the rate at which water enters the soil, usually expressed in units such as millimeters per hour (mm/h). This numeric value is essential for determining soil permeability, irrigation management, and runoff prediction. Higher infiltration rates indicate well-drained soils, while lower rates suggest compacted or clay-rich soils. Source: Bouwer, H. (2000). Integrated Water Management for the 21st Century. Water Resources Research." ;
-                                                                      rdfs:label "infiltrationRateNumericProperty"@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-infiltrationRateNumericProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-infiltrationRateNumericProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/organicMatterClassProperty
-<http://w3id.org/glosis/model/common/organicMatterClassProperty> rdf:type owl:NamedIndividual ,
-                                                                          <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                 rdfs:comment "The Organic Matter Class property classifies soil based on the amount and quality of organic matter it contains. Soils with high organic matter are usually fertile, retain moisture better, and support more biological activity. This classification helps in determining soil health and suitability for agricultural purposes. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
-                                                                 rdfs:label "organicMatterClassProperty"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-organicMatterClassProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-organicMatterClassProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/rockAbundanceProperty
-<http://w3id.org/glosis/model/common/rockAbundanceProperty> rdf:type owl:NamedIndividual ,
-                                                                     <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                            rdfs:comment "The Rock Abundance property refers to the proportion or percentage of rock fragments in the soil profile. High rock abundance can affect soil tillage, water retention, root penetration, and overall soil fertility. It is often used to assess land suitability for agriculture and vegetation. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
-                                                            rdfs:label "rockAbundanceProperty"@en ;
-                                                            <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 26"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockAbundanceProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockAbundanceProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/rockShapeProperty
-<http://w3id.org/glosis/model/common/rockShapeProperty> rdf:type owl:NamedIndividual ,
-                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                        rdfs:comment "The Rock Shape property describes the physical form of rock fragments in the soil, which can range from angular to rounded. Angular rocks are generally a sign of recent weathering, while rounded rocks have been smoothed by long-term weathering processes. The shape of rocks influences soil texture, drainage, and tillage requirements. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
-                                                        rdfs:label "rockShapeProperty"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 28"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockShapeProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockShapeProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/rockSizeProperty
-<http://w3id.org/glosis/model/common/rockSizeProperty> rdf:type owl:NamedIndividual ,
-                                                                <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                       rdfs:comment "The Rock Size property refers to the dimensions of the rock fragments present in the soil. Rocks are typically classified by their size, from small gravel to large boulders. Larger rocks can limit root growth, hinder water infiltration, and complicate soil management practices. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
-                                                       rdfs:label "rockSizeProperty"@en ;
-                                                       <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 27"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockSizeProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-rockSizeProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/soilDepthBedrockProperty
-<http://w3id.org/glosis/model/common/soilDepthBedrockProperty> rdf:type owl:NamedIndividual ,
-                                                                        <http://qudt.org/schema/qudt/Quantitykind> ,
-                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                               rdfs:comment "The Soil Depth Bedrock property refers to the distance from the soil surface to the underlying bedrock layer. This measurement is important for understanding the soil's capacity to support plant growth, as soils with shallow bedrock tend to have limited rooting depth, affecting water retention and nutrient availability. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
-                                                               rdfs:label "soilDepthBedrockProperty"@en ;
-                                                               <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthBedrockProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthBedrockProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/soilDepthProperty
-<http://w3id.org/glosis/model/common/soilDepthProperty> rdf:type owl:NamedIndividual ,
-                                                                 <http://qudt.org/schema/qudt/Quantitykind> ,
-                                                                 <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                        rdfs:comment "The Soil Depth property measures the vertical distance from the soil surface to an impenetrable layer, such as bedrock or a hardpan. Soil depth is a crucial factor influencing root development, water storage, and plant growth. Shallow soils may limit root growth, while deep soils can support more extensive root systems. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
-                                                        rdfs:label "soilDepthProperty"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/soilDepthRootableClassProperty
-<http://w3id.org/glosis/model/common/soilDepthRootableClassProperty> rdf:type owl:NamedIndividual ,
-                                                                              <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                     rdfs:comment "The Soil Depth Rootable Class property classifies soils based on the depth of the rootable zone, which excludes impenetrable layers such as bedrock or compacted horizons. Soils are typically classified as shallow, moderately deep, or deep, depending on the depth of the root zone, which directly affects plant growth. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
-                                                                     rdfs:label "soilDepthRootableClassProperty"@en ;
-                                                                     <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthRootableClassProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthRootableClassProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/soilDepthRootableProperty
-<http://w3id.org/glosis/model/common/soilDepthRootableProperty> rdf:type owl:NamedIndividual ,
-                                                                         <http://qudt.org/schema/qudt/Quantitykind> ,
-                                                                         <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                rdfs:comment "The Soil Depth Rootable property refers to the actual vertical depth of soil that can support plant roots, excluding any non-rootable layers such as bedrock or a water-impervious horizon. This depth is crucial for determining the suitability of land for agriculture and vegetation. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
-                                                                rdfs:label "soilDepthRootableProperty"@en ;
-                                                                <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthRootableProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthRootableProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/soilDepthSampledProperty
-<http://w3id.org/glosis/model/common/soilDepthSampledProperty> rdf:type owl:NamedIndividual ,
-                                                                        <http://qudt.org/schema/qudt/Quantitykind> ,
-                                                                        <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                               rdfs:comment "The Soil Depth Sampled property indicates the specific depth of the soil profile that has been sampled for analysis. This property is important for understanding the representativeness of the sample, as different soil horizons may vary significantly in properties such as texture, fertility, and moisture content. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
-                                                               rdfs:label "soilDepthSampledProperty"@en ;
-                                                               <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthSampledProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-soilDepthSampledProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/textureProperty
-<http://w3id.org/glosis/model/common/textureProperty> rdf:type owl:NamedIndividual ,
-                                                               <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                      rdfs:comment "The Texture property refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America." ;
-                                                      rdfs:label "textureProperty"@en ;
-                                                      <http://www.w3.org/2004/02/skos/core#definition> "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 1"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-textureProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-textureProperty> rdf:type owl:NamedIndividual .
 
 
-###  http://w3id.org/glosis/model/common/weatheringFragmentsProperty
-<http://w3id.org/glosis/model/common/weatheringFragmentsProperty> rdf:type owl:NamedIndividual ,
-                                                                           <http://www.w3.org/ns/sosa/ObservableProperty> ;
-                                                                  rdfs:comment "The Weathering Fragments property refers to soil particles or rock fragments that have been broken down through physical, chemical, or biological weathering. These fragments play a role in soil texture, structure, and nutrient availability. The degree of weathering can indicate the age and stability of the soil’s mineral content. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall." ;
-                                                                  rdfs:label "weatheringFragmentsProperty"@en ;
-                                                                  <http://www.w3.org/2004/02/skos/core#definition> "Guidelines for Soil Description issued by the FAO: table 29"@en .
+###  http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-weatheringFragmentsProperty
+<http://w3id.org/glosis/model/codelists/properties/descriptivePropertyCode-weatheringFragmentsProperty> rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
