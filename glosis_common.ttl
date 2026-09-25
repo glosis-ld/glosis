@@ -277,11 +277,3 @@ glosis_cm:WeatheringFragments  a	owl:Class ;
         rdfs:subClassOf  sosa:Observation ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:WeatheringValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-weatheringFragmentsProperty ] .
-
-glosis_cm:FragmentCover  a	owl:Class ;
-        rdfs:label "FragmentCover"@en;
-        rdfs:comment "Fragment cover is the percentage of the soil surface covered by coarse fragments, such as rocks, pebbles, or other larger pieces of material. High fragment cover can reduce soil erosion but may hinder water infiltration and root penetration. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
-        skos:definition "Guidelines for Soil Description issued by the FAO: table 15,1"@en ;
-        rdfs:subClassOf  sosa:Observation ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:FragmentCoverValueCode ] ;
-  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-fragmentCoverProperty ] .
