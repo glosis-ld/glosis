@@ -106,6 +106,15 @@ glosis_su:SealingThickness  a	owl:Class ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:SealingThicknessValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-SealingThicknessProperty ] .
 
+glosis_su:FragmentCover  a	owl:Class ;
+        rdfs:label "FragmentCover"@en;
+        rdfs:comment "Fragment cover is the percentage of the soil surface covered by coarse fragments, such as rocks, pebbles, or other larger pieces of material. High fragment cover can reduce soil erosion but may hinder water infiltration and root penetration. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations." ;
+        skos:definition "Guidelines for Soil Description issued by the FAO: table 15,1"@en ;
+        rdfs:subClassOf  sosa:Observation ;
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:FragmentCoverValueCode ] ;
+  			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-fragmentCoverProperty ] .
+
 glosis_cm:BleachedSand rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .
 
 glosis_cm:WeatheringFragments rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .
@@ -114,8 +123,6 @@ glosis_cm:RockSize rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:has
         
 glosis_cm:CracksWidth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .
 
-glosis_cm:FragmentCover rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .
-        
 glosis_cm:RockShape rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .
 
 glosis_cm:ColourDry rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom glosis_su:GL_Surface ] .

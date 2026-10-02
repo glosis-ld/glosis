@@ -388,8 +388,6 @@ glosis_lh:StructureGrade a owl:Class ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:someValuesFrom glosis_res:StructureGradeValueCode ] ;
   			rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:observedProperty ; owl:hasValue glosis_prop:descriptivePropertyCode-structureGradeProperty ] .
 
-glosis_cm:FragmentCover rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
-
 glosis_lh:BiologicalFeatures  a	owl:Class ;
         rdfs:label "BiologicalFeatures"@en ;
         rdfs:comment "Biological features of soil include microbial communities, faunal activity, and organic residues that influence decomposition, nutrient cycling, and soil structure. These features contribute to soil productivity and ecosystem functioning. Source: Doran, J.W., & Parkin, T.B. (1994). Defining and Assessing Soil Quality." ;
