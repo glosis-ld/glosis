@@ -579,7 +579,7 @@ glosis_lh:SolubleAnionsTotalValue a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  qudt:QuantityValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:numericValue ; owl:allValuesFrom xsd:float ] ;
-        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue cm:centimolePerLitre ] .
+        rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ; owl:hasValue om:centimolePerLitre ] .
 
 glosis_cm:CracksDepth rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasFeatureOfInterest ; owl:allValuesFrom [owl:unionOf (glosis_lh:GL_Layer glosis_lh:GL_Horizon) ] ] .
 
@@ -1939,7 +1939,7 @@ glosis_lh:SolubleSaltsValue a owl:Class ;
         skos:definition "ISRIC Report 2019/01: Tier 1 and Tier 2 data in the context of the federated Global Soil Information System. Appendix 3"@en ;
         rdfs:subClassOf  glosis_lh:PhysioChemicalValue ;
         rdfs:subClassOf [ a owl:Restriction ; owl:onProperty qudt:unit ;
-        owl:hasValue cm:centimolePerLitre ] .
+        owl:hasValue om:centimolePerLitre ] .
 
 glosis_lh:SandFractionTexture a owl:Class ;
         rdfs:label "SandFractionTexture"@en ;
