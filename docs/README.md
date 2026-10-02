@@ -13,7 +13,6 @@ Documentation pages are maintained in the [docs folder](https://github.com/glosi
 
 ### Ontology modules documentation
 
-
 * [Glosis Main module](https://glosis-ld.github.io/glosis/glosis_main/index-en.html)
 * [Glosis Common module](https://glosis-ld.github.io/glosis/glosis_common/index-en.html)
 * [Glosis Surface](https://glosis-ld.github.io/glosis/glosis_surface/index-en.html)
@@ -26,6 +25,7 @@ Documentation pages are maintained in the [docs folder](https://github.com/glosi
 * [Glosis Procedures](https://glosis-ld.github.io/glosis/glosis_procedure/index-en.html)
 * [Glosis Units of measurement codelist](https://glosis-ld.github.io/glosis/glosis_unit/index-en.html)
 * [ISO28258 module](https://glosis-ld.github.io/glosis/iso28258/index-en.html)
+
 
 ### Codelist in OGC definition server
 All Glosis codelists are available via the OGC definition server.
