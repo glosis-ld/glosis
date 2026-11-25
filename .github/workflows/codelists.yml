@@ -2,14 +2,13 @@ name: CSV Codelists Auto-Generation
 
 on:
   pull_request:
-    branches: [ "master" ]
-    paths: [ "glosis_properties.ttl" , "glosis_procedure.ttl" , "glosis_results.ttl" ]
+    branches: [ "master", "develop" ]
+    paths: [ "csv_codelists/glosis_properties.csv" , "csv_codelists/glosis_results.csv" , "csv_codelists/glosis_procedure.csv" ]
 
 env:
-    CODELIST_DIR: "csv_codelists"
-    PROP_CODELIST: "glosis_properties.csv"
-    RES_CODELIST: "glosis_results.csv"
-    PROC_CODELIST: "glosis_procedure.csv"
+    PROP_MODULE: "glosis_properties.ttl"
+    RES_MODULE: "glosis_results.ttl"
+    PROC_MODULE: "glosis_procedure.ttl"
 
 jobs:
   build:
@@ -21,10 +20,35 @@ jobs:
       with:
         repository: ${{ github.event.pull_request.head.repo.full_name }}
         ref: ${{ github.event.pull_request.head.ref }}
+
+    - name: Detect changed files
+      uses: dorny/paths-filter@v3
+      id: filter
+      with:
+        filters: |
+          properties:
+            - 'csv_codelists/glosis_properties.csv'
+          results:
+            - 'csv_codelists/glosis_results.csv'
+          procedure:
+            - 'csv_codelists/glosis_procedure.csv'
+
+    - name: Read module version
+      run: echo "MODULE_VERSION=$(cat VERSION)" >> "$GITHUB_ENV"
+
+    - name: Ensure version bumped
+      run: |
+        git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
+        if git diff --quiet origin/${{ github.event.pull_request.base.ref }} -- VERSION; then
+          echo "::error::VERSION file was not updated in this PR."
+          exit 1
+        fi
+
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
+
     - name: Install dependencies
       working-directory: utils/transformer_tool
       run: |
@@ -33,20 +57,37 @@ jobs:
         git clone https://github.com/Montanaz0r/pytarql.git
         cd pytarql
         pip install .
-    - name: Generate codelists
+
+    - name: Generate results codelist
+      if: steps.filter.outputs.results == 'true'
       working-directory: utils/transformer_tool
       run: |
-        python transform_to_csv.py ../../glosis_results.ttl ../../csv_codelists/glosis_results
-        python transform_to_csv.py ../../glosis_properties.ttl ../../csv_codelists/glosis_properties
-        python transform_to_csv.py ../../glosis_procedure.ttl ../../csv_codelists/glosis_procedure
+        python transform_to_rdf.py ../../csv_codelists/glosis_results.csv example_queries/glosis_results_example.rq ../../glosis_results.ttl "$MODULE_VERSION"
+
+    - name: Generate properties codelist
+      if: steps.filter.outputs.properties == 'true'
+      working-directory: utils/transformer_tool
+      run: |
+        python transform_to_rdf.py ../../csv_codelists/glosis_properties.csv example_queries/glosis_properties_example.rq ../../glosis_properties.ttl "$MODULE_VERSION"
+
+    - name: Generate procedure codelist
+      if: steps.filter.outputs.procedure == 'true'
+      working-directory: utils/transformer_tool
+      run: |
+        python transform_to_rdf.py ../../csv_codelists/glosis_procedure.csv example_queries/glosis_procedure_example.rq ../../glosis_procedure.ttl "$MODULE_VERSION"
+
+    - name: Update version
+      run: |
+        python utils/version_updater/version_updater.py "$MODULE_VERSION"
+
     - name: Get current time and date
       if: ${{ success() }}
       run: echo "NOW=$(date)" >> $GITHUB_ENV
+
     - name: Commit codelists
       if: ${{ success() }}
       uses: EndBug/add-and-commit@v9
       with:
-          add: "['${{ env.CODELIST_DIR }}/${{ env.RES_CODELIST }}', '${{ env.CODELIST_DIR }}/${{ env.PROP_CODELIST }}', 
-          '${{ env.CODELIST_DIR }}/${{ env.PROC_CODELIST }}']"
-          message: "codelists generated automatically at ${{ env.NOW }}"
+          add: "*.ttl"
+          message: "Modules generated automatically at ${{ env.NOW }}"
           default_author: github_actions

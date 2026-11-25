@@ -8,7 +8,7 @@
     },
     "iri" : "http://w3id.org/glosis/model/common",
     "version" : "2.0.0",
-    "author" : [ "_:genid2147483747", "_:genid2147483746", "_:genid-nodeid-node1juk5h6pmx3" ],
+    "author" : [ "_:genid2147483747", "_:genid-nodeid-node1k3u08fqtx3", "_:genid2147483746" ],
     "description" : {
       "en" : "This ontology represents GLOSIS code lists extracted from the data model for the Global Soil Information System (GloSIS) v1.0, edited by Tomas Reznik and Katharina Schleidt"
     },
@@ -19,11 +19,6 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid-nodeid-node1juk5h6pmx3",
-        "type" : "iri"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
         "value" : "_:genid2147483747",
         "type" : "label"
       }, {
@@ -31,6 +26,11 @@
         "language" : "undefined",
         "value" : "_:genid2147483746",
         "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid-nodeid-node1k3u08fqtx3",
+        "type" : "iri"
       } ],
       "rights" : [ {
         "identifier" : "rights",
@@ -201,7 +201,7 @@
     "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "114",
+    "id" : "117",
     "type" : "owl:Class"
   }, {
     "id" : "25",
@@ -249,7 +249,7 @@
     "id" : "191",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "149",
+    "id" : "151",
     "type" : "owl:Class"
   }, {
     "id" : "11",
@@ -1076,12 +1076,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Registering an image of the landscape.",
+        "value" : "Taking a diamond-drill core from a rock outcrop.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Digging a pit through a soil sequence.",
+        "value" : "Drilling an observation well.",
         "type" : "label"
       }, {
         "identifier" : "example",
@@ -1096,12 +1096,7 @@
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Taking a diamond-drill core from a rock outcrop.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Selecting a subset of a population.",
+        "value" : "Drawing blood from a patient.",
         "type" : "label"
       }, {
         "identifier" : "example",
@@ -1111,12 +1106,12 @@
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Sieving a powder to separate the subset finer than 100-mesh.",
+        "value" : "Digging a pit through a soil sequence.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Drilling an observation well.",
+        "value" : "Registering an image of the landscape.",
         "type" : "label"
       }, {
         "identifier" : "example",
@@ -1126,7 +1121,12 @@
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Drawing blood from a patient.",
+        "value" : "Sieving a powder to separate the subset finer than 100-mesh.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Selecting a subset of a population.",
         "type" : "label"
       } ]
     },
@@ -1336,7 +1336,7 @@
       "en" : "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."
     },
     "attributes" : [ "external" ],
-    "id" : "114"
+    "id" : "117"
   }, {
     "iri" : "http://w3id.org/glosis/model/common/SoilDepthBedrock",
     "baseIri" : "http://w3id.org/glosis/model/common",
@@ -1412,12 +1412,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
-        "value" : "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.",
+        "value" : "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.",
+        "value" : "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.",
         "type" : "label"
       } ]
     },
@@ -1668,7 +1668,7 @@
       "en" : "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."
     },
     "attributes" : [ "external" ],
-    "id" : "149"
+    "id" : "151"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1977,13 +1977,13 @@
     "id" : "113",
     "type" : "owl:allValuesFrom"
   }, {
+    "id" : "114",
+    "type" : "owl:allValuesFrom"
+  }, {
     "id" : "115",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "116",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "117",
+    "id" : "118",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "119",
@@ -2010,16 +2010,16 @@
     "id" : "129",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "131",
+    "id" : "130",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "132",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "134",
+    "id" : "133",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "135",
+    "id" : "134",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "136",
@@ -2052,10 +2052,10 @@
     "id" : "148",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "151",
+    "id" : "150",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "152",
+    "id" : "153",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "155",
@@ -2064,13 +2064,13 @@
     "id" : "156",
     "type" : "owl:allValuesFrom"
   }, {
+    "id" : "157",
+    "type" : "owl:allValuesFrom"
+  }, {
     "id" : "158",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "160",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "161",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "162",
@@ -2091,6 +2091,9 @@
     "id" : "169",
     "type" : "owl:allValuesFrom"
   }, {
+    "id" : "170",
+    "type" : "owl:allValuesFrom"
+  }, {
     "id" : "171",
     "type" : "owl:allValuesFrom"
   }, {
@@ -2098,9 +2101,6 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "174",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "175",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "176",
@@ -2302,6 +2302,11 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       }, {
@@ -2309,21 +2314,16 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
       } ],
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ]
     },
@@ -2452,17 +2452,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ],
       "example" : [ {
@@ -2514,17 +2514,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -2580,7 +2580,7 @@
       "IRI-based" : "numericValue"
     },
     "domain" : "18",
-    "attributes" : [ "datatype", "allValues", "external" ],
+    "attributes" : [ "datatype", "external", "allValues" ],
     "id" : "87"
   }, {
     "iri" : "http://qudt.org/schema/qudt/numericValue",
@@ -2590,7 +2590,7 @@
       "IRI-based" : "numericValue"
     },
     "domain" : "16",
-    "attributes" : [ "datatype", "allValues", "external" ],
+    "attributes" : [ "datatype", "external", "allValues" ],
     "id" : "90"
   }, {
     "iri" : "http://qudt.org/schema/qudt/numericValue",
@@ -2600,7 +2600,7 @@
       "IRI-based" : "numericValue"
     },
     "domain" : "73",
-    "attributes" : [ "datatype", "allValues", "external" ],
+    "attributes" : [ "datatype", "external", "allValues" ],
     "id" : "91"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -2628,15 +2628,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -2645,11 +2650,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -2661,7 +2661,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "92"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -2689,15 +2689,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -2706,11 +2711,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -2722,7 +2722,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "94"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasSimpleResult",
@@ -2746,18 +2746,7 @@
         "value" : "The simple value of an Observation or Actuation or act of Sampling.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For instance, the values 23 or true.",
-        "type" : "label"
-      } ],
       "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
@@ -2765,8 +2754,19 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For instance, the values 23 or true.",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -2777,7 +2777,7 @@
     "comment" : {
       "en" : "The simple value of an Observation or Actuation or act of Sampling."
     },
-    "attributes" : [ "datatype", "allValues", "external" ],
+    "attributes" : [ "datatype", "external", "allValues" ],
     "id" : "97"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -2805,15 +2805,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -2822,11 +2827,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -2838,7 +2838,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "101"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -2866,15 +2866,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -2883,11 +2888,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -2899,7 +2899,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "102"
   }, {
     "iri" : "http://qudt.org/schema/qudt/numericValue",
@@ -2909,7 +2909,7 @@
       "IRI-based" : "numericValue"
     },
     "domain" : "77",
-    "attributes" : [ "datatype", "allValues", "external" ],
+    "attributes" : [ "datatype", "external", "allValues" ],
     "id" : "103"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -2937,15 +2937,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -2954,11 +2959,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -2970,7 +2970,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "104"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -2998,15 +2998,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -3015,11 +3020,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -3031,7 +3031,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "106"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -3059,15 +3059,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -3076,11 +3081,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -3092,7 +3092,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "107"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -3120,15 +3120,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -3137,11 +3142,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -3153,7 +3153,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "108"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -3181,15 +3181,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -3198,11 +3203,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -3214,7 +3214,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "110"
   }, {
     "iri" : "http://qudt.org/schema/qudt/numericValue",
@@ -3224,68 +3224,40 @@
       "IRI-based" : "numericValue"
     },
     "domain" : "13",
-    "attributes" : [ "datatype", "allValues", "external" ],
+    "attributes" : [ "datatype", "external", "allValues" ],
     "id" : "112"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "114",
+    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "86",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
+        "value" : "http://www.w3.org/ns/ssn/",
         "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+        "value" : "Relation between an Observation and the Stimulus that originated it.",
         "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Procedure",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "usedProcedure",
-      "en" : "used procedure"
+      "IRI-based" : "wasOriginatedBy",
+      "en" : "was originated by"
     },
     "domain" : "19",
     "comment" : {
-      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+      "en" : "Relation between an Observation and the Stimulus that originated it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "functional", "object", "external", "allValues" ],
     "id" : "113"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "93",
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "7",
+    "range" : "63",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3301,117 +3273,35 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
         "type" : "label"
       } ],
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasResult",
-      "en" : "has result"
+      "IRI-based" : "observedProperty",
+      "en" : "observed property"
     },
     "domain" : "19",
     "comment" : {
-      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "115"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "57",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "11",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasFeatureOfInterest",
-      "en" : "has feature of interest"
-    },
-    "domain" : "19",
-    "comment" : {
-      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "116"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "114"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
-    "inverse" : "118",
+    "inverse" : "116",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "51",
     "annotations" : {
@@ -3453,8 +3343,69 @@
     "comment" : {
       "en" : "Relation between an Observation and the Sensor which made the Observation."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "117"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "93",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "118"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
     "inverse" : "120",
@@ -3499,40 +3450,12 @@
     "comment" : {
       "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "119"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "86",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an Observation and the Stimulus that originated it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "wasOriginatedBy",
-      "en" : "was originated by"
-    },
-    "domain" : "19",
-    "comment" : {
-      "en" : "Relation between an Observation and the Stimulus that originated it."
-    },
-    "attributes" : [ "object", "allValues", "external", "functional" ],
-    "id" : "121"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "63",
+    "range" : "117",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3548,31 +3471,108 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
         "type" : "label"
       } ],
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "value" : "http://www.w3.org/ns/sosa/Procedure",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "observedProperty",
-      "en" : "observed property"
+      "IRI-based" : "usedProcedure",
+      "en" : "used procedure"
     },
     "domain" : "19",
     "comment" : {
-      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
+      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "121"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "57",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "122"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasProperty",
@@ -3601,7 +3601,7 @@
     "comment" : {
       "en" : "Relation between an entity and a Property of that entity."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "123"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasSample",
@@ -3647,8 +3647,42 @@
     "comment" : {
       "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
     },
-    "attributes" : [ "object", "inverse functional", "allValues", "external" ],
+    "attributes" : [ "object", "inverse functional", "external", "allValues" ],
     "id" : "125"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "86",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isProxyFor",
+      "en" : "is proxy for"
+    },
+    "domain" : "63",
+    "comment" : {
+      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "127"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -3692,12 +3726,12 @@
     "comment" : {
       "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "127"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "128"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
+    "iri" : "http://www.w3.org/ns/ssn/forProperty",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "86",
+    "range" : "48",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3708,29 +3742,30 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+        "value" : "A relation between some aspect of an entity and a Property.",
         "type" : "label"
       } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
-        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
+        "value" : "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "isProxyFor",
-      "en" : "is proxy for"
+      "IRI-based" : "forProperty",
+      "en" : "for property"
     },
-    "domain" : "63",
+    "domain" : "1",
+    "subproperty" : [ "120" ],
     "comment" : {
-      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
+      "en" : "A relation between some aspect of an entity and a Property."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "128"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "129"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeActuation",
-    "inverse" : "130",
+    "inverse" : "131",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "76",
     "annotations" : {
@@ -3772,46 +3807,123 @@
     "comment" : {
       "en" : "Relation between an Actuator and the Actuation it has made."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "129"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "130"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "48",
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "57",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "11",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
         "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "A relation between some aspect of an entity and a Property.",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
         "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
       } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
-        "value" : "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "forProperty",
-      "en" : "for property"
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
     },
-    "domain" : "1",
-    "subproperty" : [ "120" ],
+    "domain" : "76",
     "comment" : {
-      "en" : "A relation between some aspect of an entity and a Property."
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "131"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "132"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Actuation to the Actuator that made that Actuation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeByActuator",
+      "en" : "made by actuator"
+    },
+    "domain" : "76",
+    "comment" : {
+      "en" : "Relation linking an Actuation to the Actuator that made that Actuation."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "133"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
-    "inverse" : "133",
+    "inverse" : "135",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "48",
     "annotations" : {
@@ -3859,185 +3971,12 @@
     "comment" : {
       "en" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "132"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "57",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "11",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasFeatureOfInterest",
-      "en" : "has feature of interest"
-    },
-    "domain" : "76",
-    "comment" : {
-      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "134"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "93",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "7",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasResult",
-      "en" : "has result"
-    },
-    "domain" : "76",
-    "comment" : {
-      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "135"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "1",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Actuation to the Actuator that made that Actuation.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeByActuator",
-      "en" : "made by actuator"
-    },
-    "domain" : "76",
-    "comment" : {
-      "en" : "Relation linking an Actuation to the Actuator that made that Actuation."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "136"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "114",
+    "range" : "117",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4065,12 +4004,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -4087,7 +4026,68 @@
     "comment" : {
       "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "93",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "domain" : "76",
+    "comment" : {
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "137"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasSimpleResult",
@@ -4111,18 +4111,7 @@
         "value" : "The simple value of an Observation or Actuation or act of Sampling.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For instance, the values 23 or true.",
-        "type" : "label"
-      } ],
       "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
@@ -4130,8 +4119,19 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For instance, the values 23 or true.",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -4142,7 +4142,7 @@
     "comment" : {
       "en" : "The simple value of an Observation or Actuation or act of Sampling."
     },
-    "attributes" : [ "datatype", "allValues", "external" ],
+    "attributes" : [ "datatype", "external", "allValues" ],
     "id" : "139"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isActedOnBy",
@@ -4193,7 +4193,7 @@
     "comment" : {
       "en" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "140"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -4221,15 +4221,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -4238,11 +4243,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -4254,12 +4254,12 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "141"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasOutput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "114",
+    "range" : "117",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4282,12 +4282,12 @@
     "comment" : {
       "en" : "Relation between a Procedure and an Output of it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "143"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasInput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "114",
+    "range" : "117",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4310,12 +4310,12 @@
     "comment" : {
       "en" : "Relation between a Procedure and an Input to it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "144"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
+    "iri" : "http://www.w3.org/ns/ssn/detects",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "63",
+    "range" : "51",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4326,25 +4326,19 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
+        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "isProxyFor",
-      "en" : "is proxy for"
+      "IRI-based" : "detects",
+      "en" : "detects"
     },
     "domain" : "86",
     "comment" : {
-      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
+      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "146"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/isPropertyOf",
@@ -4372,13 +4366,42 @@
     "comment" : {
       "en" : "Relation between a Property and the entity it belongs to."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "147"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
-    "inverse" : "150",
+    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
+    "inverse" : "149",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "149",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Deployment and a deployed System.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "deployedSystem",
+      "en" : "deployed system"
+    },
+    "domain" : "100",
+    "comment" : {
+      "en" : "Relation between a Deployment and a deployed System."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "148"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
+    "inverse" : "152",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "151",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4401,8 +4424,8 @@
     "comment" : {
       "en" : "Relation between a Deployment and the Platform on which the Systems are deployed."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "148"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "150"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/forProperty",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -4436,37 +4459,8 @@
     "comment" : {
       "en" : "A relation between some aspect of an entity and a Property."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "151"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
-    "inverse" : "153",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "2",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Deployment and a deployed System.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "deployedSystem",
-      "en" : "deployed system"
-    },
-    "domain" : "100",
-    "comment" : {
-      "en" : "Relation between a Deployment and a deployed System."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "152"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "153"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/detects",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -4493,13 +4487,13 @@
     "comment" : {
       "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "155"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
-    "inverse" : "157",
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "93",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "4",
+    "range" : "9",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4515,13 +4509,18 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
         "type" : "label"
       } ],
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
@@ -4529,18 +4528,73 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "madeBySampler",
-      "en" : "made by sampler"
+      "IRI-based" : "hasResult",
+      "en" : "has result"
     },
     "domain" : "98",
     "comment" : {
-      "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "156"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeObservation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "19",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Sensor and an Observation made by the Sensor.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeObservation",
+      "en" : "made observation"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Relation between a Sensor and an Observation made by the Sensor."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "157"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observes",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -4585,12 +4639,13 @@
     "comment" : {
       "en" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "158"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeObservation",
+    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
+    "inverse" : "161",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "19",
+    "range" : "4",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4606,77 +4661,16 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between a Sensor and an Observation made by the Sensor.",
+        "value" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
         "type" : "label"
       } ],
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeObservation",
-      "en" : "made observation"
-    },
-    "domain" : "51",
-    "comment" : {
-      "en" : "Relation between a Sensor and an Observation made by the Sensor."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "160"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "93",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "9",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
@@ -4684,15 +4678,15 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "hasResult",
-      "en" : "has result"
+      "IRI-based" : "madeBySampler",
+      "en" : "made by sampler"
     },
     "domain" : "98",
     "comment" : {
-      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+      "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "161"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "160"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeSampling",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -4736,7 +4730,7 @@
     "comment" : {
       "en" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "162"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
@@ -4775,17 +4769,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ],
       "example" : [ {
@@ -4803,12 +4797,12 @@
     "comment" : {
       "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "163"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "114",
+    "range" : "117",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4836,12 +4830,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -4858,7 +4852,7 @@
     "comment" : {
       "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "164"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isResultOf",
@@ -4918,7 +4912,7 @@
     "comment" : {
       "en" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "166"
   }, {
     "iri" : "http://w3id.org/glosis/model/common/chroma",
@@ -4944,10 +4938,9 @@
     "attributes" : [ "datatype", "external" ],
     "id" : "167"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/implementedBy",
-    "inverse" : "170",
+    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "2",
+    "range" : "42",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4958,25 +4951,19 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.",
+        "value" : "Relation between a Procedure and an Output of it.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "implementedBy",
-      "en" : "implemented by"
+      "IRI-based" : "hasOutput",
+      "en" : "has output"
     },
-    "domain" : "114",
+    "domain" : "117",
     "comment" : {
-      "en" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."
+      "en" : "Relation between a Procedure and an Output of it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "169"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
@@ -5021,69 +5008,8 @@
     "comment" : {
       "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
     },
-    "attributes" : [ "object", "allValues", "external", "functional" ],
-    "id" : "171"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hosts",
-    "inverse" : "173",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "2",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampler",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Platform",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Platform",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hosts",
-      "en" : "hosts"
-    },
-    "domain" : "149",
-    "comment" : {
-      "en" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "172"
+    "attributes" : [ "functional", "object", "external", "allValues" ],
+    "id" : "170"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/inDeployment",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -5112,11 +5038,107 @@
       "IRI-based" : "inDeployment",
       "en" : "in deployment"
     },
-    "domain" : "149",
+    "domain" : "151",
     "comment" : {
       "en" : "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "171"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hosts",
+    "inverse" : "173",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hosts",
+      "en" : "hosts"
+    },
+    "domain" : "151",
+    "comment" : {
+      "en" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "172"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/implementedBy",
+    "inverse" : "175",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "implementedBy",
+      "en" : "implemented by"
+    },
+    "domain" : "117",
+    "comment" : {
+      "en" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "174"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasInput",
@@ -5140,39 +5162,11 @@
       "IRI-based" : "hasInput",
       "en" : "has input"
     },
-    "domain" : "114",
+    "domain" : "117",
     "comment" : {
       "en" : "Relation between a Procedure and an Input to it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "175"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "42",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Procedure and an Output of it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasOutput",
-      "en" : "has output"
-    },
-    "domain" : "114",
-    "comment" : {
-      "en" : "Relation between a Procedure and an Output of it."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "176"
   }, {
     "range" : "19",
@@ -5235,15 +5229,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -5252,11 +5251,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -5268,7 +5262,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "184"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -5296,15 +5290,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -5313,11 +5312,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -5329,7 +5323,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "185"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -5357,15 +5351,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -5374,11 +5373,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -5390,7 +5384,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "186"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -5418,15 +5412,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -5435,11 +5434,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -5451,7 +5445,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "187"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -5479,15 +5473,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -5496,11 +5495,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -5512,7 +5506,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "188"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -5540,15 +5534,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -5557,11 +5556,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -5573,7 +5567,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "189"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasSimpleResult",
@@ -5597,18 +5591,7 @@
         "value" : "The simple value of an Observation or Actuation or act of Sampling.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For instance, the values 23 or true.",
-        "type" : "label"
-      } ],
       "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
@@ -5616,8 +5599,19 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For instance, the values 23 or true.",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -5628,7 +5622,7 @@
     "comment" : {
       "en" : "The simple value of an Observation or Actuation or act of Sampling."
     },
-    "attributes" : [ "datatype", "allValues", "external" ],
+    "attributes" : [ "datatype", "external", "allValues" ],
     "id" : "190"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -5656,15 +5650,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -5673,11 +5672,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -5689,7 +5683,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "192"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
@@ -5717,15 +5711,20 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -5734,11 +5733,6 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ]
     },
@@ -5750,7 +5744,7 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "193"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/resultTime",
@@ -5777,17 +5771,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ]
     },
@@ -5813,9 +5807,161 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "197"
   }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a System and its component parts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSubSystem",
+      "en" : "has subsystem"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relation between a System and its component parts."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "198"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/implements",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "117",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "implements",
+      "en" : "implements"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "199"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a System and its component parts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSubSystem",
+      "en" : "has subsystem"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relation between a System and its component parts."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "200"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "19",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Observation and the Stimulus that originated it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasOriginatedBy",
+      "en" : "was originated by"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "Relation between an Observation and the Stimulus that originated it."
+    },
+    "attributes" : [ "functional", "object", "external", "allValues" ],
+    "id" : "201"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "63",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isProxyFor",
+      "en" : "is proxy for"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "202"
+  }, {
     "iri" : "http://www.w3.org/ns/sosa/isHostedBy",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "149",
+    "range" : "151",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5870,42 +6016,8 @@
     "comment" : {
       "en" : "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "198"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/implements",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "114",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "implements",
-      "en" : "implements"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "199"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "203"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasDeployment",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -5932,119 +6044,7 @@
     "comment" : {
       "en" : "Relation between a System and a Deployment, recording that the System is deployed in that Deployment."
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "200"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/detects",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "51",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "detects",
-      "en" : "detects"
-    },
-    "domain" : "86",
-    "comment" : {
-      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "201"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "19",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an Observation and the Stimulus that originated it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "wasOriginatedBy",
-      "en" : "was originated by"
-    },
-    "domain" : "86",
-    "comment" : {
-      "en" : "Relation between an Observation and the Stimulus that originated it."
-    },
-    "attributes" : [ "object", "allValues", "external", "functional" ],
-    "id" : "202"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "2",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a System and its component parts.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSubSystem",
-      "en" : "has subsystem"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Relation between a System and its component parts."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "203"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "2",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a System and its component parts.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSubSystem",
-      "en" : "has subsystem"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Relation between a System and its component parts."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "204"
   } ]
 }
