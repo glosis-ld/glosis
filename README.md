@@ -106,10 +106,10 @@ Cite as:
 Shield: [![CC BY NC SA 3.0 IGO][cc-by-shield]][cc-by]
 
 This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO][cc-by].
+[Creative Commons Attribution BY 4.0 International][cc-by].
 
-[![CC BY NC SA 3.0 IGO][cc-by-image]][cc-by]
+[![CC BY 4.0][cc-by-image]][cc-by]
 
-[cc-by]: https://creativecommons.org/licenses/by-nc-sa/3.0/igo/
+[cc-by]: https://creativecommons.org/licenses/by/4.0/deed/
 [cc-by-image]: https://licensebuttons.net/l/by/3.0/igo/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%20NC%20SA%203.0%20IGO-lightgrey.svg
+[cc-by-shield]: https://img.shields.io/badge/license-CC_BY_4.0-blue
